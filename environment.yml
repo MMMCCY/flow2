@@ -1,0 +1,27 @@
+name: geoflow
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - numpy=1.26.4
+  - scipy=1.14.1
+  - matplotlib=3.7.3
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu128
+      - torch==2.8.0
+      - torchvision==0.23.0
+      - torchaudio==2.8.0
+      - lightning==2.5.6
+      - pytorch-lightning==2.5.6
+      - denoising-diffusion-pytorch==2.2.6
+      - torchdiffeq==0.2.5
+      - einops==0.8.2
+      - seaborn==0.13.2
+      - wandb==0.22.3
+      - scikit-image==0.24.0
+      - tifffile==2024.9.20
+      - pyvista==0.47.3
+      - pyvistaqt==0.11.4
+      - -e .
