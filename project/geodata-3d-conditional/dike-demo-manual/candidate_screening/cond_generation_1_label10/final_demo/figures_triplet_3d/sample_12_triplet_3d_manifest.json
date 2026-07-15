@@ -1,0 +1,66 @@
+{
+  "combined_figure": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/figures_triplet_3d/sample_12_truth_baseline_guided_3d_six_panel.png",
+  "description": "3D categorical geology and target-label-only triplet visualization for truth, baseline, and guided outputs.",
+  "exclude_labels": [
+    -1
+  ],
+  "max_points_per_label": 60000,
+  "max_target_points": 200000,
+  "panel_figures": {
+    "baseline_sample_12_full": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/figures_triplet_3d/sample_12_baseline_sample_12_full_3d.png",
+    "baseline_sample_12_target": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/figures_triplet_3d/sample_12_baseline_sample_12_target_3d.png",
+    "guided_sample_12_full": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/figures_triplet_3d/sample_12_guided_sample_12_full_3d.png",
+    "guided_sample_12_target": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/figures_triplet_3d/sample_12_guided_sample_12_target_3d.png",
+    "truth_model_full": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/figures_triplet_3d/sample_12_truth_model_full_3d.png",
+    "truth_model_target": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/figures_triplet_3d/sample_12_truth_model_target_3d.png"
+  },
+  "render_stats": {
+    "Baseline sample 12_surface_points_by_label": {
+      "0": 810,
+      "1": 23550,
+      "10": 7790,
+      "11": 768,
+      "12": 7,
+      "13": 6,
+      "2": 18390,
+      "3": 3762,
+      "4": 15141,
+      "5": 30548,
+      "6": 1299,
+      "7": 1816,
+      "8": 2961,
+      "9": 325
+    },
+    "Baseline sample 12_target_voxels": 11809,
+    "Guided sample 12_surface_points_by_label": {
+      "0": 818,
+      "1": 23569,
+      "10": 7626,
+      "11": 771,
+      "12": 11,
+      "13": 12,
+      "2": 18479,
+      "3": 3779,
+      "4": 15138,
+      "5": 30564,
+      "6": 1303,
+      "7": 1824,
+      "8": 2967,
+      "9": 331
+    },
+    "Guided sample 12_target_voxels": 11624,
+    "Truth model_surface_points_by_label": {
+      "1": 21631,
+      "10": 6250,
+      "2": 13574,
+      "3": 114,
+      "4": 16589,
+      "5": 25571,
+      "7": 6538,
+      "8": 4332
+    },
+    "Truth model_target_voxels": 9705
+  },
+  "sample_id": 12,
+  "target_label": 10
+}

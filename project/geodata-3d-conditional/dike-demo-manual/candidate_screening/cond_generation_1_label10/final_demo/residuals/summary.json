@@ -1,0 +1,23 @@
+{
+  "baseline_lightweight_gravity_proxy_misfit": 0.42529067397117615,
+  "density_config": "manual_target_density_config",
+  "description": "Residual comparison uses the existing lightweight gravity-proxy.",
+  "figure": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/residuals/gravity_proxy_residual_comparison.png",
+  "guided_lightweight_gravity_proxy_misfit": 0.24201242625713348,
+  "individual_figures": {
+    "baseline_predicted_gravity": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/residuals/baseline_predicted_gravity_sample_4.png",
+    "baseline_residual": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/residuals/baseline_residual_sample_4.png",
+    "guided_predicted_gravity": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/residuals/guided_predicted_gravity_sample_4.png",
+    "guided_residual": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/residuals/guided_residual_sample_4.png",
+    "observed_gravity": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/residuals/observed_gravity.png",
+    "residual_difference": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/residuals/residual_difference_sample_4.png"
+  },
+  "kernel_size": 9,
+  "misfit_improvement": 0.18327824771404266,
+  "paired_by_seed": true,
+  "paired_by_seed_reason": "matching guided-sampler config with zero-guidance baseline",
+  "residual_abs_mean_reduction": 0.055984824895858765,
+  "residual_rms_reduction": 0.11684513092041016,
+  "residual_symmetric_color_limit": 1.9694995880126953,
+  "sample_id": 4
+}

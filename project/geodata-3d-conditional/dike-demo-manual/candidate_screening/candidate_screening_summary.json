@@ -1,0 +1,25 @@
+{
+  "description": "Candidate screening for dike-like demo labels. Geophysical terms refer to the lightweight gravity-proxy, not quantitative gravity inversion.",
+  "output_csv": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/candidate_screening.csv",
+  "recommendations": {
+    "limitation_case": [
+      "cond_generation_1_label7",
+      "paper_cond_gen_0_label8"
+    ],
+    "main_demo_candidate": [
+      "cond_generation_1_label10",
+      "paper_cond_gen_0_label7"
+    ]
+  },
+  "thresholds": {
+    "max_prior_volume_ratio": 2.0,
+    "min_borehole_hits": 1,
+    "min_centroid_improvement": 0.5,
+    "min_geo_improvement": 0.02,
+    "min_observability_delta": 0.01,
+    "min_prior_volume_ratio": 0.2,
+    "min_target_iou_improvement": 0.001,
+    "min_target_recall_improvement": 0.001,
+    "min_target_voxels": 1000
+  }
+}

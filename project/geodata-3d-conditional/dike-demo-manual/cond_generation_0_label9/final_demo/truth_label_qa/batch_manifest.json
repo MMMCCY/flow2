@@ -1,0 +1,10 @@
+{
+  "case_manifests": [
+    "project/geodata-3d-conditional/dike-demo-manual/cond_generation_0_label9/final_demo/truth_label_qa/manual_target_label_manifest.json"
+  ],
+  "manual_step": "Inspect each case directory, especially label_3d_overview.png and label_3d/*.png, then choose a case and dike-like target label.",
+  "truth_models": [
+    "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt"
+  ],
+  "truth_root": null
+}

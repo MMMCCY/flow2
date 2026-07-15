@@ -1,0 +1,23 @@
+{
+  "boreholes": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_1/boreholes.pt",
+  "exclude_3d_label": [
+    -1
+  ],
+  "label_3d_overview": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/truth_label_qa/label_3d_overview.png",
+  "label_mip_overview": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/truth_label_qa/label_mip_overview.png",
+  "label_summary_csv": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/truth_label_qa/label_summary.csv",
+  "manual_step": "Inspect 3D figures, 2D figures, and label_summary.csv, then pass the confirmed dike-like id as --target-label.",
+  "max_3d_points_per_label": 6000,
+  "per_label_3d_figures": [
+    "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/truth_label_qa/label_3d/label_5_3d.png",
+    "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/truth_label_qa/label_3d/label_1_3d.png",
+    "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/truth_label_qa/label_3d/label_4_3d.png",
+    "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/truth_label_qa/label_3d/label_2_3d.png",
+    "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/truth_label_qa/label_3d/label_7_3d.png",
+    "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/truth_label_qa/label_3d/label_10_3d.png",
+    "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/truth_label_qa/label_3d/label_8_3d.png",
+    "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/truth_label_qa/label_3d/label_3_3d.png"
+  ],
+  "truth_model": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_1/true_model.pt",
+  "truth_model_label_slices": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/final_demo/truth_label_qa/truth_model_label_slices.png"
+}

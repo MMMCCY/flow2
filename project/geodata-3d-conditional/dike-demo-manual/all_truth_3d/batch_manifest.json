@@ -1,0 +1,18 @@
+{
+  "case_manifests": [
+    "project/geodata-3d-conditional/dike-demo-manual/all_truth_3d/cond_generation_0/manual_target_label_manifest.json",
+    "project/geodata-3d-conditional/dike-demo-manual/all_truth_3d/cond_generation_1/manual_target_label_manifest.json",
+    "project/geodata-3d-conditional/dike-demo-manual/all_truth_3d/cond_generation_2/manual_target_label_manifest.json",
+    "project/geodata-3d-conditional/dike-demo-manual/all_truth_3d/cond_generation_3/manual_target_label_manifest.json",
+    "project/geodata-3d-conditional/dike-demo-manual/all_truth_3d/paper_cond_gen_0/manual_target_label_manifest.json"
+  ],
+  "manual_step": "Inspect each case directory, especially label_3d_overview.png and label_3d/*.png, then choose a case and dike-like target label.",
+  "truth_models": [
+    "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt",
+    "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_1/true_model.pt",
+    "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_2/true_model.pt",
+    "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_3/true_model.pt",
+    "project/geodata-3d-conditional/samples/jupyter-demo/paper_cond_gen_0/true_model.pt"
+  ],
+  "truth_root": "project/geodata-3d-conditional/samples/jupyter-demo"
+}

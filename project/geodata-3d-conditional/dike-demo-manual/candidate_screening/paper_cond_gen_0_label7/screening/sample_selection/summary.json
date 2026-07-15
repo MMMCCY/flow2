@@ -1,0 +1,7 @@
+{
+  "description": "Samples are selected from saved global metrics.csv and target_metrics.csv. When paired_by_seed is false, baseline and guided representatives are selected separately to avoid implying sample-wise initial-noise pairing.",
+  "n_selected": 5,
+  "paired_by_seed": true,
+  "paired_by_seed_reason": "matching guided-sampler config with zero-guidance baseline",
+  "top_k": 6
+}

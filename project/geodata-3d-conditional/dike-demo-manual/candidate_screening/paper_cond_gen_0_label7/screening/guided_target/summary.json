@@ -1,0 +1,88 @@
+{
+  "description": "Target-label metrics for saved categorical geology realizations. ensemble_probability_overlap_inside_truth is the mean ensemble target probability inside the truth target-label mask.",
+  "ensemble_probability_overlap_inside_truth": 0.5509876012802124,
+  "metrics": {
+    "largest_component_fraction": {
+      "count": 16,
+      "max": 0.9961950158889447,
+      "mean": 0.9686023376690447,
+      "min": 0.858563829787234,
+      "std": 0.034744118701742814
+    },
+    "target_centroid_distance": {
+      "count": 16,
+      "max": 9.46125316619873,
+      "mean": 7.094307899475098,
+      "min": 3.257190704345703,
+      "std": 1.5515931750504766
+    },
+    "target_f1": {
+      "count": 16,
+      "max": 0.6695301532745361,
+      "mean": 0.5777602382004261,
+      "min": 0.4602259397506714,
+      "std": 0.05695784833141319
+    },
+    "target_iou": {
+      "count": 16,
+      "max": 0.5032283663749695,
+      "mean": 0.4084810558706522,
+      "min": 0.2988918423652649,
+      "std": 0.05620084778844897
+    },
+    "target_precision": {
+      "count": 16,
+      "max": 0.7282420992851257,
+      "mean": 0.61053073592484,
+      "min": 0.46349725127220154,
+      "std": 0.07310409431610705
+    },
+    "target_recall": {
+      "count": 16,
+      "max": 0.6666194200515747,
+      "mean": 0.550987621769309,
+      "min": 0.41295719146728516,
+      "std": 0.05487379756345378
+    },
+    "target_volume_error_fraction": {
+      "count": 16,
+      "max": 0.13013892826764956,
+      "mean": -0.09074638502977034,
+      "min": -0.20999905490974388,
+      "std": 0.09615226859323556
+    }
+  },
+  "n_samples": 16,
+  "probability_entropy_mean": 0.0920293852686882,
+  "probability_outside_mean": 0.03146137297153473,
+  "probability_threshold_metrics": {
+    "0.05": {
+      "predicted_voxels_at_threshold": 62665.0,
+      "probability_iou_at_threshold": 0.2862820327281952,
+      "probability_precision_at_threshold": 0.29772600531578064,
+      "probability_recall_at_threshold": 0.8816274404525757
+    },
+    "0.33": {
+      "predicted_voxels_at_threshold": 19690.0,
+      "probability_iou_at_threshold": 0.5241008996963501,
+      "probability_precision_at_threshold": 0.7134585976600647,
+      "probability_recall_at_threshold": 0.6638314127922058
+    },
+    "0.62": {
+      "predicted_voxels_at_threshold": 12228.0,
+      "probability_iou_at_threshold": 0.4662099778652191,
+      "probability_precision_at_threshold": 0.8682531714439392,
+      "probability_recall_at_threshold": 0.5017011761665344
+    },
+    "0.9": {
+      "predicted_voxels_at_threshold": 5591.0,
+      "probability_iou_at_threshold": 0.25436046719551086,
+      "probability_precision_at_threshold": 0.9703094363212585,
+      "probability_recall_at_threshold": 0.25635573267936707
+    }
+  },
+  "target_label": 7,
+  "target_probability_path": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/paper_cond_gen_0_label7/screening/guided_target/target_probability.pt",
+  "target_probability_slices": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/paper_cond_gen_0_label7/screening/guided_target/target_probability_slices.png",
+  "target_volume": 21162.0
+}

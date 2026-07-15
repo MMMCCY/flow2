@@ -1,0 +1,13 @@
+{
+  "baseline_dir": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/baseline_alpha0",
+  "density_config": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/density_config.json",
+  "description": "One-command dike guidance demo manifest. All geophysical fields are lightweight gravity-proxy outputs.",
+  "guided_dir": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/guided_alpha0_05",
+  "observed_gravity": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/cond_generation_1_label10/observed_gravity/observed_gravity.pt",
+  "paired_by_seed": true,
+  "paired_by_seed_reason": "matching guided-sampler config with zero-guidance baseline",
+  "residual_sample_id": 4,
+  "target_label": 10,
+  "target_label_source": "--target-label",
+  "truth_model": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_1/true_model.pt"
+}

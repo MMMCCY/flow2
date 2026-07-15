@@ -1,0 +1,27 @@
+{
+  "borehole_target_hits": 37,
+  "density_config": "manual_target_density_config",
+  "density_contrast": 3.35,
+  "description": "Observability is measured by replacing the target label in the truth model and comparing the lightweight gravity-proxy response. This is a lightweight gravity-proxy sensitivity diagnostic.",
+  "figures": {
+    "delta_gravity": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/paper_cond_gen_0_label8/screening/observability/delta_gravity.png",
+    "removed_target_gravity": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/paper_cond_gen_0_label8/screening/observability/removed_target_gravity.png",
+    "target_mask_slices": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/paper_cond_gen_0_label8/screening/observability/target_mask_slices.png",
+    "truth_gravity": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/candidate_screening/paper_cond_gen_0_label8/screening/observability/truth_gravity.png"
+  },
+  "kernel_size": 9,
+  "lightweight_gravity_proxy_delta_l2": 24.77050018310547,
+  "lightweight_gravity_proxy_delta_mean_abs": 0.2765141725540161,
+  "lightweight_gravity_proxy_delta_peak_abs": 1.5016111135482788,
+  "lightweight_gravity_proxy_normalized_delta": 0.763175368309021,
+  "reason": "recommended: target has measurable lightweight gravity-proxy response",
+  "recommended_for_demo": true,
+  "replacement_density": 0.15,
+  "replacement_label": 0,
+  "replacement_label_source": "local_neighbor_mode",
+  "target_density": 3.5,
+  "target_density_override": null,
+  "target_label": 8,
+  "target_volume": 3329,
+  "target_volume_fraction": 0.012699127197265625
+}

@@ -1,0 +1,23 @@
+{
+  "boreholes": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/boreholes.pt",
+  "exclude_3d_label": [
+    -1
+  ],
+  "label_3d_overview": "project/geodata-3d-conditional/dike-demo-manual/all_truth_3d/cond_generation_0/label_3d_overview.png",
+  "label_mip_overview": "project/geodata-3d-conditional/dike-demo-manual/all_truth_3d/cond_generation_0/label_mip_overview.png",
+  "label_summary_csv": "project/geodata-3d-conditional/dike-demo-manual/all_truth_3d/cond_generation_0/label_summary.csv",
+  "manual_step": "Inspect 3D figures, 2D figures, and label_summary.csv, then pass the confirmed dike-like id as --target-label.",
+  "max_3d_points_per_label": 8000,
+  "per_label_3d_figures": [
+    "project/geodata-3d-conditional/dike-demo-manual/all_truth_3d/cond_generation_0/label_3d/label_4_3d.png",
+    "project/geodata-3d-conditional/dike-demo-manual/all_truth_3d/cond_generation_0/label_3d/label_1_3d.png",
+    "project/geodata-3d-conditional/dike-demo-manual/all_truth_3d/cond_generation_0/label_3d/label_2_3d.png",
+    "project/geodata-3d-conditional/dike-demo-manual/all_truth_3d/cond_generation_0/label_3d/label_5_3d.png",
+    "project/geodata-3d-conditional/dike-demo-manual/all_truth_3d/cond_generation_0/label_3d/label_3_3d.png",
+    "project/geodata-3d-conditional/dike-demo-manual/all_truth_3d/cond_generation_0/label_3d/label_6_3d.png",
+    "project/geodata-3d-conditional/dike-demo-manual/all_truth_3d/cond_generation_0/label_3d/label_9_3d.png",
+    "project/geodata-3d-conditional/dike-demo-manual/all_truth_3d/cond_generation_0/label_3d/label_13_3d.png"
+  ],
+  "truth_model": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt",
+  "truth_model_label_slices": "project/geodata-3d-conditional/dike-demo-manual/all_truth_3d/cond_generation_0/truth_model_label_slices.png"
+}

@@ -1,0 +1,13 @@
+{
+  "baseline_dir": "project/geodata-3d-conditional/dike-demo-manual/cond_generation_0_label9/baseline_alpha0",
+  "density_config": "project/geodata-3d-conditional/dike-demo-manual/cond_generation_0_label9/density_config.json",
+  "description": "One-command dike guidance demo manifest. All geophysical fields are lightweight gravity-proxy outputs.",
+  "guided_dir": "project/geodata-3d-conditional/dike-demo-manual/cond_generation_0_label9/guided_alpha005",
+  "observed_gravity": "project/geodata-3d-conditional/dike-demo-manual/cond_generation_0_label9/observed_gravity/observed_gravity.pt",
+  "paired_by_seed": true,
+  "paired_by_seed_reason": "matching guided-sampler config with zero-guidance baseline",
+  "residual_sample_id": 12,
+  "target_label": 9,
+  "target_label_source": "--target-label",
+  "truth_model": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt"
+}

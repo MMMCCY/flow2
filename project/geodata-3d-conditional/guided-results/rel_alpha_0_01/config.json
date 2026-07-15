@@ -1,0 +1,22 @@
+{
+  "ckpt_path": "project/geodata-3d-conditional/conditional-weights.ckpt",
+  "samples_dir": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0",
+  "truth_model": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt",
+  "boreholes": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/boreholes.pt",
+  "output_dir": "project/geodata-3d-conditional/guided-results/rel_alpha_0_01",
+  "n_samples": 16,
+  "n_steps": 32,
+  "guidance_mode": "relative",
+  "mu": 0.01,
+  "alpha": 0.01,
+  "effective_parameter_explanation": "absolute mode uses mu * w_t * grad_geo; relative mode scales geophysical guidance to alpha * w_t of the prior velocity norm",
+  "description": "relative mode scales geophysical guidance to alpha * w_t of prior velocity norm",
+  "tau": 0.1,
+  "guidance_start": 0.5,
+  "guidance_schedule": "late_quadratic",
+  "kernel_size": 9,
+  "grad_clip_norm": 1.0,
+  "device": "cuda",
+  "seed": 42,
+  "baseline_dir": "project/geodata-3d-conditional/guided-results/rel_alpha_0"
+}

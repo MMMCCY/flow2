@@ -1,0 +1,25 @@
+{
+  "default_density": 0.0,
+  "default_susceptibility": 0.0,
+  "density_config": "manual_target_density_config",
+  "density_config_description": "Controlled lightweight gravity-proxy density configuration for manual dike-like target-label demo.",
+  "description": "Observed fields generated with controlled lightweight geophysical proxy forward models, not quantitative geophysical inversion.",
+  "figures": {
+    "observed_gravity": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/magnetic_joint/cond_generation_1_label10/observed_geophysics/observed_gravity.png",
+    "observed_gravity_gradient": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/magnetic_joint/cond_generation_1_label10/observed_geophysics/observed_gravity_gradient.png",
+    "observed_magnetic": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/magnetic_joint/cond_generation_1_label10/observed_geophysics/observed_magnetic.png"
+  },
+  "kernel_size": 9,
+  "outputs": {
+    "observed_gravity": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/magnetic_joint/cond_generation_1_label10/observed_geophysics/observed_gravity.pt",
+    "observed_gravity_gradient": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/magnetic_joint/cond_generation_1_label10/observed_geophysics/observed_gravity_gradient.pt",
+    "observed_magnetic": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/dike-demo-manual/magnetic_joint/cond_generation_1_label10/observed_geophysics/observed_magnetic.pt"
+  },
+  "physics_mode": "joint",
+  "susceptibility_config": "manual_target_susceptibility_config",
+  "susceptibility_config_description": "Controlled lightweight magnetic-proxy susceptibility configuration for manual dike-like target-label demo.",
+  "target_density": 3.5,
+  "target_label": 10,
+  "target_susceptibility": 5.0,
+  "truth_model": "/home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_1/true_model.pt"
+}

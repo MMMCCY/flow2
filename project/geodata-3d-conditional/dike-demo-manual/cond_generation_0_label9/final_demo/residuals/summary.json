@@ -1,0 +1,23 @@
+{
+  "baseline_lightweight_gravity_proxy_misfit": 0.8699247241020203,
+  "density_config": "manual_target_density_config",
+  "description": "Residual comparison uses the existing lightweight gravity-proxy.",
+  "figure": "project/geodata-3d-conditional/dike-demo-manual/cond_generation_0_label9/final_demo/residuals/gravity_proxy_residual_comparison.png",
+  "guided_lightweight_gravity_proxy_misfit": 0.6609110832214355,
+  "individual_figures": {
+    "baseline_predicted_gravity": "project/geodata-3d-conditional/dike-demo-manual/cond_generation_0_label9/final_demo/residuals/baseline_predicted_gravity_sample_12.png",
+    "baseline_residual": "project/geodata-3d-conditional/dike-demo-manual/cond_generation_0_label9/final_demo/residuals/baseline_residual_sample_12.png",
+    "guided_predicted_gravity": "project/geodata-3d-conditional/dike-demo-manual/cond_generation_0_label9/final_demo/residuals/guided_predicted_gravity_sample_12.png",
+    "guided_residual": "project/geodata-3d-conditional/dike-demo-manual/cond_generation_0_label9/final_demo/residuals/guided_residual_sample_12.png",
+    "observed_gravity": "project/geodata-3d-conditional/dike-demo-manual/cond_generation_0_label9/final_demo/residuals/observed_gravity.png",
+    "residual_difference": "project/geodata-3d-conditional/dike-demo-manual/cond_generation_0_label9/final_demo/residuals/residual_difference_sample_12.png"
+  },
+  "kernel_size": 9,
+  "misfit_improvement": 0.20901364088058472,
+  "paired_by_seed": true,
+  "paired_by_seed_reason": "matching guided-sampler config with zero-guidance baseline",
+  "residual_abs_mean_reduction": 0.0791124701499939,
+  "residual_rms_reduction": 0.09294864535331726,
+  "residual_symmetric_color_limit": 1.2966159582138062,
+  "sample_id": 12
+}
