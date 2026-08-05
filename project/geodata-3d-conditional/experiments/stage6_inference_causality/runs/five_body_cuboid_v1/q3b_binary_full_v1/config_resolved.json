@@ -1,0 +1,96 @@
+{
+  "base_config_sha256": "43fe3d8fa0fc55ef94979da93a2a6aded920e035507f2340c55cb2c383f7269c",
+  "causality_source_sha256": "c90d6e0bd0fb2b7d5e6844e8da5974aced8c5693d37bf159d70b6735287a0680",
+  "checkpoint_embedding_key": "embedding.weight",
+  "checkpoint_embedding_shape": [
+    15,
+    15
+  ],
+  "checkpoint_embedding_tensor_sha256": "51c79295413e3eb1a941c446df1c5263d78aa1176f6a1943f37392aa4aea02f8",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "config_sha256": "4b57ccbd2f84fb974376dd6b6940aaf9e005f8ea9d0f7f5d5df5faedd8de0d81",
+  "description": "Post-Q3 diagnostic that uses the same real checkpoint embeddings and endpoint optimizer but restricts the underground decoder to background raw label 0 versus target raw label 9.",
+  "device": "cuda",
+  "flow_unet_loaded": false,
+  "formal_training_authorized": false,
+  "gradient_clip_norm": 1.0,
+  "hard_check_interval": 5,
+  "hard_selection": "minimum_hard_physics_loss_only",
+  "id": "five_body_checkpoint_embedding_binary_control_v1",
+  "learning_rate": 0.02,
+  "max_state_norm_to_embedding_norm": 4.0,
+  "methods": [
+    "soft_embedding_binary",
+    "ste_embedding_binary"
+  ],
+  "observation_modes": [
+    "property",
+    "blurred_property",
+    "reflectivity_spikes",
+    "seismic",
+    "gravity"
+  ],
+  "regularization": {
+    "smoothness": 0.0,
+    "truth_roi": false,
+    "volume": 0.0
+  },
+  "runner_source_sha256": "b35d66979f80d34d763cb7cf52ef33086a2870ee4eeb4479ccae768d1eda306b",
+  "schema": "phase6q_embedding_endpoint_v1",
+  "search_region": {
+    "start": [
+      0,
+      18,
+      0
+    ],
+    "stop": [
+      64,
+      64,
+      55
+    ]
+  },
+  "seismic_controls": [
+    "correct",
+    "zero",
+    "shuffled_xy"
+  ],
+  "selected_methods": [
+    "soft_embedding_binary",
+    "ste_embedding_binary"
+  ],
+  "selected_modes": [
+    "property",
+    "blurred_property",
+    "reflectivity_spikes",
+    "seismic",
+    "gravity"
+  ],
+  "selected_seismic_controls": [
+    "correct",
+    "zero",
+    "shuffled_xy"
+  ],
+  "shuffle_seed": 6042,
+  "started_at_utc": "2026-08-04T10:05:06.784282+00:00",
+  "temperature_schedule": [
+    {
+      "steps": 40,
+      "temperature": 0.5
+    },
+    {
+      "steps": 60,
+      "temperature": 0.2
+    },
+    {
+      "steps": 60,
+      "temperature": 0.1
+    },
+    {
+      "steps": 40,
+      "temperature": 0.05
+    }
+  ],
+  "updates": 200,
+  "voxel_config_sha256": "b24d7eec4489d9ef4bf51ed20507c01a5e73720f6550ef2c5d86de8421d022b8",
+  "weight_decay": 0.0
+}

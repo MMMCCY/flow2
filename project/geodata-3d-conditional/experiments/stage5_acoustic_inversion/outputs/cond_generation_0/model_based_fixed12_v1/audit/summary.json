@@ -1,0 +1,38 @@
+{
+  "checks": {
+    "all_members_and_mean_conditions_exact": true,
+    "member_log_impedance_rmse_improved_at_least_9_of_12": true,
+    "posterior_mean_log_impedance_rmse_improved": true,
+    "posterior_mean_target_log_impedance_mae_improved": true,
+    "posterior_spread_finite_nonnegative_nonzero": true,
+    "seismic_rmse_improved_at_least_9_of_12": true
+  },
+  "decision": "PASS: eligible for a strictly paired Phase-2-style property-guidance bridge test",
+  "ensemble_mean_metrics": {
+    "posterior_mean_condition_violation_count": 0,
+    "posterior_spread_max": 0.5103381065163732,
+    "posterior_spread_mean": 0.11403998703467594,
+    "posterior_target_log_impedance_mae": 0.6430637566482528,
+    "posterior_unconstrained_log_impedance_rmse": 0.2433104239391283,
+    "prior_target_log_impedance_mae": 0.6485777927688463,
+    "prior_unconstrained_log_impedance_rmse": 0.2514293262535344
+  },
+  "member_counts": {
+    "log_impedance_rmse_improved": 12,
+    "seismic_rmse_improved": 12,
+    "target_log_impedance_mae_improved": 12,
+    "total": 12
+  },
+  "not_a_geological_recovery_claim": true,
+  "promoted_to_property_guidance_bridge_test": true,
+  "schema": "phase5a_acoustic_inversion_truth_audit_v1",
+  "target_label": 9,
+  "truth_usage": {
+    "audit_opened_truth_after_completed_manifest": true,
+    "builder_used_unconstrained_truth": false,
+    "truth_used_for_frozen_gate_evaluation": true,
+    "truth_used_for_selection_or_regularization": false
+  },
+  "unconstrained_subsurface_voxels": 193037,
+  "unconstrained_target_voxels": 8955
+}

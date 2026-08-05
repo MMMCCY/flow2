@@ -1,0 +1,302 @@
+{
+  "air_label": -1,
+  "air_start_z": 56,
+  "asset_hashes": {
+    "acoustic_config": "8980e30c59624af9f1bfa59447b7e22c85a2975f8a556fe6e98f5346f95d10ae",
+    "causality_source": "f8c3c38de804ea9cf14f8dfdb11946625791222f566991a1b9dbce093db6b31d",
+    "config": "43fe3d8fa0fc55ef94979da93a2a6aded920e035507f2340c55cb2c383f7269c",
+    "density_config": "091ef526c2378fe88107a890522cc0d9b284876ab02401f50afca494da114261",
+    "gravity_config": "1f96c82b33dfa69025c219256ea5308810828febcdfa4f4564f51da573cf0be8",
+    "runner_source": "76b8b7dcc1c71a59e3f679e5ce9a45e6583bd2606fd6051f811948772ef911d6",
+    "seismic_config": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02"
+  },
+  "background_label": 0,
+  "blur_sigma_voxels": 1.5,
+  "candidate_bodies": [
+    {
+      "id": "candidate_00",
+      "start": [
+        6,
+        22,
+        12
+      ],
+      "stop": [
+        14,
+        30,
+        22
+      ]
+    },
+    {
+      "id": "candidate_01",
+      "start": [
+        22,
+        22,
+        32
+      ],
+      "stop": [
+        30,
+        30,
+        42
+      ]
+    },
+    {
+      "id": "candidate_02",
+      "start": [
+        38,
+        22,
+        18
+      ],
+      "stop": [
+        46,
+        30,
+        28
+      ]
+    },
+    {
+      "id": "candidate_03",
+      "start": [
+        50,
+        22,
+        34
+      ],
+      "stop": [
+        58,
+        30,
+        44
+      ]
+    },
+    {
+      "id": "candidate_04",
+      "start": [
+        6,
+        38,
+        16
+      ],
+      "stop": [
+        14,
+        46,
+        26
+      ]
+    },
+    {
+      "id": "candidate_05",
+      "start": [
+        22,
+        38,
+        30
+      ],
+      "stop": [
+        30,
+        46,
+        40
+      ]
+    },
+    {
+      "id": "candidate_06",
+      "start": [
+        38,
+        38,
+        34
+      ],
+      "stop": [
+        46,
+        46,
+        44
+      ]
+    },
+    {
+      "id": "candidate_07",
+      "start": [
+        50,
+        38,
+        12
+      ],
+      "stop": [
+        58,
+        46,
+        22
+      ]
+    },
+    {
+      "id": "candidate_08",
+      "start": [
+        6,
+        50,
+        34
+      ],
+      "stop": [
+        14,
+        58,
+        44
+      ]
+    },
+    {
+      "id": "candidate_09",
+      "start": [
+        22,
+        50,
+        18
+      ],
+      "stop": [
+        30,
+        58,
+        28
+      ]
+    },
+    {
+      "id": "candidate_10",
+      "start": [
+        38,
+        50,
+        28
+      ],
+      "stop": [
+        46,
+        58,
+        38
+      ]
+    },
+    {
+      "id": "candidate_11",
+      "start": [
+        50,
+        50,
+        20
+      ],
+      "stop": [
+        58,
+        58,
+        30
+      ]
+    }
+  ],
+  "description": "Two-material analytic five-body benchmark; three drilled fixed bodies and two hidden bodies selected from a frozen twelve-body dictionary.",
+  "device": "cuda",
+  "enumeration_batch_size": 8,
+  "enumeration_only": false,
+  "fixed_bodies": [
+    {
+      "id": "drilled_0",
+      "start": [
+        6,
+        6,
+        12
+      ],
+      "stop": [
+        14,
+        14,
+        22
+      ],
+      "well_xy": [
+        10,
+        10
+      ]
+    },
+    {
+      "id": "drilled_1",
+      "start": [
+        22,
+        6,
+        32
+      ],
+      "stop": [
+        30,
+        14,
+        42
+      ],
+      "well_xy": [
+        26,
+        10
+      ]
+    },
+    {
+      "id": "drilled_2",
+      "start": [
+        38,
+        6,
+        20
+      ],
+      "stop": [
+        46,
+        14,
+        30
+      ],
+      "well_xy": [
+        42,
+        10
+      ]
+    }
+  ],
+  "formal_training_authorized": false,
+  "grid_shape": [
+    64,
+    64,
+    64
+  ],
+  "id": "five_body_cuboid_v1",
+  "implementation_version": "phase6q_simple_causality_v1",
+  "inverse_crime": true,
+  "measured_geophysics": false,
+  "observation_modes": [
+    "property",
+    "blurred_property",
+    "reflectivity_spikes",
+    "seismic",
+    "gravity"
+  ],
+  "optimization": {
+    "cardinality_weight": 0.01,
+    "hard_check_interval": 1,
+    "initial_logit": -2.0,
+    "learning_rate": 0.15,
+    "methods": [
+      "soft",
+      "ste_top2"
+    ],
+    "temperature_schedule": [
+      {
+        "steps": 80,
+        "temperature": 1.0
+      },
+      {
+        "steps": 60,
+        "temperature": 0.5
+      },
+      {
+        "steps": 60,
+        "temperature": 0.2
+      }
+    ],
+    "updates": 200,
+    "weight_decay": 0.0
+  },
+  "schema": "phase6q_five_body_causality_v1",
+  "seismic_controls": [
+    "correct",
+    "zero",
+    "shuffled_xy"
+  ],
+  "selected_methods": [
+    "soft",
+    "ste_top2"
+  ],
+  "selected_modes": [
+    "property",
+    "blurred_property",
+    "reflectivity_spikes",
+    "seismic",
+    "gravity"
+  ],
+  "selected_seismic_controls": [
+    "correct",
+    "zero",
+    "shuffled_xy"
+  ],
+  "shuffle_seed": 6042,
+  "started_at_utc": "2026-08-04T09:31:07.162929+00:00",
+  "target_label": 9,
+  "truth_candidate_indices": [
+    4,
+    6
+  ]
+}

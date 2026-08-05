@@ -1,0 +1,119 @@
+{
+  "baseline_target_voxels": 1920,
+  "candidate_condition_overlap_voxels": 0,
+  "candidate_voxels_each": 640,
+  "condition_voxels": 37029,
+  "expected_hidden_voxels": 1280,
+  "fixed_target_voxels": 1920,
+  "tensor_records": {
+    "baseline_labels.pt": {
+      "dtype": "torch.int64",
+      "file_sha256": "0faf7270a61320e6a262d2a0581aeec7c3933f002279a08797a4469638d31dd4",
+      "path": "tensors/baseline_labels.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "tensor_sha256": "73fd9e3d9b263f8aa08f01a8357ad612d6320e505b37bfcb33c9b8eb9b4391fd"
+    },
+    "candidate_masks.pt": {
+      "dtype": "torch.bool",
+      "file_sha256": "0ce361285c7e6a208500bd1571d01522467ab2b229b13de83bfa951a07244ca5",
+      "path": "tensors/candidate_masks.pt",
+      "shape": [
+        12,
+        64,
+        64,
+        64
+      ],
+      "tensor_sha256": "9c07bd1112410abcadc277b6aa2b8a99a31decf8fd90a8d84d9c842bcb61047a"
+    },
+    "condition_mask.pt": {
+      "dtype": "torch.bool",
+      "file_sha256": "6e6707d1325a97186010d92dc4694a11807f2db6049c5179d19a5f52bcb3e032",
+      "path": "tensors/condition_mask.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "tensor_sha256": "16294cf618eb9b4301ececc800f414be4d152f2134c9525f2b9256e00554a9f7"
+    },
+    "fixed_target_mask.pt": {
+      "dtype": "torch.bool",
+      "file_sha256": "492c6c346dc5997bc149f3247594e5b7c6eed9927bc2d56fbd7472c24a8b46dd",
+      "path": "tensors/fixed_target_mask.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "tensor_sha256": "b5562795c63d6c43083beafe3f9f298327c40ba84e639be8f243888fdeb5339e"
+    },
+    "subsurface_mask.pt": {
+      "dtype": "torch.bool",
+      "file_sha256": "679eb216ce7f996fc7dcb92f7275756b5b85f2d9231cbef399a96355b357b954",
+      "path": "tensors/subsurface_mask.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "tensor_sha256": "379d38e5ca6240a6dc3747e71feda6ddd14041b280c2dce2ed6006d31de0bc1a"
+    },
+    "truth_labels.pt": {
+      "dtype": "torch.int64",
+      "file_sha256": "3fb3969e94f01b43887ffb1bcea5d03e0336371baa4d7c6427e385cb74b25af6",
+      "path": "tensors/truth_labels.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "tensor_sha256": "2d007c4bb32cb007789a290da4ba4d410131323d903de6992c524bf07617b382"
+    }
+  },
+  "truth_baseline_difference_voxels": 1280,
+  "truth_condition_mismatches": 0,
+  "truth_target_voxels": 3200,
+  "well_reports": [
+    {
+      "body_id": "drilled_0",
+      "candidate_target_voxels": 0,
+      "fixed_target_voxels": 10,
+      "well_xy": [
+        10,
+        10
+      ]
+    },
+    {
+      "body_id": "drilled_1",
+      "candidate_target_voxels": 0,
+      "fixed_target_voxels": 10,
+      "well_xy": [
+        26,
+        10
+      ]
+    },
+    {
+      "body_id": "drilled_2",
+      "candidate_target_voxels": 0,
+      "fixed_target_voxels": 10,
+      "well_xy": [
+        42,
+        10
+      ]
+    }
+  ]
+}

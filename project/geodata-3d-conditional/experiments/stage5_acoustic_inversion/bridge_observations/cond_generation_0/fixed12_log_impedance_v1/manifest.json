@@ -1,0 +1,131 @@
+{
+  "confidence_metadata": {
+    "active_confidence_max": 1.0,
+    "active_confidence_mean": 0.516833395539298,
+    "active_confidence_min": 0.026823066792187298,
+    "active_voxels": 193037,
+    "mode": "inverse_quadratic_relative_to_active_positive_median_v1",
+    "positive_spread_voxels": 193036,
+    "spread_reference_median": 0.08472592329353636
+  },
+  "description": "Truth-blind log-impedance posterior target for one Phase-5b flow gate.",
+  "generated_tensors": {
+    "condition_mask.pt": {
+      "dtype": "torch.bool",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/bridge_observations/cond_generation_0/fixed12_log_impedance_v1/condition_mask.pt",
+      "sha256": "e7b1f22e1e71b58ae64ad2b2925eb779b1f7cc1c223a3e30552e6a15c9284ea1",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 263834,
+      "tensor_sha256": "0d4da18816deaa7720ab3b4def3cdb03f0f651b7313dc6af7da515351d56e0aa"
+    },
+    "property_confidence.pt": {
+      "dtype": "torch.float32",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/bridge_observations/cond_generation_0/fixed12_log_impedance_v1/property_confidence.pt",
+      "sha256": "fbc582bd0b5c7ab67bb209b970dbfe23256f58f800e70add10f40df0b9f426a1",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 1050301,
+      "tensor_sha256": "c713c9281c5b59b6c1dfa803f3042671264c46813c3a14afc591d565b0e87d74"
+    },
+    "property_table.pt": {
+      "dtype": "torch.float32",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/bridge_observations/cond_generation_0/fixed12_log_impedance_v1/property_table.pt",
+      "sha256": "3e394a6708649798ff2df312ba5976a28bea316751232b2533a7551fb3c4c7d0",
+      "shape": [
+        1,
+        15
+      ],
+      "size_bytes": 1690,
+      "tensor_sha256": "601addda3439a69f55687abbdc39d22bee5cf79346d5d83611982d30ed7c6bfe"
+    },
+    "subsurface_mask.pt": {
+      "dtype": "torch.bool",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/bridge_observations/cond_generation_0/fixed12_log_impedance_v1/subsurface_mask.pt",
+      "sha256": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 263841,
+      "tensor_sha256": "07f2e4fd629e700a1b6e03fba183d411f17a5c36358177c0857a1ff0188bd47b"
+    },
+    "target_properties.pt": {
+      "dtype": "torch.float32",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/bridge_observations/cond_generation_0/fixed12_log_impedance_v1/target_properties.pt",
+      "sha256": "cef85ef66a9ad8bb00ae06e356f12ed4af48eac703096e2cdaf5d36b3ffc6cdc",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 1050287,
+      "tensor_sha256": "cf94f831b053822e09d9877a343e15a3407441065d69a44bbe6c9b4195387fbc"
+    }
+  },
+  "inverse_crime_source": true,
+  "measured_geophysics": false,
+  "phase5a_pass_bit_used_as_stop_gate": true,
+  "property_config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/bridge_observations/cond_generation_0/fixed12_log_impedance_v1/property_config_resolved.json",
+    "sha256": "c5273fa72924efc7b43d9ce8487d7350e34409d1b238c0747750efe91e1c9dd4",
+    "size_bytes": 858
+  },
+  "schema": "phase5b_inversion_property_assets_v1",
+  "source_assets": {
+    "bridge_config": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/configs/inversion_property_bridge_v1.json",
+      "sha256": "825e3508c1a19547c6124e367d3c7cc8f6a5f441bafa2d4e29fa124237b93b44",
+      "size_bytes": 595
+    },
+    "bridge_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/inversion_bridge.py",
+      "sha256": "5895f9020c1ecdaee27c9fe84de6dd76db976df8742a9493e9079bb604e01e05",
+      "size_bytes": 4734
+    },
+    "builder_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage5/build_inversion_property_bridge.py",
+      "sha256": "0893af52c08d1e600c6e18c9d0045cdc329886ae21660212bb14beea84ef305a",
+      "size_bytes": 9299
+    },
+    "observation_manifest": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/observations/cond_generation_0/distinct_upper_bound_v1_fix2/manifest.json",
+      "sha256": "3aa555c92ff63372512b1b1b1cdef1b1f55a5968f296389f2092dfd68d0019e9",
+      "size_bytes": 9249
+    },
+    "phase5a_audit_manifest": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/audit/manifest.json",
+      "sha256": "74f84b063fa49df4394abd4c0f42fcee998199411c6b8cf594d6252670fe9b75",
+      "size_bytes": 3957
+    },
+    "phase5a_audit_summary_gate_only": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/audit/summary.json",
+      "sha256": "be5f78ef3a7bd1f7052d0c4291aa72a330b4dd99767823cceaff5468ac80b12e",
+      "size_bytes": 1552
+    },
+    "phase5a_manifest": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/manifest.json",
+      "sha256": "cf14719619a579154c5562425cb2324745d5510b64c53b9c159fac88e987d97c",
+      "size_bytes": 25702
+    }
+  },
+  "status": "complete",
+  "truth_acoustic_loaded": false,
+  "truth_geology_loaded": false,
+  "truth_metrics_used_for_construction": false
+}

@@ -1,0 +1,232 @@
+{
+  "alpha": 0.25,
+  "anchor_regression": {
+    "baseline_hard_mismatch_voxels": 0,
+    "guided_hard_disagreement_fraction": 3.0517578125e-05,
+    "guided_hard_disagreement_limit": 0.001,
+    "guided_hard_mismatch_voxels": 8,
+    "metric_absolute_differences": {
+      "global_voxel_accuracy": 5.066394805908203e-06,
+      "target_iou": 0.00016028395782041738,
+      "target_precision": 0.00013839804227133712,
+      "target_recall": 0.00022301516503131502,
+      "truth_present_mean_iou": 1.6868114471435547e-05
+    },
+    "metric_tolerances": {
+      "global_voxel_accuracy": 0.005,
+      "target_iou": 0.02,
+      "target_precision": 0.02,
+      "target_recall": 0.02,
+      "truth_present_mean_iou": 0.005
+    },
+    "passed": true
+  },
+  "completed_level_ids": [
+    "distinct_c100_anchor",
+    "paired_c100",
+    "paired_c025",
+    "paired_c010",
+    "paired_c004_overlap"
+  ],
+  "decision": "SCREEN RESULT: n=4 bracket identified; not yet confirmed",
+  "is_measured_geophysics": false,
+  "levels": [
+    {
+      "delta_global_voxel_accuracy": 0.041001200675964355,
+      "delta_hard_property_loss": -1.0121454000473022,
+      "delta_truth_present_mean_iou": 0.06672391295433044,
+      "final_churn_fraction": 0.00888824462890625,
+      "guided_global_voxel_accuracy": 0.6283667683601379,
+      "guided_hard_property_loss": 0.533737063407898,
+      "guided_target_iou": 0.48179035152538796,
+      "guided_target_precision": 0.9003748273821266,
+      "guided_target_recall": 0.5089206066012489,
+      "guided_target_volume": 5069,
+      "guided_truth_present_mean_iou": 0.3319733440876007,
+      "improved_truth_present_classes": 6,
+      "label9_susceptibility": 0.1,
+      "level_id": "distinct_c100_anchor",
+      "major_component_mean_recall": 0.4925385184392268,
+      "major_component_min_recall": 0.37161084529505584,
+      "order": 0,
+      "pair_gate_pass_count": 1,
+      "property_config_sha256": "21582cf2a8b895b47fcc76b0ed8f9a90ab5742b0cfd7930668d715c3b9004ef2",
+      "role": "implementation_anchor",
+      "screen_gate_pass": true,
+      "strict_pairing": true,
+      "target_exact_property_group": [
+        9
+      ],
+      "target_nearest_distance": 0.6764286454363828,
+      "target_nearest_labels": [
+        10
+      ],
+      "tiny_component_mass_fraction": 0.05365949891497337,
+      "top8_component_mass_fraction": 0.8721641349378576,
+      "unique_property_vectors": 15
+    },
+    {
+      "delta_global_voxel_accuracy": 0.042251527309417725,
+      "delta_hard_property_loss": -0.8470529913902283,
+      "delta_truth_present_mean_iou": 0.0627535879611969,
+      "final_churn_fraction": 0.010601043701171875,
+      "guided_global_voxel_accuracy": 0.6296170949935913,
+      "guided_hard_property_loss": 0.5691602826118469,
+      "guided_target_iou": 0.42597619544790144,
+      "guided_target_precision": 0.8699360341151386,
+      "guided_target_recall": 0.45495093666369313,
+      "guided_target_volume": 4690,
+      "guided_truth_present_mean_iou": 0.32800301909446716,
+      "improved_truth_present_classes": 6,
+      "label9_susceptibility": 0.1,
+      "level_id": "paired_c100",
+      "major_component_mean_recall": 0.4382615006840076,
+      "major_component_min_recall": 0.2982456140350877,
+      "order": 1,
+      "pair_gate_pass_count": 1,
+      "property_config_sha256": "c46e0606bbc6525d9c1aac0619420e6bfb32523dc2947fb5ef1b78a0058eab48",
+      "role": "ambiguity_sweep",
+      "screen_gate_pass": true,
+      "strict_pairing": true,
+      "target_exact_property_group": [
+        9
+      ],
+      "target_nearest_distance": 0.6764286431700086,
+      "target_nearest_labels": [
+        7,
+        8
+      ],
+      "tiny_component_mass_fraction": 0.06908315565031983,
+      "top8_component_mass_fraction": 0.8339019189765459,
+      "unique_property_vectors": 9
+    },
+    {
+      "delta_global_voxel_accuracy": 0.0405811071395874,
+      "delta_hard_property_loss": -0.8340734839439392,
+      "delta_truth_present_mean_iou": 0.058551132678985596,
+      "final_churn_fraction": 0.010772705078125,
+      "guided_global_voxel_accuracy": 0.627946674823761,
+      "guided_hard_property_loss": 0.5945129990577698,
+      "guided_target_iou": 0.3951081843838194,
+      "guided_target_precision": 0.863210778716602,
+      "guided_target_recall": 0.4214986619090098,
+      "guided_target_volume": 4379,
+      "guided_truth_present_mean_iou": 0.32380056381225586,
+      "improved_truth_present_classes": 6,
+      "label9_susceptibility": 0.025,
+      "level_id": "paired_c025",
+      "major_component_mean_recall": 0.40252875371439073,
+      "major_component_min_recall": 0.2583732057416268,
+      "order": 2,
+      "pair_gate_pass_count": 1,
+      "property_config_sha256": "9fb938e33ce372fbdd32c9354adbb141a931e518d25779fc92f7b43d9ac07fc7",
+      "role": "ambiguity_sweep",
+      "screen_gate_pass": true,
+      "strict_pairing": true,
+      "target_exact_property_group": [
+        9
+      ],
+      "target_nearest_distance": 0.5811567906888199,
+      "target_nearest_labels": [
+        7,
+        8
+      ],
+      "tiny_component_mass_fraction": 0.06736697876227449,
+      "top8_component_mass_fraction": 0.7985841516327928,
+      "unique_property_vectors": 9
+    },
+    {
+      "delta_global_voxel_accuracy": 0.03249722719192505,
+      "delta_hard_property_loss": -0.6704352498054504,
+      "delta_truth_present_mean_iou": 0.03728538751602173,
+      "final_churn_fraction": 0.011257171630859375,
+      "guided_global_voxel_accuracy": 0.6198627948760986,
+      "guided_hard_property_loss": 0.7038677334785461,
+      "guided_target_iou": 0.23704543113217266,
+      "guided_target_precision": 0.7569078947368421,
+      "guided_target_recall": 0.2565789473684211,
+      "guided_target_volume": 3040,
+      "guided_truth_present_mean_iou": 0.302534818649292,
+      "improved_truth_present_classes": 6,
+      "label9_susceptibility": 0.01,
+      "level_id": "paired_c010",
+      "major_component_mean_recall": 0.23622581643357587,
+      "major_component_min_recall": 0.09728867623604466,
+      "order": 3,
+      "pair_gate_pass_count": 0,
+      "property_config_sha256": "e4e3ae3867e245c476bdc97750c59d9e79ba11fa90ee2217a6439bc5251c9544",
+      "role": "ambiguity_sweep",
+      "screen_gate_pass": false,
+      "strict_pairing": true,
+      "target_exact_property_group": [
+        9
+      ],
+      "target_nearest_distance": 0.3868996585167312,
+      "target_nearest_labels": [
+        10,
+        11
+      ],
+      "tiny_component_mass_fraction": 0.14769736842105263,
+      "top8_component_mass_fraction": 0.6338815789473684,
+      "unique_property_vectors": 9
+    },
+    {
+      "delta_global_voxel_accuracy": 0.02088528871536255,
+      "delta_hard_property_loss": -0.26843929290771484,
+      "delta_truth_present_mean_iou": 0.011312663555145264,
+      "final_churn_fraction": 0.006298065185546875,
+      "guided_global_voxel_accuracy": 0.6082508563995361,
+      "guided_hard_property_loss": 0.7249860763549805,
+      "guided_target_iou": 0.03549986948577395,
+      "guided_target_precision": 0.13910671667234914,
+      "guided_target_recall": 0.045495093666369314,
+      "guided_target_volume": 2933,
+      "guided_truth_present_mean_iou": 0.2765620946884155,
+      "improved_truth_present_classes": 6,
+      "label9_susceptibility": 0.004,
+      "level_id": "paired_c004_overlap",
+      "major_component_mean_recall": 0.04029973120548107,
+      "major_component_min_recall": 0.0004562043795620438,
+      "order": 4,
+      "pair_gate_pass_count": 0,
+      "property_config_sha256": "e41db579877cb08d4a414b37a1f5fc669393e4682feafe5f41ed863ec666b101",
+      "role": "ambiguity_sweep",
+      "screen_gate_pass": false,
+      "strict_pairing": true,
+      "target_exact_property_group": [
+        6,
+        9
+      ],
+      "target_nearest_distance": 0.0,
+      "target_nearest_labels": [
+        6
+      ],
+      "tiny_component_mass_fraction": 0.03818615751789976,
+      "top8_component_mass_fraction": 0.9563586771224003,
+      "unique_property_vectors": 8
+    }
+  ],
+  "limitations": [
+    "single-sample screen is not a Phase-2b confirmation",
+    "property target remains truth-derived and full-resolution",
+    "controlled codebook values are not calibrated petrophysics",
+    "continuous property loss cannot replace hard-label and geometry gates"
+  ],
+  "manifest": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/configs/phase2b_codebook_ambiguity_v1/sweep_manifest.json",
+  "manifest_sha256": "73576a07270ef9588c611c10f4c2eb60f4c5fed904303e7916b8d3b5336deae5",
+  "max_guidance_ratio": 0.25,
+  "missing_level_ids": [],
+  "n_samples": 1,
+  "n_steps": 32,
+  "promotion": {
+    "missing_levels": [],
+    "promote_levels": [
+      "paired_c025",
+      "paired_c010"
+    ],
+    "selected_level": "paired_c025",
+    "status": "candidate_identified_not_confirmed"
+  },
+  "scope": "truth-derived full-resolution property-codebook ambiguity screen",
+  "seed": 42
+}

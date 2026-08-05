@@ -1,0 +1,24 @@
+{
+  "schema": "phase4_density_contrast_v1",
+  "id": "density_label6_label9_collision_v1",
+  "description": "Mandatory Phase-4a density ambiguity control. It is identical to the distinct synthetic scenario except labels 6 and 9 have exactly the same density contrast.",
+  "scenario": "synthetic_label6_label9_exact_density_collision",
+  "unit": "kg m^-3",
+  "values": {
+    "-1": 0.0,
+    "0": -350.0,
+    "1": -250.0,
+    "2": -150.0,
+    "3": -50.0,
+    "4": 50.0,
+    "5": 150.0,
+    "6": 250.0,
+    "7": 350.0,
+    "8": 450.0,
+    "9": 250.0,
+    "10": 550.0,
+    "11": 300.0,
+    "12": 100.0,
+    "13": -100.0
+  }
+}

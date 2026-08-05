@@ -17,8 +17,42 @@ from typing import Dict, Iterable, List, Mapping, Optional, Sequence
 
 import torch
 
+from inference_runtime import PROTOCOL_VERSION, require_equal_fields
+
 
 DEFAULT_SAMPLE_PREFIXES = ("sample", "sol", "run")
+STRICT_PAIR_FIELDS = (
+    "protocol_version",
+    "checkpoint_sha256",
+    "model_weight_source",
+    "ema_applied",
+    "truth_model_sha256",
+    "boreholes_sha256",
+    "density_config_sha256",
+    "susceptibility_config_sha256",
+    "observed_gravity_sha256",
+    "observed_magnetic_sha256",
+    "observed_gravity_gradient_sha256",
+    "sampler_source_sha256",
+    "runtime_source_sha256",
+    "geophysics_source_sha256",
+    "n_samples",
+    "n_steps",
+    "integrator",
+    "initial_noise_policy",
+    "seed",
+    "guidance_mode",
+    "physics_mode",
+    "tau",
+    "guidance_start",
+    "guidance_schedule",
+    "kernel_size",
+    "grad_clip_norm",
+    "gravity_weight",
+    "magnetic_weight",
+    "gravity_gradient_weight",
+    "device",
+)
 
 
 def numeric_suffix(path: Path) -> int:
@@ -383,20 +417,28 @@ def target_component_stats(mask: torch.Tensor) -> Dict[str, object]:
     }
 
 
-def infer_paired_by_seed(baseline_dir: Path, guided_dir: Path) -> tuple[bool, str]:
-    """Conservatively infer whether sample_i files likely share initial X0 seeds."""
-    baseline_config = baseline_dir / "config.json"
-    guided_config = guided_dir / "config.json"
-    if not baseline_config.exists() or not guided_config.exists():
-        return False, "missing baseline or guided config.json"
-    baseline = read_json(baseline_config)
-    guided = read_json(guided_config)
-    required_equal = ("truth_model", "boreholes", "seed", "n_samples", "kernel_size")
-    for key in required_equal:
-        if baseline.get(key) != guided.get(key):
-            return False, f"config field differs: {key}"
-    if baseline.get("guidance_mode") != guided.get("guidance_mode"):
-        return False, "guidance_mode differs"
+def paired_config_verdict(
+    baseline: Mapping[str, object],
+    guided: Mapping[str, object],
+) -> tuple[bool, str]:
+    """Verify that two config payloads differ only in active guidance strength."""
+    if (
+        baseline.get("protocol_version") != PROTOCOL_VERSION
+        or guided.get("protocol_version") != PROTOCOL_VERSION
+    ):
+        return (
+            False,
+            "legacy config lacks the current strict pairing protocol and asset hashes",
+        )
+
+    equal, reason = require_equal_fields(
+        baseline,
+        guided,
+        STRICT_PAIR_FIELDS,
+    )
+    if not equal:
+        return False, reason
+
     mode = str(guided.get("guidance_mode", ""))
     if mode not in {"absolute", "relative"}:
         return False, "missing or unsupported guidance_mode"
@@ -406,7 +448,26 @@ def infer_paired_by_seed(baseline_dir: Path, guided_dir: Path) -> tuple[bool, st
         return False, "relative baseline alpha is not zero"
     if mode == "absolute" and float(baseline_mu) != 0.0:
         return False, "absolute baseline mu is not zero"
-    return True, "matching guided-sampler config with zero-guidance baseline"
+    if mode == "relative" and float(guided.get("alpha", 0.0)) <= 0.0:
+        return False, "guided relative run alpha must be positive"
+    if mode == "absolute" and float(guided.get("mu", 0.0)) <= 0.0:
+        return False, "guided absolute run mu must be positive"
+    inactive_parameter = "mu" if mode == "relative" else "alpha"
+    if baseline.get(inactive_parameter) != guided.get(inactive_parameter):
+        return False, f"inactive guidance parameter differs: {inactive_parameter}"
+    return True, "strict asset, model, noise, and sampler protocol match"
+
+
+def infer_paired_by_seed(baseline_dir: Path, guided_dir: Path) -> tuple[bool, str]:
+    """Verify that two runs differ only in their non-zero guidance strength."""
+    baseline_config = baseline_dir / "config.json"
+    guided_config = guided_dir / "config.json"
+    if not baseline_config.exists() or not guided_config.exists():
+        return False, "missing baseline or guided config.json"
+    return paired_config_verdict(
+        read_json(baseline_config),
+        read_json(guided_config),
+    )
 
 
 def connected_components_3d(mask: torch.Tensor) -> List[Dict[str, object]]:

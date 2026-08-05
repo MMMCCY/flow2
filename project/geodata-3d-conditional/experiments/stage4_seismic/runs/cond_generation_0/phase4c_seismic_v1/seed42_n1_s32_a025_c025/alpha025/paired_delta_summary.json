@@ -1,0 +1,166 @@
+{
+  "metrics": {
+    "delta_global_mean_iou": {
+      "count": 1,
+      "max": -0.04110582172870636,
+      "mean": -0.04110582172870636,
+      "min": -0.04110582172870636,
+      "std": 0.0
+    },
+    "delta_global_voxel_accuracy": {
+      "count": 1,
+      "max": 0.0023537278175354004,
+      "mean": 0.0023537278175354004,
+      "min": 0.0023537278175354004,
+      "std": 0.0
+    },
+    "delta_hard_observation_loss": {
+      "count": 1,
+      "max": -2.613266944885254,
+      "mean": -2.613266944885254,
+      "min": -2.613266944885254,
+      "std": 0.0
+    },
+    "delta_hard_observation_mae": {
+      "count": 1,
+      "max": -0.000915205106139183,
+      "mean": -0.000915205106139183,
+      "min": -0.000915205106139183,
+      "std": 0.0
+    },
+    "delta_hard_property_loss": {
+      "count": 1,
+      "max": -0.03026759624481201,
+      "mean": -0.03026759624481201,
+      "min": -0.03026759624481201,
+      "std": 0.0
+    },
+    "delta_hard_property_mae": {
+      "count": 1,
+      "max": -26906.875,
+      "mean": -26906.875,
+      "min": -26906.875,
+      "std": 0.0
+    },
+    "delta_hard_seismic_loss": {
+      "count": 1,
+      "max": -2.613266944885254,
+      "mean": -2.613266944885254,
+      "min": -2.613266944885254,
+      "std": 0.0
+    },
+    "delta_hard_seismic_mae_amplitude": {
+      "count": 1,
+      "max": -0.000915205106139183,
+      "mean": -0.000915205106139183,
+      "min": -0.000915205106139183,
+      "std": 0.0
+    },
+    "delta_hard_seismic_rmse_amplitude": {
+      "count": 1,
+      "max": -0.003213968127965927,
+      "mean": -0.003213968127965927,
+      "min": -0.003213968127965927,
+      "std": 0.0
+    },
+    "delta_inside_roi_voxel_accuracy": {
+      "count": 1,
+      "max": 0.002049013119123755,
+      "mean": 0.002049013119123755,
+      "min": 0.002049013119123755,
+      "std": 0.0
+    },
+    "delta_largest_component_fraction": {
+      "count": 1,
+      "max": -0.022072705815556648,
+      "mean": -0.022072705815556648,
+      "min": -0.022072705815556648,
+      "std": 0.0
+    },
+    "delta_outside_roi_voxel_accuracy": {
+      "count": 1,
+      "max": 0.0027390038735702893,
+      "mean": 0.0027390038735702893,
+      "min": 0.0027390038735702893,
+      "std": 0.0
+    },
+    "delta_target_absolute_volume_error_fraction": {
+      "count": 1,
+      "max": 0.1388269402319358,
+      "mean": 0.1388269402319358,
+      "min": 0.1388269402319358,
+      "std": 0.0
+    },
+    "delta_target_centroid_distance": {
+      "count": 1,
+      "max": 0.32755470275878906,
+      "mean": 0.32755470275878906,
+      "min": 0.32755470275878906,
+      "std": 0.0
+    },
+    "delta_target_components_ge_100": {
+      "count": 1,
+      "max": -1.0,
+      "mean": -1.0,
+      "min": -1.0,
+      "std": 0.0
+    },
+    "delta_target_components_ge_20": {
+      "count": 1,
+      "max": 1.0,
+      "mean": 1.0,
+      "min": 1.0,
+      "std": 0.0
+    },
+    "delta_target_connected_components": {
+      "count": 1,
+      "max": -6.0,
+      "mean": -6.0,
+      "min": -6.0,
+      "std": 0.0
+    },
+    "delta_target_iou": {
+      "count": 1,
+      "max": -0.002666212768096688,
+      "mean": -0.002666212768096688,
+      "min": -0.002666212768096688,
+      "std": 0.0
+    },
+    "delta_target_precision": {
+      "count": 1,
+      "max": 0.002782292425726196,
+      "mean": 0.002782292425726196,
+      "min": 0.002782292425726196,
+      "std": 0.0
+    },
+    "delta_target_recall": {
+      "count": 1,
+      "max": -0.007805530776092778,
+      "mean": -0.007805530776092778,
+      "min": -0.007805530776092778,
+      "std": 0.0
+    },
+    "delta_target_tiny_component_mass_fraction_le_5": {
+      "count": 1,
+      "max": -0.0002506495754026521,
+      "mean": -0.0002506495754026521,
+      "min": -0.0002506495754026521,
+      "std": 0.0
+    },
+    "delta_target_top4_component_mass_fraction": {
+      "count": 1,
+      "max": -0.00945796192135695,
+      "mean": -0.00945796192135695,
+      "min": -0.00945796192135695,
+      "std": 0.0
+    },
+    "delta_truth_present_mean_iou": {
+      "count": 1,
+      "max": 0.0004055500030517578,
+      "mean": 0.0004055500030517578,
+      "min": 0.0004055500030517578,
+      "std": 0.0
+    }
+  },
+  "n_samples": 1
+}

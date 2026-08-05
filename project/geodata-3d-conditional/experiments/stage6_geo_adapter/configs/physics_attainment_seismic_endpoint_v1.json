@@ -1,0 +1,38 @@
+{
+  "schema": "phase6p_physics_attainment_config_v1",
+  "id": "physics_attainment_seismic_endpoint_v1",
+  "status": "frozen_before_cuda_output",
+  "case_role": "legacy_truth_derived_seismic_inference_limit_diagnostic",
+  "method": "endpoint_adam_hard_selection_v1",
+  "optimizer": {
+    "type": "adam",
+    "learning_rate": 0.02,
+    "weight_decay": 0.0,
+    "gradient_clip_norm": 1.0,
+    "hard_check_interval": 5,
+    "max_state_norm_to_embedding_norm": 4.0,
+    "hard_improvement_tolerance": 0.0
+  },
+  "temperature_schedule": [
+    {"temperature": 0.5, "steps": 40},
+    {"temperature": 0.2, "steps": 60},
+    {"temperature": 0.1, "steps": 60},
+    {"temperature": 0.05, "steps": 40}
+  ],
+  "sampling": {
+    "seed": 42,
+    "n_steps": 32
+  },
+  "attainment_thresholds": {
+    "low_upper": 0.25,
+    "high_lower": 0.8
+  },
+  "geology_audit_thresholds": {
+    "target_iou_delta": 0.1,
+    "truth_present_mean_iou_delta": 0.05
+  },
+  "truth_metrics_computed_by_optimizer": false,
+  "base_model_trainable": false,
+  "publication_evidence": false,
+  "allow_hyperparameter_sweep_on_case": false
+}

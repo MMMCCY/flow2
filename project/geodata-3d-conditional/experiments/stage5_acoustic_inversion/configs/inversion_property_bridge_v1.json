@@ -1,0 +1,14 @@
+{
+  "schema": "phase5b_inversion_property_bridge_config_v1",
+  "id": "fixed12_log_impedance_posterior_bridge_v1",
+  "description": "Truth-blind conversion of the Phase-5a fixed-12 posterior mean/spread to one log-impedance property-guidance target.",
+  "property_channel": "log_acoustic_impedance",
+  "target": "posterior_mean_log_impedance",
+  "uncertainty": "population_std_log_impedance",
+  "confidence": "inverse_quadratic_relative_to_active_positive_median_v1",
+  "active_region": "unconstrained_subsurface",
+  "condition_confidence": 0.0,
+  "spatial_sigma": 0.0,
+  "truth_tuned": false
+}
+

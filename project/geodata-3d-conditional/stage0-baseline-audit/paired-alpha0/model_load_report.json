@@ -1,0 +1,23 @@
+{
+  "checkpoint": {
+    "path": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+    "size_bytes": 849415038,
+    "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c"
+  },
+  "weight_source": "ema",
+  "ema_applied": true,
+  "model_parameter_count": 412,
+  "trainable_parameter_count": 411,
+  "frozen_parameters": [
+    "embedding.weight"
+  ],
+  "ema_entry_count": 411,
+  "ema_missing_trainable": [],
+  "ema_unexpected": [],
+  "ema_shape_mismatches": [],
+  "ema_excluded_frozen_parameters": [
+    "embedding.weight"
+  ],
+  "checkpoint_epoch": 1651,
+  "checkpoint_global_step": 8376
+}

@@ -1,0 +1,306 @@
+{
+  "acceptance_fraction": 1.0,
+  "accepted_proposals": 1,
+  "asset_records": {
+    "boreholes": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/boreholes.pt",
+      "sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41",
+      "size_bytes": 1050167
+    },
+    "checkpoint": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "historical_baseline_config": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/runs/cond_generation_0/phase4c_seismic_v1/seed42_n1_s32_a025_c025/baseline/config.json",
+      "sha256": "3f26d893eb35434229d83a5f458dafcf9c76d78cd4ca3bacdeef74032ab03aee",
+      "size_bytes": 20398
+    },
+    "observation_manifest": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/observations/cond_generation_0/distinct_upper_bound_v1_fix2/manifest.json",
+      "sha256": "3aa555c92ff63372512b1b1b1cdef1b1f55a5968f296389f2092dfd68d0019e9",
+      "size_bytes": 9249
+    },
+    "phase4_loader_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage4/run_seismic_guidance.py",
+      "sha256": "e40b56d78aac16b5ed959711c732fa04e99e053761b1d54a92bd16894e06c644",
+      "size_bytes": 39507
+    },
+    "posterior_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/generator_posterior.py",
+      "sha256": "9faf5d1a27146992e30678e7f83bc0d6e4bbf6181406546f6dc981dca798fc28",
+      "size_bytes": 6845
+    },
+    "protocol_config": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_generator_posterior/configs/cond0_hard_pcn_mechanism_v1.json",
+      "sha256": "5dc4ab5ca8754a933bcc2a3381aad4df4d7c49cc1ad131143e262618b3d0cf0e",
+      "size_bytes": 686
+    },
+    "protocol_spec": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/docs/PHASE5C_SPEC.md",
+      "sha256": "56b99d2af6ec62e783c6e3414c46b6ff3bef41129763d72ff363b95124012a4c",
+      "size_bytes": 5769
+    },
+    "runner_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage5/run_generator_posterior.py",
+      "sha256": "9e5863b5ef85bdc5c35f95b6a1e2bf316c33b41ced68fdc761d334c4bb67436d",
+      "size_bytes": 22875
+    },
+    "runtime_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/inference_runtime.py",
+      "sha256": "246ba9cc8b8e80ce86d7e9d059010d7b030b87e793d911cef8e8d3478786e838",
+      "size_bytes": 12552
+    },
+    "seismic_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/seismic.py",
+      "sha256": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee",
+      "size_bytes": 36035
+    },
+    "truth_model": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt",
+      "sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3",
+      "size_bytes": 1050238
+    }
+  },
+  "boreholes_sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "condition_projection": "project_clean_embedding_before_first_and_after_every_euler_step_v1",
+  "conditioning_report": {
+    "borehole_columns_hitting_target": 2,
+    "borehole_label_counts": {
+      "-1": 257626,
+      "1": 94,
+      "2": 4137,
+      "3": 34,
+      "4": 179,
+      "5": 52,
+      "6": 9,
+      "9": 13
+    },
+    "dtype": "torch.int64",
+    "effective_condition_fraction": 0.2636222839355469,
+    "effective_condition_voxels": 69107,
+    "full_borehole_count": 9,
+    "full_borehole_xy": [
+      [
+        8,
+        46
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        10,
+        24
+      ],
+      [
+        27,
+        17
+      ],
+      [
+        35,
+        26
+      ],
+      [
+        39,
+        59
+      ],
+      [
+        44,
+        60
+      ],
+      [
+        48,
+        6
+      ],
+      [
+        57,
+        32
+      ]
+    ],
+    "nonair_borehole_truth_mismatches": 0,
+    "nonair_observed_fraction": 0.01723480224609375,
+    "nonair_observed_voxels": 4518,
+    "shape": [
+      1,
+      1,
+      64,
+      64,
+      64
+    ],
+    "target_conditioned_fraction": 0.0014495985727029437,
+    "target_conditioned_voxels": 13,
+    "target_fraction": 0.034210205078125,
+    "target_hits_in_full_boreholes": 13,
+    "target_label": 9,
+    "target_voxels": 8968,
+    "truth_air_voxels": 64589,
+    "truth_label_counts": {
+      "-1": 64589,
+      "1": 45273,
+      "13": 15,
+      "2": 24520,
+      "3": 14533,
+      "4": 73801,
+      "5": 18902,
+      "6": 11543,
+      "9": 8968
+    },
+    "unconstrained_subsurface_voxels": 193037,
+    "valid_label_range": [
+      -1,
+      13
+    ]
+  },
+  "cuda_device_name": "NVIDIA GeForce RTX 4090 D",
+  "cuda_peak_memory_bytes": 1661099008,
+  "device": "cuda",
+  "ema_applied": true,
+  "final_hard_seismic_loss": 17.792306900024414,
+  "final_latent_sha256": "1d44d23da839ee68584e363769c33801e83042585aa78ff9d8c004c0e68d8e2b",
+  "final_sample_sha256": "b0f17f3a5faaa5cb8ebce5e9f8e78a8d4ff6d90b3075b1cc0673a96ad2e15fd0",
+  "generator_posterior_version": "pcn_full_initial_noise_hard_seismic_v1",
+  "historical_baseline_config_sha256": "3f26d893eb35434229d83a5f458dafcf9c76d78cd4ca3bacdeef74032ab03aee",
+  "historical_baseline_validation": {
+    "baseline_config": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/runs/cond_generation_0/phase4c_seismic_v1/seed42_n1_s32_a025_c025/baseline/config.json",
+      "sha256": "3f26d893eb35434229d83a5f458dafcf9c76d78cd4ca3bacdeef74032ab03aee",
+      "size_bytes": 20398
+    },
+    "baseline_sample": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/runs/cond_generation_0/phase4c_seismic_v1/seed42_n1_s32_a025_c025/baseline/sample_0.pt",
+      "sha256": "b25189fe11ef229c7b4a6fb7a620be355503177d6f78634e1cb39d14a96f283a",
+      "size_bytes": 2098736
+    },
+    "exact_initial_hard_regression": true,
+    "initial_changed_voxels": 0
+  },
+  "initial_evaluation_seconds": 4.359011685999576,
+  "initial_hard_seismic_loss": 17.860631942749023,
+  "initial_hard_seismic_rmse_amplitude": 0.042261842638254166,
+  "initial_noise_sha256": "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea",
+  "initial_sample_sha256": "b1c1d00601bea293e7e89dc6b61c540c79336770e08abad3997941322bdad3b9",
+  "integrator": "fixed_euler_midpoint_v1",
+  "likelihood": "hard_decode_exact_condition_convolutional_seismic_normalized_mse_v1",
+  "max_condition_violations": 0,
+  "mode": "performance_smoke",
+  "model_load_report": {
+    "checkpoint": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "checkpoint_epoch": 1651,
+    "checkpoint_global_step": 8376,
+    "ema_applied": true,
+    "ema_entry_count": 411,
+    "ema_excluded_frozen_parameters": [
+      "embedding.weight"
+    ],
+    "ema_missing_trainable": [],
+    "ema_shape_mismatches": [],
+    "ema_unexpected": [],
+    "frozen_parameters": [
+      "embedding.weight"
+    ],
+    "model_parameter_count": 412,
+    "trainable_parameter_count": 411,
+    "weight_source": "ema"
+  },
+  "model_weight_source": "ema",
+  "observation_config_resolved": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "observation_manifest_sha256": "3aa555c92ff63372512b1b1b1cdef1b1f55a5968f296389f2092dfd68d0019e9",
+  "output_dir": "experiments/stage5_generator_posterior/runs/cond_generation_0/performance_smoke_v1_fix1",
+  "phase4_loader_source_sha256": "e40b56d78aac16b5ed959711c732fa04e99e053761b1d54a92bd16894e06c644",
+  "posterior_source_sha256": "9faf5d1a27146992e30678e7f83bc0d6e4bbf6181406546f6dc981dca798fc28",
+  "protocol_config": {
+    "allow_parameter_sweep_on_case": false,
+    "case_role": "legacy_mechanism_screen_not_held_out",
+    "condition_policy": "project_clean_embedding_before_first_and_after_every_euler_step_v1",
+    "id": "cond0_hard_pcn_mechanism_v1",
+    "initial_seed": 42,
+    "likelihood": "hard_decode_exact_condition_convolutional_seismic_normalized_mse_v1",
+    "likelihood_weight": 1.0,
+    "n_euler_steps": 32,
+    "pcn_beta": 0.1,
+    "performance_smoke_proposals": 1,
+    "primary_pilot_proposals": 8,
+    "proposal_seed": 5501,
+    "sampler": "pcn_full_initial_noise_hard_seismic_v1",
+    "schema": "phase5c_generator_posterior_config_v1",
+    "status": "frozen_before_cuda_output",
+    "truth_used_by_sampler": false
+  },
+  "protocol_config_sha256": "5dc4ab5ca8754a933bcc2a3381aad4df4d7c49cc1ad131143e262618b3d0cf0e",
+  "protocol_spec_sha256": "56b99d2af6ec62e783c6e3414c46b6ff3bef41129763d72ff363b95124012a4c",
+  "resolved_protocol": {
+    "beta": 0.1,
+    "chain_proposals": 1,
+    "initial_seed": 42,
+    "likelihood_weight": 1.0,
+    "n_steps": 32,
+    "proposal_seed": 5501
+  },
+  "retained_samples_sha256": "ce4e38724fd3bee9f6ae7ec2bc10a9fe0ca98f3fe71494f4c143e2432e5c961a",
+  "run_status": "completed",
+  "runner_source_sha256": "9e5863b5ef85bdc5c35f95b6a1e2bf316c33b41ced68fdc761d334c4bb67436d",
+  "runtime_source_sha256": "246ba9cc8b8e80ce86d7e9d059010d7b030b87e793d911cef8e8d3478786e838",
+  "schema": "phase5c_generator_posterior_run_v1",
+  "seismic_source_sha256": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee",
+  "stage": "phase5c_direct_generator_posterior_v1",
+  "torch_version": "2.8.0+cu128",
+  "truth_metrics_computed_by_sampler": false,
+  "truth_model_sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3",
+  "truth_used_for": "condition_validation_and_immutable_observation_validation_only",
+  "unique_retained_hard_samples": 2,
+  "unique_retained_sample_sha256": [
+    "53fe8cfae2f5ca61ae38c7b17d41c9fb8b84d57cc470fa9bd0ffd9494940df6f",
+    "cd4c0eeff0b1b9adf2707b3051518ceb3c26e6a640ec26f474ded3e7e9237e46"
+  ]
+}

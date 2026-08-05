@@ -1,0 +1,38 @@
+{
+  "alpha": 0.25,
+  "decision": "NO PASS: paired_c100 does not qualify for multi-seed testing",
+  "is_measured_geophysics": false,
+  "is_original_bracket": false,
+  "level": {
+    "classification": "transition_region",
+    "diversity_gate_pass": true,
+    "level_id": "paired_c100",
+    "mean_delta_global_voxel_accuracy": 0.04324871301651001,
+    "mean_delta_hard_property_loss": -0.8158485889434814,
+    "mean_delta_truth_present_mean_iou": 0.06552260369062424,
+    "mean_guided_target_iou": 0.44123626274784833,
+    "mean_guided_target_precision": 0.8815858143419197,
+    "mean_guided_target_recall": 0.4695026761819804,
+    "order": 1,
+    "outside_roi_disagreement": 0.15315775324900946,
+    "pair_gate_pass_count": 3,
+    "property_config_sha256": "c46e0606bbc6525d9c1aac0619420e6bfb32523dc2947fb5ef1b78a0058eab48",
+    "unique_guided_samples": 4
+  },
+  "max_guidance_ratio": 0.25,
+  "n_samples": 4,
+  "n_steps": 32,
+  "scope": "Phase-2b post-bracket paired_c100 seed-42 n=4 fallback",
+  "seed": 42,
+  "selection": {
+    "candidate_classification": "transition_region",
+    "candidate_level": null,
+    "promote_to_multiseed": false,
+    "status": "no_seed42_fallback_candidate"
+  },
+  "source_bracket_outcomes": {
+    "paired_c010": "confirmed_seed42_failure",
+    "paired_c025": "transition_region"
+  },
+  "source_bracket_summary_sha256": "bd67c1085bdbfde4ed95a478a87e0089e7cf94bb414c58812ce3ddd41b85c8a5"
+}

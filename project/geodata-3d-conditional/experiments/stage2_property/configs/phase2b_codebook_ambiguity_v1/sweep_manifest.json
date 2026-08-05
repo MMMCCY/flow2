@@ -1,0 +1,50 @@
+{
+  "schema": "phase2b_codebook_ambiguity_sweep_v1",
+  "experiment_stage": "phase2b_codebook_ambiguity_v1",
+  "description": "Predeclared Phase-2b screen. It changes only the full-lithology property codebook while retaining the Phase-2a full-resolution truth-derived target and frozen sampler settings.",
+  "fixed_settings": {
+    "alpha": 0.25,
+    "max_guidance_ratio": 0.25,
+    "n_samples": 1,
+    "n_steps": 32,
+    "seed": 42,
+    "target_label": 9
+  },
+  "levels": [
+    {
+      "config": "../ideal_density_susceptibility_label9_contrast_v1.json",
+      "id": "distinct_c100_anchor",
+      "label9_susceptibility": 0.1,
+      "order": 0,
+      "role": "implementation_anchor"
+    },
+    {
+      "config": "paired_c100_v1.json",
+      "id": "paired_c100",
+      "label9_susceptibility": 0.1,
+      "order": 1,
+      "role": "ambiguity_sweep"
+    },
+    {
+      "config": "paired_c025_v1.json",
+      "id": "paired_c025",
+      "label9_susceptibility": 0.025,
+      "order": 2,
+      "role": "ambiguity_sweep"
+    },
+    {
+      "config": "paired_c010_v1.json",
+      "id": "paired_c010",
+      "label9_susceptibility": 0.01,
+      "order": 3,
+      "role": "ambiguity_sweep"
+    },
+    {
+      "config": "paired_c004_overlap_v1.json",
+      "id": "paired_c004_overlap",
+      "label9_susceptibility": 0.004,
+      "order": 4,
+      "role": "ambiguity_sweep"
+    }
+  ]
+}

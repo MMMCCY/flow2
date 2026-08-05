@@ -1,0 +1,47 @@
+{
+  "allow_additions": true,
+  "allow_removals": true,
+  "base_config_sha256": "43fe3d8fa0fc55ef94979da93a2a6aded920e035507f2340c55cb2c383f7269c",
+  "causality_source_sha256": "800c14f746c5cdb8320906b5eedafadddf02a51df3821d293c4f40ea41db96fa",
+  "config_sha256": "13bcccc74eb6687bf058eed4e663455aa0f2297727a93b0dae91695beb7fda0e",
+  "description": "Post-Q2b one-time mechanism diagnostic for whether the 32-voxel minimum proposal caused the 70-percent seismic recovery stop; does not rewrite Q2b.",
+  "device": "cuda",
+  "formal_training_authorized": false,
+  "id": "five_body_cuboid_hard_coordinate_fine_v1",
+  "improvement_tolerance": 1e-10,
+  "max_iterations": 160,
+  "observation_modes": [
+    "seismic"
+  ],
+  "proposal_flip_counts": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "regularization": {
+    "smoothness": 0.0,
+    "truth_roi": false,
+    "volume": 0.0
+  },
+  "runner_source_sha256": "78d8a9893a2a09441fe7aa4c68da73b687ce415f68fddbc1c7100067ddf7897d",
+  "schema": "phase6q_hard_coordinate_v1",
+  "seismic_controls": [
+    "correct",
+    "zero",
+    "shuffled_xy"
+  ],
+  "selected_modes": [
+    "seismic"
+  ],
+  "selected_seismic_controls": [
+    "correct",
+    "zero",
+    "shuffled_xy"
+  ],
+  "selection": "minimum_hard_physics_rmse_only",
+  "started_at_utc": "2026-08-04T09:49:52.812712+00:00",
+  "voxel_config_sha256": "b24d7eec4489d9ef4bf51ed20507c01a5e73720f6550ef2c5d86de8421d022b8"
+}

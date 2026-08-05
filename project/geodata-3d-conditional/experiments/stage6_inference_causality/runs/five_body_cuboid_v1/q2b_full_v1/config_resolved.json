@@ -1,0 +1,54 @@
+{
+  "allow_additions": true,
+  "allow_removals": true,
+  "base_config_sha256": "43fe3d8fa0fc55ef94979da93a2a6aded920e035507f2340c55cb2c383f7269c",
+  "causality_source_sha256": "800c14f746c5cdb8320906b5eedafadddf02a51df3821d293c4f40ea41db96fa",
+  "config_sha256": "5202fb3c6020c2b3e604c3f448e1aedc2a027a6bc85afae253036b939642b815",
+  "description": "Monotone hard-physics coordinate proposals on the Q2 broad search region; continuous gradients rank flips but only hard forward improvement is accepted.",
+  "device": "cuda",
+  "formal_training_authorized": false,
+  "id": "five_body_cuboid_hard_coordinate_v1",
+  "improvement_tolerance": 1e-10,
+  "max_iterations": 80,
+  "observation_modes": [
+    "property",
+    "blurred_property",
+    "reflectivity_spikes",
+    "seismic",
+    "gravity"
+  ],
+  "proposal_flip_counts": [
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "regularization": {
+    "smoothness": 0.0,
+    "truth_roi": false,
+    "volume": 0.0
+  },
+  "runner_source_sha256": "78d8a9893a2a09441fe7aa4c68da73b687ce415f68fddbc1c7100067ddf7897d",
+  "schema": "phase6q_hard_coordinate_v1",
+  "seismic_controls": [
+    "correct",
+    "zero",
+    "shuffled_xy"
+  ],
+  "selected_modes": [
+    "property",
+    "blurred_property",
+    "reflectivity_spikes",
+    "seismic",
+    "gravity"
+  ],
+  "selected_seismic_controls": [
+    "correct",
+    "zero",
+    "shuffled_xy"
+  ],
+  "selection": "minimum_hard_physics_rmse_only",
+  "started_at_utc": "2026-08-04T09:48:26.814491+00:00",
+  "voxel_config_sha256": "b24d7eec4489d9ef4bf51ed20507c01a5e73720f6550ef2c5d86de8421d022b8"
+}

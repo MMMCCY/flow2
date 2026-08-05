@@ -16,6 +16,8 @@ from typing import Dict, List, Optional, Union
 import torch
 import torch.nn.functional as F
 
+import geophysics as geophysics_module
+import inference_runtime as runtime
 from geophysics import (
     GravityGradientForward,
     LithologyPropertyMap,
@@ -26,8 +28,10 @@ from geophysics import (
 from geology_io_utils import (
     load_density_config,
     load_susceptibility_config,
+    paired_config_verdict,
     property_map_from_density_config,
     property_map_from_susceptibility_config,
+    read_json,
 )
 
 
@@ -403,17 +407,7 @@ def guided_euler_sample(
 
 
 def _normalize_geology(volume: torch.Tensor, name: str) -> torch.Tensor:
-    if not isinstance(volume, torch.Tensor):
-        raise TypeError(f"{name} must contain a torch.Tensor")
-    if volume.ndim == 3:
-        volume = volume.unsqueeze(0).unsqueeze(0)
-    elif volume.ndim == 4:
-        if volume.shape[0] != 1:
-            raise ValueError(f"{name} must contain one geology volume")
-        volume = volume.unsqueeze(0)
-    elif volume.ndim != 5 or volume.shape[:2] != (1, 1):
-        raise ValueError(f"{name} must have shape [X,Y,Z], [1,X,Y,Z], or [1,1,X,Y,Z]")
-    return volume
+    return runtime.normalize_single_geology(volume, name)
 
 
 def _parse_args() -> argparse.Namespace:
@@ -425,6 +419,15 @@ def _parse_args() -> argparse.Namespace:
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     parser.add_argument("--ckpt-path", type=Path, required=True)
+    parser.add_argument(
+        "--model-weights",
+        choices=("ema", "raw"),
+        default="ema",
+        help=(
+            "Checkpoint weight policy. EMA is the canonical inference policy; "
+            "the frozen embedding remains at its checkpoint value."
+        ),
+    )
     parser.add_argument("--samples-dir", type=Path, required=True)
     parser.add_argument("--truth-model", type=Path, default=None)
     parser.add_argument("--boreholes", type=Path, default=None)
@@ -524,6 +527,126 @@ def _validate_cli_args(args: argparse.Namespace) -> None:
         )
 
 
+def _resolve_validation_target_label(
+    density_config: Optional[Dict[str, object]],
+    susceptibility_config: Optional[Dict[str, object]],
+) -> Optional[int]:
+    labels = {
+        int(config["target_label"])
+        for config in (density_config, susceptibility_config)
+        if config is not None and config.get("target_label") is not None
+    }
+    if len(labels) > 1:
+        raise ValueError(
+            "density and susceptibility configs specify different target labels"
+        )
+    return next(iter(labels), None)
+
+
+def _build_run_config(
+    args: argparse.Namespace,
+    truth_path: Path,
+    boreholes_path: Path,
+    device: torch.device,
+    observed_gravity: Optional[torch.Tensor],
+    observed_magnetic: Optional[torch.Tensor],
+    observed_gravity_gradient: Optional[torch.Tensor],
+    model_load_report: Dict[str, object],
+    conditioning_report: Dict[str, object],
+) -> Dict[str, object]:
+    asset_records = runtime.experiment_asset_records(
+        truth_model=truth_path,
+        boreholes=boreholes_path,
+        density_config=args.density_config,
+        susceptibility_config=args.susceptibility_config,
+        observed_gravity=args.observed_gravity,
+        observed_magnetic=args.observed_magnetic,
+        observed_gravity_gradient=args.observed_gravity_gradient,
+        sampler_source=Path(__file__),
+        runtime_source=Path(runtime.__file__),
+        geophysics_source=Path(geophysics_module.__file__),
+    )
+    asset_records["checkpoint"] = model_load_report["checkpoint"]
+
+    config: Dict[str, object] = {
+        "protocol_version": runtime.PROTOCOL_VERSION,
+        "integrator": runtime.PAIRED_INTEGRATOR,
+        "initial_noise_policy": runtime.INITIAL_NOISE_POLICY,
+        "ckpt_path": str(args.ckpt_path),
+        "model_weight_source": args.model_weights,
+        "ema_applied": bool(model_load_report["ema_applied"]),
+        "samples_dir": str(args.samples_dir),
+        "truth_model": str(truth_path),
+        "boreholes": str(boreholes_path),
+        "output_dir": str(args.output_dir),
+        "n_samples": args.n_samples,
+        "n_steps": args.n_steps,
+        "guidance_mode": args.guidance_mode,
+        "physics_mode": args.physics_mode,
+        "mu": args.mu,
+        "alpha": args.alpha,
+        "gravity_weight": args.gravity_weight,
+        "magnetic_weight": args.magnetic_weight,
+        "gravity_gradient_weight": args.gravity_gradient_weight,
+        "effective_parameter_explanation": (
+            "absolute mode uses mu * w_t * grad_geo; relative mode scales "
+            "geophysical guidance to alpha * w_t of the prior velocity norm"
+        ),
+        "description": (
+            "relative mode scales geophysical guidance to alpha * w_t of "
+            "prior velocity norm"
+            if args.guidance_mode == "relative"
+            else "absolute mode preserves the original mu * w_t * grad_geo guidance"
+        ),
+        "baseline_semantics": (
+            "Strict paired fixed-Euler baseline for guidance attribution. "
+            "It is not the adaptive-Dopri5 reference inference."
+        ),
+        "tau": args.tau,
+        "guidance_start": args.guidance_start,
+        "guidance_schedule": args.guidance_schedule,
+        "kernel_size": args.kernel_size,
+        "density_config": str(args.density_config) if args.density_config else None,
+        "susceptibility_config": (
+            str(args.susceptibility_config) if args.susceptibility_config else None
+        ),
+        "observed_gravity": (
+            str(args.observed_gravity)
+            if args.observed_gravity
+            else str(args.output_dir / "observed_gravity.pt")
+            if observed_gravity is not None
+            else None
+        ),
+        "observed_magnetic": (
+            str(args.observed_magnetic)
+            if args.observed_magnetic
+            else str(args.output_dir / "observed_magnetic.pt")
+            if observed_magnetic is not None
+            else None
+        ),
+        "observed_gravity_gradient": (
+            str(args.observed_gravity_gradient)
+            if args.observed_gravity_gradient
+            else str(args.output_dir / "observed_gravity_gradient.pt")
+            if observed_gravity_gradient is not None
+            else None
+        ),
+        "geophysical_proxy_description": (
+            "Inference-time lightweight geophysical proxy guidance only; "
+            "not quantitative gravity, magnetic, or gravity-gradient inversion."
+        ),
+        "grad_clip_norm": args.grad_clip_norm,
+        "device": str(device),
+        "seed": args.seed,
+        "baseline_dir": str(args.baseline_dir) if args.baseline_dir else None,
+        "asset_records": asset_records,
+        "model_load_report": model_load_report,
+        "conditioning_report": conditioning_report,
+    }
+    config.update(runtime.flatten_asset_hashes(asset_records))
+    return config
+
+
 def main() -> None:
     args = _parse_args()
     _validate_cli_args(args)
@@ -538,18 +661,32 @@ def main() -> None:
     truth_path = args.truth_model or args.samples_dir / "true_model.pt"
     boreholes_path = args.boreholes or args.samples_dir / "boreholes.pt"
     truth = _normalize_geology(
-        torch.load(truth_path, map_location=device), str(truth_path)
+        runtime.load_tensor(truth_path, map_location=device), str(truth_path)
     ).to(device)
     boreholes = _normalize_geology(
-        torch.load(boreholes_path, map_location=device), str(boreholes_path)
+        runtime.load_tensor(boreholes_path, map_location=device), str(boreholes_path)
     ).to(device)
-    if truth.shape != boreholes.shape:
-        raise ValueError("truth model and boreholes must have matching shapes")
 
-    model = Geo3DStochInterp.load_from_checkpoint(
-        str(args.ckpt_path), map_location=device
-    ).to(device)
-    model.eval()
+    model, model_load_report = runtime.load_model_with_weight_policy(
+        model_class=Geo3DStochInterp,
+        checkpoint_path=args.ckpt_path,
+        map_location=device,
+        weight_source=args.model_weights,
+    )
+    model = model.to(device)
+
+    density_config = load_density_config(args.density_config)
+    susceptibility_config = load_susceptibility_config(args.susceptibility_config)
+    target_label = _resolve_validation_target_label(
+        density_config,
+        susceptibility_config,
+    )
+    conditioning_report = runtime.validate_conditioning_pair(
+        truth=truth,
+        boreholes=boreholes,
+        num_categories=model.num_categories,
+        target_label=target_label,
+    )
 
     # This exactly follows populate_solutions in the existing conditional inference.
     boreholes_mask = (boreholes != -1) | (truth == -1)
@@ -557,8 +694,6 @@ def main() -> None:
     embedded_mask = boreholes_mask.expand(-1, embedded_truth.shape[1], -1, -1, -1)
     ATb_lith = embedded_truth * embedded_mask
 
-    density_config = load_density_config(args.density_config)
-    susceptibility_config = load_susceptibility_config(args.susceptibility_config)
     property_map = property_map_from_density_config(density_config)
     susceptibility_map = property_map_from_susceptibility_config(susceptibility_config)
     forward_model = SimpleGravityForward(kernel_size=args.kernel_size)
@@ -572,21 +707,27 @@ def main() -> None:
     )
 
     if args.observed_gravity is not None:
-        observed_gravity = torch.load(args.observed_gravity, map_location=device).detach()
+        observed_gravity = runtime.load_tensor(
+            args.observed_gravity,
+            map_location=device,
+        ).detach()
     elif use_gravity:
         observed_gravity = forward_model(property_map(truth)).detach()
     else:
         observed_gravity = None
 
     if args.observed_magnetic is not None:
-        observed_magnetic = torch.load(args.observed_magnetic, map_location=device).detach()
+        observed_magnetic = runtime.load_tensor(
+            args.observed_magnetic,
+            map_location=device,
+        ).detach()
     elif use_magnetic:
         observed_magnetic = magnetic_forward_model(susceptibility_map(truth)).detach()
     else:
         observed_magnetic = None
 
     if args.observed_gravity_gradient is not None:
-        observed_gravity_gradient = torch.load(
+        observed_gravity_gradient = runtime.load_tensor(
             args.observed_gravity_gradient,
             map_location=device,
         ).detach()
@@ -605,6 +746,42 @@ def main() -> None:
             observed_gravity_gradient.cpu(),
             args.output_dir / "observed_gravity_gradient.pt",
         )
+
+    config = _build_run_config(
+        args=args,
+        truth_path=truth_path,
+        boreholes_path=boreholes_path,
+        device=device,
+        observed_gravity=observed_gravity,
+        observed_magnetic=observed_magnetic,
+        observed_gravity_gradient=observed_gravity_gradient,
+        model_load_report=model_load_report,
+        conditioning_report=conditioning_report,
+    )
+    if args.baseline_dir is not None:
+        baseline_config_path = args.baseline_dir / "config.json"
+        baseline_config = read_json(baseline_config_path)
+        paired, pairing_reason = paired_config_verdict(baseline_config, config)
+        if not paired:
+            raise ValueError(
+                f"baseline pairing validation failed for {baseline_config_path}: "
+                f"{pairing_reason}"
+            )
+        config["pairing_validation"] = {
+            "paired": True,
+            "reason": pairing_reason,
+            "baseline_config": str(baseline_config_path),
+        }
+    else:
+        config["pairing_validation"] = None
+
+    config["run_status"] = "running"
+    with (args.output_dir / "model_load_report.json").open("w") as handle:
+        json.dump(model_load_report, handle, indent=2)
+    with (args.output_dir / "input_validation.json").open("w") as handle:
+        json.dump(conditioning_report, handle, indent=2)
+    with (args.output_dir / "config.json").open("w") as handle:
+        json.dump(config, handle, indent=2)
 
     generator = torch.Generator(device="cpu").manual_seed(args.seed)
     all_trace: List[Dict[str, object]] = []
@@ -651,7 +828,7 @@ def main() -> None:
         if args.baseline_dir is not None:
             baseline_path = args.baseline_dir / f"sample_{sample_index}.pt"
             baseline_decoded = _normalize_geology(
-                torch.load(baseline_path, map_location="cpu"),
+                runtime.load_tensor(baseline_path, map_location="cpu"),
                 str(baseline_path),
             )
             current_decoded = _normalize_geology(decoded, f"sample_{sample_index}.pt")
@@ -707,69 +884,8 @@ def main() -> None:
             writer.writeheader()
             writer.writerows(decoded_change_records)
 
-    config = {
-        "ckpt_path": str(args.ckpt_path),
-        "samples_dir": str(args.samples_dir),
-        "truth_model": str(truth_path),
-        "boreholes": str(boreholes_path),
-        "output_dir": str(args.output_dir),
-        "n_samples": args.n_samples,
-        "n_steps": args.n_steps,
-        "guidance_mode": args.guidance_mode,
-        "physics_mode": args.physics_mode,
-        "mu": args.mu,
-        "alpha": args.alpha,
-        "gravity_weight": args.gravity_weight,
-        "magnetic_weight": args.magnetic_weight,
-        "gravity_gradient_weight": args.gravity_gradient_weight,
-        "effective_parameter_explanation": (
-            "absolute mode uses mu * w_t * grad_geo; relative mode scales "
-            "geophysical guidance to alpha * w_t of the prior velocity norm"
-        ),
-        "description": (
-            "relative mode scales geophysical guidance to alpha * w_t of "
-            "prior velocity norm"
-            if args.guidance_mode == "relative"
-            else "absolute mode preserves the original mu * w_t * grad_geo guidance"
-        ),
-        "tau": args.tau,
-        "guidance_start": args.guidance_start,
-        "guidance_schedule": args.guidance_schedule,
-        "kernel_size": args.kernel_size,
-        "density_config": str(args.density_config) if args.density_config else None,
-        "susceptibility_config": (
-            str(args.susceptibility_config) if args.susceptibility_config else None
-        ),
-        "observed_gravity": (
-            str(args.observed_gravity)
-            if args.observed_gravity
-            else str(args.output_dir / "observed_gravity.pt")
-            if observed_gravity is not None
-            else None
-        ),
-        "observed_magnetic": (
-            str(args.observed_magnetic)
-            if args.observed_magnetic
-            else str(args.output_dir / "observed_magnetic.pt")
-            if observed_magnetic is not None
-            else None
-        ),
-        "observed_gravity_gradient": (
-            str(args.observed_gravity_gradient)
-            if args.observed_gravity_gradient
-            else str(args.output_dir / "observed_gravity_gradient.pt")
-            if observed_gravity_gradient is not None
-            else None
-        ),
-        "geophysical_proxy_description": (
-            "Inference-time lightweight geophysical proxy guidance only; "
-            "not quantitative gravity, magnetic, or gravity-gradient inversion."
-        ),
-        "grad_clip_norm": args.grad_clip_norm,
-        "device": str(device),
-        "seed": args.seed,
-        "baseline_dir": str(args.baseline_dir) if args.baseline_dir else None,
-    }
+    config["run_status"] = "completed"
+    config["samples_written"] = args.n_samples
     with (args.output_dir / "config.json").open("w") as handle:
         json.dump(config, handle, indent=2)
 

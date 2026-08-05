@@ -1,0 +1,498 @@
+{
+  "anti_leakage": {
+    "builder_allowed_truth_information": "truth file hash recorded by immutable observation manifest only",
+    "truth_acoustic_loaded": false,
+    "truth_geology_loaded": false,
+    "unconstrained_truth_used": false
+  },
+  "build_config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/config.json",
+    "sha256": "1264068f9bf1a7fb3b819d8ae6938e421c5c0ba6478d472da98f76f25934b010",
+    "size_bytes": 3481
+  },
+  "candidate_records": [
+    {
+      "candidate_id": "seed42_sample0",
+      "local_sample_id": 0,
+      "member_id": 0,
+      "sample": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_0.pt",
+        "sha256": "b25189fe11ef229c7b4a6fb7a620be355503177d6f78634e1cb39d14a96f283a",
+        "size_bytes": 2098736
+      },
+      "seed": 42
+    },
+    {
+      "candidate_id": "seed42_sample1",
+      "local_sample_id": 1,
+      "member_id": 1,
+      "sample": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_1.pt",
+        "sha256": "c07c88b3bbdb2c27477677f429fdd0b677f344257b8cb636cadc4971ccbea0e0",
+        "size_bytes": 2098736
+      },
+      "seed": 42
+    },
+    {
+      "candidate_id": "seed42_sample2",
+      "local_sample_id": 2,
+      "member_id": 2,
+      "sample": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_2.pt",
+        "sha256": "8af50f5a4186eaa31281ac3aced6bbe09a3206ce63bccc36870c8c4ba00d32c8",
+        "size_bytes": 2098736
+      },
+      "seed": 42
+    },
+    {
+      "candidate_id": "seed42_sample3",
+      "local_sample_id": 3,
+      "member_id": 3,
+      "sample": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_3.pt",
+        "sha256": "2d7d3300b463b304a228f0940f58aef2942becb5f9ee6d9ce6358c314ea9c180",
+        "size_bytes": 2098736
+      },
+      "seed": 42
+    },
+    {
+      "candidate_id": "seed142_sample0",
+      "local_sample_id": 0,
+      "member_id": 4,
+      "sample": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed142_n4_s32_a025_c025/baseline/sample_0.pt",
+        "sha256": "bccc12e560588fdcaa12bf77858f7372c0b2a433819b6ad1301316a8d18bd053",
+        "size_bytes": 2098736
+      },
+      "seed": 142
+    },
+    {
+      "candidate_id": "seed142_sample1",
+      "local_sample_id": 1,
+      "member_id": 5,
+      "sample": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed142_n4_s32_a025_c025/baseline/sample_1.pt",
+        "sha256": "f9a93a919f37e3b9943e0647751dd57c51cdfaa634d17f32454552d8d3a3b314",
+        "size_bytes": 2098736
+      },
+      "seed": 142
+    },
+    {
+      "candidate_id": "seed142_sample2",
+      "local_sample_id": 2,
+      "member_id": 6,
+      "sample": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed142_n4_s32_a025_c025/baseline/sample_2.pt",
+        "sha256": "c6c8775e10fe889e5c43107dfd94cb836cef8a42b258433357411afe44d8ba62",
+        "size_bytes": 2098736
+      },
+      "seed": 142
+    },
+    {
+      "candidate_id": "seed142_sample3",
+      "local_sample_id": 3,
+      "member_id": 7,
+      "sample": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed142_n4_s32_a025_c025/baseline/sample_3.pt",
+        "sha256": "ef58f03cc3618c0efe7836bddc7f4e8dfdc01ec41af8588e4405656aad162fcc",
+        "size_bytes": 2098736
+      },
+      "seed": 142
+    },
+    {
+      "candidate_id": "seed242_sample0",
+      "local_sample_id": 0,
+      "member_id": 8,
+      "sample": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed242_n4_s32_a025_c025/baseline/sample_0.pt",
+        "sha256": "a3fbab0ba78b05d0e8c3366b0c0f42d17ec9955fe74461a19838d4119e19eb4b",
+        "size_bytes": 2098736
+      },
+      "seed": 242
+    },
+    {
+      "candidate_id": "seed242_sample1",
+      "local_sample_id": 1,
+      "member_id": 9,
+      "sample": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed242_n4_s32_a025_c025/baseline/sample_1.pt",
+        "sha256": "dbe562a3ff27abcff29e0fc5e5228fcdc89357e0eaf4d05024ff24e6d92da31e",
+        "size_bytes": 2098736
+      },
+      "seed": 242
+    },
+    {
+      "candidate_id": "seed242_sample2",
+      "local_sample_id": 2,
+      "member_id": 10,
+      "sample": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed242_n4_s32_a025_c025/baseline/sample_2.pt",
+        "sha256": "52ebb1d5496aa2c7928ee84c15f9a5fd174d95c300b67f3f118782b6f66d436e",
+        "size_bytes": 2098736
+      },
+      "seed": 242
+    },
+    {
+      "candidate_id": "seed242_sample3",
+      "local_sample_id": 3,
+      "member_id": 11,
+      "sample": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed242_n4_s32_a025_c025/baseline/sample_3.pt",
+        "sha256": "e3a1bce826a8f0a0132e8e361e45fb6dc22dc15c868e921edd3e6c1a9774b0d3",
+        "size_bytes": 2098736
+      },
+      "seed": 242
+    }
+  ],
+  "generated_tensors": {
+    "condition_acoustic.pt": {
+      "dtype": "torch.float32",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/condition_acoustic.pt",
+      "sha256": "4a598d6017b79a01ef78f10375a4ea8fa80b4ecd78bc842b033b491444359670",
+      "shape": [
+        1,
+        2,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 2098870,
+      "tensor_sha256": "dff3f2f2351c6ee70e1d5e1104178eb379172238dfe789bee05a3162dbdc3e04"
+    },
+    "condition_mask.pt": {
+      "dtype": "torch.bool",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/condition_mask.pt",
+      "sha256": "e7b1f22e1e71b58ae64ad2b2925eb779b1f7cc1c223a3e30552e6a15c9284ea1",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 263834,
+      "tensor_sha256": "0d4da18816deaa7720ab3b4def3cdb03f0f651b7313dc6af7da515351d56e0aa"
+    },
+    "inverted_acoustic_members.pt": {
+      "dtype": "torch.float64",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/inverted_acoustic_members.pt",
+      "sha256": "9699a981e763a25c74a1dfa1182eca8500f9d88248301bc8b10b2983e751c163",
+      "shape": [
+        12,
+        2,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 50333479,
+      "tensor_sha256": "0ec082f8bf00de32c7375fc8a1d33fb06ccc57da817e4a3c21021f8d580ed1fe"
+    },
+    "posterior_acoustic_mean.pt": {
+      "dtype": "torch.float64",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/posterior_acoustic_mean.pt",
+      "sha256": "7961570ba2eebe0e15d3df0be85d1d09d5280878df483254a23ef5af55e312e5",
+      "shape": [
+        1,
+        2,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 4196121,
+      "tensor_sha256": "846978d22260000ce4497bf0f947b49f7f48505d35495e68ec1e000e2382760a"
+    },
+    "posterior_log_impedance_mean.pt": {
+      "dtype": "torch.float64",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/posterior_log_impedance_mean.pt",
+      "sha256": "fb34be24a46bff51628975e8ac7a99ef020913007b1707d92ac5ead34e9937d9",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 2099004,
+      "tensor_sha256": "49bb6d7a4f9f0cf22c2deafff8c3802f72efed5855e915f611e5d360c1931797"
+    },
+    "posterior_log_impedance_std.pt": {
+      "dtype": "torch.float64",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/posterior_log_impedance_std.pt",
+      "sha256": "e53ccf09dc8ebfedfff9460cb65689018f3154435a3752a518deeaab6144c1e8",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 2098997,
+      "tensor_sha256": "69a30dfb463cb0b17d453841be6ab63a7a15bb8d6a8a84ea62a205120726a8ba"
+    },
+    "posterior_slowness_mean.pt": {
+      "dtype": "torch.float64",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/posterior_slowness_mean.pt",
+      "sha256": "4ad24fc8b99516bd5c1c1a58f78248df1962bb4fb7786913404340cf9a943dc1",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 2098969,
+      "tensor_sha256": "952b237ded46454293a438e94013d6329cfc4d5f5fb453daaedcbcbe1572914b"
+    },
+    "posterior_slowness_std.pt": {
+      "dtype": "torch.float64",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/posterior_slowness_std.pt",
+      "sha256": "0da4812011adcc0795d1bf61027d2efc1e1cd6fee3c1c2691f1425ec5b399e86",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 2098962,
+      "tensor_sha256": "20ff446407e912c0b306204a5af0091b1bd5e832a3427c8f20acf8e0cec9bd58"
+    },
+    "prior_acoustic_mean.pt": {
+      "dtype": "torch.float64",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/prior_acoustic_mean.pt",
+      "sha256": "28bae501040622034698753a6abcee3a43162183b8f0379396809a35502724df",
+      "shape": [
+        1,
+        2,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 4196029,
+      "tensor_sha256": "e0436872f456ac7561886f8306b58713f7524711c52452eceeec3c0782a10e45"
+    },
+    "prior_acoustic_members.pt": {
+      "dtype": "torch.float64",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/prior_acoustic_members.pt",
+      "sha256": "a412ad672b00f7b5442246f2bdfabdffb33cecbb10049470bdc732a60e97c695",
+      "shape": [
+        12,
+        2,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 50333458,
+      "tensor_sha256": "0e68ab10b9905e2ad113c64ea4848931acdfd955978d313b4b89712801bf7de8"
+    },
+    "prior_log_impedance_mean.pt": {
+      "dtype": "torch.float64",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/prior_log_impedance_mean.pt",
+      "sha256": "4f9c7c2865fbdbcb95a039586256b353474950aecbebcc288b890e240187b449",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 2098976,
+      "tensor_sha256": "3c2dc6291a455bf20358e5acb834b5b0390051ceee469495ca47a209fe409429"
+    },
+    "prior_log_impedance_std.pt": {
+      "dtype": "torch.float64",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/prior_log_impedance_std.pt",
+      "sha256": "9ad4ec9b427fb5dea55109c8dd0fc7ea7492d84ec7758470bccaf15b986d695c",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 2098969,
+      "tensor_sha256": "baec4c007b0aabf03e5d3aaf157326e98ff07beff813f85a81587072749cb4e4"
+    },
+    "prior_slowness_mean.pt": {
+      "dtype": "torch.float64",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/prior_slowness_mean.pt",
+      "sha256": "5721dffa374492ca038d62296707f7a351fb354a8960c1e64eb4ed3fb13a5bb3",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 2098877,
+      "tensor_sha256": "952b237ded46454293a438e94013d6329cfc4d5f5fb453daaedcbcbe1572914b"
+    },
+    "prior_slowness_std.pt": {
+      "dtype": "torch.float64",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/prior_slowness_std.pt",
+      "sha256": "a89c95149726729263f6b745a1d819fb3faf170c9b65cea5d8e38ff654a16e14",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 2098870,
+      "tensor_sha256": "20ff446407e912c0b306204a5af0091b1bd5e832a3427c8f20acf8e0cec9bd58"
+    }
+  },
+  "member_metrics": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/outputs/cond_generation_0/model_based_fixed12_v1/member_inversion_metrics.csv",
+    "sha256": "71bff5a80a20e95677202f18daf4ce9e0a2430d625dfa54c4b3c526f40edc2d8",
+    "size_bytes": 4996
+  },
+  "schema": "phase5a_acoustic_inversion_posterior_v1",
+  "source_assets": {
+    "boreholes": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/boreholes.pt",
+      "sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41",
+      "size_bytes": 1050167
+    },
+    "builder_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage5/build_acoustic_inversion_posterior.py",
+      "sha256": "eb954404d7aaa0feb82b696519d54db7cd627790261a874af0170a5e6071b2ba",
+      "size_bytes": 19411
+    },
+    "checkpoint_not_loaded": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "inversion_config": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/configs/model_based_log_impedance_v1.json",
+      "sha256": "6b690aec3978b48bc6922e7387fc9fca55566e2b54d5f1e2dcb2669143f79088",
+      "size_bytes": 1018
+    },
+    "inversion_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/seismic_inversion.py",
+      "sha256": "2cc6a984002788e0216de491a9543b59098bf38f905aa1df491b472145f81c83",
+      "size_bytes": 18021
+    },
+    "observation_manifest": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/observations/cond_generation_0/distinct_upper_bound_v1_fix2/manifest.json",
+      "sha256": "3aa555c92ff63372512b1b1b1cdef1b1f55a5968f296389f2092dfd68d0019e9",
+      "size_bytes": 9249
+    },
+    "phase4d_source_records": [
+      {
+        "config": {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/config.json",
+          "sha256": "5cac6f1934724ddaad3cf26e56772c8f684f5bc6ffbc8c4d038fb9eaefec1d2f",
+          "size_bytes": 10415
+        },
+        "directory": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline",
+        "samples": [
+          {
+            "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_0.pt",
+            "sha256": "b25189fe11ef229c7b4a6fb7a620be355503177d6f78634e1cb39d14a96f283a",
+            "size_bytes": 2098736
+          },
+          {
+            "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_1.pt",
+            "sha256": "c07c88b3bbdb2c27477677f429fdd0b677f344257b8cb636cadc4971ccbea0e0",
+            "size_bytes": 2098736
+          },
+          {
+            "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_2.pt",
+            "sha256": "8af50f5a4186eaa31281ac3aced6bbe09a3206ce63bccc36870c8c4ba00d32c8",
+            "size_bytes": 2098736
+          },
+          {
+            "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_3.pt",
+            "sha256": "2d7d3300b463b304a228f0940f58aef2942becb5f9ee6d9ce6358c314ea9c180",
+            "size_bytes": 2098736
+          }
+        ],
+        "seed": 42
+      },
+      {
+        "config": {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed142_n4_s32_a025_c025/baseline/config.json",
+          "sha256": "cf34d3ba49b2a89fcdfcb1854755f0df441d17d8b1e3ea1dcff8d2993f36e6f3",
+          "size_bytes": 10417
+        },
+        "directory": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed142_n4_s32_a025_c025/baseline",
+        "samples": [
+          {
+            "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed142_n4_s32_a025_c025/baseline/sample_0.pt",
+            "sha256": "bccc12e560588fdcaa12bf77858f7372c0b2a433819b6ad1301316a8d18bd053",
+            "size_bytes": 2098736
+          },
+          {
+            "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed142_n4_s32_a025_c025/baseline/sample_1.pt",
+            "sha256": "f9a93a919f37e3b9943e0647751dd57c51cdfaa634d17f32454552d8d3a3b314",
+            "size_bytes": 2098736
+          },
+          {
+            "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed142_n4_s32_a025_c025/baseline/sample_2.pt",
+            "sha256": "c6c8775e10fe889e5c43107dfd94cb836cef8a42b258433357411afe44d8ba62",
+            "size_bytes": 2098736
+          },
+          {
+            "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed142_n4_s32_a025_c025/baseline/sample_3.pt",
+            "sha256": "ef58f03cc3618c0efe7836bddc7f4e8dfdc01ec41af8588e4405656aad162fcc",
+            "size_bytes": 2098736
+          }
+        ],
+        "seed": 142
+      },
+      {
+        "config": {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed242_n4_s32_a025_c025/baseline/config.json",
+          "sha256": "7527755cbd455b15eb92a30d2fc6f8b46723711d559d1e05c05c6e8777459021",
+          "size_bytes": 10417
+        },
+        "directory": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed242_n4_s32_a025_c025/baseline",
+        "samples": [
+          {
+            "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed242_n4_s32_a025_c025/baseline/sample_0.pt",
+            "sha256": "a3fbab0ba78b05d0e8c3366b0c0f42d17ec9955fe74461a19838d4119e19eb4b",
+            "size_bytes": 2098736
+          },
+          {
+            "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed242_n4_s32_a025_c025/baseline/sample_1.pt",
+            "sha256": "dbe562a3ff27abcff29e0fc5e5228fcdc89357e0eaf4d05024ff24e6d92da31e",
+            "size_bytes": 2098736
+          },
+          {
+            "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed242_n4_s32_a025_c025/baseline/sample_2.pt",
+            "sha256": "52ebb1d5496aa2c7928ee84c15f9a5fd174d95c300b67f3f118782b6f66d436e",
+            "size_bytes": 2098736
+          },
+          {
+            "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed242_n4_s32_a025_c025/baseline/sample_3.pt",
+            "sha256": "e3a1bce826a8f0a0132e8e361e45fb6dc22dc15c868e921edd3e6c1a9774b0d3",
+            "size_bytes": 2098736
+          }
+        ],
+        "seed": 242
+      },
+      {
+        "config": {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/runs/cond_generation_0/phase4c_seismic_v1/seed42_n1_s32_a025_c025/baseline/config.json",
+          "sha256": "3f26d893eb35434229d83a5f458dafcf9c76d78cd4ca3bacdeef74032ab03aee",
+          "size_bytes": 20398
+        },
+        "directory": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/runs/cond_generation_0/phase4c_seismic_v1/seed42_n1_s32_a025_c025/baseline",
+        "role": "phase4c_alpha_zero_anchor",
+        "sample": {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/runs/cond_generation_0/phase4c_seismic_v1/seed42_n1_s32_a025_c025/baseline/sample_0.pt",
+          "sha256": "b25189fe11ef229c7b4a6fb7a620be355503177d6f78634e1cb39d14a96f283a",
+          "size_bytes": 2098736
+        }
+      }
+    ],
+    "seismic_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/seismic.py",
+      "sha256": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee",
+      "size_bytes": 36035
+    }
+  },
+  "status": "complete"
+}

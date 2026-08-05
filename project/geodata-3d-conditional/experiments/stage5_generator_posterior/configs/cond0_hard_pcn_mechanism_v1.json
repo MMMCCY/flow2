@@ -1,0 +1,18 @@
+{
+  "schema": "phase5c_generator_posterior_config_v1",
+  "id": "cond0_hard_pcn_mechanism_v1",
+  "status": "frozen_before_cuda_output",
+  "case_role": "legacy_mechanism_screen_not_held_out",
+  "sampler": "pcn_full_initial_noise_hard_seismic_v1",
+  "initial_seed": 42,
+  "proposal_seed": 5501,
+  "n_euler_steps": 32,
+  "pcn_beta": 0.1,
+  "likelihood_weight": 1.0,
+  "performance_smoke_proposals": 1,
+  "primary_pilot_proposals": 8,
+  "condition_policy": "project_clean_embedding_before_first_and_after_every_euler_step_v1",
+  "likelihood": "hard_decode_exact_condition_convolutional_seismic_normalized_mse_v1",
+  "truth_used_by_sampler": false,
+  "allow_parameter_sweep_on_case": false
+}

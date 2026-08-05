@@ -1,0 +1,56 @@
+{
+  "schema": "phase6q_five_body_causality_v1",
+  "id": "five_body_cuboid_v1",
+  "description": "Two-material analytic five-body benchmark; three drilled fixed bodies and two hidden bodies selected from a frozen twelve-body dictionary.",
+  "grid_shape": [64, 64, 64],
+  "air_start_z": 56,
+  "air_label": -1,
+  "background_label": 0,
+  "target_label": 9,
+  "fixed_bodies": [
+    {"id": "drilled_0", "start": [6, 6, 12], "stop": [14, 14, 22], "well_xy": [10, 10]},
+    {"id": "drilled_1", "start": [22, 6, 32], "stop": [30, 14, 42], "well_xy": [26, 10]},
+    {"id": "drilled_2", "start": [38, 6, 20], "stop": [46, 14, 30], "well_xy": [42, 10]}
+  ],
+  "candidate_bodies": [
+    {"id": "candidate_00", "start": [6, 22, 12], "stop": [14, 30, 22]},
+    {"id": "candidate_01", "start": [22, 22, 32], "stop": [30, 30, 42]},
+    {"id": "candidate_02", "start": [38, 22, 18], "stop": [46, 30, 28]},
+    {"id": "candidate_03", "start": [50, 22, 34], "stop": [58, 30, 44]},
+    {"id": "candidate_04", "start": [6, 38, 16], "stop": [14, 46, 26]},
+    {"id": "candidate_05", "start": [22, 38, 30], "stop": [30, 46, 40]},
+    {"id": "candidate_06", "start": [38, 38, 34], "stop": [46, 46, 44]},
+    {"id": "candidate_07", "start": [50, 38, 12], "stop": [58, 46, 22]},
+    {"id": "candidate_08", "start": [6, 50, 34], "stop": [14, 58, 44]},
+    {"id": "candidate_09", "start": [22, 50, 18], "stop": [30, 58, 28]},
+    {"id": "candidate_10", "start": [38, 50, 28], "stop": [46, 58, 38]},
+    {"id": "candidate_11", "start": [50, 50, 20], "stop": [58, 58, 30]}
+  ],
+  "truth_candidate_indices": [4, 6],
+  "observation_modes": ["property", "blurred_property", "reflectivity_spikes", "seismic", "gravity"],
+  "blur_sigma_voxels": 1.5,
+  "acoustic_config": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+  "seismic_config": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+  "density_config": "project/geodata-3d-conditional/experiments/stage4_gravity/configs/density_distinct_label9_upper_bound_v1.json",
+  "gravity_config": "project/geodata-3d-conditional/experiments/stage4_gravity/configs/full_grid_noiseless_inverse_crime_v1.json",
+  "optimization": {
+    "methods": ["soft", "ste_top2"],
+    "updates": 200,
+    "learning_rate": 0.15,
+    "weight_decay": 0.0,
+    "initial_logit": -2.0,
+    "cardinality_weight": 0.01,
+    "temperature_schedule": [
+      {"temperature": 1.0, "steps": 80},
+      {"temperature": 0.5, "steps": 60},
+      {"temperature": 0.2, "steps": 60}
+    ],
+    "hard_check_interval": 1
+  },
+  "seismic_controls": ["correct", "zero", "shuffled_xy"],
+  "shuffle_seed": 6042,
+  "enumeration_batch_size": 8,
+  "inverse_crime": true,
+  "measured_geophysics": false,
+  "formal_training_authorized": false
+}

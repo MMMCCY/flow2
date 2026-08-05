@@ -1,0 +1,48 @@
+{
+  "outputs": {
+    "REPORT.md": {
+      "path": "project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/runs/cond_generation_0/phase5b_inversion_property_bridge_v1/seed42_n1_s32_a025_c025/audit/REPORT.md",
+      "sha256": "ea66e554f74864c727121ad1d6b87b5058d6b501e5dcb6f661c83585c442bfc2",
+      "size_bytes": 820
+    },
+    "class_deltas.csv": {
+      "path": "project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/runs/cond_generation_0/phase5b_inversion_property_bridge_v1/seed42_n1_s32_a025_c025/audit/class_deltas.csv",
+      "sha256": "6284a51c584e42ff1a21c912f26d8480f52f901dbb464b4e8b9a8db3351b4513",
+      "size_bytes": 2786
+    },
+    "summary.json": {
+      "path": "project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/runs/cond_generation_0/phase5b_inversion_property_bridge_v1/seed42_n1_s32_a025_c025/audit/summary.json",
+      "sha256": "8c46c0330867ca49966487440de6f2394d67c804c556aad94b00c6c277dabdd8",
+      "size_bytes": 9907
+    },
+    "truth_component_deltas.csv": {
+      "path": "project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/runs/cond_generation_0/phase5b_inversion_property_bridge_v1/seed42_n1_s32_a025_c025/audit/truth_component_deltas.csv",
+      "sha256": "e7b5f0fbbd029588257f11a6789711b896b7c2a184447e64c9ed41eb390b899e",
+      "size_bytes": 500
+    }
+  },
+  "schema": "phase5b_inversion_property_bridge_audit_v1",
+  "source_assets": {
+    "auditor_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage5/audit_inversion_property_bridge.py",
+      "sha256": "cbfde00b3770e0514aaefd937fd55c55c2ff1978201684a66aa6da53ab5aa15e",
+      "size_bytes": 9972
+    },
+    "baseline_config": {
+      "path": "project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/runs/cond_generation_0/phase5b_inversion_property_bridge_v1/seed42_n1_s32_a025_c025/baseline/config.json",
+      "sha256": "922fdf4c510c6c6c1bf7176f90602b1f27874cabc6011e0c02afa52b987d1159",
+      "size_bytes": 10890
+    },
+    "guided_config": {
+      "path": "project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/runs/cond_generation_0/phase5b_inversion_property_bridge_v1/seed42_n1_s32_a025_c025/alpha025/config.json",
+      "sha256": "896c5cd654cfb70690c18ed1bcb728a0303ca980887f10d00a0d54d93953df12",
+      "size_bytes": 11353
+    },
+    "phase2a_reference": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_0.pt",
+      "sha256": "b25189fe11ef229c7b4a6fb7a620be355503177d6f78634e1cb39d14a96f283a",
+      "size_bytes": 2098736
+    }
+  },
+  "status": "complete"
+}

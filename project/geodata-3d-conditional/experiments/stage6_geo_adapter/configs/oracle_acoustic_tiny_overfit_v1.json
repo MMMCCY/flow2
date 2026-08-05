@@ -1,0 +1,36 @@
+{
+  "schema": "phase6a_adapter_smoke_config_v1",
+  "id": "oracle_acoustic_tiny_overfit_v1",
+  "status": "frozen_before_cuda_output",
+  "case_role": "legacy_truth_derived_oracle_engineering_only",
+  "adapter": {
+    "base_width": 12,
+    "dilations": [1, 2, 4, 1],
+    "geophysics_channels": 2,
+    "max_parameters": 2000000,
+    "max_residual_ratio": 0.25,
+    "final_layer_zero_initialized": true
+  },
+  "training": {
+    "seed": 6200,
+    "state_seeds": [6100, 6101, 6102, 6103],
+    "times": [0.2, 0.4, 0.6, 0.8],
+    "steps": 80,
+    "learning_rate": 0.002,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0,
+    "flow_weight": 1.0,
+    "cross_entropy_weight": 0.25,
+    "dice_weight": 0.25,
+    "residual_regularizer_weight": 0.0001,
+    "logit_temperature": 0.1
+  },
+  "sampling": {
+    "seed": 42,
+    "n_steps": 32,
+    "adapter_scale": 1.0
+  },
+  "truth_derived_oracle_input": true,
+  "publication_evidence": false,
+  "allow_hyperparameter_sweep_on_case": false
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "phase3_spatial_property_sweep_v1",
+  "description": "Frozen Phase-3 primary Gaussian spatial-resolution screen from the distinct Phase-2a property codebook.",
+  "property_config": "../../stage2_property/configs/ideal_density_susceptibility_label9_contrast_v1.json",
+  "levels": [
+    {
+      "order": 0,
+      "id": "identity_anchor_v1",
+      "config": "identity_anchor_v1.json",
+      "role": "implementation_anchor"
+    },
+    {
+      "order": 1,
+      "id": "gaussian_sigma1_v1",
+      "config": "gaussian_sigma1_v1.json",
+      "role": "primary_screen"
+    },
+    {
+      "order": 2,
+      "id": "gaussian_sigma2_v1",
+      "config": "gaussian_sigma2_v1.json",
+      "role": "primary_screen"
+    },
+    {
+      "order": 3,
+      "id": "gaussian_sigma4_v1",
+      "config": "gaussian_sigma4_v1.json",
+      "role": "primary_screen"
+    }
+  ],
+  "frozen_sampler": {
+    "alpha": 0.25,
+    "max_guidance_ratio": 0.25,
+    "n_steps": 32,
+    "seed": 42,
+    "n_samples": 1,
+    "integrator": "fixed_euler_midpoint"
+  }
+}

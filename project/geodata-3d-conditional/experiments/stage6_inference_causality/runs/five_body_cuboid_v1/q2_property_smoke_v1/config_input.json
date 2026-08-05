@@ -1,0 +1,63 @@
+{
+  "base_config": "project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/five_body_cuboid_v1.json",
+  "base_config_sha256": "43fe3d8fa0fc55ef94979da93a2a6aded920e035507f2340c55cb2c383f7269c",
+  "description": "Free-voxel binary reconstruction over a wide unconditioned region; no candidate shapes, count, locations, volume, smoothing or truth ROI enter the optimizer.",
+  "formal_training_authorized": false,
+  "gradient_clip_norm": 10.0,
+  "hard_check_interval": 5,
+  "hard_selection": "minimum_hard_physics_loss_only",
+  "id": "five_body_cuboid_free_voxel_v1",
+  "initial_logit": -6.0,
+  "learning_rate": 0.15,
+  "methods": [
+    "soft_voxel",
+    "ste_voxel"
+  ],
+  "observation_modes": [
+    "property",
+    "blurred_property",
+    "reflectivity_spikes",
+    "seismic",
+    "gravity"
+  ],
+  "regularization": {
+    "smoothness": 0.0,
+    "truth_roi": false,
+    "volume": 0.0
+  },
+  "schema": "phase6q_voxel_reconstruction_v1",
+  "search_region": {
+    "start": [
+      0,
+      18,
+      0
+    ],
+    "stop": [
+      64,
+      64,
+      55
+    ]
+  },
+  "seismic_controls": [
+    "correct",
+    "zero",
+    "shuffled_xy"
+  ],
+  "shuffle_seed": 6042,
+  "temperature_schedule": [
+    {
+      "steps": 100,
+      "temperature": 1.0
+    },
+    {
+      "steps": 100,
+      "temperature": 0.5
+    },
+    {
+      "steps": 100,
+      "temperature": 0.2
+    }
+  ],
+  "updates": 300,
+  "weight_decay": 0.0
+}

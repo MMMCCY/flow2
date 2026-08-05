@@ -1,0 +1,29 @@
+{
+  "channels": [
+    {
+      "name": "density_proxy",
+      "unit": "controlled_relative_unit",
+      "values": {
+        "-1": 0.0,
+        "0": 0.15,
+        "1": 0.18,
+        "2": 0.21,
+        "3": 0.24,
+        "4": 0.27,
+        "5": 0.3,
+        "6": 0.33,
+        "7": 0.36,
+        "8": 0.39,
+        "9": 0.42,
+        "10": 0.45,
+        "11": 0.48,
+        "12": 0.51,
+        "13": 0.54
+      },
+      "weight": 1.0
+    }
+  ],
+  "description": "Injective full-lithology scalar proxy for the ideal Phase-2a mechanism bridge. Values are controlled relative units inherited from the repository screening baseline, not calibrated or measured densities.",
+  "name": "ideal_distinct_density_proxy_v1",
+  "schema": "full_lithology_property_channels_v1"
+}

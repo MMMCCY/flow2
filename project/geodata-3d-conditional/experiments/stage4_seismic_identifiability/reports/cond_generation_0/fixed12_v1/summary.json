@@ -1,0 +1,398 @@
+{
+  "candidate_ids": [
+    "seed42_sample0",
+    "seed42_sample1",
+    "seed42_sample2",
+    "seed42_sample3",
+    "seed142_sample0",
+    "seed142_sample1",
+    "seed142_sample2",
+    "seed142_sample3",
+    "seed242_sample0",
+    "seed242_sample1",
+    "seed242_sample2",
+    "seed242_sample3"
+  ],
+  "conditions_exact": true,
+  "generated_or_modified_samples": false,
+  "inverse_crime": true,
+  "limitations": [
+    "fixed pool contains only 12 prior samples",
+    "synthetic inverse-crime convolutional seismic is not measured data",
+    "truth substitution is an oracle sensitivity diagnostic",
+    "reranking cannot recover geology absent from the proposal pool"
+  ],
+  "measured_geophysics": false,
+  "observation_manifest_sha256": "3aa555c92ff63372512b1b1b1cdef1b1f55a5968f296389f2092dfd68d0019e9",
+  "permutation_count": 10000,
+  "permutation_seed": 0,
+  "schema": "phase4d_seismic_identifiability_v1",
+  "scope": "offline fixed-prior-pool seismic identifiability diagnostic",
+  "selected_candidate": {
+    "candidate_id": "seed42_sample1",
+    "global_voxel_accuracy": 0.6121586561203003,
+    "hard_seismic_loss": 16.86887550354004,
+    "hard_seismic_rmse_amplitude": 0.04107173532247543,
+    "local_sample_id": 1,
+    "major_component_mean_recall": 0.03292273847027809,
+    "major_component_min_recall": 0.0,
+    "seed": 42,
+    "target_iou": 0.024501661129568107,
+    "target_precision": 0.08761508761508761,
+    "target_recall": 0.03289473684210526,
+    "truth_present_mean_iou": 0.2758606970310211
+  },
+  "selection": {
+    "correlations": {
+      "global_voxel_accuracy": {
+        "one_sided_negative_permutation_pvalue": 0.16968303169683033,
+        "permutations": 10000,
+        "spearman_rho": -0.2937062937062937
+      },
+      "major_component_mean_recall": {
+        "one_sided_negative_permutation_pvalue": 0.9748025197480252,
+        "permutations": 10000,
+        "spearman_rho": 0.5804195804195804
+      },
+      "target_iou": {
+        "one_sided_negative_permutation_pvalue": 0.9676032396760323,
+        "permutations": 10000,
+        "spearman_rho": 0.5524475524475524
+      },
+      "target_recall": {
+        "one_sided_negative_permutation_pvalue": 0.9758024197580242,
+        "permutations": 10000,
+        "spearman_rho": 0.5874125874125874
+      },
+      "truth_present_mean_iou": {
+        "one_sided_negative_permutation_pvalue": 0.458054194580542,
+        "permutations": 10000,
+        "spearman_rho": -0.04195804195804196
+      }
+    },
+    "decision": "FAIL: frozen prior pool lacks geological support",
+    "ensemble_mean": {
+      "global_voxel_accuracy": 0.5972100545962652,
+      "major_component_mean_recall": 0.05344451080272087,
+      "target_iou": 0.03144480434529132,
+      "target_recall": 0.05196253345227476,
+      "truth_present_mean_iou": 0.27712642401456833
+    },
+    "ensemble_median": {
+      "global_voxel_accuracy": 0.5954645574092865,
+      "major_component_mean_recall": 0.04786946269210395,
+      "target_iou": 0.02969306385179676,
+      "target_recall": 0.04950936663693131,
+      "truth_present_mean_iou": 0.2763897180557251
+    },
+    "n_candidates": 12,
+    "oracle_best": {
+      "global_voxel_accuracy": {
+        "candidate_id": "seed142_sample1",
+        "value": 0.6133127212524414
+      },
+      "major_component_mean_recall": {
+        "candidate_id": "seed242_sample0",
+        "value": 0.09631135472869512
+      },
+      "target_iou": {
+        "candidate_id": "seed242_sample0",
+        "value": 0.06715602061533656
+      },
+      "target_recall": {
+        "candidate_id": "seed242_sample0",
+        "value": 0.09589652096342552
+      },
+      "truth_present_mean_iou": {
+        "candidate_id": "seed142_sample1",
+        "value": 0.29790356755256653
+      }
+    },
+    "promoted": false,
+    "ranking_gate": {
+      "checks": {
+        "target_correlations": false,
+        "top_one_complete_support": false,
+        "top_three_target_enrichment": false
+      },
+      "correlation_checks": {
+        "major_component_mean_recall": false,
+        "target_iou": false,
+        "target_recall": false
+      },
+      "passed": false,
+      "top_one_support_checks": {
+        "conditions_exact": true,
+        "major_component_mean_recall": false,
+        "major_component_min_recall": false,
+        "target_iou": false,
+        "target_precision": false,
+        "target_recall": false
+      },
+      "top_three_enrichment_checks": {
+        "major_component_mean_recall": false,
+        "target_iou": false,
+        "target_recall": false
+      }
+    },
+    "selected_candidate_id": "seed42_sample1",
+    "selected_hard_seismic_loss": 16.86887550354004,
+    "selection_score": "ascending_hard_seismic_loss_only",
+    "support_gate": {
+      "candidates": [
+        {
+          "candidate_id": "seed42_sample0",
+          "checks": {
+            "conditions_exact": true,
+            "major_component_mean_recall": false,
+            "major_component_min_recall": false,
+            "target_iou": false,
+            "target_precision": false,
+            "target_recall": false
+          },
+          "passed": false
+        },
+        {
+          "candidate_id": "seed42_sample1",
+          "checks": {
+            "conditions_exact": true,
+            "major_component_mean_recall": false,
+            "major_component_min_recall": false,
+            "target_iou": false,
+            "target_precision": false,
+            "target_recall": false
+          },
+          "passed": false
+        },
+        {
+          "candidate_id": "seed42_sample2",
+          "checks": {
+            "conditions_exact": true,
+            "major_component_mean_recall": false,
+            "major_component_min_recall": false,
+            "target_iou": false,
+            "target_precision": false,
+            "target_recall": false
+          },
+          "passed": false
+        },
+        {
+          "candidate_id": "seed42_sample3",
+          "checks": {
+            "conditions_exact": true,
+            "major_component_mean_recall": false,
+            "major_component_min_recall": false,
+            "target_iou": false,
+            "target_precision": false,
+            "target_recall": false
+          },
+          "passed": false
+        },
+        {
+          "candidate_id": "seed142_sample0",
+          "checks": {
+            "conditions_exact": true,
+            "major_component_mean_recall": false,
+            "major_component_min_recall": false,
+            "target_iou": false,
+            "target_precision": false,
+            "target_recall": false
+          },
+          "passed": false
+        },
+        {
+          "candidate_id": "seed142_sample1",
+          "checks": {
+            "conditions_exact": true,
+            "major_component_mean_recall": false,
+            "major_component_min_recall": false,
+            "target_iou": false,
+            "target_precision": false,
+            "target_recall": false
+          },
+          "passed": false
+        },
+        {
+          "candidate_id": "seed142_sample2",
+          "checks": {
+            "conditions_exact": true,
+            "major_component_mean_recall": false,
+            "major_component_min_recall": false,
+            "target_iou": false,
+            "target_precision": false,
+            "target_recall": false
+          },
+          "passed": false
+        },
+        {
+          "candidate_id": "seed142_sample3",
+          "checks": {
+            "conditions_exact": true,
+            "major_component_mean_recall": false,
+            "major_component_min_recall": false,
+            "target_iou": false,
+            "target_precision": false,
+            "target_recall": false
+          },
+          "passed": false
+        },
+        {
+          "candidate_id": "seed242_sample0",
+          "checks": {
+            "conditions_exact": true,
+            "major_component_mean_recall": false,
+            "major_component_min_recall": false,
+            "target_iou": false,
+            "target_precision": false,
+            "target_recall": false
+          },
+          "passed": false
+        },
+        {
+          "candidate_id": "seed242_sample1",
+          "checks": {
+            "conditions_exact": true,
+            "major_component_mean_recall": false,
+            "major_component_min_recall": false,
+            "target_iou": false,
+            "target_precision": false,
+            "target_recall": false
+          },
+          "passed": false
+        },
+        {
+          "candidate_id": "seed242_sample2",
+          "checks": {
+            "conditions_exact": true,
+            "major_component_mean_recall": false,
+            "major_component_min_recall": false,
+            "target_iou": false,
+            "target_precision": false,
+            "target_recall": false
+          },
+          "passed": false
+        },
+        {
+          "candidate_id": "seed242_sample3",
+          "checks": {
+            "conditions_exact": true,
+            "major_component_mean_recall": false,
+            "major_component_min_recall": false,
+            "target_iou": false,
+            "target_precision": false,
+            "target_recall": false
+          },
+          "passed": false
+        }
+      ],
+      "passed": false,
+      "passing_candidate_ids": []
+    },
+    "top_three_mean": {
+      "global_voxel_accuracy": 0.6056709885597229,
+      "major_component_mean_recall": 0.039053357362276754,
+      "target_iou": 0.02359037622406145,
+      "target_recall": 0.03702051739518287,
+      "truth_present_mean_iou": 0.2786882321039836
+    }
+  },
+  "selection_used_truth": false,
+  "status": "completed",
+  "substitution_sensitivity": {
+    "by_source": {
+      "1": {
+        "changed_voxels": 45179,
+        "least_visible_destination": 8,
+        "maximum_hard_seismic_rmse_amplitude": 0.037042126059532166,
+        "median_hard_seismic_rmse_amplitude": 0.025075411424040794,
+        "minimum_hard_seismic_loss": 4.513281345367432,
+        "minimum_hard_seismic_rmse_amplitude": 0.021244484931230545
+      },
+      "13": {
+        "changed_voxels": 15,
+        "least_visible_destination": 7,
+        "maximum_hard_seismic_rmse_amplitude": 0.002721380442380905,
+        "median_hard_seismic_rmse_amplitude": 0.002395769814029336,
+        "minimum_hard_seismic_loss": 0.00396574055776,
+        "minimum_hard_seismic_rmse_amplitude": 0.000629741232842207
+      },
+      "2": {
+        "changed_voxels": 20383,
+        "least_visible_destination": 8,
+        "maximum_hard_seismic_rmse_amplitude": 0.05443654581904411,
+        "median_hard_seismic_rmse_amplitude": 0.04690638557076454,
+        "minimum_hard_seismic_loss": 13.261045455932617,
+        "minimum_hard_seismic_rmse_amplitude": 0.036415718495845795
+      },
+      "3": {
+        "changed_voxels": 14499,
+        "least_visible_destination": 11,
+        "maximum_hard_seismic_rmse_amplitude": 0.029263915494084358,
+        "median_hard_seismic_rmse_amplitude": 0.02496955916285515,
+        "minimum_hard_seismic_loss": 3.1583008766174316,
+        "minimum_hard_seismic_rmse_amplitude": 0.017771609127521515
+      },
+      "4": {
+        "changed_voxels": 73622,
+        "least_visible_destination": 11,
+        "maximum_hard_seismic_rmse_amplitude": 0.05007856339216232,
+        "median_hard_seismic_rmse_amplitude": 0.04199274256825447,
+        "minimum_hard_seismic_loss": 14.168176651000977,
+        "minimum_hard_seismic_rmse_amplitude": 0.037640638649463654
+      },
+      "5": {
+        "changed_voxels": 18850,
+        "least_visible_destination": 12,
+        "maximum_hard_seismic_rmse_amplitude": 0.052356988191604614,
+        "median_hard_seismic_rmse_amplitude": 0.041157446801662445,
+        "minimum_hard_seismic_loss": 2.8621926307678223,
+        "minimum_hard_seismic_rmse_amplitude": 0.016918014734983444
+      },
+      "6": {
+        "changed_voxels": 11534,
+        "least_visible_destination": 10,
+        "maximum_hard_seismic_rmse_amplitude": 0.022270193323493004,
+        "median_hard_seismic_rmse_amplitude": 0.01691480167210102,
+        "minimum_hard_seismic_loss": 2.218830108642578,
+        "minimum_hard_seismic_rmse_amplitude": 0.014895737171173096
+      },
+      "9": {
+        "changed_voxels": 8955,
+        "least_visible_destination": 12,
+        "maximum_hard_seismic_rmse_amplitude": 0.025009535253047943,
+        "median_hard_seismic_rmse_amplitude": 0.01935652270913124,
+        "minimum_hard_seismic_loss": 3.1299262046813965,
+        "minimum_hard_seismic_rmse_amplitude": 0.01769159734249115
+      }
+    },
+    "destination_labels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "selection_score": false,
+    "source_labels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      13
+    ],
+    "truth_derived_oracle_perturbation": true
+  },
+  "truth_derived": true
+}

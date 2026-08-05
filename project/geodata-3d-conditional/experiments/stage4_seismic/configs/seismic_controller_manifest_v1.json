@@ -1,0 +1,30 @@
+{
+  "schema": "phase4c_seismic_controller_screen_v1",
+  "description": "Frozen before the first Phase-4c GPU run. Start at the alpha/cap 0.25 upper-bound operating point that crossed hard labels for ideal 3-D evidence. Alpha 0.10 is a predeclared lower-strength diagnostic only if alpha 0.25 lowers hard seismic residual but harms hard geology through excessive changes.",
+  "levels": [
+    {
+      "order": 0,
+      "id": "alpha025_cap025",
+      "alpha": 0.25,
+      "max_guidance_ratio": 0.25,
+      "role": "primary_inverse_crime_upper_bound"
+    },
+    {
+      "order": 1,
+      "id": "alpha010_cap025",
+      "alpha": 0.10,
+      "max_guidance_ratio": 0.25,
+      "role": "predeclared_lower_strength_harm_diagnostic"
+    }
+  ],
+  "promotion": {
+    "first_run": "alpha025_cap025",
+    "seed": 42,
+    "n_samples": 1,
+    "n_steps": 32,
+    "alpha010_allowed_only_if": "alpha025 lowers hard seismic residual but fails geology through excessive hard change",
+    "n4_requires": "complete single-sample geology-plus-seismic gate",
+    "multi_seed_requires": "seed42 n4 complete gate and reranking comparison",
+    "joint_gravity_requires": "seismic-only multi-sample promotion"
+  }
+}

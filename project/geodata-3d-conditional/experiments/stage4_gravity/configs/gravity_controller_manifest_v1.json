@@ -1,0 +1,29 @@
+{
+  "schema": "phase4a_gravity_controller_screen_v1",
+  "description": "Frozen before the first Phase-4a GPU run. Start with the same alpha/cap 0.25 operating point validated for the Phase-2/3 upper bounds. Alpha 0.10 is a predeclared lower-strength diagnostic only if alpha 0.25 reduces gravity residual but harms hard geology.",
+  "levels": [
+    {
+      "order": 0,
+      "id": "alpha025_cap025",
+      "alpha": 0.25,
+      "max_guidance_ratio": 0.25,
+      "role": "primary_inverse_crime_upper_bound"
+    },
+    {
+      "order": 1,
+      "id": "alpha010_cap025",
+      "alpha": 0.10,
+      "max_guidance_ratio": 0.25,
+      "role": "predeclared_lower_strength_harm_diagnostic"
+    }
+  ],
+  "promotion": {
+    "first_run": "alpha025_cap025",
+    "seed": 42,
+    "n_samples": 1,
+    "n_steps": 32,
+    "alpha010_allowed_only_if": "alpha025 lowers hard gravity residual but fails geology through excessive hard change",
+    "n4_requires": "complete single-sample geology-plus-gravity gate",
+    "multi_seed_requires": "seed42 n4 complete gate and reranking comparison"
+  }
+}

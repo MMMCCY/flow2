@@ -1,0 +1,23 @@
+561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c  project/geodata-3d-conditional/conditional-weights.ckpt
+path: /home/mcy/Geoflow/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/conditional-weights.ckpt
+size_bytes: 849415038
+checkpoint_type: dict
+top_level_keys: ['callbacks', 'ema_shadow', 'ema_update_on_cpu', 'epoch', 'global_step', 'hparams_name', 'hyper_parameters', 'loops', 'lr_schedulers', 'optimizer_states', 'pytorch-lightning_version', 'state_dict']
+state_dict_type: OrderedDict
+state_dict_entries: 412
+state_dict_tensor_entries: 412
+state_dict_numel: 53049574
+state_dict_first_keys: ['embedding.weight', 'net.init_conv_x.weight', 'net.init_conv_x.bias', 'net.init_conv_ATb.weight', 'net.init_conv_ATb.bias', 'net.time_mlp.0.freqs', 'net.time_mlp.0.phases', 'net.time_mlp.1.weight', 'net.time_mlp.1.bias', 'net.time_mlp.3.weight', 'net.time_mlp.3.bias', 'net.downs.0.0.conv1.weight', 'net.downs.0.0.conv1.bias', 'net.downs.0.0.conv2.weight', 'net.downs.0.0.conv2.bias']
+ema_shadow_type: dict
+ema_shadow_entries: 411
+ema_shadow_tensor_entries: 411
+ema_shadow_numel: 53049349
+ema_shadow_first_keys: ['net.init_conv_x.weight', 'net.init_conv_x.bias', 'net.init_conv_ATb.weight', 'net.init_conv_ATb.bias', 'net.time_mlp.0.freqs', 'net.time_mlp.0.phases', 'net.time_mlp.1.weight', 'net.time_mlp.1.bias', 'net.time_mlp.3.weight', 'net.time_mlp.3.bias', 'net.downs.0.0.conv1.weight', 'net.downs.0.0.conv1.bias', 'net.downs.0.0.conv2.weight', 'net.downs.0.0.conv2.bias', 'net.downs.0.1.time_mlp.1.weight']
+ema_keys_equal_state_keys: False
+ema_missing_from_state: []
+state_missing_from_ema: ['embedding.weight']
+epoch: 1651
+global_step: 8376
+hyper_parameters_type: dict
+hyper_parameter_keys: ['attn_dim_head', 'attn_enabled', 'attn_heads', 'data_channels', 'data_shape', 'dim', 'dim_mults', 'dropout', 'embedding_dim', 'flash_attn', 'full_attn', 'lambda_reconstruct', 'learning_rate', 'lr_decay', 'num_categories', 'self_condition', 'time_bandwidth', 'time_learned_emb', 'time_range', 'time_resolution', 'time_sin_pos']
+hyper_parameters: {'data_shape': (64, 64, 64), 'time_range': [0.0001, 0.9999], 'num_categories': 15, 'embedding_dim': 15, 'lambda_reconstruct': 1.0, 'learning_rate': 0.001, 'lr_decay': 0.999, 'dim': 48, 'dim_mults': (1, 2, 2, 3, 4), 'data_channels': 15, 'dropout': 0.1, 'self_condition': False, 'time_sin_pos': False, 'time_resolution': 1024, 'time_bandwidth': 1000.0, 'time_learned_emb': True, 'attn_enabled': True, 'attn_dim_head': 32, 'attn_heads': 4, 'full_attn': None, 'flash_attn': False}

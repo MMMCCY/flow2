@@ -1,0 +1,20 @@
+{
+  "schema": "phase6q_hard_coordinate_v1",
+  "id": "five_body_cuboid_hard_coordinate_fine_v1",
+  "description": "Post-Q2b one-time mechanism diagnostic for whether the 32-voxel minimum proposal caused the 70-percent seismic recovery stop; does not rewrite Q2b.",
+  "voxel_config": "project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/voxel_reconstruction_v1.json",
+  "voxel_config_sha256": "b24d7eec4489d9ef4bf51ed20507c01a5e73720f6550ef2c5d86de8421d022b8",
+  "observation_modes": ["seismic"],
+  "seismic_controls": ["correct", "zero", "shuffled_xy"],
+  "max_iterations": 160,
+  "proposal_flip_counts": [1, 2, 4, 8, 16, 32],
+  "improvement_tolerance": 1e-10,
+  "allow_additions": true,
+  "allow_removals": true,
+  "selection": "minimum_hard_physics_rmse_only",
+  "regularization": {"volume": 0.0, "smoothness": 0.0, "truth_roi": false},
+  "formal_training_authorized": false,
+  "post_hoc_diagnostic": true,
+  "rewrites_q2b": false,
+  "additional_flip_count_search_authorized": false
+}

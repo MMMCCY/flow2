@@ -1,0 +1,88 @@
+{
+  "borehole_columns_hitting_target": 2,
+  "borehole_label_counts": {
+    "-1": 257626,
+    "1": 94,
+    "2": 4137,
+    "3": 34,
+    "4": 179,
+    "5": 52,
+    "6": 9,
+    "9": 13
+  },
+  "dtype": "torch.int64",
+  "effective_condition_fraction": 0.2636222839355469,
+  "effective_condition_voxels": 69107,
+  "full_borehole_count": 9,
+  "full_borehole_xy": [
+    [
+      8,
+      46
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      10,
+      24
+    ],
+    [
+      27,
+      17
+    ],
+    [
+      35,
+      26
+    ],
+    [
+      39,
+      59
+    ],
+    [
+      44,
+      60
+    ],
+    [
+      48,
+      6
+    ],
+    [
+      57,
+      32
+    ]
+  ],
+  "nonair_borehole_truth_mismatches": 0,
+  "nonair_observed_fraction": 0.01723480224609375,
+  "nonair_observed_voxels": 4518,
+  "shape": [
+    1,
+    1,
+    64,
+    64,
+    64
+  ],
+  "target_conditioned_fraction": 0.0014495985727029437,
+  "target_conditioned_voxels": 13,
+  "target_fraction": 0.034210205078125,
+  "target_hits_in_full_boreholes": 13,
+  "target_label": 9,
+  "target_voxels": 8968,
+  "truth_air_voxels": 64589,
+  "truth_label_counts": {
+    "-1": 64589,
+    "1": 45273,
+    "13": 15,
+    "2": 24520,
+    "3": 14533,
+    "4": 73801,
+    "5": 18902,
+    "6": 11543,
+    "9": 8968
+  },
+  "unconstrained_subsurface_voxels": 193037,
+  "valid_label_range": [
+    -1,
+    13
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "phase4_seismic_observation_v1",
+  "id": "full_cube_noiseless_inverse_crime_v1",
+  "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+  "grid_shape": [64, 64, 64],
+  "cell_size_m": [100.0, 100.0, 50.0],
+  "vertical_axis": "final spatial axis; larger index upward",
+  "trace_order": "local_surface_to_depth",
+  "local_surface_datum": true,
+  "exclude_air_rock_interface": true,
+  "time_sampling": {
+    "num_samples": 320,
+    "sample_interval_ms": 8.0
+  },
+  "wavelet": {
+    "type": "ricker_zero_phase",
+    "peak_frequency_hz": 25.0,
+    "duration_ms": 128.0,
+    "normalization": "peak_one"
+  },
+  "trace_grid": "all_xy_columns",
+  "sample_mask": "all",
+  "uncertainty_amplitude": 0.01,
+  "noise": {
+    "type": "none",
+    "seed": 4205
+  },
+  "truth_derived": true,
+  "measured_geophysics": false,
+  "inverse_crime": true
+}

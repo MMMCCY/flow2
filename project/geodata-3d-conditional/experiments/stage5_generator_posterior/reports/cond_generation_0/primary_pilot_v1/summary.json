@@ -1,0 +1,295 @@
+{
+  "acceptance_fraction": 0.875,
+  "accepted_proposals": 7,
+  "baseline": {
+    "global_voxel_accuracy": 0.5873655676841736,
+    "hard_seismic_loss": 17.860631942749023,
+    "major_four_mean_recall": 0.04142324745887117,
+    "target_iou": 0.02859647939569704,
+    "target_precision": 0.0674836861371956,
+    "target_recall": 0.04727921498661909,
+    "truth_present_mean_iou": 0.26524943113327026
+  },
+  "case_role": "legacy_mechanism_screen_not_held_out",
+  "chain_proposals": 8,
+  "conditioning_report": {
+    "borehole_columns_hitting_target": 2,
+    "borehole_label_counts": {
+      "-1": 257626,
+      "1": 94,
+      "2": 4137,
+      "3": 34,
+      "4": 179,
+      "5": 52,
+      "6": 9,
+      "9": 13
+    },
+    "dtype": "torch.int64",
+    "effective_condition_fraction": 0.2636222839355469,
+    "effective_condition_voxels": 69107,
+    "full_borehole_count": 9,
+    "full_borehole_xy": [
+      [
+        8,
+        46
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        10,
+        24
+      ],
+      [
+        27,
+        17
+      ],
+      [
+        35,
+        26
+      ],
+      [
+        39,
+        59
+      ],
+      [
+        44,
+        60
+      ],
+      [
+        48,
+        6
+      ],
+      [
+        57,
+        32
+      ]
+    ],
+    "nonair_borehole_truth_mismatches": 0,
+    "nonair_observed_fraction": 0.01723480224609375,
+    "nonair_observed_voxels": 4518,
+    "shape": [
+      1,
+      1,
+      64,
+      64,
+      64
+    ],
+    "target_conditioned_fraction": 0.0014495985727029437,
+    "target_conditioned_voxels": 13,
+    "target_fraction": 0.034210205078125,
+    "target_hits_in_full_boreholes": 13,
+    "target_label": 9,
+    "target_voxels": 8968,
+    "truth_air_voxels": 64589,
+    "truth_label_counts": {
+      "-1": 64589,
+      "1": 45273,
+      "13": 15,
+      "2": 24520,
+      "3": 14533,
+      "4": 73801,
+      "5": 18902,
+      "6": 11543,
+      "9": 8968
+    },
+    "unconstrained_subsurface_voxels": 193037,
+    "valid_label_range": [
+      -1,
+      13
+    ]
+  },
+  "continuous_or_physics_loss_alone_is_not_success": true,
+  "decision": "FAIL: do not expand this full-dimensional pCN implementation; proceed to Phase 6",
+  "final": {
+    "hard_seismic_loss": 17.73748207092285,
+    "retained_index": 8,
+    "target_iou": 0.025826516124670407,
+    "target_recall": 0.042595896520963426,
+    "truth_present_mean_iou": 0.26980647444725037
+  },
+  "geology_directions": {
+    "major_four_mean_recall_improved": false,
+    "target_iou_improved": false,
+    "target_recall_improved": false,
+    "truth_present_mean_iou_improved": true
+  },
+  "geology_promotion_pass": false,
+  "hard_seismic_fields_sha256": "e0d1e6cf7e5e31c08261c18c23535014d40548b7e29eeeab024e299d459c125e",
+  "integrity_pass": true,
+  "mechanism_active": true,
+  "minimum_likelihood": {
+    "global_voxel_accuracy": 0.5941433906555176,
+    "hard_seismic_loss": 17.653818130493164,
+    "major_four_mean_recall": 0.034586585758484806,
+    "target_iou": 0.025298031605212087,
+    "target_precision": 0.06266094420600858,
+    "target_recall": 0.04070026761819804,
+    "truth_present_mean_iou": 0.26957955956459045
+  },
+  "minimum_likelihood_retained_index": 7,
+  "observation_manifest_sha256": "3aa555c92ff63372512b1b1b1cdef1b1f55a5968f296389f2092dfd68d0019e9",
+  "physics_improved": true,
+  "promoted_to_new_held_out_study": false,
+  "publication_evidence": false,
+  "retained_samples_sha256": "cf64d6d5db3229eae8de471b4433d9d6c5a27ab51199d55e5eb2af8752d1b895",
+  "run_config_sha256": "bc3f31009833cbc0f10b6a94c9bb2834721f4a296df4f36c0d76f3e36298496a",
+  "run_dir": "experiments/stage5_generator_posterior/runs/cond_generation_0/primary_pilot_v1",
+  "schema": "phase5c_generator_posterior_truth_audit_v1",
+  "target_metadata": {
+    "component_count": 7,
+    "component_mode": "all",
+    "component_rank": null,
+    "connectivity": 6,
+    "ranked_components": [
+      {
+        "bbox_max": [
+          38,
+          63,
+          40
+        ],
+        "bbox_min": [
+          11,
+          2,
+          0
+        ],
+        "centroid": [
+          27.716106414794922,
+          35.75337219238281,
+          17.07011604309082
+        ],
+        "rank_by_volume": 0,
+        "source_component_id": 0,
+        "voxel_count": 4079
+      },
+      {
+        "bbox_max": [
+          63,
+          34,
+          39
+        ],
+        "bbox_min": [
+          48,
+          0,
+          0
+        ],
+        "centroid": [
+          56.33531188964844,
+          15.193886756896973,
+          18.71304702758789
+        ],
+        "rank_by_volume": 1,
+        "source_component_id": 4,
+        "voxel_count": 2192
+      },
+      {
+        "bbox_max": [
+          55,
+          63,
+          36
+        ],
+        "bbox_min": [
+          36,
+          24,
+          0
+        ],
+        "centroid": [
+          45.723445892333984,
+          47.509056091308594,
+          13.84581470489502
+        ],
+        "rank_by_volume": 2,
+        "source_component_id": 2,
+        "voxel_count": 2043
+      },
+      {
+        "bbox_max": [
+          44,
+          14,
+          40
+        ],
+        "bbox_min": [
+          35,
+          0,
+          4
+        ],
+        "centroid": [
+          39.00159454345703,
+          4.7352471351623535,
+          26.464115142822266
+        ],
+        "rank_by_volume": 3,
+        "source_component_id": 1,
+        "voxel_count": 627
+      },
+      {
+        "bbox_max": [
+          42,
+          2,
+          40
+        ],
+        "bbox_min": [
+          40,
+          0,
+          34
+        ],
+        "centroid": [
+          40.772727966308594,
+          0.7272727489471436,
+          37.59090805053711
+        ],
+        "rank_by_volume": 4,
+        "source_component_id": 3,
+        "voxel_count": 22
+      },
+      {
+        "bbox_max": [
+          55,
+          21,
+          3
+        ],
+        "bbox_min": [
+          55,
+          20,
+          1
+        ],
+        "centroid": [
+          55.0,
+          20.5,
+          2.0
+        ],
+        "rank_by_volume": 5,
+        "source_component_id": 5,
+        "voxel_count": 4
+      },
+      {
+        "bbox_max": [
+          55,
+          22,
+          4
+        ],
+        "bbox_min": [
+          55,
+          22,
+          4
+        ],
+        "centroid": [
+          55.0,
+          22.0,
+          4.0
+        ],
+        "rank_by_volume": 6,
+        "source_component_id": 6,
+        "voxel_count": 1
+      }
+    ],
+    "selected_component": null,
+    "selected_fraction_of_label": 1.0,
+    "selected_target_voxels": 8968,
+    "target_label": 9,
+    "target_mask_sha256": "b26b14b6b8f5e33069f77df32dc74a2fbc77c6a816f571969a7e017bc59f9594",
+    "truth_target_voxels": 8968
+  },
+  "unique_retained_hard_samples": 8
+}

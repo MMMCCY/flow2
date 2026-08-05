@@ -1,0 +1,139 @@
+{
+  "protocol_version": 1,
+  "purpose": "Measure solver-only differences. Do not treat fixed Euler and adaptive Dopri5 outputs as paired guidance realizations.",
+  "checkpoint": {
+    "path": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+    "size_bytes": 849415038,
+    "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c"
+  },
+  "model_weight_source": "ema",
+  "ema_applied": true,
+  "truth_model": {
+    "path": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt",
+    "size_bytes": 1050238,
+    "sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3"
+  },
+  "boreholes": {
+    "path": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/boreholes.pt",
+    "size_bytes": 1050167,
+    "sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41"
+  },
+  "seed": 42,
+  "n_samples": 1,
+  "paired_integrator": "fixed_euler_midpoint_v1",
+  "paired_n_steps": 32,
+  "reference_integrator": "adaptive_dopri5_rtol_1e-6_t0_0.0001_tf_0.9999",
+  "initial_noise_policy": "single_cpu_generator_sequential_samples_v1",
+  "conditioning_report": {
+    "shape": [
+      1,
+      1,
+      64,
+      64,
+      64
+    ],
+    "dtype": "torch.float32",
+    "valid_label_range": [
+      -1,
+      13
+    ],
+    "truth_label_counts": {
+      "-1": 64589,
+      "1": 45273,
+      "2": 24520,
+      "3": 14533,
+      "4": 73801,
+      "5": 18902,
+      "6": 11543,
+      "9": 8968,
+      "13": 15
+    },
+    "borehole_label_counts": {
+      "-1": 257626,
+      "1": 94,
+      "2": 4137,
+      "3": 34,
+      "4": 179,
+      "5": 52,
+      "6": 9,
+      "9": 13
+    },
+    "nonair_observed_voxels": 4518,
+    "nonair_observed_fraction": 0.01723480224609375,
+    "truth_air_voxels": 64589,
+    "effective_condition_voxels": 69107,
+    "effective_condition_fraction": 0.2636222839355469,
+    "unconstrained_subsurface_voxels": 193037,
+    "full_borehole_count": 9,
+    "full_borehole_xy": [
+      [
+        8,
+        46
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        10,
+        24
+      ],
+      [
+        27,
+        17
+      ],
+      [
+        35,
+        26
+      ],
+      [
+        39,
+        59
+      ],
+      [
+        44,
+        60
+      ],
+      [
+        48,
+        6
+      ],
+      [
+        57,
+        32
+      ]
+    ],
+    "nonair_borehole_truth_mismatches": 0
+  },
+  "model_load_report": {
+    "checkpoint": {
+      "path": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "size_bytes": 849415038,
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c"
+    },
+    "weight_source": "ema",
+    "ema_applied": true,
+    "model_parameter_count": 412,
+    "trainable_parameter_count": 411,
+    "frozen_parameters": [
+      "embedding.weight"
+    ],
+    "ema_entry_count": 411,
+    "ema_missing_trainable": [],
+    "ema_unexpected": [],
+    "ema_shape_mismatches": [],
+    "ema_excluded_frozen_parameters": [
+      "embedding.weight"
+    ],
+    "checkpoint_epoch": 1651,
+    "checkpoint_global_step": 8376
+  },
+  "records": [
+    {
+      "sample_id": 0,
+      "continuous_rmse": 0.07768325507640839,
+      "continuous_relative_l2": 0.30331283807754517,
+      "decoded_changed_voxel_fraction": 0.04864501953125
+    }
+  ]
+}

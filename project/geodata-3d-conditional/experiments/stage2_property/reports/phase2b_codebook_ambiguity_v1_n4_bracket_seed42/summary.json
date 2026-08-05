@@ -1,0 +1,54 @@
+{
+  "alpha": 0.25,
+  "completed_levels": [
+    "paired_c025",
+    "paired_c010"
+  ],
+  "decision": "SEED42 N=4 RESULT: no level qualifies for multi-seed testing",
+  "is_measured_geophysics": false,
+  "levels": [
+    {
+      "classification": "transition_region",
+      "diversity_gate_pass": true,
+      "level_id": "paired_c025",
+      "mean_delta_global_voxel_accuracy": 0.04109615087509155,
+      "mean_delta_hard_property_loss": -0.7927283197641373,
+      "mean_delta_truth_present_mean_iou": 0.06032830476760864,
+      "mean_guided_target_iou": 0.4040287603962175,
+      "mean_guided_target_precision": 0.8762292496292551,
+      "mean_guided_target_recall": 0.42896966993755575,
+      "order": 2,
+      "outside_roi_disagreement": 0.15320165703694025,
+      "pair_gate_pass_count": 3,
+      "property_config_sha256": "9fb938e33ce372fbdd32c9354adbb141a931e518d25779fc92f7b43d9ac07fc7",
+      "unique_guided_samples": 4
+    },
+    {
+      "classification": "confirmed_seed42_failure",
+      "diversity_gate_pass": true,
+      "level_id": "paired_c010",
+      "mean_delta_global_voxel_accuracy": 0.03243778645992279,
+      "mean_delta_hard_property_loss": -0.6163547784090042,
+      "mean_delta_truth_present_mean_iou": 0.0378546416759491,
+      "mean_guided_target_iou": 0.2376204254172504,
+      "mean_guided_target_precision": 0.7756191840549913,
+      "mean_guided_target_recall": 0.2556311329170384,
+      "order": 3,
+      "outside_roi_disagreement": 0.15358474105596542,
+      "pair_gate_pass_count": 0,
+      "property_config_sha256": "e4e3ae3867e245c476bdc97750c59d9e79ba11fa90ee2217a6439bc5251c9544",
+      "unique_guided_samples": 4
+    }
+  ],
+  "max_guidance_ratio": 0.25,
+  "missing_levels": [],
+  "n_samples": 4,
+  "n_steps": 32,
+  "scope": "Phase-2b seed-42 four-sample codebook observability bracket",
+  "seed": 42,
+  "selection": {
+    "candidate_level": null,
+    "promote_to_multiseed": false,
+    "status": "no_seed42_n4_candidate"
+  }
+}

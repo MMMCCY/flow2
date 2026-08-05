@@ -1,0 +1,36 @@
+{
+  "schema": "phase6p_trajectory_ladder_config_v1",
+  "id": "physics_attainment_seismic_trajectory_ladder_v1",
+  "status": "frozen_before_cuda_output",
+  "case_role": "legacy_truth_derived_seismic_extreme_guidance_diagnostic",
+  "levels": [
+    {"id": "ratio025", "alpha": 0.25, "max_guidance_ratio": 0.25},
+    {"id": "ratio050", "alpha": 0.5, "max_guidance_ratio": 0.5},
+    {"id": "ratio100", "alpha": 1.0, "max_guidance_ratio": 1.0},
+    {"id": "ratio200", "alpha": 2.0, "max_guidance_ratio": 2.0},
+    {"id": "ratio400", "alpha": 4.0, "max_guidance_ratio": 4.0}
+  ],
+  "sampling": {
+    "seed": 42,
+    "n_steps": 32,
+    "tau_start": 0.5,
+    "tau_end": 0.1,
+    "tau_schedule": "cosine",
+    "guidance_start": 0.25,
+    "guidance_schedule": "windowed_sine",
+    "guidance_scaling_mode": "reference_norm_relative_v2",
+    "gradient_clip_norm": 1.0
+  },
+  "attainment_thresholds": {
+    "low_upper": 0.25,
+    "high_lower": 0.8
+  },
+  "geology_audit_thresholds": {
+    "target_iou_delta": 0.1,
+    "truth_present_mean_iou_delta": 0.05
+  },
+  "truth_metrics_computed_by_runner": false,
+  "base_model_trainable": false,
+  "publication_evidence": false,
+  "allow_hyperparameter_sweep_on_case": false
+}

@@ -1,0 +1,4 @@
+iteration,accepted,accepted_flip_count,hard_rmse,hard_attainment,positive_action_count,gradient_norm,predicted_hidden_voxels,truth_hidden_voxels,hidden_true_positive_voxels,hidden_precision,hidden_recall,hidden_iou,hidden_false_positive_voxels,hidden_body_0_recall,hidden_body_1_recall
+0,True,0,0.007097688969224691,0.0,0,,0,1280,0,0.0,0.0,0.0,0,0.0,0.0
+1,True,128,0.006784406024962664,0.044138725382361854,256,0.3544836640357971,128,1280,128,1.0,0.1,0.1,0,0.10000000149011612,0.10000000149011612
+2,False,0,0.006784406024962664,0.044138725382361854,2688,1.171269416809082,128,1280,128,1.0,0.1,0.1,0,0.10000000149011612,0.10000000149011612

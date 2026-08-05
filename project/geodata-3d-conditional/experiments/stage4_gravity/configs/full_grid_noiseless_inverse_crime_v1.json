@@ -1,0 +1,19 @@
+{
+  "schema": "phase4_gravity_observation_v1",
+  "id": "full_grid_noiseless_inverse_crime_v1",
+  "description": "First Phase-4a full-support regular-grid noiseless synthetic inverse-crime observation. Coordinates are synthetic and use SI units.",
+  "grid_shape": [64, 64, 64],
+  "cell_size_m": [100.0, 100.0, 50.0],
+  "origin_m": [0.0, 0.0, 0.0],
+  "station_grid": "cell_center_aligned_full",
+  "observation_height_above_top_m": 50.0,
+  "survey_mask": "all",
+  "uncertainty_mgal": 0.01,
+  "noise": {
+    "type": "none",
+    "seed": 4204
+  },
+  "truth_derived": true,
+  "measured_geophysics": false,
+  "inverse_crime": true
+}

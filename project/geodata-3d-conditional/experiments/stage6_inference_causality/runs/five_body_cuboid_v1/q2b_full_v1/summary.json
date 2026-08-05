@@ -1,0 +1,337 @@
+{
+  "acoustic_metadata": {
+    "density_table_sha256": "346f91e28a53677a534fdc295eb14cf62ce469f553f28f477ba816f297f2ce99",
+    "density_unit": "kg m^-3",
+    "description": "Synthetic complete absolute density and P-wave velocity codebook for the first Phase-4c inverse-crime upper bound. Label 9 has deliberately distinctive impedance; values are not site-calibrated petrophysics.",
+    "id": "acoustic_distinct_label9_upper_bound_v1",
+    "impedance_table_sha256": "bd0f62b3d692d8b10105b56266504e6360511191a48eb0ac11acd3b9705c9f8a",
+    "impedance_unit": "kg m^-2 s^-1",
+    "num_categories": 15,
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "scenario": "synthetic_distinct_label9_acoustic_upper_bound",
+    "schema": "phase4_acoustic_codebook_v1",
+    "site_calibrated_petrophysics": false,
+    "slowness_table_sha256": "36342444bc8042852fdb55682247fa42046cfa5ad30963d444406cac7022f37b",
+    "slowness_unit": "s m^-1",
+    "truth_derived": true,
+    "velocity_table_sha256": "f4835d84b5451bb6ec088d543e7a74b9e5e27e289432fa7b545040eaef9171fc",
+    "velocity_unit": "m s^-1"
+  },
+  "completed_at_utc": "2026-08-04T09:48:28.067310+00:00",
+  "density_metadata": {
+    "density_table_sha256": "fbb6059adf615c456880b5adc95486a6c1eac0db7326e4dfc4c4a9d9c817f526",
+    "description": "Synthetic, non-site-calibrated density contrasts for the first Phase-4a inverse-crime upper bound. Label 9 has deliberately strong density observability; values are not field petrophysics.",
+    "id": "density_distinct_label9_upper_bound_v1",
+    "num_categories": 15,
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "scenario": "synthetic_distinct_label9_density_upper_bound",
+    "schema": "phase4_density_contrast_v1",
+    "site_calibrated_petrophysics": false,
+    "truth_derived": true,
+    "unit": "kg m^-3"
+  },
+  "flow_checkpoint_loaded": false,
+  "formal_training_performed": false,
+  "gravity_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4a full-support regular-grid noiseless synthetic inverse-crime observation. Coordinates are synthetic and use SI units.",
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_grid_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4204,
+      "std_mgal": 0.0,
+      "type": "none"
+    },
+    "observation_height_above_top_m": 50.0,
+    "origin_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "schema": "phase4_gravity_observation_v1",
+    "station_grid": "cell_center_aligned_full",
+    "survey_mask": "all",
+    "truth_derived": true,
+    "uncertainty_mgal": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward"
+  },
+  "optimization": [
+    {
+      "accepted_iterations": 3,
+      "baseline_rmse": 0.06987712532281876,
+      "control": "correct",
+      "final_metrics": {
+        "accepted": false,
+        "accepted_flip_count": 0,
+        "gradient_norm": 0.0,
+        "hard_attainment": 1.0,
+        "hard_rmse": 0.0,
+        "hidden_body_0_recall": 1.0,
+        "hidden_body_1_recall": 1.0,
+        "hidden_false_positive_voxels": 0,
+        "hidden_iou": 1.0,
+        "hidden_precision": 1.0,
+        "hidden_recall": 1.0,
+        "hidden_true_positive_voxels": 1280,
+        "iteration": 4,
+        "positive_action_count": 0,
+        "predicted_hidden_voxels": 1280,
+        "truth_hidden_voxels": 1280
+      },
+      "final_occupancy_path": "optimization/property/correct/hard_coordinate/final_hard_occupancy.pt",
+      "iterations_completed": 4,
+      "mode": "property",
+      "trace_path": "optimization/property/correct/hard_coordinate/trace.csv"
+    },
+    {
+      "accepted_iterations": 6,
+      "baseline_rmse": 0.05058184638619423,
+      "control": "correct",
+      "final_metrics": {
+        "accepted": false,
+        "accepted_flip_count": 0,
+        "gradient_norm": 0.001300217816606164,
+        "hard_attainment": 0.9684647905712794,
+        "hard_rmse": 0.001595109119080007,
+        "hidden_body_0_recall": 0.9906250238418579,
+        "hidden_body_1_recall": 0.9625000357627869,
+        "hidden_false_positive_voxels": 30,
+        "hidden_iou": 0.9541984732824428,
+        "hidden_precision": 0.9765625,
+        "hidden_recall": 0.9765625,
+        "hidden_true_positive_voxels": 1250,
+        "iteration": 7,
+        "positive_action_count": 17898,
+        "predicted_hidden_voxels": 1280,
+        "truth_hidden_voxels": 1280
+      },
+      "final_occupancy_path": "optimization/blurred_property/correct/hard_coordinate/final_hard_occupancy.pt",
+      "iterations_completed": 7,
+      "mode": "blurred_property",
+      "trace_path": "optimization/blurred_property/correct/hard_coordinate/trace.csv"
+    },
+    {
+      "accepted_iterations": 1,
+      "baseline_rmse": 0.007097688969224691,
+      "control": "correct",
+      "final_metrics": {
+        "accepted": false,
+        "accepted_flip_count": 0,
+        "gradient_norm": 1.171269416809082,
+        "hard_attainment": 0.044138725382361854,
+        "hard_rmse": 0.006784406024962664,
+        "hidden_body_0_recall": 0.10000000149011612,
+        "hidden_body_1_recall": 0.10000000149011612,
+        "hidden_false_positive_voxels": 0,
+        "hidden_iou": 0.1,
+        "hidden_precision": 1.0,
+        "hidden_recall": 0.1,
+        "hidden_true_positive_voxels": 128,
+        "iteration": 2,
+        "positive_action_count": 2688,
+        "predicted_hidden_voxels": 128,
+        "truth_hidden_voxels": 1280
+      },
+      "final_occupancy_path": "optimization/reflectivity_spikes/correct/hard_coordinate/final_hard_occupancy.pt",
+      "iterations_completed": 2,
+      "mode": "reflectivity_spikes",
+      "trace_path": "optimization/reflectivity_spikes/correct/hard_coordinate/trace.csv"
+    },
+    {
+      "accepted_iterations": 3,
+      "baseline_rmse": 0.008885824121534824,
+      "control": "correct",
+      "final_metrics": {
+        "accepted": false,
+        "accepted_flip_count": 0,
+        "gradient_norm": 0.26930445432662964,
+        "hard_attainment": 0.15637950249033628,
+        "hard_rmse": 0.007496263366192579,
+        "hidden_body_0_recall": 0.699999988079071,
+        "hidden_body_1_recall": 0.699999988079071,
+        "hidden_false_positive_voxels": 0,
+        "hidden_iou": 0.7,
+        "hidden_precision": 1.0,
+        "hidden_recall": 0.7,
+        "hidden_true_positive_voxels": 896,
+        "iteration": 4,
+        "positive_action_count": 1024,
+        "predicted_hidden_voxels": 896,
+        "truth_hidden_voxels": 1280
+      },
+      "final_occupancy_path": "optimization/seismic/correct/hard_coordinate/final_hard_occupancy.pt",
+      "iterations_completed": 4,
+      "mode": "seismic",
+      "trace_path": "optimization/seismic/correct/hard_coordinate/trace.csv"
+    },
+    {
+      "accepted_iterations": 0,
+      "baseline_rmse": 0.010882876813411713,
+      "control": "zero",
+      "final_metrics": {
+        "accepted": false,
+        "accepted_flip_count": 0,
+        "gradient_norm": 0.0,
+        "hard_attainment": 0.0,
+        "hard_rmse": 0.010882876813411713,
+        "hidden_body_0_recall": 0.0,
+        "hidden_body_1_recall": 0.0,
+        "hidden_false_positive_voxels": 0,
+        "hidden_iou": 0.0,
+        "hidden_precision": 0.0,
+        "hidden_recall": 0.0,
+        "hidden_true_positive_voxels": 0,
+        "iteration": 1,
+        "positive_action_count": 0,
+        "predicted_hidden_voxels": 0,
+        "truth_hidden_voxels": 1280
+      },
+      "final_occupancy_path": "optimization/seismic/zero/hard_coordinate/final_hard_occupancy.pt",
+      "iterations_completed": 1,
+      "mode": "seismic",
+      "trace_path": "optimization/seismic/zero/hard_coordinate/trace.csv"
+    },
+    {
+      "accepted_iterations": 2,
+      "baseline_rmse": 0.017632273957133293,
+      "control": "shuffled_xy",
+      "final_metrics": {
+        "accepted": false,
+        "accepted_flip_count": 0,
+        "gradient_norm": 0.2087932676076889,
+        "hard_attainment": 0.016351661771207282,
+        "hard_rmse": 0.017343956977128983,
+        "hidden_body_0_recall": 0.0,
+        "hidden_body_1_recall": 0.0031250000465661287,
+        "hidden_false_positive_voxels": 254,
+        "hidden_iou": 0.001303780964797914,
+        "hidden_precision": 0.0078125,
+        "hidden_recall": 0.0015625,
+        "hidden_true_positive_voxels": 2,
+        "iteration": 3,
+        "positive_action_count": 1848,
+        "predicted_hidden_voxels": 256,
+        "truth_hidden_voxels": 1280
+      },
+      "final_occupancy_path": "optimization/seismic/shuffled_xy/hard_coordinate/final_hard_occupancy.pt",
+      "iterations_completed": 3,
+      "mode": "seismic",
+      "trace_path": "optimization/seismic/shuffled_xy/hard_coordinate/trace.csv"
+    },
+    {
+      "accepted_iterations": 13,
+      "baseline_rmse": 0.4061219096183777,
+      "control": "correct",
+      "final_metrics": {
+        "accepted": false,
+        "accepted_flip_count": 0,
+        "gradient_norm": 0.014335262589156628,
+        "hard_attainment": 0.8577937931444414,
+        "hard_rmse": 0.0577530562877655,
+        "hidden_body_0_recall": 0.0,
+        "hidden_body_1_recall": 0.0,
+        "hidden_false_positive_voxels": 772,
+        "hidden_iou": 0.0,
+        "hidden_precision": 0.0,
+        "hidden_recall": 0.0,
+        "hidden_true_positive_voxels": 0,
+        "iteration": 14,
+        "positive_action_count": 155844,
+        "predicted_hidden_voxels": 772,
+        "truth_hidden_voxels": 1280
+      },
+      "final_occupancy_path": "optimization/gravity/correct/hard_coordinate/final_hard_occupancy.pt",
+      "iterations_completed": 14,
+      "mode": "gravity",
+      "trace_path": "optimization/gravity/correct/hard_coordinate/trace.csv"
+    }
+  ],
+  "runtime": {
+    "cuda_available": true,
+    "cuda_version": "12.8",
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 4090 D",
+    "gpu_peak_allocated_bytes": 307153920,
+    "hostname": "LabRS",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+    "torch": "2.8.0+cu128"
+  },
+  "search_report": {
+    "condition_overlap_voxels": 0,
+    "fixed_target_overlap_voxels": 0,
+    "hidden_truth_inside_search_voxels": 1280,
+    "hidden_truth_voxels": 1280,
+    "search_fraction_of_unconditioned_subsurface": 0.7192767858505249,
+    "search_voxels": 161920
+  },
+  "seismic_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "stage": "phase6q_q2b_hard_coordinate",
+  "started_at_utc": "2026-08-04T09:48:26.814491+00:00",
+  "status": "completed"
+}

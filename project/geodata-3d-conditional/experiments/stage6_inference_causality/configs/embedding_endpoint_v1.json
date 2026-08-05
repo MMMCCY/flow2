@@ -1,0 +1,33 @@
+{
+  "schema": "phase6q_embedding_endpoint_v1",
+  "id": "five_body_checkpoint_embedding_endpoint_v1",
+  "description": "Optimize the real frozen checkpoint embedding endpoint over the broad Q2 region without loading or evaluating the flow U-Net.",
+  "base_config": "project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/five_body_cuboid_v1.json",
+  "base_config_sha256": "43fe3d8fa0fc55ef94979da93a2a6aded920e035507f2340c55cb2c383f7269c",
+  "voxel_config": "project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/voxel_reconstruction_v1.json",
+  "voxel_config_sha256": "b24d7eec4489d9ef4bf51ed20507c01a5e73720f6550ef2c5d86de8421d022b8",
+  "checkpoint": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "checkpoint_embedding_key": "embedding.weight",
+  "search_region": {"start": [0, 18, 0], "stop": [64, 64, 55]},
+  "observation_modes": ["property", "blurred_property", "reflectivity_spikes", "seismic", "gravity"],
+  "methods": ["soft_embedding", "ste_embedding_rock"],
+  "updates": 200,
+  "learning_rate": 0.02,
+  "weight_decay": 0.0,
+  "gradient_clip_norm": 1.0,
+  "temperature_schedule": [
+    {"temperature": 0.5, "steps": 40},
+    {"temperature": 0.2, "steps": 60},
+    {"temperature": 0.1, "steps": 60},
+    {"temperature": 0.05, "steps": 40}
+  ],
+  "hard_check_interval": 5,
+  "max_state_norm_to_embedding_norm": 4.0,
+  "seismic_controls": ["correct", "zero", "shuffled_xy"],
+  "shuffle_seed": 6042,
+  "hard_selection": "minimum_hard_physics_loss_only",
+  "regularization": {"volume": 0.0, "smoothness": 0.0, "truth_roi": false},
+  "flow_unet_loaded": false,
+  "formal_training_authorized": false
+}

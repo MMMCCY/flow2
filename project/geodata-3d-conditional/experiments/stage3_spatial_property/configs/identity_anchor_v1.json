@@ -1,0 +1,14 @@
+{
+  "schema": "spatial_property_observation_v1",
+  "id": "identity_anchor_v1",
+  "description": "Phase-3 identity anchor with exact known properties before the observation operator. Truth-derived and not measured geophysics.",
+  "operator": {
+    "type": "identity"
+  },
+  "confidence": {
+    "type": "base"
+  },
+  "noise": {
+    "type": "none"
+  }
+}

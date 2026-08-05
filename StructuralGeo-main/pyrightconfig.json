@@ -1,0 +1,13 @@
+{
+  "include": [
+    "src",
+    "code_examples",
+    "tests"
+  ],
+  "extraPaths": [
+    "src"
+  ],
+  "typeCheckingMode": "basic",
+  "reportMissingImports": "warning",
+  "reportMissingTypeStubs": "none"
+}

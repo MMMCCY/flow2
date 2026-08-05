@@ -1,0 +1,28 @@
+{
+  "channels": [
+    {
+      "name": "log_acoustic_impedance",
+      "unit": "log(kg m^-2 s^-1)",
+      "values": {
+        "-1": 6.031886577606201,
+        "0": 15.520258903503418,
+        "1": 15.768538475036621,
+        "10": 16.62068748474121,
+        "11": 16.16259002685547,
+        "12": 16.33763313293457,
+        "13": 15.641671180725098,
+        "2": 15.964361190795898,
+        "3": 16.066802978515625,
+        "4": 16.229637145996094,
+        "5": 16.41819953918457,
+        "6": 16.549877166748047,
+        "7": 15.656060218811035,
+        "8": 15.884902000427246,
+        "9": 16.785924911499023
+      },
+      "weight": 1.0
+    }
+  ],
+  "description": "Phase-5b log-impedance codebook derived from the immutable Phase-4c acoustic table; target is the truth-blind Phase-5a posterior mean.",
+  "schema": "full_lithology_property_channels_v1"
+}

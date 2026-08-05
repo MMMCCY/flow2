@@ -1,0 +1,277 @@
+{
+  "boreholes": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/boreholes.pt",
+    "sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41",
+    "size_bytes": 1050167
+  },
+  "checkpoint": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+    "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+    "size_bytes": 849415038
+  },
+  "conditioning_report": {
+    "borehole_columns_hitting_target": 2,
+    "borehole_label_counts": {
+      "-1": 257626,
+      "1": 94,
+      "2": 4137,
+      "3": 34,
+      "4": 179,
+      "5": 52,
+      "6": 9,
+      "9": 13
+    },
+    "dtype": "torch.int64",
+    "effective_condition_fraction": 0.2636222839355469,
+    "effective_condition_voxels": 69107,
+    "full_borehole_count": 9,
+    "full_borehole_xy": [
+      [
+        8,
+        46
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        10,
+        24
+      ],
+      [
+        27,
+        17
+      ],
+      [
+        35,
+        26
+      ],
+      [
+        39,
+        59
+      ],
+      [
+        44,
+        60
+      ],
+      [
+        48,
+        6
+      ],
+      [
+        57,
+        32
+      ]
+    ],
+    "nonair_borehole_truth_mismatches": 0,
+    "nonair_observed_fraction": 0.01723480224609375,
+    "nonair_observed_voxels": 4518,
+    "shape": [
+      1,
+      1,
+      64,
+      64,
+      64
+    ],
+    "target_conditioned_fraction": 0.0014495985727029437,
+    "target_conditioned_voxels": 13,
+    "target_fraction": 0.034210205078125,
+    "target_hits_in_full_boreholes": 13,
+    "target_label": 9,
+    "target_voxels": 8968,
+    "truth_air_voxels": 64589,
+    "truth_label_counts": {
+      "-1": 64589,
+      "1": 45273,
+      "13": 15,
+      "2": 24520,
+      "3": 14533,
+      "4": 73801,
+      "5": 18902,
+      "6": 11543,
+      "9": 8968
+    },
+    "unconstrained_subsurface_voxels": 193037,
+    "valid_label_range": [
+      -1,
+      13
+    ]
+  },
+  "observation_id": "full_cube_noiseless_inverse_crime_v1",
+  "observation_manifest": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/observations/cond_generation_0/distinct_upper_bound_v1_fix2/manifest.json",
+    "sha256": "3aa555c92ff63372512b1b1b1cdef1b1f55a5968f296389f2092dfd68d0019e9",
+    "size_bytes": 9249
+  },
+  "protocol": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/docs/PHASE4D_SPEC.md",
+    "sha256": "d588b10292eaf498d589ac364f0f0445dc5ac02c1f81a79f7c1fd06fbe1cf924",
+    "size_bytes": 6877
+  },
+  "resolved_observation": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "runner": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage4/audit_seismic_identifiability.py",
+    "sha256": "a59e23a7ca6cbf21c5fbe229a296a7eac26dfe1b9f738531d4b540851a624e62",
+    "size_bytes": 33828
+  },
+  "schema": "phase4d_seismic_identifiability_v1",
+  "source_runs": [
+    {
+      "config": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/config.json",
+        "sha256": "5cac6f1934724ddaad3cf26e56772c8f684f5bc6ffbc8c4d038fb9eaefec1d2f",
+        "size_bytes": 10415
+      },
+      "directory": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline",
+      "samples": [
+        {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_0.pt",
+          "sha256": "b25189fe11ef229c7b4a6fb7a620be355503177d6f78634e1cb39d14a96f283a",
+          "size_bytes": 2098736
+        },
+        {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_1.pt",
+          "sha256": "c07c88b3bbdb2c27477677f429fdd0b677f344257b8cb636cadc4971ccbea0e0",
+          "size_bytes": 2098736
+        },
+        {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_2.pt",
+          "sha256": "8af50f5a4186eaa31281ac3aced6bbe09a3206ce63bccc36870c8c4ba00d32c8",
+          "size_bytes": 2098736
+        },
+        {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_3.pt",
+          "sha256": "2d7d3300b463b304a228f0940f58aef2942becb5f9ee6d9ce6358c314ea9c180",
+          "size_bytes": 2098736
+        }
+      ],
+      "seed": 42
+    },
+    {
+      "config": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed142_n4_s32_a025_c025/baseline/config.json",
+        "sha256": "cf34d3ba49b2a89fcdfcb1854755f0df441d17d8b1e3ea1dcff8d2993f36e6f3",
+        "size_bytes": 10417
+      },
+      "directory": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed142_n4_s32_a025_c025/baseline",
+      "samples": [
+        {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed142_n4_s32_a025_c025/baseline/sample_0.pt",
+          "sha256": "bccc12e560588fdcaa12bf77858f7372c0b2a433819b6ad1301316a8d18bd053",
+          "size_bytes": 2098736
+        },
+        {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed142_n4_s32_a025_c025/baseline/sample_1.pt",
+          "sha256": "f9a93a919f37e3b9943e0647751dd57c51cdfaa634d17f32454552d8d3a3b314",
+          "size_bytes": 2098736
+        },
+        {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed142_n4_s32_a025_c025/baseline/sample_2.pt",
+          "sha256": "c6c8775e10fe889e5c43107dfd94cb836cef8a42b258433357411afe44d8ba62",
+          "size_bytes": 2098736
+        },
+        {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed142_n4_s32_a025_c025/baseline/sample_3.pt",
+          "sha256": "ef58f03cc3618c0efe7836bddc7f4e8dfdc01ec41af8588e4405656aad162fcc",
+          "size_bytes": 2098736
+        }
+      ],
+      "seed": 142
+    },
+    {
+      "config": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed242_n4_s32_a025_c025/baseline/config.json",
+        "sha256": "7527755cbd455b15eb92a30d2fc6f8b46723711d559d1e05c05c6e8777459021",
+        "size_bytes": 10417
+      },
+      "directory": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed242_n4_s32_a025_c025/baseline",
+      "samples": [
+        {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed242_n4_s32_a025_c025/baseline/sample_0.pt",
+          "sha256": "a3fbab0ba78b05d0e8c3366b0c0f42d17ec9955fe74461a19838d4119e19eb4b",
+          "size_bytes": 2098736
+        },
+        {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed242_n4_s32_a025_c025/baseline/sample_1.pt",
+          "sha256": "dbe562a3ff27abcff29e0fc5e5228fcdc89357e0eaf4d05024ff24e6d92da31e",
+          "size_bytes": 2098736
+        },
+        {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed242_n4_s32_a025_c025/baseline/sample_2.pt",
+          "sha256": "52ebb1d5496aa2c7928ee84c15f9a5fd174d95c300b67f3f118782b6f66d436e",
+          "size_bytes": 2098736
+        },
+        {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed242_n4_s32_a025_c025/baseline/sample_3.pt",
+          "sha256": "e3a1bce826a8f0a0132e8e361e45fb6dc22dc15c868e921edd3e6c1a9774b0d3",
+          "size_bytes": 2098736
+        }
+      ],
+      "seed": 242
+    },
+    {
+      "config": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/runs/cond_generation_0/phase4c_seismic_v1/seed42_n1_s32_a025_c025/baseline/config.json",
+        "sha256": "3f26d893eb35434229d83a5f458dafcf9c76d78cd4ca3bacdeef74032ab03aee",
+        "size_bytes": 20398
+      },
+      "directory": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/runs/cond_generation_0/phase4c_seismic_v1/seed42_n1_s32_a025_c025/baseline",
+      "role": "phase4c_alpha_zero_anchor",
+      "sample": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/runs/cond_generation_0/phase4c_seismic_v1/seed42_n1_s32_a025_c025/baseline/sample_0.pt",
+        "sha256": "b25189fe11ef229c7b4a6fb7a620be355503177d6f78634e1cb39d14a96f283a",
+        "size_bytes": 2098736
+      }
+    }
+  ],
+  "status": "complete",
+  "truth": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt",
+    "sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3",
+    "size_bytes": 1050238
+  }
+}
