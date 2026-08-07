@@ -1,0 +1,996 @@
+{
+  "trace": [
+    {
+      "accepted_vs_parent": true,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 0,
+      "hard_seismic_rmse": 0.011075303889811039,
+      "model_id": "empty_baseline",
+      "modified_voxels": 0,
+      "object_count": 0,
+      "objects": [],
+      "parent_id": null,
+      "proposal_move": "initial",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.012128720991313457,
+      "model_id": "g01_empty_baseline_add_native_center00_variant00",
+      "modified_voxels": 187,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 12.0,
+          "center_y": 42.0,
+          "center_z": 21.0,
+          "material_label": 9,
+          "object_id": "native_center00_variant00",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 6.4,
+          "size_y": 8.0,
+          "size_z": 7.0,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.012765800580382347,
+      "model_id": "g01_empty_baseline_add_native_center00_variant01",
+      "modified_voxels": 425,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 12.0,
+          "center_y": 42.0,
+          "center_z": 21.0,
+          "material_label": 9,
+          "object_id": "native_center00_variant01",
+          "orientation_deg": 45.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 9.5,
+          "size_y": 9.5,
+          "size_z": 8.5,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.013075252994894981,
+      "model_id": "g01_empty_baseline_add_native_center00_variant02",
+      "modified_voxels": 473,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 12.0,
+          "center_y": 42.0,
+          "center_z": 21.0,
+          "material_label": 9,
+          "object_id": "native_center00_variant02",
+          "orientation_deg": 90.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 9.450000000000001,
+          "size_y": 10.5,
+          "size_z": 9.5,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.01413023192435503,
+      "model_id": "g01_empty_baseline_add_native_center00_variant03",
+      "modified_voxels": 915,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 12.0,
+          "center_y": 42.0,
+          "center_z": 21.0,
+          "material_label": 9,
+          "object_id": "native_center00_variant03",
+          "orientation_deg": 135.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 13.200000000000001,
+          "size_y": 12.0,
+          "size_z": 11.0,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.012128720991313457,
+      "model_id": "g01_empty_baseline_add_native_center01_variant00",
+      "modified_voxels": 187,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 42.0,
+          "center_y": 42.0,
+          "center_z": 39.0,
+          "material_label": 9,
+          "object_id": "native_center01_variant00",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 6.4,
+          "size_y": 8.0,
+          "size_z": 7.0,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.012765800580382347,
+      "model_id": "g01_empty_baseline_add_native_center01_variant01",
+      "modified_voxels": 425,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 42.0,
+          "center_y": 42.0,
+          "center_z": 39.0,
+          "material_label": 9,
+          "object_id": "native_center01_variant01",
+          "orientation_deg": 45.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 9.5,
+          "size_y": 9.5,
+          "size_z": 8.5,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.013075252994894981,
+      "model_id": "g01_empty_baseline_add_native_center01_variant02",
+      "modified_voxels": 473,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 42.0,
+          "center_y": 42.0,
+          "center_z": 39.0,
+          "material_label": 9,
+          "object_id": "native_center01_variant02",
+          "orientation_deg": 90.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 9.450000000000001,
+          "size_y": 10.5,
+          "size_z": 9.5,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.014130232855677605,
+      "model_id": "g01_empty_baseline_add_native_center01_variant03",
+      "modified_voxels": 915,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 42.0,
+          "center_y": 42.0,
+          "center_z": 39.0,
+          "material_label": 9,
+          "object_id": "native_center01_variant03",
+          "orientation_deg": 135.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 13.200000000000001,
+          "size_y": 12.0,
+          "size_z": 11.0,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.012128720991313457,
+      "model_id": "g01_empty_baseline_add_native_center02_variant00",
+      "modified_voxels": 187,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 12.0,
+          "center_y": 42.0,
+          "center_z": 39.0,
+          "material_label": 9,
+          "object_id": "native_center02_variant00",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 6.4,
+          "size_y": 8.0,
+          "size_z": 7.0,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.012765800580382347,
+      "model_id": "g01_empty_baseline_add_native_center02_variant01",
+      "modified_voxels": 425,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 12.0,
+          "center_y": 42.0,
+          "center_z": 39.0,
+          "material_label": 9,
+          "object_id": "native_center02_variant01",
+          "orientation_deg": 45.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 9.5,
+          "size_y": 9.5,
+          "size_z": 8.5,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.013075252994894981,
+      "model_id": "g01_empty_baseline_add_native_center02_variant02",
+      "modified_voxels": 473,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 12.0,
+          "center_y": 42.0,
+          "center_z": 39.0,
+          "material_label": 9,
+          "object_id": "native_center02_variant02",
+          "orientation_deg": 90.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 9.450000000000001,
+          "size_y": 10.5,
+          "size_z": 9.5,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.01413023378700018,
+      "model_id": "g01_empty_baseline_add_native_center02_variant03",
+      "modified_voxels": 915,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 12.0,
+          "center_y": 42.0,
+          "center_z": 39.0,
+          "material_label": 9,
+          "object_id": "native_center02_variant03",
+          "orientation_deg": 135.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 13.200000000000001,
+          "size_y": 12.0,
+          "size_z": 11.0,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.012128720991313457,
+      "model_id": "g01_empty_baseline_add_native_center03_variant00",
+      "modified_voxels": 187,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 42.0,
+          "center_y": 42.0,
+          "center_z": 21.0,
+          "material_label": 9,
+          "object_id": "native_center03_variant00",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 6.4,
+          "size_y": 8.0,
+          "size_z": 7.0,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.012765800580382347,
+      "model_id": "g01_empty_baseline_add_native_center03_variant01",
+      "modified_voxels": 425,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 42.0,
+          "center_y": 42.0,
+          "center_z": 21.0,
+          "material_label": 9,
+          "object_id": "native_center03_variant01",
+          "orientation_deg": 45.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 9.5,
+          "size_y": 9.5,
+          "size_z": 8.5,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.013075252994894981,
+      "model_id": "g01_empty_baseline_add_native_center03_variant02",
+      "modified_voxels": 473,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 42.0,
+          "center_y": 42.0,
+          "center_z": 21.0,
+          "material_label": 9,
+          "object_id": "native_center03_variant02",
+          "orientation_deg": 90.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 9.450000000000001,
+          "size_y": 10.5,
+          "size_z": 9.5,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.01413023192435503,
+      "model_id": "g01_empty_baseline_add_native_center03_variant03",
+      "modified_voxels": 915,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 42.0,
+          "center_y": 42.0,
+          "center_z": 21.0,
+          "material_label": 9,
+          "object_id": "native_center03_variant03",
+          "orientation_deg": 135.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 13.200000000000001,
+          "size_y": 12.0,
+          "size_z": 11.0,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.012128720991313457,
+      "model_id": "g02_empty_baseline_add_native_center00_variant00",
+      "modified_voxels": 187,
+      "objects": [
+        {
+          "center_x": 12.0,
+          "center_y": 42.0,
+          "center_z": 21.0,
+          "material_label": 9,
+          "object_id": "native_center00_variant00",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 6.4,
+          "size_y": 8.0,
+          "size_z": 7.0,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.012765800580382347,
+      "model_id": "g02_empty_baseline_add_native_center00_variant01",
+      "modified_voxels": 425,
+      "objects": [
+        {
+          "center_x": 12.0,
+          "center_y": 42.0,
+          "center_z": 21.0,
+          "material_label": 9,
+          "object_id": "native_center00_variant01",
+          "orientation_deg": 45.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 9.5,
+          "size_y": 9.5,
+          "size_z": 8.5,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.013075252994894981,
+      "model_id": "g02_empty_baseline_add_native_center00_variant02",
+      "modified_voxels": 473,
+      "objects": [
+        {
+          "center_x": 12.0,
+          "center_y": 42.0,
+          "center_z": 21.0,
+          "material_label": 9,
+          "object_id": "native_center00_variant02",
+          "orientation_deg": 90.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 9.450000000000001,
+          "size_y": 10.5,
+          "size_z": 9.5,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.01413023192435503,
+      "model_id": "g02_empty_baseline_add_native_center00_variant03",
+      "modified_voxels": 915,
+      "objects": [
+        {
+          "center_x": 12.0,
+          "center_y": 42.0,
+          "center_z": 21.0,
+          "material_label": 9,
+          "object_id": "native_center00_variant03",
+          "orientation_deg": 135.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 13.200000000000001,
+          "size_y": 12.0,
+          "size_z": 11.0,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.012128720991313457,
+      "model_id": "g02_empty_baseline_add_native_center01_variant00",
+      "modified_voxels": 187,
+      "objects": [
+        {
+          "center_x": 42.0,
+          "center_y": 42.0,
+          "center_z": 39.0,
+          "material_label": 9,
+          "object_id": "native_center01_variant00",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 6.4,
+          "size_y": 8.0,
+          "size_z": 7.0,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.012765800580382347,
+      "model_id": "g02_empty_baseline_add_native_center01_variant01",
+      "modified_voxels": 425,
+      "objects": [
+        {
+          "center_x": 42.0,
+          "center_y": 42.0,
+          "center_z": 39.0,
+          "material_label": 9,
+          "object_id": "native_center01_variant01",
+          "orientation_deg": 45.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 9.5,
+          "size_y": 9.5,
+          "size_z": 8.5,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.013075252994894981,
+      "model_id": "g02_empty_baseline_add_native_center01_variant02",
+      "modified_voxels": 473,
+      "objects": [
+        {
+          "center_x": 42.0,
+          "center_y": 42.0,
+          "center_z": 39.0,
+          "material_label": 9,
+          "object_id": "native_center01_variant02",
+          "orientation_deg": 90.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 9.450000000000001,
+          "size_y": 10.5,
+          "size_z": 9.5,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.014130232855677605,
+      "model_id": "g02_empty_baseline_add_native_center01_variant03",
+      "modified_voxels": 915,
+      "objects": [
+        {
+          "center_x": 42.0,
+          "center_y": 42.0,
+          "center_z": 39.0,
+          "material_label": 9,
+          "object_id": "native_center01_variant03",
+          "orientation_deg": 135.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 13.200000000000001,
+          "size_y": 12.0,
+          "size_z": 11.0,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.012128720991313457,
+      "model_id": "g02_empty_baseline_add_native_center02_variant00",
+      "modified_voxels": 187,
+      "objects": [
+        {
+          "center_x": 12.0,
+          "center_y": 42.0,
+          "center_z": 39.0,
+          "material_label": 9,
+          "object_id": "native_center02_variant00",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 6.4,
+          "size_y": 8.0,
+          "size_z": 7.0,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.012765800580382347,
+      "model_id": "g02_empty_baseline_add_native_center02_variant01",
+      "modified_voxels": 425,
+      "objects": [
+        {
+          "center_x": 12.0,
+          "center_y": 42.0,
+          "center_z": 39.0,
+          "material_label": 9,
+          "object_id": "native_center02_variant01",
+          "orientation_deg": 45.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 9.5,
+          "size_y": 9.5,
+          "size_z": 8.5,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.013075252994894981,
+      "model_id": "g02_empty_baseline_add_native_center02_variant02",
+      "modified_voxels": 473,
+      "objects": [
+        {
+          "center_x": 12.0,
+          "center_y": 42.0,
+          "center_z": 39.0,
+          "material_label": 9,
+          "object_id": "native_center02_variant02",
+          "orientation_deg": 90.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 9.450000000000001,
+          "size_y": 10.5,
+          "size_z": 9.5,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.01413023378700018,
+      "model_id": "g02_empty_baseline_add_native_center02_variant03",
+      "modified_voxels": 915,
+      "objects": [
+        {
+          "center_x": 12.0,
+          "center_y": 42.0,
+          "center_z": 39.0,
+          "material_label": 9,
+          "object_id": "native_center02_variant03",
+          "orientation_deg": 135.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 13.200000000000001,
+          "size_y": 12.0,
+          "size_z": 11.0,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.012128720991313457,
+      "model_id": "g02_empty_baseline_add_native_center03_variant00",
+      "modified_voxels": 187,
+      "objects": [
+        {
+          "center_x": 42.0,
+          "center_y": 42.0,
+          "center_z": 21.0,
+          "material_label": 9,
+          "object_id": "native_center03_variant00",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 6.4,
+          "size_y": 8.0,
+          "size_z": 7.0,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.012765800580382347,
+      "model_id": "g02_empty_baseline_add_native_center03_variant01",
+      "modified_voxels": 425,
+      "objects": [
+        {
+          "center_x": 42.0,
+          "center_y": 42.0,
+          "center_z": 21.0,
+          "material_label": 9,
+          "object_id": "native_center03_variant01",
+          "orientation_deg": 45.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 9.5,
+          "size_y": 9.5,
+          "size_z": 8.5,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.013075252994894981,
+      "model_id": "g02_empty_baseline_add_native_center03_variant02",
+      "modified_voxels": 473,
+      "objects": [
+        {
+          "center_x": 42.0,
+          "center_y": 42.0,
+          "center_z": 21.0,
+          "material_label": 9,
+          "object_id": "native_center03_variant02",
+          "orientation_deg": 90.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 9.450000000000001,
+          "size_y": 10.5,
+          "size_z": 9.5,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.01413023192435503,
+      "model_id": "g02_empty_baseline_add_native_center03_variant03",
+      "modified_voxels": 915,
+      "objects": [
+        {
+          "center_x": 42.0,
+          "center_y": 42.0,
+          "center_z": 21.0,
+          "material_label": 9,
+          "object_id": "native_center03_variant03",
+          "orientation_deg": 135.0,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 13.200000000000001,
+          "size_y": 12.0,
+          "size_z": 11.0,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    }
+  ]
+}

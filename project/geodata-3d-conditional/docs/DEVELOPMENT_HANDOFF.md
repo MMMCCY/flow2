@@ -1,8 +1,9 @@
 # Development handoff
 
-Updated: 2026-08-02 after completing the Phase-6P frozen inference-limit audit
-and extreme seismic-guidance ladder on an RTX 4090 D. Phase 6A remains the
-learned-adapter mechanism anchor; formal Phase-6B training has not started.
+Updated: 2026-08-07 after completing Stage 7 observation-specificity closure
+and structured hard-geophysics inference on an RTX 4090 D. Formal Phase-6B
+training has not started and is not currently required for the bounded
+structured family.
 
 ## Read this first in a new conversation
 
@@ -10,9 +11,9 @@ For a paste-ready continuation prompt and a compact statement of the active
 Phase-6B task, first open `docs/NEXT_CONVERSATION_PROMPT.md`. This handoff
 remains the authoritative detailed history.
 
-The active implementation is `flow2` on branch `main`, starting from commit
-`5b717ec`. The working tree intentionally contains uncommitted user assets,
-Phase-0/Phase-1 code and runs, documentation, and the new Phase-2 source. Never
+The active implementation is `flow2` on branch `main`, starting from frozen
+commit `85d5deb4555430117887a8ba173a0222c6b899ae`. The working tree contains the
+new Stage-7 code and immutable run outputs. Never
 discard, reset, upload-overwrite or silently reorganize those files. Inspect
 `git status` and overlapping diffs before every edit.
 
@@ -55,6 +56,8 @@ Required reading:
 35. `docs/NEXT_CONVERSATION_PROMPT.md`
 36. `docs/PHASE6P_INFERENCE_LIMIT_SPEC.md`
 37. `docs/PHASE6P_REPORT.md`
+38. `experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d7_observation_specificity_v1/D7_OBSERVATION_SPECIFICITY_REPORT.md`
+39. `experiments/stage6_inference_causality/reports/stage7_v1_final_v2/STAGE7_REPORT.md`
 
 ## Global goal and immutable boundary
 
@@ -128,6 +131,15 @@ historical 2-D gravity path yet.
   reaches only 1.69%; its soft response improves while the hard response
   diverges. All engineering, hash, condition and historical-regression gates
   pass. Same-case inference-strength tuning is closed.
+- Phase 6Q D0–D6 and Stage 7: complete. D7 uses eight identical BASE states and
+  ranks the similarity mechanism S1 residual (`0.9208`) > S4 hard transition
+  (`0.0340`) > S2 VJP (`0.0242`) > S3 controller (`~0`). Structured hard
+  inference then exactly recovers the analytic hidden pair from hard seismic
+  alone and passes correct/zero/shuffled/wrong-case specificity. Across three
+  deterministic StructuralGeo replicas the correct arm ranks strictly first
+  on the shared correct observation in 3/3 cases; mean hard attainment is
+  `42.70%`, hidden IoU is `0.914–0.987`, hidden recall is `0.916–0.996`, and
+  condition/wrong-lithology violations are zero. No training was run.
 
 ## Phase-0 result
 
@@ -778,12 +790,58 @@ guidance-strength tuning is closed. Formal training still requires explicit
 user confirmation and must use held-out grouped data, hard-aware categorical
 alignment, a pre-registered physical term and correct/zero/shuffled controls.
 
+## Stage-7 observation specificity and structured-hard result
+
+The repository freeze passed at clean `main @ 85d5deb`. Historical D1–D4
+runner hashes differed because those files were untracked when the formal runs
+were made. Only D1–D4 were rerun under new provenance tags; D5 already matched.
+Current source/config/checkpoint hashes match all five authoritative stages and
+their observation hashes are present, so D7 records `provenance_verified=true`.
+
+D7 regenerates the D4 BASE trajectory and exactly matches its endpoint hash.
+At steps 8/12/16/20/24/28/32 and the common endpoint, all three observation
+controls consume the identical state. Mean correct-to-control waveform
+residual/raw-gradient/applied-velocity cosine is
+`0.92084/0.94507/0.94507`; mean one-step target overlap is `0.97903`.
+Clipping/scaling changes direction by less than `6e-12`, so the optional S3
+controller experiment was not authorized. The 16-column local JVP basis keeps
+effective rank 13 from probability through seismic, but condition numbers are
+`1.16e3–4.43e3`; this is ill-conditioned without an additional L3 rank cliff.
+
+Stage 7B implements a generator-free mixed discrete/continuous object space and
+a StructuralGeo-native `IntrusionSpec(kind=hemisphere)` space. The population
+beam can explore a finite hard-loss barrier, but accepted geology and final
+selection use hard observed seismic RMSE only. Proposals are condition checked,
+bounded below air, and limited to add/remove/translate/resize/rotate/change
+shape/change lithology trust-region moves. Correct, zero, shuffled and
+independent wrong-case observations receive the same search budget, and every
+final model is cross-evaluated against every observation.
+
+The analytic correct arm selects candidate bodies 4 and 6 without receiving
+their truth indices, reaches 100% hard attainment and hidden IoU/recall 1.0.
+The three native correct arms reach `45.00%`, `23.85%`, `59.23%` hard
+attainment (mean `42.70%`) and rank strictly first when all arms are evaluated
+against the same correct field. Hidden IoU/recall are
+`0.969/0.996`, `0.914/0.916`, and `0.987/0.993`. All condition violations and
+wrong-lithology volumes are zero. This clears the frozen aggregate gate while
+retaining the weaker second native replica as an explicit limitation.
+
+The authoritative outputs are:
+
+- D7: `experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d7_observation_specificity_v1/`;
+- Stage 7B: `experiments/stage6_inference_causality/reports/stage7_v1_final_v2/`.
+
+Do not promote the discarded `stage7_v1`, `fix1`–`fix5`, or partial
+`stage7_v1_final` directories. They are preserved failure/debug evidence.
+Training is still unnecessary for this bounded structured family; no adapter,
+LoRA, U-Net fine-tuning or generator retraining was started.
+
 ## Validation state at handoff
 
 - Phase-1 report regeneration succeeded locally with `.venv/bin/python`.
 - Phase-2/Phase-3 focused property and sampler tests: `24 passed`.
-- Complete local lightweight suite after Phase-6P implementation:
-  `152 passed`,
+- Complete local lightweight suite after Stage-7 implementation:
+  `186 passed`,
   with 13 existing Matplotlib/pyparsing deprecation warnings.
 - The default system Python lacks PyTorch; use `.venv/bin/python` locally or the
   user's CUDA environment on the remote terminal.
@@ -828,5 +886,8 @@ alignment, a pre-registered physical term and correct/zero/shuffled controls.
   not yet generalize or improve physical fit. Phase 6P then shows that raising
   inference guidance to 4x or directly fitting the endpoint cannot close more
   than 9.88%/1.69% of the hard-seismic RMSE and progressively damages geology.
-  Same-case inference-strength tuning is closed; Phase 6 remains the active
-  path, but formal Phase-6B training has not started.
+  Same-case inference-strength tuning is closed. Stage 7 subsequently restores
+  correct-observation specificity and hidden recovery with a low-dimensional
+  hard-physics search, including three native replicas. Formal Phase-6B
+  training has not started and is not presently required for this bounded
+  structured family.

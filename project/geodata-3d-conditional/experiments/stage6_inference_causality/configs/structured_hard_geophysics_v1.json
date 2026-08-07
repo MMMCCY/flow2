@@ -1,0 +1,43 @@
+{
+  "schema": "stage7_structured_hard_geophysics_config_v1",
+  "id": "structured_hard_geophysics_v1",
+  "base_config": "project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/five_body_cuboid_v1.json",
+  "d4_run": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1",
+  "q1_run": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/q0_q1_full_v2",
+  "d7_run": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d7_observation_specificity_v1",
+  "controls": ["correct", "zero", "shuffled_xy", "wrong_case_observation"],
+  "wrong_case_candidate_indices": [1, 9],
+  "cuboid_search": {
+    "kmax": 2,
+    "beam_size": 12,
+    "local_generations": 1
+  },
+  "native_search": {
+    "seeds": [20260807, 20260808, 20260809],
+    "wrong_case_seed_offset": 1000,
+    "kmax": 2,
+    "beam_size": 12,
+    "local_generations": 6,
+    "sobol_population_size_per_center": 64,
+    "parameter_bounds": {
+      "diameter": [8.0, 12.0],
+      "height": [7.0, 11.0],
+      "minor_axis_scale": [0.7, 1.2],
+      "rotation": [0.0, 180.0]
+    },
+    "centers_xyz": [[12, 42, 21], [42, 42, 39], [12, 42, 39], [42, 42, 21]],
+    "shape_variants": [
+      {"diameter": 8, "height": 7, "minor_axis_scale": 0.8, "rotation": 0},
+      {"diameter": 9.5, "height": 8.5, "minor_axis_scale": 1.0, "rotation": 45},
+      {"diameter": 10.5, "height": 9.5, "minor_axis_scale": 0.9, "rotation": 90},
+      {"diameter": 12, "height": 11, "minor_axis_scale": 1.1, "rotation": 135}
+    ]
+  },
+  "success_thresholds": {
+    "minimum_hard_attainment": 0.4,
+    "existing_full_flow_maximum": 0.3064338,
+    "existing_full_flow_final": 0.1152406,
+    "minimum_native_correct_control_win_fraction": 0.6666667
+  },
+  "formal_training_authorized": false
+}

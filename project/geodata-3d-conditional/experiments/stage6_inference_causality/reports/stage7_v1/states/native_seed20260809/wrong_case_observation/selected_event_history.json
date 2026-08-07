@@ -1,0 +1,26 @@
+{
+  "condition_violations": 0,
+  "event_type": "StructuredGeo hard proposal sequence",
+  "events": [
+    {
+      "center_x": 42.0,
+      "center_y": 42.0,
+      "center_z": 39.0,
+      "material_label": 9,
+      "object_id": "native_center01_variant01",
+      "orientation_deg": 45.0,
+      "presence": true,
+      "shape": "dike_hemisphere",
+      "size_x": 9.5,
+      "size_y": 10.5,
+      "size_z": 8.5,
+      "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+    }
+  ],
+  "hard_seismic_rmse": 0.01722380332648754,
+  "history": [
+    "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True): center=(42.0,42.0,39.0), size=(9.5,10.5,8.5), rotation=45.0, material=9"
+  ],
+  "proposal_move": "resize_size_y_+1",
+  "proposal_parent": "g01_empty_baseline_add_native_center01_variant01"
+}

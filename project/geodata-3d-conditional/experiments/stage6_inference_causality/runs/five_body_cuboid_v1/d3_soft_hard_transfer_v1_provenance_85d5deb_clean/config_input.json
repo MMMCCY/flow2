@@ -1,0 +1,59 @@
+{
+  "base_config": "project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/five_body_cuboid_v1.json",
+  "checkpoint": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "checkpoint_embedding_key": "embedding.weight",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "checkpoint_used_for_flow": false,
+  "controlled_levels": [
+    "reflectivity_spikes",
+    "seismic",
+    "gravity"
+  ],
+  "controls": [
+    "correct",
+    "zero",
+    "shuffled_xy"
+  ],
+  "flow_unet_loaded": false,
+  "formal_training_authorized": false,
+  "gradient_clip_norm": 1.0,
+  "hard_selection": "minimum_observed_hard_physics_loss_only",
+  "id": "five_body_generator_free_soft_hard_transfer_v1",
+  "learning_rate": 0.02,
+  "operator_ladder": [
+    "probability",
+    "expected_property",
+    "blurred_property",
+    "reflectivity_spikes",
+    "seismic",
+    "gravity"
+  ],
+  "schema": "phase6q_soft_hard_transfer_config_v1",
+  "seed": 65031,
+  "similarity_margin_edges": [
+    0.05,
+    0.2
+  ],
+  "temperature_schedule": [
+    {
+      "steps": 40,
+      "temperature": 0.5
+    },
+    {
+      "steps": 60,
+      "temperature": 0.2
+    },
+    {
+      "steps": 60,
+      "temperature": 0.1
+    },
+    {
+      "steps": 40,
+      "temperature": 0.05
+    }
+  ],
+  "truth_used_for_diagnostics_only": true,
+  "updates": 200,
+  "voxel_config": "project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/voxel_reconstruction_v1.json",
+  "weight_decay": 0.0
+}

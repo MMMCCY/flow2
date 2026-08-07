@@ -1,0 +1,17 @@
+case_id,optimized_by,evaluated_against,hard_seismic_rmse,evaluated_against_correct_truth_observation
+cuboid_seed42,correct,correct,0.0,True
+cuboid_seed42,correct,zero,0.014049729332327843,False
+cuboid_seed42,correct,shuffled_xy,0.019682161509990692,False
+cuboid_seed42,correct,wrong_case_observation,0.012566452845931053,False
+cuboid_seed42,zero,correct,0.008885824121534824,True
+cuboid_seed42,zero,zero,0.010882876813411713,False
+cuboid_seed42,zero,shuffled_xy,0.017632273957133293,False
+cuboid_seed42,zero,wrong_case_observation,0.008885824121534824,False
+cuboid_seed42,shuffled_xy,correct,0.008885824121534824,True
+cuboid_seed42,shuffled_xy,zero,0.010882876813411713,False
+cuboid_seed42,shuffled_xy,shuffled_xy,0.017632273957133293,False
+cuboid_seed42,shuffled_xy,wrong_case_observation,0.008885824121534824,False
+cuboid_seed42,wrong_case_observation,correct,0.012566452845931053,True
+cuboid_seed42,wrong_case_observation,zero,0.014049729332327843,False
+cuboid_seed42,wrong_case_observation,shuffled_xy,0.019744746387004852,False
+cuboid_seed42,wrong_case_observation,wrong_case_observation,0.0,False

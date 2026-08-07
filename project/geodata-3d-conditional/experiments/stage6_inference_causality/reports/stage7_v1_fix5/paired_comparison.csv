@@ -1,0 +1,6 @@
+method,hard_correct_observation_rmse,hard_attainment,hidden_target_iou,hidden_target_recall,hidden_target_precision,hidden_target_true_positive_voxels,hidden_target_predicted_voxels,hidden_target_truth_voxels,selection
+BASE_frozen_flow_sample,0.044147104024887085,-3.9682621916740883,0.0,0.0,0.0,0,790,1280,no physics
+continuous_BASE_PLUS_PHYSICS_best_hard_state,0.04152549430727959,-3.6732293751619967,0.023597273203985317,0.03515625,0.06696428571428571,45,672,1280,existing continuous D4 hard checkpoint rule
+continuous_BASE_PLUS_PHYSICS_final_state,0.04152549430727959,-3.6732293751619967,0.023597273203985317,0.03515625,0.06696428571428571,45,672,1280,existing continuous D4 hard checkpoint rule
+structured_hard_geophysics,0.0,1.0,1.0,1.0,1.0,1280,1280,1280,hard observed seismic only
+Q1_oracle_like_structured_reference,0.0,1.0,1.0,1.0,1.0,1280,1280,1280,exhaustive fixed two-body dictionary hard seismic ranking; truth indices not supplied

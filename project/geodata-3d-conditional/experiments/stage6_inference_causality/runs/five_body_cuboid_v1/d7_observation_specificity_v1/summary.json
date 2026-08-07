@@ -1,0 +1,850 @@
+{
+  "acoustic_metadata": {
+    "density_table_sha256": "346f91e28a53677a534fdc295eb14cf62ce469f553f28f477ba816f297f2ce99",
+    "density_unit": "kg m^-3",
+    "description": "Synthetic complete absolute density and P-wave velocity codebook for the first Phase-4c inverse-crime upper bound. Label 9 has deliberately distinctive impedance; values are not site-calibrated petrophysics.",
+    "id": "acoustic_distinct_label9_upper_bound_v1",
+    "impedance_table_sha256": "bd0f62b3d692d8b10105b56266504e6360511191a48eb0ac11acd3b9705c9f8a",
+    "impedance_unit": "kg m^-2 s^-1",
+    "num_categories": 15,
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "scenario": "synthetic_distinct_label9_acoustic_upper_bound",
+    "schema": "phase4_acoustic_codebook_v1",
+    "site_calibrated_petrophysics": false,
+    "slowness_table_sha256": "36342444bc8042852fdb55682247fa42046cfa5ad30963d444406cac7022f37b",
+    "slowness_unit": "s m^-1",
+    "truth_derived": true,
+    "velocity_table_sha256": "f4835d84b5451bb6ec088d543e7a74b9e5e27e289432fa7b545040eaef9171fc",
+    "velocity_unit": "m s^-1"
+  },
+  "base_endpoint_sha256": "fa9c7371661f2375c77b3bd4719ebb5e8a31c2f2c2d77121ec57a42899f08d77",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "completed_at_utc": "2026-08-07T12:34:52.547533+00:00",
+  "d4_base_endpoint_sha256": "fa9c7371661f2375c77b3bd4719ebb5e8a31c2f2c2d77121ec57a42899f08d77",
+  "exact_command": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/bin/python project/geodata-3d-conditional/scripts/stage6/run_observation_specificity_audit.py --config project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/observation_specificity_v1.json --output-dir project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d7_observation_specificity_v1 --device cuda",
+  "git_branch": "main",
+  "git_sha": "85d5deb4555430117887a8ba173a0222c6b899ae",
+  "git_status_at_completion": "dirty_stage7_implementation",
+  "identical_state_gate_pass": true,
+  "model_load_report": {
+    "checkpoint": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "checkpoint_epoch": 1651,
+    "checkpoint_global_step": 8376,
+    "ema_applied": true,
+    "ema_entry_count": 411,
+    "ema_excluded_frozen_parameters": [
+      "embedding.weight"
+    ],
+    "ema_missing_trainable": [],
+    "ema_shape_mismatches": [],
+    "ema_unexpected": [],
+    "frozen_parameters": [
+      "embedding.weight"
+    ],
+    "model_parameter_count": 412,
+    "trainable_parameter_count": 411,
+    "weight_source": "ema"
+  },
+  "observation_sha256": "c734b86d121dff902220692ddfab20580b786c0282734db41a735f78c6c676f0",
+  "provenance": {
+    "frozen_reference_git_sha": "85d5deb4555430117887a8ba173a0222c6b899ae",
+    "historical_formal_git_sha": "11caa498b15e6b89891604e9537830b30df504fa",
+    "provenance_verified": true,
+    "rerun_reason": "D1-D4 runner hashes differed because the diagnostic runners were untracked during formal execution; reran only those stages. D5 hashes matched current files.",
+    "stages": [
+      {
+        "checkpoint_match": true,
+        "config_matches_current": true,
+        "observation_hash_present": true,
+        "run_git_sha": "85d5deb4555430117887a8ba173a0222c6b899ae",
+        "run_git_status": "clean",
+        "run_tag": "d1_observation_closure_v1_provenance_85d5deb",
+        "source_hashes": [
+          {
+            "key": "audit",
+            "matches_current_file": true,
+            "sha256": "ae791d40c0a6a12fbfca03b9957590f806902f52b8a48b2c3ac506964c7534e7"
+          },
+          {
+            "key": "gravity",
+            "matches_current_file": true,
+            "sha256": "600f944a586176c6b796f806619c39286687fd88322adc0b7effc85524b1d921"
+          },
+          {
+            "key": "runner",
+            "matches_current_file": true,
+            "sha256": "be9bb23cda1d4c4c8a3edd1f082df12c014a12453f5f905abe7033348a26ca29"
+          },
+          {
+            "key": "seismic",
+            "matches_current_file": true,
+            "sha256": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee"
+          },
+          {
+            "key": "simple_causality",
+            "matches_current_file": true,
+            "sha256": "c90d6e0bd0fb2b7d5e6844e8da5974aced8c5693d37bf159d70b6735287a0680"
+          }
+        ],
+        "stage": "D1",
+        "verified": true
+      },
+      {
+        "checkpoint_match": true,
+        "config_matches_current": true,
+        "observation_hash_present": true,
+        "run_git_sha": "85d5deb4555430117887a8ba173a0222c6b899ae",
+        "run_git_status": "clean",
+        "run_tag": "d2_gradient_audit_v1_fix1_provenance_85d5deb_clean",
+        "source_hashes": [
+          {
+            "key": "audit",
+            "matches_current_file": true,
+            "sha256": "a9148cbccdf7ebd9009a93d6c990e09e715c31fa9c72ec86408c22f8836737c7"
+          },
+          {
+            "key": "controller",
+            "matches_current_file": true,
+            "sha256": "2aa6119fa8517176eb0d1b8f6892ebdd14cc3051a43dd8e030099150f69bec9f"
+          },
+          {
+            "key": "decoder",
+            "matches_current_file": true,
+            "sha256": "cfc7a5deedcbd3f2905b6bf664611813b7445e8226c8b481b6b91cb694c470d5"
+          },
+          {
+            "key": "gravity",
+            "matches_current_file": true,
+            "sha256": "600f944a586176c6b796f806619c39286687fd88322adc0b7effc85524b1d921"
+          },
+          {
+            "key": "runner",
+            "matches_current_file": true,
+            "sha256": "1fec5af83f04a3b89bca2bb47267a3e92acd98e11f6c67b77bb4f6fb046494eb"
+          },
+          {
+            "key": "seismic",
+            "matches_current_file": true,
+            "sha256": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee"
+          }
+        ],
+        "stage": "D2",
+        "verified": true
+      },
+      {
+        "checkpoint_match": true,
+        "config_matches_current": true,
+        "observation_hash_present": true,
+        "run_git_sha": "85d5deb4555430117887a8ba173a0222c6b899ae",
+        "run_git_status": "dirty",
+        "run_tag": "d3_soft_hard_transfer_v1_provenance_85d5deb_clean",
+        "source_hashes": [
+          {
+            "key": "audit",
+            "matches_current_file": true,
+            "sha256": "326ada40a4cde4a688d6720217a2a2eb20a4398a561ee17163ad268d6bd6a119"
+          },
+          {
+            "key": "gravity",
+            "matches_current_file": true,
+            "sha256": "600f944a586176c6b796f806619c39286687fd88322adc0b7effc85524b1d921"
+          },
+          {
+            "key": "runner",
+            "matches_current_file": true,
+            "sha256": "8d84c5b2caeef722bbb319fa676a3dca3e0ad3c3ac2e2de85a6114d66cda1c09"
+          },
+          {
+            "key": "seismic",
+            "matches_current_file": true,
+            "sha256": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee"
+          }
+        ],
+        "stage": "D3",
+        "verified": true
+      },
+      {
+        "checkpoint_match": true,
+        "config_matches_current": true,
+        "observation_hash_present": true,
+        "run_git_sha": "85d5deb4555430117887a8ba173a0222c6b899ae",
+        "run_git_status": "dirty",
+        "run_tag": "d4_frozen_flow_trajectory_v1_provenance_85d5deb_clean",
+        "source_hashes": [
+          {
+            "key": "controller",
+            "matches_current_file": true,
+            "sha256": "cfc7a5deedcbd3f2905b6bf664611813b7445e8226c8b481b6b91cb694c470d5"
+          },
+          {
+            "key": "model_loader",
+            "matches_current_file": true,
+            "sha256": "36d0dc613d8860677f137a2f1d681ebcc50829a6d90f5547c6eac3fd12a977c2"
+          },
+          {
+            "key": "runner",
+            "matches_current_file": true,
+            "sha256": "a04308a567e816606a3d2c547f973cfc9fd63e0eecb42d07ff0ff1881d2e072d"
+          },
+          {
+            "key": "runtime",
+            "matches_current_file": true,
+            "sha256": "246ba9cc8b8e80ce86d7e9d059010d7b030b87e793d911cef8e8d3478786e838"
+          },
+          {
+            "key": "sampler",
+            "matches_current_file": true,
+            "sha256": "78bedd4138d1a492a625665fe9b5d9e867e197033c107f776525c7da3374f1cb"
+          },
+          {
+            "key": "seismic",
+            "matches_current_file": true,
+            "sha256": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee"
+          }
+        ],
+        "stage": "D4",
+        "verified": true
+      },
+      {
+        "checkpoint_match": true,
+        "config_matches_current": true,
+        "observation_hash_present": true,
+        "run_git_sha": "11caa498b15e6b89891604e9537830b30df504fa",
+        "run_git_status": "dirty",
+        "run_tag": "d5_native_geology_audit_v1",
+        "source_hashes": [
+          {
+            "key": "controller",
+            "matches_current_file": true,
+            "sha256": "cfc7a5deedcbd3f2905b6bf664611813b7445e8226c8b481b6b91cb694c470d5"
+          },
+          {
+            "key": "frozen_flow",
+            "matches_current_file": true,
+            "sha256": "78bedd4138d1a492a625665fe9b5d9e867e197033c107f776525c7da3374f1cb"
+          },
+          {
+            "key": "native_audit",
+            "matches_current_file": true,
+            "sha256": "50668a82b20a1b31f49b6e2a0bc8df92caf7f168271a2894a6aad0b7acbbd28d"
+          },
+          {
+            "key": "runner",
+            "matches_current_file": true,
+            "sha256": "23ff048b3585992418803eee5ca6bd12625f641b326954481ea563845d31bef3"
+          },
+          {
+            "key": "runtime",
+            "matches_current_file": true,
+            "sha256": "246ba9cc8b8e80ce86d7e9d059010d7b030b87e793d911cef8e8d3478786e838"
+          },
+          {
+            "key": "seismic",
+            "matches_current_file": true,
+            "sha256": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee"
+          },
+          {
+            "key": "structuralgeo_geomodel",
+            "matches_current_file": true,
+            "sha256": "d5b76d1979fe1673b19e3a54c8773c1c4f3d7170a6676c1cb6c9d2a1c414aa44"
+          },
+          {
+            "key": "structuralgeo_geoprocess",
+            "matches_current_file": true,
+            "sha256": "347e8d4a1698003cd54c497cea02bf3cae84a630a215ed567d3480a8b336506a"
+          },
+          {
+            "key": "structuralgeo_parametric",
+            "matches_current_file": true,
+            "sha256": "e3c4c053759a68238c4dbc2c9e96fa92da1acf7aaac0373bed6a64331aca6299"
+          }
+        ],
+        "stage": "D5",
+        "verified": true
+      }
+    ]
+  },
+  "runtime": {
+    "gpu_name": "NVIDIA GeForce RTX 4090 D",
+    "hostname": "LabRS",
+    "torch": "2.8.0+cu128"
+  },
+  "seismic_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "sensitivity": {
+    "blurred_property": {
+      "basis_names": [
+        "candidate_00",
+        "candidate_01",
+        "candidate_02",
+        "candidate_03",
+        "candidate_04",
+        "candidate_05",
+        "candidate_06",
+        "candidate_07",
+        "candidate_08",
+        "candidate_09",
+        "candidate_10",
+        "candidate_11",
+        "hidden_roi_direction_00",
+        "hidden_roi_direction_01",
+        "hidden_roi_direction_02",
+        "hidden_roi_direction_03"
+      ],
+      "column_count": 16,
+      "column_norms": {
+        "candidate_00": 912327.3797733036,
+        "candidate_01": 326822.61426311196,
+        "candidate_02": 826361.8785519386,
+        "candidate_03": 1033.9968181933136,
+        "candidate_04": 1048.9007330335237,
+        "candidate_05": 857735.305681955,
+        "candidate_06": 34724.368403477114,
+        "candidate_07": 432946.6190989829,
+        "candidate_08": 1045.1783335284385,
+        "candidate_09": 396445.73145101697,
+        "candidate_10": 206294.27878491356,
+        "candidate_11": 1202359.1676148998,
+        "hidden_roi_direction_00": 5147.020463858051,
+        "hidden_roi_direction_01": 1048.9007330335237,
+        "hidden_roi_direction_02": 24565.0372591694,
+        "hidden_roi_direction_03": 1048.9007330335237
+      },
+      "condition_number_effective": 1162.826768671446,
+      "effective_rank": 13,
+      "output_dimension": 524288,
+      "pairwise_column_cosine_max": 1.0000000000000002,
+      "pairwise_column_cosine_median": 1.154444715102745e-16,
+      "pairwise_column_cosine_min": 0.0,
+      "relative_rank_tolerance": 1e-06,
+      "singular_values": [
+        1202359.1789161658,
+        912327.3797733036,
+        857735.3525696353,
+        826361.8785519387,
+        432946.5877136336,
+        396445.6300065525,
+        326822.6142631119,
+        206294.27878492684,
+        42673.54500786358,
+        3794.7313711820043,
+        1893.0886773787488,
+        1045.178333574099,
+        1033.996818193209,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "truth_basis_pair_cosine": 0.0,
+      "truth_direction_sensitivity_norm": 34740.20658787391,
+      "truth_direction_sensitivity_over_median_column_norm": 1.0004561115183654
+    },
+    "expected_property": {
+      "basis_names": [
+        "candidate_00",
+        "candidate_01",
+        "candidate_02",
+        "candidate_03",
+        "candidate_04",
+        "candidate_05",
+        "candidate_06",
+        "candidate_07",
+        "candidate_08",
+        "candidate_09",
+        "candidate_10",
+        "candidate_11",
+        "hidden_roi_direction_00",
+        "hidden_roi_direction_01",
+        "hidden_roi_direction_02",
+        "hidden_roi_direction_03"
+      ],
+      "column_count": 16,
+      "column_norms": {
+        "candidate_00": 5824107.490783478,
+        "candidate_01": 2747298.057636484,
+        "candidate_02": 5717679.204062452,
+        "candidate_03": 1510.568305238327,
+        "candidate_04": 1550.1988342889629,
+        "candidate_05": 5967978.761352334,
+        "candidate_06": 313323.9919679589,
+        "candidate_07": 2938462.575344976,
+        "candidate_08": 1530.0903345529705,
+        "candidate_09": 3187449.4496429474,
+        "candidate_10": 2331290.579460647,
+        "candidate_11": 6635351.826273841,
+        "hidden_roi_direction_00": 58244.167201842494,
+        "hidden_roi_direction_01": 1550.1988342889629,
+        "hidden_roi_direction_02": 221556.25371111347,
+        "hidden_roi_direction_03": 1550.1988342889629
+      },
+      "condition_number_effective": 4392.619521582616,
+      "effective_rank": 13,
+      "output_dimension": 524288,
+      "pairwise_column_cosine_max": 1.0000000000000002,
+      "pairwise_column_cosine_median": 0.0,
+      "pairwise_column_cosine_min": 0.0,
+      "relative_rank_tolerance": 1e-06,
+      "singular_values": [
+        6635351.826273842,
+        5967978.761352334,
+        5824107.490783478,
+        5717679.204062452,
+        3187449.4496429493,
+        2938462.575344977,
+        2747298.057636484,
+        2331290.5794606456,
+        383898.5913791054,
+        57206.22773988409,
+        2830.001497089942,
+        1530.0903353308831,
+        1510.568305238327,
+        0.05401973505630276,
+        0.03907153284112328,
+        0.0323194344124106
+      ],
+      "truth_basis_pair_cosine": 0.0,
+      "truth_direction_sensitivity_norm": 313327.8268190737,
+      "truth_direction_sensitivity_over_median_column_norm": 1.0000122392514237
+    },
+    "probability": {
+      "basis_names": [
+        "candidate_00",
+        "candidate_01",
+        "candidate_02",
+        "candidate_03",
+        "candidate_04",
+        "candidate_05",
+        "candidate_06",
+        "candidate_07",
+        "candidate_08",
+        "candidate_09",
+        "candidate_10",
+        "candidate_11",
+        "hidden_roi_direction_00",
+        "hidden_roi_direction_01",
+        "hidden_roi_direction_02",
+        "hidden_roi_direction_03"
+      ],
+      "column_count": 16,
+      "column_norms": {
+        "candidate_00": 0.42675997853055203,
+        "candidate_01": 0.1962129104936673,
+        "candidate_02": 0.41139701511430204,
+        "candidate_03": 0.00015393113434378433,
+        "candidate_04": 0.00015569300776764044,
+        "candidate_05": 0.4261617712138376,
+        "candidate_06": 0.0001763856750600911,
+        "candidate_07": 0.21496100387390948,
+        "candidate_08": 0.0001546984049470084,
+        "candidate_09": 0.22784978708356476,
+        "candidate_10": 0.16653684149295017,
+        "candidate_11": 0.4739422502032417,
+        "hidden_roi_direction_00": 0.0001598876005547939,
+        "hidden_roi_direction_01": 0.00015569300776764044,
+        "hidden_roi_direction_02": 0.00016636139233516218,
+        "hidden_roi_direction_03": 0.00015569300776764044
+      },
+      "condition_number_effective": 4434.589566417324,
+      "effective_rank": 13,
+      "output_dimension": 262144,
+      "pairwise_column_cosine_max": 1.0000000000000002,
+      "pairwise_column_cosine_median": 0.0,
+      "pairwise_column_cosine_min": 0.0,
+      "relative_rank_tolerance": 1e-06,
+      "singular_values": [
+        0.4739422502032418,
+        0.42675997853055203,
+        0.4261617712138377,
+        0.41139701511430204,
+        0.22784978708356476,
+        0.21496100387390948,
+        0.1962129104936673,
+        0.16653684149295012,
+        0.00031765752876430025,
+        0.00021152930818772787,
+        0.00015469840500593243,
+        0.00015393113434378433,
+        0.00010687398306088034,
+        3.773169192464365e-09,
+        2.306043833563701e-09,
+        0.0
+      ],
+      "truth_basis_pair_cosine": 0.0,
+      "truth_direction_sensitivity_norm": 0.0002352705230880793,
+      "truth_direction_sensitivity_over_median_column_norm": 1.3338414415338848
+    },
+    "reflectivity": {
+      "basis_names": [
+        "candidate_00",
+        "candidate_01",
+        "candidate_02",
+        "candidate_03",
+        "candidate_04",
+        "candidate_05",
+        "candidate_06",
+        "candidate_07",
+        "candidate_08",
+        "candidate_09",
+        "candidate_10",
+        "candidate_11",
+        "hidden_roi_direction_00",
+        "hidden_roi_direction_01",
+        "hidden_roi_direction_02",
+        "hidden_roi_direction_03"
+      ],
+      "column_count": 16,
+      "column_norms": {
+        "candidate_00": 0.3116392524339356,
+        "candidate_01": 0.14779870478567764,
+        "candidate_02": 0.34476670250500585,
+        "candidate_03": 8.599914954319388e-05,
+        "candidate_04": 8.921790778838457e-05,
+        "candidate_05": 0.3349848122416438,
+        "candidate_06": 0.0315442455003171,
+        "candidate_07": 0.14151264010220327,
+        "candidate_08": 8.824806756976349e-05,
+        "candidate_09": 0.09414405533588327,
+        "candidate_10": 0.10939173611647883,
+        "candidate_11": 0.32012274231093363,
+        "hidden_roi_direction_00": 0.0071746107789023295,
+        "hidden_roi_direction_01": 8.921790778838457e-05,
+        "hidden_roi_direction_02": 0.02230524336984055,
+        "hidden_roi_direction_03": 8.921790778838457e-05
+      },
+      "condition_number_effective": 4008.9547900917732,
+      "effective_rank": 13,
+      "output_dimension": 258048,
+      "pairwise_column_cosine_max": 1.0,
+      "pairwise_column_cosine_median": 0.0,
+      "pairwise_column_cosine_min": 0.0,
+      "relative_rank_tolerance": 1e-06,
+      "singular_values": [
+        0.34476670250500585,
+        0.33498481224164367,
+        0.32012274231093363,
+        0.3116392524339356,
+        0.14779870478567764,
+        0.1415126401022033,
+        0.1093917361164788,
+        0.09414405533588328,
+        0.038664830765799636,
+        0.007004752358115015,
+        0.00016288511164844508,
+        8.824806756208166e-05,
+        8.599914954319388e-05,
+        3.937916975208413e-09,
+        0.0,
+        0.0
+      ],
+      "truth_basis_pair_cosine": 0.0,
+      "truth_direction_sensitivity_norm": 0.03154437166943329,
+      "truth_direction_sensitivity_over_median_column_norm": 1.000003999750642
+    },
+    "seismic": {
+      "basis_names": [
+        "candidate_00",
+        "candidate_01",
+        "candidate_02",
+        "candidate_03",
+        "candidate_04",
+        "candidate_05",
+        "candidate_06",
+        "candidate_07",
+        "candidate_08",
+        "candidate_09",
+        "candidate_10",
+        "candidate_11",
+        "hidden_roi_direction_00",
+        "hidden_roi_direction_01",
+        "hidden_roi_direction_02",
+        "hidden_roi_direction_03"
+      ],
+      "column_count": 16,
+      "column_norms": {
+        "candidate_00": 1.1026207281311537,
+        "candidate_01": 0.6937792513278906,
+        "candidate_02": 1.0112054420915686,
+        "candidate_03": 0.0008714221687070494,
+        "candidate_04": 0.0005663714461985108,
+        "candidate_05": 1.451435638315621,
+        "candidate_06": 0.03964852461304247,
+        "candidate_07": 0.5104986651661955,
+        "candidate_08": 0.000973456576298651,
+        "candidate_09": 0.7138652465647898,
+        "candidate_10": 0.43124538807099044,
+        "candidate_11": 2.5577180941439073,
+        "hidden_roi_direction_00": 0.007784635057532064,
+        "hidden_roi_direction_01": 0.0005663714461985108,
+        "hidden_roi_direction_02": 0.028038602404016455,
+        "hidden_roi_direction_03": 0.0005663714461985108
+      },
+      "condition_number_effective": 2935.107902911005,
+      "effective_rank": 13,
+      "output_dimension": 1310720,
+      "pairwise_column_cosine_max": 0.9999999999999999,
+      "pairwise_column_cosine_median": 0.0,
+      "pairwise_column_cosine_min": 0.0,
+      "relative_rank_tolerance": 1e-06,
+      "singular_values": [
+        2.5577180941439077,
+        1.451435638315621,
+        1.1026207281311537,
+        1.0112054420915686,
+        0.7138652465647898,
+        0.6937792513278906,
+        0.5104986651661946,
+        0.43124538807098944,
+        0.04858020811028603,
+        0.007656849421585464,
+        0.0010332659299809154,
+        0.0009734565766030785,
+        0.0008714221687070494,
+        8.526275465950644e-09,
+        0.0,
+        0.0
+      ],
+      "truth_basis_pair_cosine": 0.0,
+      "truth_direction_sensitivity_norm": 0.039652569659558046,
+      "truth_direction_sensitivity_over_median_column_norm": 1.00010202262392
+    },
+    "spikes": {
+      "basis_names": [
+        "candidate_00",
+        "candidate_01",
+        "candidate_02",
+        "candidate_03",
+        "candidate_04",
+        "candidate_05",
+        "candidate_06",
+        "candidate_07",
+        "candidate_08",
+        "candidate_09",
+        "candidate_10",
+        "candidate_11",
+        "hidden_roi_direction_00",
+        "hidden_roi_direction_01",
+        "hidden_roi_direction_02",
+        "hidden_roi_direction_03"
+      ],
+      "column_count": 16,
+      "column_norms": {
+        "candidate_00": 0.9826689333725592,
+        "candidate_01": 0.5297669141831435,
+        "candidate_02": 0.8379295264199706,
+        "candidate_03": 0.0007999628507005493,
+        "candidate_04": 0.0004961636434934835,
+        "candidate_05": 1.3347838631907842,
+        "candidate_06": 0.03459668674417785,
+        "candidate_07": 0.4533590245813361,
+        "candidate_08": 0.000901479787423192,
+        "candidate_09": 0.6497868487369496,
+        "candidate_10": 0.3668767630778814,
+        "candidate_11": 2.372469236541019,
+        "hidden_roi_direction_00": 0.00659200701393525,
+        "hidden_roi_direction_01": 0.0004961636434934835,
+        "hidden_roi_direction_02": 0.02446606790629912,
+        "hidden_roi_direction_03": 0.0004961636434934835
+      },
+      "condition_number_effective": 2965.7242638997336,
+      "effective_rank": 13,
+      "output_dimension": 1310720,
+      "pairwise_column_cosine_max": 1.0,
+      "pairwise_column_cosine_median": 0.0,
+      "pairwise_column_cosine_min": 0.0,
+      "relative_rank_tolerance": 1e-06,
+      "singular_values": [
+        2.372469236541019,
+        1.3347838631907842,
+        0.9826689333725592,
+        0.8379295264199706,
+        0.6497868487369493,
+        0.5297669141831435,
+        0.4533590245813365,
+        0.36687676307788186,
+        0.04238692605893737,
+        0.006499350962678108,
+        0.0009051189775344926,
+        0.0009014797872424629,
+        0.0007999628507005493,
+        1.748359823313821e-08,
+        0.0,
+        0.0
+      ],
+      "truth_basis_pair_cosine": 0.0,
+      "truth_direction_sensitivity_norm": 0.03460024439271919,
+      "truth_direction_sensitivity_over_median_column_norm": 1.000102832059256
+    },
+    "twt": {
+      "basis_names": [
+        "candidate_00",
+        "candidate_01",
+        "candidate_02",
+        "candidate_03",
+        "candidate_04",
+        "candidate_05",
+        "candidate_06",
+        "candidate_07",
+        "candidate_08",
+        "candidate_09",
+        "candidate_10",
+        "candidate_11",
+        "hidden_roi_direction_00",
+        "hidden_roi_direction_01",
+        "hidden_roi_direction_02",
+        "hidden_roi_direction_03"
+      ],
+      "column_count": 16,
+      "column_norms": {
+        "candidate_00": 45.68835889919314,
+        "candidate_01": 34.747273347945004,
+        "candidate_02": 54.815628936768256,
+        "candidate_03": 0.03493252169118817,
+        "candidate_04": 0.025903554474863005,
+        "candidate_05": 82.02714526314162,
+        "candidate_06": 6.070290171700777,
+        "candidate_07": 28.524779324439834,
+        "candidate_08": 0.035655291354275614,
+        "candidate_09": 36.09601037082849,
+        "candidate_10": 23.221830274607672,
+        "candidate_11": 70.33525740122668,
+        "hidden_roi_direction_00": 1.1270798186217537,
+        "hidden_roi_direction_01": 0.025903554474863005,
+        "hidden_roi_direction_02": 4.292382808603547,
+        "hidden_roi_direction_03": 0.025903554474863005
+      },
+      "condition_number_effective": 2348.1598605529016,
+      "effective_rank": 13,
+      "output_dimension": 258048,
+      "pairwise_column_cosine_max": 0.9999999999999999,
+      "pairwise_column_cosine_median": 0.0,
+      "pairwise_column_cosine_min": 0.0,
+      "relative_rank_tolerance": 1e-06,
+      "singular_values": [
+        82.02714526314162,
+        70.33525740122667,
+        54.815628936768256,
+        45.68835889919314,
+        36.09601037082849,
+        34.747273347945004,
+        28.524779324439873,
+        23.221830274607687,
+        7.439531938130604,
+        1.0938112512954639,
+        0.04728987485502942,
+        0.03565529135102465,
+        0.03493252169118817,
+        4.590288055878585e-07,
+        1.3885974308295886e-07,
+        0.0
+      ],
+      "truth_basis_pair_cosine": 0.0,
+      "truth_direction_sensitivity_norm": 6.070345440152602,
+      "truth_direction_sensitivity_over_median_column_norm": 1.0000091047462742
+    }
+  },
+  "shared_state_hashes": {
+    "base_step_08": "417f0e5f355aff39217b053892b727a76b40581455e474f68f32ed8f54f22fcf",
+    "base_step_12": "520d70b780d8adf661fb705595cac2028fd29c61ba0e133a837b62722bc8a2cd",
+    "base_step_16": "e5deca13110e26d5f93dacedca64ccff17a774136200341d947eb724293bd645",
+    "base_step_20": "7ecfed5e71a0568ada0f555d4babf30306dffe01421ce1f7f358ca38197c608c",
+    "base_step_24": "e7c358a39b862361a3561ddb9a7ce095509d04825ae44106b641474f8049216a",
+    "base_step_28": "0b893104c0b7237feaf5cf4c81a0495cefd50e6f85c4c684e13eb90986d6e92e",
+    "base_step_32": "fa9c7371661f2375c77b3bd4719ebb5e8a31c2f2c2d77121ec57a42899f08d77",
+    "common_base_endpoint": "fa9c7371661f2375c77b3bd4719ebb5e8a31c2f2c2d77121ec57a42899f08d77"
+  },
+  "source_hashes": {
+    "audit": "8cb7c5a2eb1691b6aedb1c4a969d51b749ef86a5f2226aba38c7df169c8a4205",
+    "controller": "2aa6119fa8517176eb0d1b8f6892ebdd14cc3051a43dd8e030099150f69bec9f",
+    "frozen_flow": "78bedd4138d1a492a625665fe9b5d9e867e197033c107f776525c7da3374f1cb",
+    "runner": "c04135c7964dfd019797370472e0ea0b902f10fdfdf9a384a19b35038d8e3051",
+    "seismic": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee"
+  },
+  "stage": "stage7_d7_observation_specificity",
+  "status": "completed",
+  "training_performed": false,
+  "truth_metrics_selection_blind": true,
+  "verdict": {
+    "aggregate_diagnostics": {
+      "mean_correct_control_applied_velocity_cosine": 0.9450688689529487,
+      "mean_correct_control_raw_gradient_cosine": 0.9450688689472666,
+      "mean_correct_control_seismic_residual_cosine": 0.920839139176804,
+      "mean_one_step_hard_target_overlap": 0.9790297195312783,
+      "reflectivity_effective_rank_fraction": 0.8125,
+      "seismic_effective_rank_fraction": 0.8125
+    },
+    "mechanism_ranking": [
+      {
+        "mechanism": "S1_residual_similarity",
+        "rank": 1,
+        "support_score": 0.920839139176804
+      },
+      {
+        "mechanism": "S4_categorical_hard_transition_collapse",
+        "rank": 2,
+        "support_score": 0.03396085057832954
+      },
+      {
+        "mechanism": "S2_jacobian_vjp_projection_collapse",
+        "rank": 3,
+        "support_score": 0.02422972977046256
+      },
+      {
+        "mechanism": "S3_controller_normalization_cap_collapse",
+        "rank": 4,
+        "support_score": 5.682121440031551e-12
+      }
+    ],
+    "optional_s3_controller_control_authorized": false
+  },
+  "version": "stage7_observation_specificity_v1"
+}

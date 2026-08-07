@@ -1,0 +1,33 @@
+{
+  "aggregate_diagnostics": {
+    "mean_correct_control_applied_velocity_cosine": 0.9450688689529487,
+    "mean_correct_control_raw_gradient_cosine": 0.9450688689472666,
+    "mean_correct_control_seismic_residual_cosine": 0.920839139176804,
+    "mean_one_step_hard_target_overlap": 0.9790297195312783,
+    "reflectivity_effective_rank_fraction": 0.8125,
+    "seismic_effective_rank_fraction": 0.8125
+  },
+  "mechanism_ranking": [
+    {
+      "mechanism": "S1_residual_similarity",
+      "rank": 1,
+      "support_score": 0.920839139176804
+    },
+    {
+      "mechanism": "S4_categorical_hard_transition_collapse",
+      "rank": 2,
+      "support_score": 0.03396085057832954
+    },
+    {
+      "mechanism": "S2_jacobian_vjp_projection_collapse",
+      "rank": 3,
+      "support_score": 0.02422972977046256
+    },
+    {
+      "mechanism": "S3_controller_normalization_cap_collapse",
+      "rank": 4,
+      "support_score": 5.682121440031551e-12
+    }
+  ],
+  "optional_s3_controller_control_authorized": false
+}

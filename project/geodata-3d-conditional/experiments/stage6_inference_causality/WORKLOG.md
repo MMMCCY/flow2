@@ -67,3 +67,33 @@
 - 机器裁决：`diagnostic_verdict.json`；人工综合：`DIAGNOSTIC_SYNTHESIS.md`。
 - 项目完整测试命令：`PYTHONDONTWRITEBYTECODE=1 .venv/bin/pytest -q project/geodata-3d-conditional/tests`；结果 `181 passed, 13 warnings in 14.75s`。
 - warnings 均为既有 matplotlib/pyparsing deprecation。正式训练、U-Net 微调、新推理算法与广泛超参扫描均未执行。按 D6 stop condition 停止。
+
+## 2026-08-07：D7 observation specificity
+
+- 开始时仓库为 clean `main @ 85d5deb4555430117887a8ba173a0222c6b899ae`。
+  D1–D4 历史 runner hash 来自当时 untracked 文件，因此只对 D1–D4 建立新
+  provenance rerun；D5 全部 hash 已匹配，无需重跑。当前源码、配置、checkpoint
+  均匹配，观测 hash 存在，`provenance_verified=true`。
+- 权威 D7：`runs/five_body_cuboid_v1/d7_observation_specificity_v1`。在 BASE
+  step 8/12/16/20/24/28/32 与共同 endpoint 上使用完全相同 state。correct 对
+  controls 的 mean seismic residual/raw-gradient/applied-velocity cosine 为
+  `0.92084/0.94507/0.94507`；controller 几乎不改变方向，故不授权 S3 可选控制。
+- 机制排序：S1 residual similarity > S4 hard transition > S2 VJP > S3 controller。
+  16列局部 JVP basis 从 probability 到 seismic 均为 effective rank 13/16，
+  condition number 约 `1.16e3–4.43e3`，没有额外 L3 rank cliff，但已明显病态。
+
+## 2026-08-07：Stage 7B structured hard geophysics
+
+- 实现 mixed discrete/continuous object parameterization、hard-condition materialization、
+  population beam 与 add/remove/translate/resize/rotate/change-shape/change-lithology
+  trust region。接受与最终选择只读取 hard observed seismic RMSE；truth 指标均事后计算。
+- 四控制为 correct/zero/shuffled/wrong-case，所有结果统一对 correct observation
+  交叉评价。解析 cuboid correct arm 在不知道 truth indices 的情况下唯一选择
+  candidate 4/6，hard attainment、hidden IoU/recall 均为1.0。
+- 权威 native 结果：`reports/stage7_v1_final_v2`。seeds
+  20260807/20260808/20260809 的 correct arm 在统一 correct 场下均严格rank 1；
+  attainment `45.00/23.85/59.23%`，hidden IoU `0.969/0.914/0.987`，recall
+  `0.996/0.916/0.993`，条件违例和错误岩性体积均为0。
+- `stage7_v1`、`fix1`–`fix5` 与 partial `stage7_v1_final` 保留为开发证据，不是
+  权威结论。最终完整测试 `186 passed, 13 warnings`；训练、fine-tune、LoRA 与
+  broad controller sweep 均未运行。完成后按用户要求 STOP。

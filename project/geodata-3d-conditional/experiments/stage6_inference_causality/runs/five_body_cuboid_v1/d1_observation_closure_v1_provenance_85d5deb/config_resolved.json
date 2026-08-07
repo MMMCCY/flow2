@@ -1,0 +1,17 @@
+{
+  "base_config": "project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/five_body_cuboid_v1.json",
+  "base_config_sha256": "43fe3d8fa0fc55ef94979da93a2a6aded920e035507f2340c55cb2c383f7269c",
+  "checkpoint": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "checkpoint_embedding_key": "embedding.weight",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "checkpoint_used_for_flow": false,
+  "device": "cuda",
+  "dtype": "torch.float64",
+  "flow_unet_loaded": false,
+  "formal_training_authorized": false,
+  "id": "five_body_observation_closure_v1",
+  "noiseless_inverse_crime": true,
+  "schema": "phase6q_observation_closure_config_v1",
+  "seed": 6042,
+  "soft_reference_temperature": 0.2
+}

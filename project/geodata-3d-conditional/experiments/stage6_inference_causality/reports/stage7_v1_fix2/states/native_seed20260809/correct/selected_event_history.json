@@ -1,0 +1,41 @@
+{
+  "condition_violations": 0,
+  "event_type": "StructuredGeo hard proposal sequence",
+  "events": [
+    {
+      "center_x": 42.0,
+      "center_y": 42.0,
+      "center_z": 39.0,
+      "material_label": 9,
+      "object_id": "native_center01_variant02",
+      "orientation_deg": 75.0,
+      "presence": true,
+      "shape": "dike_hemisphere",
+      "size_x": 11.450000000000001,
+      "size_y": 11.5,
+      "size_z": 9.5,
+      "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+    },
+    {
+      "center_x": 12.0,
+      "center_y": 42.0,
+      "center_z": 21.0,
+      "material_label": 9,
+      "object_id": "native_center00_variant02",
+      "orientation_deg": 90.0,
+      "presence": true,
+      "shape": "dike_hemisphere",
+      "size_x": 11.450000000000001,
+      "size_y": 10.5,
+      "size_z": 9.5,
+      "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+    }
+  ],
+  "hard_seismic_rmse": 0.006276791449636221,
+  "history": [
+    "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True): center=(42.0,42.0,39.0), size=(11.450000000000001,11.5,9.5), rotation=75.0, material=9",
+    "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True): center=(12.0,42.0,21.0), size=(11.450000000000001,10.5,9.5), rotation=90.0, material=9"
+  ],
+  "proposal_move": "rotate_-15",
+  "proposal_parent": "g07_g06_g05_g04_g03_g02_g01_empty_baseline_add_native_center01_variant02_add_native_center00_variant02_0024_0024_0008_0008_0010"
+}

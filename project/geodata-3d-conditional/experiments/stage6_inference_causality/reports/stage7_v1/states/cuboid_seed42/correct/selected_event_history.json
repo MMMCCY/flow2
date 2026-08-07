@@ -1,0 +1,41 @@
+{
+  "condition_violations": 0,
+  "event_type": "StructuredGeo hard proposal sequence",
+  "events": [
+    {
+      "center_x": 41.5,
+      "center_y": 41.5,
+      "center_z": 38.5,
+      "material_label": 9,
+      "object_id": "candidate_06",
+      "orientation_deg": 0.0,
+      "presence": true,
+      "shape": "cuboid",
+      "size_x": 8.0,
+      "size_y": 8.0,
+      "size_z": 10.0,
+      "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+    },
+    {
+      "center_x": 9.5,
+      "center_y": 41.5,
+      "center_z": 20.5,
+      "material_label": 9,
+      "object_id": "candidate_04",
+      "orientation_deg": 0.0,
+      "presence": true,
+      "shape": "cuboid",
+      "size_x": 8.0,
+      "size_y": 8.0,
+      "size_z": 10.0,
+      "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+    }
+  ],
+  "hard_seismic_rmse": 0.0,
+  "history": [
+    "benchmark_domain_cuboid; truth indices unavailable to search: center=(41.5,41.5,38.5), size=(8.0,8.0,10.0), rotation=0.0, material=9",
+    "benchmark_domain_cuboid; truth indices unavailable to search: center=(9.5,41.5,20.5), size=(8.0,8.0,10.0), rotation=0.0, material=9"
+  ],
+  "proposal_move": "add_object",
+  "proposal_parent": "g01_empty_baseline_add_candidate_06"
+}

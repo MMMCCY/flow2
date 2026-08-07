@@ -1,0 +1,469 @@
+{
+  "acoustic_metadata": {
+    "density_table_sha256": "346f91e28a53677a534fdc295eb14cf62ce469f553f28f477ba816f297f2ce99",
+    "density_unit": "kg m^-3",
+    "description": "Synthetic complete absolute density and P-wave velocity codebook for the first Phase-4c inverse-crime upper bound. Label 9 has deliberately distinctive impedance; values are not site-calibrated petrophysics.",
+    "id": "acoustic_distinct_label9_upper_bound_v1",
+    "impedance_table_sha256": "bd0f62b3d692d8b10105b56266504e6360511191a48eb0ac11acd3b9705c9f8a",
+    "impedance_unit": "kg m^-2 s^-1",
+    "num_categories": 15,
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "scenario": "synthetic_distinct_label9_acoustic_upper_bound",
+    "schema": "phase4_acoustic_codebook_v1",
+    "site_calibrated_petrophysics": false,
+    "slowness_table_sha256": "36342444bc8042852fdb55682247fa42046cfa5ad30963d444406cac7022f37b",
+    "slowness_unit": "s m^-1",
+    "truth_derived": true,
+    "velocity_table_sha256": "f4835d84b5451bb6ec088d543e7a74b9e5e27e289432fa7b545040eaef9171fc",
+    "velocity_unit": "m s^-1"
+  },
+  "acoustic_table_sha256": "a70af1965ecd283a303f2ff11350ee55e355d85d2c0e9fbe4c34a9012b34970e",
+  "all_controls_share_initial_state": true,
+  "checkpoint_path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "checkpoint_used_for_flow": false,
+  "codebook_distances": [
+    {
+      "acoustic_l2_distance_to_target": 19499584.0,
+      "density_absolute_distance_to_target": 650.0,
+      "raw_label": -1
+    },
+    {
+      "acoustic_l2_distance_to_target": 14000000.0,
+      "density_absolute_distance_to_target": 1000.0,
+      "raw_label": 0
+    },
+    {
+      "acoustic_l2_distance_to_target": 12450000.0,
+      "density_absolute_distance_to_target": 900.0,
+      "raw_label": 1
+    },
+    {
+      "acoustic_l2_distance_to_target": 10925000.0,
+      "density_absolute_distance_to_target": 800.0,
+      "raw_label": 2
+    },
+    {
+      "acoustic_l2_distance_to_target": 10000000.0,
+      "density_absolute_distance_to_target": 700.0,
+      "raw_label": 3
+    },
+    {
+      "acoustic_l2_distance_to_target": 8320000.0,
+      "density_absolute_distance_to_target": 600.0,
+      "raw_label": 4
+    },
+    {
+      "acoustic_l2_distance_to_target": 6000000.0,
+      "density_absolute_distance_to_target": 500.0,
+      "raw_label": 5
+    },
+    {
+      "acoustic_l2_distance_to_target": 4100000.0,
+      "density_absolute_distance_to_target": 400.0,
+      "raw_label": 6
+    },
+    {
+      "acoustic_l2_distance_to_target": 13200000.0,
+      "density_absolute_distance_to_target": 300.0,
+      "raw_label": 7
+    },
+    {
+      "acoustic_l2_distance_to_target": 11580000.0,
+      "density_absolute_distance_to_target": 200.0,
+      "raw_label": 8
+    },
+    {
+      "acoustic_l2_distance_to_target": 0.0,
+      "density_absolute_distance_to_target": 0.0,
+      "raw_label": 9
+    },
+    {
+      "acoustic_l2_distance_to_target": 2970000.0,
+      "density_absolute_distance_to_target": 100.0,
+      "raw_label": 10
+    },
+    {
+      "acoustic_l2_distance_to_target": 9045000.0,
+      "density_absolute_distance_to_target": 350.0,
+      "raw_label": 11
+    },
+    {
+      "acoustic_l2_distance_to_target": 7045000.0,
+      "density_absolute_distance_to_target": 550.0,
+      "raw_label": 12
+    },
+    {
+      "acoustic_l2_distance_to_target": 13290000.0,
+      "density_absolute_distance_to_target": 750.0,
+      "raw_label": 13
+    }
+  ],
+  "completed_at_utc": "2026-08-07T12:29:52.794150+00:00",
+  "density_metadata": {
+    "density_table_sha256": "fbb6059adf615c456880b5adc95486a6c1eac0db7326e4dfc4c4a9d9c817f526",
+    "description": "Synthetic, non-site-calibrated density contrasts for the first Phase-4a inverse-crime upper bound. Label 9 has deliberately strong density observability; values are not field petrophysics.",
+    "id": "density_distinct_label9_upper_bound_v1",
+    "num_categories": 15,
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "scenario": "synthetic_distinct_label9_density_upper_bound",
+    "schema": "phase4_density_contrast_v1",
+    "site_calibrated_petrophysics": false,
+    "truth_derived": true,
+    "unit": "kg m^-3"
+  },
+  "device": "cuda",
+  "dtype": "torch.float32",
+  "ema_raw_policy": "raw frozen checkpoint embedding only; U-Net not loaded",
+  "exact_command": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/bin/python project/geodata-3d-conditional/scripts/stage6/run_soft_hard_transfer_audit.py --config project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/soft_hard_transfer_v1.json --output-dir project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d3_soft_hard_transfer_v1_provenance_85d5deb_clean --device cuda",
+  "flow_unet_loaded": false,
+  "git_branch": "main",
+  "git_sha": "85d5deb4555430117887a8ba173a0222c6b899ae",
+  "git_status": "dirty",
+  "git_status_short": [
+    "?? project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d3_soft_hard_transfer_v1_provenance_85d5deb_clean/"
+  ],
+  "gravity_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4a full-support regular-grid noiseless synthetic inverse-crime observation. Coordinates are synthetic and use SI units.",
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_grid_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4204,
+      "std_mgal": 0.0,
+      "type": "none"
+    },
+    "observation_height_above_top_m": 50.0,
+    "origin_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "schema": "phase4_gravity_observation_v1",
+    "station_grid": "cell_center_aligned_full",
+    "survey_mask": "all",
+    "truth_derived": true,
+    "uncertainty_mgal": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward"
+  },
+  "observation_hashes": {
+    "blurred_property": "b927889e0ac6d44885e1e696d6570b98d05195187b48b07dd449172bc1803260",
+    "expected_property": "ed44752b79ff206ce81222c850e16782735d68973bbac122db6522a38c7f3a18",
+    "gravity": "6a690e9e8aa75369a430ed7279327638d5de024df90042f84f86088c17a9895b",
+    "probability": "b615a9d5153a16e2b44d2014e24e40df25f7789481f374aa3addc2331bc3966a",
+    "reflectivity_spikes": "7aeba150469d1a331a95fbd417579b63e7b08059f49970f8667522a49c836781",
+    "seismic": "c734b86d121dff902220692ddfab20580b786c0282734db41a735f78c6c676f0"
+  },
+  "observation_sha256": "c734b86d121dff902220692ddfab20580b786c0282734db41a735f78c6c676f0",
+  "pairing_initial_state_hashes": {
+    "blurred_property/correct": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+    "expected_property/correct": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+    "gravity/correct": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+    "gravity/shuffled_xy": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+    "gravity/zero": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+    "probability/correct": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+    "reflectivity_spikes/correct": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+    "reflectivity_spikes/shuffled_xy": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+    "reflectivity_spikes/zero": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+    "seismic/correct": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+    "seismic/shuffled_xy": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+    "seismic/zero": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a"
+  },
+  "property_table_sha256": "fbb6059adf615c456880b5adc95486a6c1eac0db7326e4dfc4c4a9d9c817f526",
+  "runs": [
+    {
+      "best_hard_loss": 0.0,
+      "best_hard_step": 27,
+      "control": "correct",
+      "final_hard_attainment": 1.0,
+      "final_hard_closer_to": "truth",
+      "final_projection_erasure_fraction": NaN,
+      "final_soft_attainment": 1.0,
+      "final_soft_closer_to": "truth",
+      "initial_state_sha256": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+      "level": "probability",
+      "maximum_hard_attainment": 1.0,
+      "maximum_soft_attainment": 1.0,
+      "step_of_best_hard_attainment": 27,
+      "step_of_best_soft_attainment": 161,
+      "trace_path": "traces/probability/correct.csv"
+    },
+    {
+      "best_hard_loss": 0.0,
+      "best_hard_step": 26,
+      "control": "correct",
+      "final_hard_attainment": 1.0,
+      "final_hard_closer_to": "truth",
+      "final_projection_erasure_fraction": NaN,
+      "final_soft_attainment": 1.0,
+      "final_soft_closer_to": "truth",
+      "initial_state_sha256": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+      "level": "expected_property",
+      "maximum_hard_attainment": 1.0,
+      "maximum_soft_attainment": 1.0,
+      "step_of_best_hard_attainment": 26,
+      "step_of_best_soft_attainment": 161,
+      "trace_path": "traces/expected_property/correct.csv"
+    },
+    {
+      "best_hard_loss": 0.0,
+      "best_hard_step": 166,
+      "control": "correct",
+      "final_hard_attainment": 1.0,
+      "final_hard_closer_to": "truth",
+      "final_projection_erasure_fraction": NaN,
+      "final_soft_attainment": 0.9999953835387961,
+      "final_soft_closer_to": "truth",
+      "initial_state_sha256": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+      "level": "blurred_property",
+      "maximum_hard_attainment": 1.0,
+      "maximum_soft_attainment": 0.9999976939545021,
+      "step_of_best_hard_attainment": 166,
+      "step_of_best_soft_attainment": 182,
+      "trace_path": "traces/blurred_property/correct.csv"
+    },
+    {
+      "best_hard_loss": 5.0377188017591834e-05,
+      "best_hard_step": 0,
+      "control": "correct",
+      "final_hard_attainment": 0.0,
+      "final_hard_closer_to": "baseline",
+      "final_projection_erasure_fraction": NaN,
+      "final_soft_attainment": 1.018228749927063e-05,
+      "final_soft_closer_to": "baseline",
+      "initial_state_sha256": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+      "level": "reflectivity_spikes",
+      "maximum_hard_attainment": 0.0,
+      "maximum_soft_attainment": 0.10799964844914767,
+      "step_of_best_hard_attainment": 1,
+      "step_of_best_soft_attainment": 40,
+      "trace_path": "traces/reflectivity_spikes/correct.csv"
+    },
+    {
+      "best_hard_loss": 7.556597847724333e-05,
+      "best_hard_step": 0,
+      "control": "zero",
+      "final_hard_attainment": NaN,
+      "final_hard_closer_to": "baseline",
+      "final_projection_erasure_fraction": NaN,
+      "final_soft_attainment": NaN,
+      "final_soft_closer_to": "baseline",
+      "initial_state_sha256": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+      "level": "reflectivity_spikes",
+      "maximum_hard_attainment": NaN,
+      "maximum_soft_attainment": 0.2908526193577716,
+      "step_of_best_hard_attainment": 1,
+      "step_of_best_soft_attainment": 40,
+      "trace_path": "traces/reflectivity_spikes/zero.csv"
+    },
+    {
+      "best_hard_loss": 0.00019836057617794722,
+      "best_hard_step": 0,
+      "control": "shuffled_xy",
+      "final_hard_attainment": NaN,
+      "final_hard_closer_to": "baseline",
+      "final_projection_erasure_fraction": NaN,
+      "final_soft_attainment": NaN,
+      "final_soft_closer_to": "baseline",
+      "initial_state_sha256": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+      "level": "reflectivity_spikes",
+      "maximum_hard_attainment": NaN,
+      "maximum_soft_attainment": 0.6496244013546346,
+      "step_of_best_hard_attainment": 1,
+      "step_of_best_soft_attainment": 40,
+      "trace_path": "traces/reflectivity_spikes/shuffled_xy.csv"
+    },
+    {
+      "best_hard_loss": 7.702850416535512e-05,
+      "best_hard_step": 126,
+      "control": "correct",
+      "final_hard_attainment": -0.007974373489145252,
+      "final_hard_closer_to": "baseline",
+      "final_projection_erasure_fraction": 0.0,
+      "final_soft_attainment": 0.19093868190850125,
+      "final_soft_closer_to": "baseline",
+      "initial_state_sha256": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+      "level": "seismic",
+      "maximum_hard_attainment": 0.024435381606903943,
+      "maximum_soft_attainment": 0.19093868190850125,
+      "step_of_best_hard_attainment": 126,
+      "step_of_best_soft_attainment": 200,
+      "trace_path": "traces/seismic/correct.csv"
+    },
+    {
+      "best_hard_loss": 0.00011843701213365421,
+      "best_hard_step": 0,
+      "control": "zero",
+      "final_hard_attainment": NaN,
+      "final_hard_closer_to": "baseline",
+      "final_projection_erasure_fraction": NaN,
+      "final_soft_attainment": NaN,
+      "final_soft_closer_to": "baseline",
+      "initial_state_sha256": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+      "level": "seismic",
+      "maximum_hard_attainment": NaN,
+      "maximum_soft_attainment": 0.3140155075272841,
+      "step_of_best_hard_attainment": 1,
+      "step_of_best_soft_attainment": 40,
+      "trace_path": "traces/seismic/zero.csv"
+    },
+    {
+      "best_hard_loss": 0.00029928237199783325,
+      "best_hard_step": 163,
+      "control": "shuffled_xy",
+      "final_hard_attainment": NaN,
+      "final_hard_closer_to": "baseline",
+      "final_projection_erasure_fraction": 0.0,
+      "final_soft_attainment": NaN,
+      "final_soft_closer_to": "baseline",
+      "initial_state_sha256": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+      "level": "seismic",
+      "maximum_hard_attainment": NaN,
+      "maximum_soft_attainment": 0.8764721554155601,
+      "step_of_best_hard_attainment": 1,
+      "step_of_best_soft_attainment": 40,
+      "trace_path": "traces/seismic/shuffled_xy.csv"
+    },
+    {
+      "best_hard_loss": 0.16493500769138336,
+      "best_hard_step": 0,
+      "control": "correct",
+      "final_hard_attainment": 0.0,
+      "final_hard_closer_to": "baseline",
+      "final_projection_erasure_fraction": NaN,
+      "final_soft_attainment": 0.0,
+      "final_soft_closer_to": "baseline",
+      "initial_state_sha256": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+      "level": "gravity",
+      "maximum_hard_attainment": 0.0,
+      "maximum_soft_attainment": 0.0695867859667078,
+      "step_of_best_hard_attainment": 1,
+      "step_of_best_soft_attainment": 40,
+      "trace_path": "traces/gravity/correct.csv"
+    },
+    {
+      "best_hard_loss": 4.549310207366943,
+      "best_hard_step": 200,
+      "control": "zero",
+      "final_hard_attainment": 25.537084904820485,
+      "final_hard_closer_to": "truth",
+      "final_projection_erasure_fraction": 0.0,
+      "final_soft_attainment": 25.52007832947751,
+      "final_soft_closer_to": "truth",
+      "initial_state_sha256": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+      "level": "gravity",
+      "maximum_hard_attainment": 25.537084904820485,
+      "maximum_soft_attainment": 25.9918301142997,
+      "step_of_best_hard_attainment": 200,
+      "step_of_best_soft_attainment": 160,
+      "trace_path": "traces/gravity/zero.csv"
+    },
+    {
+      "best_hard_loss": 17.812345504760742,
+      "best_hard_step": 200,
+      "control": "shuffled_xy",
+      "final_hard_attainment": 5.047472198460222,
+      "final_hard_closer_to": "truth",
+      "final_projection_erasure_fraction": 0.0,
+      "final_soft_attainment": 5.047670373538637,
+      "final_soft_closer_to": "truth",
+      "initial_state_sha256": "793bcb4b5b36a42ba46922ca13dcf2b4f52fabb67cd42ffef98a29427628978a",
+      "level": "gravity",
+      "maximum_hard_attainment": 5.047472198460222,
+      "maximum_soft_attainment": 5.051386006287039,
+      "step_of_best_hard_attainment": 200,
+      "step_of_best_soft_attainment": 160,
+      "trace_path": "traces/gravity/shuffled_xy.csv"
+    }
+  ],
+  "runtime": {
+    "gpu_name": "NVIDIA GeForce RTX 4090 D",
+    "hostname": "LabRS",
+    "torch": "2.8.0+cu128"
+  },
+  "search_report": {
+    "condition_overlap_voxels": 0,
+    "fixed_target_overlap_voxels": 0,
+    "hidden_truth_inside_search_voxels": 1280,
+    "hidden_truth_voxels": 1280,
+    "search_fraction_of_unconditioned_subsurface": 0.7192767858505249,
+    "search_voxels": 161920
+  },
+  "seed": 65031,
+  "seismic_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "source_hashes": {
+    "audit": "326ada40a4cde4a688d6720217a2a2eb20a4398a561ee17163ad268d6bd6a119",
+    "gravity": "600f944a586176c6b796f806619c39286687fd88322adc0b7effc85524b1d921",
+    "runner": "8d84c5b2caeef722bbb319fa676a3dca3e0ad3c3ac2e2de85a6114d66cda1c09",
+    "seismic": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee"
+  },
+  "stage": "phase6q_d3_soft_hard_transfer",
+  "status": "completed",
+  "version": "phase6q_soft_hard_transfer_v1",
+  "wavelet_sha256": "92fed10fd03eed89aba8c731834db63b306b39ead1cb535be22533dc4fc1c833"
+}

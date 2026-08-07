@@ -1,0 +1,752 @@
+{
+  "trace": [
+    {
+      "accepted_vs_parent": true,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 0,
+      "hard_seismic_rmse": 0.017632273957133293,
+      "model_id": "empty_baseline",
+      "modified_voxels": 0,
+      "object_count": 0,
+      "objects": [],
+      "parent_id": null,
+      "proposal_move": "initial",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.018718339502811432,
+      "model_id": "g01_empty_baseline_add_candidate_00",
+      "modified_voxels": 640,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 9.5,
+          "center_y": 25.5,
+          "center_z": 16.5,
+          "material_label": 9,
+          "object_id": "candidate_00",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.018718335777521133,
+      "model_id": "g01_empty_baseline_add_candidate_01",
+      "modified_voxels": 640,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 25.5,
+          "center_y": 25.5,
+          "center_z": 36.5,
+          "material_label": 9,
+          "object_id": "candidate_01",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.018718332052230835,
+      "model_id": "g01_empty_baseline_add_candidate_02",
+      "modified_voxels": 640,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 41.5,
+          "center_y": 25.5,
+          "center_z": 22.5,
+          "material_label": 9,
+          "object_id": "candidate_02",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.018718335777521133,
+      "model_id": "g01_empty_baseline_add_candidate_03",
+      "modified_voxels": 640,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 53.5,
+          "center_y": 25.5,
+          "center_z": 38.5,
+          "material_label": 9,
+          "object_id": "candidate_03",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.018718332052230835,
+      "model_id": "g01_empty_baseline_add_candidate_04",
+      "modified_voxels": 640,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 9.5,
+          "center_y": 41.5,
+          "center_z": 20.5,
+          "material_label": 9,
+          "object_id": "candidate_04",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.018733464181423187,
+      "model_id": "g01_empty_baseline_add_candidate_05",
+      "modified_voxels": 640,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 25.5,
+          "center_y": 41.5,
+          "center_z": 34.5,
+          "material_label": 9,
+          "object_id": "candidate_05",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.018652308732271194,
+      "model_id": "g01_empty_baseline_add_candidate_06",
+      "modified_voxels": 640,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 41.5,
+          "center_y": 41.5,
+          "center_z": 38.5,
+          "material_label": 9,
+          "object_id": "candidate_06",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.018718339502811432,
+      "model_id": "g01_empty_baseline_add_candidate_07",
+      "modified_voxels": 640,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 53.5,
+          "center_y": 41.5,
+          "center_z": 16.5,
+          "material_label": 9,
+          "object_id": "candidate_07",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.018718335777521133,
+      "model_id": "g01_empty_baseline_add_candidate_08",
+      "modified_voxels": 640,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 9.5,
+          "center_y": 53.5,
+          "center_z": 38.5,
+          "material_label": 9,
+          "object_id": "candidate_08",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.018718332052230835,
+      "model_id": "g01_empty_baseline_add_candidate_09",
+      "modified_voxels": 640,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 25.5,
+          "center_y": 53.5,
+          "center_z": 22.5,
+          "material_label": 9,
+          "object_id": "candidate_09",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.018718332052230835,
+      "model_id": "g01_empty_baseline_add_candidate_10",
+      "modified_voxels": 640,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 41.5,
+          "center_y": 53.5,
+          "center_z": 32.5,
+          "material_label": 9,
+          "object_id": "candidate_10",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": false,
+      "condition_violations": 0,
+      "generation": 1,
+      "hard_seismic_rmse": 0.018718332052230835,
+      "model_id": "g01_empty_baseline_add_candidate_11",
+      "modified_voxels": 640,
+      "object_count": 1,
+      "objects": [
+        {
+          "center_x": 53.5,
+          "center_y": 53.5,
+          "center_z": 24.5,
+          "material_label": 9,
+          "object_id": "candidate_11",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.018718339502811432,
+      "model_id": "g02_empty_baseline_add_candidate_00",
+      "modified_voxels": 640,
+      "objects": [
+        {
+          "center_x": 9.5,
+          "center_y": 25.5,
+          "center_z": 16.5,
+          "material_label": 9,
+          "object_id": "candidate_00",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.018718335777521133,
+      "model_id": "g02_empty_baseline_add_candidate_01",
+      "modified_voxels": 640,
+      "objects": [
+        {
+          "center_x": 25.5,
+          "center_y": 25.5,
+          "center_z": 36.5,
+          "material_label": 9,
+          "object_id": "candidate_01",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.018718332052230835,
+      "model_id": "g02_empty_baseline_add_candidate_02",
+      "modified_voxels": 640,
+      "objects": [
+        {
+          "center_x": 41.5,
+          "center_y": 25.5,
+          "center_z": 22.5,
+          "material_label": 9,
+          "object_id": "candidate_02",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.018718335777521133,
+      "model_id": "g02_empty_baseline_add_candidate_03",
+      "modified_voxels": 640,
+      "objects": [
+        {
+          "center_x": 53.5,
+          "center_y": 25.5,
+          "center_z": 38.5,
+          "material_label": 9,
+          "object_id": "candidate_03",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.018718332052230835,
+      "model_id": "g02_empty_baseline_add_candidate_04",
+      "modified_voxels": 640,
+      "objects": [
+        {
+          "center_x": 9.5,
+          "center_y": 41.5,
+          "center_z": 20.5,
+          "material_label": 9,
+          "object_id": "candidate_04",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.018733464181423187,
+      "model_id": "g02_empty_baseline_add_candidate_05",
+      "modified_voxels": 640,
+      "objects": [
+        {
+          "center_x": 25.5,
+          "center_y": 41.5,
+          "center_z": 34.5,
+          "material_label": 9,
+          "object_id": "candidate_05",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.018652308732271194,
+      "model_id": "g02_empty_baseline_add_candidate_06",
+      "modified_voxels": 640,
+      "objects": [
+        {
+          "center_x": 41.5,
+          "center_y": 41.5,
+          "center_z": 38.5,
+          "material_label": 9,
+          "object_id": "candidate_06",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.018718339502811432,
+      "model_id": "g02_empty_baseline_add_candidate_07",
+      "modified_voxels": 640,
+      "objects": [
+        {
+          "center_x": 53.5,
+          "center_y": 41.5,
+          "center_z": 16.5,
+          "material_label": 9,
+          "object_id": "candidate_07",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.018718335777521133,
+      "model_id": "g02_empty_baseline_add_candidate_08",
+      "modified_voxels": 640,
+      "objects": [
+        {
+          "center_x": 9.5,
+          "center_y": 53.5,
+          "center_z": 38.5,
+          "material_label": 9,
+          "object_id": "candidate_08",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.018718332052230835,
+      "model_id": "g02_empty_baseline_add_candidate_09",
+      "modified_voxels": 640,
+      "objects": [
+        {
+          "center_x": 25.5,
+          "center_y": 53.5,
+          "center_z": 22.5,
+          "material_label": 9,
+          "object_id": "candidate_09",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.018718332052230835,
+      "model_id": "g02_empty_baseline_add_candidate_10",
+      "modified_voxels": 640,
+      "objects": [
+        {
+          "center_x": 41.5,
+          "center_y": 53.5,
+          "center_z": 32.5,
+          "material_label": 9,
+          "object_id": "candidate_10",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    },
+    {
+      "accepted_vs_parent": false,
+      "cached": true,
+      "condition_violations": 0,
+      "generation": 2,
+      "hard_seismic_rmse": 0.018718332052230835,
+      "model_id": "g02_empty_baseline_add_candidate_11",
+      "modified_voxels": 640,
+      "objects": [
+        {
+          "center_x": 53.5,
+          "center_y": 53.5,
+          "center_z": 24.5,
+          "material_label": 9,
+          "object_id": "candidate_11",
+          "orientation_deg": 0.0,
+          "presence": true,
+          "shape": "cuboid",
+          "size_x": 8.0,
+          "size_y": 8.0,
+          "size_z": 10.0,
+          "source_family": "benchmark_domain_cuboid; truth indices unavailable to search"
+        }
+      ],
+      "parent_id": "empty_baseline",
+      "proposal_move": "add_object",
+      "reasons": [],
+      "selected_by": "hard_observed_physics_only",
+      "valid": true
+    }
+  ]
+}

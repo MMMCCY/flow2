@@ -1,0 +1,19 @@
+{
+  "schema": "stage7_observation_specificity_config_v1",
+  "id": "five_body_observation_specificity_v1",
+  "base_config": "project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/five_body_cuboid_v1.json",
+  "trajectory_config": "project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/frozen_flow_trajectory_v1.json",
+  "d4_run": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1",
+  "checkpoint": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "seed": 42,
+  "n_steps": 32,
+  "shared_state_steps": [8, 12, 16, 20, 24, 28, 32],
+  "controls": ["correct", "zero", "shuffled_xy"],
+  "state_modes": ["BASE_PLUS_PHYSICS", "ENDPOINT_REFERENCE"],
+  "state_kinds": ["best_hard_state", "final_state"],
+  "sensitivity_state_step": 32,
+  "hidden_roi_direction_count": 4,
+  "sensitivity_relative_rank_tolerance": 1e-6,
+  "formal_training_authorized": false
+}

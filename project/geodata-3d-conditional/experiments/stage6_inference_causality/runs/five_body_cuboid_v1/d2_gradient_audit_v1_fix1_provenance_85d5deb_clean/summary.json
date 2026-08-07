@@ -1,0 +1,380 @@
+{
+  "acoustic_metadata": {
+    "density_table_sha256": "346f91e28a53677a534fdc295eb14cf62ce469f553f28f477ba816f297f2ce99",
+    "density_unit": "kg m^-3",
+    "description": "Synthetic complete absolute density and P-wave velocity codebook for the first Phase-4c inverse-crime upper bound. Label 9 has deliberately distinctive impedance; values are not site-calibrated petrophysics.",
+    "id": "acoustic_distinct_label9_upper_bound_v1",
+    "impedance_table_sha256": "bd0f62b3d692d8b10105b56266504e6360511191a48eb0ac11acd3b9705c9f8a",
+    "impedance_unit": "kg m^-2 s^-1",
+    "num_categories": 15,
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "scenario": "synthetic_distinct_label9_acoustic_upper_bound",
+    "schema": "phase4_acoustic_codebook_v1",
+    "site_calibrated_petrophysics": false,
+    "slowness_table_sha256": "36342444bc8042852fdb55682247fa42046cfa5ad30963d444406cac7022f37b",
+    "slowness_unit": "s m^-1",
+    "truth_derived": true,
+    "velocity_table_sha256": "f4835d84b5451bb6ec088d543e7a74b9e5e27e289432fa7b545040eaef9171fc",
+    "velocity_unit": "m s^-1"
+  },
+  "acoustic_table_sha256": "a70af1965ecd283a303f2ff11350ee55e355d85d2c0e9fbe4c34a9012b34970e",
+  "applied_update_rows": [
+    {
+      "hard_loss_after": 7.895781891420484e-05,
+      "hard_loss_before": 7.895781891420484e-05,
+      "orthogonal_response_fraction": 6.847558719803259e-05,
+      "soft_loss_after": 0.00030796744977124035,
+      "soft_loss_before": 0.0003079777816310525,
+      "soft_loss_delta": -1.0331859812140465e-08,
+      "soft_loss_improved": true,
+      "truth_direction_response_fraction": 1.6749204799375838e-05,
+      "update": "raw_negative_gradient_small_step",
+      "update_norm": 0.0033714659512043
+    },
+    {
+      "hard_loss_after": 7.895781891420484e-05,
+      "hard_loss_before": 7.895781891420484e-05,
+      "orthogonal_response_fraction": 0.00024012503274255375,
+      "soft_loss_after": 0.000307943468214944,
+      "soft_loss_before": 0.0003079777816310525,
+      "soft_loss_delta": -3.4313416108489037e-08,
+      "soft_loss_improved": true,
+      "truth_direction_response_fraction": 5.5677911687963556e-05,
+      "update": "normalized_negative_gradient_small_step",
+      "update_norm": 0.009999999776482582
+    },
+    {
+      "hard_loss_after": 0.0006055535632185638,
+      "hard_loss_before": 7.895781891420484e-05,
+      "orthogonal_response_fraction": 0.6037106455269801,
+      "soft_loss_after": 0.0002747522376012057,
+      "soft_loss_before": 0.0003079777816310525,
+      "soft_loss_delta": -3.322554402984679e-05,
+      "soft_loss_improved": true,
+      "truth_direction_response_fraction": 0.273604351347223,
+      "update": "actual_controller_velocity_unit_time",
+      "update_norm": 276.9335632324219
+    },
+    {
+      "hard_loss_after": 7.895781891420484e-05,
+      "hard_loss_before": 7.895781891420484e-05,
+      "orthogonal_response_fraction": 0.2706184378473499,
+      "soft_loss_after": 0.00029664236353710294,
+      "soft_loss_before": 0.0003079777816310525,
+      "soft_loss_delta": -1.1335418093949556e-05,
+      "soft_loss_improved": true,
+      "truth_direction_response_fraction": 0.05662322789827235,
+      "update": "actual_euler_applied_physics_update",
+      "update_norm": 8.654173851013184
+    },
+    {
+      "hard_loss_after": 7.895781891420484e-05,
+      "hard_loss_before": 7.895781891420484e-05,
+      "orthogonal_response_fraction": 0.2706184378473499,
+      "soft_loss_after": 0.00029664236353710294,
+      "soft_loss_before": 0.0003079777816310525,
+      "soft_loss_delta": -1.1335418093949556e-05,
+      "soft_loss_improved": true,
+      "truth_direction_response_fraction": 0.05662322789827235,
+      "update": "actual_euler_update_after_condition_projection",
+      "update_norm": 8.654173851013184
+    }
+  ],
+  "base_model_gradients_absent": true,
+  "chain_summaries": [
+    {
+      "all_sign_match": true,
+      "best_epsilon": 0.01,
+      "best_relative_error": 1.8291953305370317e-08,
+      "chain": "embedding_to_acoustic_property",
+      "grad_norm": 689880649.8276815,
+      "loss_after_small_negative_gradient_step": 502263625351.53156,
+      "loss_before": 502263694340.1909,
+      "negative_gradient_local_descent": true
+    },
+    {
+      "all_sign_match": true,
+      "best_epsilon": 0.01,
+      "best_relative_error": 2.714466174672362e-09,
+      "chain": "explicit_blurred_property",
+      "grad_norm": 3.6831791868515716e-06,
+      "loss_after_small_negative_gradient_step": 0.0025474839814815186,
+      "loss_before": 0.0025474843498020524,
+      "negative_gradient_local_descent": true
+    },
+    {
+      "all_sign_match": true,
+      "best_epsilon": 0.01,
+      "best_relative_error": 6.716930451070195e-09,
+      "chain": "property_to_reflectivity_and_twt_deposition",
+      "grad_norm": 8.11271338850859e-07,
+      "loss_after_small_negative_gradient_step": 0.00015465325626353655,
+      "loss_before": 0.00015465333738939,
+      "negative_gradient_local_descent": true
+    },
+    {
+      "all_sign_match": true,
+      "best_epsilon": 0.01,
+      "best_relative_error": 4.13111474287395e-09,
+      "chain": "wavelet_convolved_seismic_loss",
+      "grad_norm": 3.3715527562970724e-06,
+      "loss_after_small_negative_gradient_step": 0.00030797719963403247,
+      "loss_before": 0.0003079775367880354,
+      "negative_gradient_local_descent": true
+    },
+    {
+      "all_sign_match": true,
+      "best_epsilon": 0.01,
+      "best_relative_error": 1.7912172807974035e-08,
+      "chain": "gravity_forward_and_loss",
+      "grad_norm": 0.006332087894696143,
+      "loss_after_small_negative_gradient_step": 1.5633712311202768,
+      "loss_before": 1.5633718643281542,
+      "negative_gradient_local_descent": true
+    }
+  ],
+  "checkpoint_path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "checkpoint_used_for_flow": true,
+  "completed_at_utc": "2026-08-07T12:28:21.923005+00:00",
+  "controller_diagnostics": {
+    "effective_guidance_ratio": 0.9970426559448242,
+    "guidance_cap_fraction": 0.0,
+    "guidance_gradient_reference_norm": 3.37146616402606e-06,
+    "guidance_gradient_reference_ratio": 1.0,
+    "guidance_velocity_norm": 276.9335632324219,
+    "requested_guidance_ratio": 1.0,
+    "uncapped_guidance_ratio": 1.0,
+    "used_guidance_ratio": 1.0
+  },
+  "controller_pass": true,
+  "controller_velocity_norm": 276.9335632324219,
+  "controller_verdict": "PASS_SIGN_AND_LOCAL_DESCENT",
+  "cosine_raw_negative_gradient_actual_applied_update": 0.9999999999999998,
+  "decoder_mapping": {
+    "decoder_rows": [
+      {
+        "mismatch_count": 0,
+        "state": "exact_baseline",
+        "temperature": 0.5
+      },
+      {
+        "mismatch_count": 0,
+        "state": "exact_baseline",
+        "temperature": 0.2
+      },
+      {
+        "mismatch_count": 0,
+        "state": "exact_baseline",
+        "temperature": 0.1
+      },
+      {
+        "mismatch_count": 0,
+        "state": "exact_baseline",
+        "temperature": 0.05
+      },
+      {
+        "mismatch_count": 0,
+        "state": "continuous_perturbed",
+        "temperature": 0.5
+      },
+      {
+        "mismatch_count": 0,
+        "state": "continuous_perturbed",
+        "temperature": 0.2
+      },
+      {
+        "mismatch_count": 0,
+        "state": "continuous_perturbed",
+        "temperature": 0.1
+      },
+      {
+        "mismatch_count": 0,
+        "state": "continuous_perturbed",
+        "temperature": 0.05
+      }
+    ],
+    "decoder_total_mismatches": 0,
+    "one_hot_acoustic_max_abs_difference": 0.0,
+    "one_hot_property_max_abs_difference": 0.0,
+    "subsurface_air_exclusion_background_max_abs_difference": 0.0,
+    "subsurface_nonair_one_hot_max_abs_difference": 0.0,
+    "tie": {
+      "categories_at_max_with_tolerance": [
+        1,
+        2
+      ],
+      "exact_tie_reported_separately": true,
+      "model_argmax_category": 1
+    }
+  },
+  "decoder_mapping_pass": true,
+  "density_metadata": {
+    "density_table_sha256": "fbb6059adf615c456880b5adc95486a6c1eac0db7326e4dfc4c4a9d9c817f526",
+    "description": "Synthetic, non-site-calibrated density contrasts for the first Phase-4a inverse-crime upper bound. Label 9 has deliberately strong density observability; values are not field petrophysics.",
+    "id": "density_distinct_label9_upper_bound_v1",
+    "num_categories": 15,
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "scenario": "synthetic_distinct_label9_density_upper_bound",
+    "schema": "phase4_density_contrast_v1",
+    "site_calibrated_petrophysics": false,
+    "truth_derived": true,
+    "unit": "kg m^-3"
+  },
+  "device": "cuda",
+  "dt_times_controller_norm": 8.654173851013184,
+  "dtype": "torch.float64 finite-difference; torch.float32 production controller",
+  "ema_raw_policy": {
+    "checkpoint": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "checkpoint_epoch": 1651,
+    "checkpoint_global_step": 8376,
+    "ema_applied": true,
+    "ema_entry_count": 411,
+    "ema_excluded_frozen_parameters": [
+      "embedding.weight"
+    ],
+    "ema_missing_trainable": [],
+    "ema_shape_mismatches": [],
+    "ema_unexpected": [],
+    "frozen_parameters": [
+      "embedding.weight"
+    ],
+    "model_parameter_count": 412,
+    "trainable_parameter_count": 411,
+    "weight_source": "ema"
+  },
+  "exact_command": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/bin/python project/geodata-3d-conditional/scripts/stage6/run_causality_gradient_audit.py --config project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/gradient_audit_v1_fix1.json --output-dir project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d2_gradient_audit_v1_fix1_provenance_85d5deb_clean --device cuda",
+  "finite_difference_dtype": "torch.float64",
+  "flow_unet_evaluated_only_for_controller_reference_velocity": true,
+  "flow_unet_loaded": true,
+  "git_branch": "main",
+  "git_sha": "85d5deb4555430117887a8ba173a0222c6b899ae",
+  "git_status": "clean",
+  "git_status_short": [],
+  "gradient_correctness_pass": true,
+  "gravity_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4a full-support regular-grid noiseless synthetic inverse-crime observation. Coordinates are synthetic and use SI units.",
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_grid_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4204,
+      "std_mgal": 0.0,
+      "type": "none"
+    },
+    "observation_height_above_top_m": 50.0,
+    "origin_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "schema": "phase4_gravity_observation_v1",
+    "station_grid": "cell_center_aligned_full",
+    "survey_mask": "all",
+    "truth_derived": true,
+    "uncertainty_mgal": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward"
+  },
+  "observation_sha256": "5941060d0360c3038546a7551d32bb8bbb7fbaef7322996fd02d98898bbbc9b1",
+  "production_dtype": "torch.float32",
+  "production_normalized_gradient_norm": 1.0,
+  "production_raw_gradient_norm": 3.3714659366523847e-06,
+  "property_table_sha256": "fbb6059adf615c456880b5adc95486a6c1eac0db7326e4dfc4c4a9d9c817f526",
+  "runtime": {
+    "gpu_name": "NVIDIA GeForce RTX 4090 D",
+    "hostname": "LabRS",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+    "torch": "2.8.0+cu128"
+  },
+  "search_report": {
+    "condition_overlap_voxels": 0,
+    "fixed_target_overlap_voxels": 0,
+    "hidden_truth_inside_search_voxels": 1280,
+    "hidden_truth_voxels": 1280,
+    "search_fraction_of_unconditioned_subsurface": 0.7192767858505249,
+    "search_voxels": 161920
+  },
+  "seed": 64021,
+  "seismic_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "source_hashes": {
+    "audit": "a9148cbccdf7ebd9009a93d6c990e09e715c31fa9c72ec86408c22f8836737c7",
+    "controller": "2aa6119fa8517176eb0d1b8f6892ebdd14cc3051a43dd8e030099150f69bec9f",
+    "decoder": "cfc7a5deedcbd3f2905b6bf664611813b7445e8226c8b481b6b91cb694c470d5",
+    "gravity": "600f944a586176c6b796f806619c39286687fd88322adc0b7effc85524b1d921",
+    "runner": "1fec5af83f04a3b89bca2bb47267a3e92acd98e11f6c67b77bb4f6fb046494eb",
+    "seismic": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee"
+  },
+  "stage": "phase6q_d2_gradient_controller_audit",
+  "version": "phase6q_causality_gradient_audit_v1",
+  "wavelet_sha256": "92fed10fd03eed89aba8c731834db63b306b39ead1cb535be22533dc4fc1c833"
+}
