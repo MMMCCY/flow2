@@ -1,0 +1,285 @@
+{
+  "acoustic_metadata": {
+    "density_table_sha256": "346f91e28a53677a534fdc295eb14cf62ce469f553f28f477ba816f297f2ce99",
+    "density_unit": "kg m^-3",
+    "description": "Synthetic complete absolute density and P-wave velocity codebook for the first Phase-4c inverse-crime upper bound. Label 9 has deliberately distinctive impedance; values are not site-calibrated petrophysics.",
+    "id": "acoustic_distinct_label9_upper_bound_v1",
+    "impedance_table_sha256": "bd0f62b3d692d8b10105b56266504e6360511191a48eb0ac11acd3b9705c9f8a",
+    "impedance_unit": "kg m^-2 s^-1",
+    "num_categories": 15,
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "scenario": "synthetic_distinct_label9_acoustic_upper_bound",
+    "schema": "phase4_acoustic_codebook_v1",
+    "site_calibrated_petrophysics": false,
+    "slowness_table_sha256": "36342444bc8042852fdb55682247fa42046cfa5ad30963d444406cac7022f37b",
+    "slowness_unit": "s m^-1",
+    "truth_derived": true,
+    "velocity_table_sha256": "f4835d84b5451bb6ec088d543e7a74b9e5e27e289432fa7b545040eaef9171fc",
+    "velocity_unit": "m s^-1"
+  },
+  "acoustic_table_sha256": "a70af1965ecd283a303f2ff11350ee55e355d85d2c0e9fbe4c34a9012b34970e",
+  "base_config_sha256": "43fe3d8fa0fc55ef94979da93a2a6aded920e035507f2340c55cb2c383f7269c",
+  "baseline_soft_to_truth": {
+    "gravity": {
+      "normalized_mse_by_truth_energy": 0.006609572197576196,
+      "raw_mse": 2.0175073470673346,
+      "raw_rmse": 1.420389857422016,
+      "response_correlation": 0.998155203302011,
+      "response_cosine": 0.9999199207991075,
+      "response_l2_distance": 90.90495087500902
+    },
+    "property": {
+      "normalized_mse_by_truth_energy": 0.4003525484452443,
+      "raw_mse": 0.004887116069888236,
+      "raw_rmse": 0.06990791135406804,
+      "response_correlation": 0.7726892625802504,
+      "response_cosine": 0.7758634838858283,
+      "response_l2_distance": 35.79285061324624
+    },
+    "reflectivity_spikes": {
+      "normalized_mse_by_truth_energy": 1.235876603225023,
+      "raw_mse": 0.00015564990095812253,
+      "raw_rmse": 0.012475972946352623,
+      "response_correlation": 0.09404654147090545,
+      "response_cosine": 0.09404654147090558,
+      "response_l2_distance": 14.283327279868272
+    },
+    "seismic": {
+      "normalized_mse_by_truth_energy": 1.5840278637717824,
+      "raw_mse": 0.0003126785194577465,
+      "raw_rmse": 0.017682718101517836,
+      "response_correlation": -0.1513940792896191,
+      "response_cosine": -0.1513940792896194,
+      "response_l2_distance": 20.244356967403437
+    }
+  },
+  "baseline_truth_separated": true,
+  "checkpoint_embedding_sha256": "02bb106755aa53b6947edfcb59dd7dd8dd46853c38fa4444fe6c791e612cc565",
+  "checkpoint_path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "checkpoint_used_for_flow": false,
+  "closure_pass": true,
+  "completed_at_utc": "2026-08-07T10:33:32.061636+00:00",
+  "density_metadata": {
+    "density_table_sha256": "fbb6059adf615c456880b5adc95486a6c1eac0db7326e4dfc4c4a9d9c817f526",
+    "description": "Synthetic, non-site-calibrated density contrasts for the first Phase-4a inverse-crime upper bound. Label 9 has deliberately strong density observability; values are not field petrophysics.",
+    "id": "density_distinct_label9_upper_bound_v1",
+    "num_categories": 15,
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "scenario": "synthetic_distinct_label9_density_upper_bound",
+    "schema": "phase4_density_contrast_v1",
+    "site_calibrated_petrophysics": false,
+    "truth_derived": true,
+    "unit": "kg m^-3"
+  },
+  "device": "cpu",
+  "dtype": "torch.float64",
+  "ema_raw_policy": "checkpoint raw frozen embedding only; U-Net not loaded",
+  "exact_command": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/bin/python project/geodata-3d-conditional/scripts/stage6/run_observation_closure_audit.py --config project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/observation_closure_v1.json --output-dir project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d1_observation_closure_v1 --device cpu --dtype float64",
+  "flow_unet_loaded": false,
+  "git_branch": "main",
+  "git_sha": "11caa498b15e6b89891604e9537830b30df504fa",
+  "git_status": "dirty",
+  "git_status_short": [
+    "?? project/geodata-3d-conditional/experiments/stage6_inference_causality/PHASE1_4_OPERATOR_CALLGRAPH.md",
+    "?? project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/observation_closure_v1.json",
+    "?? project/geodata-3d-conditional/experiments/stage6_inference_causality/phase1_4_operator_callgraph.json",
+    "?? project/geodata-3d-conditional/guidance/observation_closure_audit.py",
+    "?? project/geodata-3d-conditional/scripts/stage6/run_observation_closure_audit.py",
+    "?? project/geodata-3d-conditional/tests/test_phase6q_observation_closure.py"
+  ],
+  "gravity": {
+    "baseline_hard_to_truth": {
+      "normalized_mse_by_truth_energy": 0.0005403448228196574,
+      "raw_mse": 0.16493497875524016,
+      "raw_rmse": 0.4061218767257437,
+      "response_correlation": 0.9983082562046698,
+      "response_cosine": 0.9999287730608744,
+      "response_l2_distance": 25.991800110447596
+    },
+    "closure": {
+      "absolute_difference_l2": 0.0,
+      "absolute_difference_max": 0.0,
+      "exact_tensor_equal": true,
+      "recomputed_truth_observation_hash": "344b5a2cbe574dde88d902a8d513fba1a857a2996cb24568efeeef144a9f4559",
+      "relative_difference_l2": 0.0,
+      "truth_loss": 0.0,
+      "truth_observation_hash": "344b5a2cbe574dde88d902a8d513fba1a857a2996cb24568efeeef144a9f4559"
+    }
+  },
+  "gravity_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4a full-support regular-grid noiseless synthetic inverse-crime observation. Coordinates are synthetic and use SI units.",
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_grid_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4204,
+      "std_mgal": 0.0,
+      "type": "none"
+    },
+    "observation_height_above_top_m": 50.0,
+    "origin_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "schema": "phase4_gravity_observation_v1",
+    "station_grid": "cell_center_aligned_full",
+    "survey_mask": "all",
+    "truth_derived": true,
+    "uncertainty_mgal": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward"
+  },
+  "intermediate_hashes": {
+    "truth_acoustic_sha256": "ed44752b79ff206ce81222c850e16782735d68973bbac122db6522a38c7f3a18",
+    "truth_density_sha256": "7479ad6eb7c7b0a276112bbc0c7c8c707f11f5bb6baa5e534faa0d349f065964",
+    "truth_reflectivity_sha256": "295d8babad6cf6dd01a28766c170ad0463260bfcc9d2fd590a08eb47fbe4b913"
+  },
+  "observation_sha256": {
+    "property": "b615a9d5153a16e2b44d2014e24e40df25f7789481f374aa3addc2331bc3966a",
+    "reflectivity_spikes": "295d8babad6cf6dd01a28766c170ad0463260bfcc9d2fd590a08eb47fbe4b913",
+    "seismic": "92b8cd667eb4b288a086db3150fd5e1d70a9edcb249bbc5f206e977db89e6288",
+    "gravity": "344b5a2cbe574dde88d902a8d513fba1a857a2996cb24568efeeef144a9f4559"
+  },
+  "property": {
+    "baseline_hard_to_truth": {
+      "normalized_mse_by_truth_energy": 0.4,
+      "raw_mse": 0.0048828125,
+      "raw_rmse": 0.06987712429686843,
+      "response_correlation": 0.7726892625807765,
+      "response_cosine": 0.7745966692414834,
+      "response_l2_distance": 35.77708763999664
+    },
+    "closure": {
+      "absolute_difference_l2": 0.0,
+      "absolute_difference_max": 0.0,
+      "exact_tensor_equal": true,
+      "recomputed_truth_observation_hash": "b615a9d5153a16e2b44d2014e24e40df25f7789481f374aa3addc2331bc3966a",
+      "relative_difference_l2": 0.0,
+      "truth_loss": 0.0,
+      "truth_observation_hash": "b615a9d5153a16e2b44d2014e24e40df25f7789481f374aa3addc2331bc3966a"
+    }
+  },
+  "property_table_sha256": "fbb6059adf615c456880b5adc95486a6c1eac0db7326e4dfc4c4a9d9c817f526",
+  "reflectivity_spikes": {
+    "baseline_hard_to_truth": {
+      "normalized_mse_by_truth_energy": 0.4000001989905531,
+      "raw_mse": 5.037719072732771e-05,
+      "raw_rmse": 0.0070976891117692465,
+      "response_correlation": 0.7745965407936245,
+      "response_cosine": 0.774596540793628,
+      "response_l2_distance": 8.125908652582982
+    },
+    "closure": {
+      "absolute_difference_l2": 0.0,
+      "absolute_difference_max": 0.0,
+      "exact_tensor_equal": true,
+      "recomputed_truth_observation_hash": "295d8babad6cf6dd01a28766c170ad0463260bfcc9d2fd590a08eb47fbe4b913",
+      "relative_difference_l2": 0.0,
+      "truth_loss": 0.0,
+      "truth_observation_hash": "295d8babad6cf6dd01a28766c170ad0463260bfcc9d2fd590a08eb47fbe4b913"
+    }
+  },
+  "runtime": {
+    "hostname": "LabRS",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+    "torch": "2.8.0+cu128"
+  },
+  "seed": 6042,
+  "seismic": {
+    "baseline_hard_to_truth": {
+      "normalized_mse_by_truth_energy": 0.40000014847090964,
+      "raw_mse": 7.895786246395371e-05,
+      "raw_rmse": 0.008885823679544498,
+      "response_correlation": 0.7745965734039146,
+      "response_cosine": 0.7745965734039166,
+      "response_l2_distance": 10.173084561171894
+    },
+    "closure": {
+      "absolute_difference_l2": 0.0,
+      "absolute_difference_max": 0.0,
+      "exact_tensor_equal": true,
+      "recomputed_truth_observation_hash": "92b8cd667eb4b288a086db3150fd5e1d70a9edcb249bbc5f206e977db89e6288",
+      "relative_difference_l2": 0.0,
+      "truth_loss": 0.0,
+      "truth_observation_hash": "92b8cd667eb4b288a086db3150fd5e1d70a9edcb249bbc5f206e977db89e6288"
+    }
+  },
+  "seismic_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "source_hashes": {
+    "audit": "ae791d40c0a6a12fbfca03b9957590f806902f52b8a48b2c3ac506964c7534e7",
+    "gravity": "600f944a586176c6b796f806619c39286687fd88322adc0b7effc85524b1d921",
+    "runner": "57f571b4f1b5a6de36b41a3ff44c18d9a1d909131cc0bf3c32efcba811c51bad",
+    "seismic": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee",
+    "simple_causality": "c90d6e0bd0fb2b7d5e6844e8da5974aced8c5693d37bf159d70b6735287a0680"
+  },
+  "stage": "phase6q_d1_observation_closure",
+  "version": "phase6q_observation_closure_v1",
+  "wavelet_sha256": "92fed10fd03eed89aba8c731834db63b306b39ead1cb535be22533dc4fc1c833"
+}

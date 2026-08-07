@@ -1,0 +1,311 @@
+{
+  "acoustic_metadata": {
+    "density_table_sha256": "346f91e28a53677a534fdc295eb14cf62ce469f553f28f477ba816f297f2ce99",
+    "density_unit": "kg m^-3",
+    "description": "Synthetic complete absolute density and P-wave velocity codebook for the first Phase-4c inverse-crime upper bound. Label 9 has deliberately distinctive impedance; values are not site-calibrated petrophysics.",
+    "id": "acoustic_distinct_label9_upper_bound_v1",
+    "impedance_table_sha256": "bd0f62b3d692d8b10105b56266504e6360511191a48eb0ac11acd3b9705c9f8a",
+    "impedance_unit": "kg m^-2 s^-1",
+    "num_categories": 15,
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "scenario": "synthetic_distinct_label9_acoustic_upper_bound",
+    "schema": "phase4_acoustic_codebook_v1",
+    "site_calibrated_petrophysics": false,
+    "slowness_table_sha256": "36342444bc8042852fdb55682247fa42046cfa5ad30963d444406cac7022f37b",
+    "slowness_unit": "s m^-1",
+    "truth_derived": true,
+    "velocity_table_sha256": "f4835d84b5451bb6ec088d543e7a74b9e5e27e289432fa7b545040eaef9171fc",
+    "velocity_unit": "m s^-1"
+  },
+  "acoustic_table_sha256": "a70af1965ecd283a303f2ff11350ee55e355d85d2c0e9fbe4c34a9012b34970e",
+  "all_arms_share_initial_state": true,
+  "base_endpoint_sha256": "fa9c7371661f2375c77b3bd4719ebb5e8a31c2f2c2d77121ec57a42899f08d77",
+  "base_model_gradients_absent": true,
+  "base_model_hash_after": "bd1835899c7b2498b60c41636a5450c1496d14547c35dd84717dfc624fbd186d",
+  "base_model_hash_before": "bd1835899c7b2498b60c41636a5450c1496d14547c35dd84717dfc624fbd186d",
+  "base_model_hash_unchanged": true,
+  "budget_extension_run": false,
+  "checkpoint_path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "checkpoint_used_for_flow": true,
+  "completed_at_utc": "2026-08-07T10:54:14.794018+00:00",
+  "device": "cuda",
+  "dtype": "torch.float32",
+  "ema_raw_policy": {
+    "checkpoint": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "checkpoint_epoch": 1651,
+    "checkpoint_global_step": 8376,
+    "ema_applied": true,
+    "ema_entry_count": 411,
+    "ema_excluded_frozen_parameters": [
+      "embedding.weight"
+    ],
+    "ema_missing_trainable": [],
+    "ema_shape_mismatches": [],
+    "ema_unexpected": [],
+    "frozen_parameters": [
+      "embedding.weight"
+    ],
+    "model_parameter_count": 412,
+    "trainable_parameter_count": 411,
+    "weight_source": "ema"
+  },
+  "exact_command": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/bin/python project/geodata-3d-conditional/scripts/stage6/run_frozen_flow_causality.py --config project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/frozen_flow_trajectory_v1.json --output-dir project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1 --device cuda",
+  "flow_unet_loaded": true,
+  "git_branch": "main",
+  "git_sha": "11caa498b15e6b89891604e9537830b30df504fa",
+  "git_status": "dirty",
+  "git_status_short": [
+    "?? project/geodata-3d-conditional/experiments/stage6_inference_causality/PHASE1_4_OPERATOR_CALLGRAPH.md",
+    "?? project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/frozen_flow_trajectory_v1.json",
+    "?? project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/gradient_audit_v1.json",
+    "?? project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/gradient_audit_v1_fix1.json",
+    "?? project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/observation_closure_v1.json",
+    "?? project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/soft_hard_transfer_v1.json",
+    "?? project/geodata-3d-conditional/experiments/stage6_inference_causality/phase1_4_operator_callgraph.json",
+    "?? project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d1_observation_closure_v1/",
+    "?? project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d2_gradient_audit_v1/",
+    "?? project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d2_gradient_audit_v1_fix1/",
+    "?? project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d3_soft_hard_transfer_v1/",
+    "?? project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/",
+    "?? project/geodata-3d-conditional/guidance/causality_gradient_audit.py",
+    "?? project/geodata-3d-conditional/guidance/frozen_flow_causality.py",
+    "?? project/geodata-3d-conditional/guidance/observation_closure_audit.py",
+    "?? project/geodata-3d-conditional/guidance/soft_hard_transfer_audit.py",
+    "?? project/geodata-3d-conditional/scripts/stage6/run_causality_gradient_audit.py",
+    "?? project/geodata-3d-conditional/scripts/stage6/run_frozen_flow_causality.py",
+    "?? project/geodata-3d-conditional/scripts/stage6/run_observation_closure_audit.py",
+    "?? project/geodata-3d-conditional/scripts/stage6/run_soft_hard_transfer_audit.py",
+    "?? project/geodata-3d-conditional/tests/test_phase6q_frozen_flow.py",
+    "?? project/geodata-3d-conditional/tests/test_phase6q_gradient_audit.py",
+    "?? project/geodata-3d-conditional/tests/test_phase6q_observation_closure.py",
+    "?? project/geodata-3d-conditional/tests/test_phase6q_soft_hard_transfer.py"
+  ],
+  "initial_state_sha256": "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea",
+  "observation_sha256": "c734b86d121dff902220692ddfab20580b786c0282734db41a735f78c6c676f0",
+  "property_table_sha256": "a70af1965ecd283a303f2ff11350ee55e355d85d2c0e9fbe4c34a9012b34970e",
+  "runs": [
+    {
+      "best_hard_attainment": 0.0,
+      "best_hard_step": 32,
+      "best_soft_step": 1,
+      "control": "correct",
+      "final_hard_attainment": 0.0,
+      "final_soft_attainment": 0.0,
+      "initial_state_sha256": "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea",
+      "mode": "BASE"
+    },
+    {
+      "best_hard_attainment": 0.0930129380946084,
+      "best_hard_step": 32,
+      "best_soft_step": 32,
+      "control": "correct",
+      "final_hard_attainment": -14.35054605029968,
+      "final_soft_attainment": 0.6882288771449756,
+      "initial_state_sha256": "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea",
+      "mode": "MATCHED_NORM_PHYSICS_ONLY"
+    },
+    {
+      "best_hard_attainment": 0.30643379548394667,
+      "best_hard_step": 32,
+      "best_soft_step": 19,
+      "control": "correct",
+      "final_hard_attainment": 0.11524064334027935,
+      "final_soft_attainment": 0.09186436550295367,
+      "initial_state_sha256": "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea",
+      "mode": "BASE_PLUS_PHYSICS"
+    },
+    {
+      "best_hard_attainment": 0.12148274243698765,
+      "best_hard_step": 32,
+      "best_soft_step": 1,
+      "control": "correct",
+      "final_hard_attainment": 0.08575475145653036,
+      "final_soft_attainment": 0.0939587326179602,
+      "initial_state_sha256": "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea",
+      "mode": "LATE_PHYSICS"
+    },
+    {
+      "base_endpoint_sha256": "fa9c7371661f2375c77b3bd4719ebb5e8a31c2f2c2d77121ec57a42899f08d77",
+      "best_hard_attainment": 0.5877536765228536,
+      "best_hard_step": 200,
+      "best_soft_step": -1,
+      "control": "correct",
+      "final_hard_attainment": 0.5877536765228536,
+      "final_soft_attainment": NaN,
+      "initial_state_sha256": "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea",
+      "mode": "ENDPOINT_REFERENCE"
+    },
+    {
+      "best_hard_attainment": 0.0,
+      "best_hard_step": 32,
+      "best_soft_step": 1,
+      "control": "zero",
+      "final_hard_attainment": 0.0,
+      "final_soft_attainment": 0.0,
+      "initial_state_sha256": "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea",
+      "mode": "BASE"
+    },
+    {
+      "best_hard_attainment": 0.09808775997650271,
+      "best_hard_step": 32,
+      "best_soft_step": 32,
+      "control": "zero",
+      "final_hard_attainment": -16.90257375639455,
+      "final_soft_attainment": 0.926809607707655,
+      "initial_state_sha256": "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea",
+      "mode": "MATCHED_NORM_PHYSICS_ONLY"
+    },
+    {
+      "best_hard_attainment": 0.30253757018011856,
+      "best_hard_step": 32,
+      "best_soft_step": 17,
+      "control": "zero",
+      "final_hard_attainment": 0.29942395016242945,
+      "final_soft_attainment": 0.28197367459924155,
+      "initial_state_sha256": "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea",
+      "mode": "BASE_PLUS_PHYSICS"
+    },
+    {
+      "best_hard_attainment": 0.15394066004989512,
+      "best_hard_step": 32,
+      "best_soft_step": 1,
+      "control": "zero",
+      "final_hard_attainment": 0.10876514459202104,
+      "final_soft_attainment": 0.11849166909494564,
+      "initial_state_sha256": "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea",
+      "mode": "LATE_PHYSICS"
+    },
+    {
+      "base_endpoint_sha256": "fa9c7371661f2375c77b3bd4719ebb5e8a31c2f2c2d77121ec57a42899f08d77",
+      "best_hard_attainment": 0.6447428549984718,
+      "best_hard_step": 200,
+      "best_soft_step": -1,
+      "control": "zero",
+      "final_hard_attainment": 0.6447428549984718,
+      "final_soft_attainment": NaN,
+      "initial_state_sha256": "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea",
+      "mode": "ENDPOINT_REFERENCE"
+    },
+    {
+      "best_hard_attainment": 0.0,
+      "best_hard_step": 32,
+      "best_soft_step": 1,
+      "control": "shuffled_xy",
+      "final_hard_attainment": 0.0,
+      "final_soft_attainment": 0.0,
+      "initial_state_sha256": "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea",
+      "mode": "BASE"
+    },
+    {
+      "best_hard_attainment": 0.09636271654125916,
+      "best_hard_step": 32,
+      "best_soft_step": 32,
+      "control": "shuffled_xy",
+      "final_hard_attainment": -16.61939899422407,
+      "final_soft_attainment": 0.884160726106445,
+      "initial_state_sha256": "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea",
+      "mode": "MATCHED_NORM_PHYSICS_ONLY"
+    },
+    {
+      "best_hard_attainment": 0.3034674374539368,
+      "best_hard_step": 32,
+      "best_soft_step": 19,
+      "control": "shuffled_xy",
+      "final_hard_attainment": 0.17521023635715247,
+      "final_soft_attainment": 0.15683021244089665,
+      "initial_state_sha256": "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea",
+      "mode": "BASE_PLUS_PHYSICS"
+    },
+    {
+      "best_hard_attainment": 0.15455681984314362,
+      "best_hard_step": 32,
+      "best_soft_step": 1,
+      "control": "shuffled_xy",
+      "final_hard_attainment": 0.10580754584746886,
+      "final_soft_attainment": 0.12048847492598531,
+      "initial_state_sha256": "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea",
+      "mode": "LATE_PHYSICS"
+    },
+    {
+      "base_endpoint_sha256": "fa9c7371661f2375c77b3bd4719ebb5e8a31c2f2c2d77121ec57a42899f08d77",
+      "best_hard_attainment": 0.585171501178632,
+      "best_hard_step": 200,
+      "best_soft_step": -1,
+      "control": "shuffled_xy",
+      "final_hard_attainment": 0.585171501178632,
+      "final_soft_attainment": NaN,
+      "initial_state_sha256": "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea",
+      "mode": "ENDPOINT_REFERENCE"
+    }
+  ],
+  "runtime": {
+    "gpu_name": "NVIDIA GeForce RTX 4090 D",
+    "hostname": "LabRS",
+    "torch": "2.8.0+cu128"
+  },
+  "seed": 42,
+  "seismic_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "source_hashes": {
+    "controller": "cfc7a5deedcbd3f2905b6bf664611813b7445e8226c8b481b6b91cb694c470d5",
+    "model_loader": "36d0dc613d8860677f137a2f1d681ebcc50829a6d90f5547c6eac3fd12a977c2",
+    "runner": "35110cbbe6371ef5548db4ee44cf0843843b1edd62b5165e48051674a7559fb9",
+    "runtime": "246ba9cc8b8e80ce86d7e9d059010d7b030b87e793d911cef8e8d3478786e838",
+    "sampler": "78bedd4138d1a492a625665fe9b5d9e867e197033c107f776525c7da3374f1cb",
+    "seismic": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee"
+  },
+  "stage": "phase6q_d4_frozen_flow",
+  "version": "phase6q_frozen_flow_causality_v1",
+  "wavelet_sha256": "92fed10fd03eed89aba8c731834db63b306b39ead1cb535be22533dc4fc1c833"
+}

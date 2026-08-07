@@ -1,0 +1,13 @@
+{
+  "schema": "phase6q_observation_closure_config_v1",
+  "id": "five_body_observation_closure_v1",
+  "base_config": "project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/five_body_cuboid_v1.json",
+  "checkpoint": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "checkpoint_embedding_key": "embedding.weight",
+  "soft_reference_temperature": 0.2,
+  "seed": 6042,
+  "noiseless_inverse_crime": true,
+  "flow_unet_loaded": false,
+  "checkpoint_used_for_flow": false,
+  "formal_training_authorized": false
+}

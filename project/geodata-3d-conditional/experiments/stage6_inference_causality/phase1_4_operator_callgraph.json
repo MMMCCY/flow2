@@ -1,0 +1,94 @@
+{
+  "branch": "main",
+  "git_sha": "11caa498b15e6b89891604e9537830b30df504fa",
+  "worktree_status": "clean",
+  "canonical": {
+    "continuous_state": "x[B,E,X,Y,Z]",
+    "soft_decoder": "guided_geophysical_sampling.soft_decode_to_probs",
+    "hard_decoder": "model_train_sh_inference_cond.Geo3DStochInterp.decode",
+    "model_loader": "inference_runtime.load_model_with_weight_policy",
+    "condition_projection": "guidance.generator_posterior.project_conditions",
+    "physics_velocity_sign": "v_physics=-guidance_velocity",
+    "euler_update": "x_next_pre_projection=x+dt*(v_base+v_physics)"
+  },
+  "phases": {
+    "phase1_probability": {
+      "optimized_variable": "continuous_embedding_state",
+      "soft_path": [
+        "soft_decode_to_probs",
+        "target_label_probability",
+        "probability_volume_loss"
+      ],
+      "target_smoothing": "build_probability_volume/gaussian_blur_3d when configured",
+      "controller": "build_probability_guidance_velocity",
+      "condition_projection_position": "before first Euler step and after every update",
+      "hard_decode_position": "trace/final evaluation after projection",
+      "unet_involvement": "frozen base velocity"
+    },
+    "phase2_property": {
+      "optimized_variable": "continuous_embedding_state",
+      "soft_path": [
+        "soft_decode_to_probs",
+        "probabilities_to_expected_properties",
+        "matched_multiscale_property_loss"
+      ],
+      "blur_operator": "gaussian_blur_property_channels applied symmetrically to prediction and target",
+      "controller": "build_probability_guidance_velocity",
+      "condition_projection_position": "before first Euler step and after every update",
+      "hard_decode_position": "trace/final evaluation after projection",
+      "unet_involvement": "frozen base velocity"
+    },
+    "phase3_spatial_property": {
+      "optimized_variable": "continuous_embedding_state",
+      "observation_operator": "explicit configured identity/Gaussian spatial operator after exact known-property overwrite",
+      "canonical_seismic_modified": false,
+      "controller": "build_probability_guidance_velocity",
+      "unet_involvement": "frozen base velocity"
+    },
+    "phase4_gravity": {
+      "optimized_variable": "continuous_embedding_state",
+      "soft_path": [
+        "soft_decode_to_probs",
+        "probabilities_to_density",
+        "overwrite_exact_condition_density",
+        "RectangularPrismGravity",
+        "gravity_field_loss"
+      ],
+      "hard_path": [
+        "model.decode",
+        "hard_labels_to_density",
+        "RectangularPrismGravity",
+        "gravity_field_loss"
+      ],
+      "controller": "build_probability_guidance_velocity",
+      "unet_involvement": "frozen base velocity"
+    },
+    "phase4_seismic": {
+      "optimized_variable": "continuous_embedding_state",
+      "soft_path": [
+        "soft_decode_to_probs",
+        "probabilities_to_subsurface_acoustic",
+        "overwrite_exact_condition_acoustic",
+        "ConvolutionalSeismic.interface_response",
+        "ConvolutionalSeismic.deposit_reflectivity",
+        "ConvolutionalSeismic.convolve_reflectivity_spikes",
+        "seismic_field_loss"
+      ],
+      "hard_path": [
+        "model.decode",
+        "hard_labels_to_acoustic",
+        "ConvolutionalSeismic",
+        "seismic_field_loss"
+      ],
+      "gaussian_blur_in_forward": false,
+      "recording_window_policy": "crop invalid prediction arrivals before convolution",
+      "controller": "build_probability_guidance_velocity",
+      "unet_involvement": "frozen base velocity"
+    }
+  },
+  "best_iterate": {
+    "q3_embedding_endpoint": "minimum hard physics RMSE only",
+    "phase6p_endpoint": "configured hard loss only",
+    "trajectory_samplers": "return final state; external runner performs any selection"
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "schema": "phase6q_complete_causal_diagnostic_verdict_v1",
+  "git_sha": "11caa498b15e6b89891604e9537830b30df504fa",
+  "branch": "main",
+  "formal_training_performed": false,
+  "new_inference_algorithm_designed": false,
+  "gate_verdicts": {
+    "D1_forward_observation_closure": "PASS",
+    "D2_decoder_mapping_equivalence": "PASS",
+    "D2_gradient_correctness": "PASS",
+    "D2_actual_controller_direction": "PASS"
+  },
+  "hypotheses": [
+    {
+      "id": "H1",
+      "hypothesis": "forward/observation mismatch",
+      "status": "not_supported",
+      "strongest_evidence": "Truth property, reflectivity, seismic, and gravity responses exactly reproduce the inversion observations.",
+      "counter_evidence": "None in the audited noiseless inverse-crime operators.",
+      "relevant_run": "runs/five_body_cuboid_v1/d1_observation_closure_v1",
+      "relevant_metric": {"closure_pass": true, "maximum_relative_difference_l2": 0.0, "maximum_truth_loss": 0.0}
+    },
+    {
+      "id": "H2",
+      "hypothesis": "decoder/mapping mismatch",
+      "status": "not_supported",
+      "strongest_evidence": "Hard cosine decode equals soft-probability top-1 at all audited temperatures and states; one-hot property and acoustic mappings are exact for every category.",
+      "counter_evidence": "None; subsurface air exclusion was audited separately and also passed.",
+      "relevant_run": "runs/five_body_cuboid_v1/d2_gradient_audit_v1_fix1",
+      "relevant_metric": {"decoder_mapping_pass": true, "maximum_decoder_mismatch_count": 0, "maximum_one_hot_mapping_error": 0.0}
+    },
+    {
+      "id": "H3",
+      "hypothesis": "gradient implementation error",
+      "status": "not_supported",
+      "strongest_evidence": "Float64 finite differences match autograd through all five audited chains, all signs match, and every small negative-gradient step descends.",
+      "counter_evidence": "None after the representable float32 probe was separated from the authoritative float64 finite-difference audit.",
+      "relevant_run": "runs/five_body_cuboid_v1/d2_gradient_audit_v1_fix1",
+      "relevant_metric": {"gradient_correctness_pass": true, "best_relative_error_range": [2.7144659880965976e-09, 1.8291953305370317e-08]}
+    },
+    {
+      "id": "H4",
+      "hypothesis": "controller scaling/sign error",
+      "status": "not_supported",
+      "strongest_evidence": "The applied physics update is aligned with raw negative gradient and lowers the local soft objective before and after the actual Euler dt.",
+      "counter_evidence": "A controller-sized unit-time step changes hard physics adversely, showing that scale can cross categorical boundaries even though its sign and implemented Euler semantics are correct.",
+      "relevant_run": "runs/five_body_cuboid_v1/d2_gradient_audit_v1_fix1",
+      "relevant_metric": {"controller_pass": true, "cosine_raw_negative_gradient_actual_update": 0.9999999999999998, "actual_euler_soft_loss_delta": -1.1335418093949556e-05}
+    },
+    {
+      "id": "H5",
+      "hypothesis": "condition projection erasure",
+      "status": "not_supported",
+      "strongest_evidence": "D3 pre/post projection losses are identical and projection erasure is zero; D4 also has zero pre/post projection physics-loss delta.",
+      "counter_evidence": "D4 state-space projection corrections are nonzero because the U-Net velocity moves conditioned voxels, reaching norm 7.1976, but exact acoustic overwrite makes their observation-loss erasure zero.",
+      "relevant_run": "runs/five_body_cuboid_v1/d3_soft_hard_transfer_v1; runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1",
+      "relevant_metric": {"D3_final_projection_erasure_fraction": 0.0, "D4_max_condition_projection_change_norm": 7.1975884437561035, "D4_max_projection_soft_loss_delta": 0.0}
+    },
+    {
+      "id": "H6",
+      "hypothesis": "insufficient physics attainment",
+      "status": "supported",
+      "strongest_evidence": "Correct seismic full-flow BASE_PLUS_PHYSICS reaches only 30.64% maximum and 11.52% final hard attainment; the native case reaches 31.48%/14.44%.",
+      "counter_evidence": "The free endpoint reference reaches 58.78% hard attainment, but zero and shuffled endpoints reach 64.47% and 58.52%, so this is not correct-observation-specific recovery.",
+      "relevant_run": "runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1; runs/five_body_cuboid_v1/d5_native_geology_audit_v1",
+      "relevant_metric": {"cuboid_max_final_hard_attainment": [0.30643379548394667, 0.11524064334027935], "native_max_final_hard_attainment": [0.31475106573748995, 0.1443520014137248]}
+    },
+    {
+      "id": "H7",
+      "hypothesis": "soft-hard relaxation gap",
+      "status": "supported",
+      "strongest_evidence": "At the seismic level D3 finishes with 19.09% soft attainment but -0.80% hard attainment; reflectivity reaches 10.80% soft but 0% hard.",
+      "counter_evidence": "Probability, expected-property, and blurred-property levels cross the hard boundary and attain approximately 100%, so the gap is operator/representation dependent rather than universal.",
+      "relevant_run": "runs/five_body_cuboid_v1/d3_soft_hard_transfer_v1",
+      "relevant_metric": {"seismic_max_final_soft": [0.19093868190850125, 0.19093868190850125], "seismic_max_final_hard": [0.024435381606903943, -0.007974373489145252], "first_divergent_level": "L3 reflectivity/TWT"}
+    },
+    {
+      "id": "H8",
+      "hypothesis": "categorical-boundary saturation",
+      "status": "supported",
+      "strongest_evidence": "D3 seismic soft loss continues to improve while the final step has zero hard flips and raw gradient norm 2.70e-7; the best hard step has only 64 target crossings.",
+      "counter_evidence": "Earlier property levels cross boundaries completely, and full-flow D4 makes many crossings, so saturation is a primary bottleneck in the isolated seismic embedding trace but not the only full-flow mechanism.",
+      "relevant_run": "runs/five_body_cuboid_v1/d3_soft_hard_transfer_v1/traces/seismic/correct.csv",
+      "relevant_metric": {"best_hard_step": 126, "best_step_crossing_into_target": 64, "final_hard_crossing_count": 0, "final_raw_gradient_norm": 2.6997491886504577e-07}
+    },
+    {
+      "id": "H9",
+      "hypothesis": "wrong-lithology substitution",
+      "status": "partially_supported",
+      "strongest_evidence": "The D4 correct full-flow endpoint differs from paired BASE at 14,055 labels, with 12,005 flips ending outside the target class; earlier all-class Q3 also used eight categories while producing only 256 target voxels.",
+      "counter_evidence": "At D3 best hard seismic step all 64 flips enter raw label 9 and none enter a wrong lithology, so substitution is not the first generator-free failure.",
+      "relevant_run": "runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/traces/correct/BASE_PLUS_PHYSICS.csv; runs/five_body_cuboid_v1/q3_full_v2",
+      "relevant_metric": {"D4_final_flip_count": 14055, "D4_final_wrong_class_flips": 12005, "D3_best_wrong_class_flips": 0}
+    },
+    {
+      "id": "H10",
+      "hypothesis": "spatial gradient misallocation",
+      "status": "not_supported",
+      "strongest_evidence": "At D3 best hard seismic step 99.9996% of gradient energy and 97.54% of the applied update lie in the hidden-body ROI; condition energy is zero.",
+      "counter_evidence": "The first update is diffuse (72.37% outside target ROIs), but the gradient localizes as the run proceeds without yielding adequate hard attainment.",
+      "relevant_run": "runs/five_body_cuboid_v1/d3_soft_hard_transfer_v1/traces/seismic/correct.csv",
+      "relevant_metric": {"best_step_gradient_hidden_energy_fraction": 0.9999960751330542, "best_step_update_hidden_energy_fraction": 0.9753653734817923, "condition_energy_fraction": 0.0}
+    },
+    {
+      "id": "H11",
+      "hypothesis": "local high-dimensional parameterization failure",
+      "status": "partially_supported",
+      "strongest_evidence": "Low-dimensional Q1 exactly recovers both hidden bodies with correct seismic, whereas free embedding/full-flow searches do not; the native final target IoU remains 0.0557.",
+      "counter_evidence": "The free high-dimensional endpoint reduces hard loss by 58.78%, so the space is not completely immobile; however zero/shuffled controls improve just as much or more.",
+      "relevant_run": "runs/five_body_cuboid_v1/q0_q1_full_v2; runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1; runs/five_body_cuboid_v1/d5_native_geology_audit_v1",
+      "relevant_metric": {"Q1_correct_seismic_hard_attainment": 1.0, "D4_correct_endpoint_hard_attainment": 0.5877536765228536, "D5_native_final_target_iou": 0.05570806829594911}
+    },
+    {
+      "id": "H12",
+      "hypothesis": "seismic recording-window/operator dead zone",
+      "status": "not_supported",
+      "strongest_evidence": "All valid interfaces remain inside the recording window and cropped-interface fraction is zero; TWT, spike, and wavelet residuals all respond strongly to optimization.",
+      "counter_evidence": "Arrival TWT RMSE remains about 30 ms at the best/final D3 states, but this is residual misfit rather than cropping or a dead zone.",
+      "relevant_run": "runs/five_body_cuboid_v1/d3_soft_hard_transfer_v1/traces/seismic/correct.csv",
+      "relevant_metric": {"cropped_interface_fraction": 0.0, "best_arrival_twt_rmse_ms": 29.617231369018555, "best_reflectivity_rmse": 0.01807224005460739}
+    },
+    {
+      "id": "H13",
+      "hypothesis": "premature stopping / best-iterate destruction",
+      "status": "partially_supported",
+      "strongest_evidence": "D3 observed hard seismic loss is best at step 126 (2.44% paired attainment) and deteriorates by step 200 (-0.80%); in D4 the paired causal advantage peaks at 30.64% at step 23 and falls to 11.52% at step 32.",
+      "counter_evidence": "D4 absolute observed hard loss continues improving through step 32, so its observation-only best checkpoint is the final step; only its advantage relative to paired BASE is destroyed.",
+      "relevant_run": "runs/five_body_cuboid_v1/d3_soft_hard_transfer_v1; runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1",
+      "relevant_metric": {"D4_max_final_paired_hard_attainment": [0.30643379548394667, 0.11524064334027935], "D4_observation_selected_best_step": 32, "D3_observation_selected_best_step": 126, "D3_best_final_hard_attainment": [0.024435381606903943, -0.007974373489145252], "budget_extension_run": false}
+    },
+    {
+      "id": "H14",
+      "hypothesis": "frozen-prior cancellation",
+      "status": "not_supported",
+      "strongest_evidence": "The required causal pattern is absent: MATCHED_NORM_PHYSICS_ONLY reaches only 9.30% maximum hard attainment, whereas BASE_PLUS_PHYSICS reaches 30.64%.",
+      "counter_evidence": "At individual late steps the base flow can erase part of the immediate soft improvement, but aggregate paired performance is better with the flow than without it.",
+      "relevant_run": "runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1",
+      "relevant_metric": {"physics_only_max_final_hard": [0.0930129380946084, -14.35054605029968], "base_plus_max_final_hard": [0.30643379548394667, 0.11524064334027935]}
+    },
+    {
+      "id": "H15",
+      "hypothesis": "generator-support mismatch / cuboid OOD",
+      "status": "not_supported",
+      "strongest_evidence": "All eight native-conditioned prior samples contain target label beyond conditions and seven contain a native-size-compatible component; the StructuralGeo-native target nevertheless reproduces the cuboid failure.",
+      "counter_evidence": "Native prior topology is diffuse (53-68 connected components and frequent oversized components), so fine shape/topology support is imperfect even though coarse occurrence/size support is present.",
+      "relevant_run": "runs/five_body_cuboid_v1/d5_native_geology_audit_v1",
+      "relevant_metric": {"target_beyond_condition_fraction": 1.0, "size_compatible_sample_fraction": 0.875, "native_correct_max_final_hard": [0.31475106573748995, 0.1443520014137248]}
+    },
+    {
+      "id": "H16",
+      "hypothesis": "true geophysical nonuniqueness",
+      "status": "not_supported",
+      "strongest_evidence": "The guided full-flow response does not fit the truth response, so the required precondition for using nonuniqueness as the primary explanation is absent; Q0/Q1 also identifies and exactly recovers the true structured pair.",
+      "counter_evidence": "Zero and shuffled controls can reduce their own losses, demonstrating a broad objective landscape, but no distinct geology with an exact correct-truth physics fit was established.",
+      "relevant_run": "runs/five_body_cuboid_v1/q0_q1_full_v2; runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1",
+      "relevant_metric": {"Q1_correct_hard_attainment": 1.0, "full_flow_final_hard_attainment": 0.11524064334027935}
+    }
+  ],
+  "ranked_failure_mechanisms": [
+    {"rank": 1, "mechanism": "insufficient and observation-nonspecific physics attainment on the high-dimensional frozen-flow state", "hypotheses": ["H6", "H11"]},
+    {"rank": 2, "mechanism": "soft-hard transfer and categorical decision-boundary saturation beginning at reflectivity/TWT", "hypotheses": ["H7", "H8"]},
+    {"rank": 3, "mechanism": "D3 best-iterate destruction and loss of D4 paired causal advantage late in the trajectory", "hypotheses": ["H13"]},
+    {"rank": 4, "mechanism": "wrong-lithology substitution in the full all-class flow trajectory", "hypotheses": ["H9"]},
+    {"rank": 5, "mechanism": "imperfect native prior topology support, secondary rather than cuboid-specific primary cause", "hypotheses": ["H15"]}
+  ],
+  "pytest": {"command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/pytest -q project/geodata-3d-conditional/tests", "passed": 181, "warnings": 13, "failed": 0, "elapsed_seconds": 14.75}
+}

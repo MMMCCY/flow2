@@ -48,3 +48,22 @@
 - 已执行中文 Notebook：`flow2_phase6q_simple_causality_summary_zh.ipynb`，25 cells、
   9/9 code cells 已执行、5 个嵌入 PNG、0 error；SHA256 `ef91707e...7b89`。
 - 人工结论：`docs/PHASE6Q_CAUSALITY_REPORT.md`。正式训练未启动。
+
+## 2026-08-07：D0–D2 implementation gates
+
+- 远端重新确认：`main @ 11caa498b15e6b89891604e9537830b30df504fa`，RTX 4090 D，`.venv` Python 3.10.12；任务开始时工作树 clean。
+- D0 从实际代码冻结 Phase1–4 调用图。确认 canonical seismic 无 Gaussian blur，真正施加到状态上的 physics velocity 为 `-guidance_velocity`。
+- D1 权威目录 `d1_observation_closure_v1`：property/reflectivity/seismic/gravity truth closure 全部逐位相等、truth loss=0，baseline 与 truth 分离。首次 runner metadata KeyError 在创建结果目录前修正，无物理变更。
+- D2 首次目录 `d2_gradient_audit_v1` 保留：float64 FD 与 decoder 均通过，但生产 float32 raw step 小于可表示精度，被保守判为 probe failure。仅放大诊断 probe 后的权威目录为 `d2_gradient_audit_v1_fix1`；五条链相对误差 `2.71e-9`–`1.83e-8`，controller cosine 约1，实际 Euler soft loss 下降。
+
+## 2026-08-07：D3–D5 causal isolation
+
+- D3 `d3_soft_hard_transfer_v1`：L0–L2 soft/hard 约100%；首个分叉为 L3 reflectivity/TWT。L4 seismic 最大/最终 soft `19.09/19.09%`，hard `2.44/-0.80%`；最佳步126有64个 target crossing、0 wrong crossing、gradient hidden energy `99.9996%`；crop=0、projection erasure=0。
+- D4 `d4_frozen_flow_trajectory_v1`：BASE 精确回归既有 fixed-Euler prior sampler。correct BASE_PLUS 最大/最终 paired hard advantage `30.64/11.52%`，zero `30.25/29.94%`，shuffled `30.35/17.52%`；PHYSICS_ONLY 最大仅9.30%。绝对 observed hard loss 的 best 是最终 step32，但末段 paired advantage 恶化，未触发2×预算。
+- D5 `d5_native_geology_audit_v1`：五个 StructuralGeo IntrusionSpec 事件以临时标签9–13恢复 body masks 后合并为 audit label9。8/8 无制导先验样本在条件外含目标，7/8 有尺度相容分量；native correct BASE_PLUS 最大/最终 hard `31.48/14.44%`，且控制组同样改善，复现 cuboid 故障。
+
+## 2026-08-07：D6 synthesis and stop
+
+- 机器裁决：`diagnostic_verdict.json`；人工综合：`DIAGNOSTIC_SYNTHESIS.md`。
+- 项目完整测试命令：`PYTHONDONTWRITEBYTECODE=1 .venv/bin/pytest -q project/geodata-3d-conditional/tests`；结果 `181 passed, 13 warnings in 14.75s`。
+- warnings 均为既有 matplotlib/pyparsing deprecation。正式训练、U-Net 微调、新推理算法与广泛超参扫描均未执行。按 D6 stop condition 停止。

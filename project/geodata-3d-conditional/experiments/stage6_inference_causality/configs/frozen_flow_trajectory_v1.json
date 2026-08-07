@@ -1,0 +1,40 @@
+{
+  "schema": "phase6q_frozen_flow_trajectory_config_v1",
+  "id": "five_body_frozen_flow_trajectory_isolation_v1",
+  "base_config": "project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/five_body_cuboid_v1.json",
+  "checkpoint": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "seed": 42,
+  "n_steps": 32,
+  "modes": ["BASE", "MATCHED_NORM_PHYSICS_ONLY", "BASE_PLUS_PHYSICS", "LATE_PHYSICS", "ENDPOINT_REFERENCE"],
+  "controls": ["correct", "zero", "shuffled_xy"],
+  "controller": {
+    "alpha": 1.0,
+    "max_ratio": 1.0,
+    "tau_start": 0.5,
+    "tau_end": 0.1,
+    "tau_schedule": "cosine",
+    "guidance_start": 0.25,
+    "guidance_schedule": "windowed_sine",
+    "gradient_clip_norm": 1.0,
+    "scaling_mode": "reference_norm_relative_v2",
+    "late_start": 0.75
+  },
+  "endpoint": {
+    "learning_rate": 0.02,
+    "weight_decay": 0.0,
+    "gradient_clip_norm": 1.0,
+    "hard_check_interval": 5,
+    "max_state_norm_to_embedding_norm": 4.0,
+    "temperature_schedule": [
+      {"temperature": 0.5, "steps": 40},
+      {"temperature": 0.2, "steps": 60},
+      {"temperature": 0.1, "steps": 60},
+      {"temperature": 0.05, "steps": 40}
+    ]
+  },
+  "hard_selection": "minimum_observed_hard_seismic_loss_only",
+  "budget_extension_policy": "only_if_final_quarter_systematically_improves",
+  "base_model_trainable": false,
+  "formal_training_authorized": false
+}

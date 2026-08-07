@@ -1,0 +1,29 @@
+{
+  "schema": "phase6q_gradient_audit_config_v1",
+  "id": "five_body_gradient_and_controller_semantics_v1",
+  "base_config": "project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/five_body_cuboid_v1.json",
+  "voxel_config": "project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/voxel_reconstruction_v1.json",
+  "checkpoint": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "checkpoint_embedding_key": "embedding.weight",
+  "seed": 64021,
+  "finite_difference_dtype": "float64",
+  "production_dtype": "float32",
+  "epsilons": [0.01, 0.001, 0.0001, 0.00001],
+  "temperature": 0.2,
+  "negative_gradient_step_norm": 0.0001,
+  "raw_gradient_learning_rate": 0.000001,
+  "normalized_gradient_step_norm": 0.0001,
+  "controller": {
+    "t": 0.5,
+    "n_steps": 32,
+    "requested_ratio": 1.0,
+    "max_ratio": 1.0,
+    "gradient_clip_norm": 1.0,
+    "scaling_mode": "reference_norm_relative_v2"
+  },
+  "decoder_temperatures": [0.5, 0.2, 0.1, 0.05],
+  "flow_unet_loaded_for_decoder_and_controller_only": true,
+  "checkpoint_used_for_flow": false,
+  "formal_training_authorized": false
+}

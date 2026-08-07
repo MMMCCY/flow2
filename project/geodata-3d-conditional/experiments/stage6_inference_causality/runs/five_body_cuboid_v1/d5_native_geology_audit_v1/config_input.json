@@ -1,0 +1,50 @@
+{
+  "base_config": "project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/five_body_cuboid_v1.json",
+  "base_model_trainable": false,
+  "checkpoint": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "controller": {
+    "alpha": 1.0,
+    "gradient_clip_norm": 1.0,
+    "guidance_schedule": "windowed_sine",
+    "guidance_start": 0.25,
+    "late_start": 0.75,
+    "max_ratio": 1.0,
+    "scaling_mode": "reference_norm_relative_v2",
+    "tau_end": 0.1,
+    "tau_schedule": "cosine",
+    "tau_start": 0.5
+  },
+  "controls": [
+    "correct",
+    "zero",
+    "shuffled_xy"
+  ],
+  "formal_training_authorized": false,
+  "id": "structuralgeo_five_intrusion_native_v1",
+  "modes": [
+    "BASE",
+    "MATCHED_NORM_PHYSICS_ONLY",
+    "BASE_PLUS_PHYSICS",
+    "LATE_PHYSICS"
+  ],
+  "n_steps": 32,
+  "native_generator_seed": 20260807,
+  "prior_seeds": [
+    101,
+    202,
+    303,
+    404,
+    505,
+    606,
+    707,
+    808
+  ],
+  "schema": "phase6q_native_geology_audit_config_v1",
+  "shuffle_seed": 6042,
+  "target_support_size_ratio_interval": [
+    0.25,
+    4.0
+  ],
+  "trajectory_seed": 42
+}
