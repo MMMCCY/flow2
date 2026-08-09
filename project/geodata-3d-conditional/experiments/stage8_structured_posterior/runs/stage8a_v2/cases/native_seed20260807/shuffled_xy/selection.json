@@ -1,0 +1,49 @@
+{
+  "baseline_hard_rmse": 0.014794488437473774,
+  "best_hard_rmse": 0.014794488437473774,
+  "best_state": {
+    "bodies": [],
+    "parent_id": null,
+    "proposal_move": "initial",
+    "state_id": "empty"
+  },
+  "birth_center_initializer": {
+    "backward_calls": 45,
+    "birth_proposal_count": 560,
+    "canonical_shape": "ellipsoid",
+    "canonical_size_xyz": [
+      11.0,
+      11.0,
+      10.0
+    ],
+    "condition_violation_count_across_births": 0,
+    "differentiable_forward_calls": 45,
+    "hard_selection_criterion_unchanged": true,
+    "loss_improving_birth_count_vs_empty": 0,
+    "loss_improving_birth_count_vs_parent": 0,
+    "mode": "deterministic_multifield_first_order",
+    "property_fields": [
+      "impedance",
+      "slowness"
+    ],
+    "proposal_guidance_only": true,
+    "ranking_computation_count": 45,
+    "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+    "sensitivity_runtime_seconds": 1.494242462911643,
+    "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+    "truth_fields_present": false,
+    "truth_used": false
+  },
+  "birth_proposals_sha256": "81d0ee5f4c43287b6ee0b5fe0abf26cc694c10b33ccd00884f864f4a9434028c",
+  "fixed_forward_call_budget": 961,
+  "forward_call_count": 961,
+  "hard_attainment": 0.0,
+  "proposal_seed": 8202602,
+  "runtime_seconds": 8.155676669906825,
+  "selected_labels_sha256": "9db7a70f8a196157b22e01f75787852d0fc5bc8a388006d51120b3887a44d3f6",
+  "selected_response_sha256": "5d1f15a243bd90ba05a673e2d9eadf899077ef12e37979a81affd49557588d23",
+  "selection_criterion": "minimum hard observed seismic RMSE only",
+  "selection_frozen_before_retrospective_evaluation": true,
+  "selection_used_truth": false,
+  "sensitivity_rankings_sha256": "f1ebfe15b3476e5ce19c162d8e73cb2439ef68d101be377c48fb815c9d664ee1"
+}

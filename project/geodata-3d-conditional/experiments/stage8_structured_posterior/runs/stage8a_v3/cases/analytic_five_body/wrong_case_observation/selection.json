@@ -1,0 +1,210 @@
+{
+  "baseline_hard_rmse": 0.008885824121534824,
+  "best_hard_rmse": 0.008875811472535133,
+  "best_state": {
+    "bodies": [
+      {
+        "body_id": "body_07000069",
+        "center_x": 26.0,
+        "center_y": 54.0,
+        "center_z": 24.0,
+        "material_label": 9,
+        "orientation_deg": 44.77082947122528,
+        "shape": "ellipsoid",
+        "size_x": 2.3497273868475235,
+        "size_y": 1.614165467655663,
+        "size_z": 6.0
+      }
+    ],
+    "parent_id": "g007_p000069_g006_p000031_g005_p000047_g004_p000019_g003_p000075_g002_p000037_g001_p000019_empty",
+    "proposal_move": "resize",
+    "state_id": "g008_p000009_g007_p000069_g006_p000031_g005_p000047_g004_p000019_g003_p000075_g002_p000037_g001_p000019_empty"
+  },
+  "birth_center_initializer": {
+    "backward_calls": 44,
+    "birth_proposal_count": 570,
+    "canonical_shape": "ellipsoid",
+    "canonical_size_xyz": [
+      11.0,
+      11.0,
+      10.0
+    ],
+    "condition_violation_count_across_births": 0,
+    "differentiable_forward_calls": 44,
+    "hard_selection_criterion_unchanged": true,
+    "loss_improving_birth_count_vs_empty": 0,
+    "loss_improving_birth_count_vs_parent": 0,
+    "mode": "deterministic_multifield_first_order",
+    "property_fields": [
+      "impedance",
+      "slowness"
+    ],
+    "proposal_guidance_only": true,
+    "ranking_computation_count": 44,
+    "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+    "sensitivity_runtime_seconds": 0.8789551317458972,
+    "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+    "truth_fields_present": false,
+    "truth_used": false
+  },
+  "birth_proposals_sha256": "7ee2b9cb11e0808a9ab3ac0af19c8818157f3a09dbdb611f18d6378c6ae1d3a8",
+  "birth_trust_region": {
+    "fixed_scale_ladder": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "full_scale_improving_count": 0,
+    "full_scale_probe_count": 0,
+    "growth_delta_rmse_vs_parent_distribution": {
+      "count": 0,
+      "max": null,
+      "median": null,
+      "min": null,
+      "p05": null,
+      "p95": null
+    },
+    "growth_improving_count": 0,
+    "growth_probe_count": 0,
+    "improving_growth_delta_rmse_vs_parent_distribution": {
+      "count": 0,
+      "max": null,
+      "median": null,
+      "min": null,
+      "p05": null,
+      "p95": null
+    },
+    "mechanism_diagnostics": {
+      "best_nested_scale_distribution": {
+        "count": 570,
+        "max": 0.25,
+        "median": 0.25,
+        "min": 0.25,
+        "p05": 0.25,
+        "p95": 0.25
+      },
+      "smaller_scale_improved_but_full_scale_failed_count": 0,
+      "smallest_scale_improved_then_full_scale_reached_count": 0
+    },
+    "new_center_probe_count": 570,
+    "probe_count": 570,
+    "probe_diagnostics_by_scale": {
+      "0.25": {
+        "delta_rmse_vs_parent_distribution": {
+          "count": 570,
+          "max": 0.0007884027436375618,
+          "median": 0.00036112265661358833,
+          "min": 3.9130449295043945e-05,
+          "p05": 4.491396248340607e-05,
+          "p95": 0.0007022728677839039
+        },
+        "improving_count": 0,
+        "probe_count": 570
+      },
+      "0.5": {
+        "delta_rmse_vs_parent_distribution": {
+          "count": 0,
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "improving_count": 0,
+        "probe_count": 0
+      },
+      "0.75": {
+        "delta_rmse_vs_parent_distribution": {
+          "count": 0,
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "improving_count": 0,
+        "probe_count": 0
+      },
+      "1.0": {
+        "delta_rmse_vs_parent_distribution": {
+          "count": 0,
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "improving_count": 0,
+        "probe_count": 0
+      }
+    },
+    "probe_diagnostics_by_shape": {
+      "dike_hemisphere": {
+        "delta_rmse_vs_parent_distribution": {
+          "count": 277,
+          "max": 0.0007884027436375618,
+          "median": 0.000270061194896698,
+          "min": 3.9130449295043945e-05,
+          "p05": 4.491396248340607e-05,
+          "p95": 0.00047376565635204315
+        },
+        "growth_probe_count": 0,
+        "improving_probe_count": 0,
+        "new_center_probe_count": 277
+      },
+      "ellipsoid": {
+        "delta_rmse_vs_parent_distribution": {
+          "count": 293,
+          "max": 0.0007875896990299225,
+          "median": 0.0004457589238882065,
+          "min": 3.9130449295043945e-05,
+          "p05": 4.847794771194459e-05,
+          "p95": 0.0007449090480804443
+        },
+        "growth_probe_count": 0,
+        "improving_probe_count": 0,
+        "new_center_probe_count": 293
+      }
+    },
+    "slot_allocation": {
+      "growth": 0,
+      "initial_empty": 1,
+      "new_center": 570,
+      "nonbirth": 390,
+      "total_hard_forward_calls": 961
+    },
+    "smallest_scale_improving_count": 0,
+    "trust_region_branches_sha256": "dbfaf8fca52d75693edd8ac596456523f04ee38001c54adf5b6266c0097e2fa5",
+    "trust_region_probes_sha256": "5fd233cca627a27cf3b3553c0027067e760940be4534c53fcf323f1143401a1d",
+    "truth_fields_present": false,
+    "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+  },
+  "fixed_forward_call_budget": 961,
+  "forward_call_count": 961,
+  "frozen_scheduled_move_counts": {
+    "birth": 570,
+    "change_shape": 78,
+    "death": 78,
+    "resize": 78,
+    "rotate": 78,
+    "translate": 78
+  },
+  "hard_attainment": 0.001126811521671378,
+  "proposal_seed": 8202601,
+  "realized_proposal_move_counts": {
+    "birth_trust_region_new_center": 570,
+    "change_shape": 78,
+    "death": 78,
+    "resize": 78,
+    "rotate": 78,
+    "translate": 78
+  },
+  "runtime_seconds": 7.741769050015137,
+  "selected_labels_sha256": "30813eeec40c0fa6f044ca1a275a8feef3c477dc20c2998b5218225d9ad3b4b8",
+  "selected_response_sha256": "918b5ef4f8dd593ea7cf492534519e30c33a19ecb7d58747d9ab29321206b136",
+  "selection_criterion": "minimum hard observed seismic RMSE only",
+  "selection_frozen_before_retrospective_evaluation": true,
+  "selection_used_truth": false,
+  "sensitivity_rankings_sha256": "e16134fdc964e8808a604dfaad885c75a6dd9c7c23f76080786743d4c7f2e1f0"
+}

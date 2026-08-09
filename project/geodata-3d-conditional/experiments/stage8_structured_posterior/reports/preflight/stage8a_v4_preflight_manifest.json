@@ -1,0 +1,129 @@
+{
+  "schema": "stage8a_v4_preflight_manifest_v1",
+  "frozen_artifact_trees": [
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/runs/stage8a_v1",
+      "file_count": 84,
+      "tree_sha256": "13e5a1ef2d4579c7d05b7184698d6a1f7c99db63799003d7711541582bee42fc"
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/reports/stage8a_r1",
+      "file_count": 9,
+      "tree_sha256": "28c202bdc07febb7c4ad971afa158a7d500e3c08a3425d1183667f8ccd4a8931"
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/runs/stage8a_v2",
+      "file_count": 841,
+      "tree_sha256": "be019573ff380147bf66ca3d16338c2a240d694c91a7e85536dccae5ae0f9a8b"
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/reports/stage8a_v2_r2",
+      "file_count": 10,
+      "tree_sha256": "6e76cb1dae6f7c932a699cafb9a8da63d5fd1b9aaee4b047aa87f47bbbb3dde5"
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/runs/stage8a_v3",
+      "file_count": 791,
+      "tree_sha256": "efe11bcb97b63d20555729523e650d179c69f7490db20bdc4de929ea0519b44f"
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/reports/stage8a_v3_r3",
+      "file_count": 5,
+      "tree_sha256": "f5e9afc9877a67bc318dee2882b4dab984e99d1b9785c01526de01f8b5082453"
+    }
+  ],
+  "unchanged_stage8_gate_sha256": "2781042756561e3307f21d3760f8b3993ef59f5a6fd9d0be0f9f4e722e5eabc7",
+  "unchanged_v2_birth_ranker_sha256": "640c50b1718661293bfcbc862a3ee72561f7ea28da6e84dfac42a555b12a662f",
+  "frozen_v3_config_sha256": "9633b2704ba2c87881040f2b831069ecf4bdb6bf367b97142d366ab2fb03857a",
+  "frozen_r3_audit_source_sha256": "20011cf6879374bb4eebe5bb4772178a4747a54d05022b5aba55610ebf260f26",
+  "source_files": [
+    {
+      "path": "project/geodata-3d-conditional/guidance/structured_birth_sensitivity.py",
+      "sha256": "640c50b1718661293bfcbc862a3ee72561f7ea28da6e84dfac42a555b12a662f"
+    },
+    {
+      "path": "project/geodata-3d-conditional/guidance/structured_posterior.py",
+      "sha256": "f113e94bd8f61a72f1729d816bfe89d638fbfb2d03fc7cb14355cbe74c9e604a"
+    },
+    {
+      "path": "project/geodata-3d-conditional/guidance/structured_trust_region.py",
+      "sha256": "c04f289893485670d2e2609a0f45058d8811f0ba14b75f13551ec146ffc40396"
+    },
+    {
+      "path": "project/geodata-3d-conditional/guidance/structured_lineage_search.py",
+      "sha256": "5394f6f95fe7415383ac8110a9220d3e21982a64a48b98fe2447b3d7475aa4d1"
+    },
+    {
+      "path": "project/geodata-3d-conditional/guidance/structured_hard_inference.py",
+      "sha256": "1dc8f51d4615c04adda0443199decdf549fb2d2791d775f9fb9cb5254ab54958"
+    },
+    {
+      "path": "project/geodata-3d-conditional/guidance/seismic.py",
+      "sha256": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee"
+    },
+    {
+      "path": "project/geodata-3d-conditional/guidance/simple_causality.py",
+      "sha256": "c90d6e0bd0fb2b7d5e6844e8da5974aced8c5693d37bf159d70b6735287a0680"
+    },
+    {
+      "path": "project/geodata-3d-conditional/guidance/native_geology_audit.py",
+      "sha256": "50668a82b20a1b31f49b6e2a0bc8df92caf7f168271a2894a6aad0b7acbbd28d"
+    },
+    {
+      "path": "project/geodata-3d-conditional/scripts/stage8/run_stage8.py",
+      "sha256": "00512b03a8b71bfe278cea494155f0927cb6457861212417598c03d580c309ae"
+    },
+    {
+      "path": "project/geodata-3d-conditional/scripts/stage8/audit_stage8a_v3_r3.py",
+      "sha256": "20011cf6879374bb4eebe5bb4772178a4747a54d05022b5aba55610ebf260f26"
+    },
+    {
+      "path": "project/geodata-3d-conditional/tests/test_stage8a_v4_lineage_search.py",
+      "sha256": "5410e41e42ceb142183dbc8c10a05fc4bb7518593c3e3c46a0ccd50b1148944d"
+    },
+    {
+      "path": "project/geodata-3d-conditional/tests/test_stage8_structured_posterior.py",
+      "sha256": "834003a6cd07b60a43d113f2fb6afe6ae0f639fb337cefa9b66b0199b4a2b02b"
+    },
+    {
+      "path": "project/geodata-3d-conditional/tests/test_stage8a_r1_audit.py",
+      "sha256": "99dd682fa9591426cf6a0913c175b035023935662abf76e52ccdc3b27c0ae617"
+    },
+    {
+      "path": "project/geodata-3d-conditional/tests/test_stage8a_v2_r2_audit.py",
+      "sha256": "d8560e06f2f4eb1a13c9308d35fe844d7bf81f5f871cf6c5a60844ab4477d2ed"
+    },
+    {
+      "path": "project/geodata-3d-conditional/tests/test_stage7_structured_hard.py",
+      "sha256": "88655dc336d03b8cfed9fddfad34ddcb4119912cfe3c4363f593f7b279822453"
+    },
+    {
+      "path": "project/geodata-3d-conditional/tests/test_phase4_seismic.py",
+      "sha256": "cd795faa2fe17601952fccc6d9a8bfd54d5a75c48d1ec50266312e3b7d91fea3"
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/configs/stage8a_v4.json",
+      "sha256": "b47197967dc77c841c2c1288d67f759de67427d0c62399d25a323853f822a8dc"
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/STAGE8A_V4_PROTOCOL.md",
+      "sha256": "e6be16e73ee9979bbf711d558cd0a2667608b54f7eb811b701a3df32c1635ac4"
+    }
+  ],
+  "tests_before_freeze": {
+    "full_project_suite": "215 passed, 13 warnings",
+    "relevant_suite": "46 passed",
+    "lineage_api_truth_parameter_present": false,
+    "deterministic_replay_passed": true,
+    "fixed_hard_forward_budget_passed": true,
+    "immediately_following_slot_reallocation_passed": true,
+    "strict_monotonic_stop_on_first_failure_passed": true,
+    "best_reached_state_enters_global_beam_passed": true,
+    "hard_categorical_and_condition_exactness_passed": true
+  },
+  "terminal_rule": {
+    "stage8a_v5_authorized": false,
+    "standalone_stage8a_closes_after_v4_regardless_of_decision": true,
+    "return_to_flow_prior_integration_decision": true
+  }
+}

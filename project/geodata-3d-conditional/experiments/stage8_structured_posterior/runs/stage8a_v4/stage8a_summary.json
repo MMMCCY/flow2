@@ -1,0 +1,3970 @@
+{
+  "acoustic_metadata": {
+    "density_table_sha256": "346f91e28a53677a534fdc295eb14cf62ce469f553f28f477ba816f297f2ce99",
+    "density_unit": "kg m^-3",
+    "description": "Synthetic complete absolute density and P-wave velocity codebook for the first Phase-4c inverse-crime upper bound. Label 9 has deliberately distinctive impedance; values are not site-calibrated petrophysics.",
+    "id": "acoustic_distinct_label9_upper_bound_v1",
+    "impedance_table_sha256": "bd0f62b3d692d8b10105b56266504e6360511191a48eb0ac11acd3b9705c9f8a",
+    "impedance_unit": "kg m^-2 s^-1",
+    "num_categories": 15,
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "scenario": "synthetic_distinct_label9_acoustic_upper_bound",
+    "schema": "phase4_acoustic_codebook_v1",
+    "site_calibrated_petrophysics": false,
+    "slowness_table_sha256": "36342444bc8042852fdb55682247fa42046cfa5ad30963d444406cac7022f37b",
+    "slowness_unit": "s m^-1",
+    "truth_derived": true,
+    "velocity_table_sha256": "f4835d84b5451bb6ec088d543e7a74b9e5e27e289432fa7b545040eaef9171fc",
+    "velocity_unit": "m s^-1"
+  },
+  "analytic": {
+    "arms": [
+      {
+        "baseline_hard_rmse": 0.008885824121534824,
+        "best_hard_rmse": 0.008885824121534824,
+        "best_state": {
+          "bodies": [],
+          "parent_id": null,
+          "proposal_move": "initial",
+          "state_id": "empty"
+        },
+        "birth_center_initializer": {
+          "backward_calls": 45,
+          "birth_proposal_count": 560,
+          "canonical_shape": "ellipsoid",
+          "canonical_size_xyz": [
+            11.0,
+            11.0,
+            10.0
+          ],
+          "condition_violation_count_across_births": 0,
+          "differentiable_forward_calls": 45,
+          "hard_selection_criterion_unchanged": true,
+          "loss_improving_birth_count_vs_empty": 0,
+          "loss_improving_birth_count_vs_parent": 0,
+          "mode": "deterministic_multifield_first_order",
+          "property_fields": [
+            "impedance",
+            "slowness"
+          ],
+          "proposal_guidance_only": true,
+          "ranking_computation_count": 45,
+          "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+          "sensitivity_runtime_seconds": 1.105613595689647,
+          "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+          "truth_fields_present": false,
+          "truth_used": false
+        },
+        "birth_proposals_sha256": "4d22c0ea107e6fb47a822fd69b04f541dc58c347035a1e4c0bd7714b9400a5e3",
+        "body_match_minimum_component_voxels": 20,
+        "body_matches": [],
+        "body_precision": 0.0,
+        "body_recall": 0.0,
+        "case_id": "analytic_five_body",
+        "concealed_target_iou": 0.0,
+        "concealed_target_precision": 0.0,
+        "concealed_target_predicted_volume": 0,
+        "concealed_target_recall": 0.0,
+        "concealed_target_truth_volume": 1280,
+        "edit_volume_from_base": 0,
+        "fixed_forward_call_budget": 961,
+        "forward_call_count": 961,
+        "frozen_scheduled_move_counts": {
+          "birth": 560,
+          "change_shape": 80,
+          "death": 80,
+          "resize": 80,
+          "rotate": 80,
+          "translate": 80
+        },
+        "global_hard_label_accuracy": 0.9951171875,
+        "hard_attainment": 0.0,
+        "hard_condition_violations": 0,
+        "hard_correct_observation_attainment": 0.0,
+        "hard_correct_observation_rmse": 0.008885824121534824,
+        "hard_observed_seismic_rmse": 0.008885824121534824,
+        "lineage_continuation": {
+          "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+          "branch_count": 560,
+          "branch_final_global_beam_survival_count": 40,
+          "branches_reaching_scale": {
+            "0.25": 0,
+            "0.5": 0,
+            "0.75": 0,
+            "1.0": 0
+          },
+          "condition_violation_count": 0,
+          "continuation_attempts": 0,
+          "displaced_scheduled_move_counts": {},
+          "fixed_scale_ladder": [
+            0.25,
+            0.5,
+            0.75,
+            1.0
+          ],
+          "growth_delta_rmse_distribution": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p05": null,
+            "p95": null
+          },
+          "lineage_branches_sha256": "79854bc990d65d5b3a6c2357aed2925609781ea208bdd6b421097398fcdf5392",
+          "lineage_probes_sha256": "ce0bacc61bc86a64c8230057437c646e9f937b74c88f48f51fa35d68bbb5fc32",
+          "locally_improving_scale_0_25_seeds": 0,
+          "maximum_attained_scale_distribution": {
+            "count": 560,
+            "max": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "p05": 0.0,
+            "p95": 0.0
+          },
+          "scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "slot_allocation": {
+            "growth": 0,
+            "initial_empty": 1,
+            "new_center": 560,
+            "nonbirth": 400,
+            "reallocated_existing_slots": 0,
+            "total_hard_forward_calls": 961
+          },
+          "successful_growth_delta_rmse_distribution": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p05": null,
+            "p95": null
+          },
+          "transition_attempts": {
+            "0.25_to_0.50": 0,
+            "0.50_to_0.75": 0,
+            "0.75_to_1.00": 0
+          },
+          "transition_successes": {
+            "0.25_to_0.50": 0,
+            "0.50_to_0.75": 0,
+            "0.75_to_1.00": 0
+          },
+          "truth_fields_present": false,
+          "version": "stage8a_v4_lineage_before_global_beam_v1"
+        },
+        "matched_body_center_error_mean": null,
+        "matched_body_count": 0,
+        "matched_body_relative_size_error_mean": null,
+        "optimized_by": "correct",
+        "per_label": {
+          "-1": {
+            "iou": 1.0,
+            "predicted_volume": 32768,
+            "truth_volume": 32768
+          },
+          "0": {
+            "iou": 0.9943725379853686,
+            "predicted_volume": 227456,
+            "truth_volume": 226176
+          },
+          "9": {
+            "iou": 0.6,
+            "predicted_volume": 1920,
+            "truth_volume": 3200
+          }
+        },
+        "predicted_body_count": 0,
+        "proposal_seed": 8202601,
+        "realized_proposal_move_counts": {
+          "birth_lineage_new_center": 560,
+          "change_shape": 80,
+          "death": 80,
+          "resize": 80,
+          "rotate": 80,
+          "translate": 80
+        },
+        "retrospective_only": true,
+        "runtime_seconds": 9.28969261504244,
+        "selected_labels_sha256": "cb14261739d35446bb67c2932edfa4e9ad30c691a10fc295bc123e3eb3186f13",
+        "selected_response_sha256": "784618e6a429178083d111110da8a32d79cf2c572bfa9dda054af93264cfef25",
+        "selection_criterion": "minimum hard observed seismic RMSE only",
+        "selection_frozen_before_retrospective_evaluation": true,
+        "selection_used_truth": false,
+        "sensitivity_rankings_sha256": "7a34f010c0df9899e8c90cf18e3814fa9aa7d09cdfa5f81df31cf7e476bafb67",
+        "truth_body_count": 2,
+        "truth_fields_present": false,
+        "used_for_selection": false,
+        "wrong_lithology_substitution_volume": 0
+      },
+      {
+        "baseline_hard_rmse": 0.010882876813411713,
+        "best_hard_rmse": 0.010882876813411713,
+        "best_state": {
+          "bodies": [],
+          "parent_id": null,
+          "proposal_move": "initial",
+          "state_id": "empty"
+        },
+        "birth_center_initializer": {
+          "backward_calls": 10,
+          "birth_proposal_count": 420,
+          "canonical_shape": "ellipsoid",
+          "canonical_size_xyz": [
+            11.0,
+            11.0,
+            10.0
+          ],
+          "condition_violation_count_across_births": 0,
+          "differentiable_forward_calls": 10,
+          "hard_selection_criterion_unchanged": true,
+          "loss_improving_birth_count_vs_empty": 0,
+          "loss_improving_birth_count_vs_parent": 0,
+          "mode": "deterministic_multifield_first_order",
+          "property_fields": [
+            "impedance",
+            "slowness"
+          ],
+          "proposal_guidance_only": true,
+          "ranking_computation_count": 10,
+          "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+          "sensitivity_runtime_seconds": 0.2620079378830269,
+          "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+          "truth_fields_present": false,
+          "truth_used": false
+        },
+        "birth_proposals_sha256": "a52b1e4f0e97d73cb35c7fcd54be04aee6a510d0290eec3cf7b7fcb2c2178b75",
+        "body_match_minimum_component_voxels": 20,
+        "body_matches": [],
+        "body_precision": 0.0,
+        "body_recall": 0.0,
+        "case_id": "analytic_five_body",
+        "concealed_target_iou": 0.0,
+        "concealed_target_precision": 0.0,
+        "concealed_target_predicted_volume": 0,
+        "concealed_target_recall": 0.0,
+        "concealed_target_truth_volume": 1280,
+        "edit_volume_from_base": 0,
+        "fixed_forward_call_budget": 961,
+        "forward_call_count": 961,
+        "frozen_scheduled_move_counts": {
+          "birth": 420,
+          "change_shape": 108,
+          "death": 108,
+          "resize": 108,
+          "rotate": 108,
+          "translate": 108
+        },
+        "global_hard_label_accuracy": 0.9951171875,
+        "hard_attainment": 0.0,
+        "hard_condition_violations": 0,
+        "hard_correct_observation_attainment": 0.0,
+        "hard_correct_observation_rmse": 0.008885824121534824,
+        "hard_observed_seismic_rmse": 0.010882876813411713,
+        "lineage_continuation": {
+          "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+          "branch_count": 420,
+          "branch_final_global_beam_survival_count": 8,
+          "branches_reaching_scale": {
+            "0.25": 0,
+            "0.5": 0,
+            "0.75": 0,
+            "1.0": 0
+          },
+          "condition_violation_count": 0,
+          "continuation_attempts": 0,
+          "displaced_scheduled_move_counts": {},
+          "fixed_scale_ladder": [
+            0.25,
+            0.5,
+            0.75,
+            1.0
+          ],
+          "growth_delta_rmse_distribution": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p05": null,
+            "p95": null
+          },
+          "lineage_branches_sha256": "5bb486e8421549a32316bf7de409fe840b95d640f58a6ba31a77aa0418a94b7d",
+          "lineage_probes_sha256": "0ad968bf3a9db82c078809e755953beeac14cd1911243c147b656606177cd0f1",
+          "locally_improving_scale_0_25_seeds": 0,
+          "maximum_attained_scale_distribution": {
+            "count": 420,
+            "max": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "p05": 0.0,
+            "p95": 0.0
+          },
+          "scheduled_move_counts": {
+            "birth": 420,
+            "change_shape": 108,
+            "death": 108,
+            "resize": 108,
+            "rotate": 108,
+            "translate": 108
+          },
+          "slot_allocation": {
+            "growth": 0,
+            "initial_empty": 1,
+            "new_center": 420,
+            "nonbirth": 540,
+            "reallocated_existing_slots": 0,
+            "total_hard_forward_calls": 961
+          },
+          "successful_growth_delta_rmse_distribution": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p05": null,
+            "p95": null
+          },
+          "transition_attempts": {
+            "0.25_to_0.50": 0,
+            "0.50_to_0.75": 0,
+            "0.75_to_1.00": 0
+          },
+          "transition_successes": {
+            "0.25_to_0.50": 0,
+            "0.50_to_0.75": 0,
+            "0.75_to_1.00": 0
+          },
+          "truth_fields_present": false,
+          "version": "stage8a_v4_lineage_before_global_beam_v1"
+        },
+        "matched_body_center_error_mean": null,
+        "matched_body_count": 0,
+        "matched_body_relative_size_error_mean": null,
+        "optimized_by": "zero",
+        "per_label": {
+          "-1": {
+            "iou": 1.0,
+            "predicted_volume": 32768,
+            "truth_volume": 32768
+          },
+          "0": {
+            "iou": 0.9943725379853686,
+            "predicted_volume": 227456,
+            "truth_volume": 226176
+          },
+          "9": {
+            "iou": 0.6,
+            "predicted_volume": 1920,
+            "truth_volume": 3200
+          }
+        },
+        "predicted_body_count": 0,
+        "proposal_seed": 8202601,
+        "realized_proposal_move_counts": {
+          "birth_lineage_new_center": 420,
+          "change_shape": 108,
+          "death": 108,
+          "resize": 108,
+          "rotate": 108,
+          "translate": 108
+        },
+        "retrospective_only": true,
+        "runtime_seconds": 6.687476422986947,
+        "selected_labels_sha256": "cb14261739d35446bb67c2932edfa4e9ad30c691a10fc295bc123e3eb3186f13",
+        "selected_response_sha256": "784618e6a429178083d111110da8a32d79cf2c572bfa9dda054af93264cfef25",
+        "selection_criterion": "minimum hard observed seismic RMSE only",
+        "selection_frozen_before_retrospective_evaluation": true,
+        "selection_used_truth": false,
+        "sensitivity_rankings_sha256": "37b4567ab4c63210b0b45aa5bcd4928d6743dd04f14b6280ce89415bceb1c68f",
+        "truth_body_count": 2,
+        "truth_fields_present": false,
+        "used_for_selection": false,
+        "wrong_lithology_substitution_volume": 0
+      },
+      {
+        "baseline_hard_rmse": 0.017632272094488144,
+        "best_hard_rmse": 0.017632272094488144,
+        "best_state": {
+          "bodies": [],
+          "parent_id": null,
+          "proposal_move": "initial",
+          "state_id": "empty"
+        },
+        "birth_center_initializer": {
+          "backward_calls": 10,
+          "birth_proposal_count": 272,
+          "canonical_shape": "ellipsoid",
+          "canonical_size_xyz": [
+            11.0,
+            11.0,
+            10.0
+          ],
+          "condition_violation_count_across_births": 0,
+          "differentiable_forward_calls": 10,
+          "hard_selection_criterion_unchanged": true,
+          "loss_improving_birth_count_vs_empty": 0,
+          "loss_improving_birth_count_vs_parent": 0,
+          "mode": "deterministic_multifield_first_order",
+          "property_fields": [
+            "impedance",
+            "slowness"
+          ],
+          "proposal_guidance_only": true,
+          "ranking_computation_count": 10,
+          "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+          "sensitivity_runtime_seconds": 0.33966867404524237,
+          "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+          "truth_fields_present": false,
+          "truth_used": false
+        },
+        "birth_proposals_sha256": "b91a3cf308b1772b0406fe24c26d2feecb042fbacca47f84400573e911bf1305",
+        "body_match_minimum_component_voxels": 20,
+        "body_matches": [],
+        "body_precision": 0.0,
+        "body_recall": 0.0,
+        "case_id": "analytic_five_body",
+        "concealed_target_iou": 0.0,
+        "concealed_target_precision": 0.0,
+        "concealed_target_predicted_volume": 0,
+        "concealed_target_recall": 0.0,
+        "concealed_target_truth_volume": 1280,
+        "edit_volume_from_base": 0,
+        "fixed_forward_call_budget": 961,
+        "forward_call_count": 961,
+        "frozen_scheduled_move_counts": {
+          "birth": 272,
+          "change_shape": 137,
+          "death": 139,
+          "resize": 137,
+          "rotate": 139,
+          "translate": 136
+        },
+        "global_hard_label_accuracy": 0.9951171875,
+        "hard_attainment": 0.0,
+        "hard_condition_violations": 0,
+        "hard_correct_observation_attainment": 0.0,
+        "hard_correct_observation_rmse": 0.008885824121534824,
+        "hard_observed_seismic_rmse": 0.017632272094488144,
+        "lineage_continuation": {
+          "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+          "branch_count": 272,
+          "branch_final_global_beam_survival_count": 12,
+          "branches_reaching_scale": {
+            "0.25": 0,
+            "0.5": 0,
+            "0.75": 0,
+            "1.0": 0
+          },
+          "condition_violation_count": 0,
+          "continuation_attempts": 0,
+          "displaced_scheduled_move_counts": {},
+          "fixed_scale_ladder": [
+            0.25,
+            0.5,
+            0.75,
+            1.0
+          ],
+          "growth_delta_rmse_distribution": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p05": null,
+            "p95": null
+          },
+          "lineage_branches_sha256": "411f253bfc554abcae4617add10950292e3b8d6f6ddfedeaf6e9c32fbd11cd0a",
+          "lineage_probes_sha256": "aa8e49ca0b01e277a5bbd117c4c43d0b970a0226d84dcc7d1cffa420d61ce404",
+          "locally_improving_scale_0_25_seeds": 0,
+          "maximum_attained_scale_distribution": {
+            "count": 272,
+            "max": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "p05": 0.0,
+            "p95": 0.0
+          },
+          "scheduled_move_counts": {
+            "birth": 272,
+            "change_shape": 137,
+            "death": 139,
+            "resize": 137,
+            "rotate": 139,
+            "translate": 136
+          },
+          "slot_allocation": {
+            "growth": 0,
+            "initial_empty": 1,
+            "new_center": 272,
+            "nonbirth": 688,
+            "reallocated_existing_slots": 0,
+            "total_hard_forward_calls": 961
+          },
+          "successful_growth_delta_rmse_distribution": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p05": null,
+            "p95": null
+          },
+          "transition_attempts": {
+            "0.25_to_0.50": 0,
+            "0.50_to_0.75": 0,
+            "0.75_to_1.00": 0
+          },
+          "transition_successes": {
+            "0.25_to_0.50": 0,
+            "0.50_to_0.75": 0,
+            "0.75_to_1.00": 0
+          },
+          "truth_fields_present": false,
+          "version": "stage8a_v4_lineage_before_global_beam_v1"
+        },
+        "matched_body_center_error_mean": null,
+        "matched_body_count": 0,
+        "matched_body_relative_size_error_mean": null,
+        "optimized_by": "shuffled_xy",
+        "per_label": {
+          "-1": {
+            "iou": 1.0,
+            "predicted_volume": 32768,
+            "truth_volume": 32768
+          },
+          "0": {
+            "iou": 0.9943725379853686,
+            "predicted_volume": 227456,
+            "truth_volume": 226176
+          },
+          "9": {
+            "iou": 0.6,
+            "predicted_volume": 1920,
+            "truth_volume": 3200
+          }
+        },
+        "predicted_body_count": 0,
+        "proposal_seed": 8202601,
+        "realized_proposal_move_counts": {
+          "birth_lineage_new_center": 272,
+          "change_shape": 137,
+          "death": 139,
+          "resize": 137,
+          "rotate": 139,
+          "translate": 136
+        },
+        "retrospective_only": true,
+        "runtime_seconds": 5.537589562009089,
+        "selected_labels_sha256": "cb14261739d35446bb67c2932edfa4e9ad30c691a10fc295bc123e3eb3186f13",
+        "selected_response_sha256": "784618e6a429178083d111110da8a32d79cf2c572bfa9dda054af93264cfef25",
+        "selection_criterion": "minimum hard observed seismic RMSE only",
+        "selection_frozen_before_retrospective_evaluation": true,
+        "selection_used_truth": false,
+        "sensitivity_rankings_sha256": "e5d4c17630f18f4f222e1a156867525b66281974322e44b72998b1ecee8fb53f",
+        "truth_body_count": 2,
+        "truth_fields_present": false,
+        "used_for_selection": false,
+        "wrong_lithology_substitution_volume": 0
+      },
+      {
+        "baseline_hard_rmse": 0.008885824121534824,
+        "best_hard_rmse": 0.008824818767607212,
+        "best_state": {
+          "bodies": [
+            {
+              "body_id": "body_03000016",
+              "center_x": 24.0,
+              "center_y": 53.0,
+              "center_z": 27.1693215698212,
+              "material_label": 9,
+              "orientation_deg": 116.46049245717421,
+              "shape": "ellipsoid",
+              "size_x": 6.376754242393801,
+              "size_y": 6.0,
+              "size_z": 1.5263450167650299
+            }
+          ],
+          "parent_id": "g008_p000028_g007_p000015_g006_p000021_g005_p000005_g004_p000086_g003_p000016_g002_p000007_g001_p000055_empty",
+          "proposal_move": "resize",
+          "state_id": "g009_p000069_g008_p000028_g007_p000015_g006_p000021_g005_p000005_g004_p000086_g003_p000016_g002_p000007_g001_p000055_empty"
+        },
+        "birth_center_initializer": {
+          "backward_calls": 40,
+          "birth_proposal_count": 410,
+          "canonical_shape": "ellipsoid",
+          "canonical_size_xyz": [
+            11.0,
+            11.0,
+            10.0
+          ],
+          "condition_violation_count_across_births": 0,
+          "differentiable_forward_calls": 40,
+          "hard_selection_criterion_unchanged": true,
+          "loss_improving_birth_count_vs_empty": 5,
+          "loss_improving_birth_count_vs_parent": 0,
+          "mode": "deterministic_multifield_first_order",
+          "property_fields": [
+            "impedance",
+            "slowness"
+          ],
+          "proposal_guidance_only": true,
+          "ranking_computation_count": 40,
+          "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+          "sensitivity_runtime_seconds": 0.8816963077988476,
+          "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+          "truth_fields_present": false,
+          "truth_used": false
+        },
+        "birth_proposals_sha256": "3c06600ab3e3f0d1ed6e6393ac3730e2e37f120069f236dc98141e3761f825fe",
+        "body_match_minimum_component_voxels": 20,
+        "body_matches": [],
+        "body_precision": 0.0,
+        "body_recall": 0.0,
+        "case_id": "analytic_five_body",
+        "concealed_target_iou": 0.0,
+        "concealed_target_precision": 0.0,
+        "concealed_target_predicted_volume": 27,
+        "concealed_target_recall": 0.0,
+        "concealed_target_truth_volume": 1280,
+        "edit_volume_from_base": 27,
+        "fixed_forward_call_budget": 961,
+        "forward_call_count": 961,
+        "frozen_scheduled_move_counts": {
+          "birth": 410,
+          "change_shape": 110,
+          "death": 110,
+          "resize": 110,
+          "rotate": 110,
+          "translate": 110
+        },
+        "global_hard_label_accuracy": 0.9950141906738281,
+        "hard_attainment": 0.006865469436848959,
+        "hard_condition_violations": 0,
+        "hard_correct_observation_attainment": -0.16765542604658745,
+        "hard_correct_observation_rmse": 0.010375580750405788,
+        "hard_observed_seismic_rmse": 0.008824818767607212,
+        "lineage_continuation": {
+          "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+          "branch_count": 410,
+          "branch_final_global_beam_survival_count": 16,
+          "branches_reaching_scale": {
+            "0.25": 0,
+            "0.5": 0,
+            "0.75": 0,
+            "1.0": 0
+          },
+          "condition_violation_count": 0,
+          "continuation_attempts": 0,
+          "displaced_scheduled_move_counts": {},
+          "fixed_scale_ladder": [
+            0.25,
+            0.5,
+            0.75,
+            1.0
+          ],
+          "growth_delta_rmse_distribution": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p05": null,
+            "p95": null
+          },
+          "lineage_branches_sha256": "d0f61d4debff9493ceac12a158e7fd8e231b78bddc9ec5a1cab725e89dffe9b7",
+          "lineage_probes_sha256": "77d3ec316b2429146fc5bb4526123163005ccdf47a1badd513c2281aa57bb654",
+          "locally_improving_scale_0_25_seeds": 0,
+          "maximum_attained_scale_distribution": {
+            "count": 410,
+            "max": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "p05": 0.0,
+            "p95": 0.0
+          },
+          "scheduled_move_counts": {
+            "birth": 410,
+            "change_shape": 110,
+            "death": 110,
+            "resize": 110,
+            "rotate": 110,
+            "translate": 110
+          },
+          "slot_allocation": {
+            "growth": 0,
+            "initial_empty": 1,
+            "new_center": 410,
+            "nonbirth": 550,
+            "reallocated_existing_slots": 0,
+            "total_hard_forward_calls": 961
+          },
+          "successful_growth_delta_rmse_distribution": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p05": null,
+            "p95": null
+          },
+          "transition_attempts": {
+            "0.25_to_0.50": 0,
+            "0.50_to_0.75": 0,
+            "0.75_to_1.00": 0
+          },
+          "transition_successes": {
+            "0.25_to_0.50": 0,
+            "0.50_to_0.75": 0,
+            "0.75_to_1.00": 0
+          },
+          "truth_fields_present": false,
+          "version": "stage8a_v4_lineage_before_global_beam_v1"
+        },
+        "matched_body_center_error_mean": null,
+        "matched_body_count": 0,
+        "matched_body_relative_size_error_mean": null,
+        "optimized_by": "wrong_case_observation",
+        "per_label": {
+          "-1": {
+            "iou": 1.0,
+            "predicted_volume": 32768,
+            "truth_volume": 32768
+          },
+          "0": {
+            "iou": 0.9942538337084975,
+            "predicted_volume": 227429,
+            "truth_volume": 226176
+          },
+          "9": {
+            "iou": 0.5949798574527425,
+            "predicted_volume": 1947,
+            "truth_volume": 3200
+          }
+        },
+        "predicted_body_count": 1,
+        "proposal_seed": 8202601,
+        "realized_proposal_move_counts": {
+          "birth_lineage_new_center": 410,
+          "change_shape": 110,
+          "death": 110,
+          "resize": 110,
+          "rotate": 110,
+          "translate": 110
+        },
+        "retrospective_only": true,
+        "runtime_seconds": 7.301555310958065,
+        "selected_labels_sha256": "0d7efee9270c235b7371b127d4be269abe954cbe9e427d2c17d4cf1f9d66fae7",
+        "selected_response_sha256": "415502379844e42fb1051e497ccf70410df25495ba258237922c913ada7e9307",
+        "selection_criterion": "minimum hard observed seismic RMSE only",
+        "selection_frozen_before_retrospective_evaluation": true,
+        "selection_used_truth": false,
+        "sensitivity_rankings_sha256": "e7104545ab5e55a6d5557d565675ff3118c302726c34ac8137de3e67f46c87c9",
+        "truth_body_count": 2,
+        "truth_fields_present": false,
+        "used_for_selection": false,
+        "wrong_lithology_substitution_volume": 0
+      }
+    ],
+    "base_correct_observation_rmse": 0.008885824121534824,
+    "case_id": "analytic_five_body",
+    "correct_evaluation_ranking": [
+      "correct",
+      "shuffled_xy",
+      "zero",
+      "wrong_case_observation"
+    ],
+    "correct_optimized_is_strictly_best_against_correct": false,
+    "stage7_exact_library_regression": {
+      "best_hard_rmse": 0.0,
+      "forward_call_count": 889,
+      "regression_only_not_continuous_gate": true,
+      "selection_used_truth": false
+    }
+  },
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "completed_at_utc": "2026-08-09T03:26:45.649898+00:00",
+  "condition_sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41",
+  "config_sha256": "b47197967dc77c841c2c1288d67f759de67427d0c62399d25a323853f822a8dc",
+  "correct_arm_birth_diagnostics": {
+    "analytic_five_body": {
+      "birth_proposal_count": 560,
+      "delta_rmse_lt_zero_vs_empty_count": 0,
+      "delta_rmse_lt_zero_vs_parent_count": 0,
+      "growth_delta_rmse_lt_zero_vs_parent_count": null,
+      "growth_delta_rmse_vs_parent_distribution": null,
+      "growth_probe_count": null,
+      "smallest_scale_delta_rmse_lt_zero_vs_parent_count": null,
+      "v2_full_failed_v3_smallest_improved_count": null,
+      "v4_branch_final_global_beam_survival_count": 40,
+      "v4_continuation_attempts": 0,
+      "v4_locally_improving_scale_0_25_seeds": 0,
+      "v4_slot_allocation": {
+        "growth": 0,
+        "initial_empty": 1,
+        "new_center": 560,
+        "nonbirth": 400,
+        "reallocated_existing_slots": 0,
+        "total_hard_forward_calls": 961
+      },
+      "v4_transition_attempts": {
+        "0.25_to_0.50": 0,
+        "0.50_to_0.75": 0,
+        "0.75_to_1.00": 0
+      },
+      "v4_transition_successes": {
+        "0.25_to_0.50": 0,
+        "0.50_to_0.75": 0,
+        "0.75_to_1.00": 0
+      }
+    },
+    "native_seed20260807": {
+      "birth_proposal_count": 430,
+      "delta_rmse_lt_zero_vs_empty_count": 1,
+      "delta_rmse_lt_zero_vs_parent_count": 0,
+      "growth_delta_rmse_lt_zero_vs_parent_count": null,
+      "growth_delta_rmse_vs_parent_distribution": null,
+      "growth_probe_count": null,
+      "smallest_scale_delta_rmse_lt_zero_vs_parent_count": null,
+      "v2_full_failed_v3_smallest_improved_count": null,
+      "v4_branch_final_global_beam_survival_count": 21,
+      "v4_continuation_attempts": 0,
+      "v4_locally_improving_scale_0_25_seeds": 0,
+      "v4_slot_allocation": {
+        "growth": 0,
+        "initial_empty": 1,
+        "new_center": 430,
+        "nonbirth": 530,
+        "reallocated_existing_slots": 0,
+        "total_hard_forward_calls": 961
+      },
+      "v4_transition_attempts": {
+        "0.25_to_0.50": 0,
+        "0.50_to_0.75": 0,
+        "0.75_to_1.00": 0
+      },
+      "v4_transition_successes": {
+        "0.25_to_0.50": 0,
+        "0.50_to_0.75": 0,
+        "0.75_to_1.00": 0
+      }
+    },
+    "native_seed20260808": {
+      "birth_proposal_count": 310,
+      "delta_rmse_lt_zero_vs_empty_count": 0,
+      "delta_rmse_lt_zero_vs_parent_count": 0,
+      "growth_delta_rmse_lt_zero_vs_parent_count": null,
+      "growth_delta_rmse_vs_parent_distribution": null,
+      "growth_probe_count": null,
+      "smallest_scale_delta_rmse_lt_zero_vs_parent_count": null,
+      "v2_full_failed_v3_smallest_improved_count": null,
+      "v4_branch_final_global_beam_survival_count": 8,
+      "v4_continuation_attempts": 0,
+      "v4_locally_improving_scale_0_25_seeds": 0,
+      "v4_slot_allocation": {
+        "growth": 0,
+        "initial_empty": 1,
+        "new_center": 310,
+        "nonbirth": 650,
+        "reallocated_existing_slots": 0,
+        "total_hard_forward_calls": 961
+      },
+      "v4_transition_attempts": {
+        "0.25_to_0.50": 0,
+        "0.50_to_0.75": 0,
+        "0.75_to_1.00": 0
+      },
+      "v4_transition_successes": {
+        "0.25_to_0.50": 0,
+        "0.50_to_0.75": 0,
+        "0.75_to_1.00": 0
+      }
+    },
+    "native_seed20260809": {
+      "birth_proposal_count": 570,
+      "delta_rmse_lt_zero_vs_empty_count": 0,
+      "delta_rmse_lt_zero_vs_parent_count": 0,
+      "growth_delta_rmse_lt_zero_vs_parent_count": null,
+      "growth_delta_rmse_vs_parent_distribution": null,
+      "growth_probe_count": null,
+      "smallest_scale_delta_rmse_lt_zero_vs_parent_count": null,
+      "v2_full_failed_v3_smallest_improved_count": null,
+      "v4_branch_final_global_beam_survival_count": 32,
+      "v4_continuation_attempts": 0,
+      "v4_locally_improving_scale_0_25_seeds": 0,
+      "v4_slot_allocation": {
+        "growth": 0,
+        "initial_empty": 1,
+        "new_center": 570,
+        "nonbirth": 390,
+        "reallocated_existing_slots": 0,
+        "total_hard_forward_calls": 961
+      },
+      "v4_transition_attempts": {
+        "0.25_to_0.50": 0,
+        "0.50_to_0.75": 0,
+        "0.75_to_1.00": 0
+      },
+      "v4_transition_successes": {
+        "0.25_to_0.50": 0,
+        "0.50_to_0.75": 0,
+        "0.75_to_1.00": 0
+      }
+    }
+  },
+  "decision": "FAIL_STAGE8A_STOP_BEFORE_STAGE8B",
+  "exact_command": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/bin/python project/geodata-3d-conditional/scripts/stage8/run_stage8.py --stage 8a --config project/geodata-3d-conditional/experiments/stage8_structured_posterior/configs/stage8a_v4.json --output-dir project/geodata-3d-conditional/experiments/stage8_structured_posterior/runs/stage8a_v4 --device cuda",
+  "gates": {
+    "all_required_cases_present": true,
+    "analytic_hidden_iou": false,
+    "analytic_hidden_recall": false,
+    "conditions_exact": true,
+    "correct_specificity": false,
+    "geometry_improves_from_empty": false,
+    "identical_budgets": true,
+    "native_mean_iou": false,
+    "native_mean_recall": false,
+    "truth_blind_selection": true,
+    "unknown_count": false
+  },
+  "git_branch": "main",
+  "git_sha": "3394145674e04e3698952064f486cfa31eb876f9",
+  "git_status": "M project/geodata-3d-conditional/docs/DEVELOPMENT_HANDOFF.md\n M project/geodata-3d-conditional/flow2_phase6p_inference_limit_summary_zh.ipynb\n M project/geodata-3d-conditional/flow2_phase6q_simple_causality_summary_zh.ipynb\n?? project/geodata-3d-conditional/AGENTS.md\n?? project/geodata-3d-conditional/experiments/stage8_structured_posterior/\n?? project/geodata-3d-conditional/guidance/structured_birth_sensitivity.py\n?? project/geodata-3d-conditional/guidance/structured_lineage_search.py\n?? project/geodata-3d-conditional/guidance/structured_posterior.py\n?? project/geodata-3d-conditional/guidance/structured_trust_region.py\n?? project/geodata-3d-conditional/scripts/stage8/\n?? project/geodata-3d-conditional/tests/test_stage8_structured_posterior.py\n?? project/geodata-3d-conditional/tests/test_stage8a_r1_audit.py\n?? project/geodata-3d-conditional/tests/test_stage8a_v2_r2_audit.py\n?? project/geodata-3d-conditional/tests/test_stage8a_v4_lineage_search.py",
+  "native_cases": [
+    {
+      "arms": [
+        {
+          "baseline_hard_rmse": 0.014674325473606586,
+          "best_hard_rmse": 0.014664094895124435,
+          "best_state": {
+            "bodies": [
+              {
+                "body_id": "body_05000079",
+                "center_x": 10.0,
+                "center_y": 42.0,
+                "center_z": 23.097017461190653,
+                "material_label": 9,
+                "orientation_deg": 96.59850712722822,
+                "shape": "dike_hemisphere",
+                "size_x": 6.0,
+                "size_y": 1.9806257001525172,
+                "size_z": 2.076045502793908
+              }
+            ],
+            "parent_id": "g006_p000044_g005_p000079_g004_p000031_g003_p000069_g002_p000031_g001_p000075_empty",
+            "proposal_move": "resize",
+            "state_id": "g007_p000063_g006_p000044_g005_p000079_g004_p000031_g003_p000069_g002_p000031_g001_p000075_empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 43,
+            "birth_proposal_count": 430,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 43,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 1,
+            "loss_improving_birth_count_vs_parent": 0,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 43,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 1.0675142696127295,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "3fac0170475a77a8622dde47009843f1654e8dcab8fbdc1b40a27e93a7e23b07",
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260807",
+          "concealed_target_iou": 0.008492569002123142,
+          "concealed_target_precision": 1.0,
+          "concealed_target_predicted_volume": 8,
+          "concealed_target_recall": 0.008492569002123142,
+          "concealed_target_truth_volume": 942,
+          "edit_volume_from_base": 8,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 430,
+            "change_shape": 106,
+            "death": 106,
+            "resize": 106,
+            "rotate": 106,
+            "translate": 106
+          },
+          "global_hard_label_accuracy": 0.9921188354492188,
+          "hard_attainment": 0.000697175382987969,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.000697175382987969,
+          "hard_correct_observation_rmse": 0.014664094895124435,
+          "hard_observed_seismic_rmse": 0.01466409582644701,
+          "lineage_continuation": {
+            "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+            "branch_count": 430,
+            "branch_final_global_beam_survival_count": 21,
+            "branches_reaching_scale": {
+              "0.25": 0,
+              "0.5": 0,
+              "0.75": 0,
+              "1.0": 0
+            },
+            "condition_violation_count": 0,
+            "continuation_attempts": 0,
+            "displaced_scheduled_move_counts": {},
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "lineage_branches_sha256": "df4c0839a718e5a657d6b439ebcad6c4d5fef024184bd40dd1cad53dcda4f248",
+            "lineage_probes_sha256": "0848957be110184e7b6352315b037bfa6046c636fbdec1f05bec7d79623a74e2",
+            "locally_improving_scale_0_25_seeds": 0,
+            "maximum_attained_scale_distribution": {
+              "count": 430,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "scheduled_move_counts": {
+              "birth": 430,
+              "change_shape": 106,
+              "death": 106,
+              "resize": 106,
+              "rotate": 106,
+              "translate": 106
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 430,
+              "nonbirth": 530,
+              "reallocated_existing_slots": 0,
+              "total_hard_forward_calls": 961
+            },
+            "successful_growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "transition_attempts": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "transition_successes": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "truth_fields_present": false,
+            "version": "stage8a_v4_lineage_before_global_beam_v1"
+          },
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "correct",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9909916587818246,
+              "predicted_volume": 229343,
+              "truth_volume": 227277
+            },
+            "9": {
+              "iou": 0.01572177227251072,
+              "predicted_volume": 33,
+              "truth_volume": 2099
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202602,
+          "realized_proposal_move_counts": {
+            "birth_lineage_new_center": 430,
+            "change_shape": 106,
+            "death": 106,
+            "resize": 106,
+            "rotate": 106,
+            "translate": 106
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 8.110265800962225,
+          "selected_labels_sha256": "e5338fec5dd171442b29f3c36bd8e6cd2e274a74662060e3224733bcd8f0527b",
+          "selected_response_sha256": "da60f237183bf3d23c559d8cc2e3f4990d3af766166503427119ffbd525032db",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "6fa18edf8fdddd113f0d7a7c5c059a85c9a93cd5559b7f4d921b324992ec838b",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.0013306159526109695,
+          "best_hard_rmse": 0.0013306159526109695,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 45,
+            "birth_proposal_count": 560,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 45,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 1,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 45,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 0.950266546336934,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "173a954b7bc44d53ff77982b7623786ef914d641a47131bc601235f2f1679788",
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260807",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 942,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "global_hard_label_accuracy": 0.9920883178710938,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.014674325473606586,
+          "hard_observed_seismic_rmse": 0.0013306159526109695,
+          "lineage_continuation": {
+            "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+            "branch_count": 560,
+            "branch_final_global_beam_survival_count": 40,
+            "branches_reaching_scale": {
+              "0.25": 1,
+              "0.5": 0,
+              "0.75": 0,
+              "1.0": 0
+            },
+            "condition_violation_count": 0,
+            "continuation_attempts": 1,
+            "displaced_scheduled_move_counts": {
+              "death": 1
+            },
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "growth_delta_rmse_distribution": {
+              "count": 1,
+              "max": 0.0011158052366226912,
+              "median": 0.0011158052366226912,
+              "min": 0.0011158052366226912,
+              "p05": 0.0011158052366226912,
+              "p95": 0.0011158052366226912
+            },
+            "lineage_branches_sha256": "d4de84981efad790ae5deba0b19c97c2532acdb8ee88518f104b78e99c0c1bcf",
+            "lineage_probes_sha256": "0b5b33d00a79e2bb400367182505aea8570bd73f147d7cf7fcf16cb19ad7da0f",
+            "locally_improving_scale_0_25_seeds": 1,
+            "maximum_attained_scale_distribution": {
+              "count": 560,
+              "max": 0.25,
+              "median": 0.0,
+              "min": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "scheduled_move_counts": {
+              "birth": 560,
+              "change_shape": 80,
+              "death": 80,
+              "resize": 80,
+              "rotate": 80,
+              "translate": 80
+            },
+            "slot_allocation": {
+              "growth": 1,
+              "initial_empty": 1,
+              "new_center": 560,
+              "nonbirth": 399,
+              "reallocated_existing_slots": 1,
+              "total_hard_forward_calls": 961
+            },
+            "successful_growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "transition_attempts": {
+              "0.25_to_0.50": 1,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "transition_successes": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "truth_fields_present": false,
+            "version": "stage8a_v4_lineage_before_global_beam_v1"
+          },
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "zero",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9909570919682059,
+              "predicted_volume": 229351,
+              "truth_volume": 227277
+            },
+            "9": {
+              "iou": 0.011910433539780848,
+              "predicted_volume": 25,
+              "truth_volume": 2099
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202602,
+          "realized_proposal_move_counts": {
+            "birth_lineage_growth": 1,
+            "birth_lineage_new_center": 560,
+            "change_shape": 80,
+            "death": 79,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 7.90346819604747,
+          "selected_labels_sha256": "9db7a70f8a196157b22e01f75787852d0fc5bc8a388006d51120b3887a44d3f6",
+          "selected_response_sha256": "5d1f15a243bd90ba05a673e2d9eadf899077ef12e37979a81affd49557588d23",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "7404bee814f3b70c184b088ce15e67d70d531127b8f31511df9122c0ba2e08b7",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.014794488437473774,
+          "best_hard_rmse": 0.014794488437473774,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 45,
+            "birth_proposal_count": 560,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 45,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 0,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 45,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 1.49332741193939,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "ee2022146358a03b530837ca2d494c34d9cc852a233a621b9b6850792984e570",
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260807",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 942,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "global_hard_label_accuracy": 0.9920883178710938,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.014674325473606586,
+          "hard_observed_seismic_rmse": 0.014794488437473774,
+          "lineage_continuation": {
+            "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+            "branch_count": 560,
+            "branch_final_global_beam_survival_count": 40,
+            "branches_reaching_scale": {
+              "0.25": 0,
+              "0.5": 0,
+              "0.75": 0,
+              "1.0": 0
+            },
+            "condition_violation_count": 0,
+            "continuation_attempts": 0,
+            "displaced_scheduled_move_counts": {},
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "lineage_branches_sha256": "6cb99d84bdf331bf24aa59acc0d9cd2bdd6d111077f9e05beb0a97b3c29ac49f",
+            "lineage_probes_sha256": "2a0fadbe48592b93b57266d8018a0f66de0b45803d9b94a534d2e189d7919f17",
+            "locally_improving_scale_0_25_seeds": 0,
+            "maximum_attained_scale_distribution": {
+              "count": 560,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "scheduled_move_counts": {
+              "birth": 560,
+              "change_shape": 80,
+              "death": 80,
+              "resize": 80,
+              "rotate": 80,
+              "translate": 80
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 560,
+              "nonbirth": 400,
+              "reallocated_existing_slots": 0,
+              "total_hard_forward_calls": 961
+            },
+            "successful_growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "transition_attempts": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "transition_successes": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "truth_fields_present": false,
+            "version": "stage8a_v4_lineage_before_global_beam_v1"
+          },
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "shuffled_xy",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9909570919682059,
+              "predicted_volume": 229351,
+              "truth_volume": 227277
+            },
+            "9": {
+              "iou": 0.011910433539780848,
+              "predicted_volume": 25,
+              "truth_volume": 2099
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202602,
+          "realized_proposal_move_counts": {
+            "birth_lineage_new_center": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 8.463010912993923,
+          "selected_labels_sha256": "9db7a70f8a196157b22e01f75787852d0fc5bc8a388006d51120b3887a44d3f6",
+          "selected_response_sha256": "5d1f15a243bd90ba05a673e2d9eadf899077ef12e37979a81affd49557588d23",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "21ea997a8593c19ced006bb03fced61222a8e460a7d485239abf793d6936153b",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.016025545075535774,
+          "best_hard_rmse": 0.01602325588464737,
+          "best_state": {
+            "bodies": [
+              {
+                "body_id": "body_09000011",
+                "center_x": 11.0,
+                "center_y": 10.0,
+                "center_z": 19.376899601034914,
+                "material_label": 9,
+                "orientation_deg": 129.71501866530133,
+                "shape": "dike_hemisphere",
+                "size_x": 1.7931381093179988,
+                "size_y": 1.6366575803936203,
+                "size_z": 2.197169015978345
+              }
+            ],
+            "parent_id": "g009_p000011_g008_p000001_g007_p000005_g006_p000001_g005_p000053_g004_p000025_g003_p000067_g002_p000031_g001_p000023_empty",
+            "proposal_move": "translate",
+            "state_id": "g010_p000068_g009_p000011_g008_p000001_g007_p000005_g006_p000001_g005_p000053_g004_p000025_g003_p000067_g002_p000031_g001_p000023_empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 45,
+            "birth_proposal_count": 560,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 45,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 0,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 45,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 1.155085472157225,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "af3f063b98f52e037e51da43179ce6f4fb722bb38d8629dbbc9649ad3f7f1f35",
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260807",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 2,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 942,
+          "edit_volume_from_base": 2,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "global_hard_label_accuracy": 0.992095947265625,
+          "hard_attainment": 0.0001428463666985902,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.00017040654559152824,
+          "hard_correct_observation_rmse": 0.014671824872493744,
+          "hard_observed_seismic_rmse": 0.01602325588464737,
+          "lineage_continuation": {
+            "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+            "branch_count": 560,
+            "branch_final_global_beam_survival_count": 40,
+            "branches_reaching_scale": {
+              "0.25": 0,
+              "0.5": 0,
+              "0.75": 0,
+              "1.0": 0
+            },
+            "condition_violation_count": 0,
+            "continuation_attempts": 0,
+            "displaced_scheduled_move_counts": {},
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "lineage_branches_sha256": "f7d186384848d0338ec3227140d81e1528374b8febf2c052739ccbbfd917b265",
+            "lineage_probes_sha256": "3080e033989a7a541c04f53620927099e6598b0d052902961d0c1e91f6b9a25a",
+            "locally_improving_scale_0_25_seeds": 0,
+            "maximum_attained_scale_distribution": {
+              "count": 560,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "scheduled_move_counts": {
+              "birth": 560,
+              "change_shape": 80,
+              "death": 80,
+              "resize": 80,
+              "rotate": 80,
+              "translate": 80
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 560,
+              "nonbirth": 400,
+              "reallocated_existing_slots": 0,
+              "total_hard_forward_calls": 961
+            },
+            "successful_growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "transition_attempts": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "transition_successes": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "truth_fields_present": false,
+            "version": "stage8a_v4_lineage_before_global_beam_v1"
+          },
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "wrong_case_observation",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.990965733445535,
+              "predicted_volume": 229349,
+              "truth_volume": 227277
+            },
+            "9": {
+              "iou": 0.012863268222963315,
+              "predicted_volume": 27,
+              "truth_volume": 2099
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202602,
+          "realized_proposal_move_counts": {
+            "birth_lineage_new_center": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 8.23367704602424,
+          "selected_labels_sha256": "d8eda26deb0ab039918388961da44a65a6277ec8a9c965931e41b76bd4c88634",
+          "selected_response_sha256": "3e1858b540963211db9e1b80c93db1c47866d46963eaaefe1fd0d84d27e4f277",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "c34d7c729ab827a90aac6d0d372caf9f996562e29eada0ea2770f01ea7a2f3d5",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        }
+      ],
+      "base_correct_observation_rmse": 0.014674325473606586,
+      "case_id": "native_seed20260807",
+      "correct_evaluation_ranking": [
+        "correct",
+        "wrong_case_observation",
+        "shuffled_xy",
+        "zero"
+      ],
+      "correct_optimized_is_strictly_best_against_correct": true,
+      "fixture_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          257,
+          565,
+          335,
+          369,
+          573
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,13.05)), diam 9.1, height 7.9, minor_axis_scale 0.8, rotation 245.4, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.63)), diam 10.2, height 8.7, minor_axis_scale 1.2, rotation 207.7, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,20.29)), diam 8.6, height 9.4, minor_axis_scale 0.9, rotation 37.6, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,16.17)), diam 9.3, height 9.7, minor_axis_scale 0.9, rotation 148.1, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,34.23)), diam 10.4, height 9.5, minor_axis_scale 1.1, rotation 222.2, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20260807,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      },
+      "true_concealed_body_count_retrospective_only": 2,
+      "wrong_case_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          481,
+          577,
+          519,
+          403,
+          519
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,13.09)), diam 11.6, height 7.8, minor_axis_scale 0.9, rotation 61.5, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.27)), diam 10.1, height 9.5, minor_axis_scale 1.2, rotation 274.1, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,21.21)), diam 11.2, height 7.6, minor_axis_scale 1.1, rotation 21.1, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,15.93)), diam 9.6, height 10.1, minor_axis_scale 0.8, rotation 271.1, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,33.64)), diam 10.4, height 10.7, minor_axis_scale 0.8, rotation 291.3, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20261807,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "arms": [
+        {
+          "baseline_hard_rmse": 0.01435015257447958,
+          "best_hard_rmse": 0.014339687302708626,
+          "best_state": {
+            "bodies": [
+              {
+                "body_id": "body_01000057",
+                "center_x": 14.255647271790735,
+                "center_y": 44.0,
+                "center_z": 21.40600052992134,
+                "material_label": 9,
+                "orientation_deg": 26.45190473156126,
+                "shape": "ellipsoid",
+                "size_x": 1.8133801398434464,
+                "size_y": 1.8198416057079787,
+                "size_z": 6.0
+              }
+            ],
+            "parent_id": "g009_p000004_g008_p000003_g007_p000004_g006_p000003_g005_p000003_g004_p000004_g003_p000002_g002_p000033_g001_p000057_empty",
+            "proposal_move": "translate",
+            "state_id": "g010_p000002_g009_p000004_g008_p000003_g007_p000004_g006_p000003_g005_p000003_g004_p000004_g003_p000002_g002_p000033_g001_p000057_empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 23,
+            "birth_proposal_count": 310,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 23,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 0,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 23,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 0.6100876352284104,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "b80d7b458417f5dcbc8b93422db1fc0431de29ca224c55403dea011972d3e774",
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260808",
+          "concealed_target_iou": 0.01,
+          "concealed_target_precision": 1.0,
+          "concealed_target_predicted_volume": 10,
+          "concealed_target_recall": 0.01,
+          "concealed_target_truth_volume": 1000,
+          "edit_volume_from_base": 10,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 310,
+            "change_shape": 130,
+            "death": 130,
+            "resize": 130,
+            "rotate": 130,
+            "translate": 130
+          },
+          "global_hard_label_accuracy": 0.9911270141601562,
+          "hard_attainment": 0.0007292794774577116,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0007292794774577116,
+          "hard_correct_observation_rmse": 0.014339687302708626,
+          "hard_observed_seismic_rmse": 0.014339687302708626,
+          "lineage_continuation": {
+            "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+            "branch_count": 310,
+            "branch_final_global_beam_survival_count": 8,
+            "branches_reaching_scale": {
+              "0.25": 0,
+              "0.5": 0,
+              "0.75": 0,
+              "1.0": 0
+            },
+            "condition_violation_count": 0,
+            "continuation_attempts": 0,
+            "displaced_scheduled_move_counts": {},
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "lineage_branches_sha256": "32175b75d0247381efc0153d0ff8153e5885cc087af8779adae3cfca5b99bc69",
+            "lineage_probes_sha256": "d70d33310a7de820ead7925c31157b493a1abdd64c834b072e93cce7fae8ab6a",
+            "locally_improving_scale_0_25_seeds": 0,
+            "maximum_attained_scale_distribution": {
+              "count": 310,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "scheduled_move_counts": {
+              "birth": 310,
+              "change_shape": 130,
+              "death": 130,
+              "resize": 130,
+              "rotate": 130,
+              "translate": 130
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 310,
+              "nonbirth": 650,
+              "reallocated_existing_slots": 0,
+              "total_hard_forward_calls": 961
+            },
+            "successful_growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "transition_attempts": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "transition_successes": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "truth_fields_present": false,
+            "version": "stage8a_v4_lineage_before_global_beam_v1"
+          },
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "correct",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9898577202980766,
+              "predicted_volume": 229337,
+              "truth_volume": 227011
+            },
+            "9": {
+              "iou": 0.01649048625792812,
+              "predicted_volume": 39,
+              "truth_volume": 2365
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202603,
+          "realized_proposal_move_counts": {
+            "birth_lineage_new_center": 310,
+            "change_shape": 130,
+            "death": 130,
+            "resize": 130,
+            "rotate": 130,
+            "translate": 130
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 6.076300184009597,
+          "selected_labels_sha256": "251a3580f1e81199d0501a4560fe8373601d748c57249cdd7ccbe9b3d9d3598f",
+          "selected_response_sha256": "ae4190a884f60a851808f0168af0f079e8727d510ea0231962641542e7b0b505",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "dd95ea9bf68b3b627eb652545d490040a6f7ebcbc83a2d52e3a8e17a17bdafbf",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.0013554467586800456,
+          "best_hard_rmse": 0.0013554467586800456,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 45,
+            "birth_proposal_count": 560,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 45,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 0,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 45,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 0.9579722638009116,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "4a26fd0920576b3fef02463648da463b3421029c847fd69a68aee97300c25a0c",
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260808",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1000,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "global_hard_label_accuracy": 0.9910888671875,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.01435015257447958,
+          "hard_observed_seismic_rmse": 0.0013554467586800456,
+          "lineage_continuation": {
+            "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+            "branch_count": 560,
+            "branch_final_global_beam_survival_count": 40,
+            "branches_reaching_scale": {
+              "0.25": 0,
+              "0.5": 0,
+              "0.75": 0,
+              "1.0": 0
+            },
+            "condition_violation_count": 0,
+            "continuation_attempts": 0,
+            "displaced_scheduled_move_counts": {},
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "lineage_branches_sha256": "ade41c7314df7d33f1376e1be65fdef67ee944ea1665ce14884b680550ccbcc7",
+            "lineage_probes_sha256": "018779b0bf8fa80955569b9c937e32a0e6903f0c69808a5e039901bc6e5f5e56",
+            "locally_improving_scale_0_25_seeds": 0,
+            "maximum_attained_scale_distribution": {
+              "count": 560,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "scheduled_move_counts": {
+              "birth": 560,
+              "change_shape": 80,
+              "death": 80,
+              "resize": 80,
+              "rotate": 80,
+              "translate": 80
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 560,
+              "nonbirth": 400,
+              "reallocated_existing_slots": 0,
+              "total_hard_forward_calls": 961
+            },
+            "successful_growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "transition_attempts": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "transition_successes": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "truth_fields_present": false,
+            "version": "stage8a_v4_lineage_before_global_beam_v1"
+          },
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "zero",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9898145604695069,
+              "predicted_volume": 229347,
+              "truth_volume": 227011
+            },
+            "9": {
+              "iou": 0.01226215644820296,
+              "predicted_volume": 29,
+              "truth_volume": 2365
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202603,
+          "realized_proposal_move_counts": {
+            "birth_lineage_new_center": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 7.620464887004346,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "20b1118cb081ef94cb621136f871d361362b0ab143076e52baa9532daf32f7a2",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.014477615244686604,
+          "best_hard_rmse": 0.014477615244686604,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 45,
+            "birth_proposal_count": 560,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 45,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 0,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 45,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 1.4692275061970577,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "06e295e23c310bc69f9312986b54405a27595f737640df984d6aea06c8bb42f8",
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260808",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1000,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "global_hard_label_accuracy": 0.9910888671875,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.01435015257447958,
+          "hard_observed_seismic_rmse": 0.014477616176009178,
+          "lineage_continuation": {
+            "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+            "branch_count": 560,
+            "branch_final_global_beam_survival_count": 40,
+            "branches_reaching_scale": {
+              "0.25": 0,
+              "0.5": 0,
+              "0.75": 0,
+              "1.0": 0
+            },
+            "condition_violation_count": 0,
+            "continuation_attempts": 0,
+            "displaced_scheduled_move_counts": {},
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "lineage_branches_sha256": "f445285e195c356a6486ddf82dbc4f847fea469789441f54249d2e6a2e7fbebd",
+            "lineage_probes_sha256": "78d3a53d260f44ad8e247c0a4d36105c83a543fedd330d87b2e083a12cf79ea8",
+            "locally_improving_scale_0_25_seeds": 0,
+            "maximum_attained_scale_distribution": {
+              "count": 560,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "scheduled_move_counts": {
+              "birth": 560,
+              "change_shape": 80,
+              "death": 80,
+              "resize": 80,
+              "rotate": 80,
+              "translate": 80
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 560,
+              "nonbirth": 400,
+              "reallocated_existing_slots": 0,
+              "total_hard_forward_calls": 961
+            },
+            "successful_growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "transition_attempts": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "transition_successes": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "truth_fields_present": false,
+            "version": "stage8a_v4_lineage_before_global_beam_v1"
+          },
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "shuffled_xy",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9898145604695069,
+              "predicted_volume": 229347,
+              "truth_volume": 227011
+            },
+            "9": {
+              "iou": 0.01226215644820296,
+              "predicted_volume": 29,
+              "truth_volume": 2365
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202603,
+          "realized_proposal_move_counts": {
+            "birth_lineage_new_center": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 8.103265007957816,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "9e4900ecf6229699c4028b717ad5f24e559ea5f3b1fe9724a00327056729be8b",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.01633468270301819,
+          "best_hard_rmse": 0.016331618651747704,
+          "best_state": {
+            "bodies": [
+              {
+                "body_id": "body_03000057",
+                "center_x": 11.0,
+                "center_y": 11.0,
+                "center_z": 19.54845021532152,
+                "material_label": 9,
+                "orientation_deg": 132.85101033817537,
+                "shape": "dike_hemisphere",
+                "size_x": 1.799846284335531,
+                "size_y": 1.98914273386501,
+                "size_z": 3.016264340850763
+              }
+            ],
+            "parent_id": "g003_p000057_g002_p000019_g001_p000005_empty",
+            "proposal_move": "translate",
+            "state_id": "g004_p000068_g003_p000057_g002_p000019_g001_p000005_empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 27,
+            "birth_proposal_count": 360,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 27,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 0,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 27,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 0.6495366172166541,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "a2bdee62e6f7a9fbcb071b48257fab8f323e85ecdfe8c170d5bb618bc1163cd5",
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260808",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 3,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1000,
+          "edit_volume_from_base": 3,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 360,
+            "change_shape": 120,
+            "death": 120,
+            "resize": 120,
+            "rotate": 120,
+            "translate": 120
+          },
+          "global_hard_label_accuracy": 0.9911003112792969,
+          "hard_attainment": 0.000187579478964639,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.00024298499275621221,
+          "hard_correct_observation_rmse": 0.01434666570276022,
+          "hard_observed_seismic_rmse": 0.016331620514392853,
+          "lineage_continuation": {
+            "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+            "branch_count": 360,
+            "branch_final_global_beam_survival_count": 11,
+            "branches_reaching_scale": {
+              "0.25": 0,
+              "0.5": 0,
+              "0.75": 0,
+              "1.0": 0
+            },
+            "condition_violation_count": 0,
+            "continuation_attempts": 0,
+            "displaced_scheduled_move_counts": {},
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "lineage_branches_sha256": "72396ae375e7e6cebda54b13a55681410fbce50a9dc5ee90d5d60b5391eadbe5",
+            "lineage_probes_sha256": "96a2bb3c2249bda1bcfb39d1b8bb70fd9ccf78d288f390353ac6e3d5097e562d",
+            "locally_improving_scale_0_25_seeds": 0,
+            "maximum_attained_scale_distribution": {
+              "count": 360,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "scheduled_move_counts": {
+              "birth": 360,
+              "change_shape": 120,
+              "death": 120,
+              "resize": 120,
+              "rotate": 120,
+              "translate": 120
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 360,
+              "nonbirth": 600,
+              "reallocated_existing_slots": 0,
+              "total_hard_forward_calls": 961
+            },
+            "successful_growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "transition_attempts": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "transition_successes": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "truth_fields_present": false,
+            "version": "stage8a_v4_lineage_before_global_beam_v1"
+          },
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "wrong_case_observation",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9898275080228827,
+              "predicted_volume": 229344,
+              "truth_volume": 227011
+            },
+            "9": {
+              "iou": 0.013530655391120507,
+              "predicted_volume": 32,
+              "truth_volume": 2365
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202603,
+          "realized_proposal_move_counts": {
+            "birth_lineage_new_center": 360,
+            "change_shape": 120,
+            "death": 120,
+            "resize": 120,
+            "rotate": 120,
+            "translate": 120
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 6.331068632076494,
+          "selected_labels_sha256": "efe89bdfc30b4a10f5ff465a440bdd930b3e3bf6b882da887d1919628647c51c",
+          "selected_response_sha256": "9de96113439800daeb202e92aeff8a94655f95aceced17753efe8c18b93d6fc0",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "9833e61fd3c5135289438a99a0aeedb8923b37d9adcba1f0988e3018d6850b07",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        }
+      ],
+      "base_correct_observation_rmse": 0.01435015257447958,
+      "case_id": "native_seed20260808",
+      "correct_evaluation_ranking": [
+        "correct",
+        "wrong_case_observation",
+        "shuffled_xy",
+        "zero"
+      ],
+      "correct_optimized_is_strictly_best_against_correct": true,
+      "fixture_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          399,
+          311,
+          655,
+          563,
+          437
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,12.04)), diam 9.0, height 9.9, minor_axis_scale 1.0, rotation 254.1, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.00)), diam 8.2, height 10.0, minor_axis_scale 1.0, rotation 192.2, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,19.70)), diam 10.6, height 10.6, minor_axis_scale 1.0, rotation 230.1, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,15.99)), diam 9.8, height 10.0, minor_axis_scale 1.1, rotation 171.4, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,33.91)), diam 10.3, height 10.2, minor_axis_scale 0.7, rotation 106.0, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20260808,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      },
+      "true_concealed_body_count_retrospective_only": 2,
+      "wrong_case_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          735,
+          487,
+          453,
+          473,
+          387
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,12.08)), diam 11.5, height 9.8, minor_axis_scale 1.1, rotation 311.5, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.44)), diam 10.6, height 9.1, minor_axis_scale 0.9, rotation 318.8, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,20.87)), diam 10.1, height 8.3, minor_axis_scale 1.0, rotation 91.0, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,17.21)), diam 10.3, height 7.6, minor_axis_scale 1.2, rotation 164.8, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,33.72)), diam 9.2, height 10.6, minor_axis_scale 0.8, rotation 27.5, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20261808,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "arms": [
+        {
+          "baseline_hard_rmse": 0.016216440126299858,
+          "best_hard_rmse": 0.016216440126299858,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 38,
+            "birth_proposal_count": 570,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 38,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 0,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 38,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 1.015821498585865,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "3b78ad6a8dfdda4f7829b3e8604933d87438d4e5bcfa4c9dbb1b56b1d8ecff6d",
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260809",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1186,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 570,
+            "change_shape": 78,
+            "death": 78,
+            "resize": 78,
+            "rotate": 78,
+            "translate": 78
+          },
+          "global_hard_label_accuracy": 0.9895401000976562,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.016216440126299858,
+          "hard_observed_seismic_rmse": 0.016216440126299858,
+          "lineage_continuation": {
+            "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+            "branch_count": 570,
+            "branch_final_global_beam_survival_count": 32,
+            "branches_reaching_scale": {
+              "0.25": 0,
+              "0.5": 0,
+              "0.75": 0,
+              "1.0": 0
+            },
+            "condition_violation_count": 0,
+            "continuation_attempts": 0,
+            "displaced_scheduled_move_counts": {},
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "lineage_branches_sha256": "dc44fd98b864ff6c0417185e5939d5d565462a836c6fbfc175d5cce9181c2e0c",
+            "lineage_probes_sha256": "cd470804f8a6b3958ec31eb61fd28fc02ec78d8ec748e0e99623f86083463e40",
+            "locally_improving_scale_0_25_seeds": 0,
+            "maximum_attained_scale_distribution": {
+              "count": 570,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "scheduled_move_counts": {
+              "birth": 570,
+              "change_shape": 78,
+              "death": 78,
+              "resize": 78,
+              "rotate": 78,
+              "translate": 78
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 570,
+              "nonbirth": 390,
+              "reallocated_existing_slots": 0,
+              "total_hard_forward_calls": 961
+            },
+            "successful_growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "transition_attempts": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "transition_successes": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "truth_fields_present": false,
+            "version": "stage8a_v4_lineage_before_global_beam_v1"
+          },
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "correct",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9880443171264504,
+              "predicted_volume": 229347,
+              "truth_volume": 226605
+            },
+            "9": {
+              "iou": 0.010465535907614579,
+              "predicted_volume": 29,
+              "truth_volume": 2771
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202604,
+          "realized_proposal_move_counts": {
+            "birth_lineage_new_center": 570,
+            "change_shape": 78,
+            "death": 78,
+            "resize": 78,
+            "rotate": 78,
+            "translate": 78
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 8.767108961939812,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "0eded7b0380fa5d674b44543672f3fa7480bef2c8bdce946f9e684e25214e3d7",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.0013554467586800456,
+          "best_hard_rmse": 0.0013554467586800456,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 45,
+            "birth_proposal_count": 560,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 45,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 1,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 45,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 0.910230906214565,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "c40354bf28ccd97e90243adfa168fd555b0022d8583a67995effd8b41c01eaa1",
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260809",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1186,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "global_hard_label_accuracy": 0.9895401000976562,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.016216440126299858,
+          "hard_observed_seismic_rmse": 0.0013554467586800456,
+          "lineage_continuation": {
+            "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+            "branch_count": 560,
+            "branch_final_global_beam_survival_count": 40,
+            "branches_reaching_scale": {
+              "0.25": 1,
+              "0.5": 0,
+              "0.75": 0,
+              "1.0": 0
+            },
+            "condition_violation_count": 0,
+            "continuation_attempts": 1,
+            "displaced_scheduled_move_counts": {
+              "death": 1
+            },
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "growth_delta_rmse_distribution": {
+              "count": 1,
+              "max": 0.0011126569006592035,
+              "median": 0.0011126569006592035,
+              "min": 0.0011126569006592035,
+              "p05": 0.0011126569006592035,
+              "p95": 0.0011126569006592035
+            },
+            "lineage_branches_sha256": "a15128311d41d581d75305fdb5cf13922ed8393381313210f0e6d581da3c822e",
+            "lineage_probes_sha256": "d0180aa86405af5bebf7b0f4a59709ce64e8256b2ff8dd7c32bc9e4b7f2216d4",
+            "locally_improving_scale_0_25_seeds": 1,
+            "maximum_attained_scale_distribution": {
+              "count": 560,
+              "max": 0.25,
+              "median": 0.0,
+              "min": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "scheduled_move_counts": {
+              "birth": 560,
+              "change_shape": 80,
+              "death": 80,
+              "resize": 80,
+              "rotate": 80,
+              "translate": 80
+            },
+            "slot_allocation": {
+              "growth": 1,
+              "initial_empty": 1,
+              "new_center": 560,
+              "nonbirth": 399,
+              "reallocated_existing_slots": 1,
+              "total_hard_forward_calls": 961
+            },
+            "successful_growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "transition_attempts": {
+              "0.25_to_0.50": 1,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "transition_successes": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "truth_fields_present": false,
+            "version": "stage8a_v4_lineage_before_global_beam_v1"
+          },
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "zero",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9880443171264504,
+              "predicted_volume": 229347,
+              "truth_volume": 226605
+            },
+            "9": {
+              "iou": 0.010465535907614579,
+              "predicted_volume": 29,
+              "truth_volume": 2771
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202604,
+          "realized_proposal_move_counts": {
+            "birth_lineage_growth": 1,
+            "birth_lineage_new_center": 560,
+            "change_shape": 80,
+            "death": 79,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 8.011263009044342,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "e80d5e55c28408d1206c06770608153357a3d242072bffc9e43e2df9cce48309",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.016329342499375343,
+          "best_hard_rmse": 0.016329342499375343,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 45,
+            "birth_proposal_count": 560,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 45,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 0,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 45,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 1.4993611823301762,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "73234fad31a171eac556f1733f50549918a763d0de0261b448ea796c8b5643af",
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260809",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1186,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "global_hard_label_accuracy": 0.9895401000976562,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.016216440126299858,
+          "hard_observed_seismic_rmse": 0.016329342499375343,
+          "lineage_continuation": {
+            "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+            "branch_count": 560,
+            "branch_final_global_beam_survival_count": 40,
+            "branches_reaching_scale": {
+              "0.25": 0,
+              "0.5": 0,
+              "0.75": 0,
+              "1.0": 0
+            },
+            "condition_violation_count": 0,
+            "continuation_attempts": 0,
+            "displaced_scheduled_move_counts": {},
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "lineage_branches_sha256": "2719cb24dbc6692f10046e31ccce8e6f9aa7506e226082d3d0d489275deb0430",
+            "lineage_probes_sha256": "bde3a17b84b47827cf80f67dfb4169a38b1c6dc9815a609e9680137d0b6a08a9",
+            "locally_improving_scale_0_25_seeds": 0,
+            "maximum_attained_scale_distribution": {
+              "count": 560,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "scheduled_move_counts": {
+              "birth": 560,
+              "change_shape": 80,
+              "death": 80,
+              "resize": 80,
+              "rotate": 80,
+              "translate": 80
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 560,
+              "nonbirth": 400,
+              "reallocated_existing_slots": 0,
+              "total_hard_forward_calls": 961
+            },
+            "successful_growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "transition_attempts": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "transition_successes": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "truth_fields_present": false,
+            "version": "stage8a_v4_lineage_before_global_beam_v1"
+          },
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "shuffled_xy",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9880443171264504,
+              "predicted_volume": 229347,
+              "truth_volume": 226605
+            },
+            "9": {
+              "iou": 0.010465535907614579,
+              "predicted_volume": 29,
+              "truth_volume": 2771
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202604,
+          "realized_proposal_move_counts": {
+            "birth_lineage_new_center": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 8.515111635089852,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "fd1749a15aa028b387b450f8ef8aa1fb387c2d662ced86c7b6f8d5ca8aff5c5e",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.015254280529916286,
+          "best_hard_rmse": 0.015247720293700695,
+          "best_state": {
+            "bodies": [
+              {
+                "body_id": "body_05000041",
+                "center_x": 42.4730306769232,
+                "center_y": 44.0,
+                "center_z": 40.88273164223796,
+                "material_label": 9,
+                "orientation_deg": 169.83747804643102,
+                "shape": "ellipsoid",
+                "size_x": 1.8462980118237602,
+                "size_y": 1.7118575138351204,
+                "size_z": 2.9285564702052103
+              }
+            ],
+            "parent_id": "g007_p000010_g006_p000068_g005_p000041_g004_p000019_g003_p000026_g002_p000013_g001_p000068_empty",
+            "proposal_move": "translate",
+            "state_id": "g008_p000032_g007_p000010_g006_p000068_g005_p000041_g004_p000019_g003_p000026_g002_p000013_g001_p000068_empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 41,
+            "birth_proposal_count": 490,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 41,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 0,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 41,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 1.1030872513074428,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "a15b74cf069b4cc1007be91ab6a090cf9dba1be339bf3246562699ca6e8cdd5e",
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260809",
+          "concealed_target_iou": 0.00505902192242833,
+          "concealed_target_precision": 1.0,
+          "concealed_target_predicted_volume": 6,
+          "concealed_target_recall": 0.00505902192242833,
+          "concealed_target_truth_volume": 1186,
+          "edit_volume_from_base": 6,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 490,
+            "change_shape": 94,
+            "death": 94,
+            "resize": 94,
+            "rotate": 94,
+            "translate": 94
+          },
+          "global_hard_label_accuracy": 0.98956298828125,
+          "hard_attainment": 0.0004300587105845466,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": -0.0007560186006763114,
+          "hard_correct_observation_rmse": 0.016228700056672096,
+          "hard_observed_seismic_rmse": 0.01524772122502327,
+          "lineage_continuation": {
+            "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+            "branch_count": 490,
+            "branch_final_global_beam_survival_count": 25,
+            "branches_reaching_scale": {
+              "0.25": 0,
+              "0.5": 0,
+              "0.75": 0,
+              "1.0": 0
+            },
+            "condition_violation_count": 0,
+            "continuation_attempts": 0,
+            "displaced_scheduled_move_counts": {},
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "lineage_branches_sha256": "ee7a1c53fbd1d25a28ad46c4866cdd5321b569354e90977bce27edaf639e4a1f",
+            "lineage_probes_sha256": "68c21950cc6e78617f9b3437ee96514975bbc187bc25ae00bfa21ac8a5b24384",
+            "locally_improving_scale_0_25_seeds": 0,
+            "maximum_attained_scale_distribution": {
+              "count": 490,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p05": 0.0,
+              "p95": 0.0
+            },
+            "scheduled_move_counts": {
+              "birth": 490,
+              "change_shape": 94,
+              "death": 94,
+              "resize": 94,
+              "rotate": 94,
+              "translate": 94
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 490,
+              "nonbirth": 470,
+              "reallocated_existing_slots": 0,
+              "total_hard_forward_calls": 961
+            },
+            "successful_growth_delta_rmse_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "transition_attempts": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "transition_successes": {
+              "0.25_to_0.50": 0,
+              "0.50_to_0.75": 0,
+              "0.75_to_1.00": 0
+            },
+            "truth_fields_present": false,
+            "version": "stage8a_v4_lineage_before_global_beam_v1"
+          },
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "wrong_case_observation",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9880701662589768,
+              "predicted_volume": 229341,
+              "truth_volume": 226605
+            },
+            "9": {
+              "iou": 0.012630819198845183,
+              "predicted_volume": 35,
+              "truth_volume": 2771
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202604,
+          "realized_proposal_move_counts": {
+            "birth_lineage_new_center": 490,
+            "change_shape": 94,
+            "death": 94,
+            "resize": 94,
+            "rotate": 94,
+            "translate": 94
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 8.553892426076345,
+          "selected_labels_sha256": "bf9d5469b6d7e6d88218d2a2e65f4d07f7921924665a9ae2504c4b907ecd7ef7",
+          "selected_response_sha256": "aaea9ab7831729bd4b0faee8a6b335df73e1fb61818172243981d08b8d15303c",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "8d88772f67a45ac8ca232f71ae0e92a0f2913da87aa080db26e5d95ad37d13b3",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        }
+      ],
+      "base_correct_observation_rmse": 0.016216440126299858,
+      "case_id": "native_seed20260809",
+      "correct_evaluation_ranking": [
+        "correct",
+        "shuffled_xy",
+        "zero",
+        "wrong_case_observation"
+      ],
+      "correct_optimized_is_strictly_best_against_correct": false,
+      "fixture_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          431,
+          757,
+          397,
+          573,
+          613
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,12.68)), diam 10.8, height 8.6, minor_axis_scale 0.8, rotation 177.8, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.51)), diam 11.7, height 9.0, minor_axis_scale 1.1, rotation 309.5, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,19.68)), diam 8.2, height 10.6, minor_axis_scale 1.0, rotation 355.2, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,16.01)), diam 11.6, height 10.0, minor_axis_scale 0.9, rotation 179.5, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,34.41)), diam 11.4, height 9.2, minor_axis_scale 1.0, rotation 193.3, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20260809,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      },
+      "true_concealed_body_count_retrospective_only": 2,
+      "wrong_case_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          709,
+          523,
+          407,
+          259,
+          473
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,11.89)), diam 10.9, height 10.2, minor_axis_scale 1.1, rotation 145.5, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.71)), diam 10.0, height 8.6, minor_axis_scale 1.1, rotation 308.0, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,19.89)), diam 8.2, height 10.2, minor_axis_scale 1.1, rotation 115.8, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,17.06)), diam 9.0, height 7.9, minor_axis_scale 0.9, rotation 141.2, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,34.96)), diam 10.5, height 8.1, minor_axis_scale 0.9, rotation 304.9, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20261809,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      }
+    }
+  ],
+  "observation_sha256": "8822e1e9a5829fc1731dfe5e30208ec36fdee3faed2ab7465cc9318095f7184e",
+  "preflight_validation": {
+    "checked_assets": [
+      {
+        "path": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+        "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c"
+      },
+      {
+        "path": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt",
+        "sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3"
+      },
+      {
+        "path": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/boreholes.pt",
+        "sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage4_seismic/observations/cond_generation_0/distinct_upper_bound_v1_fix2/subsurface_mask.pt",
+        "sha256": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage4_seismic/observations/cond_generation_0/distinct_upper_bound_v1_fix2/observed_seismic.pt",
+        "sha256": "8822e1e9a5829fc1731dfe5e30208ec36fdee3faed2ab7465cc9318095f7184e"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage4_seismic/observations/cond_generation_0/distinct_upper_bound_v1_fix2/acoustic_property_table.pt",
+        "sha256": "cdfa35f8027b8c9bc523100d0342345ce3cbc67fca16f796d594b04226acb254"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_0.pt",
+        "sha256": "b25189fe11ef229c7b4a6fb7a620be355503177d6f78634e1cb39d14a96f283a"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_1.pt",
+        "sha256": "c07c88b3bbdb2c27477677f429fdd0b677f344257b8cb636cadc4971ccbea0e0"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_2.pt",
+        "sha256": "8af50f5a4186eaa31281ac3aced6bbe09a3206ce63bccc36870c8c4ba00d32c8"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_3.pt",
+        "sha256": "2d7d3300b463b304a228f0940f58aef2942becb5f9ee6d9ce6358c314ea9c180"
+      }
+    ],
+    "manifest_path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage8_structured_posterior/reports/preflight/stage8_preflight_manifest.json",
+    "manifest_sha256": "f82eee94c7ffcbbbd70ca64e36fa0f7b52aa3b7322fdb439a87686b0fa3f7570"
+  },
+  "runtime": {
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 4090 D",
+    "hostname": "LabRS",
+    "torch": "2.8.0+cu128"
+  },
+  "schema": "stage8a_summary_v4",
+  "seismic_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "stage8a_v2_preflight_validation": null,
+  "stage8a_v3_preflight_validation": null,
+  "stage8a_v4_preflight_validation": {
+    "frozen_artifact_trees": [
+      {
+        "file_count": 84,
+        "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/runs/stage8a_v1",
+        "tree_sha256": "13e5a1ef2d4579c7d05b7184698d6a1f7c99db63799003d7711541582bee42fc"
+      },
+      {
+        "file_count": 9,
+        "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/reports/stage8a_r1",
+        "tree_sha256": "28c202bdc07febb7c4ad971afa158a7d500e3c08a3425d1183667f8ccd4a8931"
+      },
+      {
+        "file_count": 841,
+        "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/runs/stage8a_v2",
+        "tree_sha256": "be019573ff380147bf66ca3d16338c2a240d694c91a7e85536dccae5ae0f9a8b"
+      },
+      {
+        "file_count": 10,
+        "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/reports/stage8a_v2_r2",
+        "tree_sha256": "6e76cb1dae6f7c932a699cafb9a8da63d5fd1b9aaee4b047aa87f47bbbb3dde5"
+      },
+      {
+        "file_count": 791,
+        "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/runs/stage8a_v3",
+        "tree_sha256": "efe11bcb97b63d20555729523e650d179c69f7490db20bdc4de929ea0519b44f"
+      },
+      {
+        "file_count": 5,
+        "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/reports/stage8a_v3_r3",
+        "tree_sha256": "f5e9afc9877a67bc318dee2882b4dab984e99d1b9785c01526de01f8b5082453"
+      }
+    ],
+    "frozen_v3_config_path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage8_structured_posterior/configs/stage8a_v3.json",
+    "frozen_v3_config_sha256": "9633b2704ba2c87881040f2b831069ecf4bdb6bf367b97142d366ab2fb03857a",
+    "manifest_path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage8_structured_posterior/reports/preflight/stage8a_v4_preflight_manifest.json",
+    "manifest_sha256": "2172d651107f9a5766374f43de9495ec56286fd7f9a97f17ccf0cf188d57f6d2",
+    "only_authorized_change_validated": true,
+    "source_files": [
+      {
+        "path": "project/geodata-3d-conditional/guidance/structured_birth_sensitivity.py",
+        "sha256": "640c50b1718661293bfcbc862a3ee72561f7ea28da6e84dfac42a555b12a662f"
+      },
+      {
+        "path": "project/geodata-3d-conditional/guidance/structured_posterior.py",
+        "sha256": "f113e94bd8f61a72f1729d816bfe89d638fbfb2d03fc7cb14355cbe74c9e604a"
+      },
+      {
+        "path": "project/geodata-3d-conditional/guidance/structured_trust_region.py",
+        "sha256": "c04f289893485670d2e2609a0f45058d8811f0ba14b75f13551ec146ffc40396"
+      },
+      {
+        "path": "project/geodata-3d-conditional/guidance/structured_lineage_search.py",
+        "sha256": "5394f6f95fe7415383ac8110a9220d3e21982a64a48b98fe2447b3d7475aa4d1"
+      },
+      {
+        "path": "project/geodata-3d-conditional/guidance/structured_hard_inference.py",
+        "sha256": "1dc8f51d4615c04adda0443199decdf549fb2d2791d775f9fb9cb5254ab54958"
+      },
+      {
+        "path": "project/geodata-3d-conditional/guidance/seismic.py",
+        "sha256": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee"
+      },
+      {
+        "path": "project/geodata-3d-conditional/guidance/simple_causality.py",
+        "sha256": "c90d6e0bd0fb2b7d5e6844e8da5974aced8c5693d37bf159d70b6735287a0680"
+      },
+      {
+        "path": "project/geodata-3d-conditional/guidance/native_geology_audit.py",
+        "sha256": "50668a82b20a1b31f49b6e2a0bc8df92caf7f168271a2894a6aad0b7acbbd28d"
+      },
+      {
+        "path": "project/geodata-3d-conditional/scripts/stage8/run_stage8.py",
+        "sha256": "00512b03a8b71bfe278cea494155f0927cb6457861212417598c03d580c309ae"
+      },
+      {
+        "path": "project/geodata-3d-conditional/scripts/stage8/audit_stage8a_v3_r3.py",
+        "sha256": "20011cf6879374bb4eebe5bb4772178a4747a54d05022b5aba55610ebf260f26"
+      },
+      {
+        "path": "project/geodata-3d-conditional/tests/test_stage8a_v4_lineage_search.py",
+        "sha256": "5410e41e42ceb142183dbc8c10a05fc4bb7518593c3e3c46a0ccd50b1148944d"
+      },
+      {
+        "path": "project/geodata-3d-conditional/tests/test_stage8_structured_posterior.py",
+        "sha256": "834003a6cd07b60a43d113f2fb6afe6ae0f639fb337cefa9b66b0199b4a2b02b"
+      },
+      {
+        "path": "project/geodata-3d-conditional/tests/test_stage8a_r1_audit.py",
+        "sha256": "99dd682fa9591426cf6a0913c175b035023935662abf76e52ccdc3b27c0ae617"
+      },
+      {
+        "path": "project/geodata-3d-conditional/tests/test_stage8a_v2_r2_audit.py",
+        "sha256": "d8560e06f2f4eb1a13c9308d35fe844d7bf81f5f871cf6c5a60844ab4477d2ed"
+      },
+      {
+        "path": "project/geodata-3d-conditional/tests/test_stage7_structured_hard.py",
+        "sha256": "88655dc336d03b8cfed9fddfad34ddcb4119912cfe3c4363f593f7b279822453"
+      },
+      {
+        "path": "project/geodata-3d-conditional/tests/test_phase4_seismic.py",
+        "sha256": "cd795faa2fe17601952fccc6d9a8bfd54d5a75c48d1ec50266312e3b7d91fea3"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/configs/stage8a_v4.json",
+        "sha256": "b47197967dc77c841c2c1288d67f759de67427d0c62399d25a323853f822a8dc"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/STAGE8A_V4_PROTOCOL.md",
+        "sha256": "e6be16e73ee9979bbf711d558cd0a2667608b54f7eb811b701a3df32c1635ac4"
+      }
+    ],
+    "standalone_stage8a_terminal_iteration": true,
+    "unchanged_stage8_gate_sha256": "2781042756561e3307f21d3760f8b3993ef59f5a6fd9d0be0f9f4e722e5eabc7",
+    "unchanged_v2_birth_ranker_sha256": "640c50b1718661293bfcbc862a3ee72561f7ea28da6e84dfac42a555b12a662f"
+  },
+  "status": "completed",
+  "truth_role": "observation-generation/retrospective only; never search selection",
+  "truth_sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3"
+}

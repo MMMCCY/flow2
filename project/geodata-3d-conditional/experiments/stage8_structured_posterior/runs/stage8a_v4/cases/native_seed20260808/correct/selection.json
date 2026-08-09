@@ -1,0 +1,153 @@
+{
+  "baseline_hard_rmse": 0.01435015257447958,
+  "best_hard_rmse": 0.014339687302708626,
+  "best_state": {
+    "bodies": [
+      {
+        "body_id": "body_01000057",
+        "center_x": 14.255647271790735,
+        "center_y": 44.0,
+        "center_z": 21.40600052992134,
+        "material_label": 9,
+        "orientation_deg": 26.45190473156126,
+        "shape": "ellipsoid",
+        "size_x": 1.8133801398434464,
+        "size_y": 1.8198416057079787,
+        "size_z": 6.0
+      }
+    ],
+    "parent_id": "g009_p000004_g008_p000003_g007_p000004_g006_p000003_g005_p000003_g004_p000004_g003_p000002_g002_p000033_g001_p000057_empty",
+    "proposal_move": "translate",
+    "state_id": "g010_p000002_g009_p000004_g008_p000003_g007_p000004_g006_p000003_g005_p000003_g004_p000004_g003_p000002_g002_p000033_g001_p000057_empty"
+  },
+  "birth_center_initializer": {
+    "backward_calls": 23,
+    "birth_proposal_count": 310,
+    "canonical_shape": "ellipsoid",
+    "canonical_size_xyz": [
+      11.0,
+      11.0,
+      10.0
+    ],
+    "condition_violation_count_across_births": 0,
+    "differentiable_forward_calls": 23,
+    "hard_selection_criterion_unchanged": true,
+    "loss_improving_birth_count_vs_empty": 0,
+    "loss_improving_birth_count_vs_parent": 0,
+    "mode": "deterministic_multifield_first_order",
+    "property_fields": [
+      "impedance",
+      "slowness"
+    ],
+    "proposal_guidance_only": true,
+    "ranking_computation_count": 23,
+    "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+    "sensitivity_runtime_seconds": 0.6100876352284104,
+    "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+    "truth_fields_present": false,
+    "truth_used": false
+  },
+  "birth_proposals_sha256": "b80d7b458417f5dcbc8b93422db1fc0431de29ca224c55403dea011972d3e774",
+  "fixed_forward_call_budget": 961,
+  "forward_call_count": 961,
+  "frozen_scheduled_move_counts": {
+    "birth": 310,
+    "change_shape": 130,
+    "death": 130,
+    "resize": 130,
+    "rotate": 130,
+    "translate": 130
+  },
+  "hard_attainment": 0.0007292794774577116,
+  "lineage_continuation": {
+    "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+    "branch_count": 310,
+    "branch_final_global_beam_survival_count": 8,
+    "branches_reaching_scale": {
+      "0.25": 0,
+      "0.5": 0,
+      "0.75": 0,
+      "1.0": 0
+    },
+    "condition_violation_count": 0,
+    "continuation_attempts": 0,
+    "displaced_scheduled_move_counts": {},
+    "fixed_scale_ladder": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "growth_delta_rmse_distribution": {
+      "count": 0,
+      "max": null,
+      "median": null,
+      "min": null,
+      "p05": null,
+      "p95": null
+    },
+    "lineage_branches_sha256": "32175b75d0247381efc0153d0ff8153e5885cc087af8779adae3cfca5b99bc69",
+    "lineage_probes_sha256": "d70d33310a7de820ead7925c31157b493a1abdd64c834b072e93cce7fae8ab6a",
+    "locally_improving_scale_0_25_seeds": 0,
+    "maximum_attained_scale_distribution": {
+      "count": 310,
+      "max": 0.0,
+      "median": 0.0,
+      "min": 0.0,
+      "p05": 0.0,
+      "p95": 0.0
+    },
+    "scheduled_move_counts": {
+      "birth": 310,
+      "change_shape": 130,
+      "death": 130,
+      "resize": 130,
+      "rotate": 130,
+      "translate": 130
+    },
+    "slot_allocation": {
+      "growth": 0,
+      "initial_empty": 1,
+      "new_center": 310,
+      "nonbirth": 650,
+      "reallocated_existing_slots": 0,
+      "total_hard_forward_calls": 961
+    },
+    "successful_growth_delta_rmse_distribution": {
+      "count": 0,
+      "max": null,
+      "median": null,
+      "min": null,
+      "p05": null,
+      "p95": null
+    },
+    "transition_attempts": {
+      "0.25_to_0.50": 0,
+      "0.50_to_0.75": 0,
+      "0.75_to_1.00": 0
+    },
+    "transition_successes": {
+      "0.25_to_0.50": 0,
+      "0.50_to_0.75": 0,
+      "0.75_to_1.00": 0
+    },
+    "truth_fields_present": false,
+    "version": "stage8a_v4_lineage_before_global_beam_v1"
+  },
+  "proposal_seed": 8202603,
+  "realized_proposal_move_counts": {
+    "birth_lineage_new_center": 310,
+    "change_shape": 130,
+    "death": 130,
+    "resize": 130,
+    "rotate": 130,
+    "translate": 130
+  },
+  "runtime_seconds": 6.076300184009597,
+  "selected_labels_sha256": "251a3580f1e81199d0501a4560fe8373601d748c57249cdd7ccbe9b3d9d3598f",
+  "selected_response_sha256": "ae4190a884f60a851808f0168af0f079e8727d510ea0231962641542e7b0b505",
+  "selection_criterion": "minimum hard observed seismic RMSE only",
+  "selection_frozen_before_retrospective_evaluation": true,
+  "selection_used_truth": false,
+  "sensitivity_rankings_sha256": "dd95ea9bf68b3b627eb652545d490040a6f7ebcbc83a2d52e3a8e17a17bdafbf"
+}

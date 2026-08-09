@@ -1,0 +1,73 @@
+{
+  "counts": {
+    "beam_selection_discrepancies": 0,
+    "delta_empty_lt_zero": 5,
+    "delta_empty_lt_zero_and_not_entered_next_beam": 5,
+    "delta_parent_lt_zero": 3,
+    "delta_parent_lt_zero_and_entered_next_beam": 0,
+    "invalid_parent_beam_states": 0,
+    "locally_improving_exact_v2_geometry_matches": 0,
+    "smallest_scale_births": 1840
+  },
+  "frozen_v3_file_count": 791,
+  "frozen_v3_tree_sha256_after": "efe11bcb97b63d20555729523e650d179c69f7490db20bdc4de929ea0519b44f",
+  "frozen_v3_tree_sha256_before": "efe11bcb97b63d20555729523e650d179c69f7490db20bdc4de929ea0519b44f",
+  "future_recommendation": "Use lineage-preserving local hard-loss continuation before global beam competition.",
+  "input_artifacts": [
+    {
+      "case_id": "analytic_five_body",
+      "proposal_trace_sha256": "35a2c94e3078cb1da4352db3d3f4eb2eddc693e6dbd6024efd30c88acc068ee4",
+      "v2_v3_alignment_sha256": "4925c4c4d7c0416f395b1980ce1a70193b454a24f6abbe98024ee8d64ed2ec40"
+    },
+    {
+      "case_id": "native_seed20260807",
+      "proposal_trace_sha256": "c10c1099ee8c713e9479401e8cfec15af97c58b9645be0401eacf9a2c3129d40",
+      "v2_v3_alignment_sha256": "cdb41541a6e8b25242f904d7e0590c4df86c4fb5bc2f828560e1898112b5457e"
+    },
+    {
+      "case_id": "native_seed20260808",
+      "proposal_trace_sha256": "4794b06acb428c899c0bc8be7c3bc6b8267d2b57c91507485d88ce040a87d0b0",
+      "v2_v3_alignment_sha256": "a0239656316042255c36b61aa33af43e50c87c175f1146fbdb748ecc4eccbfaa"
+    },
+    {
+      "case_id": "native_seed20260809",
+      "proposal_trace_sha256": "0399157dc421247dd8bd98131c1590e97f6235f9d79d631ae819b29ee43bc478",
+      "v2_v3_alignment_sha256": "0daa1f830d193a723cb96c75423cb0b882950bf97de80ffc49783448322a9215"
+    }
+  ],
+  "locally_improving_beam_cutoff_margin_distribution": {
+    "count": 3,
+    "max": 5.497504025697708e-05,
+    "median": 9.834766387939453e-06,
+    "min": 8.946284651756287e-06,
+    "p05": 9.035132825374603e-06,
+    "p95": 5.046101287007331e-05
+  },
+  "locally_improving_cases": [
+    "analytic_five_body",
+    "native_seed20260807",
+    "native_seed20260809"
+  ],
+  "locally_improving_children": [
+    "g009_p000018_g008_p000026_g007_p000045_g006_p000087_g005_p000023_g004_p000008_g003_p000069_g002_p000031_g001_p000058_empty",
+    "g004_p000078_g003_p000002_g002_p000001_g001_p000086_empty",
+    "g006_p000054_g005_p000024_g004_p000013_g003_p000004_g002_p000001_g001_p000081_empty"
+  ],
+  "locally_improving_exact_v2_geometry_match_count": 0,
+  "matched_v2_full_fails_v3_small_succeeds_count": 0,
+  "new_geology_materializations": 0,
+  "new_hard_proposal_forward_calls": 0,
+  "new_proposals": 0,
+  "new_sensitivity_forward_backward_calls": 0,
+  "primary_classification": "GLOBAL_BEAM_PRUNES_LOCALLY_IMPROVING_SEEDS",
+  "recommendation_implemented": false,
+  "schema": "stage8a_v3_r3_summary_v1",
+  "selection_implementation_defect_found": false,
+  "selection_rule": "hard_rmse_ascending_then_state_id_ascending_take_8",
+  "stage8a_v4_implemented": false,
+  "stage8b_run": false,
+  "status": "completed",
+  "training_run": false,
+  "truth_used": false,
+  "unmatched_proposals_reinterpreted_as_rescue_evidence": false
+}

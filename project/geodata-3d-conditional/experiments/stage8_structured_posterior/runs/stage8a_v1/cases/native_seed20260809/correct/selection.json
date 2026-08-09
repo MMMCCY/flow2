@@ -1,0 +1,20 @@
+{
+  "baseline_hard_rmse": 0.016216440126299858,
+  "best_hard_rmse": 0.016216440126299858,
+  "best_state": {
+    "bodies": [],
+    "parent_id": null,
+    "proposal_move": "initial",
+    "state_id": "empty"
+  },
+  "fixed_forward_call_budget": 961,
+  "forward_call_count": 961,
+  "hard_attainment": 0.0,
+  "proposal_seed": 8202604,
+  "runtime_seconds": 4.209466650034301,
+  "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+  "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+  "selection_criterion": "minimum hard observed seismic RMSE only",
+  "selection_frozen_before_retrospective_evaluation": true,
+  "selection_used_truth": false
+}

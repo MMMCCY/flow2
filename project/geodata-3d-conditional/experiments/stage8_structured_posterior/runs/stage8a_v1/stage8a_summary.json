@@ -1,0 +1,1722 @@
+{
+  "acoustic_metadata": {
+    "density_table_sha256": "346f91e28a53677a534fdc295eb14cf62ce469f553f28f477ba816f297f2ce99",
+    "density_unit": "kg m^-3",
+    "description": "Synthetic complete absolute density and P-wave velocity codebook for the first Phase-4c inverse-crime upper bound. Label 9 has deliberately distinctive impedance; values are not site-calibrated petrophysics.",
+    "id": "acoustic_distinct_label9_upper_bound_v1",
+    "impedance_table_sha256": "bd0f62b3d692d8b10105b56266504e6360511191a48eb0ac11acd3b9705c9f8a",
+    "impedance_unit": "kg m^-2 s^-1",
+    "num_categories": 15,
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "scenario": "synthetic_distinct_label9_acoustic_upper_bound",
+    "schema": "phase4_acoustic_codebook_v1",
+    "site_calibrated_petrophysics": false,
+    "slowness_table_sha256": "36342444bc8042852fdb55682247fa42046cfa5ad30963d444406cac7022f37b",
+    "slowness_unit": "s m^-1",
+    "truth_derived": true,
+    "velocity_table_sha256": "f4835d84b5451bb6ec088d543e7a74b9e5e27e289432fa7b545040eaef9171fc",
+    "velocity_unit": "m s^-1"
+  },
+  "analytic": {
+    "arms": [
+      {
+        "baseline_hard_rmse": 0.008885824121534824,
+        "best_hard_rmse": 0.008885824121534824,
+        "best_state": {
+          "bodies": [],
+          "parent_id": null,
+          "proposal_move": "initial",
+          "state_id": "empty"
+        },
+        "body_match_minimum_component_voxels": 20,
+        "body_matches": [],
+        "body_precision": 0.0,
+        "body_recall": 0.0,
+        "case_id": "analytic_five_body",
+        "concealed_target_iou": 0.0,
+        "concealed_target_precision": 0.0,
+        "concealed_target_predicted_volume": 0,
+        "concealed_target_recall": 0.0,
+        "concealed_target_truth_volume": 1280,
+        "edit_volume_from_base": 0,
+        "fixed_forward_call_budget": 961,
+        "forward_call_count": 961,
+        "global_hard_label_accuracy": 0.9951171875,
+        "hard_attainment": 0.0,
+        "hard_condition_violations": 0,
+        "hard_correct_observation_attainment": 0.0,
+        "hard_correct_observation_rmse": 0.008885824121534824,
+        "hard_observed_seismic_rmse": 0.008885824121534824,
+        "matched_body_center_error_mean": null,
+        "matched_body_count": 0,
+        "matched_body_relative_size_error_mean": null,
+        "optimized_by": "correct",
+        "per_label": {
+          "-1": {
+            "iou": 1.0,
+            "predicted_volume": 32768,
+            "truth_volume": 32768
+          },
+          "0": {
+            "iou": 0.9943725379853686,
+            "predicted_volume": 227456,
+            "truth_volume": 226176
+          },
+          "9": {
+            "iou": 0.6,
+            "predicted_volume": 1920,
+            "truth_volume": 3200
+          }
+        },
+        "predicted_body_count": 0,
+        "proposal_seed": 8202601,
+        "retrospective_only": true,
+        "runtime_seconds": 5.020326025085524,
+        "selected_labels_sha256": "cb14261739d35446bb67c2932edfa4e9ad30c691a10fc295bc123e3eb3186f13",
+        "selected_response_sha256": "784618e6a429178083d111110da8a32d79cf2c572bfa9dda054af93264cfef25",
+        "selection_criterion": "minimum hard observed seismic RMSE only",
+        "selection_frozen_before_retrospective_evaluation": true,
+        "selection_used_truth": false,
+        "truth_body_count": 2,
+        "truth_fields_present": false,
+        "used_for_selection": false,
+        "wrong_lithology_substitution_volume": 0
+      },
+      {
+        "baseline_hard_rmse": 0.010882876813411713,
+        "best_hard_rmse": 0.010882876813411713,
+        "best_state": {
+          "bodies": [],
+          "parent_id": null,
+          "proposal_move": "initial",
+          "state_id": "empty"
+        },
+        "body_match_minimum_component_voxels": 20,
+        "body_matches": [],
+        "body_precision": 0.0,
+        "body_recall": 0.0,
+        "case_id": "analytic_five_body",
+        "concealed_target_iou": 0.0,
+        "concealed_target_precision": 0.0,
+        "concealed_target_predicted_volume": 0,
+        "concealed_target_recall": 0.0,
+        "concealed_target_truth_volume": 1280,
+        "edit_volume_from_base": 0,
+        "fixed_forward_call_budget": 961,
+        "forward_call_count": 961,
+        "global_hard_label_accuracy": 0.9951171875,
+        "hard_attainment": 0.0,
+        "hard_condition_violations": 0,
+        "hard_correct_observation_attainment": 0.0,
+        "hard_correct_observation_rmse": 0.008885824121534824,
+        "hard_observed_seismic_rmse": 0.010882876813411713,
+        "matched_body_center_error_mean": null,
+        "matched_body_count": 0,
+        "matched_body_relative_size_error_mean": null,
+        "optimized_by": "zero",
+        "per_label": {
+          "-1": {
+            "iou": 1.0,
+            "predicted_volume": 32768,
+            "truth_volume": 32768
+          },
+          "0": {
+            "iou": 0.9943725379853686,
+            "predicted_volume": 227456,
+            "truth_volume": 226176
+          },
+          "9": {
+            "iou": 0.6,
+            "predicted_volume": 1920,
+            "truth_volume": 3200
+          }
+        },
+        "predicted_body_count": 0,
+        "proposal_seed": 8202601,
+        "retrospective_only": true,
+        "runtime_seconds": 4.604233927093446,
+        "selected_labels_sha256": "cb14261739d35446bb67c2932edfa4e9ad30c691a10fc295bc123e3eb3186f13",
+        "selected_response_sha256": "784618e6a429178083d111110da8a32d79cf2c572bfa9dda054af93264cfef25",
+        "selection_criterion": "minimum hard observed seismic RMSE only",
+        "selection_frozen_before_retrospective_evaluation": true,
+        "selection_used_truth": false,
+        "truth_body_count": 2,
+        "truth_fields_present": false,
+        "used_for_selection": false,
+        "wrong_lithology_substitution_volume": 0
+      },
+      {
+        "baseline_hard_rmse": 0.017632272094488144,
+        "best_hard_rmse": 0.017632272094488144,
+        "best_state": {
+          "bodies": [],
+          "parent_id": null,
+          "proposal_move": "initial",
+          "state_id": "empty"
+        },
+        "body_match_minimum_component_voxels": 20,
+        "body_matches": [],
+        "body_precision": 0.0,
+        "body_recall": 0.0,
+        "case_id": "analytic_five_body",
+        "concealed_target_iou": 0.0,
+        "concealed_target_precision": 0.0,
+        "concealed_target_predicted_volume": 0,
+        "concealed_target_recall": 0.0,
+        "concealed_target_truth_volume": 1280,
+        "edit_volume_from_base": 0,
+        "fixed_forward_call_budget": 961,
+        "forward_call_count": 961,
+        "global_hard_label_accuracy": 0.9951171875,
+        "hard_attainment": 0.0,
+        "hard_condition_violations": 0,
+        "hard_correct_observation_attainment": 0.0,
+        "hard_correct_observation_rmse": 0.008885824121534824,
+        "hard_observed_seismic_rmse": 0.017632272094488144,
+        "matched_body_center_error_mean": null,
+        "matched_body_count": 0,
+        "matched_body_relative_size_error_mean": null,
+        "optimized_by": "shuffled_xy",
+        "per_label": {
+          "-1": {
+            "iou": 1.0,
+            "predicted_volume": 32768,
+            "truth_volume": 32768
+          },
+          "0": {
+            "iou": 0.9943725379853686,
+            "predicted_volume": 227456,
+            "truth_volume": 226176
+          },
+          "9": {
+            "iou": 0.6,
+            "predicted_volume": 1920,
+            "truth_volume": 3200
+          }
+        },
+        "predicted_body_count": 0,
+        "proposal_seed": 8202601,
+        "retrospective_only": true,
+        "runtime_seconds": 4.537717391969636,
+        "selected_labels_sha256": "cb14261739d35446bb67c2932edfa4e9ad30c691a10fc295bc123e3eb3186f13",
+        "selected_response_sha256": "784618e6a429178083d111110da8a32d79cf2c572bfa9dda054af93264cfef25",
+        "selection_criterion": "minimum hard observed seismic RMSE only",
+        "selection_frozen_before_retrospective_evaluation": true,
+        "selection_used_truth": false,
+        "truth_body_count": 2,
+        "truth_fields_present": false,
+        "used_for_selection": false,
+        "wrong_lithology_substitution_volume": 0
+      },
+      {
+        "baseline_hard_rmse": 0.008885824121534824,
+        "best_hard_rmse": 0.008885824121534824,
+        "best_state": {
+          "bodies": [],
+          "parent_id": null,
+          "proposal_move": "initial",
+          "state_id": "empty"
+        },
+        "body_match_minimum_component_voxels": 20,
+        "body_matches": [],
+        "body_precision": 0.0,
+        "body_recall": 0.0,
+        "case_id": "analytic_five_body",
+        "concealed_target_iou": 0.0,
+        "concealed_target_precision": 0.0,
+        "concealed_target_predicted_volume": 0,
+        "concealed_target_recall": 0.0,
+        "concealed_target_truth_volume": 1280,
+        "edit_volume_from_base": 0,
+        "fixed_forward_call_budget": 961,
+        "forward_call_count": 961,
+        "global_hard_label_accuracy": 0.9951171875,
+        "hard_attainment": 0.0,
+        "hard_condition_violations": 0,
+        "hard_correct_observation_attainment": 0.0,
+        "hard_correct_observation_rmse": 0.008885824121534824,
+        "hard_observed_seismic_rmse": 0.008885824121534824,
+        "matched_body_center_error_mean": null,
+        "matched_body_count": 0,
+        "matched_body_relative_size_error_mean": null,
+        "optimized_by": "wrong_case_observation",
+        "per_label": {
+          "-1": {
+            "iou": 1.0,
+            "predicted_volume": 32768,
+            "truth_volume": 32768
+          },
+          "0": {
+            "iou": 0.9943725379853686,
+            "predicted_volume": 227456,
+            "truth_volume": 226176
+          },
+          "9": {
+            "iou": 0.6,
+            "predicted_volume": 1920,
+            "truth_volume": 3200
+          }
+        },
+        "predicted_body_count": 0,
+        "proposal_seed": 8202601,
+        "retrospective_only": true,
+        "runtime_seconds": 4.541836126009002,
+        "selected_labels_sha256": "cb14261739d35446bb67c2932edfa4e9ad30c691a10fc295bc123e3eb3186f13",
+        "selected_response_sha256": "784618e6a429178083d111110da8a32d79cf2c572bfa9dda054af93264cfef25",
+        "selection_criterion": "minimum hard observed seismic RMSE only",
+        "selection_frozen_before_retrospective_evaluation": true,
+        "selection_used_truth": false,
+        "truth_body_count": 2,
+        "truth_fields_present": false,
+        "used_for_selection": false,
+        "wrong_lithology_substitution_volume": 0
+      }
+    ],
+    "base_correct_observation_rmse": 0.008885824121534824,
+    "case_id": "analytic_five_body",
+    "correct_evaluation_ranking": [
+      "correct",
+      "shuffled_xy",
+      "wrong_case_observation",
+      "zero"
+    ],
+    "correct_optimized_is_strictly_best_against_correct": false,
+    "stage7_exact_library_regression": {
+      "best_hard_rmse": 0.0,
+      "forward_call_count": 889,
+      "regression_only_not_continuous_gate": true,
+      "selection_used_truth": false
+    }
+  },
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "completed_at_utc": "2026-08-08T10:28:25.798070+00:00",
+  "condition_sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41",
+  "config_sha256": "94a5d0a720cab04a4cbd8ee4f82b01a2212e97c3a49e6f03587b95032267150c",
+  "decision": "FAIL_STAGE8A_STOP_BEFORE_STAGE8B",
+  "exact_command": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/bin/python project/geodata-3d-conditional/scripts/stage8/run_stage8.py --stage 8a --config project/geodata-3d-conditional/experiments/stage8_structured_posterior/configs/stage8_v1.json --output-dir project/geodata-3d-conditional/experiments/stage8_structured_posterior/runs/stage8a_v1 --device cuda",
+  "gates": {
+    "all_required_cases_present": true,
+    "analytic_hidden_iou": false,
+    "analytic_hidden_recall": false,
+    "conditions_exact": true,
+    "correct_specificity": false,
+    "geometry_improves_from_empty": false,
+    "identical_budgets": true,
+    "native_mean_iou": false,
+    "native_mean_recall": false,
+    "truth_blind_selection": true,
+    "unknown_count": false
+  },
+  "git_branch": "main",
+  "git_sha": "3394145674e04e3698952064f486cfa31eb876f9",
+  "git_status": "M project/geodata-3d-conditional/flow2_phase6p_inference_limit_summary_zh.ipynb\n M project/geodata-3d-conditional/flow2_phase6q_simple_causality_summary_zh.ipynb\n?? project/geodata-3d-conditional/AGENTS.md\n?? project/geodata-3d-conditional/experiments/stage8_structured_posterior/\n?? project/geodata-3d-conditional/guidance/structured_posterior.py\n?? project/geodata-3d-conditional/scripts/stage8/\n?? project/geodata-3d-conditional/tests/test_stage8_structured_posterior.py",
+  "native_cases": [
+    {
+      "arms": [
+        {
+          "baseline_hard_rmse": 0.014674325473606586,
+          "best_hard_rmse": 0.014674325473606586,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260807",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 942,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "global_hard_label_accuracy": 0.9920883178710938,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.014674325473606586,
+          "hard_observed_seismic_rmse": 0.014674325473606586,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "correct",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9909570919682059,
+              "predicted_volume": 229351,
+              "truth_volume": 227277
+            },
+            "9": {
+              "iou": 0.011910433539780848,
+              "predicted_volume": 25,
+              "truth_volume": 2099
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202602,
+          "retrospective_only": true,
+          "runtime_seconds": 4.210741366026923,
+          "selected_labels_sha256": "9db7a70f8a196157b22e01f75787852d0fc5bc8a388006d51120b3887a44d3f6",
+          "selected_response_sha256": "5d1f15a243bd90ba05a673e2d9eadf899077ef12e37979a81affd49557588d23",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.0013306159526109695,
+          "best_hard_rmse": 0.0013306159526109695,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260807",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 942,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "global_hard_label_accuracy": 0.9920883178710938,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.014674325473606586,
+          "hard_observed_seismic_rmse": 0.0013306159526109695,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "zero",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9909570919682059,
+              "predicted_volume": 229351,
+              "truth_volume": 227277
+            },
+            "9": {
+              "iou": 0.011910433539780848,
+              "predicted_volume": 25,
+              "truth_volume": 2099
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202602,
+          "retrospective_only": true,
+          "runtime_seconds": 4.197205521981232,
+          "selected_labels_sha256": "9db7a70f8a196157b22e01f75787852d0fc5bc8a388006d51120b3887a44d3f6",
+          "selected_response_sha256": "5d1f15a243bd90ba05a673e2d9eadf899077ef12e37979a81affd49557588d23",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.014794488437473774,
+          "best_hard_rmse": 0.014794488437473774,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260807",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 942,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "global_hard_label_accuracy": 0.9920883178710938,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.014674325473606586,
+          "hard_observed_seismic_rmse": 0.014794488437473774,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "shuffled_xy",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9909570919682059,
+              "predicted_volume": 229351,
+              "truth_volume": 227277
+            },
+            "9": {
+              "iou": 0.011910433539780848,
+              "predicted_volume": 25,
+              "truth_volume": 2099
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202602,
+          "retrospective_only": true,
+          "runtime_seconds": 4.197332623996772,
+          "selected_labels_sha256": "9db7a70f8a196157b22e01f75787852d0fc5bc8a388006d51120b3887a44d3f6",
+          "selected_response_sha256": "5d1f15a243bd90ba05a673e2d9eadf899077ef12e37979a81affd49557588d23",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.016025545075535774,
+          "best_hard_rmse": 0.016025545075535774,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260807",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 942,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "global_hard_label_accuracy": 0.9920883178710938,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.014674325473606586,
+          "hard_observed_seismic_rmse": 0.016025545075535774,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "wrong_case_observation",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9909570919682059,
+              "predicted_volume": 229351,
+              "truth_volume": 227277
+            },
+            "9": {
+              "iou": 0.011910433539780848,
+              "predicted_volume": 25,
+              "truth_volume": 2099
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202602,
+          "retrospective_only": true,
+          "runtime_seconds": 4.226696106954478,
+          "selected_labels_sha256": "9db7a70f8a196157b22e01f75787852d0fc5bc8a388006d51120b3887a44d3f6",
+          "selected_response_sha256": "5d1f15a243bd90ba05a673e2d9eadf899077ef12e37979a81affd49557588d23",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        }
+      ],
+      "base_correct_observation_rmse": 0.014674325473606586,
+      "case_id": "native_seed20260807",
+      "correct_evaluation_ranking": [
+        "correct",
+        "shuffled_xy",
+        "wrong_case_observation",
+        "zero"
+      ],
+      "correct_optimized_is_strictly_best_against_correct": false,
+      "fixture_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          257,
+          565,
+          335,
+          369,
+          573
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,13.05)), diam 9.1, height 7.9, minor_axis_scale 0.8, rotation 245.4, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.63)), diam 10.2, height 8.7, minor_axis_scale 1.2, rotation 207.7, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,20.29)), diam 8.6, height 9.4, minor_axis_scale 0.9, rotation 37.6, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,16.17)), diam 9.3, height 9.7, minor_axis_scale 0.9, rotation 148.1, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,34.23)), diam 10.4, height 9.5, minor_axis_scale 1.1, rotation 222.2, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20260807,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      },
+      "true_concealed_body_count_retrospective_only": 2,
+      "wrong_case_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          481,
+          577,
+          519,
+          403,
+          519
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,13.09)), diam 11.6, height 7.8, minor_axis_scale 0.9, rotation 61.5, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.27)), diam 10.1, height 9.5, minor_axis_scale 1.2, rotation 274.1, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,21.21)), diam 11.2, height 7.6, minor_axis_scale 1.1, rotation 21.1, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,15.93)), diam 9.6, height 10.1, minor_axis_scale 0.8, rotation 271.1, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,33.64)), diam 10.4, height 10.7, minor_axis_scale 0.8, rotation 291.3, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20261807,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "arms": [
+        {
+          "baseline_hard_rmse": 0.01435015257447958,
+          "best_hard_rmse": 0.01435015257447958,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260808",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1000,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "global_hard_label_accuracy": 0.9910888671875,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.01435015257447958,
+          "hard_observed_seismic_rmse": 0.01435015257447958,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "correct",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9898145604695069,
+              "predicted_volume": 229347,
+              "truth_volume": 227011
+            },
+            "9": {
+              "iou": 0.01226215644820296,
+              "predicted_volume": 29,
+              "truth_volume": 2365
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202603,
+          "retrospective_only": true,
+          "runtime_seconds": 4.195196011918597,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.0013554467586800456,
+          "best_hard_rmse": 0.0013554467586800456,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260808",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1000,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "global_hard_label_accuracy": 0.9910888671875,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.01435015257447958,
+          "hard_observed_seismic_rmse": 0.0013554467586800456,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "zero",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9898145604695069,
+              "predicted_volume": 229347,
+              "truth_volume": 227011
+            },
+            "9": {
+              "iou": 0.01226215644820296,
+              "predicted_volume": 29,
+              "truth_volume": 2365
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202603,
+          "retrospective_only": true,
+          "runtime_seconds": 4.222225469071418,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.014477615244686604,
+          "best_hard_rmse": 0.014477615244686604,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260808",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1000,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "global_hard_label_accuracy": 0.9910888671875,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.01435015257447958,
+          "hard_observed_seismic_rmse": 0.014477616176009178,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "shuffled_xy",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9898145604695069,
+              "predicted_volume": 229347,
+              "truth_volume": 227011
+            },
+            "9": {
+              "iou": 0.01226215644820296,
+              "predicted_volume": 29,
+              "truth_volume": 2365
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202603,
+          "retrospective_only": true,
+          "runtime_seconds": 4.188732004957274,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.01633468270301819,
+          "best_hard_rmse": 0.01633468270301819,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260808",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1000,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "global_hard_label_accuracy": 0.9910888671875,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.01435015257447958,
+          "hard_observed_seismic_rmse": 0.01633468270301819,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "wrong_case_observation",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9898145604695069,
+              "predicted_volume": 229347,
+              "truth_volume": 227011
+            },
+            "9": {
+              "iou": 0.01226215644820296,
+              "predicted_volume": 29,
+              "truth_volume": 2365
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202603,
+          "retrospective_only": true,
+          "runtime_seconds": 4.187428303062916,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        }
+      ],
+      "base_correct_observation_rmse": 0.01435015257447958,
+      "case_id": "native_seed20260808",
+      "correct_evaluation_ranking": [
+        "correct",
+        "shuffled_xy",
+        "wrong_case_observation",
+        "zero"
+      ],
+      "correct_optimized_is_strictly_best_against_correct": false,
+      "fixture_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          399,
+          311,
+          655,
+          563,
+          437
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,12.04)), diam 9.0, height 9.9, minor_axis_scale 1.0, rotation 254.1, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.00)), diam 8.2, height 10.0, minor_axis_scale 1.0, rotation 192.2, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,19.70)), diam 10.6, height 10.6, minor_axis_scale 1.0, rotation 230.1, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,15.99)), diam 9.8, height 10.0, minor_axis_scale 1.1, rotation 171.4, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,33.91)), diam 10.3, height 10.2, minor_axis_scale 0.7, rotation 106.0, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20260808,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      },
+      "true_concealed_body_count_retrospective_only": 2,
+      "wrong_case_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          735,
+          487,
+          453,
+          473,
+          387
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,12.08)), diam 11.5, height 9.8, minor_axis_scale 1.1, rotation 311.5, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.44)), diam 10.6, height 9.1, minor_axis_scale 0.9, rotation 318.8, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,20.87)), diam 10.1, height 8.3, minor_axis_scale 1.0, rotation 91.0, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,17.21)), diam 10.3, height 7.6, minor_axis_scale 1.2, rotation 164.8, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,33.72)), diam 9.2, height 10.6, minor_axis_scale 0.8, rotation 27.5, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20261808,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "arms": [
+        {
+          "baseline_hard_rmse": 0.016216440126299858,
+          "best_hard_rmse": 0.016216440126299858,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260809",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1186,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "global_hard_label_accuracy": 0.9895401000976562,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.016216440126299858,
+          "hard_observed_seismic_rmse": 0.016216440126299858,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "correct",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9880443171264504,
+              "predicted_volume": 229347,
+              "truth_volume": 226605
+            },
+            "9": {
+              "iou": 0.010465535907614579,
+              "predicted_volume": 29,
+              "truth_volume": 2771
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202604,
+          "retrospective_only": true,
+          "runtime_seconds": 4.209466650034301,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.0013554467586800456,
+          "best_hard_rmse": 0.0013554467586800456,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260809",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1186,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "global_hard_label_accuracy": 0.9895401000976562,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.016216440126299858,
+          "hard_observed_seismic_rmse": 0.0013554467586800456,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "zero",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9880443171264504,
+              "predicted_volume": 229347,
+              "truth_volume": 226605
+            },
+            "9": {
+              "iou": 0.010465535907614579,
+              "predicted_volume": 29,
+              "truth_volume": 2771
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202604,
+          "retrospective_only": true,
+          "runtime_seconds": 4.1962457509944215,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.016329342499375343,
+          "best_hard_rmse": 0.016329342499375343,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260809",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1186,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "global_hard_label_accuracy": 0.9895401000976562,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.016216440126299858,
+          "hard_observed_seismic_rmse": 0.016329342499375343,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "shuffled_xy",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9880443171264504,
+              "predicted_volume": 229347,
+              "truth_volume": 226605
+            },
+            "9": {
+              "iou": 0.010465535907614579,
+              "predicted_volume": 29,
+              "truth_volume": 2771
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202604,
+          "retrospective_only": true,
+          "runtime_seconds": 4.1929936109809205,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.015254280529916286,
+          "best_hard_rmse": 0.015254280529916286,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260809",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1186,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "global_hard_label_accuracy": 0.9895401000976562,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.016216440126299858,
+          "hard_observed_seismic_rmse": 0.015254280529916286,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "wrong_case_observation",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9880443171264504,
+              "predicted_volume": 229347,
+              "truth_volume": 226605
+            },
+            "9": {
+              "iou": 0.010465535907614579,
+              "predicted_volume": 29,
+              "truth_volume": 2771
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202604,
+          "retrospective_only": true,
+          "runtime_seconds": 4.209597520995885,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        }
+      ],
+      "base_correct_observation_rmse": 0.016216440126299858,
+      "case_id": "native_seed20260809",
+      "correct_evaluation_ranking": [
+        "correct",
+        "shuffled_xy",
+        "wrong_case_observation",
+        "zero"
+      ],
+      "correct_optimized_is_strictly_best_against_correct": false,
+      "fixture_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          431,
+          757,
+          397,
+          573,
+          613
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,12.68)), diam 10.8, height 8.6, minor_axis_scale 0.8, rotation 177.8, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.51)), diam 11.7, height 9.0, minor_axis_scale 1.1, rotation 309.5, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,19.68)), diam 8.2, height 10.6, minor_axis_scale 1.0, rotation 355.2, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,16.01)), diam 11.6, height 10.0, minor_axis_scale 0.9, rotation 179.5, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,34.41)), diam 11.4, height 9.2, minor_axis_scale 1.0, rotation 193.3, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20260809,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      },
+      "true_concealed_body_count_retrospective_only": 2,
+      "wrong_case_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          709,
+          523,
+          407,
+          259,
+          473
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,11.89)), diam 10.9, height 10.2, minor_axis_scale 1.1, rotation 145.5, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.71)), diam 10.0, height 8.6, minor_axis_scale 1.1, rotation 308.0, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,19.89)), diam 8.2, height 10.2, minor_axis_scale 1.1, rotation 115.8, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,17.06)), diam 9.0, height 7.9, minor_axis_scale 0.9, rotation 141.2, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,34.96)), diam 10.5, height 8.1, minor_axis_scale 0.9, rotation 304.9, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20261809,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      }
+    }
+  ],
+  "observation_sha256": "8822e1e9a5829fc1731dfe5e30208ec36fdee3faed2ab7465cc9318095f7184e",
+  "preflight_validation": {
+    "checked_assets": [
+      {
+        "path": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+        "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c"
+      },
+      {
+        "path": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt",
+        "sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3"
+      },
+      {
+        "path": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/boreholes.pt",
+        "sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage4_seismic/observations/cond_generation_0/distinct_upper_bound_v1_fix2/subsurface_mask.pt",
+        "sha256": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage4_seismic/observations/cond_generation_0/distinct_upper_bound_v1_fix2/observed_seismic.pt",
+        "sha256": "8822e1e9a5829fc1731dfe5e30208ec36fdee3faed2ab7465cc9318095f7184e"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage4_seismic/observations/cond_generation_0/distinct_upper_bound_v1_fix2/acoustic_property_table.pt",
+        "sha256": "cdfa35f8027b8c9bc523100d0342345ce3cbc67fca16f796d594b04226acb254"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_0.pt",
+        "sha256": "b25189fe11ef229c7b4a6fb7a620be355503177d6f78634e1cb39d14a96f283a"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_1.pt",
+        "sha256": "c07c88b3bbdb2c27477677f429fdd0b677f344257b8cb636cadc4971ccbea0e0"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_2.pt",
+        "sha256": "8af50f5a4186eaa31281ac3aced6bbe09a3206ce63bccc36870c8c4ba00d32c8"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_3.pt",
+        "sha256": "2d7d3300b463b304a228f0940f58aef2942becb5f9ee6d9ce6358c314ea9c180"
+      }
+    ],
+    "manifest_path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage8_structured_posterior/reports/preflight/stage8_preflight_manifest.json",
+    "manifest_sha256": "f82eee94c7ffcbbbd70ca64e36fa0f7b52aa3b7322fdb439a87686b0fa3f7570"
+  },
+  "runtime": {
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 4090 D",
+    "hostname": "LabRS",
+    "torch": "2.8.0+cu128"
+  },
+  "schema": "stage8a_summary_v1",
+  "seismic_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "status": "completed",
+  "truth_role": "observation-generation/retrospective only; never search selection",
+  "truth_sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3"
+}

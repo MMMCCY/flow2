@@ -1,0 +1,37 @@
+{
+  "schema": "stage8_gate_v1",
+  "frozen_before_authoritative_results": true,
+  "stage8a": {
+    "required_cases": ["analytic_five_body", "native_seed20260807", "native_seed20260808", "native_seed20260809"],
+    "correct_arm_strictly_first_against_correct_required_fraction": 1.0,
+    "analytic_hidden_iou_minimum": 0.95,
+    "analytic_hidden_recall_minimum": 0.95,
+    "native_mean_concealed_iou_minimum": 0.5,
+    "native_mean_concealed_recall_minimum": 0.5,
+    "native_improvement_over_start_required_fraction": 1.0,
+    "maximum_condition_violations": 0,
+    "truth_informed_proposals_allowed": false,
+    "identical_forward_call_budgets_required": true,
+    "unknown_count_absolute_error_maximum": 1
+  },
+  "stage8b_screening": {
+    "seed": 42,
+    "paired_members": 4,
+    "maximum_condition_violations": 0,
+    "correct_combined_strictly_first_member_fraction_minimum": 0.75,
+    "correct_combined_mean_rmse_strictly_below_all_controls": true,
+    "combined_hard_seismic_improvement_member_fraction_minimum": 1.0,
+    "combined_concealed_iou_improvement_member_fraction_minimum": 0.75,
+    "combined_mean_concealed_iou_delta_minimum": 0.05,
+    "wrong_lithology_substitution_fraction_maximum": 0.01,
+    "maximum_truth_used_for_selection_count": 0,
+    "identical_forward_call_budgets_required": true
+  },
+  "expansion": {
+    "authorized_only_if_inference_visible_screening_gate_passes": true,
+    "additional_seeds": [142, 242],
+    "total_paired_members": 12,
+    "truth_metrics_may_not_decide_expansion": true
+  }
+}
+

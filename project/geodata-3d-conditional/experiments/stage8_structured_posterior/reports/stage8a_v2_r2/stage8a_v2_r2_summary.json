@@ -1,0 +1,1048 @@
+{
+  "actual_mask_alignment": {
+    "all_controls": {
+      "actual_first_order_hard_sign_agreement_fraction": 0.2679938744257274,
+      "actual_mask_predicts_improvement_count": 4784,
+      "canonical_actual_sign_agreement_fraction": 0.9537519142419602,
+      "count": 6530,
+      "hard_improves_parent_count": 4,
+      "spearman_actual_mask_predicted_decrease_vs_hard_delta": -0.5789724491610644,
+      "spearman_canonical_score_vs_actual_mask_predicted_decrease": 0.7957308690725079
+    },
+    "all_correct": {
+      "actual_first_order_hard_sign_agreement_fraction": 0.059821428571428574,
+      "actual_mask_predicts_improvement_count": 2106,
+      "canonical_actual_sign_agreement_fraction": 0.9401785714285714,
+      "count": 2240,
+      "hard_improves_parent_count": 0,
+      "spearman_actual_mask_predicted_decrease_vs_hard_delta": -0.08248442048809694,
+      "spearman_canonical_score_vs_actual_mask_predicted_decrease": 0.15419017932149015
+    },
+    "control_shuffled_xy": {
+      "actual_first_order_hard_sign_agreement_fraction": 0.08035714285714286,
+      "actual_mask_predicts_improvement_count": 2060,
+      "canonical_actual_sign_agreement_fraction": 0.9196428571428571,
+      "count": 2240,
+      "hard_improves_parent_count": 0,
+      "spearman_actual_mask_predicted_decrease_vs_hard_delta": -0.33888327055579237,
+      "spearman_canonical_score_vs_actual_mask_predicted_decrease": 0.7361400635991332
+    },
+    "control_wrong_case_observation": {
+      "actual_first_order_hard_sign_agreement_fraction": 0.05223214285714286,
+      "actual_mask_predicts_improvement_count": 2124,
+      "canonical_actual_sign_agreement_fraction": 0.9482142857142857,
+      "count": 2240,
+      "hard_improves_parent_count": 1,
+      "spearman_actual_mask_predicted_decrease_vs_hard_delta": -0.053066454044909755,
+      "spearman_canonical_score_vs_actual_mask_predicted_decrease": 0.193928728352793
+    },
+    "control_zero": {
+      "actual_first_order_hard_sign_agreement_fraction": 0.708780487804878,
+      "actual_mask_predicts_improvement_count": 600,
+      "canonical_actual_sign_agreement_fraction": 0.9970731707317073,
+      "count": 2050,
+      "hard_improves_parent_count": 3,
+      "spearman_actual_mask_predicted_decrease_vs_hard_delta": -0.7565040661448618,
+      "spearman_canonical_score_vs_actual_mask_predicted_decrease": 0.9675371655136061
+    }
+  },
+  "classification_rationale": "Localization is not the failure: the two successful analytic centers rank 1 and 5 of 140,985. After replacing the canonical mask by every proposal's actual mask, first order still predicts improvement for 2,106/2,240 correct-arm births, while the frozen finite hard evaluation improves for 0/2,240; sign agreement is only 5.98%. The known Stage7 singleton masks themselves have matching improving first-order and finite-step signs, confirming that the implementation can represent the descent signal. The dominant break is therefore extrapolation from an infinitesimal property direction to the one-shot finite hard insertion used by v2.",
+  "exactly_one_recommendation": "Replace one-shot full-size births with a deterministic truth-blind hard-loss trust-region continuation that starts from a nested small allowed-shape insertion and grows it only through already-budgeted hard-RMSE-improving proposals, without increasing the hard-forward budget.",
+  "finite_step_oracle": [
+    {
+      "affects_gate": false,
+      "candidate_id": "candidate_04",
+      "finite_hard_step_improves": true,
+      "first_order_predicts_improvement": true,
+      "first_order_rank_among_12": 1,
+      "impedance_predicted_delta_mse": -0.00010427686356706545,
+      "oracle_label": "ORACLE_POSTMORTEM_ONLY",
+      "predicted_decrease_mse": 0.00010427686356706545,
+      "predicted_delta_mse": -0.00010427686356706545,
+      "sign_agreement": true,
+      "singleton_hard_delta_rmse_vs_empty": -0.002602591644972563,
+      "singleton_hard_loss_rank_among_12": 2,
+      "singleton_hard_rmse": 0.006283232476562262,
+      "slowness_predicted_delta_mse": 0.0,
+      "used_for_selection": false,
+      "used_for_tuning": false
+    },
+    {
+      "affects_gate": false,
+      "candidate_id": "candidate_06",
+      "finite_hard_step_improves": true,
+      "first_order_predicts_improvement": true,
+      "first_order_rank_among_12": 2,
+      "impedance_predicted_delta_mse": -0.00010427685629110783,
+      "oracle_label": "ORACLE_POSTMORTEM_ONLY",
+      "predicted_decrease_mse": 0.00010427685629110783,
+      "predicted_delta_mse": -0.00010427685629110783,
+      "sign_agreement": true,
+      "singleton_hard_delta_rmse_vs_empty": -0.002602603752166033,
+      "singleton_hard_loss_rank_among_12": 1,
+      "singleton_hard_rmse": 0.006283220369368792,
+      "slowness_predicted_delta_mse": 0.0,
+      "used_for_selection": false,
+      "used_for_tuning": false
+    }
+  ],
+  "frozen_sources_unchanged": true,
+  "frozen_tree_hashes": {
+    "stage8a_r1": {
+      "file_count": 9,
+      "tree_sha256": "28c202bdc07febb7c4ad971afa158a7d500e3c08a3425d1183667f8ccd4a8931"
+    },
+    "stage8a_v1": {
+      "file_count": 84,
+      "tree_sha256": "13e5a1ef2d4579c7d05b7184698d6a1f7c99db63799003d7711541582bee42fc"
+    },
+    "stage8a_v2": {
+      "file_count": 841,
+      "tree_sha256": "be019573ff380147bf66ca3d16338c2a240d694c91a7e85536dccae5ae0f9a8b"
+    }
+  },
+  "gradient_recomputation": {
+    "all_recomputed_hashes_match_v2": true,
+    "backward_calls": 725,
+    "differentiable_forward_calls": 725,
+    "gradient_recomputation_was_indispensable": true,
+    "hard_proposal_forward_calls": 0,
+    "implementation_defects": [],
+    "raw_gradients_persisted_in_v2": false,
+    "runtime_seconds": 27.388375184265897
+  },
+  "initial_ranking_freeze": {
+    "frozen_full_ranking_path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage8_structured_posterior/reports/stage8a_v2_r2/analytic_initial_full_center_ranking_frozen.csv",
+    "frozen_full_ranking_sha256": "8bdbb01fd4dfa57689cf37277653d74d0e610472c0835bc4ddfaa4c80242ffc9",
+    "oracle_geometry_opened_before_freeze": false,
+    "role": "INFERENCE_ARTIFACT_FROZEN_BEFORE_ORACLE_GEOMETRY_OPEN",
+    "source_ranking_path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage8_structured_posterior/runs/stage8a_v2/cases/analytic_five_body/correct/sensitivity_rankings.json",
+    "source_ranking_sha256": "4d176e69dd1cb962407cb10e946a93307f76eb9161b0d24c4dbdb73afec66dcb",
+    "source_sensitivity_map_file_sha256": "e36c70d8732947a9949b13fc5bcda1ecfff715b3dfba812a413db7e5965aed77",
+    "source_sensitivity_map_path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage8_structured_posterior/runs/stage8a_v2/cases/analytic_five_body/correct/sensitivity_maps/g001_b7e43f1d75130653_0000.pt",
+    "source_sensitivity_map_tensor_sha256": "a816b4c91e659797f4a4422bf273ca586191b78485c6515d8c490cea356b0be6",
+    "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+    "valid_center_count": 140985
+  },
+  "machine_tables": [
+    "analytic_initial_full_center_ranking_frozen.csv",
+    "retrospective_center_rank.csv",
+    "score_vs_hard_loss.csv",
+    "score_alignment_summary.csv",
+    "score_conditioned_on_hard_loss_quantiles.csv",
+    "actual_mask_directional_derivative.csv",
+    "actual_mask_alignment_summary.csv",
+    "candidate_04_06_finite_step_comparison.csv"
+  ],
+  "new_hard_proposal_forward_calls": 0,
+  "new_proposals_evaluated": 0,
+  "observation_reconstruction_evidence": {
+    "raw_observation_absence_proven_by": "no observation tensor exists under the 841-file v2 run tree",
+    "raw_observation_tensors_found_in_v2_run": false,
+    "reason_reconstruction_indispensable": "raw gradients require the exact observed tensor; v2 persisted only its hash"
+  },
+  "observation_reconstruction_forward_calls": 8,
+  "primary_classification": "FIRST_ORDER_TO_FINITE_HARD_NONLINEARITY",
+  "retrospective_center_rank": [
+    {
+      "affects_gate": false,
+      "candidate_id": "candidate_04",
+      "canonical_center_score": 6.169795233290642e-05,
+      "nearest_grid_distance_voxels": 0.8660254037844386,
+      "nearest_ranked_center_x": 9,
+      "nearest_ranked_center_y": 41,
+      "nearest_ranked_center_z": 21,
+      "nearest_top96_distance_voxels": 0.8660254037844386,
+      "nearest_top96_rank": 5,
+      "oracle_label": "ORACLE_POSTMORTEM_ONLY",
+      "rank_percentile_from_top": 0.0035464765755222187,
+      "score_percentile": 99.99716281873958,
+      "sensitivity_rank": 5,
+      "successful_center_x": 9.5,
+      "successful_center_y": 41.5,
+      "successful_center_z": 20.5,
+      "top_ranked_center_distance_voxels": 36.53423052426313,
+      "used_for_selection": false,
+      "used_for_tuning": false
+    },
+    {
+      "affects_gate": false,
+      "candidate_id": "candidate_06",
+      "canonical_center_score": 6.173095607664436e-05,
+      "nearest_grid_distance_voxels": 0.8660254037844386,
+      "nearest_ranked_center_x": 41,
+      "nearest_ranked_center_y": 41,
+      "nearest_ranked_center_z": 39,
+      "nearest_top96_distance_voxels": 0.8660254037844386,
+      "nearest_top96_rank": 1,
+      "oracle_label": "ORACLE_POSTMORTEM_ONLY",
+      "rank_percentile_from_top": 0.0007092953151044437,
+      "score_percentile": 100.0,
+      "sensitivity_rank": 1,
+      "successful_center_x": 41.5,
+      "successful_center_y": 41.5,
+      "successful_center_z": 38.5,
+      "top_ranked_center_distance_voxels": 0.8660254037844386,
+      "used_for_selection": false,
+      "used_for_tuning": false
+    }
+  ],
+  "schema": "stage8a_v2_r2_summary_v1",
+  "score_alignment": {
+    "all_controls": {
+      "canonical_score_distribution": {
+        "count": 6530,
+        "max": 9.151024278253317e-05,
+        "mean": 2.6440067004029696e-05,
+        "median": 3.2872185329324566e-05,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p95": 6.169795233290642e-05
+      },
+      "count": 6530,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 6530,
+        "max": 0.008258187212049961,
+        "mean": 0.002492097385368876,
+        "median": 0.0017195274122059345,
+        "min": -0.0005492791533470154,
+        "p01": 0.00018363354727625849,
+        "p05": 0.000455758348107338,
+        "p95": 0.006794386752881108
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 0.0,
+      "kendall_tau_score_vs_hard_delta": -0.4555652765366428,
+      "spearman_pvalue": 0.0,
+      "spearman_rho_score_vs_hard_delta": -0.6347990321504967,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 0,
+          "k": 10,
+          "overlap_fraction_of_k": 0.0
+        },
+        "k10pct": {
+          "intersection_count": 111,
+          "k": 653,
+          "overlap_fraction_of_k": 0.16998468606431852
+        }
+      }
+    },
+    "all_correct": {
+      "canonical_score_distribution": {
+        "count": 2240,
+        "max": 9.778767707757652e-05,
+        "mean": 4.055945558840384e-05,
+        "median": 3.638600173871964e-05,
+        "min": 2.4635164663777687e-05,
+        "p01": 2.4635170120745897e-05,
+        "p05": 2.6337187591707334e-05,
+        "p95": 6.188682637002773e-05
+      },
+      "count": 2240,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 2240,
+        "max": 0.005020248703658581,
+        "mean": 0.0016882072793253297,
+        "median": 0.0015427330508828163,
+        "min": 0.0001472383737564087,
+        "p01": 0.00039653734304010866,
+        "p05": 0.0006192007102072238,
+        "p95": 0.003276396403089165
+      },
+      "higher_score_associated_with_lower_hard_rmse": false,
+      "kendall_pvalue": 0.31416619865310047,
+      "kendall_tau_score_vs_hard_delta": 0.014219258952654924,
+      "spearman_pvalue": 0.3540894222707076,
+      "spearman_rho_score_vs_hard_delta": 0.019588877662278497,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 0,
+          "k": 10,
+          "overlap_fraction_of_k": 0.0
+        },
+        "k10pct": {
+          "intersection_count": 35,
+          "k": 224,
+          "overlap_fraction_of_k": 0.15625
+        }
+      }
+    },
+    "arm:analytic_five_body/correct": {
+      "canonical_score_distribution": {
+        "count": 560,
+        "max": 7.437914609909058e-05,
+        "mean": 4.770969926539692e-05,
+        "median": 4.72114043077454e-05,
+        "min": 3.506026405375451e-05,
+        "p01": 3.506026405375451e-05,
+        "p05": 3.508279041852802e-05,
+        "p95": 6.173095607664436e-05
+      },
+      "count": 560,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 560,
+        "max": 0.005020248703658581,
+        "mean": 0.002427558699024043,
+        "median": 0.002304560039192438,
+        "min": 0.00045064836740493774,
+        "p01": 0.0007318219821900129,
+        "p05": 0.0011071354616433381,
+        "p95": 0.004141341941431164
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 2.9494123154099e-06,
+      "kendall_tau_score_vs_hard_delta": -0.13450316377346824,
+      "spearman_pvalue": 2.5151047470863705e-06,
+      "spearman_rho_score_vs_hard_delta": -0.19738381815353614,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 1,
+          "k": 10,
+          "overlap_fraction_of_k": 0.1
+        },
+        "k10pct": {
+          "intersection_count": 13,
+          "k": 56,
+          "overlap_fraction_of_k": 0.23214285714285715
+        }
+      }
+    },
+    "arm:analytic_five_body/shuffled_xy": {
+      "canonical_score_distribution": {
+        "count": 560,
+        "max": 6.869485514471307e-05,
+        "mean": 4.88891828224171e-05,
+        "median": 4.812302904610988e-05,
+        "min": 4.62380085082259e-05,
+        "p01": 4.62380085082259e-05,
+        "p05": 4.623801578418352e-05,
+        "p95": 5.883717094548047e-05
+      },
+      "count": 560,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 560,
+        "max": 0.002218257635831833,
+        "mean": 0.0007777491684204766,
+        "median": 0.0006690695881843567,
+        "min": 4.6547502279281616e-05,
+        "p01": 8.34777019917965e-05,
+        "p05": 0.0001549234613776207,
+        "p95": 0.0017055650241672984
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 4.940626498033564e-05,
+      "kendall_tau_score_vs_hard_delta": -0.11800828976894392,
+      "spearman_pvalue": 5.5081475320254656e-05,
+      "spearman_rho_score_vs_hard_delta": -0.16956638993228945,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 2,
+          "k": 10,
+          "overlap_fraction_of_k": 0.2
+        },
+        "k10pct": {
+          "intersection_count": 15,
+          "k": 56,
+          "overlap_fraction_of_k": 0.26785714285714285
+        }
+      }
+    },
+    "arm:analytic_five_body/wrong_case_observation": {
+      "canonical_score_distribution": {
+        "count": 560,
+        "max": 7.437892782036215e-05,
+        "mean": 4.770970077255957e-05,
+        "median": 4.72114043077454e-05,
+        "min": 3.506026405375451e-05,
+        "p01": 3.506026405375451e-05,
+        "p05": 3.508279041852802e-05,
+        "p95": 6.173095607664436e-05
+      },
+      "count": 560,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 560,
+        "max": 0.0050202468410134315,
+        "mean": 0.002440948361930038,
+        "median": 0.0023049507290124893,
+        "min": 0.0005589714273810387,
+        "p01": 0.0007512583304196596,
+        "p05": 0.0011484300252050162,
+        "p95": 0.004145858250558376
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 1.5908038700588054e-05,
+      "kendall_tau_score_vs_hard_delta": -0.1241848273042134,
+      "spearman_pvalue": 1.4692315190335756e-05,
+      "spearman_rho_score_vs_hard_delta": -0.18198862453243358,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 2,
+          "k": 10,
+          "overlap_fraction_of_k": 0.2
+        },
+        "k10pct": {
+          "intersection_count": 11,
+          "k": 56,
+          "overlap_fraction_of_k": 0.19642857142857142
+        }
+      }
+    },
+    "arm:analytic_five_body/zero": {
+      "canonical_score_distribution": {
+        "count": 370,
+        "max": 6.351447518682107e-05,
+        "mean": 4.960184331237641e-05,
+        "median": 4.999789234716445e-05,
+        "min": 4.704443927039392e-05,
+        "p01": 4.704443927039392e-05,
+        "p05": 4.7578607336618006e-05,
+        "p95": 5.295236423989992e-05
+      },
+      "count": 370,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 370,
+        "max": 0.003297906368970871,
+        "mean": 0.0011456379037652466,
+        "median": 0.0010414752177894115,
+        "min": -0.0003807181492447853,
+        "p01": 8.049087598919868e-05,
+        "p05": 0.00021936595439910888,
+        "p95": 0.0025360402651131153
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 9.317943413134083e-05,
+      "kendall_tau_score_vs_hard_delta": -0.14914851694797862,
+      "spearman_pvalue": 7.421774843114265e-05,
+      "spearman_rho_score_vs_hard_delta": -0.20450327783526376,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 2,
+          "k": 10,
+          "overlap_fraction_of_k": 0.2
+        },
+        "k10pct": {
+          "intersection_count": 9,
+          "k": 37,
+          "overlap_fraction_of_k": 0.24324324324324326
+        }
+      }
+    },
+    "arm:native_seed20260807/correct": {
+      "canonical_score_distribution": {
+        "count": 560,
+        "max": 8.871073077898473e-05,
+        "mean": 3.7290987071563514e-05,
+        "median": 3.240269506932236e-05,
+        "min": 2.6764426365843974e-05,
+        "p01": 2.691253394004889e-05,
+        "p05": 2.711131855903659e-05,
+        "p95": 5.7225265300075963e-05
+      },
+      "count": 560,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 560,
+        "max": 0.0032267840579152107,
+        "mean": 0.00149738500393661,
+        "median": 0.001419497188180685,
+        "min": 0.00020827725529670715,
+        "p01": 0.00036066505126655104,
+        "p05": 0.0005974659696221352,
+        "p95": 0.0027199790813028806
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 1.5029199797858634e-07,
+      "kendall_tau_score_vs_hard_delta": -0.14918559142458945,
+      "spearman_pvalue": 1.195310590031628e-07,
+      "spearman_rho_score_vs_hard_delta": -0.2214329401528238,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 1,
+          "k": 10,
+          "overlap_fraction_of_k": 0.1
+        },
+        "k10pct": {
+          "intersection_count": 15,
+          "k": 56,
+          "overlap_fraction_of_k": 0.26785714285714285
+        }
+      }
+    },
+    "arm:native_seed20260807/shuffled_xy": {
+      "canonical_score_distribution": {
+        "count": 560,
+        "max": 4.532110324362293e-05,
+        "mean": 1.0753745044667085e-05,
+        "median": 6.567513310073991e-06,
+        "min": 5.894169134990079e-06,
+        "p01": 5.906970727664884e-06,
+        "p05": 5.9261469687044155e-06,
+        "p95": 3.769271297642262e-05
+      },
+      "count": 560,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 560,
+        "max": 0.003287072293460369,
+        "mean": 0.0017269529385625251,
+        "median": 0.0016700038686394691,
+        "min": 0.00019166618585586548,
+        "p01": 0.0003508271649479866,
+        "p05": 0.0006853229366242886,
+        "p95": 0.002913671638816595
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 2.342275798763931e-06,
+      "kendall_tau_score_vs_hard_delta": -0.13383212968100383,
+      "spearman_pvalue": 1.154731809143057e-06,
+      "spearman_rho_score_vs_hard_delta": -0.20380446357311016,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 1,
+          "k": 10,
+          "overlap_fraction_of_k": 0.1
+        },
+        "k10pct": {
+          "intersection_count": 28,
+          "k": 56,
+          "overlap_fraction_of_k": 0.5
+        }
+      }
+    },
+    "arm:native_seed20260807/wrong_case_observation": {
+      "canonical_score_distribution": {
+        "count": 560,
+        "max": 8.108023030217737e-05,
+        "mean": 4.6078312016106794e-05,
+        "median": 3.9905300582177006e-05,
+        "min": 3.3126023481599987e-05,
+        "p01": 3.312603439553641e-05,
+        "p05": 3.343486605444923e-05,
+        "p95": 7.10140448063612e-05
+      },
+      "count": 560,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 560,
+        "max": 0.0032005012035369873,
+        "mean": 0.0013612676278821059,
+        "median": 0.0012583741918206215,
+        "min": 3.512389957904816e-05,
+        "p01": 0.0003179781511425972,
+        "p05": 0.0005314154550433159,
+        "p95": 0.0025426642037928104
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 0.06361185774565338,
+      "kendall_tau_score_vs_hard_delta": -0.05276704057185095,
+      "spearman_pvalue": 0.06707867088052982,
+      "spearman_rho_score_vs_hard_delta": -0.077436870505866,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 4,
+          "k": 10,
+          "overlap_fraction_of_k": 0.4
+        },
+        "k10pct": {
+          "intersection_count": 13,
+          "k": 56,
+          "overlap_fraction_of_k": 0.23214285714285715
+        }
+      }
+    },
+    "arm:native_seed20260807/zero": {
+      "canonical_score_distribution": {
+        "count": 560,
+        "max": 4.546231866697781e-05,
+        "mean": 4.898465142235051e-06,
+        "median": 0.0,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p95": 3.924909615307115e-05
+      },
+      "count": 560,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 560,
+        "max": 0.008258187212049961,
+        "mean": 0.005487200592012543,
+        "median": 0.005875590723007917,
+        "min": -0.0005492791533470154,
+        "p01": 0.0006060099741443992,
+        "p05": 0.0016483762534335255,
+        "p95": 0.007534048473462463
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 1.615659507159522e-45,
+      "kendall_tau_score_vs_hard_delta": -0.47329245477650644,
+      "spearman_pvalue": 5.340532663344649e-54,
+      "spearman_rho_score_vs_hard_delta": -0.5908396749033391,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 4,
+          "k": 10,
+          "overlap_fraction_of_k": 0.4
+        },
+        "k10pct": {
+          "intersection_count": 44,
+          "k": 56,
+          "overlap_fraction_of_k": 0.7857142857142857
+        }
+      }
+    },
+    "arm:native_seed20260808/correct": {
+      "canonical_score_distribution": {
+        "count": 560,
+        "max": 6.777044472983107e-05,
+        "mean": 3.212031992591489e-05,
+        "median": 3.016920072695939e-05,
+        "min": 2.4635164663777687e-05,
+        "p01": 2.463516648276709e-05,
+        "p05": 2.46351719397353e-05,
+        "p95": 5.175696496735326e-05
+      },
+      "count": 560,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 560,
+        "max": 0.003635960631072521,
+        "mean": 0.0014968048548325897,
+        "median": 0.0013893386349081993,
+        "min": 0.00018275529146194458,
+        "p01": 0.0003809505328536034,
+        "p05": 0.0006040377076715231,
+        "p95": 0.0028163982555270187
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 0.0001402772776265976,
+      "kendall_tau_score_vs_hard_delta": -0.10805619994031013,
+      "spearman_pvalue": 0.00011999048169790531,
+      "spearman_rho_score_vs_hard_delta": -0.1618185201239631,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 1,
+          "k": 10,
+          "overlap_fraction_of_k": 0.1
+        },
+        "k10pct": {
+          "intersection_count": 16,
+          "k": 56,
+          "overlap_fraction_of_k": 0.2857142857142857
+        }
+      }
+    },
+    "arm:native_seed20260808/shuffled_xy": {
+      "canonical_score_distribution": {
+        "count": 560,
+        "max": 4.4057622289983556e-05,
+        "mean": 1.0242398594430467e-05,
+        "median": 6.2952171901997644e-06,
+        "min": 5.547361979552079e-06,
+        "p01": 5.568147116719047e-06,
+        "p05": 5.632586180581711e-06,
+        "p95": 3.582376120903063e-05
+      },
+      "count": 560,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 560,
+        "max": 0.0035156188532710075,
+        "mean": 0.0017052533870030727,
+        "median": 0.0016234256327152252,
+        "min": 0.0001545911654829979,
+        "p01": 0.000384726095944643,
+        "p05": 0.0007239968981593847,
+        "p95": 0.0030049295164644714
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 6.495741088630493e-06,
+      "kendall_tau_score_vs_hard_delta": -0.1278473511591464,
+      "spearman_pvalue": 6.785111084209515e-06,
+      "spearman_rho_score_vs_hard_delta": -0.18888088449027923,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 3,
+          "k": 10,
+          "overlap_fraction_of_k": 0.3
+        },
+        "k10pct": {
+          "intersection_count": 24,
+          "k": 56,
+          "overlap_fraction_of_k": 0.42857142857142855
+        }
+      }
+    },
+    "arm:native_seed20260808/wrong_case_observation": {
+      "canonical_score_distribution": {
+        "count": 560,
+        "max": 9.151024278253317e-05,
+        "mean": 4.6134277493235586e-05,
+        "median": 4.0430402805213816e-05,
+        "min": 3.177033431711607e-05,
+        "p01": 3.1871608371147886e-05,
+        "p05": 3.267769352532923e-05,
+        "p95": 8.122159488266334e-05
+      },
+      "count": 560,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 560,
+        "max": 0.003398669883608818,
+        "mean": 0.0012901017009945852,
+        "median": 0.0012206481769680977,
+        "min": -0.00012703239917755127,
+        "p01": 0.00028794869780540466,
+        "p05": 0.0005100801587104798,
+        "p95": 0.0023908219300210476
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 0.15052858981173223,
+      "kendall_tau_score_vs_hard_delta": -0.04087854968454494,
+      "spearman_pvalue": 0.1449972132099563,
+      "spearman_rho_score_vs_hard_delta": -0.061666901581818694,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 1,
+          "k": 10,
+          "overlap_fraction_of_k": 0.1
+        },
+        "k10pct": {
+          "intersection_count": 11,
+          "k": 56,
+          "overlap_fraction_of_k": 0.19642857142857142
+        }
+      }
+    },
+    "arm:native_seed20260808/zero": {
+      "canonical_score_distribution": {
+        "count": 560,
+        "max": 4.439776603248902e-05,
+        "mean": 4.583827652433163e-06,
+        "median": 0.0,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p95": 3.565548395272344e-05
+      },
+      "count": 560,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 560,
+        "max": 0.008157858741469681,
+        "mean": 0.0052584398633501095,
+        "median": 0.005520282662473619,
+        "min": 0.00031026266515254974,
+        "p01": 0.0007880594255402684,
+        "p05": 0.0017553077777847648,
+        "p95": 0.0074191476916894315
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 2.1458962826481224e-44,
+      "kendall_tau_score_vs_hard_delta": -0.46674808304093485,
+      "spearman_pvalue": 8.670232864678642e-54,
+      "spearman_rho_score_vs_hard_delta": -0.5898845455719975,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 1,
+          "k": 10,
+          "overlap_fraction_of_k": 0.1
+        },
+        "k10pct": {
+          "intersection_count": 40,
+          "k": 56,
+          "overlap_fraction_of_k": 0.7142857142857143
+        }
+      }
+    },
+    "arm:native_seed20260809/correct": {
+      "canonical_score_distribution": {
+        "count": 560,
+        "max": 9.778767707757652e-05,
+        "mean": 4.511681609074003e-05,
+        "median": 4.235045889799949e-05,
+        "min": 3.218442725483328e-05,
+        "p01": 3.218443089281209e-05,
+        "p05": 3.231774098821916e-05,
+        "p95": 7.275344978552312e-05
+      },
+      "count": 560,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 560,
+        "max": 0.003445792943239212,
+        "mean": 0.0013310805595080767,
+        "median": 0.0012355763465166092,
+        "min": 0.0001472383737564087,
+        "p01": 0.00037431802600622176,
+        "p05": 0.0005234407261013985,
+        "p95": 0.002358669694513082
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 2.224823595065745e-05,
+      "kendall_tau_score_vs_hard_delta": -0.12058113836217711,
+      "spearman_pvalue": 2.604495473947348e-05,
+      "spearman_rho_score_vs_hard_delta": -0.17671127108671886,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 2,
+          "k": 10,
+          "overlap_fraction_of_k": 0.2
+        },
+        "k10pct": {
+          "intersection_count": 16,
+          "k": 56,
+          "overlap_fraction_of_k": 0.2857142857142857
+        }
+      }
+    },
+    "arm:native_seed20260809/shuffled_xy": {
+      "canonical_score_distribution": {
+        "count": 560,
+        "max": 5.044728095526807e-05,
+        "mean": 1.1530235266426254e-05,
+        "median": 7.216610356408637e-06,
+        "min": 6.631906671827892e-06,
+        "p01": 6.633964403590653e-06,
+        "p05": 6.641147137997905e-06,
+        "p95": 3.8619248152826905e-05
+      },
+      "count": 560,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 560,
+        "max": 0.0031041856855154037,
+        "mean": 0.0015085426458556737,
+        "median": 0.0014335932210087776,
+        "min": 0.00015574507415294647,
+        "p01": 0.00034666342660784723,
+        "p05": 0.0006506324745714665,
+        "p95": 0.002625595964491367
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 4.376318768695992e-08,
+      "kendall_tau_score_vs_hard_delta": -0.1551927085752268,
+      "spearman_pvalue": 5.833582873819772e-08,
+      "spearman_rho_score_vs_hard_delta": -0.22671415027774028,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 3,
+          "k": 10,
+          "overlap_fraction_of_k": 0.3
+        },
+        "k10pct": {
+          "intersection_count": 24,
+          "k": 56,
+          "overlap_fraction_of_k": 0.42857142857142855
+        }
+      }
+    },
+    "arm:native_seed20260809/wrong_case_observation": {
+      "canonical_score_distribution": {
+        "count": 560,
+        "max": 7.574271148769185e-05,
+        "mean": 3.9664348144339913e-05,
+        "median": 3.534528332238551e-05,
+        "min": 2.9640843422384933e-05,
+        "p01": 2.9982373234815896e-05,
+        "p05": 3.0209272154024802e-05,
+        "p95": 5.36980991455493e-05
+      },
+      "count": 560,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 560,
+        "max": 0.003284943290054798,
+        "mean": 0.0014270255425279693,
+        "median": 0.0013112789019942284,
+        "min": 0.00026880018413066864,
+        "p01": 0.0004446870367974043,
+        "p05": 0.0005858559627085925,
+        "p95": 0.002705052495002746
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 0.05637810698615935,
+      "kendall_tau_score_vs_hard_delta": -0.05418661970807651,
+      "spearman_pvalue": 0.05862139059045932,
+      "spearman_rho_score_vs_hard_delta": -0.07996094789769805,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 2,
+          "k": 10,
+          "overlap_fraction_of_k": 0.2
+        },
+        "k10pct": {
+          "intersection_count": 17,
+          "k": 56,
+          "overlap_fraction_of_k": 0.30357142857142855
+        }
+      }
+    },
+    "arm:native_seed20260809/zero": {
+      "canonical_score_distribution": {
+        "count": 560,
+        "max": 4.686012107413262e-05,
+        "mean": 5.0529276060322964e-06,
+        "median": 0.0,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p95": 3.817838569375453e-05
+      },
+      "count": 560,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 560,
+        "max": 0.008142297272570431,
+        "mean": 0.005319214425149507,
+        "median": 0.005598566378466785,
+        "min": 0.00020191678777337074,
+        "p01": 0.0005630970373749733,
+        "p05": 0.001535466476343572,
+        "p95": 0.007508611888624727
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 1.3594126457951457e-46,
+      "kendall_tau_score_vs_hard_delta": -0.47817261541884687,
+      "spearman_pvalue": 5.087480098122431e-56,
+      "spearman_rho_score_vs_hard_delta": -0.5998534953212652,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 1,
+          "k": 10,
+          "overlap_fraction_of_k": 0.1
+        },
+        "k10pct": {
+          "intersection_count": 39,
+          "k": 56,
+          "overlap_fraction_of_k": 0.6964285714285714
+        }
+      }
+    },
+    "control_shuffled_xy": {
+      "canonical_score_distribution": {
+        "count": 2240,
+        "max": 6.869485514471307e-05,
+        "mean": 2.0353890431985225e-05,
+        "median": 7.1913329975359375e-06,
+        "min": 5.547361979552079e-06,
+        "p01": 5.616575435851701e-06,
+        "p05": 5.8307487051934e-06,
+        "p95": 4.919147613691166e-05
+      },
+      "count": 2240,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 2240,
+        "max": 0.0035156188532710075,
+        "mean": 0.001429624534960437,
+        "median": 0.0013772263191640377,
+        "min": 4.6547502279281616e-05,
+        "p01": 0.0001341623067855835,
+        "p05": 0.0003334624692797661,
+        "p95": 0.002758693927899003
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 9.397720616609928e-156,
+      "kendall_tau_score_vs_hard_delta": -0.3757442908062989,
+      "spearman_pvalue": 1.2913518813613894e-174,
+      "spearman_rho_score_vs_hard_delta": -0.5464609912651526,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 2,
+          "k": 10,
+          "overlap_fraction_of_k": 0.2
+        },
+        "k10pct": {
+          "intersection_count": 81,
+          "k": 224,
+          "overlap_fraction_of_k": 0.36160714285714285
+        }
+      }
+    },
+    "control_wrong_case_observation": {
+      "canonical_score_distribution": {
+        "count": 2240,
+        "max": 9.151024278253317e-05,
+        "mean": 4.4896659606560464e-05,
+        "median": 4.1237428376916796e-05,
+        "min": 2.9640843422384933e-05,
+        "p01": 3.0015604352229275e-05,
+        "p05": 3.1410250812768936e-05,
+        "p95": 6.900660810060799e-05
+      },
+      "count": 2240,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 2240,
+        "max": 0.0050202468410134315,
+        "mean": 0.0016298358083336748,
+        "median": 0.0014532050117850304,
+        "min": -0.00012703239917755127,
+        "p01": 0.0003599798306822777,
+        "p05": 0.000575261889025569,
+        "p95": 0.0032836807426065203
+      },
+      "higher_score_associated_with_lower_hard_rmse": false,
+      "kendall_pvalue": 0.26147978900530144,
+      "kendall_tau_score_vs_hard_delta": 0.015865711621217027,
+      "spearman_pvalue": 0.2810146481955871,
+      "spearman_rho_score_vs_hard_delta": 0.022787573870885418,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 1,
+          "k": 10,
+          "overlap_fraction_of_k": 0.1
+        },
+        "k10pct": {
+          "intersection_count": 46,
+          "k": 224,
+          "overlap_fraction_of_k": 0.20535714285714285
+        }
+      }
+    },
+    "control_zero": {
+      "canonical_score_distribution": {
+        "count": 2050,
+        "max": 6.351447518682107e-05,
+        "mean": 1.2923124609742223e-05,
+        "median": 0.0,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p95": 4.999789234716445e-05
+      },
+      "count": 2050,
+      "hard_delta_rmse_vs_parent_distribution": {
+        "count": 2050,
+        "max": 0.008258187212049961,
+        "mean": 0.00459522183291705,
+        "median": 0.005269707937259227,
+        "min": -0.0005492791533470154,
+        "p01": 0.00021995350718498233,
+        "p05": 0.0005752896424382925,
+        "p95": 0.007457292889012024
+      },
+      "higher_score_associated_with_lower_hard_rmse": true,
+      "kendall_pvalue": 1.4805737758477987e-304,
+      "kendall_tau_score_vs_hard_delta": -0.6296944059146199,
+      "spearman_pvalue": 0.0,
+      "spearman_rho_score_vs_hard_delta": -0.7872436852721088,
+      "top_k_overlap": {
+        "k10": {
+          "intersection_count": 2,
+          "k": 10,
+          "overlap_fraction_of_k": 0.2
+        },
+        "k10pct": {
+          "intersection_count": 108,
+          "k": 205,
+          "overlap_fraction_of_k": 0.526829268292683
+        }
+      }
+    }
+  },
+  "search_algorithm_changed": false,
+  "stage8a_v2_rerun": false,
+  "stage8a_v3_implemented": false,
+  "stage8b_run": false,
+  "training_run": false,
+  "v2_protocol_deviation": {
+    "case_id": "analytic_five_body",
+    "cause": "unchanged state-dependent kernel followed a different beam/body-count path",
+    "hard_forward_count": 961,
+    "observation_kind": "zero",
+    "reinterpreted_or_repaired": false,
+    "v1_birth_count": 560,
+    "v2_birth_count": 370,
+    "v2_rerun_for_repair": false
+  }
+}

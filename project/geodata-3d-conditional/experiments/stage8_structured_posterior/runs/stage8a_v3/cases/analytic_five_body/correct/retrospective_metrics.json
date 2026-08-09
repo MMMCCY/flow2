@@ -1,0 +1,47 @@
+{
+  "body_match_minimum_component_voxels": 20,
+  "body_matches": [
+    {
+      "absolute_size_error_voxels": 588,
+      "center_error_voxels": 4.11884290352343,
+      "iou": 0.08125,
+      "predicted_body_index": 0,
+      "relative_size_error": 0.91875,
+      "truth_body_index": 0
+    }
+  ],
+  "body_precision": 1.0,
+  "body_recall": 0.5,
+  "concealed_target_iou": 0.040625,
+  "concealed_target_precision": 1.0,
+  "concealed_target_predicted_volume": 52,
+  "concealed_target_recall": 0.040625,
+  "concealed_target_truth_volume": 1280,
+  "edit_volume_from_base": 52,
+  "global_hard_label_accuracy": 0.9953155517578125,
+  "matched_body_center_error_mean": 4.11884290352343,
+  "matched_body_count": 1,
+  "matched_body_relative_size_error_mean": 0.91875,
+  "per_label": {
+    "-1": {
+      "iou": 1.0,
+      "predicted_volume": 32768,
+      "truth_volume": 32768
+    },
+    "0": {
+      "iou": 0.9945999190867355,
+      "predicted_volume": 227404,
+      "truth_volume": 226176
+    },
+    "9": {
+      "iou": 0.61625,
+      "predicted_volume": 1972,
+      "truth_volume": 3200
+    }
+  },
+  "predicted_body_count": 1,
+  "retrospective_only": true,
+  "truth_body_count": 2,
+  "used_for_selection": false,
+  "wrong_lithology_substitution_volume": 0
+}

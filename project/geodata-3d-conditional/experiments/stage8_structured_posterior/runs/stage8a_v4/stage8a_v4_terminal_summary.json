@@ -1,0 +1,73 @@
+{
+  "schema": "stage8a_v4_terminal_summary_v1",
+  "authoritative_machine_decision": "FAIL_STAGE8A_STOP_BEFORE_STAGE8B",
+  "original_stage8a_gate_applied": true,
+  "gates_passed": [
+    "all_required_cases_present",
+    "conditions_exact",
+    "identical_budgets",
+    "truth_blind_selection"
+  ],
+  "gates_failed": [
+    "correct_specificity",
+    "analytic_hidden_iou",
+    "analytic_hidden_recall",
+    "native_mean_iou",
+    "native_mean_recall",
+    "geometry_improves_from_empty",
+    "unknown_count"
+  ],
+  "hard_forward_calls_per_arm": 961,
+  "arm_count": 16,
+  "total_hard_forward_calls": 15376,
+  "slot_accounting_all_arms": {
+    "initial_empty": 16,
+    "new_center": 7742,
+    "growth": 2,
+    "nonbirth": 7616,
+    "reallocated_existing_slots": 2
+  },
+  "lineage_mechanism": {
+    "locally_improving_scale_0_25_seeds": 2,
+    "correct_arm_locally_improving_scale_0_25_seeds": 0,
+    "continuation_attempts": 2,
+    "transition_attempts": {
+      "0.25_to_0.50": 2,
+      "0.50_to_0.75": 0,
+      "0.75_to_1.00": 0
+    },
+    "transition_successes": {
+      "0.25_to_0.50": 0,
+      "0.50_to_0.75": 0,
+      "0.75_to_1.00": 0
+    },
+    "maximum_attained_scale": 0.25,
+    "active_lineages_were_zero_controls_only": true
+  },
+  "correct_arm_geometry": {
+    "analytic_hidden_iou": 0.0,
+    "analytic_hidden_recall": 0.0,
+    "native_mean_hidden_iou": 0.006164189667374381,
+    "native_mean_hidden_recall": 0.006164189667374381
+  },
+  "correct_specificity_strict_case_count": 2,
+  "correct_specificity_case_count": 4,
+  "condition_violations": 0,
+  "truth_used_for_selection": false,
+  "retrospective_geometry_after_selection_freeze": true,
+  "protocol_conformance_caveat": {
+    "present": true,
+    "kind": "seed_state_metadata_changes_downstream_deterministic_rng_stream",
+    "v3_seed_proposal_move": "birth_trust_region_new_center",
+    "v4_seed_proposal_move": "birth_lineage_new_center",
+    "r3_correct_improving_seeds_reproduced_in_v4": 0,
+    "scientific_consequence": "v4_does_not_cleanly_isolate_lineage_continuation_on_the_frozen_v3_path",
+    "rerun_performed": false
+  },
+  "stage8a_v5_authorized": false,
+  "standalone_stage8a_closed": true,
+  "stage8b_run": false,
+  "training_run": false,
+  "flow_prior_integration_decision_required": true,
+  "next_action_is_not_standalone_structured_search": true
+}

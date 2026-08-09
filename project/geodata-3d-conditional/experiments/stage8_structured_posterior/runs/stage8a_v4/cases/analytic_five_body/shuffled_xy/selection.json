@@ -1,0 +1,140 @@
+{
+  "baseline_hard_rmse": 0.017632272094488144,
+  "best_hard_rmse": 0.017632272094488144,
+  "best_state": {
+    "bodies": [],
+    "parent_id": null,
+    "proposal_move": "initial",
+    "state_id": "empty"
+  },
+  "birth_center_initializer": {
+    "backward_calls": 10,
+    "birth_proposal_count": 272,
+    "canonical_shape": "ellipsoid",
+    "canonical_size_xyz": [
+      11.0,
+      11.0,
+      10.0
+    ],
+    "condition_violation_count_across_births": 0,
+    "differentiable_forward_calls": 10,
+    "hard_selection_criterion_unchanged": true,
+    "loss_improving_birth_count_vs_empty": 0,
+    "loss_improving_birth_count_vs_parent": 0,
+    "mode": "deterministic_multifield_first_order",
+    "property_fields": [
+      "impedance",
+      "slowness"
+    ],
+    "proposal_guidance_only": true,
+    "ranking_computation_count": 10,
+    "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+    "sensitivity_runtime_seconds": 0.33966867404524237,
+    "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+    "truth_fields_present": false,
+    "truth_used": false
+  },
+  "birth_proposals_sha256": "b91a3cf308b1772b0406fe24c26d2feecb042fbacca47f84400573e911bf1305",
+  "fixed_forward_call_budget": 961,
+  "forward_call_count": 961,
+  "frozen_scheduled_move_counts": {
+    "birth": 272,
+    "change_shape": 137,
+    "death": 139,
+    "resize": 137,
+    "rotate": 139,
+    "translate": 136
+  },
+  "hard_attainment": 0.0,
+  "lineage_continuation": {
+    "allocation_rule": "flatten_each_generation_into_frozen_parent_major_slots_0_to_95;after_an_improving_lineage_probe_reallocate_the_immediately_following_slots_to_successive_scales_until_first_failure_or_full_scale;skip_displaced_scheduled_proposals_without_replacement",
+    "branch_count": 272,
+    "branch_final_global_beam_survival_count": 12,
+    "branches_reaching_scale": {
+      "0.25": 0,
+      "0.5": 0,
+      "0.75": 0,
+      "1.0": 0
+    },
+    "condition_violation_count": 0,
+    "continuation_attempts": 0,
+    "displaced_scheduled_move_counts": {},
+    "fixed_scale_ladder": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "growth_delta_rmse_distribution": {
+      "count": 0,
+      "max": null,
+      "median": null,
+      "min": null,
+      "p05": null,
+      "p95": null
+    },
+    "lineage_branches_sha256": "411f253bfc554abcae4617add10950292e3b8d6f6ddfedeaf6e9c32fbd11cd0a",
+    "lineage_probes_sha256": "aa8e49ca0b01e277a5bbd117c4c43d0b970a0226d84dcc7d1cffa420d61ce404",
+    "locally_improving_scale_0_25_seeds": 0,
+    "maximum_attained_scale_distribution": {
+      "count": 272,
+      "max": 0.0,
+      "median": 0.0,
+      "min": 0.0,
+      "p05": 0.0,
+      "p95": 0.0
+    },
+    "scheduled_move_counts": {
+      "birth": 272,
+      "change_shape": 137,
+      "death": 139,
+      "resize": 137,
+      "rotate": 139,
+      "translate": 136
+    },
+    "slot_allocation": {
+      "growth": 0,
+      "initial_empty": 1,
+      "new_center": 272,
+      "nonbirth": 688,
+      "reallocated_existing_slots": 0,
+      "total_hard_forward_calls": 961
+    },
+    "successful_growth_delta_rmse_distribution": {
+      "count": 0,
+      "max": null,
+      "median": null,
+      "min": null,
+      "p05": null,
+      "p95": null
+    },
+    "transition_attempts": {
+      "0.25_to_0.50": 0,
+      "0.50_to_0.75": 0,
+      "0.75_to_1.00": 0
+    },
+    "transition_successes": {
+      "0.25_to_0.50": 0,
+      "0.50_to_0.75": 0,
+      "0.75_to_1.00": 0
+    },
+    "truth_fields_present": false,
+    "version": "stage8a_v4_lineage_before_global_beam_v1"
+  },
+  "proposal_seed": 8202601,
+  "realized_proposal_move_counts": {
+    "birth_lineage_new_center": 272,
+    "change_shape": 137,
+    "death": 139,
+    "resize": 137,
+    "rotate": 139,
+    "translate": 136
+  },
+  "runtime_seconds": 5.537589562009089,
+  "selected_labels_sha256": "cb14261739d35446bb67c2932edfa4e9ad30c691a10fc295bc123e3eb3186f13",
+  "selected_response_sha256": "784618e6a429178083d111110da8a32d79cf2c572bfa9dda054af93264cfef25",
+  "selection_criterion": "minimum hard observed seismic RMSE only",
+  "selection_frozen_before_retrospective_evaluation": true,
+  "selection_used_truth": false,
+  "sensitivity_rankings_sha256": "e5d4c17630f18f4f222e1a156867525b66281974322e44b72998b1ecee8fb53f"
+}

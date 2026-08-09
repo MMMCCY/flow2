@@ -1,0 +1,74 @@
+{
+  "baseline_hard_rmse": 0.010882876813411713,
+  "best_hard_rmse": 0.010616203770041466,
+  "best_state": {
+    "bodies": [
+      {
+        "body_id": "body_03000001",
+        "center_x": 9.0,
+        "center_y": 9.0,
+        "center_z": 10.0,
+        "material_label": 9,
+        "orientation_deg": 71.15360230092061,
+        "shape": "ellipsoid",
+        "size_x": 7.528751671902121,
+        "size_y": 8.49159590581061,
+        "size_z": 14.0
+      },
+      {
+        "body_id": "body_04000090",
+        "center_x": 10.0,
+        "center_y": 9.0,
+        "center_z": 6.0,
+        "material_label": 9,
+        "orientation_deg": 40.90811031305494,
+        "shape": "dike_hemisphere",
+        "size_x": 8.293182637251059,
+        "size_y": 7.084749144030921,
+        "size_z": 13.364636689284374
+      }
+    ],
+    "parent_id": "g007_p000003_g006_p000021_g005_p000003_g004_p000090_g003_p000001_g002_p000001_g001_p000042_empty",
+    "proposal_move": "resize",
+    "state_id": "g008_p000009_g007_p000003_g006_p000021_g005_p000003_g004_p000090_g003_p000001_g002_p000001_g001_p000042_empty"
+  },
+  "birth_center_initializer": {
+    "backward_calls": 50,
+    "birth_proposal_count": 370,
+    "canonical_shape": "ellipsoid",
+    "canonical_size_xyz": [
+      11.0,
+      11.0,
+      10.0
+    ],
+    "condition_violation_count_across_births": 0,
+    "differentiable_forward_calls": 50,
+    "hard_selection_criterion_unchanged": true,
+    "loss_improving_birth_count_vs_empty": 5,
+    "loss_improving_birth_count_vs_parent": 2,
+    "mode": "deterministic_multifield_first_order",
+    "property_fields": [
+      "impedance",
+      "slowness"
+    ],
+    "proposal_guidance_only": true,
+    "ranking_computation_count": 50,
+    "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+    "sensitivity_runtime_seconds": 1.1603600140661001,
+    "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+    "truth_fields_present": false,
+    "truth_used": false
+  },
+  "birth_proposals_sha256": "e473cf06e04e1bf43135ce8a5b89a59da3cce1c0b39d56d10b3f2f8e62a11a36",
+  "fixed_forward_call_budget": 961,
+  "forward_call_count": 961,
+  "hard_attainment": 0.02450391086312831,
+  "proposal_seed": 8202601,
+  "runtime_seconds": 8.58077126101125,
+  "selected_labels_sha256": "f040a6327a36db766c2b15a014b8a551f4897be15ce4ce93cebe23b08bd98a92",
+  "selected_response_sha256": "a7a7250096e28c63ac7156999b0c2e012287344441570eecce59ad39c772ad5b",
+  "selection_criterion": "minimum hard observed seismic RMSE only",
+  "selection_frozen_before_retrospective_evaluation": true,
+  "selection_used_truth": false,
+  "sensitivity_rankings_sha256": "ba60bc3d76d092aaa178991c6024e4953605bb9b34ab43e84d624e15f501e2e9"
+}

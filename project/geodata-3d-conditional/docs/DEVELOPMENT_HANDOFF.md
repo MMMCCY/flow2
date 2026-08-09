@@ -1,9 +1,9 @@
 # Development handoff
 
-Updated: 2026-08-07 after completing Stage 7 observation-specificity closure
-and structured hard-geophysics inference on an RTX 4090 D. Formal Phase-6B
-training has not started and is not currently required for the bounded
-structured family.
+Updated: 2026-08-09 after final standalone Stage 8A-v4 failed the unchanged
+gate and permanently closed standalone Stage8A development. Stage 8B was not
+run. The project has returned to the Flow-prior integration decision. Formal
+Phase-6B training has not started.
 
 ## Read this first in a new conversation
 
@@ -140,6 +140,118 @@ historical 2-D gravity path yet.
   on the shared correct observation in 3/3 cases; mean hard attainment is
   `42.70%`, hidden IoU is `0.914–0.987`, hidden recall is `0.916–0.996`, and
   condition/wrong-lithology violations are zero. No training was run.
+- Stage 8A continuous structured hard-geophysics: complete negative gate. The
+  immutable Stage-7 analytic library regression still reaches exact hard RMSE
+  zero without truth candidate indices, but the pre-registered broad-domain
+  continuous proposal search selects its empty start for the analytic correct
+  arm and all three StructuralGeo-native correct arms. Every arm uses exactly
+  961 hard-forward calls; hard conditions, truth-blind selection and matched
+  control budgets pass. Analytic and native concealed IoU/recall remain zero,
+  so correct/control specificity, geometry, unknown-count and recovery gates
+  fail. Stage 8B is blocked and was not run. Stage 8A-R1 then analyzed every
+  frozen correct-arm trace without replay: each contains the empty reference
+  plus 960 proposals, and none of the 3,840 noninitial proposals has negative
+  delta RMSE. The complete Stage-7 12-candidate loss library has two strictly
+  improving paths, empty -> candidate_04/06 -> exact pair, so no simultaneous
+  birth or energy-barrier crossing is required. In the explicitly oracle-only
+  pre-existing local trace, all 62 perturbations of the exact pair remain
+  better than empty, rejecting a too-narrow analytic hard-loss basin at those
+  widths. The unique primary R1 category is `RANDOM_BIRTH_BASIN_MISS`; cuboid
+  omission is a secondary analytic parameterization limitation, not the
+  cross-case explanation because all three in-family DikeHemisphere cases fail
+  identically. Do not increase budget or tune the proposal kernel post hoc.
+  The sole minimal recommendation, only under a new protocol, is to replace
+  uniform global birth-center selection with a deterministic truth-blind
+  residual/sensitivity-ranked initializer inside the unchanged 961-call
+  budget. R1 did not implement Stage 8A v2.
+- Stage 8A-v2 deterministic birth-center re-gate: complete negative gate and
+  stopped. The sole implemented change ranks integer birth centers by the
+  negative first-order hard-state seismic-MSE directional derivative of a
+  canonical label-9 ellipsoid, summing both impedance and slowness terms.
+  Every correct arm still selects empty: each has 560 birth proposals and zero
+  births with negative hard-RMSE delta versus either parent or empty. All four
+  correct arms retain exactly 961 hard-forward evaluations, zero condition
+  violations and truth-blind hard-RMSE selection. The unchanged original gate
+  passes only case presence, conditions, truth firewall and equal budgets; it
+  fails specificity, analytic/native recovery, geometry and unknown count.
+  Across all 16 case/control arms, the run records 15,376 hard forwards plus
+  725 separately accounted sensitivity forwards/backwards. One conformance
+  caveat is explicit: the analytic zero-observation arm followed a different
+  beam/body-count path and consequently realized 370 births plus 118 of each
+  other move, rather than the v1 realized 560/80 counts, although the frozen
+  state-dependent move kernel itself was unchanged. Do not repair or rerun in
+  this task: the v2 failure stop rule forbids a second modification. Stage 8B
+  remains blocked.
+- Stage 8A-v2-R2 alignment audit: complete, with zero new hard proposal
+  forwards and no v2 rerun. The complete analytic initial center ranking was
+  frozen before opening oracle geometry: candidate_06 and candidate_04 map to
+  ranks 1 and 5 of 140,985, so center localization is not the failure. Raw
+  gradients/observations were absent from v2; R2 indispensably reconstructed
+  eight observation fields and exactly replayed 725 differentiable
+  forward/backward pairs. Every saved prediction, residual, impedance and
+  slowness gradient, and sensitivity-map hash matched v2. On 2,240 correct-arm
+  births, actual-mask first order predicts improvement for 2,106 but frozen
+  hard RMSE improves for zero; sign agreement is only 5.98%. The Stage-7
+  candidate_04/06 singleton masks rank first/second by the same first-order
+  derivative and both have matching improving frozen finite-step signs. The
+  unique primary category is `FIRST_ORDER_TO_FINITE_HARD_NONLINEARITY`: v2's
+  failure is the extrapolation from an infinitesimal property direction to its
+  one-shot finite hard insertion, not sensitivity localization or a replay
+  defect. Exactly one unimplemented recommendation is a deterministic
+  truth-blind hard-loss trust-region continuation that starts with a nested
+  small allowed-shape insertion and grows it only through already-budgeted
+  hard-RMSE-improving proposals. The analytic-zero 370-versus-560 birth-count
+  protocol deviation remains separately recorded and unrepaired.
+- Stage 8A-v3 nested hard-loss birth continuation: complete negative gate and
+  stopped. The only change used the preregistered common hard-categorical scale
+  ladder `(0.25, 0.5, 0.75, 1.0)` at the unchanged v2-ranked center and frozen
+  full geometry. All 16 arms retained exactly 961 hard forwards, exact
+  conditions, truth-blind hard-RMSE selection, the unchanged ranker and the
+  unchanged original gate. Correct-observation specificity passed in 4/4
+  cases, but analytic IoU/recall reached only `0.040625`; native values were
+  `0.002123`, `0`, and `0`, so analytic/native recovery and geometry gates
+  failed. Across all arms, 10 of 8,270 scale-0.25 births improved their own
+  parent; correct arms contributed 3. No improving child survived the frozen
+  beam as a later proposal parent, so the run allocated zero continuation
+  growth slots, evaluated no scale above 0.25, and has an empty improving-
+  growth distribution. Frozen-v2 same-full-geometry alignment found zero
+  matched full-size-failure/small-size-rescue examples. The machine decision is
+  `FAIL_STAGE8A_STOP_BEFORE_STAGE8B`; do not rerun, run Stage8B, or implement a
+  second algorithmic modification under this task.
+- Stage 8A-v3-R3 beam/lineage survival audit: complete with zero new proposals,
+  hard forwards, geology materializations, sensitivity passes or truth use.
+  R3 reconstructs every 96-candidate generation by the frozen `(hard RMSE,
+  state_id)` ordering. Across 1,840 correct-arm scale-0.25 births,
+  `N(delta_parent<0)=3`, `N(delta_empty<0)=5`, locally improving and entering
+  the next beam is zero, and empty-improving but pruned is five. The three local
+  improvements rank 10/96, 50/96 and 30/96; their positive margins above the
+  eighth-place cutoff are `9.835e-06`, `5.498e-05` and `8.946e-06`. All birth
+  parents are valid beam states, every persisted next-generation parent list
+  exactly matches the reconstructed top eight, and the selection-defect count
+  is zero. None of the three branches exactly matches a frozen v2 full-target
+  geometry, so R3 preserves the absence of matched full-fail/small-success
+  evidence. The unique classification is
+  `GLOBAL_BEAM_PRUNES_LOCALLY_IMPROVING_SEEDS`. Exactly one future, unimplemented
+  recommendation is lineage-preserving local hard-loss continuation before
+  global beam competition, reallocating the existing 961 slots without wider
+  beams, relaxed lineage monotonicity, new shapes, ranker changes or truth.
+- Stage 8A-v4 final standalone iteration: complete negative gate and terminal.
+  All 16 arms use exactly 961 hard forwards with zero condition violations and
+  truth-blind hard-RMSE selection. Across all arms there are 7,742 new-center,
+  7,616 nonbirth and 2 reallocated growth evaluations. Both locally improving
+  scale-0.25 seeds occur in zero controls; both scale-0.50 growth attempts fail,
+  so no branch reaches scale 0.50 and no correct arm exercises continuation.
+  Correct specificity is strict in only 2/4 cases. Analytic hidden IoU/recall
+  are zero; native values are `0.00849`, `0.01`, and `0`, with mean
+  `0.006164`. The original machine decision is
+  `FAIL_STAGE8A_STOP_BEFORE_STAGE8B`. A post-run conformance caveat is frozen:
+  v4 renamed the seed proposal-move metadata, and that field enters the
+  downstream deterministic parent-state RNG hash, so paths diverged from v3
+  even before continuation activated and the three R3 correct seeds were not
+  reproduced. No repair/rerun is made because v4 is terminal and another full
+  run is not authorized. Do not implement v5. Standalone Stage8A is closed;
+  Stage8B remains unrun, and the next action is a newly authorized Flow-prior
+  integration decision rather than another standalone structured-search edit.
 
 ## Phase-0 result
 

@@ -1,0 +1,38 @@
+{
+  "body_match_minimum_component_voxels": 20,
+  "body_matches": [],
+  "body_precision": 0.0,
+  "body_recall": 0.0,
+  "concealed_target_iou": 0.0,
+  "concealed_target_precision": 0.0,
+  "concealed_target_predicted_volume": 3,
+  "concealed_target_recall": 0.0,
+  "concealed_target_truth_volume": 1000,
+  "edit_volume_from_base": 3,
+  "global_hard_label_accuracy": 0.9911003112792969,
+  "matched_body_center_error_mean": null,
+  "matched_body_count": 0,
+  "matched_body_relative_size_error_mean": null,
+  "per_label": {
+    "-1": {
+      "iou": 1.0,
+      "predicted_volume": 32768,
+      "truth_volume": 32768
+    },
+    "0": {
+      "iou": 0.9898275080228827,
+      "predicted_volume": 229344,
+      "truth_volume": 227011
+    },
+    "9": {
+      "iou": 0.013530655391120507,
+      "predicted_volume": 32,
+      "truth_volume": 2365
+    }
+  },
+  "predicted_body_count": 0,
+  "retrospective_only": true,
+  "truth_body_count": 2,
+  "used_for_selection": false,
+  "wrong_lithology_substitution_volume": 0
+}

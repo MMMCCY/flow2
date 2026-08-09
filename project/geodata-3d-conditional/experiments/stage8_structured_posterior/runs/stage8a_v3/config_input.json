@@ -1,0 +1,123 @@
+{
+  "acoustic_config": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+  "birth_center_initializer": {
+    "candidate_center_grid": "integer_voxel_centers_within_v1_bounds_and_edit_mask",
+    "canonical_shape": "ellipsoid",
+    "canonical_size_xyz": [
+      11.0,
+      11.0,
+      10.0
+    ],
+    "mode": "deterministic_multifield_first_order",
+    "property_fields": [
+      "impedance",
+      "slowness"
+    ],
+    "ranked_center_record_count": 96,
+    "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+    "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending"
+  },
+  "birth_trust_region": {
+    "continuation_rule": "continue_only_if_hard_rmse_strictly_improves_parent",
+    "mode": "nested_hard_loss_birth_continuation",
+    "scale_ladder": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+  },
+  "boreholes": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/boreholes.pt",
+  "bounds": {
+    "center_x": [
+      4.0,
+      59.0
+    ],
+    "center_y": [
+      4.0,
+      59.0
+    ],
+    "center_z": [
+      6.0,
+      50.0
+    ],
+    "material_labels": [
+      9
+    ],
+    "orientation_deg": [
+      0.0,
+      180.0
+    ],
+    "shapes": [
+      "ellipsoid",
+      "dike_hemisphere"
+    ],
+    "size_x": [
+      6.0,
+      16.0
+    ],
+    "size_y": [
+      6.0,
+      16.0
+    ],
+    "size_z": [
+      6.0,
+      14.0
+    ]
+  },
+  "checkpoint": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "controls": [
+    "correct",
+    "zero",
+    "shuffled_xy",
+    "wrong_case_observation"
+  ],
+  "formal_training_authorized": false,
+  "frozen_stage8a_v1_config": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/configs/stage8_v1.json",
+  "frozen_stage8a_v2_config": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/configs/stage8a_v2.json",
+  "gate": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/stage8_gate.json",
+  "observation_dir": "project/geodata-3d-conditional/experiments/stage4_seismic/observations/cond_generation_0/distinct_upper_bound_v1_fix2",
+  "preflight_manifest": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/reports/preflight/stage8_preflight_manifest.json",
+  "proposal_seed": 8202601,
+  "schema": "stage8_structured_posterior_config_v3",
+  "seismic_config": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+  "shuffle_seed": 82026,
+  "stage7_config": "project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/five_body_cuboid_v1.json",
+  "stage7_summary": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json",
+  "stage8a_native_seeds": [
+    20260807,
+    20260808,
+    20260809
+  ],
+  "stage8a_search": {
+    "beam_size": 8,
+    "generations": 10,
+    "maximum_body_count": 3,
+    "proposals_per_parent": 12
+  },
+  "stage8a_v2_preflight_manifest": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/reports/preflight/stage8a_v2_preflight_manifest.json",
+  "stage8a_v3_preflight_manifest": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/reports/preflight/stage8a_v3_preflight_manifest.json",
+  "stage8b_screen": {
+    "flow_baseline_dir": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline",
+    "minimum_cells_below_local_surface": 4,
+    "sample_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "seed": 42,
+    "structured_only_background_rule": "most_frequent_nonair_borehole_label",
+    "wrong_case_flow_sample": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed142_n4_s32_a025_c025/baseline/sample_0.pt"
+  },
+  "stage8b_search": {
+    "beam_size": 8,
+    "generations": 10,
+    "maximum_body_count": 4,
+    "proposals_per_parent": 12
+  },
+  "stage9_authorized": false,
+  "target_label": 9,
+  "truth": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt"
+}

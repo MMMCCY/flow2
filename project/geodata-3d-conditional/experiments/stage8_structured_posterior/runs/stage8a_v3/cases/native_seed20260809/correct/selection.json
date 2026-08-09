@@ -1,0 +1,210 @@
+{
+  "baseline_hard_rmse": 0.016216440126299858,
+  "best_hard_rmse": 0.016213873401284218,
+  "best_state": {
+    "bodies": [
+      {
+        "body_id": "body_09000055",
+        "center_x": 31.045832822307805,
+        "center_y": 11.0,
+        "center_z": 37.0,
+        "material_label": 9,
+        "orientation_deg": 154.47044027138026,
+        "shape": "dike_hemisphere",
+        "size_x": 1.5232466338971582,
+        "size_y": 2.7518783110740435,
+        "size_z": 1.6174579700048113
+      }
+    ],
+    "parent_id": "g009_p000055_g008_p000025_g007_p000088_g006_p000043_g005_p000039_g004_p000019_g003_p000004_g002_p000001_g001_p000081_empty",
+    "proposal_move": "translate",
+    "state_id": "g010_p000080_g009_p000055_g008_p000025_g007_p000088_g006_p000043_g005_p000039_g004_p000019_g003_p000004_g002_p000001_g001_p000081_empty"
+  },
+  "birth_center_initializer": {
+    "backward_calls": 45,
+    "birth_proposal_count": 560,
+    "canonical_shape": "ellipsoid",
+    "canonical_size_xyz": [
+      11.0,
+      11.0,
+      10.0
+    ],
+    "condition_violation_count_across_births": 0,
+    "differentiable_forward_calls": 45,
+    "hard_selection_criterion_unchanged": true,
+    "loss_improving_birth_count_vs_empty": 0,
+    "loss_improving_birth_count_vs_parent": 1,
+    "mode": "deterministic_multifield_first_order",
+    "property_fields": [
+      "impedance",
+      "slowness"
+    ],
+    "proposal_guidance_only": true,
+    "ranking_computation_count": 45,
+    "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+    "sensitivity_runtime_seconds": 1.1000925640109926,
+    "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+    "truth_fields_present": false,
+    "truth_used": false
+  },
+  "birth_proposals_sha256": "f863d64290cd553c519f286afbeb67db6456d23b9396a6cbc9c10a389751b106",
+  "birth_trust_region": {
+    "fixed_scale_ladder": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "full_scale_improving_count": 0,
+    "full_scale_probe_count": 0,
+    "growth_delta_rmse_vs_parent_distribution": {
+      "count": 0,
+      "max": null,
+      "median": null,
+      "min": null,
+      "p05": null,
+      "p95": null
+    },
+    "growth_improving_count": 0,
+    "growth_probe_count": 0,
+    "improving_growth_delta_rmse_vs_parent_distribution": {
+      "count": 0,
+      "max": null,
+      "median": null,
+      "min": null,
+      "p05": null,
+      "p95": null
+    },
+    "mechanism_diagnostics": {
+      "best_nested_scale_distribution": {
+        "count": 560,
+        "max": 0.25,
+        "median": 0.25,
+        "min": 0.25,
+        "p05": 0.25,
+        "p95": 0.25
+      },
+      "smaller_scale_improved_but_full_scale_failed_count": 0,
+      "smallest_scale_improved_then_full_scale_reached_count": 0
+    },
+    "new_center_probe_count": 560,
+    "probe_count": 560,
+    "probe_diagnostics_by_scale": {
+      "0.25": {
+        "delta_rmse_vs_parent_distribution": {
+          "count": 560,
+          "max": 0.00036168843507766724,
+          "median": 0.00013938359916210175,
+          "min": -1.3055279850959778e-05,
+          "p05": 9.503215551376343e-06,
+          "p95": 0.00027332790195941923
+        },
+        "improving_count": 1,
+        "probe_count": 560
+      },
+      "0.5": {
+        "delta_rmse_vs_parent_distribution": {
+          "count": 0,
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "improving_count": 0,
+        "probe_count": 0
+      },
+      "0.75": {
+        "delta_rmse_vs_parent_distribution": {
+          "count": 0,
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "improving_count": 0,
+        "probe_count": 0
+      },
+      "1.0": {
+        "delta_rmse_vs_parent_distribution": {
+          "count": 0,
+          "max": null,
+          "median": null,
+          "min": null,
+          "p05": null,
+          "p95": null
+        },
+        "improving_count": 0,
+        "probe_count": 0
+      }
+    },
+    "probe_diagnostics_by_shape": {
+      "dike_hemisphere": {
+        "delta_rmse_vs_parent_distribution": {
+          "count": 261,
+          "max": 0.00036168843507766724,
+          "median": 0.00012428127229213715,
+          "min": 8.927658200263977e-06,
+          "p05": 9.503215551376343e-06,
+          "p95": 0.00022770650684833527
+        },
+        "growth_probe_count": 0,
+        "improving_probe_count": 0,
+        "new_center_probe_count": 261
+      },
+      "ellipsoid": {
+        "delta_rmse_vs_parent_distribution": {
+          "count": 299,
+          "max": 0.0003501754254102707,
+          "median": 0.00015911273658275604,
+          "min": -1.3055279850959778e-05,
+          "p05": 9.503215551376343e-06,
+          "p95": 0.00028067026287317273
+        },
+        "growth_probe_count": 0,
+        "improving_probe_count": 1,
+        "new_center_probe_count": 299
+      }
+    },
+    "slot_allocation": {
+      "growth": 0,
+      "initial_empty": 1,
+      "new_center": 560,
+      "nonbirth": 400,
+      "total_hard_forward_calls": 961
+    },
+    "smallest_scale_improving_count": 1,
+    "trust_region_branches_sha256": "60c0bdd572ed435c1a89867d699414d45ba41d9e3f53dbda94484b8d3221010a",
+    "trust_region_probes_sha256": "134bdd405a4f52bffccc1ce14fa8fcc8a9b3bbc0bdf0c5144caf6e6c79d22904",
+    "truth_fields_present": false,
+    "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+  },
+  "fixed_forward_call_budget": 961,
+  "forward_call_count": 961,
+  "frozen_scheduled_move_counts": {
+    "birth": 560,
+    "change_shape": 80,
+    "death": 80,
+    "resize": 80,
+    "rotate": 80,
+    "translate": 80
+  },
+  "hard_attainment": 0.00015827919047894934,
+  "proposal_seed": 8202604,
+  "realized_proposal_move_counts": {
+    "birth_trust_region_new_center": 560,
+    "change_shape": 80,
+    "death": 80,
+    "resize": 80,
+    "rotate": 80,
+    "translate": 80
+  },
+  "runtime_seconds": 7.932896801037714,
+  "selected_labels_sha256": "65a93b0a00800990046c66b3a2e0adfdc2c958e25c59e23816b0a65cdf2910e0",
+  "selected_response_sha256": "2af796404ced627b876d580f817432ce7a37891ce2a89ef91e6954618552919d",
+  "selection_criterion": "minimum hard observed seismic RMSE only",
+  "selection_frozen_before_retrospective_evaluation": true,
+  "selection_used_truth": false,
+  "sensitivity_rankings_sha256": "d6893a19eb892aaac7f411f08aac0f217e9d01fd7ac75006f17d639c1eef9da6"
+}

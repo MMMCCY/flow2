@@ -1,0 +1,127 @@
+{
+  "schema": "stage8_preflight_manifest_v1",
+  "repository": {
+    "branch": "main",
+    "commit": "3394145674e04e3698952064f486cfa31eb876f9",
+    "dirty_status_before_stage8": ["?? project/geodata-3d-conditional/AGENTS.md"]
+  },
+  "split_provenance": {
+    "status": "unknown",
+    "known_context": "cond_generation_0 is same-distribution synthetic validation data and repeatedly inspected",
+    "claim_limit": "integration/mechanism benchmark only; not held-out generalization"
+  },
+  "assets": [
+    {
+      "path": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "role": "CHECKPOINT; inference-visible frozen flow prior",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038,
+      "shape": "Lightning checkpoint: 412 state tensors; 411 EMA tensors",
+      "dtype": "mixed floating checkpoint tensors",
+      "label_or_value_range": "epoch 1651; global step 8376",
+      "coordinate_order": "model state [B,E,X,Y,Z]",
+      "mask_convention": null,
+      "inference_allowed": true,
+      "truth_only": false,
+      "versioning": "local/ignored binary; hash recorded, not copied"
+    },
+    {
+      "path": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt",
+      "role": "TRUTH; observation generation and retrospective evaluation only",
+      "sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3",
+      "size_bytes": 1050238,
+      "shape": [1, 1, 64, 64, 64],
+      "dtype": "torch.float32 integer-valued",
+      "label_or_value_range": [-1, 13],
+      "coordinate_order": "[B,C,X,Y,Z]; larger z index is upward",
+      "mask_convention": "raw label -1 is air",
+      "inference_allowed": false,
+      "truth_only": true,
+      "versioning": "local/ignored; immutable hash recorded"
+    },
+    {
+      "path": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/boreholes.pt",
+      "role": "CONDITION; inference-visible sparse boreholes",
+      "sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41",
+      "size_bytes": 1050167,
+      "shape": [1, 1, 64, 64, 64],
+      "dtype": "torch.float32 integer-valued",
+      "label_or_value_range": [-1, 9],
+      "coordinate_order": "[B,C,X,Y,Z]; larger z index is upward",
+      "mask_convention": "boreholes != -1 means observed non-air; 4518 observed voxels in 9 full columns",
+      "inference_allowed": true,
+      "truth_only": false,
+      "versioning": "local/ignored; immutable hash recorded"
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage4_seismic/observations/cond_generation_0/distinct_upper_bound_v1_fix2/subsurface_mask.pt",
+      "role": "CONDITION/ACQUISITION; inference-visible observed surface support",
+      "sha256": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+      "size_bytes": 263841,
+      "shape": [1, 1, 64, 64, 64],
+      "dtype": "torch.bool",
+      "label_or_value_range": [false, true],
+      "coordinate_order": "[B,C,X,Y,Z]; true is contiguous subsurface",
+      "mask_convention": "true=subsurface, false=air; 45..52 rock cells per column",
+      "inference_allowed": true,
+      "truth_only": false,
+      "versioning": "local/ignored immutable Stage-4c asset"
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage4_seismic/observations/cond_generation_0/distinct_upper_bound_v1_fix2/observed_seismic.pt",
+      "role": "GEOPHYSICAL_OBSERVATION; inference-visible synthetic correct field",
+      "sha256": "8822e1e9a5829fc1731dfe5e30208ec36fdee3faed2ab7465cc9318095f7184e",
+      "size_bytes": 10487464,
+      "shape": [1, 1, 64, 64, 320],
+      "dtype": "torch.float64",
+      "label_or_value_range": [-0.4715826758896987, 0.49308128244950555],
+      "coordinate_order": "[B,C,X,Y,T]; local-surface-to-depth traces; 8 ms sampling",
+      "mask_convention": "all traces and time samples observed",
+      "inference_allowed": true,
+      "truth_only": false,
+      "versioning": "local/ignored immutable Stage-4c asset"
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage4_seismic/observations/cond_generation_0/distinct_upper_bound_v1_fix2/acoustic_property_table.pt",
+      "role": "PETROPHYSICS; inference-visible complete hard codebook",
+      "sha256": "cdfa35f8027b8c9bc523100d0342345ce3cbc67fca16f796d594b04226acb254",
+      "size_bytes": 1881,
+      "shape": [2, 15],
+      "dtype": "torch.float32",
+      "label_or_value_range": "rows are impedance kg m^-2 s^-1 and slowness s m^-1; columns raw labels -1..13",
+      "coordinate_order": "[property, raw_label+1]",
+      "mask_convention": null,
+      "inference_allowed": true,
+      "truth_only": false,
+      "versioning": "local/ignored immutable Stage-4c asset; synthetic, not site-calibrated"
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_{0,1,2,3}.pt",
+      "role": "FLOW_PRIOR_STATE; inference-visible cached condition-exact EMA/fixed-Euler screening ensemble",
+      "sha256": [
+        "b25189fe11ef229c7b4a6fb7a620be355503177d6f78634e1cb39d14a96f283a",
+        "c07c88b3bbdb2c27477677f429fdd0b677f344257b8cb636cadc4971ccbea0e0",
+        "8af50f5a4186eaa31281ac3aced6bbe09a3206ce63bccc36870c8c4ba00d32c8",
+        "2d7d3300b463b304a228f0940f58aef2942becb5f9ee6d9ce6358c314ea9c180"
+      ],
+      "size_bytes": "approximately 2.1 MB each / 8.4 MB total",
+      "shape": [64, 64, 64],
+      "dtype": "torch.int64 hard raw labels",
+      "label_or_value_range": "-1..11 across the four members",
+      "coordinate_order": "[X,Y,Z]; larger z index is upward",
+      "mask_convention": "all 69,107 effective surface/borehole conditions exact in every member",
+      "inference_allowed": true,
+      "truth_only": false,
+      "versioning": "local/ignored immutable Phase-2a alpha-zero outputs; config hash 5cac6f1934724ddaad3cf26e56772c8f684f5bc6ffbc8c4d038fb9eaefec1d2f"
+    }
+  ],
+  "condition_audit": {
+    "effective_mask": "(boreholes != -1) | (~subsurface_mask)",
+    "effective_condition_voxels": 69107,
+    "unconstrained_subsurface_voxels": 193037,
+    "borehole_truth_mismatches": 0,
+    "truth_target_voxels": 8968,
+    "conditioned_target_voxels": 13
+  },
+  "large_binaries_copied": false
+}

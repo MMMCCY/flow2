@@ -1,0 +1,4920 @@
+{
+  "acoustic_metadata": {
+    "density_table_sha256": "346f91e28a53677a534fdc295eb14cf62ce469f553f28f477ba816f297f2ce99",
+    "density_unit": "kg m^-3",
+    "description": "Synthetic complete absolute density and P-wave velocity codebook for the first Phase-4c inverse-crime upper bound. Label 9 has deliberately distinctive impedance; values are not site-calibrated petrophysics.",
+    "id": "acoustic_distinct_label9_upper_bound_v1",
+    "impedance_table_sha256": "bd0f62b3d692d8b10105b56266504e6360511191a48eb0ac11acd3b9705c9f8a",
+    "impedance_unit": "kg m^-2 s^-1",
+    "num_categories": 15,
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "scenario": "synthetic_distinct_label9_acoustic_upper_bound",
+    "schema": "phase4_acoustic_codebook_v1",
+    "site_calibrated_petrophysics": false,
+    "slowness_table_sha256": "36342444bc8042852fdb55682247fa42046cfa5ad30963d444406cac7022f37b",
+    "slowness_unit": "s m^-1",
+    "truth_derived": true,
+    "velocity_table_sha256": "f4835d84b5451bb6ec088d543e7a74b9e5e27e289432fa7b545040eaef9171fc",
+    "velocity_unit": "m s^-1"
+  },
+  "analytic": {
+    "arms": [
+      {
+        "baseline_hard_rmse": 0.008885824121534824,
+        "best_hard_rmse": 0.00877669733017683,
+        "best_state": {
+          "bodies": [
+            {
+              "body_id": "body_03000069",
+              "center_x": 10.0,
+              "center_y": 42.0,
+              "center_z": 24.57911188640715,
+              "material_label": 9,
+              "orientation_deg": 105.65564174710583,
+              "shape": "ellipsoid",
+              "size_x": 6.0,
+              "size_y": 7.370962394995397,
+              "size_z": 2.0094772211774745
+            }
+          ],
+          "parent_id": "g009_p000004_g008_p000032_g007_p000045_g006_p000087_g005_p000023_g004_p000008_g003_p000069_g002_p000031_g001_p000058_empty",
+          "proposal_move": "resize",
+          "state_id": "g010_p000015_g009_p000004_g008_p000032_g007_p000045_g006_p000087_g005_p000023_g004_p000008_g003_p000069_g002_p000031_g001_p000058_empty"
+        },
+        "birth_center_initializer": {
+          "backward_calls": 40,
+          "birth_proposal_count": 380,
+          "canonical_shape": "ellipsoid",
+          "canonical_size_xyz": [
+            11.0,
+            11.0,
+            10.0
+          ],
+          "condition_violation_count_across_births": 0,
+          "differentiable_forward_calls": 40,
+          "hard_selection_criterion_unchanged": true,
+          "loss_improving_birth_count_vs_empty": 5,
+          "loss_improving_birth_count_vs_parent": 1,
+          "mode": "deterministic_multifield_first_order",
+          "property_fields": [
+            "impedance",
+            "slowness"
+          ],
+          "proposal_guidance_only": true,
+          "ranking_computation_count": 40,
+          "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+          "sensitivity_runtime_seconds": 0.9711435349890962,
+          "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+          "truth_fields_present": false,
+          "truth_used": false
+        },
+        "birth_proposals_sha256": "16a16097caffa822f521a122e0fac6b28f39c5d469ea9506ca3ec61cfe143dbb",
+        "birth_trust_region": {
+          "fixed_scale_ladder": [
+            0.25,
+            0.5,
+            0.75,
+            1.0
+          ],
+          "frozen_v2_full_size_alignment": {
+            "matched_full_geometry_count": 120,
+            "post_selection_diagnostic_only": true,
+            "table_sha256": "4925c4c4d7c0416f395b1980ce1a70193b454a24f6abbe98024ee8d64ed2ec40",
+            "truth_used": false,
+            "used_for_gate": false,
+            "v2_full_failed_v3_smallest_improved_count": 0
+          },
+          "full_scale_improving_count": 0,
+          "full_scale_probe_count": 0,
+          "growth_delta_rmse_vs_parent_distribution": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p05": null,
+            "p95": null
+          },
+          "growth_improving_count": 0,
+          "growth_probe_count": 0,
+          "improving_growth_delta_rmse_vs_parent_distribution": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p05": null,
+            "p95": null
+          },
+          "mechanism_diagnostics": {
+            "best_nested_scale_distribution": {
+              "count": 380,
+              "max": 0.25,
+              "median": 0.25,
+              "min": 0.25,
+              "p05": 0.25,
+              "p95": 0.25
+            },
+            "smaller_scale_improved_but_full_scale_failed_count": 0,
+            "smallest_scale_improved_then_full_scale_reached_count": 0
+          },
+          "new_center_probe_count": 380,
+          "probe_count": 380,
+          "probe_diagnostics_by_scale": {
+            "0.25": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 380,
+                "max": 0.0008124969899654388,
+                "median": 0.0003728549927473068,
+                "min": -3.4030526876449585e-06,
+                "p05": 4.49333805590868e-05,
+                "p95": 0.0007449081167578697
+              },
+              "improving_count": 1,
+              "probe_count": 380
+            },
+            "0.5": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 0,
+                "max": null,
+                "median": null,
+                "min": null,
+                "p05": null,
+                "p95": null
+              },
+              "improving_count": 0,
+              "probe_count": 0
+            },
+            "0.75": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 0,
+                "max": null,
+                "median": null,
+                "min": null,
+                "p05": null,
+                "p95": null
+              },
+              "improving_count": 0,
+              "probe_count": 0
+            },
+            "1.0": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 0,
+                "max": null,
+                "median": null,
+                "min": null,
+                "p05": null,
+                "p95": null
+              },
+              "improving_count": 0,
+              "probe_count": 0
+            }
+          },
+          "probe_diagnostics_by_shape": {
+            "dike_hemisphere": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 199,
+                "max": 0.0007875896990299225,
+                "median": 0.0003187377005815506,
+                "min": 4.67151403427124e-06,
+                "p05": 4.491303116083145e-05,
+                "p95": 0.0006182102486491204
+              },
+              "growth_probe_count": 0,
+              "improving_probe_count": 0,
+              "new_center_probe_count": 199
+            },
+            "ellipsoid": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 181,
+                "max": 0.0008124969899654388,
+                "median": 0.0004457589238882065,
+                "min": -3.4030526876449585e-06,
+                "p05": 9.097997099161148e-05,
+                "p95": 0.000746624544262886
+              },
+              "growth_probe_count": 0,
+              "improving_probe_count": 1,
+              "new_center_probe_count": 181
+            }
+          },
+          "slot_allocation": {
+            "growth": 0,
+            "initial_empty": 1,
+            "new_center": 380,
+            "nonbirth": 580,
+            "total_hard_forward_calls": 961
+          },
+          "smallest_scale_improving_count": 1,
+          "trust_region_branches_sha256": "f3576c76054979c20c377762353b6f347612c9a0422614480a7d31339bf23a9b",
+          "trust_region_probes_sha256": "46e4525352bf15d7335b33ce88e090403e14163ce7839c7a87dd947067ee2b89",
+          "truth_fields_present": false,
+          "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+        },
+        "body_match_minimum_component_voxels": 20,
+        "body_matches": [
+          {
+            "absolute_size_error_voxels": 588,
+            "center_error_voxels": 4.11884290352343,
+            "iou": 0.08125,
+            "predicted_body_index": 0,
+            "relative_size_error": 0.91875,
+            "truth_body_index": 0
+          }
+        ],
+        "body_precision": 1.0,
+        "body_recall": 0.5,
+        "case_id": "analytic_five_body",
+        "concealed_target_iou": 0.040625,
+        "concealed_target_precision": 1.0,
+        "concealed_target_predicted_volume": 52,
+        "concealed_target_recall": 0.040625,
+        "concealed_target_truth_volume": 1280,
+        "edit_volume_from_base": 52,
+        "fixed_forward_call_budget": 961,
+        "forward_call_count": 961,
+        "frozen_scheduled_move_counts": {
+          "birth": 380,
+          "change_shape": 116,
+          "death": 116,
+          "resize": 116,
+          "rotate": 116,
+          "translate": 116
+        },
+        "global_hard_label_accuracy": 0.9953155517578125,
+        "hard_attainment": 0.01228099834809071,
+        "hard_condition_violations": 0,
+        "hard_correct_observation_attainment": 0.01228099834809071,
+        "hard_correct_observation_rmse": 0.00877669733017683,
+        "hard_observed_seismic_rmse": 0.008776696398854256,
+        "matched_body_center_error_mean": 4.11884290352343,
+        "matched_body_count": 1,
+        "matched_body_relative_size_error_mean": 0.91875,
+        "optimized_by": "correct",
+        "per_label": {
+          "-1": {
+            "iou": 1.0,
+            "predicted_volume": 32768,
+            "truth_volume": 32768
+          },
+          "0": {
+            "iou": 0.9945999190867355,
+            "predicted_volume": 227404,
+            "truth_volume": 226176
+          },
+          "9": {
+            "iou": 0.61625,
+            "predicted_volume": 1972,
+            "truth_volume": 3200
+          }
+        },
+        "predicted_body_count": 1,
+        "proposal_seed": 8202601,
+        "realized_proposal_move_counts": {
+          "birth_trust_region_new_center": 380,
+          "change_shape": 116,
+          "death": 116,
+          "resize": 116,
+          "rotate": 116,
+          "translate": 116
+        },
+        "retrospective_only": true,
+        "runtime_seconds": 8.678298043902032,
+        "selected_labels_sha256": "f6d15b495f0915d080b25a900f83ad5436ce5a98cdd5594cca5e73dce984f38f",
+        "selected_response_sha256": "e55ce54e127889e4f3d4066ae0f6caeb4cbfc857ebb3984074a9338ca19a5490",
+        "selection_criterion": "minimum hard observed seismic RMSE only",
+        "selection_frozen_before_retrospective_evaluation": true,
+        "selection_used_truth": false,
+        "sensitivity_rankings_sha256": "1e6e0d75eb23ed8edecb114f6659fb0601b9106ffde28230b660a03da2e2fb71",
+        "truth_body_count": 2,
+        "truth_fields_present": false,
+        "used_for_selection": false,
+        "wrong_lithology_substitution_volume": 0
+      },
+      {
+        "baseline_hard_rmse": 0.010882876813411713,
+        "best_hard_rmse": 0.010882876813411713,
+        "best_state": {
+          "bodies": [],
+          "parent_id": null,
+          "proposal_move": "initial",
+          "state_id": "empty"
+        },
+        "birth_center_initializer": {
+          "backward_calls": 10,
+          "birth_proposal_count": 410,
+          "canonical_shape": "ellipsoid",
+          "canonical_size_xyz": [
+            11.0,
+            11.0,
+            10.0
+          ],
+          "condition_violation_count_across_births": 0,
+          "differentiable_forward_calls": 10,
+          "hard_selection_criterion_unchanged": true,
+          "loss_improving_birth_count_vs_empty": 0,
+          "loss_improving_birth_count_vs_parent": 0,
+          "mode": "deterministic_multifield_first_order",
+          "property_fields": [
+            "impedance",
+            "slowness"
+          ],
+          "proposal_guidance_only": true,
+          "ranking_computation_count": 10,
+          "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+          "sensitivity_runtime_seconds": 0.2217997502302751,
+          "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+          "truth_fields_present": false,
+          "truth_used": false
+        },
+        "birth_proposals_sha256": "cbb0ae6b9f8889a262f847cd0f3f17c8d2b365598e45bbca1856a6bd7ba394e7",
+        "birth_trust_region": {
+          "fixed_scale_ladder": [
+            0.25,
+            0.5,
+            0.75,
+            1.0
+          ],
+          "frozen_v2_full_size_alignment": {
+            "matched_full_geometry_count": 96,
+            "post_selection_diagnostic_only": true,
+            "table_sha256": "693a9841cf4ee1a26a02c6ad14f5fb1f7c225f236316f8bc4895ee09fe9a5d87",
+            "truth_used": false,
+            "used_for_gate": false,
+            "v2_full_failed_v3_smallest_improved_count": 0
+          },
+          "full_scale_improving_count": 0,
+          "full_scale_probe_count": 0,
+          "growth_delta_rmse_vs_parent_distribution": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p05": null,
+            "p95": null
+          },
+          "growth_improving_count": 0,
+          "growth_probe_count": 0,
+          "improving_growth_delta_rmse_vs_parent_distribution": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p05": null,
+            "p95": null
+          },
+          "mechanism_diagnostics": {
+            "best_nested_scale_distribution": {
+              "count": 410,
+              "max": 0.25,
+              "median": 0.25,
+              "min": 0.25,
+              "p05": 0.25,
+              "p95": 0.25
+            },
+            "smaller_scale_improved_but_full_scale_failed_count": 0,
+            "smallest_scale_improved_then_full_scale_reached_count": 0
+          },
+          "new_center_probe_count": 410,
+          "probe_count": 410,
+          "probe_diagnostics_by_scale": {
+            "0.25": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 410,
+                "max": 0.00030323024839162827,
+                "median": 2.63839028775692e-05,
+                "min": 0.0,
+                "p05": 0.0,
+                "p95": 0.00023002000525593755
+              },
+              "improving_count": 0,
+              "probe_count": 410
+            },
+            "0.5": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 0,
+                "max": null,
+                "median": null,
+                "min": null,
+                "p05": null,
+                "p95": null
+              },
+              "improving_count": 0,
+              "probe_count": 0
+            },
+            "0.75": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 0,
+                "max": null,
+                "median": null,
+                "min": null,
+                "p05": null,
+                "p95": null
+              },
+              "improving_count": 0,
+              "probe_count": 0
+            },
+            "1.0": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 0,
+                "max": null,
+                "median": null,
+                "min": null,
+                "p05": null,
+                "p95": null
+              },
+              "improving_count": 0,
+              "probe_count": 0
+            }
+          },
+          "probe_diagnostics_by_shape": {
+            "dike_hemisphere": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 202,
+                "max": 0.00030323024839162827,
+                "median": 4.699826240539551e-05,
+                "min": 0.0,
+                "p05": 0.0,
+                "p95": 0.0002100905403494835
+              },
+              "growth_probe_count": 0,
+              "improving_probe_count": 0,
+              "new_center_probe_count": 202
+            },
+            "ellipsoid": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 208,
+                "max": 0.00030323024839162827,
+                "median": 1.515774056315422e-05,
+                "min": 0.0,
+                "p05": 0.0,
+                "p95": 0.00025174515321850776
+              },
+              "growth_probe_count": 0,
+              "improving_probe_count": 0,
+              "new_center_probe_count": 208
+            }
+          },
+          "slot_allocation": {
+            "growth": 0,
+            "initial_empty": 1,
+            "new_center": 410,
+            "nonbirth": 550,
+            "total_hard_forward_calls": 961
+          },
+          "smallest_scale_improving_count": 0,
+          "trust_region_branches_sha256": "8cf718ac4366cad34f585d4efaad442ec3eb767185d999622efe89072e1ad200",
+          "trust_region_probes_sha256": "d98a8f30a0192922613009537d0b37f9f27f0781fc582e6dfb995ee0ee007566",
+          "truth_fields_present": false,
+          "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+        },
+        "body_match_minimum_component_voxels": 20,
+        "body_matches": [],
+        "body_precision": 0.0,
+        "body_recall": 0.0,
+        "case_id": "analytic_five_body",
+        "concealed_target_iou": 0.0,
+        "concealed_target_precision": 0.0,
+        "concealed_target_predicted_volume": 0,
+        "concealed_target_recall": 0.0,
+        "concealed_target_truth_volume": 1280,
+        "edit_volume_from_base": 0,
+        "fixed_forward_call_budget": 961,
+        "forward_call_count": 961,
+        "frozen_scheduled_move_counts": {
+          "birth": 410,
+          "change_shape": 110,
+          "death": 110,
+          "resize": 110,
+          "rotate": 110,
+          "translate": 110
+        },
+        "global_hard_label_accuracy": 0.9951171875,
+        "hard_attainment": 0.0,
+        "hard_condition_violations": 0,
+        "hard_correct_observation_attainment": 0.0,
+        "hard_correct_observation_rmse": 0.008885824121534824,
+        "hard_observed_seismic_rmse": 0.010882876813411713,
+        "matched_body_center_error_mean": null,
+        "matched_body_count": 0,
+        "matched_body_relative_size_error_mean": null,
+        "optimized_by": "zero",
+        "per_label": {
+          "-1": {
+            "iou": 1.0,
+            "predicted_volume": 32768,
+            "truth_volume": 32768
+          },
+          "0": {
+            "iou": 0.9943725379853686,
+            "predicted_volume": 227456,
+            "truth_volume": 226176
+          },
+          "9": {
+            "iou": 0.6,
+            "predicted_volume": 1920,
+            "truth_volume": 3200
+          }
+        },
+        "predicted_body_count": 0,
+        "proposal_seed": 8202601,
+        "realized_proposal_move_counts": {
+          "birth_trust_region_new_center": 410,
+          "change_shape": 110,
+          "death": 110,
+          "resize": 110,
+          "rotate": 110,
+          "translate": 110
+        },
+        "retrospective_only": true,
+        "runtime_seconds": 5.894580011954531,
+        "selected_labels_sha256": "cb14261739d35446bb67c2932edfa4e9ad30c691a10fc295bc123e3eb3186f13",
+        "selected_response_sha256": "784618e6a429178083d111110da8a32d79cf2c572bfa9dda054af93264cfef25",
+        "selection_criterion": "minimum hard observed seismic RMSE only",
+        "selection_frozen_before_retrospective_evaluation": true,
+        "selection_used_truth": false,
+        "sensitivity_rankings_sha256": "1c79a9e1ff5cd85332011f875bec297da32d93d44fa919df7c5945a440380c78",
+        "truth_body_count": 2,
+        "truth_fields_present": false,
+        "used_for_selection": false,
+        "wrong_lithology_substitution_volume": 0
+      },
+      {
+        "baseline_hard_rmse": 0.017632272094488144,
+        "best_hard_rmse": 0.017632272094488144,
+        "best_state": {
+          "bodies": [],
+          "parent_id": null,
+          "proposal_move": "initial",
+          "state_id": "empty"
+        },
+        "birth_center_initializer": {
+          "backward_calls": 10,
+          "birth_proposal_count": 410,
+          "canonical_shape": "ellipsoid",
+          "canonical_size_xyz": [
+            11.0,
+            11.0,
+            10.0
+          ],
+          "condition_violation_count_across_births": 0,
+          "differentiable_forward_calls": 10,
+          "hard_selection_criterion_unchanged": true,
+          "loss_improving_birth_count_vs_empty": 0,
+          "loss_improving_birth_count_vs_parent": 0,
+          "mode": "deterministic_multifield_first_order",
+          "property_fields": [
+            "impedance",
+            "slowness"
+          ],
+          "proposal_guidance_only": true,
+          "ranking_computation_count": 10,
+          "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+          "sensitivity_runtime_seconds": 0.3025293620303273,
+          "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+          "truth_fields_present": false,
+          "truth_used": false
+        },
+        "birth_proposals_sha256": "cd9c9c2c6cc2c284db1f0df931545d040994ccd7b278e2d1b09aaad47deb715a",
+        "birth_trust_region": {
+          "fixed_scale_ladder": [
+            0.25,
+            0.5,
+            0.75,
+            1.0
+          ],
+          "frozen_v2_full_size_alignment": {
+            "matched_full_geometry_count": 96,
+            "post_selection_diagnostic_only": true,
+            "table_sha256": "271cdbc88c2980d6d1485849fb4e67cad580e97f89d037f11a98db9f298d9aa4",
+            "truth_used": false,
+            "used_for_gate": false,
+            "v2_full_failed_v3_smallest_improved_count": 0
+          },
+          "full_scale_improving_count": 0,
+          "full_scale_probe_count": 0,
+          "growth_delta_rmse_vs_parent_distribution": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p05": null,
+            "p95": null
+          },
+          "growth_improving_count": 0,
+          "growth_probe_count": 0,
+          "improving_growth_delta_rmse_vs_parent_distribution": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p05": null,
+            "p95": null
+          },
+          "mechanism_diagnostics": {
+            "best_nested_scale_distribution": {
+              "count": 410,
+              "max": 0.25,
+              "median": 0.25,
+              "min": 0.25,
+              "p05": 0.25,
+              "p95": 0.25
+            },
+            "smaller_scale_improved_but_full_scale_failed_count": 0,
+            "smallest_scale_improved_then_full_scale_reached_count": 0
+          },
+          "new_center_probe_count": 410,
+          "probe_count": 410,
+          "probe_diagnostics_by_scale": {
+            "0.25": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 410,
+                "max": 0.00018875859677791595,
+                "median": 2.5972723960876465e-05,
+                "min": 0.0,
+                "p05": 0.0,
+                "p95": 0.0001447310671210289
+              },
+              "improving_count": 0,
+              "probe_count": 410
+            },
+            "0.5": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 0,
+                "max": null,
+                "median": null,
+                "min": null,
+                "p05": null,
+                "p95": null
+              },
+              "improving_count": 0,
+              "probe_count": 0
+            },
+            "0.75": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 0,
+                "max": null,
+                "median": null,
+                "min": null,
+                "p05": null,
+                "p95": null
+              },
+              "improving_count": 0,
+              "probe_count": 0
+            },
+            "1.0": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 0,
+                "max": null,
+                "median": null,
+                "min": null,
+                "p05": null,
+                "p95": null
+              },
+              "improving_count": 0,
+              "probe_count": 0
+            }
+          },
+          "probe_diagnostics_by_shape": {
+            "dike_hemisphere": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 219,
+                "max": 0.0001887548714876175,
+                "median": 2.8992071747779846e-05,
+                "min": 0.0,
+                "p05": 0.0,
+                "p95": 0.00014175474643707275
+              },
+              "growth_probe_count": 0,
+              "improving_probe_count": 0,
+              "new_center_probe_count": 219
+            },
+            "ellipsoid": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 191,
+                "max": 0.00018875859677791595,
+                "median": 1.4847144484519958e-05,
+                "min": 0.0,
+                "p05": 0.0,
+                "p95": 0.00015655811876058578
+              },
+              "growth_probe_count": 0,
+              "improving_probe_count": 0,
+              "new_center_probe_count": 191
+            }
+          },
+          "slot_allocation": {
+            "growth": 0,
+            "initial_empty": 1,
+            "new_center": 410,
+            "nonbirth": 550,
+            "total_hard_forward_calls": 961
+          },
+          "smallest_scale_improving_count": 0,
+          "trust_region_branches_sha256": "d8238f392a7ec606959bf2224fd8dc4003da2dbdf6248bfff053648edac68c31",
+          "trust_region_probes_sha256": "b583abe7c549e598a313e58475bf472bf402d24883b34c5f222f69eb92375bc1",
+          "truth_fields_present": false,
+          "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+        },
+        "body_match_minimum_component_voxels": 20,
+        "body_matches": [],
+        "body_precision": 0.0,
+        "body_recall": 0.0,
+        "case_id": "analytic_five_body",
+        "concealed_target_iou": 0.0,
+        "concealed_target_precision": 0.0,
+        "concealed_target_predicted_volume": 0,
+        "concealed_target_recall": 0.0,
+        "concealed_target_truth_volume": 1280,
+        "edit_volume_from_base": 0,
+        "fixed_forward_call_budget": 961,
+        "forward_call_count": 961,
+        "frozen_scheduled_move_counts": {
+          "birth": 410,
+          "change_shape": 110,
+          "death": 110,
+          "resize": 110,
+          "rotate": 110,
+          "translate": 110
+        },
+        "global_hard_label_accuracy": 0.9951171875,
+        "hard_attainment": 0.0,
+        "hard_condition_violations": 0,
+        "hard_correct_observation_attainment": 0.0,
+        "hard_correct_observation_rmse": 0.008885824121534824,
+        "hard_observed_seismic_rmse": 0.017632272094488144,
+        "matched_body_center_error_mean": null,
+        "matched_body_count": 0,
+        "matched_body_relative_size_error_mean": null,
+        "optimized_by": "shuffled_xy",
+        "per_label": {
+          "-1": {
+            "iou": 1.0,
+            "predicted_volume": 32768,
+            "truth_volume": 32768
+          },
+          "0": {
+            "iou": 0.9943725379853686,
+            "predicted_volume": 227456,
+            "truth_volume": 226176
+          },
+          "9": {
+            "iou": 0.6,
+            "predicted_volume": 1920,
+            "truth_volume": 3200
+          }
+        },
+        "predicted_body_count": 0,
+        "proposal_seed": 8202601,
+        "realized_proposal_move_counts": {
+          "birth_trust_region_new_center": 410,
+          "change_shape": 110,
+          "death": 110,
+          "resize": 110,
+          "rotate": 110,
+          "translate": 110
+        },
+        "retrospective_only": true,
+        "runtime_seconds": 5.976626354968175,
+        "selected_labels_sha256": "cb14261739d35446bb67c2932edfa4e9ad30c691a10fc295bc123e3eb3186f13",
+        "selected_response_sha256": "784618e6a429178083d111110da8a32d79cf2c572bfa9dda054af93264cfef25",
+        "selection_criterion": "minimum hard observed seismic RMSE only",
+        "selection_frozen_before_retrospective_evaluation": true,
+        "selection_used_truth": false,
+        "sensitivity_rankings_sha256": "15a8eb6e0e383f33001c064c9780f24d6384829e0d2c7a7d36e3edba3f285f53",
+        "truth_body_count": 2,
+        "truth_fields_present": false,
+        "used_for_selection": false,
+        "wrong_lithology_substitution_volume": 0
+      },
+      {
+        "baseline_hard_rmse": 0.008885824121534824,
+        "best_hard_rmse": 0.008875811472535133,
+        "best_state": {
+          "bodies": [
+            {
+              "body_id": "body_07000069",
+              "center_x": 26.0,
+              "center_y": 54.0,
+              "center_z": 24.0,
+              "material_label": 9,
+              "orientation_deg": 44.77082947122528,
+              "shape": "ellipsoid",
+              "size_x": 2.3497273868475235,
+              "size_y": 1.614165467655663,
+              "size_z": 6.0
+            }
+          ],
+          "parent_id": "g007_p000069_g006_p000031_g005_p000047_g004_p000019_g003_p000075_g002_p000037_g001_p000019_empty",
+          "proposal_move": "resize",
+          "state_id": "g008_p000009_g007_p000069_g006_p000031_g005_p000047_g004_p000019_g003_p000075_g002_p000037_g001_p000019_empty"
+        },
+        "birth_center_initializer": {
+          "backward_calls": 44,
+          "birth_proposal_count": 570,
+          "canonical_shape": "ellipsoid",
+          "canonical_size_xyz": [
+            11.0,
+            11.0,
+            10.0
+          ],
+          "condition_violation_count_across_births": 0,
+          "differentiable_forward_calls": 44,
+          "hard_selection_criterion_unchanged": true,
+          "loss_improving_birth_count_vs_empty": 0,
+          "loss_improving_birth_count_vs_parent": 0,
+          "mode": "deterministic_multifield_first_order",
+          "property_fields": [
+            "impedance",
+            "slowness"
+          ],
+          "proposal_guidance_only": true,
+          "ranking_computation_count": 44,
+          "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+          "sensitivity_runtime_seconds": 0.8789551317458972,
+          "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+          "truth_fields_present": false,
+          "truth_used": false
+        },
+        "birth_proposals_sha256": "7ee2b9cb11e0808a9ab3ac0af19c8818157f3a09dbdb611f18d6378c6ae1d3a8",
+        "birth_trust_region": {
+          "fixed_scale_ladder": [
+            0.25,
+            0.5,
+            0.75,
+            1.0
+          ],
+          "frozen_v2_full_size_alignment": {
+            "matched_full_geometry_count": 96,
+            "post_selection_diagnostic_only": true,
+            "table_sha256": "9c2fe2c4dc59bebab845b3c93221338187acb6376df24b31c935c42fa5954762",
+            "truth_used": false,
+            "used_for_gate": false,
+            "v2_full_failed_v3_smallest_improved_count": 0
+          },
+          "full_scale_improving_count": 0,
+          "full_scale_probe_count": 0,
+          "growth_delta_rmse_vs_parent_distribution": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p05": null,
+            "p95": null
+          },
+          "growth_improving_count": 0,
+          "growth_probe_count": 0,
+          "improving_growth_delta_rmse_vs_parent_distribution": {
+            "count": 0,
+            "max": null,
+            "median": null,
+            "min": null,
+            "p05": null,
+            "p95": null
+          },
+          "mechanism_diagnostics": {
+            "best_nested_scale_distribution": {
+              "count": 570,
+              "max": 0.25,
+              "median": 0.25,
+              "min": 0.25,
+              "p05": 0.25,
+              "p95": 0.25
+            },
+            "smaller_scale_improved_but_full_scale_failed_count": 0,
+            "smallest_scale_improved_then_full_scale_reached_count": 0
+          },
+          "new_center_probe_count": 570,
+          "probe_count": 570,
+          "probe_diagnostics_by_scale": {
+            "0.25": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 570,
+                "max": 0.0007884027436375618,
+                "median": 0.00036112265661358833,
+                "min": 3.9130449295043945e-05,
+                "p05": 4.491396248340607e-05,
+                "p95": 0.0007022728677839039
+              },
+              "improving_count": 0,
+              "probe_count": 570
+            },
+            "0.5": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 0,
+                "max": null,
+                "median": null,
+                "min": null,
+                "p05": null,
+                "p95": null
+              },
+              "improving_count": 0,
+              "probe_count": 0
+            },
+            "0.75": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 0,
+                "max": null,
+                "median": null,
+                "min": null,
+                "p05": null,
+                "p95": null
+              },
+              "improving_count": 0,
+              "probe_count": 0
+            },
+            "1.0": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 0,
+                "max": null,
+                "median": null,
+                "min": null,
+                "p05": null,
+                "p95": null
+              },
+              "improving_count": 0,
+              "probe_count": 0
+            }
+          },
+          "probe_diagnostics_by_shape": {
+            "dike_hemisphere": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 277,
+                "max": 0.0007884027436375618,
+                "median": 0.000270061194896698,
+                "min": 3.9130449295043945e-05,
+                "p05": 4.491396248340607e-05,
+                "p95": 0.00047376565635204315
+              },
+              "growth_probe_count": 0,
+              "improving_probe_count": 0,
+              "new_center_probe_count": 277
+            },
+            "ellipsoid": {
+              "delta_rmse_vs_parent_distribution": {
+                "count": 293,
+                "max": 0.0007875896990299225,
+                "median": 0.0004457589238882065,
+                "min": 3.9130449295043945e-05,
+                "p05": 4.847794771194459e-05,
+                "p95": 0.0007449090480804443
+              },
+              "growth_probe_count": 0,
+              "improving_probe_count": 0,
+              "new_center_probe_count": 293
+            }
+          },
+          "slot_allocation": {
+            "growth": 0,
+            "initial_empty": 1,
+            "new_center": 570,
+            "nonbirth": 390,
+            "total_hard_forward_calls": 961
+          },
+          "smallest_scale_improving_count": 0,
+          "trust_region_branches_sha256": "dbfaf8fca52d75693edd8ac596456523f04ee38001c54adf5b6266c0097e2fa5",
+          "trust_region_probes_sha256": "5fd233cca627a27cf3b3553c0027067e760940be4534c53fcf323f1143401a1d",
+          "truth_fields_present": false,
+          "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+        },
+        "body_match_minimum_component_voxels": 20,
+        "body_matches": [],
+        "body_precision": 0.0,
+        "body_recall": 0.0,
+        "case_id": "analytic_five_body",
+        "concealed_target_iou": 0.0,
+        "concealed_target_precision": 0.0,
+        "concealed_target_predicted_volume": 7,
+        "concealed_target_recall": 0.0,
+        "concealed_target_truth_volume": 1280,
+        "edit_volume_from_base": 7,
+        "fixed_forward_call_budget": 961,
+        "forward_call_count": 961,
+        "frozen_scheduled_move_counts": {
+          "birth": 570,
+          "change_shape": 78,
+          "death": 78,
+          "resize": 78,
+          "rotate": 78,
+          "translate": 78
+        },
+        "global_hard_label_accuracy": 0.9950904846191406,
+        "hard_attainment": 0.001126811521671378,
+        "hard_condition_violations": 0,
+        "hard_correct_observation_attainment": -0.003646127729132642,
+        "hard_correct_observation_rmse": 0.008918222971260548,
+        "hard_observed_seismic_rmse": 0.008875810541212559,
+        "matched_body_center_error_mean": null,
+        "matched_body_count": 0,
+        "matched_body_relative_size_error_mean": null,
+        "optimized_by": "wrong_case_observation",
+        "per_label": {
+          "-1": {
+            "iou": 1.0,
+            "predicted_volume": 32768,
+            "truth_volume": 32768
+          },
+          "0": {
+            "iou": 0.9943417628024761,
+            "predicted_volume": 227449,
+            "truth_volume": 226176
+          },
+          "9": {
+            "iou": 0.598690364826941,
+            "predicted_volume": 1927,
+            "truth_volume": 3200
+          }
+        },
+        "predicted_body_count": 0,
+        "proposal_seed": 8202601,
+        "realized_proposal_move_counts": {
+          "birth_trust_region_new_center": 570,
+          "change_shape": 78,
+          "death": 78,
+          "resize": 78,
+          "rotate": 78,
+          "translate": 78
+        },
+        "retrospective_only": true,
+        "runtime_seconds": 7.741769050015137,
+        "selected_labels_sha256": "30813eeec40c0fa6f044ca1a275a8feef3c477dc20c2998b5218225d9ad3b4b8",
+        "selected_response_sha256": "918b5ef4f8dd593ea7cf492534519e30c33a19ecb7d58747d9ab29321206b136",
+        "selection_criterion": "minimum hard observed seismic RMSE only",
+        "selection_frozen_before_retrospective_evaluation": true,
+        "selection_used_truth": false,
+        "sensitivity_rankings_sha256": "e16134fdc964e8808a604dfaad885c75a6dd9c7c23f76080786743d4c7f2e1f0",
+        "truth_body_count": 2,
+        "truth_fields_present": false,
+        "used_for_selection": false,
+        "wrong_lithology_substitution_volume": 0
+      }
+    ],
+    "base_correct_observation_rmse": 0.008885824121534824,
+    "case_id": "analytic_five_body",
+    "correct_evaluation_ranking": [
+      "correct",
+      "shuffled_xy",
+      "zero",
+      "wrong_case_observation"
+    ],
+    "correct_optimized_is_strictly_best_against_correct": true,
+    "stage7_exact_library_regression": {
+      "best_hard_rmse": 0.0,
+      "forward_call_count": 889,
+      "regression_only_not_continuous_gate": true,
+      "selection_used_truth": false
+    }
+  },
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "completed_at_utc": "2026-08-08T13:06:29.005484+00:00",
+  "condition_sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41",
+  "config_sha256": "9633b2704ba2c87881040f2b831069ecf4bdb6bf367b97142d366ab2fb03857a",
+  "correct_arm_birth_diagnostics": {
+    "analytic_five_body": {
+      "birth_proposal_count": 380,
+      "delta_rmse_lt_zero_vs_empty_count": 5,
+      "delta_rmse_lt_zero_vs_parent_count": 1,
+      "growth_delta_rmse_lt_zero_vs_parent_count": 0,
+      "growth_delta_rmse_vs_parent_distribution": {
+        "count": 0,
+        "max": null,
+        "median": null,
+        "min": null,
+        "p05": null,
+        "p95": null
+      },
+      "growth_probe_count": 0,
+      "smallest_scale_delta_rmse_lt_zero_vs_parent_count": 1,
+      "v2_full_failed_v3_smallest_improved_count": 0
+    },
+    "native_seed20260807": {
+      "birth_proposal_count": 490,
+      "delta_rmse_lt_zero_vs_empty_count": 0,
+      "delta_rmse_lt_zero_vs_parent_count": 1,
+      "growth_delta_rmse_lt_zero_vs_parent_count": 0,
+      "growth_delta_rmse_vs_parent_distribution": {
+        "count": 0,
+        "max": null,
+        "median": null,
+        "min": null,
+        "p05": null,
+        "p95": null
+      },
+      "growth_probe_count": 0,
+      "smallest_scale_delta_rmse_lt_zero_vs_parent_count": 1,
+      "v2_full_failed_v3_smallest_improved_count": 0
+    },
+    "native_seed20260808": {
+      "birth_proposal_count": 410,
+      "delta_rmse_lt_zero_vs_empty_count": 0,
+      "delta_rmse_lt_zero_vs_parent_count": 0,
+      "growth_delta_rmse_lt_zero_vs_parent_count": 0,
+      "growth_delta_rmse_vs_parent_distribution": {
+        "count": 0,
+        "max": null,
+        "median": null,
+        "min": null,
+        "p05": null,
+        "p95": null
+      },
+      "growth_probe_count": 0,
+      "smallest_scale_delta_rmse_lt_zero_vs_parent_count": 0,
+      "v2_full_failed_v3_smallest_improved_count": 0
+    },
+    "native_seed20260809": {
+      "birth_proposal_count": 560,
+      "delta_rmse_lt_zero_vs_empty_count": 0,
+      "delta_rmse_lt_zero_vs_parent_count": 1,
+      "growth_delta_rmse_lt_zero_vs_parent_count": 0,
+      "growth_delta_rmse_vs_parent_distribution": {
+        "count": 0,
+        "max": null,
+        "median": null,
+        "min": null,
+        "p05": null,
+        "p95": null
+      },
+      "growth_probe_count": 0,
+      "smallest_scale_delta_rmse_lt_zero_vs_parent_count": 1,
+      "v2_full_failed_v3_smallest_improved_count": 0
+    }
+  },
+  "decision": "FAIL_STAGE8A_STOP_BEFORE_STAGE8B",
+  "exact_command": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/bin/python project/geodata-3d-conditional/scripts/stage8/run_stage8.py --stage 8a --config project/geodata-3d-conditional/experiments/stage8_structured_posterior/configs/stage8a_v3.json --output-dir project/geodata-3d-conditional/experiments/stage8_structured_posterior/runs/stage8a_v3 --device cuda",
+  "gates": {
+    "all_required_cases_present": true,
+    "analytic_hidden_iou": false,
+    "analytic_hidden_recall": false,
+    "conditions_exact": true,
+    "correct_specificity": true,
+    "geometry_improves_from_empty": false,
+    "identical_budgets": true,
+    "native_mean_iou": false,
+    "native_mean_recall": false,
+    "truth_blind_selection": true,
+    "unknown_count": true
+  },
+  "git_branch": "main",
+  "git_sha": "3394145674e04e3698952064f486cfa31eb876f9",
+  "git_status": "M project/geodata-3d-conditional/docs/DEVELOPMENT_HANDOFF.md\n M project/geodata-3d-conditional/flow2_phase6p_inference_limit_summary_zh.ipynb\n M project/geodata-3d-conditional/flow2_phase6q_simple_causality_summary_zh.ipynb\n?? project/geodata-3d-conditional/AGENTS.md\n?? project/geodata-3d-conditional/experiments/stage8_structured_posterior/\n?? project/geodata-3d-conditional/guidance/structured_birth_sensitivity.py\n?? project/geodata-3d-conditional/guidance/structured_posterior.py\n?? project/geodata-3d-conditional/guidance/structured_trust_region.py\n?? project/geodata-3d-conditional/scripts/stage8/\n?? project/geodata-3d-conditional/tests/test_stage8_structured_posterior.py\n?? project/geodata-3d-conditional/tests/test_stage8a_r1_audit.py\n?? project/geodata-3d-conditional/tests/test_stage8a_v2_r2_audit.py",
+  "native_cases": [
+    {
+      "arms": [
+        {
+          "baseline_hard_rmse": 0.014674325473606586,
+          "best_hard_rmse": 0.014671598561108112,
+          "best_state": {
+            "bodies": [
+              {
+                "body_id": "body_05000064",
+                "center_x": 42.782803111904414,
+                "center_y": 42.0,
+                "center_z": 42.923150712907216,
+                "material_label": 9,
+                "orientation_deg": 119.36938704340248,
+                "shape": "ellipsoid",
+                "size_x": 1.9054818857650133,
+                "size_y": 1.9055375450256968,
+                "size_z": 1.5979172806427722
+              }
+            ],
+            "parent_id": "g008_p000010_g007_p000004_g006_p000080_g005_p000064_g004_p000031_g003_p000069_g002_p000031_g001_p000075_empty",
+            "proposal_move": "translate",
+            "state_id": "g009_p000038_g008_p000010_g007_p000004_g006_p000080_g005_p000064_g004_p000031_g003_p000069_g002_p000031_g001_p000075_empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 39,
+            "birth_proposal_count": 490,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 39,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 1,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 39,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 1.141548348008655,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "0b416d2f5ab38d1152886ee77dcf000bb2a90295dca196da1280a8f90d06bf1c",
+          "birth_trust_region": {
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "frozen_v2_full_size_alignment": {
+              "matched_full_geometry_count": 120,
+              "post_selection_diagnostic_only": true,
+              "table_sha256": "cdb41541a6e8b25242f904d7e0590c4df86c4fb5bc2f828560e1898112b5457e",
+              "truth_used": false,
+              "used_for_gate": false,
+              "v2_full_failed_v3_smallest_improved_count": 0
+            },
+            "full_scale_improving_count": 0,
+            "full_scale_probe_count": 0,
+            "growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "growth_improving_count": 0,
+            "growth_probe_count": 0,
+            "improving_growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "mechanism_diagnostics": {
+              "best_nested_scale_distribution": {
+                "count": 490,
+                "max": 0.25,
+                "median": 0.25,
+                "min": 0.25,
+                "p05": 0.25,
+                "p95": 0.25
+              },
+              "smaller_scale_improved_but_full_scale_failed_count": 0,
+              "smallest_scale_improved_then_full_scale_reached_count": 0
+            },
+            "new_center_probe_count": 490,
+            "probe_count": 490,
+            "probe_diagnostics_by_scale": {
+              "0.25": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 490,
+                  "max": 0.00038569699972867966,
+                  "median": 0.00016190716996788979,
+                  "min": -3.3155083656311035e-07,
+                  "p05": 2.641147002577783e-05,
+                  "p95": 0.0003063725773245096
+                },
+                "improving_count": 1,
+                "probe_count": 490
+              },
+              "0.5": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "0.75": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "1.0": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              }
+            },
+            "probe_diagnostics_by_shape": {
+              "dike_hemisphere": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 248,
+                  "max": 0.0003778524696826935,
+                  "median": 0.00014167744666337967,
+                  "min": 8.002854883670807e-06,
+                  "p05": 2.3157335817813873e-05,
+                  "p95": 0.0002591181546449661
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 0,
+                "new_center_probe_count": 248
+              },
+              "ellipsoid": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 242,
+                  "max": 0.00038569699972867966,
+                  "median": 0.0001817028969526291,
+                  "min": -3.3155083656311035e-07,
+                  "p05": 3.621634095907211e-05,
+                  "p95": 0.0003235859330743551
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 1,
+                "new_center_probe_count": 242
+              }
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 490,
+              "nonbirth": 470,
+              "total_hard_forward_calls": 961
+            },
+            "smallest_scale_improving_count": 1,
+            "trust_region_branches_sha256": "cebb6a6829a2988e37fc93ddf2d694680d49b4836dbf8b44126c5cb2720204b2",
+            "trust_region_probes_sha256": "c572e38898ffff2f6176df388202539e2ba6478861a9338b5b6d703f7b3f3ea4",
+            "truth_fields_present": false,
+            "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260807",
+          "concealed_target_iou": 0.0021231422505307855,
+          "concealed_target_precision": 1.0,
+          "concealed_target_predicted_volume": 2,
+          "concealed_target_recall": 0.0021231422505307855,
+          "concealed_target_truth_volume": 942,
+          "edit_volume_from_base": 2,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 490,
+            "change_shape": 94,
+            "death": 94,
+            "resize": 94,
+            "rotate": 94,
+            "translate": 94
+          },
+          "global_hard_label_accuracy": 0.992095947265625,
+          "hard_attainment": 0.0001858288139634512,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0001858288139634512,
+          "hard_correct_observation_rmse": 0.014671598561108112,
+          "hard_observed_seismic_rmse": 0.014671597629785538,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "correct",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.990965733445535,
+              "predicted_volume": 229349,
+              "truth_volume": 227277
+            },
+            "9": {
+              "iou": 0.012863268222963315,
+              "predicted_volume": 27,
+              "truth_volume": 2099
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202602,
+          "realized_proposal_move_counts": {
+            "birth_trust_region_new_center": 490,
+            "change_shape": 94,
+            "death": 94,
+            "resize": 94,
+            "rotate": 94,
+            "translate": 94
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 9.116873038001359,
+          "selected_labels_sha256": "9c9c10a1872c9a4dcb8b7893ccb24703af5e57f12736cd74d08384093451eb30",
+          "selected_response_sha256": "f3bfbd3053204e28d429e7be963ecd86b76b9f03de24dd16d562555b15b73935",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "c09bd70148daccf8438c17977aecd4c763cd198a2d4d19299536255a9dd2030a",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.0013306159526109695,
+          "best_hard_rmse": 0.0013306159526109695,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 45,
+            "birth_proposal_count": 560,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 45,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 0,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 45,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 0.8823656054446474,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "fb29488cdff0e592e772a99e0cab0f25f76c0c21151e11f3f05402d8040346a6",
+          "birth_trust_region": {
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "frozen_v2_full_size_alignment": {
+              "matched_full_geometry_count": 120,
+              "post_selection_diagnostic_only": true,
+              "table_sha256": "ab91a729bafa7d649d2b2ac89049f278ff097474d5bca03f53ea8945f29c2ba7",
+              "truth_used": false,
+              "used_for_gate": false,
+              "v2_full_failed_v3_smallest_improved_count": 0
+            },
+            "full_scale_improving_count": 0,
+            "full_scale_probe_count": 0,
+            "growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "growth_improving_count": 0,
+            "growth_probe_count": 0,
+            "improving_growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "mechanism_diagnostics": {
+              "best_nested_scale_distribution": {
+                "count": 560,
+                "max": 0.25,
+                "median": 0.25,
+                "min": 0.25,
+                "p05": 0.25,
+                "p95": 0.25
+              },
+              "smaller_scale_improved_but_full_scale_failed_count": 0,
+              "smallest_scale_improved_then_full_scale_reached_count": 0
+            },
+            "new_center_probe_count": 560,
+            "probe_count": 560,
+            "probe_diagnostics_by_scale": {
+              "0.25": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 560,
+                  "max": 0.0020362038630992174,
+                  "median": 0.001239238539710641,
+                  "min": 0.000147281214594841,
+                  "p05": 0.0003405676339752973,
+                  "p95": 0.0019641113467514515
+                },
+                "improving_count": 0,
+                "probe_count": 560
+              },
+              "0.5": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "0.75": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "1.0": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              }
+            },
+            "probe_diagnostics_by_shape": {
+              "dike_hemisphere": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 299,
+                  "max": 0.0020362038630992174,
+                  "median": 0.0011531293857842684,
+                  "min": 0.000147281214594841,
+                  "p05": 0.00030337751377373934,
+                  "p95": 0.0017041710903868078
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 0,
+                "new_center_probe_count": 299
+              },
+              "ellipsoid": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 261,
+                  "max": 0.0020362038630992174,
+                  "median": 0.0013310362119227648,
+                  "min": 0.00020335381850600243,
+                  "p05": 0.0003526278305798769,
+                  "p95": 0.0019641120452433825
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 0,
+                "new_center_probe_count": 261
+              }
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 560,
+              "nonbirth": 400,
+              "total_hard_forward_calls": 961
+            },
+            "smallest_scale_improving_count": 0,
+            "trust_region_branches_sha256": "5bda2103e4a97aa1e1b1f2861a788eda8ccd2fa8db29b0d19b6b3aa6958bb52f",
+            "trust_region_probes_sha256": "7e4c9f6bcaff0ab653b7df571a5377b4ee3ff4c2f3574a61bde48004737827de",
+            "truth_fields_present": false,
+            "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260807",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 942,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "global_hard_label_accuracy": 0.9920883178710938,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.014674325473606586,
+          "hard_observed_seismic_rmse": 0.0013306159526109695,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "zero",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9909570919682059,
+              "predicted_volume": 229351,
+              "truth_volume": 227277
+            },
+            "9": {
+              "iou": 0.011910433539780848,
+              "predicted_volume": 25,
+              "truth_volume": 2099
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202602,
+          "realized_proposal_move_counts": {
+            "birth_trust_region_new_center": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 7.756106126005761,
+          "selected_labels_sha256": "9db7a70f8a196157b22e01f75787852d0fc5bc8a388006d51120b3887a44d3f6",
+          "selected_response_sha256": "5d1f15a243bd90ba05a673e2d9eadf899077ef12e37979a81affd49557588d23",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "2c7cedf22c1ca835d244b6b8d74f46a31327fab6355c19934423d4cf6cfe3ecb",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.014794488437473774,
+          "best_hard_rmse": 0.014794488437473774,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 45,
+            "birth_proposal_count": 560,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 45,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 0,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 45,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 1.4335055217379704,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "a5c0d3ba6b275659b6153d80f5e99107e5fdc9c4ef42eed9e0ddcf409cb010ea",
+          "birth_trust_region": {
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "frozen_v2_full_size_alignment": {
+              "matched_full_geometry_count": 120,
+              "post_selection_diagnostic_only": true,
+              "table_sha256": "a28527ac297c320749aa6e0ce78b67db966a41a09f9d233ab41e813df469d2ac",
+              "truth_used": false,
+              "used_for_gate": false,
+              "v2_full_failed_v3_smallest_improved_count": 0
+            },
+            "full_scale_improving_count": 0,
+            "full_scale_probe_count": 0,
+            "growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "growth_improving_count": 0,
+            "growth_probe_count": 0,
+            "improving_growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "mechanism_diagnostics": {
+              "best_nested_scale_distribution": {
+                "count": 560,
+                "max": 0.25,
+                "median": 0.25,
+                "min": 0.25,
+                "p05": 0.25,
+                "p95": 0.25
+              },
+              "smaller_scale_improved_but_full_scale_failed_count": 0,
+              "smallest_scale_improved_then_full_scale_reached_count": 0
+            },
+            "new_center_probe_count": 560,
+            "probe_count": 560,
+            "probe_diagnostics_by_scale": {
+              "0.25": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 560,
+                  "max": 0.0003421027213335037,
+                  "median": 0.00016394443809986115,
+                  "min": 5.472451448440552e-06,
+                  "p05": 3.587454557418823e-05,
+                  "p95": 0.00030390918254852295
+                },
+                "improving_count": 0,
+                "probe_count": 560
+              },
+              "0.5": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "0.75": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "1.0": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              }
+            },
+            "probe_diagnostics_by_shape": {
+              "dike_hemisphere": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 288,
+                  "max": 0.00032022036612033844,
+                  "median": 0.0001356196589767933,
+                  "min": 8.2431361079216e-06,
+                  "p05": 3.587454557418823e-05,
+                  "p95": 0.00024832589551806447
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 0,
+                "new_center_probe_count": 288
+              },
+              "ellipsoid": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 272,
+                  "max": 0.0003421027213335037,
+                  "median": 0.00018016062676906586,
+                  "min": 5.472451448440552e-06,
+                  "p05": 3.587454557418823e-05,
+                  "p95": 0.00031805443577468393
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 0,
+                "new_center_probe_count": 272
+              }
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 560,
+              "nonbirth": 400,
+              "total_hard_forward_calls": 961
+            },
+            "smallest_scale_improving_count": 0,
+            "trust_region_branches_sha256": "b66d03228b20efdf596628382a07a3b83c578875e6cd4b8a2fba33883cbad71b",
+            "trust_region_probes_sha256": "ee39c10aad851b47801c10e722e4e1400c775c6507733a7418b2f1372cdaf31d",
+            "truth_fields_present": false,
+            "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260807",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 942,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "global_hard_label_accuracy": 0.9920883178710938,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.014674325473606586,
+          "hard_observed_seismic_rmse": 0.014794488437473774,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "shuffled_xy",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9909570919682059,
+              "predicted_volume": 229351,
+              "truth_volume": 227277
+            },
+            "9": {
+              "iou": 0.011910433539780848,
+              "predicted_volume": 25,
+              "truth_volume": 2099
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202602,
+          "realized_proposal_move_counts": {
+            "birth_trust_region_new_center": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 8.279695068951696,
+          "selected_labels_sha256": "9db7a70f8a196157b22e01f75787852d0fc5bc8a388006d51120b3887a44d3f6",
+          "selected_response_sha256": "5d1f15a243bd90ba05a673e2d9eadf899077ef12e37979a81affd49557588d23",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "d6a5d946f132f57a2ac945015d32f353bbb17f90b9df2b380bd3676c1f211c7b",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.016025545075535774,
+          "best_hard_rmse": 0.016025545075535774,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 45,
+            "birth_proposal_count": 560,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 45,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 0,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 45,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 1.069378232699819,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "54260bf05d713f5fced299b76f9aef1c43822442662c55b205f7a65e9b008f41",
+          "birth_trust_region": {
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "frozen_v2_full_size_alignment": {
+              "matched_full_geometry_count": 96,
+              "post_selection_diagnostic_only": true,
+              "table_sha256": "bc038778f4cb0ce80c28e691704f074879f61c27b9c27f0693eedab4e1c29bfd",
+              "truth_used": false,
+              "used_for_gate": false,
+              "v2_full_failed_v3_smallest_improved_count": 0
+            },
+            "full_scale_improving_count": 0,
+            "full_scale_probe_count": 0,
+            "growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "growth_improving_count": 0,
+            "growth_probe_count": 0,
+            "improving_growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "mechanism_diagnostics": {
+              "best_nested_scale_distribution": {
+                "count": 560,
+                "max": 0.25,
+                "median": 0.25,
+                "min": 0.25,
+                "p05": 0.25,
+                "p95": 0.25
+              },
+              "smaller_scale_improved_but_full_scale_failed_count": 0,
+              "smallest_scale_improved_then_full_scale_reached_count": 0
+            },
+            "new_center_probe_count": 560,
+            "probe_count": 560,
+            "probe_diagnostics_by_scale": {
+              "0.25": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 560,
+                  "max": 0.00035939738154411316,
+                  "median": 0.0001394525170326233,
+                  "min": 9.05059278011322e-06,
+                  "p05": 1.856861636042595e-05,
+                  "p95": 0.00026311539113521576
+                },
+                "improving_count": 0,
+                "probe_count": 560
+              },
+              "0.5": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "0.75": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "1.0": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              }
+            },
+            "probe_diagnostics_by_shape": {
+              "dike_hemisphere": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 283,
+                  "max": 0.00028420425951480865,
+                  "median": 0.00012410059571266174,
+                  "min": 9.6149742603302e-06,
+                  "p05": 1.8567033112049103e-05,
+                  "p95": 0.0002261441200971602
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 0,
+                "new_center_probe_count": 283
+              },
+              "ellipsoid": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 277,
+                  "max": 0.00035939738154411316,
+                  "median": 0.00016495026648044586,
+                  "min": 9.05059278011322e-06,
+                  "p05": 1.856870949268341e-05,
+                  "p95": 0.0002689145505428314
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 0,
+                "new_center_probe_count": 277
+              }
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 560,
+              "nonbirth": 400,
+              "total_hard_forward_calls": 961
+            },
+            "smallest_scale_improving_count": 0,
+            "trust_region_branches_sha256": "57c8b549dea305b9ffb8fdc32d7320682f6e0f25629e70bb4defbf01d5ab784f",
+            "trust_region_probes_sha256": "939a0a31e512b77b3c3b60f3fdf8be51ec1ecbcd8f9a2bd6dead03796c383dea",
+            "truth_fields_present": false,
+            "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260807",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 942,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "global_hard_label_accuracy": 0.9920883178710938,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.014674325473606586,
+          "hard_observed_seismic_rmse": 0.016025545075535774,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "wrong_case_observation",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9909570919682059,
+              "predicted_volume": 229351,
+              "truth_volume": 227277
+            },
+            "9": {
+              "iou": 0.011910433539780848,
+              "predicted_volume": 25,
+              "truth_volume": 2099
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202602,
+          "realized_proposal_move_counts": {
+            "birth_trust_region_new_center": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 7.927293472923338,
+          "selected_labels_sha256": "9db7a70f8a196157b22e01f75787852d0fc5bc8a388006d51120b3887a44d3f6",
+          "selected_response_sha256": "5d1f15a243bd90ba05a673e2d9eadf899077ef12e37979a81affd49557588d23",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "4d66a099bbac2cf25b26c13d166d7b9235e1b61c491184647f216c4f1240e41f",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        }
+      ],
+      "base_correct_observation_rmse": 0.014674325473606586,
+      "case_id": "native_seed20260807",
+      "correct_evaluation_ranking": [
+        "correct",
+        "shuffled_xy",
+        "wrong_case_observation",
+        "zero"
+      ],
+      "correct_optimized_is_strictly_best_against_correct": true,
+      "fixture_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          257,
+          565,
+          335,
+          369,
+          573
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,13.05)), diam 9.1, height 7.9, minor_axis_scale 0.8, rotation 245.4, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.63)), diam 10.2, height 8.7, minor_axis_scale 1.2, rotation 207.7, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,20.29)), diam 8.6, height 9.4, minor_axis_scale 0.9, rotation 37.6, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,16.17)), diam 9.3, height 9.7, minor_axis_scale 0.9, rotation 148.1, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,34.23)), diam 10.4, height 9.5, minor_axis_scale 1.1, rotation 222.2, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20260807,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      },
+      "true_concealed_body_count_retrospective_only": 2,
+      "wrong_case_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          481,
+          577,
+          519,
+          403,
+          519
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,13.09)), diam 11.6, height 7.8, minor_axis_scale 0.9, rotation 61.5, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.27)), diam 10.1, height 9.5, minor_axis_scale 1.2, rotation 274.1, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,21.21)), diam 11.2, height 7.6, minor_axis_scale 1.1, rotation 21.1, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,15.93)), diam 9.6, height 10.1, minor_axis_scale 0.8, rotation 271.1, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,33.64)), diam 10.4, height 10.7, minor_axis_scale 0.8, rotation 291.3, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20261807,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "arms": [
+        {
+          "baseline_hard_rmse": 0.01435015257447958,
+          "best_hard_rmse": 0.014344807714223862,
+          "best_state": {
+            "bodies": [
+              {
+                "body_id": "body_03000081",
+                "center_x": 10.0,
+                "center_y": 12.0,
+                "center_z": 19.72924245811452,
+                "material_label": 9,
+                "orientation_deg": 178.8800449671182,
+                "shape": "ellipsoid",
+                "size_x": 2.1055280631732503,
+                "size_y": 1.6012144907483807,
+                "size_z": 2.106460903750386
+              }
+            ],
+            "parent_id": "g006_p000017_g005_p000005_g004_p000002_g003_p000081_g002_p000037_g001_p000029_empty",
+            "proposal_move": "rotate",
+            "state_id": "g007_p000070_g006_p000017_g005_p000005_g004_p000002_g003_p000081_g002_p000037_g001_p000029_empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 33,
+            "birth_proposal_count": 410,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 33,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 0,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 33,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 0.8249218693235889,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "fb7095e12e41b7efd7b3b689840dc6d1d82c872714bd8e39c49eea5c93486a25",
+          "birth_trust_region": {
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "frozen_v2_full_size_alignment": {
+              "matched_full_geometry_count": 96,
+              "post_selection_diagnostic_only": true,
+              "table_sha256": "a0239656316042255c36b61aa33af43e50c87c175f1146fbdb748ecc4eccbfaa",
+              "truth_used": false,
+              "used_for_gate": false,
+              "v2_full_failed_v3_smallest_improved_count": 0
+            },
+            "full_scale_improving_count": 0,
+            "full_scale_probe_count": 0,
+            "growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "growth_improving_count": 0,
+            "growth_probe_count": 0,
+            "improving_growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "mechanism_diagnostics": {
+              "best_nested_scale_distribution": {
+                "count": 410,
+                "max": 0.25,
+                "median": 0.25,
+                "min": 0.25,
+                "p05": 0.25,
+                "p95": 0.25
+              },
+              "smaller_scale_improved_but_full_scale_failed_count": 0,
+              "smallest_scale_improved_then_full_scale_reached_count": 0
+            },
+            "new_center_probe_count": 410,
+            "probe_count": 410,
+            "probe_diagnostics_by_scale": {
+              "0.25": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 410,
+                  "max": 0.00043249037116765976,
+                  "median": 0.00017726421356201172,
+                  "min": 8.182600140571594e-06,
+                  "p05": 2.9637478291988373e-05,
+                  "p95": 0.000316101312637329
+                },
+                "improving_count": 0,
+                "probe_count": 410
+              },
+              "0.5": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "0.75": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "1.0": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              }
+            },
+            "probe_diagnostics_by_shape": {
+              "dike_hemisphere": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 202,
+                  "max": 0.00043249037116765976,
+                  "median": 0.000162479467689991,
+                  "min": 2.0333565771579742e-05,
+                  "p05": 3.606029786169529e-05,
+                  "p95": 0.00027408241294324387
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 0,
+                "new_center_probe_count": 202
+              },
+              "ellipsoid": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 208,
+                  "max": 0.00043249037116765976,
+                  "median": 0.0001888214610517025,
+                  "min": 8.182600140571594e-06,
+                  "p05": 2.8457026928663254e-05,
+                  "p95": 0.0003353065811097622
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 0,
+                "new_center_probe_count": 208
+              }
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 410,
+              "nonbirth": 550,
+              "total_hard_forward_calls": 961
+            },
+            "smallest_scale_improving_count": 0,
+            "trust_region_branches_sha256": "2e6f481f55e10b3e9a2bbd58a4ddb3831c93c25b3da9da16b56783c16927cdab",
+            "trust_region_probes_sha256": "10bc3cb68e7ef63f748156fe2922514ace1d888a6eb25f72b6948ee7f426ebf6",
+            "truth_fields_present": false,
+            "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260808",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 4,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1000,
+          "edit_volume_from_base": 4,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 410,
+            "change_shape": 110,
+            "death": 110,
+            "resize": 110,
+            "rotate": 110,
+            "translate": 110
+          },
+          "global_hard_label_accuracy": 0.9911041259765625,
+          "hard_attainment": 0.0003724601691847962,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0003724601691847962,
+          "hard_correct_observation_rmse": 0.014344807714223862,
+          "hard_observed_seismic_rmse": 0.014344806782901287,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "correct",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9898318239492812,
+              "predicted_volume": 229343,
+              "truth_volume": 227011
+            },
+            "9": {
+              "iou": 0.013953488372093023,
+              "predicted_volume": 33,
+              "truth_volume": 2365
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202603,
+          "realized_proposal_move_counts": {
+            "birth_trust_region_new_center": 410,
+            "change_shape": 110,
+            "death": 110,
+            "resize": 110,
+            "rotate": 110,
+            "translate": 110
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 7.552358643966727,
+          "selected_labels_sha256": "d86c7fa9d51f4b2644803b548ac6e4584c051a124498307b6d13faf9790a19a1",
+          "selected_response_sha256": "0215758a1842eff7f8110eba3fbe5d06ed69572dc0e049724700aa0af19b80d9",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "b4d4b107137378291fa8a333b992029fae3bd01d8df147cb68c5ca87cfeb534d",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.0013554467586800456,
+          "best_hard_rmse": 0.0013554467586800456,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 45,
+            "birth_proposal_count": 560,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 45,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 3,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 45,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 0.8927783501567319,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "26ecb9d12db5e1e0dd60c360a144e22cca92a1a0fddd07ad379547d06896fa12",
+          "birth_trust_region": {
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "frozen_v2_full_size_alignment": {
+              "matched_full_geometry_count": 96,
+              "post_selection_diagnostic_only": true,
+              "table_sha256": "4577e6f598882a9ac54b9c65a491234ea43ff7f20ea87ae1ecf5e07fffb16f44",
+              "truth_used": false,
+              "used_for_gate": false,
+              "v2_full_failed_v3_smallest_improved_count": 0
+            },
+            "full_scale_improving_count": 0,
+            "full_scale_probe_count": 0,
+            "growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "growth_improving_count": 0,
+            "growth_probe_count": 0,
+            "improving_growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "mechanism_diagnostics": {
+              "best_nested_scale_distribution": {
+                "count": 560,
+                "max": 0.25,
+                "median": 0.25,
+                "min": 0.25,
+                "p05": 0.25,
+                "p95": 0.25
+              },
+              "smaller_scale_improved_but_full_scale_failed_count": 0,
+              "smallest_scale_improved_then_full_scale_reached_count": 0
+            },
+            "new_center_probe_count": 560,
+            "probe_count": 560,
+            "probe_diagnostics_by_scale": {
+              "0.25": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 560,
+                  "max": 0.0020212637027725577,
+                  "median": 0.0012273507891222835,
+                  "min": -1.8281862139701843e-06,
+                  "p05": 0.0002001116517931223,
+                  "p95": 0.0019493867876008153
+                },
+                "improving_count": 3,
+                "probe_count": 560
+              },
+              "0.5": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "0.75": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "1.0": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              }
+            },
+            "probe_diagnostics_by_shape": {
+              "dike_hemisphere": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 291,
+                  "max": 0.0020212637027725577,
+                  "median": 0.0010971330339089036,
+                  "min": -1.8279533833265305e-06,
+                  "p05": 0.0002001116517931223,
+                  "p95": 0.0016852236585691571
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 1,
+                "new_center_probe_count": 291
+              },
+              "ellipsoid": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 269,
+                  "max": 0.0020212637027725577,
+                  "median": 0.001318701426498592,
+                  "min": -1.8281862139701843e-06,
+                  "p05": 0.00022255710791796449,
+                  "p95": 0.001992509909905493
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 2,
+                "new_center_probe_count": 269
+              }
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 560,
+              "nonbirth": 400,
+              "total_hard_forward_calls": 961
+            },
+            "smallest_scale_improving_count": 3,
+            "trust_region_branches_sha256": "66472d3c2f45d70694166f7614385c49f5328e8efeeb48a60f6a010073ed4e87",
+            "trust_region_probes_sha256": "6dadb9f467e51e3a018a90441baad3550e5fd1b748429f4ff64fd3fa48e58254",
+            "truth_fields_present": false,
+            "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260808",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1000,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "global_hard_label_accuracy": 0.9910888671875,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.01435015257447958,
+          "hard_observed_seismic_rmse": 0.0013554467586800456,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "zero",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9898145604695069,
+              "predicted_volume": 229347,
+              "truth_volume": 227011
+            },
+            "9": {
+              "iou": 0.01226215644820296,
+              "predicted_volume": 29,
+              "truth_volume": 2365
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202603,
+          "realized_proposal_move_counts": {
+            "birth_trust_region_new_center": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 7.850037842057645,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "577b697cc81f441e3e64d1cefa317fefa16b57de20a46f01af055cf7dc346fe8",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.014477615244686604,
+          "best_hard_rmse": 0.014477615244686604,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 45,
+            "birth_proposal_count": 560,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 45,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 0,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 45,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 1.4289142122725025,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "31bac14cad481507c86e8d5c90abff0fe0ecb40d6f26145eadcbe7a4d25b09d0",
+          "birth_trust_region": {
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "frozen_v2_full_size_alignment": {
+              "matched_full_geometry_count": 96,
+              "post_selection_diagnostic_only": true,
+              "table_sha256": "67395091239c2a9dd77ceb0f5e96d6a4bc5c4d4f7850eaa2f72684f11cad67a5",
+              "truth_used": false,
+              "used_for_gate": false,
+              "v2_full_failed_v3_smallest_improved_count": 0
+            },
+            "full_scale_improving_count": 0,
+            "full_scale_probe_count": 0,
+            "growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "growth_improving_count": 0,
+            "growth_probe_count": 0,
+            "improving_growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "mechanism_diagnostics": {
+              "best_nested_scale_distribution": {
+                "count": 560,
+                "max": 0.25,
+                "median": 0.25,
+                "min": 0.25,
+                "p05": 0.25,
+                "p95": 0.25
+              },
+              "smaller_scale_improved_but_full_scale_failed_count": 0,
+              "smallest_scale_improved_then_full_scale_reached_count": 0
+            },
+            "new_center_probe_count": 560,
+            "probe_count": 560,
+            "probe_diagnostics_by_scale": {
+              "0.25": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 560,
+                  "max": 0.0003363024443387985,
+                  "median": 0.00016598310321569443,
+                  "min": 8.422881364822388e-06,
+                  "p05": 2.010539174079895e-05,
+                  "p95": 0.000310421921312809
+                },
+                "improving_count": 0,
+                "probe_count": 560
+              },
+              "0.5": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "0.75": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "1.0": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              }
+            },
+            "probe_diagnostics_by_shape": {
+              "dike_hemisphere": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 291,
+                  "max": 0.0003363024443387985,
+                  "median": 0.00015111733227968216,
+                  "min": 8.422881364822388e-06,
+                  "p05": 2.010539174079895e-05,
+                  "p95": 0.00025434140115976334
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 0,
+                "new_center_probe_count": 291
+              },
+              "ellipsoid": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 269,
+                  "max": 0.0003293892368674278,
+                  "median": 0.000182371586561203,
+                  "min": 2.0065344870090485e-05,
+                  "p05": 2.010539174079895e-05,
+                  "p95": 0.00031893588602542876
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 0,
+                "new_center_probe_count": 269
+              }
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 560,
+              "nonbirth": 400,
+              "total_hard_forward_calls": 961
+            },
+            "smallest_scale_improving_count": 0,
+            "trust_region_branches_sha256": "780f10a7ed184dddbfa30b29889f89985b963b66600fa1d5aed5a3c581f1fdc3",
+            "trust_region_probes_sha256": "4f47f6743bd72919784e5eea2c5af948af9dba0438eb5d533f72bdb93409d827",
+            "truth_fields_present": false,
+            "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260808",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1000,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "global_hard_label_accuracy": 0.9910888671875,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.01435015257447958,
+          "hard_observed_seismic_rmse": 0.014477616176009178,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "shuffled_xy",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9898145604695069,
+              "predicted_volume": 229347,
+              "truth_volume": 227011
+            },
+            "9": {
+              "iou": 0.01226215644820296,
+              "predicted_volume": 29,
+              "truth_volume": 2365
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202603,
+          "realized_proposal_move_counts": {
+            "birth_trust_region_new_center": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 8.275173622998409,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "f6a271ed8f8dcf8aa723efd1973eea97672237d396394935a8b9eaef684b4aa8",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.01633468270301819,
+          "best_hard_rmse": 0.01633468270301819,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 45,
+            "birth_proposal_count": 560,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 45,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 1,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 45,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 1.0583143030526116,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "45ef40e3fa54cd8c117eb1d52955ab97e3a2dfc765ecd78fdd54ec2e5f288c35",
+          "birth_trust_region": {
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "frozen_v2_full_size_alignment": {
+              "matched_full_geometry_count": 96,
+              "post_selection_diagnostic_only": true,
+              "table_sha256": "288c5e48af6d04bdd32bb68434a6cb22fa7ff3f1e2aca1323732d05ed894df48",
+              "truth_used": false,
+              "used_for_gate": false,
+              "v2_full_failed_v3_smallest_improved_count": 0
+            },
+            "full_scale_improving_count": 0,
+            "full_scale_probe_count": 0,
+            "growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "growth_improving_count": 0,
+            "growth_probe_count": 0,
+            "improving_growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "mechanism_diagnostics": {
+              "best_nested_scale_distribution": {
+                "count": 560,
+                "max": 0.25,
+                "median": 0.25,
+                "min": 0.25,
+                "p05": 0.25,
+                "p95": 0.25
+              },
+              "smaller_scale_improved_but_full_scale_failed_count": 0,
+              "smallest_scale_improved_then_full_scale_reached_count": 0
+            },
+            "new_center_probe_count": 560,
+            "probe_count": 560,
+            "probe_diagnostics_by_scale": {
+              "0.25": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 560,
+                  "max": 0.00032848678529262543,
+                  "median": 0.0001400364562869072,
+                  "min": -1.3044103980064392e-05,
+                  "p05": 3.286395221948624e-05,
+                  "p95": 0.00026669921353459356
+                },
+                "improving_count": 1,
+                "probe_count": 560
+              },
+              "0.5": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "0.75": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "1.0": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              }
+            },
+            "probe_diagnostics_by_shape": {
+              "dike_hemisphere": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 285,
+                  "max": 0.0002666842192411423,
+                  "median": 0.00012338906526565552,
+                  "min": 9.432435035705566e-06,
+                  "p05": 3.18482518196106e-05,
+                  "p95": 0.00022452063858509065
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 0,
+                "new_center_probe_count": 285
+              },
+              "ellipsoid": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 275,
+                  "max": 0.00032848678529262543,
+                  "median": 0.00015516020357608795,
+                  "min": -1.3044103980064392e-05,
+                  "p05": 3.992002457380295e-05,
+                  "p95": 0.0002772528678178787
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 1,
+                "new_center_probe_count": 275
+              }
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 560,
+              "nonbirth": 400,
+              "total_hard_forward_calls": 961
+            },
+            "smallest_scale_improving_count": 1,
+            "trust_region_branches_sha256": "aadb73cafea715d5070083b0654244e0c2088813208eea7b65809bc7341337cb",
+            "trust_region_probes_sha256": "afd66cb4b644cc518ecec153ab4450dcd1ca6c2ae531c925751709e20d26f19a",
+            "truth_fields_present": false,
+            "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260808",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1000,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "global_hard_label_accuracy": 0.9910888671875,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.01435015257447958,
+          "hard_observed_seismic_rmse": 0.01633468270301819,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "wrong_case_observation",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9898145604695069,
+              "predicted_volume": 229347,
+              "truth_volume": 227011
+            },
+            "9": {
+              "iou": 0.01226215644820296,
+              "predicted_volume": 29,
+              "truth_volume": 2365
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202603,
+          "realized_proposal_move_counts": {
+            "birth_trust_region_new_center": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 7.951026774011552,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "9fcca90887cec5744734773364c05b9c2aac4c5c031e303ed7a547946a41dd65",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        }
+      ],
+      "base_correct_observation_rmse": 0.01435015257447958,
+      "case_id": "native_seed20260808",
+      "correct_evaluation_ranking": [
+        "correct",
+        "shuffled_xy",
+        "wrong_case_observation",
+        "zero"
+      ],
+      "correct_optimized_is_strictly_best_against_correct": true,
+      "fixture_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          399,
+          311,
+          655,
+          563,
+          437
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,12.04)), diam 9.0, height 9.9, minor_axis_scale 1.0, rotation 254.1, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.00)), diam 8.2, height 10.0, minor_axis_scale 1.0, rotation 192.2, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,19.70)), diam 10.6, height 10.6, minor_axis_scale 1.0, rotation 230.1, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,15.99)), diam 9.8, height 10.0, minor_axis_scale 1.1, rotation 171.4, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,33.91)), diam 10.3, height 10.2, minor_axis_scale 0.7, rotation 106.0, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20260808,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      },
+      "true_concealed_body_count_retrospective_only": 2,
+      "wrong_case_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          735,
+          487,
+          453,
+          473,
+          387
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,12.08)), diam 11.5, height 9.8, minor_axis_scale 1.1, rotation 311.5, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.44)), diam 10.6, height 9.1, minor_axis_scale 0.9, rotation 318.8, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,20.87)), diam 10.1, height 8.3, minor_axis_scale 1.0, rotation 91.0, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,17.21)), diam 10.3, height 7.6, minor_axis_scale 1.2, rotation 164.8, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,33.72)), diam 9.2, height 10.6, minor_axis_scale 0.8, rotation 27.5, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20261808,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      }
+    },
+    {
+      "arms": [
+        {
+          "baseline_hard_rmse": 0.016216440126299858,
+          "best_hard_rmse": 0.016213873401284218,
+          "best_state": {
+            "bodies": [
+              {
+                "body_id": "body_09000055",
+                "center_x": 31.045832822307805,
+                "center_y": 11.0,
+                "center_z": 37.0,
+                "material_label": 9,
+                "orientation_deg": 154.47044027138026,
+                "shape": "dike_hemisphere",
+                "size_x": 1.5232466338971582,
+                "size_y": 2.7518783110740435,
+                "size_z": 1.6174579700048113
+              }
+            ],
+            "parent_id": "g009_p000055_g008_p000025_g007_p000088_g006_p000043_g005_p000039_g004_p000019_g003_p000004_g002_p000001_g001_p000081_empty",
+            "proposal_move": "translate",
+            "state_id": "g010_p000080_g009_p000055_g008_p000025_g007_p000088_g006_p000043_g005_p000039_g004_p000019_g003_p000004_g002_p000001_g001_p000081_empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 45,
+            "birth_proposal_count": 560,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 45,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 1,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 45,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 1.1000925640109926,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "f863d64290cd553c519f286afbeb67db6456d23b9396a6cbc9c10a389751b106",
+          "birth_trust_region": {
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "frozen_v2_full_size_alignment": {
+              "matched_full_geometry_count": 120,
+              "post_selection_diagnostic_only": true,
+              "table_sha256": "0daa1f830d193a723cb96c75423cb0b882950bf97de80ffc49783448322a9215",
+              "truth_used": false,
+              "used_for_gate": false,
+              "v2_full_failed_v3_smallest_improved_count": 0
+            },
+            "full_scale_improving_count": 0,
+            "full_scale_probe_count": 0,
+            "growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "growth_improving_count": 0,
+            "growth_probe_count": 0,
+            "improving_growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "mechanism_diagnostics": {
+              "best_nested_scale_distribution": {
+                "count": 560,
+                "max": 0.25,
+                "median": 0.25,
+                "min": 0.25,
+                "p05": 0.25,
+                "p95": 0.25
+              },
+              "smaller_scale_improved_but_full_scale_failed_count": 0,
+              "smallest_scale_improved_then_full_scale_reached_count": 0
+            },
+            "new_center_probe_count": 560,
+            "probe_count": 560,
+            "probe_diagnostics_by_scale": {
+              "0.25": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 560,
+                  "max": 0.00036168843507766724,
+                  "median": 0.00013938359916210175,
+                  "min": -1.3055279850959778e-05,
+                  "p05": 9.503215551376343e-06,
+                  "p95": 0.00027332790195941923
+                },
+                "improving_count": 1,
+                "probe_count": 560
+              },
+              "0.5": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "0.75": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "1.0": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              }
+            },
+            "probe_diagnostics_by_shape": {
+              "dike_hemisphere": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 261,
+                  "max": 0.00036168843507766724,
+                  "median": 0.00012428127229213715,
+                  "min": 8.927658200263977e-06,
+                  "p05": 9.503215551376343e-06,
+                  "p95": 0.00022770650684833527
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 0,
+                "new_center_probe_count": 261
+              },
+              "ellipsoid": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 299,
+                  "max": 0.0003501754254102707,
+                  "median": 0.00015911273658275604,
+                  "min": -1.3055279850959778e-05,
+                  "p05": 9.503215551376343e-06,
+                  "p95": 0.00028067026287317273
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 1,
+                "new_center_probe_count": 299
+              }
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 560,
+              "nonbirth": 400,
+              "total_hard_forward_calls": 961
+            },
+            "smallest_scale_improving_count": 1,
+            "trust_region_branches_sha256": "60c0bdd572ed435c1a89867d699414d45ba41d9e3f53dbda94484b8d3221010a",
+            "trust_region_probes_sha256": "134bdd405a4f52bffccc1ce14fa8fcc8a9b3bbc0bdf0c5144caf6e6c79d22904",
+            "truth_fields_present": false,
+            "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260809",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 2,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1186,
+          "edit_volume_from_base": 2,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "global_hard_label_accuracy": 0.9895477294921875,
+          "hard_attainment": 0.00015827919047894934,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.00015827919047894934,
+          "hard_correct_observation_rmse": 0.016213873401284218,
+          "hard_observed_seismic_rmse": 0.016213873401284218,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "correct",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9880529333536812,
+              "predicted_volume": 229345,
+              "truth_volume": 226605
+            },
+            "9": {
+              "iou": 0.011187297004691447,
+              "predicted_volume": 31,
+              "truth_volume": 2771
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202604,
+          "realized_proposal_move_counts": {
+            "birth_trust_region_new_center": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 7.932896801037714,
+          "selected_labels_sha256": "65a93b0a00800990046c66b3a2e0adfdc2c958e25c59e23816b0a65cdf2910e0",
+          "selected_response_sha256": "2af796404ced627b876d580f817432ce7a37891ce2a89ef91e6954618552919d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "d6893a19eb892aaac7f411f08aac0f217e9d01fd7ac75006f17d639c1eef9da6",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.0013554467586800456,
+          "best_hard_rmse": 0.0013554467586800456,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 45,
+            "birth_proposal_count": 560,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 45,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 3,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 45,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 0.8637298649409786,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "23fa4460460e17fdac28b809882188d3e6908af962474828cc130cd552f78dab",
+          "birth_trust_region": {
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "frozen_v2_full_size_alignment": {
+              "matched_full_geometry_count": 144,
+              "post_selection_diagnostic_only": true,
+              "table_sha256": "7f06b546a98f192a09253ee289113f458928c19f002ee275715f9bd2901bb921",
+              "truth_used": false,
+              "used_for_gate": false,
+              "v2_full_failed_v3_smallest_improved_count": 0
+            },
+            "full_scale_improving_count": 0,
+            "full_scale_probe_count": 0,
+            "growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "growth_improving_count": 0,
+            "growth_probe_count": 0,
+            "improving_growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "mechanism_diagnostics": {
+              "best_nested_scale_distribution": {
+                "count": 560,
+                "max": 0.25,
+                "median": 0.25,
+                "min": 0.25,
+                "p05": 0.25,
+                "p95": 0.25
+              },
+              "smaller_scale_improved_but_full_scale_failed_count": 0,
+              "smallest_scale_improved_then_full_scale_reached_count": 0
+            },
+            "new_center_probe_count": 560,
+            "probe_count": 560,
+            "probe_diagnostics_by_scale": {
+              "0.25": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 560,
+                  "max": 0.002021263469941914,
+                  "median": 0.0012273507891222835,
+                  "min": -1.8295831978321075e-06,
+                  "p05": 0.0002001116517931223,
+                  "p95": 0.0019493867876008153
+                },
+                "improving_count": 3,
+                "probe_count": 560
+              },
+              "0.5": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "0.75": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "1.0": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              }
+            },
+            "probe_diagnostics_by_shape": {
+              "dike_hemisphere": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 285,
+                  "max": 0.002021263469941914,
+                  "median": 0.0011416891356930137,
+                  "min": -1.8295831978321075e-06,
+                  "p05": 0.00020011127926409245,
+                  "p95": 0.0016801428282633424
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 2,
+                "new_center_probe_count": 285
+              },
+              "ellipsoid": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 275,
+                  "max": 0.002021263469941914,
+                  "median": 0.0013187051517888904,
+                  "min": -1.8285354599356651e-06,
+                  "p05": 0.0002001129323616624,
+                  "p95": 0.0019709486048668633
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 1,
+                "new_center_probe_count": 275
+              }
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 560,
+              "nonbirth": 400,
+              "total_hard_forward_calls": 961
+            },
+            "smallest_scale_improving_count": 3,
+            "trust_region_branches_sha256": "13303151a305c32cce984afdaff814dedd37d6f674aa956d038435f93aafb99b",
+            "trust_region_probes_sha256": "8882a039e6d6bfbcbf944ef1d67e20df49267d5e48401102fc0e368e9ce82b28",
+            "truth_fields_present": false,
+            "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260809",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1186,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "global_hard_label_accuracy": 0.9895401000976562,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.016216440126299858,
+          "hard_observed_seismic_rmse": 0.0013554467586800456,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "zero",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9880443171264504,
+              "predicted_volume": 229347,
+              "truth_volume": 226605
+            },
+            "9": {
+              "iou": 0.010465535907614579,
+              "predicted_volume": 29,
+              "truth_volume": 2771
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202604,
+          "realized_proposal_move_counts": {
+            "birth_trust_region_new_center": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 7.694775026990101,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "534d034c6a106066a7fb8c1e32a7e036f6b83b1c82e7ef2d9a5b0b4049460979",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.016329342499375343,
+          "best_hard_rmse": 0.016329342499375343,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 45,
+            "birth_proposal_count": 560,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 45,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 0,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 45,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 1.51075562404003,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "63c463bf256da4fadfa4a8a95f9398768e9b030c56938fe3ee3e7606f7258663",
+          "birth_trust_region": {
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "frozen_v2_full_size_alignment": {
+              "matched_full_geometry_count": 96,
+              "post_selection_diagnostic_only": true,
+              "table_sha256": "7c2b5fa082453c79f6f43af518631e7ffab0c1ad27c0e3b01dd3ddb6b0ef5f3b",
+              "truth_used": false,
+              "used_for_gate": false,
+              "v2_full_failed_v3_smallest_improved_count": 0
+            },
+            "full_scale_improving_count": 0,
+            "full_scale_probe_count": 0,
+            "growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "growth_improving_count": 0,
+            "growth_probe_count": 0,
+            "improving_growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "mechanism_diagnostics": {
+              "best_nested_scale_distribution": {
+                "count": 560,
+                "max": 0.25,
+                "median": 0.25,
+                "min": 0.25,
+                "p05": 0.25,
+                "p95": 0.25
+              },
+              "smaller_scale_improved_but_full_scale_failed_count": 0,
+              "smallest_scale_improved_then_full_scale_reached_count": 0
+            },
+            "new_center_probe_count": 560,
+            "probe_count": 560,
+            "probe_diagnostics_by_scale": {
+              "0.25": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 560,
+                  "max": 0.0002917777746915817,
+                  "median": 0.00015354715287685394,
+                  "min": 1.780688762664795e-05,
+                  "p05": 1.782737672328949e-05,
+                  "p95": 0.00027591520920395847
+                },
+                "improving_count": 0,
+                "probe_count": 560
+              },
+              "0.5": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "0.75": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "1.0": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              }
+            },
+            "probe_diagnostics_by_shape": {
+              "dike_hemisphere": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 269,
+                  "max": 0.0002902951091527939,
+                  "median": 0.00013413652777671814,
+                  "min": 1.780688762664795e-05,
+                  "p05": 1.782737672328949e-05,
+                  "p95": 0.000224357470870018
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 0,
+                "new_center_probe_count": 269
+              },
+              "ellipsoid": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 291,
+                  "max": 0.0002917777746915817,
+                  "median": 0.00016677938401699066,
+                  "min": 1.780688762664795e-05,
+                  "p05": 1.782737672328949e-05,
+                  "p95": 0.0002902951091527939
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 0,
+                "new_center_probe_count": 291
+              }
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 560,
+              "nonbirth": 400,
+              "total_hard_forward_calls": 961
+            },
+            "smallest_scale_improving_count": 0,
+            "trust_region_branches_sha256": "1d58f115135c24acb5cca595bf258a45e694b943fcb4ac4947a77f557455a88d",
+            "trust_region_probes_sha256": "fdeee6bf1e534aa40b9e7e82aa5e0e76fe6c3063a2878d89f79d35e322c4984e",
+            "truth_fields_present": false,
+            "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260809",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1186,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "global_hard_label_accuracy": 0.9895401000976562,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.016216440126299858,
+          "hard_observed_seismic_rmse": 0.016329342499375343,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "shuffled_xy",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9880443171264504,
+              "predicted_volume": 229347,
+              "truth_volume": 226605
+            },
+            "9": {
+              "iou": 0.010465535907614579,
+              "predicted_volume": 29,
+              "truth_volume": 2771
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202604,
+          "realized_proposal_move_counts": {
+            "birth_trust_region_new_center": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 8.324477104935795,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "e113c2509263ccff883dd5a2c994f108572e686055b9d0bfee6ea93eac67df7d",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        },
+        {
+          "baseline_hard_rmse": 0.015254280529916286,
+          "best_hard_rmse": 0.015254280529916286,
+          "best_state": {
+            "bodies": [],
+            "parent_id": null,
+            "proposal_move": "initial",
+            "state_id": "empty"
+          },
+          "birth_center_initializer": {
+            "backward_calls": 45,
+            "birth_proposal_count": 560,
+            "canonical_shape": "ellipsoid",
+            "canonical_size_xyz": [
+              11.0,
+              11.0,
+              10.0
+            ],
+            "condition_violation_count_across_births": 0,
+            "differentiable_forward_calls": 45,
+            "hard_selection_criterion_unchanged": true,
+            "loss_improving_birth_count_vs_empty": 0,
+            "loss_improving_birth_count_vs_parent": 0,
+            "mode": "deterministic_multifield_first_order",
+            "property_fields": [
+              "impedance",
+              "slowness"
+            ],
+            "proposal_guidance_only": true,
+            "ranking_computation_count": 45,
+            "score_version": "stage8a_v2_multifield_first_order_mse_decrease_v1",
+            "sensitivity_runtime_seconds": 1.0474756348412484,
+            "tie_breaking": "score_descending_then_center_x_then_center_y_then_center_z_ascending",
+            "truth_fields_present": false,
+            "truth_used": false
+          },
+          "birth_proposals_sha256": "8d50b3e87ad7d334bc830597bef9a398b24b1d81571469974c3daecfb18143b0",
+          "birth_trust_region": {
+            "fixed_scale_ladder": [
+              0.25,
+              0.5,
+              0.75,
+              1.0
+            ],
+            "frozen_v2_full_size_alignment": {
+              "matched_full_geometry_count": 96,
+              "post_selection_diagnostic_only": true,
+              "table_sha256": "0efd55e819346e52db961a7dfa3b047ebb81063d540c4e5e15e310b6e0315710",
+              "truth_used": false,
+              "used_for_gate": false,
+              "v2_full_failed_v3_smallest_improved_count": 0
+            },
+            "full_scale_improving_count": 0,
+            "full_scale_probe_count": 0,
+            "growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "growth_improving_count": 0,
+            "growth_probe_count": 0,
+            "improving_growth_delta_rmse_vs_parent_distribution": {
+              "count": 0,
+              "max": null,
+              "median": null,
+              "min": null,
+              "p05": null,
+              "p95": null
+            },
+            "mechanism_diagnostics": {
+              "best_nested_scale_distribution": {
+                "count": 560,
+                "max": 0.25,
+                "median": 0.25,
+                "min": 0.25,
+                "p05": 0.25,
+                "p95": 0.25
+              },
+              "smaller_scale_improved_but_full_scale_failed_count": 0,
+              "smallest_scale_improved_then_full_scale_reached_count": 0
+            },
+            "new_center_probe_count": 560,
+            "probe_count": 560,
+            "probe_diagnostics_by_scale": {
+              "0.25": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 560,
+                  "max": 0.0004197433590888977,
+                  "median": 0.00016707228496670723,
+                  "min": 9.509734809398651e-06,
+                  "p05": 3.3925287425518036e-05,
+                  "p95": 0.000295490026473999
+                },
+                "improving_count": 0,
+                "probe_count": 560
+              },
+              "0.5": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "0.75": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              },
+              "1.0": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 0,
+                  "max": null,
+                  "median": null,
+                  "min": null,
+                  "p05": null,
+                  "p95": null
+                },
+                "improving_count": 0,
+                "probe_count": 0
+              }
+            },
+            "probe_diagnostics_by_shape": {
+              "dike_hemisphere": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 271,
+                  "max": 0.0004197433590888977,
+                  "median": 0.00014416594058275223,
+                  "min": 9.509734809398651e-06,
+                  "p05": 3.436068072915077e-05,
+                  "p95": 0.0002620769664645195
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 0,
+                "new_center_probe_count": 271
+              },
+              "ellipsoid": {
+                "delta_rmse_vs_parent_distribution": {
+                  "count": 289,
+                  "max": 0.00041939038783311844,
+                  "median": 0.00018458440899848938,
+                  "min": 1.3052485883235931e-05,
+                  "p05": 3.3925287425518036e-05,
+                  "p95": 0.000310373492538929
+                },
+                "growth_probe_count": 0,
+                "improving_probe_count": 0,
+                "new_center_probe_count": 289
+              }
+            },
+            "slot_allocation": {
+              "growth": 0,
+              "initial_empty": 1,
+              "new_center": 560,
+              "nonbirth": 400,
+              "total_hard_forward_calls": 961
+            },
+            "smallest_scale_improving_count": 0,
+            "trust_region_branches_sha256": "336d4743015359fbc63ef24e87562c5a735fe81db091252ec55cd3a71b06ba8d",
+            "trust_region_probes_sha256": "08ad71ba3111c39421bbac8d9fc6b4da1ef5860d1e5ebe713e1f66afc5a5a880",
+            "truth_fields_present": false,
+            "version": "stage8a_v3_nested_hard_loss_birth_continuation_v1"
+          },
+          "body_match_minimum_component_voxels": 20,
+          "body_matches": [],
+          "body_precision": 0.0,
+          "body_recall": 0.0,
+          "case_id": "native_seed20260809",
+          "concealed_target_iou": 0.0,
+          "concealed_target_precision": 0.0,
+          "concealed_target_predicted_volume": 0,
+          "concealed_target_recall": 0.0,
+          "concealed_target_truth_volume": 1186,
+          "edit_volume_from_base": 0,
+          "fixed_forward_call_budget": 961,
+          "forward_call_count": 961,
+          "frozen_scheduled_move_counts": {
+            "birth": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "global_hard_label_accuracy": 0.9895401000976562,
+          "hard_attainment": 0.0,
+          "hard_condition_violations": 0,
+          "hard_correct_observation_attainment": 0.0,
+          "hard_correct_observation_rmse": 0.016216440126299858,
+          "hard_observed_seismic_rmse": 0.015254280529916286,
+          "matched_body_center_error_mean": null,
+          "matched_body_count": 0,
+          "matched_body_relative_size_error_mean": null,
+          "optimized_by": "wrong_case_observation",
+          "per_label": {
+            "-1": {
+              "iou": 1.0,
+              "predicted_volume": 32768,
+              "truth_volume": 32768
+            },
+            "0": {
+              "iou": 0.9880443171264504,
+              "predicted_volume": 229347,
+              "truth_volume": 226605
+            },
+            "9": {
+              "iou": 0.010465535907614579,
+              "predicted_volume": 29,
+              "truth_volume": 2771
+            }
+          },
+          "predicted_body_count": 0,
+          "proposal_seed": 8202604,
+          "realized_proposal_move_counts": {
+            "birth_trust_region_new_center": 560,
+            "change_shape": 80,
+            "death": 80,
+            "resize": 80,
+            "rotate": 80,
+            "translate": 80
+          },
+          "retrospective_only": true,
+          "runtime_seconds": 7.89149440091569,
+          "selected_labels_sha256": "07786c82394785a89b901dfd0c35936be21bdd3233f41f40d9b652701b5f5d31",
+          "selected_response_sha256": "d6d6fe55b6f617264c03b8818b141789397e6bb9f3c5558538e2037bae40768d",
+          "selection_criterion": "minimum hard observed seismic RMSE only",
+          "selection_frozen_before_retrospective_evaluation": true,
+          "selection_used_truth": false,
+          "sensitivity_rankings_sha256": "97af860cf3a324f4d87767f7187ece7fe4485dc40e1f8599e474db4712a4c8de",
+          "truth_body_count": 2,
+          "truth_fields_present": false,
+          "used_for_selection": false,
+          "wrong_lithology_substitution_volume": 0
+        }
+      ],
+      "base_correct_observation_rmse": 0.016216440126299858,
+      "case_id": "native_seed20260809",
+      "correct_evaluation_ranking": [
+        "correct",
+        "shuffled_xy",
+        "wrong_case_observation",
+        "zero"
+      ],
+      "correct_optimized_is_strictly_best_against_correct": true,
+      "fixture_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          431,
+          757,
+          397,
+          573,
+          613
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,12.68)), diam 10.8, height 8.6, minor_axis_scale 0.8, rotation 177.8, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.51)), diam 11.7, height 9.0, minor_axis_scale 1.1, rotation 309.5, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,19.68)), diam 8.2, height 10.6, minor_axis_scale 1.0, rotation 355.2, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,16.01)), diam 11.6, height 10.0, minor_axis_scale 0.9, rotation 179.5, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,34.41)), diam 11.4, height 9.2, minor_axis_scale 1.0, rotation 193.3, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20260809,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      },
+      "true_concealed_body_count_retrospective_only": 2,
+      "wrong_case_metadata": {
+        "anchors_xyz": [
+          [
+            10,
+            10,
+            17
+          ],
+          [
+            26,
+            10,
+            37
+          ],
+          [
+            42,
+            10,
+            25
+          ],
+          [
+            12,
+            42,
+            21
+          ],
+          [
+            42,
+            42,
+            39
+          ]
+        ],
+        "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+        "body_voxel_counts": [
+          709,
+          523,
+          407,
+          259,
+          473
+        ],
+        "bounds": [
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ],
+          [
+            0.0,
+            63.0
+          ]
+        ],
+        "event_audit_labels": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,11.89)), diam 10.9, height 10.2, minor_axis_scale 1.1, rotation 145.5, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.71)), diam 10.0, height 8.6, minor_axis_scale 1.1, rotation 308.0, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,19.89)), diam 8.2, height 10.2, minor_axis_scale 1.1, rotation 115.8, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,17.06)), diam 9.0, height 7.9, minor_axis_scale 0.9, rotation 141.2, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,34.96)), diam 10.5, height 8.1, minor_axis_scale 0.9, rotation 304.9, value 13.0.",
+        "event_roles": [
+          "drilled",
+          "drilled",
+          "drilled",
+          "hidden",
+          "hidden"
+        ],
+        "event_types": [
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)",
+          "IntrusionSpec(kind=hemisphere)"
+        ],
+        "generator": "StructuralGeo ParametricGeoEngine",
+        "generator_seed": 20261809,
+        "height_tracking": false,
+        "merged_target_audit_label": 9,
+        "model_name": "phase6q_five_native_intrusions",
+        "normalize": false,
+        "resolution": [
+          64,
+          64,
+          64
+        ]
+      }
+    }
+  ],
+  "observation_sha256": "8822e1e9a5829fc1731dfe5e30208ec36fdee3faed2ab7465cc9318095f7184e",
+  "preflight_validation": {
+    "checked_assets": [
+      {
+        "path": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+        "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c"
+      },
+      {
+        "path": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt",
+        "sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3"
+      },
+      {
+        "path": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/boreholes.pt",
+        "sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage4_seismic/observations/cond_generation_0/distinct_upper_bound_v1_fix2/subsurface_mask.pt",
+        "sha256": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage4_seismic/observations/cond_generation_0/distinct_upper_bound_v1_fix2/observed_seismic.pt",
+        "sha256": "8822e1e9a5829fc1731dfe5e30208ec36fdee3faed2ab7465cc9318095f7184e"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage4_seismic/observations/cond_generation_0/distinct_upper_bound_v1_fix2/acoustic_property_table.pt",
+        "sha256": "cdfa35f8027b8c9bc523100d0342345ce3cbc67fca16f796d594b04226acb254"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_0.pt",
+        "sha256": "b25189fe11ef229c7b4a6fb7a620be355503177d6f78634e1cb39d14a96f283a"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_1.pt",
+        "sha256": "c07c88b3bbdb2c27477677f429fdd0b677f344257b8cb636cadc4971ccbea0e0"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_2.pt",
+        "sha256": "8af50f5a4186eaa31281ac3aced6bbe09a3206ce63bccc36870c8c4ba00d32c8"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_3.pt",
+        "sha256": "2d7d3300b463b304a228f0940f58aef2942becb5f9ee6d9ce6358c314ea9c180"
+      }
+    ],
+    "manifest_path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage8_structured_posterior/reports/preflight/stage8_preflight_manifest.json",
+    "manifest_sha256": "f82eee94c7ffcbbbd70ca64e36fa0f7b52aa3b7322fdb439a87686b0fa3f7570"
+  },
+  "runtime": {
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 4090 D",
+    "hostname": "LabRS",
+    "torch": "2.8.0+cu128"
+  },
+  "schema": "stage8a_summary_v3",
+  "seismic_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "stage8a_v2_preflight_validation": null,
+  "stage8a_v3_preflight_validation": {
+    "frozen_artifact_trees": [
+      {
+        "file_count": 84,
+        "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/runs/stage8a_v1",
+        "tree_sha256": "13e5a1ef2d4579c7d05b7184698d6a1f7c99db63799003d7711541582bee42fc"
+      },
+      {
+        "file_count": 9,
+        "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/reports/stage8a_r1",
+        "tree_sha256": "28c202bdc07febb7c4ad971afa158a7d500e3c08a3425d1183667f8ccd4a8931"
+      },
+      {
+        "file_count": 841,
+        "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/runs/stage8a_v2",
+        "tree_sha256": "be019573ff380147bf66ca3d16338c2a240d694c91a7e85536dccae5ae0f9a8b"
+      },
+      {
+        "file_count": 10,
+        "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/reports/stage8a_v2_r2",
+        "tree_sha256": "6e76cb1dae6f7c932a699cafb9a8da63d5fd1b9aaee4b047aa87f47bbbb3dde5"
+      }
+    ],
+    "frozen_v2_config_path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage8_structured_posterior/configs/stage8a_v2.json",
+    "frozen_v2_config_sha256": "829a727471dd955242d933baf9ddc41ff6f783a99b0001d2adfa4fe16724fc14",
+    "manifest_path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage8_structured_posterior/reports/preflight/stage8a_v3_preflight_manifest.json",
+    "manifest_sha256": "24cd63b0fbe3dd160bc40387a0e586395e9dc7a7f55426a59b0476c49b3cf3b2",
+    "only_authorized_change_validated": true,
+    "source_files": [
+      {
+        "path": "project/geodata-3d-conditional/guidance/structured_birth_sensitivity.py",
+        "sha256": "640c50b1718661293bfcbc862a3ee72561f7ea28da6e84dfac42a555b12a662f"
+      },
+      {
+        "path": "project/geodata-3d-conditional/guidance/structured_posterior.py",
+        "sha256": "f113e94bd8f61a72f1729d816bfe89d638fbfb2d03fc7cb14355cbe74c9e604a"
+      },
+      {
+        "path": "project/geodata-3d-conditional/guidance/structured_trust_region.py",
+        "sha256": "c04f289893485670d2e2609a0f45058d8811f0ba14b75f13551ec146ffc40396"
+      },
+      {
+        "path": "project/geodata-3d-conditional/guidance/structured_hard_inference.py",
+        "sha256": "1dc8f51d4615c04adda0443199decdf549fb2d2791d775f9fb9cb5254ab54958"
+      },
+      {
+        "path": "project/geodata-3d-conditional/guidance/seismic.py",
+        "sha256": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee"
+      },
+      {
+        "path": "project/geodata-3d-conditional/guidance/simple_causality.py",
+        "sha256": "c90d6e0bd0fb2b7d5e6844e8da5974aced8c5693d37bf159d70b6735287a0680"
+      },
+      {
+        "path": "project/geodata-3d-conditional/guidance/native_geology_audit.py",
+        "sha256": "50668a82b20a1b31f49b6e2a0bc8df92caf7f168271a2894a6aad0b7acbbd28d"
+      },
+      {
+        "path": "project/geodata-3d-conditional/scripts/stage8/run_stage8.py",
+        "sha256": "0ebc37b1c77f3291d352d629759045b77ce0b96e4161175c5c551df3e92f5082"
+      },
+      {
+        "path": "project/geodata-3d-conditional/tests/test_stage8_structured_posterior.py",
+        "sha256": "834003a6cd07b60a43d113f2fb6afe6ae0f639fb337cefa9b66b0199b4a2b02b"
+      },
+      {
+        "path": "project/geodata-3d-conditional/tests/test_stage8a_r1_audit.py",
+        "sha256": "99dd682fa9591426cf6a0913c175b035023935662abf76e52ccdc3b27c0ae617"
+      },
+      {
+        "path": "project/geodata-3d-conditional/tests/test_stage8a_v2_r2_audit.py",
+        "sha256": "d8560e06f2f4eb1a13c9308d35fe844d7bf81f5f871cf6c5a60844ab4477d2ed"
+      },
+      {
+        "path": "project/geodata-3d-conditional/tests/test_stage7_structured_hard.py",
+        "sha256": "88655dc336d03b8cfed9fddfad34ddcb4119912cfe3c4363f593f7b279822453"
+      },
+      {
+        "path": "project/geodata-3d-conditional/tests/test_phase4_seismic.py",
+        "sha256": "cd795faa2fe17601952fccc6d9a8bfd54d5a75c48d1ec50266312e3b7d91fea3"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/configs/stage8a_v3.json",
+        "sha256": "9633b2704ba2c87881040f2b831069ecf4bdb6bf367b97142d366ab2fb03857a"
+      },
+      {
+        "path": "project/geodata-3d-conditional/experiments/stage8_structured_posterior/STAGE8A_V3_PROTOCOL.md",
+        "sha256": "a01f6975ae05963b5749c67a2714ecf084d056146c942288f6e582574d23bf28"
+      }
+    ],
+    "unchanged_stage8_gate_sha256": "2781042756561e3307f21d3760f8b3993ef59f5a6fd9d0be0f9f4e722e5eabc7",
+    "unchanged_v2_birth_ranker_sha256": "640c50b1718661293bfcbc862a3ee72561f7ea28da6e84dfac42a555b12a662f"
+  },
+  "status": "completed",
+  "truth_role": "observation-generation/retrospective only; never search selection",
+  "truth_sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3"
+}
