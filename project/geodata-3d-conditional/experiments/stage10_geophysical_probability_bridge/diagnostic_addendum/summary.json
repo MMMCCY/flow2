@@ -1,0 +1,215 @@
+{
+  "cross_case_map_similarity": {
+    "post_cosine_range": [
+      0.7184972384281095,
+      0.7548242407961033
+    ],
+    "post_pearson_range": [
+      0.6937757081123533,
+      0.7341952036707093
+    ],
+    "post_spearman_range": [
+      0.4402312844272295,
+      0.4619790860432682
+    ],
+    "prior_cosine_range": [
+      0.8341635803023786,
+      0.8601816648004523
+    ],
+    "prior_pearson_range": [
+      0.7923278571996116,
+      0.8260636258538443
+    ],
+    "prior_spearman_range": [
+      0.5017378130546267,
+      0.5091075126618066
+    ],
+    "prior_template_dominated": false
+  },
+  "figures": {
+    "prior_vs_post": {
+      "pdf": {
+        "path": "stage10r_prior_vs_post.pdf",
+        "sha256": "b4206c57a7ae9d471fb63b7a0cd8b7433b8297f2a8f18b804feaa0264f3e32f5",
+        "size_bytes": 46588
+      },
+      "png": {
+        "path": "stage10r_prior_vs_post.png",
+        "sha256": "c0c16d9202d4461f5b5db0fec1db8f7fb52522a1e2a937dd32ae9b69fd6cc0b0",
+        "size_bytes": 468090
+      },
+      "svg": {
+        "path": "stage10r_prior_vs_post.svg",
+        "sha256": "7f6c667fabfc0a6ebe17d13dc66e90a123461c08013e22d5c25dfddefd47034f",
+        "size_bytes": 106607
+      }
+    },
+    "transfer_matrix": {
+      "pdf": {
+        "path": "stage10r_transfer_matrix.pdf",
+        "sha256": "423182a53a0f5a937779f470c28352bde4fec088b77eea2432ecdd226f4b5b6f",
+        "size_bytes": 14655
+      },
+      "png": {
+        "path": "stage10r_transfer_matrix.png",
+        "sha256": "22106e4ccbe324fa663b34a9fa33d864c90f23eefbcff4bd977c86f823d49e4d",
+        "size_bytes": 253184
+      },
+      "svg": {
+        "path": "stage10r_transfer_matrix.svg",
+        "sha256": "ee6891481f7e16f03e790f9272761f973856c6e9ff0617afe9c8a40c1471c24f",
+        "size_bytes": 13457
+      }
+    }
+  },
+  "git_head": "72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f",
+  "interpretation": {
+    "complementary_mechanism_finding": "SEISMIC_ADDS_INCREMENTAL_INFORMATION",
+    "not_assigned": [
+      "PRIOR_TEMPLATE_DOMINATED",
+      "INCONCLUSIVE"
+    ],
+    "primary": "CASE_GEOMETRY_CONFUNDED",
+    "stage10_b_authorized": false,
+    "stage10_reinterpreted": false
+  },
+  "original_stage10": {
+    "decision_unchanged": true,
+    "flow_forward_count": 0,
+    "machine_decision": "STOP_BRIDGE_NO_GEOPHYSICAL_INFORMATION",
+    "stage10a_pass_count": 1,
+    "stage10b_executed": false,
+    "stage10c_executed": false,
+    "stage10d_executed": false
+  },
+  "prior_vs_post": {
+    "case_metrics": {
+      "native_seed20260901": {
+        "case_id": "native_seed20260901",
+        "delta_ap_seismic": 0.001866844361917086,
+        "delta_brier_seismic": 0.02021423119803848,
+        "delta_categorical_entropy_post_minus_prior": 0.2061609813674966,
+        "js_bernoulli_mean": 0.01765466355691627,
+        "kl_post_to_prior_bernoulli_mean": 0.06121767175758978,
+        "kl_prior_to_post_bernoulli_mean": 0.36045479936905617,
+        "mean_absolute_probability_change": 0.057133125280184265,
+        "post_auprc": 0.25224257209566214,
+        "post_brier": 0.010095149429387936,
+        "post_categorical_entropy_mean": 0.722913476830784,
+        "post_roc_auc": 0.8963192364049786,
+        "prior_auprc": 0.25037572773374506,
+        "prior_brier": 0.030309380627426417,
+        "prior_categorical_entropy_mean": 0.5167524954632874,
+        "prior_roc_auc": 0.9006809340070204,
+        "rms_probability_change": 0.12374893044729933,
+        "spatial_cosine_prior_post": 0.7776763964878405,
+        "spatial_pearson_prior_post": 0.7584628255464483,
+        "spatial_spearman_prior_post": 0.9388107436163311
+      },
+      "native_seed20260902": {
+        "case_id": "native_seed20260902",
+        "delta_ap_seismic": 0.09582283597284816,
+        "delta_brier_seismic": 0.01801328214519831,
+        "delta_categorical_entropy_post_minus_prior": 0.20022274670609064,
+        "js_bernoulli_mean": 0.017741125231011196,
+        "kl_post_to_prior_bernoulli_mean": 0.061818617362619115,
+        "kl_prior_to_post_bernoulli_mean": 0.37073517788932625,
+        "mean_absolute_probability_change": 0.05558341930730475,
+        "post_auprc": 0.28120094936231965,
+        "post_brier": 0.010403687708605934,
+        "post_categorical_entropy_mean": 0.7103700546775601,
+        "post_roc_auc": 0.8527811431600822,
+        "prior_auprc": 0.1853781133894715,
+        "prior_brier": 0.028416969853804243,
+        "prior_categorical_entropy_mean": 0.5101473079714695,
+        "prior_roc_auc": 0.8708970872645991,
+        "rms_probability_change": 0.12310118789463384,
+        "spatial_cosine_prior_post": 0.7601056790604834,
+        "spatial_pearson_prior_post": 0.7419877031624047,
+        "spatial_spearman_prior_post": 0.9334909388573365
+      },
+      "native_seed20260903": {
+        "case_id": "native_seed20260903",
+        "delta_ap_seismic": 0.024312193864774956,
+        "delta_brier_seismic": 0.01792597387066477,
+        "delta_categorical_entropy_post_minus_prior": 0.18964168617789678,
+        "js_bernoulli_mean": 0.0167216993496345,
+        "kl_post_to_prior_bernoulli_mean": 0.059050186403001956,
+        "kl_prior_to_post_bernoulli_mean": 0.335571719613749,
+        "mean_absolute_probability_change": 0.05347552802894882,
+        "post_auprc": 0.16536077778467995,
+        "post_brier": 0.01145542213155372,
+        "post_categorical_entropy_mean": 0.6935264574274342,
+        "post_roc_auc": 0.8395025480350345,
+        "prior_auprc": 0.141048583919905,
+        "prior_brier": 0.02938139600221849,
+        "prior_categorical_entropy_mean": 0.5038847712495375,
+        "prior_roc_auc": 0.8569309204094647,
+        "rms_probability_change": 0.12071087602765004,
+        "spatial_cosine_prior_post": 0.7713008820971502,
+        "spatial_pearson_prior_post": 0.7518545228679766,
+        "spatial_spearman_prior_post": 0.9448969543506438
+      }
+    },
+    "delta_ap_mean": 0.04066729139984673,
+    "delta_ap_range": [
+      0.001866844361917086,
+      0.09582283597284816
+    ],
+    "delta_brier_mean": 0.018717829071300523,
+    "delta_brier_range": [
+      0.01792597387066477,
+      0.02021423119803848
+    ],
+    "positive_delta_ap_cases": 3,
+    "positive_delta_brier_cases": 3,
+    "roc_auc_direction_note": "post-seismic ROC-AUC is lower than prior-only in all three cases",
+    "seismic_adds_incremental_categorical_information": true
+  },
+  "recommended_next_research_branch": "After manual approval, run an independently pre-registered benchmark with deliberately diverse target locations/geometries and no outcome-based case selection; do not proceed directly to Stage10-B on the current cases.",
+  "schema": "stage10r_mechanism_diagnostic_summary_v1",
+  "stage10r_execution": {
+    "diagnostic_probability_threshold": 0.5,
+    "flow_forward_count": 0,
+    "new_benchmark_cases": 0,
+    "seismic_inversion_count": 0,
+    "threshold_role": "retrospective Dice/IoU visualization only; not a Stage10 gate"
+  },
+  "status": "COMPLETE_STOP",
+  "transfer": {
+    "diagnostic_threshold": 0.5,
+    "diagonal_mean_auprc": 0.2329347664142206,
+    "diagonal_minus_off_diagonal_mean_auprc": 0.0030208889416371842,
+    "fraction_diagonal_is_column_maximum": 0.3333333333333333,
+    "fraction_diagonal_is_row_maximum": 0.3333333333333333,
+    "off_diagonal_mean_auprc": 0.2299138774725834,
+    "threshold_role": "retrospective visualization/overlap only; not an original Stage10 gate"
+  },
+  "truth_geometry": {
+    "centroid_distance_voxels_range": [
+      1.976433055859226,
+      3.4927918481358664
+    ],
+    "component_counts_all_pairs": [
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        5
+      ]
+    ],
+    "matched_body_centroid_distance_max_overall": 0.6546876246708706,
+    "pairwise_label9_iou_mean": 0.6593239686969102,
+    "pairwise_label9_iou_range": [
+      0.619347227683838,
+      0.7292196007259528
+    ],
+    "wrong_case_control_geometry_confounded": true
+  }
+}

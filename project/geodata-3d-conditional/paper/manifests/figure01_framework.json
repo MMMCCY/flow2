@@ -1,0 +1,103 @@
+{
+  "candidate_or_sample_ids": [],
+  "case_id": null,
+  "figure_id": "figure01_framework",
+  "generation": {
+    "camera": {
+      "cut_fraction": 0.52,
+      "focal_point_fraction": [
+        0.5,
+        0.5,
+        0.46
+      ],
+      "parallel_projection": true,
+      "position_direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "view_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "zoom": 1.14
+    },
+    "git_head": "72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f",
+    "matplotlib": "3.8.4",
+    "python": "3.10.12",
+    "script": {
+      "path": "project/geodata-3d-conditional/scripts/paper_figures/figure01_framework.py",
+      "role": "generation script",
+      "sha256": "190b4f6026219076f7ae0a2758238035186ad947c05fbb4c9769bf1f43fb99ef",
+      "size_bytes": 9392
+    },
+    "style": {
+      "base_font_size_pt": 8.0,
+      "categorical_colormap_policy": "fixed discrete raw-label palette",
+      "double_column_mm": 178.0,
+      "font_family": "STIXGeneral",
+      "label9_color": "#D95F02",
+      "label_colors": {
+        "-1": "#FFFFFF",
+        "0": "#7A6652",
+        "1": "#8C4E85",
+        "10": "#C94C4C",
+        "11": "#A33E63",
+        "12": "#7B4FA3",
+        "13": "#5E4B8B",
+        "2": "#3B6FB6",
+        "3": "#5A91C8",
+        "4": "#56B4B8",
+        "5": "#4DA66D",
+        "6": "#86B84A",
+        "7": "#C5C55A",
+        "8": "#E5C55C",
+        "9": "#D95F02"
+      },
+      "observation_color": "#168A89",
+      "seismic_colormap_policy": "zero-centered perceptually balanced diverging",
+      "single_column_mm": 85.0
+    }
+  },
+  "metrics_shown": [],
+  "oracle_panels": [],
+  "outputs": [
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure01_framework.pdf",
+      "role": "figure output (pdf)",
+      "sha256": "043b98c9f3ed1d117d25f5f2784851b614bb1fafc8083c74730ca39005434ee1",
+      "size_bytes": 24873
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure01_framework.svg",
+      "role": "figure output (svg)",
+      "sha256": "3f1b85ec30bc71485accdfdc7941fbc8d69a9d60ba858f36cad7f24417e04da3",
+      "size_bytes": 38144
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure01_framework.png",
+      "role": "figure output (png)",
+      "sha256": "8c9c921aefea545a7db719be771c41c27dd66092b98995a9017dd7e345a6caee",
+      "size_bytes": 583796
+    }
+  ],
+  "quality_control": {
+    "background": "white",
+    "long_sentences_inside_figure": false,
+    "raster_panels": false,
+    "vector_native": true
+  },
+  "schema": "paper_figure_manifest_v1",
+  "source_artifacts": [
+    {
+      "path": "project/geodata-3d-conditional/paper/figure_data/figure01_framework.json",
+      "role": "figure schematic data",
+      "sha256": "7d460cac2b171bb3c92795b9a95150c7d124cf8c10c8b880fb34c31f09f8a556",
+      "size_bytes": 890
+    }
+  ],
+  "source_experiment": "method schematic; no experimental screenshot or result values",
+  "title": "Framework",
+  "truth_blind_panels": []
+}

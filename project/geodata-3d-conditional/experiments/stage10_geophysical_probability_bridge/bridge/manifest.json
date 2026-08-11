@@ -1,0 +1,37 @@
+{
+  "case_ids": [
+    "native_seed20260901",
+    "native_seed20260902",
+    "native_seed20260903"
+  ],
+  "case_manifests": {
+    "native_seed20260901": {
+      "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/bridge/native_seed20260901/manifest.json",
+      "sha256": "6a1b25caabe379a837777424b15bc2a2a37739197a42002f74bced13a290bd25",
+      "size_bytes": 15172
+    },
+    "native_seed20260902": {
+      "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/bridge/native_seed20260902/manifest.json",
+      "sha256": "43be1669990acf5f0a4e38199fec81b383249cd3570647fa6ca6efdc1dc6cac4",
+      "size_bytes": 15171
+    },
+    "native_seed20260903": {
+      "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/bridge/native_seed20260903/manifest.json",
+      "sha256": "1548e206de4a0590c9f9541f5aac8388cf84592c24cc2e30e6dab5d257127402",
+      "size_bytes": 15171
+    }
+  },
+  "completed_at_utc": "2026-08-11T09:40:11.516394+00:00",
+  "git_branch": "main",
+  "git_head": "72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f",
+  "git_status": "M project/geodata-3d-conditional/docs/DEVELOPMENT_HANDOFF.md\n M project/geodata-3d-conditional/docs/NEXT_CONVERSATION_PROMPT.md\n?? project/geodata-3d-conditional/docs/STAGE9A_FLOW_PRIOR_SUPPORT_SPEC.md\n?? project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/\n?? project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/\n?? project/geodata-3d-conditional/guidance/geophysical_probability_bridge.py\n?? project/geodata-3d-conditional/guidance/prior_ensemble.py\n?? project/geodata-3d-conditional/paper/\n?? project/geodata-3d-conditional/scripts/paper_figures/\n?? project/geodata-3d-conditional/scripts/stage10/\n?? project/geodata-3d-conditional/scripts/stage9/\n?? project/geodata-3d-conditional/tests/test_paper_figures.py\n?? project/geodata-3d-conditional/tests/test_stage10_probability_bridge.py\n?? project/geodata-3d-conditional/tests/test_stage9_enrichment.py\n?? project/geodata-3d-conditional/tests/test_stage9_prior_ensemble.py\n?? project/geodata-3d-conditional/tests/test_stage9_truth_firewall.py",
+  "probability_label9_tensor_sha256": {
+    "native_seed20260901": "fd08bd3478f87d414cccc299ed616d4aed548d4722758e87cd6c818e2ca81159",
+    "native_seed20260902": "32d6e42351759c8f0ddaaeac8dfbd56c6c6edebf59f8ec2ed861b011769bf0e5",
+    "native_seed20260903": "a47179224ea6d2b35d1ce24eef0f49110f97c8b91df13e184ad1c638180dec03"
+  },
+  "schema": "stage10_truth_blind_bridge_collection_v1",
+  "status": "complete_frozen_before_truth_evaluation",
+  "truth_property_received": false,
+  "truth_tensor_received": false
+}

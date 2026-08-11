@@ -1,0 +1,22 @@
+{
+  "controls_frozen_before_truth": true,
+  "created_at_utc": "2026-08-11T12:11:11.058189+00:00",
+  "gate_clauses": {
+    "all_5_correct_above_constant": false,
+    "at_least_4_of_5_correct_above_shuffled": false,
+    "at_least_4_of_5_diagonal_row_maximum": false,
+    "at_least_4_of_5_post_ap_above_prior": true,
+    "diagonal_mean_above_off_diagonal_mean": false,
+    "no_catastrophic_brier_degradation": true
+  },
+  "machine_decision": "STOP_FULLGEO_BRIDGE_NOT_CASE_SPECIFIC",
+  "protocol_sha256": "cd727aab523eaac0424d6d6b6ffb48fb5aaf2a380528b9022db9bd103a446c0d",
+  "schema": "stage12b_a_machine_decision_v1",
+  "stage12b_b_authorized": false,
+  "status": "final",
+  "summary": {
+    "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/evaluation/stage12b_a/summary.json",
+    "sha256": "d6b4119462a8349452dcc3e02e873262135bc5601d6c4b1e1ba8ea3b42ddf592",
+    "size_bytes": 1317
+  }
+}

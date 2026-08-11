@@ -1,0 +1,287 @@
+{
+  "candidate_or_sample_ids": [
+    {
+      "selected_objects": [
+        {
+          "center_x": 42.0,
+          "center_y": 42.0,
+          "center_z": 39.0,
+          "material_label": 9,
+          "object_id": "native_center01_variant50",
+          "orientation_deg": 70.3125,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 11.26201171875,
+          "size_y": 11.3125,
+          "size_z": 9.1875,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        },
+        {
+          "center_x": 12.0,
+          "center_y": 42.0,
+          "center_z": 21.25,
+          "material_label": 9,
+          "object_id": "native_center00_variant41",
+          "orientation_deg": 87.1875,
+          "presence": true,
+          "shape": "dike_hemisphere",
+          "size_x": 11.59326171875,
+          "size_y": 9.9375,
+          "size_z": 9.5625,
+          "source_family": "StructuralGeo IntrusionSpec(kind=hemisphere, anchor_to_present=False, clip=False, upper=True)"
+        }
+      ],
+      "selection_criterion": "minimum hard observed seismic RMSE only",
+      "selector_arm": "correct"
+    }
+  ],
+  "candidate_selection": "minimum hard observed seismic RMSE only; truth_used_for_selection=false",
+  "case_id": "native_seed20260809",
+  "case_selection": "Highest inference-visible hard-seismic attainment among the three pre-registered StructuralGeo replicas; hidden IoU was not used.",
+  "figure_id": "figure03_seismic_structured",
+  "generation": {
+    "camera": {
+      "cut_fraction": 0.52,
+      "focal_point_fraction": [
+        0.5,
+        0.5,
+        0.46
+      ],
+      "parallel_projection": true,
+      "position_direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "view_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "zoom": 1.14
+    },
+    "git_head": "72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f",
+    "matplotlib": "3.8.4",
+    "python": "3.10.12",
+    "script": {
+      "path": "project/geodata-3d-conditional/scripts/paper_figures/figure03_seismic_structured.py",
+      "role": "generation script",
+      "sha256": "4dcf7992a83a0afacdcbba7eee4a0c031aaba968de2a6e7af71ecdd32ef2c170",
+      "size_bytes": 21551
+    },
+    "style": {
+      "base_font_size_pt": 8.0,
+      "categorical_colormap_policy": "fixed discrete raw-label palette",
+      "double_column_mm": 178.0,
+      "font_family": "STIXGeneral",
+      "label9_color": "#D95F02",
+      "label_colors": {
+        "-1": "#FFFFFF",
+        "0": "#7A6652",
+        "1": "#8C4E85",
+        "10": "#C94C4C",
+        "11": "#A33E63",
+        "12": "#7B4FA3",
+        "13": "#5E4B8B",
+        "2": "#3B6FB6",
+        "3": "#5A91C8",
+        "4": "#56B4B8",
+        "5": "#4DA66D",
+        "6": "#86B84A",
+        "7": "#C5C55A",
+        "8": "#E5C55C",
+        "9": "#D95F02"
+      },
+      "observation_color": "#168A89",
+      "seismic_colormap_policy": "zero-centered perceptually balanced diverging",
+      "single_column_mm": 85.0
+    }
+  },
+  "geophysical_observation": {
+    "measured": false,
+    "observation_sha256": "51efaea0f60c4f523a4a950f2f3a4904f2a96af91f367608613b25d7d9612234",
+    "synthetic": true,
+    "truth_derived_once_for_benchmark": true
+  },
+  "metrics_shown": {
+    "baseline_hard_seismic_rmse": 0.01058224080592487,
+    "baseline_hidden_metrics": {
+      "hidden_iou": 0.0,
+      "hidden_precision": 0.0,
+      "hidden_recall": 0.0
+    },
+    "hidden_iou": 0.9874266554903605,
+    "hidden_precision": 0.9940928270042194,
+    "hidden_recall": 0.9932546374367622,
+    "selected_hard_seismic_rmse": 0.004314252197651674
+  },
+  "oracle_panels": [
+    "(a) hidden truth shown for synthetic benchmark context",
+    "(h) retrospective true hidden body"
+  ],
+  "outputs": [
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure03_seismic_structured.pdf",
+      "role": "figure output (pdf)",
+      "sha256": "aa087e6496390a62047466b8aaac1640581f9fc935f7fe572936356c5742c842",
+      "size_bytes": 124641
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure03_seismic_structured.svg",
+      "role": "figure output (svg)",
+      "sha256": "a575843d3e51661ab1f6e5ceacdc86739fd8a2765d874d57cadc9c322202fb5c",
+      "size_bytes": 214436
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure03_seismic_structured.png",
+      "role": "figure output (png)",
+      "sha256": "61b4347dc4ce8ab3c333c3e94040389b4c1313726c465b2233deac2183532975",
+      "size_bytes": 590057
+    }
+  ],
+  "quality_control": {
+    "baseline_hidden_label9_displayed": true,
+    "camera": {
+      "cut_fraction": 0.52,
+      "focal_point_fraction": [
+        0.5,
+        0.5,
+        0.46
+      ],
+      "parallel_projection": true,
+      "position_direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "view_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "zoom": 1.14
+    },
+    "camera_identical_for_3d_panels": true,
+    "condition_violations": 0,
+    "display_slice_and_full_volume_selector_explicit": true,
+    "forward_replay_device": "cuda (matches authoritative Stage-7 float32 hash semantics)",
+    "missing_files": false,
+    "no_nan_or_inf": true,
+    "observation_hash_matches_stage7": true,
+    "seismic_shape": [
+      64,
+      64,
+      320
+    ],
+    "selected_candidate_matches_frozen_summary": true,
+    "selected_candidate_metrics_recomputed": true,
+    "shared_amplitude_limit": true,
+    "shared_residual_limit": true
+  },
+  "schema": "paper_figure_manifest_v1",
+  "seismic_display": {
+    "amplitude_limit": [
+      -0.005722909700125456,
+      0.005722909700125456
+    ],
+    "amplitude_robust_percentile": 99.5,
+    "amplitude_shared_across": [
+      "observed",
+      "baseline predicted",
+      "selected predicted"
+    ],
+    "displayed_seismic": "y=42 slice",
+    "interpolation": "nearest (none)",
+    "residual_limit": [
+      -0.5605427622795105,
+      0.5605427622795105
+    ],
+    "residual_percentile_population": "nonzero samples pooled across baseline and selected residual volumes",
+    "residual_robust_percentile": 99.5,
+    "residual_scale_note": "separate shared 99.5th-percentile robust scale",
+    "residual_shared_across": [
+      "baseline residual",
+      "selected residual"
+    ],
+    "sample_interval_ms": 8.0,
+    "selector_input": "full 64x64x320 hard seismic volume",
+    "slice_y": 42,
+    "units": "unscaled convolutional amplitude [a.u.]"
+  },
+  "source_artifacts": [
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json",
+      "role": "authoritative Stage-7 final summary",
+      "sha256": "52e4a1d24ddde0fcfaecaf1bd2b707e10a1db04d16faabed3fc46c6b211e4a98",
+      "size_bytes": 71743
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/config_input.json",
+      "role": "authoritative Stage-7 frozen configuration",
+      "sha256": "798b7c0885e5eb4c7f6bc83f1b392fcd590a1dc5b6296ccf9bb1e5bb6bb96e03",
+      "size_bytes": 2363
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/states/native_seed20260809/correct/best_labels.pt",
+      "role": "truth-blind hard-seismic-selected categorical model",
+      "sha256": "f9d848e5acd01add98b13a4f7a036f39b3b397588c3f585623d16ae56133430f",
+      "size_bytes": 2098757
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/states/native_seed20260809/zero/best_labels.pt",
+      "role": "Stage-7 hidden-body baseline categorical model",
+      "sha256": "94833de209c3f92ca35d8f11f52e43b8843e8aad3364d63ae95fce8bd51848e5",
+      "size_bytes": 2098757
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/states/native_seed20260809/correct/selected_event_history.json",
+      "role": "selected structured event provenance",
+      "sha256": "b071bb49720b3789a43cb4d90c99b3be5955338e15710027b16e0f2be4798f75",
+      "size_bytes": 1655
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/configs/five_body_cuboid_v1.json",
+      "role": "Stage-7 base causal configuration",
+      "sha256": "43fe3d8fa0fc55ef94979da93a2a6aded920e035507f2340c55cb2c383f7269c",
+      "size_bytes": 2836
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+      "role": "frozen acoustic mapping configuration",
+      "sha256": "8980e30c59624af9f1bfa59447b7e22c85a2975f8a556fe6e98f5346f95d10ae",
+      "size_bytes": 1128
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+      "role": "frozen convolutional seismic configuration",
+      "sha256": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02",
+      "size_bytes": 919
+    },
+    {
+      "path": "project/geodata-3d-conditional/guidance/native_geology_audit.py",
+      "role": "frozen deterministic StructuralGeo case builder",
+      "sha256": "50668a82b20a1b31f49b6e2a0bc8df92caf7f168271a2894a6aad0b7acbbd28d",
+      "size_bytes": 6570
+    },
+    {
+      "path": "project/geodata-3d-conditional/guidance/seismic.py",
+      "role": "frozen hard seismic forward operator",
+      "sha256": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee",
+      "size_bytes": 36035
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figure_data/figure03_seismic_structured.npz",
+      "role": "exact plotted figure data",
+      "sha256": "aa5390e773253fb663ef579dca8813b395a64ea77ab2693847531056cb6a17fe",
+      "size_bytes": 7211
+    }
+  ],
+  "source_experiment": "Stage7 final structured hard-geophysics inference",
+  "title": "Geophysical hero figure",
+  "truth_blind_panels": [
+    "(d) predicted seismic of Stage-7 hard-seismic-selected candidate",
+    "(g) selected residual",
+    "(i) baseline hidden categorical body",
+    "(j) selected hidden categorical body"
+  ]
+}

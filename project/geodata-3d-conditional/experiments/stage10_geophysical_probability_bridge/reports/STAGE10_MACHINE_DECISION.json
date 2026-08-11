@@ -1,0 +1,83 @@
+{
+  "checkpoint": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "completed_at_utc": "2026-08-11T09:44:59.167988+00:00",
+  "conference_paper_files": {
+    "negative_result_diagnostic_only": {
+      "pdf": {
+        "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/figures/bridge_diagnostic.pdf",
+        "sha256": "e824d37ccae52ab112673b072a27475e3c583b9f18c3de8e7ddedebfe8b2cd06",
+        "size_bytes": 48140
+      },
+      "png": {
+        "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/figures/bridge_diagnostic.png",
+        "sha256": "37dc93a0eecfd7b7ca1a0a765d8a0c1f819887dd971ac41a8dd2944b363b1817",
+        "size_bytes": 644585
+      },
+      "svg": {
+        "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/figures/bridge_diagnostic.svg",
+        "sha256": "b1064b31e0652711ca3760a01443605cdbe2b4d64364df67058000b96ee6f7ba",
+        "size_bytes": 128373
+      }
+    },
+    "new_main_paper_probability_bridge_figure_generated": false,
+    "paired_delta_figure_generated": false,
+    "reason": "Stage10-C was not authorized because Stage10-A failed."
+  },
+  "flow_forward_count_stage10": 0,
+  "forbidden_next_actions_without_reassessment": [
+    "petrophysical variance tuning against truth",
+    "probability smoothing or sharpening against truth",
+    "Stage10-B/C/D Flow execution",
+    "D-Flow, SMC, posterior ranking, more wells, or systematic retraining"
+  ],
+  "git_branch": "main",
+  "git_head": "72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f",
+  "git_status_short": "M project/geodata-3d-conditional/docs/DEVELOPMENT_HANDOFF.md\n M project/geodata-3d-conditional/docs/NEXT_CONVERSATION_PROMPT.md\n?? project/geodata-3d-conditional/docs/STAGE9A_FLOW_PRIOR_SUPPORT_SPEC.md\n?? project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/\n?? project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/\n?? project/geodata-3d-conditional/guidance/geophysical_probability_bridge.py\n?? project/geodata-3d-conditional/guidance/prior_ensemble.py\n?? project/geodata-3d-conditional/paper/\n?? project/geodata-3d-conditional/scripts/paper_figures/\n?? project/geodata-3d-conditional/scripts/stage10/\n?? project/geodata-3d-conditional/scripts/stage9/\n?? project/geodata-3d-conditional/tests/test_paper_figures.py\n?? project/geodata-3d-conditional/tests/test_stage10_probability_bridge.py\n?? project/geodata-3d-conditional/tests/test_stage9_enrichment.py\n?? project/geodata-3d-conditional/tests/test_stage9_prior_ensemble.py\n?? project/geodata-3d-conditional/tests/test_stage9_truth_firewall.py",
+  "guidance_parameter_sweep_count": 0,
+  "limitations": [
+    "Correct bridges beat constant and shuffled controls in all three cases, but failed the strict wrong-case comparison in two cases.",
+    "The result does not support case-specific geophysical-to-categorical discrimination under the registered gate.",
+    "Inputs use noiseless synthetic inverse-crime seismic and a synthetic distinctive-label9 acoustic codebook.",
+    "Twelve-member spread is prior sensitivity, not calibrated posterior uncertainty.",
+    "No claim about Flow gain, hard categorical improvement, or deployable measured-geophysics performance is permitted."
+  ],
+  "machine_decision": "STOP_BRIDGE_NO_GEOPHYSICAL_INFORMATION",
+  "petrophysical_class_model": {
+    "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/configs/petrophysical_class_model.json",
+    "sha256": "106afc9075e5da5e488d6cc84cbdf7ba1335f760f2a74547a769927d6ad86c2b",
+    "size_bytes": 2226
+  },
+  "property_inversion_provenance": {
+    "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/audit/property_inversion_provenance.json",
+    "sha256": "ed43740383af880210745020acb545a5e4d96f34cf5913ff1b115c2ceeec984a",
+    "size_bytes": 9705
+  },
+  "registered_but_unexecuted_flow_seed_bank": {
+    "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/configs/flow_seed_bank.json",
+    "sha256": "b50f6aa45a9ccb481c5353396e3982ad03029442588408e6c8b57ba6716e3046",
+    "size_bytes": 1362
+  },
+  "registered_cases": [
+    "native_seed20260901",
+    "native_seed20260902",
+    "native_seed20260903"
+  ],
+  "schema": "stage10_machine_decision_v1",
+  "stage10a_case_passes": {
+    "native_seed20260901": false,
+    "native_seed20260902": true,
+    "native_seed20260903": false
+  },
+  "stage10a_pass": false,
+  "stage10a_passing_case_count": 1,
+  "stage10b_executed": false,
+  "stage10c_executed": false,
+  "stage10d_executed": false,
+  "status": "complete",
+  "truth_firewall": {
+    "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/audit/leakage_audit.json",
+    "sha256": "7998da3f6fe2feaba0d240daae99b1e638188df17ab113bdc4983e30a563dfc5",
+    "size_bytes": 766
+  }
+}

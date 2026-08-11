@@ -1,0 +1,110 @@
+{
+  "schema": "stage14_gansim_style_geo_guidance_pilot_v1",
+  "status": "frozen_before_flow_execution",
+  "experiment_role": "new_end_to_end_exploratory_experiment_testing_whether_the_previous_bridge_only_stop_rule_was_overly_conservative",
+  "historical_decisions_remain_unchanged": true,
+  "case_ids": [
+    "fullgeo_case01",
+    "fullgeo_case02",
+    "fullgeo_case03",
+    "fullgeo_case04",
+    "fullgeo_case05"
+  ],
+  "source_seeds": {
+    "fullgeo_case01": [9301000, 9301001, 9301002, 9301003],
+    "fullgeo_case02": [9311000, 9311001, 9311002, 9311003],
+    "fullgeo_case03": [9321000, 9321001, 9321002, 9321003],
+    "fullgeo_case04": [9331000, 9331001, 9331002, 9331003],
+    "fullgeo_case05": [9341000, 9341001, 9341002, 9341003]
+  },
+  "arms": ["BASELINE", "GEO_PROB_GUIDED"],
+  "pairing": "same_case_conditions_checkpoint_solver_source_noise_and_all_non_alpha_settings",
+  "checkpoint": {
+    "path": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+    "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+    "weight_policy": "ema_trainable_raw_frozen_embedding_v1"
+  },
+  "probability_asset": {
+    "path_pattern": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/bridge/{case_id}/probability_label9_post.pt",
+    "use_as_is": true,
+    "preprocessing": null,
+    "gate_before_flow": null,
+    "selection": null
+  },
+  "flow": {
+    "n_euler_steps": 32,
+    "integrator": "fixed_euler_midpoint_v1",
+    "condition_projection": "project_clean_embedding_before_first_and_after_every_euler_step_v1",
+    "hard_decode": "Geo3DStochInterp.decode_argmax_minus_one_then_exact_condition_projection_v1"
+  },
+  "guidance": {
+    "interface": "validated_phase1_probability_guidance",
+    "alpha": 0.25,
+    "max_guidance_ratio": 0.25,
+    "tau_start": 0.5,
+    "tau_end": 0.1,
+    "tau_schedule": "cosine",
+    "guidance_start": 0.25,
+    "guidance_schedule": "windowed_sine",
+    "guidance_scaling_mode": "reference_norm_relative_v2",
+    "grad_clip_norm": 1.0,
+    "probability_loss_mode": "calibrated_soft_bce_hard_dice_v2",
+    "bce_weight": 1.0,
+    "dice_weight": 1.0,
+    "spatial_gradient_weight": 0.0,
+    "fixed_internal_dice_core_definition": "target_probability_greater_than_or_equal_to_0.5",
+    "probability_volume_is_not_thresholded_or_replaced": true,
+    "guidance_roi": "unconditioned_subsurface"
+  },
+  "primary_endpoint": "paired_change_in_hidden_label9_iou",
+  "reported_metrics": [
+    "label9_iou",
+    "label9_precision",
+    "label9_recall",
+    "hidden_label9_iou",
+    "hidden_label9_recall",
+    "largest_hidden_component_recall",
+    "truth_present_miou",
+    "global_accuracy",
+    "condition_violations"
+  ],
+  "decision": {
+    "supported": "GANSIM_STYLE_GEO_GUIDANCE_SUPPORTED",
+    "not_supported": "GANSIM_STYLE_GEO_GUIDANCE_NOT_SUPPORTED",
+    "minimum_cases_positive_median_hidden_label9_iou_delta": 4,
+    "overall_paired_median_hidden_label9_iou_delta_strictly_positive": true,
+    "condition_violations_required": 0,
+    "catastrophic_global_degradation_threshold": -0.1,
+    "catastrophic_global_degradation_metrics": [
+      "case_median_truth_present_miou_delta",
+      "case_median_global_accuracy_delta"
+    ]
+  },
+  "truth_firewall": {
+    "truth_allowed_in_flow_runner": false,
+    "truth_allowed_in_retrospective_evaluator": true,
+    "truth_visible_sample_selection": false
+  },
+  "historical_machine_decision_sha256": {
+    "stage10": "e03d813610f59197e0aa634769ecfcd2f810ff7c037eeeae8f64abca02fa0dae",
+    "stage12b": "49def0b6bbb350f2e57728c1584fbcc05aa6add191e78ec8e5fea586ff60c6f0",
+    "stage13": "d057da3ffa691c709ab697d5087c45bcb16eb3736ee902b71a1bb9b5e495155e"
+  },
+  "source_protocol": {
+    "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/configs/frozen_protocol.json",
+    "sha256": "cd727aab523eaac0424d6d6b6ffb48fb5aaf2a380528b9022db9bd103a446c0d"
+  },
+  "forbidden": [
+    "training",
+    "network_modification",
+    "stage12b_modification",
+    "new_probability_bridge",
+    "probability_gate",
+    "auprc_gate_before_flow",
+    "parameter_sweep",
+    "probability_thresholding_or_sharpening",
+    "truth_based_tuning",
+    "best_sample_selection",
+    "post_decision_experiment"
+  ]
+}

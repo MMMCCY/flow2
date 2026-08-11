@@ -1,0 +1,18 @@
+{
+  "schema": "stage13_truth_firewall_v1",
+  "status": "complete",
+  "identifiability_decision_made_before_stage13_truth_evaluation": true,
+  "stage13_truth_tensor_loaded": false,
+  "stage13_hidden_label9_tensor_loaded": false,
+  "stage13_case_probability_tensor_created": false,
+  "stage13_case_metrics_computed": false,
+  "historical_reports_reviewed_as_mandated_context": true,
+  "historical_metrics_used_to_fit_or_select_features": false,
+  "current_case_truth_used_for_fitting": false,
+  "current_case_truth_used_for_thresholds": false,
+  "current_case_truth_used_for_calibration": false,
+  "current_case_truth_used_for_feature_selection": false,
+  "current_case_truth_used_for_smoothing_scale_or_temperature": false,
+  "truth_role_if_future_stage13a_is_authorized": "retrospective evaluation only",
+  "flow_forward_count": 0
+}

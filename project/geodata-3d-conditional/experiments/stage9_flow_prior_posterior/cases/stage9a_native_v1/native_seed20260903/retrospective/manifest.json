@@ -1,0 +1,205 @@
+{
+  "case_id": "native_seed20260903",
+  "inference_manifest_sha256": "e8443af307f48bd4c8214a891101734bdb23a8a452085b4c71f367c28ed73e6f",
+  "native_metadata": {
+    "anchors_xyz": [
+      [
+        10,
+        10,
+        17
+      ],
+      [
+        26,
+        10,
+        37
+      ],
+      [
+        42,
+        10,
+        25
+      ],
+      [
+        12,
+        42,
+        21
+      ],
+      [
+        42,
+        42,
+        39
+      ]
+    ],
+    "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+    "body_voxel_counts": [
+      301,
+      571,
+      517,
+      415,
+      487
+    ],
+    "bounds": [
+      [
+        0.0,
+        63.0
+      ],
+      [
+        0.0,
+        63.0
+      ],
+      [
+        0.0,
+        63.0
+      ]
+    ],
+    "event_audit_labels": [
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,12.83)), diam 9.0, height 8.3, minor_axis_scale 0.8, rotation 284.9, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.79)), diam 10.7, height 8.4, minor_axis_scale 1.1, rotation 92.3, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,20.68)), diam 11.0, height 8.6, minor_axis_scale 0.9, rotation 180.7, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,15.60)), diam 8.5, height 10.8, minor_axis_scale 1.0, rotation 26.9, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,34.46)), diam 10.7, height 9.1, minor_axis_scale 0.9, rotation 347.8, value 13.0.",
+    "event_roles": [
+      "drilled",
+      "drilled",
+      "drilled",
+      "hidden",
+      "hidden"
+    ],
+    "event_types": [
+      "IntrusionSpec(kind=hemisphere)",
+      "IntrusionSpec(kind=hemisphere)",
+      "IntrusionSpec(kind=hemisphere)",
+      "IntrusionSpec(kind=hemisphere)",
+      "IntrusionSpec(kind=hemisphere)"
+    ],
+    "generator": "StructuralGeo ParametricGeoEngine",
+    "generator_seed": 20260903,
+    "height_tracking": false,
+    "merged_target_audit_label": 9,
+    "model_name": "phase6q_five_native_intrusions",
+    "normalize": false,
+    "resolution": [
+      64,
+      64,
+      64
+    ]
+  },
+  "schema": "stage9a_retrospective_case_assets_v1",
+  "status": "complete",
+  "target_label": 9,
+  "tensors": {
+    "native_body_masks": {
+      "dtype": "torch.bool",
+      "file_sha256": "aebf8732dd8fa3d7c407db4286d3d0f39690f4350ae7f6c77e507db0e73bb1aa",
+      "path": "native_body_masks.pt",
+      "shape": [
+        5,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 1312297,
+      "tensor_sha256": "6aaa8702afb25f9f606f79c2ac2ac831beac9da7074c51104872c812725a8de1"
+    },
+    "truth_labels": {
+      "dtype": "torch.int64",
+      "file_sha256": "22088cd7d4d13deb14ff1603589f98118663225ddbf20bce335681950b64b6f5",
+      "path": "truth_labels.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 2098729,
+      "tensor_sha256": "1433ce4708e1edfba36797d0793aee4fe5543d007c11e364f392db7cc5aab02d"
+    }
+  },
+  "truth_role": "retrospective_metrics_only_after_pool_and_ranking_freeze",
+  "wrong_case_metadata": {
+    "anchors_xyz": [
+      [
+        10,
+        10,
+        17
+      ],
+      [
+        26,
+        10,
+        37
+      ],
+      [
+        42,
+        10,
+        25
+      ],
+      [
+        12,
+        42,
+        21
+      ],
+      [
+        42,
+        42,
+        39
+      ]
+    ],
+    "audit_label_semantics": "union of five explicitly recorded StructuralGeo IntrusionSpec event masks",
+    "body_voxel_counts": [
+      467,
+      443,
+      445,
+      667,
+      513
+    ],
+    "bounds": [
+      [
+        0.0,
+        63.0
+      ],
+      [
+        0.0,
+        63.0
+      ],
+      [
+        0.0,
+        63.0
+      ]
+    ],
+    "event_audit_labels": [
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((10.00,10.00,13.37)), diam 10.3, height 7.3, minor_axis_scale 1.2, rotation 216.3, value 9.0.\n3: DikeHemisphere: origin ((26.00,10.00,32.45)), diam 9.5, height 9.1, minor_axis_scale 1.1, rotation 112.4, value 10.0.\n4: DikeHemisphere: origin ((42.00,10.00,20.19)), diam 9.9, height 9.6, minor_axis_scale 1.0, rotation 216.8, value 11.0.\n5: DikeHemisphere: origin ((12.00,42.00,16.58)), diam 11.3, height 8.8, minor_axis_scale 1.1, rotation 16.0, value 12.0.\n6: DikeHemisphere: origin ((42.00,42.00,34.28)), diam 11.3, height 9.4, minor_axis_scale 0.9, rotation 232.0, value 13.0.",
+    "event_roles": [
+      "drilled",
+      "drilled",
+      "drilled",
+      "hidden",
+      "hidden"
+    ],
+    "event_types": [
+      "IntrusionSpec(kind=hemisphere)",
+      "IntrusionSpec(kind=hemisphere)",
+      "IntrusionSpec(kind=hemisphere)",
+      "IntrusionSpec(kind=hemisphere)",
+      "IntrusionSpec(kind=hemisphere)"
+    ],
+    "generator": "StructuralGeo ParametricGeoEngine",
+    "generator_seed": 20261903,
+    "height_tracking": false,
+    "merged_target_audit_label": 9,
+    "model_name": "phase6q_five_native_intrusions",
+    "normalize": false,
+    "resolution": [
+      64,
+      64,
+      64
+    ]
+  }
+}

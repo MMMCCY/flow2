@@ -2,7 +2,7 @@ import numpy as np
 
 
 class SedimentBuilder:
-    def __init__(self, start_value, total_thickness, min_layers, max_layers, std=0.5):
+    def __init__(self, start_value, total_thickness, min_layers, max_layers, std=0.5, rng=None):
         """
         Initialize the sediment builder to generate sediment layers with specific characteristics.
 
@@ -17,10 +17,15 @@ class SedimentBuilder:
         self.min_layers = min_layers
         self.max_layers = max_layers
         self.std = std
+        self.rng = rng
         self.values, self.thicknesses = self.build_layers()
 
     def build_layers(self):
-        n_layers = np.random.randint(self.min_layers, self.max_layers + 1)
+        random_source = np.random if self.rng is None else self.rng
+        if self.rng is None:
+            n_layers = random_source.randint(self.min_layers, self.max_layers + 1)
+        else:
+            n_layers = random_source.integers(self.min_layers, self.max_layers + 1)
 
         # desired mean and std of the layer thicknesses
         target_mean = self.total_thickness / n_layers
@@ -31,7 +36,7 @@ class SedimentBuilder:
         sigma = np.sqrt(np.log(1 + target_std**2 / target_mean**2))
 
         # Generate random thicknesses
-        random_thicknesses = np.random.lognormal(mean=mu, sigma=sigma, size=n_layers)
+        random_thicknesses = random_source.lognormal(mean=mu, sigma=sigma, size=n_layers)
         normalized_thicknesses = random_thicknesses / np.sum(random_thicknesses) * self.total_thickness
         values = [self.start_value + i for i in range(n_layers)]
 
@@ -101,16 +106,16 @@ class MarkovSedimentHelper:
     def next_layer_category(self, current_val):
         """Determine the next layer category based on the current category and Markov process."""
         if current_val is None:
-            return np.random.choice(self.cats)
+            return self.rng.choice(self.cats)
         else:
-            return np.random.choice(self.cats, p=self.transition_matrix[current_val])
+            return self.rng.choice(self.cats, p=self.transition_matrix[current_val])
 
     def next_layer_thickness(self, current_thick):
         """Determine the next layer thickness based on the current thickness."""
         if current_thick is None:
             return self.rng.uniform(*self.thickness_bounds)
         else:
-            next_thick = current_thick * np.random.normal(
+            next_thick = current_thick * self.rng.normal(
                 1, self.thickness_variance
             )  # Induce some variation
             next_thick = np.clip(next_thick, *self.thickness_bounds)  # Bound thicknesses

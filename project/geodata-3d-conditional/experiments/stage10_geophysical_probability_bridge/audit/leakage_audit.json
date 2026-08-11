@@ -1,0 +1,17 @@
+{
+  "bridge_builder_accepts_truth_argument": false,
+  "bridge_builder_loaded_truth_geology": false,
+  "bridge_builder_loaded_truth_property": false,
+  "bridge_collection_manifest": {
+    "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/bridge/manifest.json",
+    "sha256": "0aaed94f6d0e97b37fe08fd187c7849b5a364b319061f631648493fad03ba458",
+    "size_bytes": 2715
+  },
+  "case_truth_proportions_used": false,
+  "class_model_truth_tuned": false,
+  "prior_member_selection": "fixed indices 100-111 without ranking",
+  "schema": "stage10_truth_firewall_audit_v1",
+  "status": "bridge_frozen_before_retrospective_truth_load",
+  "truth_derived_input": "synthetic observed seismic only",
+  "truth_smoothing_or_bbox_used": false
+}

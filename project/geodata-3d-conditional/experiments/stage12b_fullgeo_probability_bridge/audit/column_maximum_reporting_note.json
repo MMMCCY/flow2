@@ -1,0 +1,10 @@
+{
+  "schema": "stage12b_protocol_serialization_note_v1",
+  "status": "resolved_before_final_report",
+  "issue": "The frozen_protocol.json serialization placed minimum_diagonal_column_maximum_cases under stage12b_a.success_gate, although the user protocol lists column maximum only as a reported primary quantity.",
+  "resolution": "The official evaluator and machine-decision artifact report the column-maximum count but do not use it as a gate clause.",
+  "decision_impact": "none; Stage12B-A also failed the explicitly authorized diagonal-mean, row-maximum, shuffled-control, and constant-control clauses",
+  "frozen_protocol_modified_after_seismic": false,
+  "column_maximum_reported": true,
+  "column_maximum_gated": false
+}

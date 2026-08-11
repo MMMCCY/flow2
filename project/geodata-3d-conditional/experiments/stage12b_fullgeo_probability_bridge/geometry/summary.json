@@ -1,0 +1,75 @@
+{
+  "case_ids": [
+    "fullgeo_case01",
+    "fullgeo_case02",
+    "fullgeo_case03",
+    "fullgeo_case04",
+    "fullgeo_case05"
+  ],
+  "case_statistics": {
+    "fullgeo_case01": {
+      "centroid_index_xyz": [
+        6.725,
+        48.99166666666667,
+        2.55
+      ],
+      "connected_components_26": 4,
+      "connected_components_6": 6,
+      "volume_voxels": 120
+    },
+    "fullgeo_case02": {
+      "centroid_index_xyz": [
+        30.842566685319902,
+        32.98047627930112,
+        20.93577068954797
+      ],
+      "connected_components_26": 16,
+      "connected_components_6": 71,
+      "volume_voxels": 16083
+    },
+    "fullgeo_case03": {
+      "centroid_index_xyz": [
+        16.577764976958527,
+        19.18951612903226,
+        15.054147465437788
+      ],
+      "connected_components_26": 2,
+      "connected_components_6": 82,
+      "volume_voxels": 1736
+    },
+    "fullgeo_case04": {
+      "centroid_index_xyz": [
+        44.03844128488678,
+        35.28909952606635,
+        22.15391559467389
+      ],
+      "connected_components_26": 2,
+      "connected_components_6": 3,
+      "volume_voxels": 13293
+    },
+    "fullgeo_case05": {
+      "centroid_index_xyz": [
+        40.610313792264655,
+        36.02310873266845,
+        7.571880321089759
+      ],
+      "connected_components_26": 4,
+      "connected_components_6": 34,
+      "volume_voxels": 4111
+    }
+  },
+  "cohort_changed": false,
+  "created_at_utc": "2026-08-11T12:05:41.415069+00:00",
+  "off_diagonal_summary": {
+    "maximum_iou": 0.0389022492573207,
+    "mean_centroid_distance_voxels": 27.789948247187276,
+    "mean_iou": 0.00926178869086634,
+    "mean_symmetric_volume_ratio": 0.21670167288467876,
+    "minimum_centroid_distance_voxels": 13.451569601830242,
+    "pair_count_directed": 20
+  },
+  "role": "retrospective_descriptive_only_never_case_selection",
+  "schema": "stage12b_pre_geophysics_truth_geometry_audit_v1",
+  "status": "complete_descriptive_only",
+  "target_label": 9
+}

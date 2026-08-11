@@ -31,10 +31,11 @@ class BallListGenerator:
     goo_range (tuple): The range of uniform sampled goo factors for the metaballs.
     """
 
-    def __init__(self, step_range, rad_range, goo_range):
+    def __init__(self, step_range, rad_range, goo_range, rng=None):
         self.step_range = step_range
         self.rad_range = rad_range
         self.goo_range = goo_range
+        self.rng = rng
 
     def generate(self, n_balls, origin, variance=1):
         """Generate a list of n Ball objects with random parameters starting at seeded origin.
@@ -48,19 +49,20 @@ class BallListGenerator:
         balls = []
         # Set start point and unit direction
         current_point = np.array(origin, dtype=float)
-        previous_direction = np.random.normal(size=3)
+        random_source = np.random if self.rng is None else self.rng
+        previous_direction = random_source.normal(size=3)
         previous_direction /= np.linalg.norm(previous_direction)
 
         for _ in range(n_balls):
-            radius = np.random.uniform(*self.rad_range)
-            goo_factor = np.random.uniform(*self.goo_range)
+            radius = random_source.uniform(*self.rad_range)
+            goo_factor = random_source.uniform(*self.goo_range)
             balls.append(Ball(current_point, radius, goo_factor))
 
             # Generate the next point with a Gaussian bias towards the previous direction
-            random_variation = np.random.normal(loc=0, scale=1, size=3)
+            random_variation = random_source.normal(loc=0, scale=1, size=3)
             direction = previous_direction + variance * random_variation
             direction /= np.linalg.norm(direction)
-            step = direction * np.random.uniform(*self.step_range)
+            step = direction * random_source.uniform(*self.step_range)
             current_point += step
 
             # Update the previous direction

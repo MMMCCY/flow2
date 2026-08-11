@@ -1,0 +1,398 @@
+{
+  "bridge_similarity_pairwise": [
+    {
+      "case_i": "native_seed20260901",
+      "case_j": "native_seed20260902",
+      "cosine": 0.85142055724329,
+      "map_type": "prior_only",
+      "mean_absolute_difference": 0.05577168988592376,
+      "pearson": 0.8134534834750617,
+      "rms_difference": 0.09451238720426369,
+      "spearman": 0.5017378130546267,
+      "voxel_count": 225115
+    },
+    {
+      "case_i": "native_seed20260901",
+      "case_j": "native_seed20260903",
+      "cosine": 0.8341635803023786,
+      "map_type": "prior_only",
+      "mean_absolute_difference": 0.057156784396544764,
+      "pearson": 0.7923278571996116,
+      "rms_difference": 0.09978381087091556,
+      "spearman": 0.5091075126618066,
+      "voxel_count": 225115
+    },
+    {
+      "case_i": "native_seed20260902",
+      "case_j": "native_seed20260903",
+      "cosine": 0.8601816648004523,
+      "map_type": "prior_only",
+      "mean_absolute_difference": 0.0522725685692122,
+      "pearson": 0.8260636258538443,
+      "rms_difference": 0.08915416993849991,
+      "spearman": 0.5028566991836796,
+      "voxel_count": 225115
+    },
+    {
+      "case_i": "native_seed20260901",
+      "case_j": "native_seed20260902",
+      "cosine": 0.7548242407961033,
+      "map_type": "post_seismic",
+      "mean_absolute_difference": 0.023094001414203386,
+      "pearson": 0.7341952036707093,
+      "rms_difference": 0.055394010958702805,
+      "spearman": 0.4402312844272295,
+      "voxel_count": 225115
+    },
+    {
+      "case_i": "native_seed20260901",
+      "case_j": "native_seed20260903",
+      "cosine": 0.7184972384281095,
+      "map_type": "post_seismic",
+      "mean_absolute_difference": 0.024288977387219544,
+      "pearson": 0.6937757081123533,
+      "rms_difference": 0.05976805689330624,
+      "spearman": 0.4619790860432682,
+      "voxel_count": 225115
+    },
+    {
+      "case_i": "native_seed20260902",
+      "case_j": "native_seed20260903",
+      "cosine": 0.7392551033187246,
+      "map_type": "post_seismic",
+      "mean_absolute_difference": 0.020983602635291268,
+      "pearson": 0.7179114467758289,
+      "rms_difference": 0.0530409529061422,
+      "spearman": 0.4567191775814328,
+      "voxel_count": 225115
+    }
+  ],
+  "case_ids": [
+    "native_seed20260901",
+    "native_seed20260902",
+    "native_seed20260903"
+  ],
+  "completed_at_utc": "2026-08-11T10:19:31.008767+00:00",
+  "figures": {
+    "prior_vs_post": {
+      "pdf": {
+        "path": "stage10r_prior_vs_post.pdf",
+        "sha256": "b4206c57a7ae9d471fb63b7a0cd8b7433b8297f2a8f18b804feaa0264f3e32f5",
+        "size_bytes": 46588
+      },
+      "png": {
+        "path": "stage10r_prior_vs_post.png",
+        "sha256": "c0c16d9202d4461f5b5db0fec1db8f7fb52522a1e2a937dd32ae9b69fd6cc0b0",
+        "size_bytes": 468090
+      },
+      "svg": {
+        "path": "stage10r_prior_vs_post.svg",
+        "sha256": "7f6c667fabfc0a6ebe17d13dc66e90a123461c08013e22d5c25dfddefd47034f",
+        "size_bytes": 106607
+      }
+    },
+    "transfer_matrix": {
+      "pdf": {
+        "path": "stage10r_transfer_matrix.pdf",
+        "sha256": "96fbcded0a58074d4c23a2bdfea97206daa6ac8be196d04db0766da972c4c2a5",
+        "size_bytes": 14255
+      },
+      "png": {
+        "path": "stage10r_transfer_matrix.png",
+        "sha256": "d42b69a0368da3d6222e785cce002fc9dcace191bfa8645458faf59c1c2be180",
+        "size_bytes": 283092
+      },
+      "svg": {
+        "path": "stage10r_transfer_matrix.svg",
+        "sha256": "9f6d64f8f974dc23a2e28e5af528b881b0b15eb6262dbd53ce963269e777b1ef",
+        "size_bytes": 12705
+      }
+    }
+  },
+  "git_branch": "main",
+  "git_head": "72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f",
+  "git_status_short": "M project/geodata-3d-conditional/docs/DEVELOPMENT_HANDOFF.md\n M project/geodata-3d-conditional/docs/NEXT_CONVERSATION_PROMPT.md\n?? project/geodata-3d-conditional/docs/STAGE9A_FLOW_PRIOR_SUPPORT_SPEC.md\n?? project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/\n?? project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/\n?? project/geodata-3d-conditional/guidance/geophysical_probability_bridge.py\n?? project/geodata-3d-conditional/guidance/prior_ensemble.py\n?? project/geodata-3d-conditional/paper/\n?? project/geodata-3d-conditional/scripts/paper_figures/\n?? project/geodata-3d-conditional/scripts/stage10/\n?? project/geodata-3d-conditional/scripts/stage9/\n?? project/geodata-3d-conditional/tests/test_paper_figures.py\n?? project/geodata-3d-conditional/tests/test_stage10_probability_bridge.py\n?? project/geodata-3d-conditional/tests/test_stage9_enrichment.py\n?? project/geodata-3d-conditional/tests/test_stage9_prior_ensemble.py\n?? project/geodata-3d-conditional/tests/test_stage9_truth_firewall.py",
+  "original_stage10_decision_unchanged": true,
+  "original_stage10_machine_decision": "STOP_BRIDGE_NO_GEOPHYSICAL_INFORMATION",
+  "prior_vs_post": {
+    "native_seed20260901": {
+      "case_id": "native_seed20260901",
+      "delta_ap_seismic": 0.001866844361917086,
+      "delta_brier_seismic": 0.02021423119803848,
+      "delta_categorical_entropy_post_minus_prior": 0.2061609813674966,
+      "js_bernoulli_mean": 0.01765466355691627,
+      "kl_post_to_prior_bernoulli_mean": 0.06121767175758978,
+      "kl_prior_to_post_bernoulli_mean": 0.36045479936905617,
+      "mean_absolute_probability_change": 0.057133125280184265,
+      "post_auprc": 0.25224257209566214,
+      "post_brier": 0.010095149429387936,
+      "post_categorical_entropy_mean": 0.722913476830784,
+      "post_roc_auc": 0.8963192364049786,
+      "prior_auprc": 0.25037572773374506,
+      "prior_brier": 0.030309380627426417,
+      "prior_categorical_entropy_mean": 0.5167524954632874,
+      "prior_roc_auc": 0.9006809340070204,
+      "rms_probability_change": 0.12374893044729933,
+      "spatial_cosine_prior_post": 0.7776763964878405,
+      "spatial_pearson_prior_post": 0.7584628255464483,
+      "spatial_spearman_prior_post": 0.9388107436163311
+    },
+    "native_seed20260902": {
+      "case_id": "native_seed20260902",
+      "delta_ap_seismic": 0.09582283597284816,
+      "delta_brier_seismic": 0.01801328214519831,
+      "delta_categorical_entropy_post_minus_prior": 0.20022274670609064,
+      "js_bernoulli_mean": 0.017741125231011196,
+      "kl_post_to_prior_bernoulli_mean": 0.061818617362619115,
+      "kl_prior_to_post_bernoulli_mean": 0.37073517788932625,
+      "mean_absolute_probability_change": 0.05558341930730475,
+      "post_auprc": 0.28120094936231965,
+      "post_brier": 0.010403687708605934,
+      "post_categorical_entropy_mean": 0.7103700546775601,
+      "post_roc_auc": 0.8527811431600822,
+      "prior_auprc": 0.1853781133894715,
+      "prior_brier": 0.028416969853804243,
+      "prior_categorical_entropy_mean": 0.5101473079714695,
+      "prior_roc_auc": 0.8708970872645991,
+      "rms_probability_change": 0.12310118789463384,
+      "spatial_cosine_prior_post": 0.7601056790604834,
+      "spatial_pearson_prior_post": 0.7419877031624047,
+      "spatial_spearman_prior_post": 0.9334909388573365
+    },
+    "native_seed20260903": {
+      "case_id": "native_seed20260903",
+      "delta_ap_seismic": 0.024312193864774956,
+      "delta_brier_seismic": 0.01792597387066477,
+      "delta_categorical_entropy_post_minus_prior": 0.18964168617789678,
+      "js_bernoulli_mean": 0.0167216993496345,
+      "kl_post_to_prior_bernoulli_mean": 0.059050186403001956,
+      "kl_prior_to_post_bernoulli_mean": 0.335571719613749,
+      "mean_absolute_probability_change": 0.05347552802894882,
+      "post_auprc": 0.16536077778467995,
+      "post_brier": 0.01145542213155372,
+      "post_categorical_entropy_mean": 0.6935264574274342,
+      "post_roc_auc": 0.8395025480350345,
+      "prior_auprc": 0.141048583919905,
+      "prior_brier": 0.02938139600221849,
+      "prior_categorical_entropy_mean": 0.5038847712495375,
+      "prior_roc_auc": 0.8569309204094647,
+      "rms_probability_change": 0.12071087602765004,
+      "spatial_cosine_prior_post": 0.7713008820971502,
+      "spatial_pearson_prior_post": 0.7518545228679766,
+      "spatial_spearman_prior_post": 0.9448969543506438
+    }
+  },
+  "probability_model_reused_without_change": true,
+  "retrospective_case_manifests": {
+    "native_seed20260901": {
+      "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/cases/stage9a_native_v1/native_seed20260901/retrospective/manifest.json",
+      "sha256": "ddd69ca283b4c04c732249dc6254cbbb7a79e80f789df6b93538119351edcc2c",
+      "size_bytes": 5220
+    },
+    "native_seed20260902": {
+      "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/cases/stage9a_native_v1/native_seed20260902/retrospective/manifest.json",
+      "sha256": "f1f33fa3ace1aaeadf741360f9877fb8ea2d5976d6f143992747780825ae7f06",
+      "size_bytes": 5219
+    },
+    "native_seed20260903": {
+      "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/cases/stage9a_native_v1/native_seed20260903/retrospective/manifest.json",
+      "sha256": "b2b0436eaff37c9a98c5593381a4b9681326dd30981fd9feee2e809abe1ebb3c",
+      "size_bytes": 5218
+    }
+  },
+  "schema": "stage10r_mechanism_diagnostic_raw_v1",
+  "source_artifacts": [
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/reports/STAGE10_REPORT.md",
+      "sha256": "f8ff17b74e57bdb4b6f73c79ea706bc206595276a8ddebc478433f7f275ce3d4",
+      "size_bytes": 5154
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/reports/STAGE10_MACHINE_DECISION.json",
+      "sha256": "e03d813610f59197e0aa634769ecfcd2f810ff7c037eeeae8f64abca02fa0dae",
+      "size_bytes": 5051
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/audit/leakage_audit.json",
+      "sha256": "7998da3f6fe2feaba0d240daae99b1e638188df17ab113bdc4983e30a563dfc5",
+      "size_bytes": 766
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/audit/property_inversion_provenance.json",
+      "sha256": "ed43740383af880210745020acb545a5e4d96f34cf5913ff1b115c2ceeec984a",
+      "size_bytes": 9705
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/bridge/manifest.json",
+      "sha256": "0aaed94f6d0e97b37fe08fd187c7849b5a364b319061f631648493fad03ba458",
+      "size_bytes": 2715
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/controls/manifest.json",
+      "sha256": "25310a0e3eb13b54e762ca2198706134ceea8781d5bb5fd48807162052bb0ea0",
+      "size_bytes": 6359
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/diagnostics/stage10a_decision.json",
+      "sha256": "5451932bc6ec9761caa3a76fe5c6d50bb3dacca40bdbaaf61838422c94037ad1",
+      "size_bytes": 986
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/configs/petrophysical_class_model.json",
+      "sha256": "106afc9075e5da5e488d6cc84cbdf7ba1335f760f2a74547a769927d6ad86c2b",
+      "size_bytes": 2226
+    },
+    {
+      "path": "project/geodata-3d-conditional/scripts/stage10/run_stage10r_diagnostic.py",
+      "sha256": "2645604897e53a4ccb77dbce72f1c376ab21badf37a9139533146b072732c5a5",
+      "size_bytes": 35617
+    }
+  ],
+  "stage10_bcd_executed": false,
+  "stage10r_flow_forward_count": 0,
+  "stage10r_seismic_inversion_count": 0,
+  "status": "computed_awaiting_frozen_interpretation",
+  "top_mass_centroids": [
+    {
+      "case_id": "native_seed20260901",
+      "map_type": "prior_only",
+      "top_mass_centroid_x": 25.18722742091061,
+      "top_mass_centroid_y": 10.731589818289011,
+      "top_mass_centroid_z": 21.465398285502413,
+      "top_mass_fraction": 0.1,
+      "top_mass_voxel_count": 1976,
+      "weighted_centroid_x": 32.08889273747852,
+      "weighted_centroid_y": 25.987415215759032,
+      "weighted_centroid_z": 22.19229945122902
+    },
+    {
+      "case_id": "native_seed20260902",
+      "map_type": "prior_only",
+      "top_mass_centroid_x": 16.6068365175045,
+      "top_mass_centroid_y": 11.714414242672543,
+      "top_mass_centroid_z": 19.487196608667947,
+      "top_mass_fraction": 0.1,
+      "top_mass_voxel_count": 1820,
+      "weighted_centroid_x": 30.328951773431434,
+      "weighted_centroid_y": 24.914120143673436,
+      "weighted_centroid_z": 22.910922262275605
+    },
+    {
+      "case_id": "native_seed20260903",
+      "map_type": "prior_only",
+      "top_mass_centroid_x": 17.23262845354316,
+      "top_mass_centroid_y": 12.671750692288883,
+      "top_mass_centroid_z": 19.232581885005764,
+      "top_mass_fraction": 0.1,
+      "top_mass_voxel_count": 1786,
+      "weighted_centroid_x": 29.735911091316158,
+      "weighted_centroid_y": 26.183063759094082,
+      "weighted_centroid_z": 23.386735139986868
+    },
+    {
+      "case_id": "native_seed20260901",
+      "map_type": "post_seismic",
+      "top_mass_centroid_x": 26.72544223899142,
+      "top_mass_centroid_y": 10.379853239803353,
+      "top_mass_centroid_z": 21.89937670409795,
+      "top_mass_fraction": 0.1,
+      "top_mass_voxel_count": 651,
+      "weighted_centroid_x": 32.15443787611623,
+      "weighted_centroid_y": 22.367712508653458,
+      "weighted_centroid_z": 20.79033072974304
+    },
+    {
+      "case_id": "native_seed20260902",
+      "map_type": "post_seismic",
+      "top_mass_centroid_x": 24.46913603046231,
+      "top_mass_centroid_y": 9.794393039064945,
+      "top_mass_centroid_z": 21.42151968810541,
+      "top_mass_fraction": 0.1,
+      "top_mass_voxel_count": 552,
+      "weighted_centroid_x": 29.515658729138682,
+      "weighted_centroid_y": 21.104889425066094,
+      "weighted_centroid_z": 22.246807810052843
+    },
+    {
+      "case_id": "native_seed20260903",
+      "map_type": "post_seismic",
+      "top_mass_centroid_x": 21.36329897703327,
+      "top_mass_centroid_y": 11.658314205011406,
+      "top_mass_centroid_z": 20.442408278183947,
+      "top_mass_fraction": 0.1,
+      "top_mass_voxel_count": 580,
+      "weighted_centroid_x": 29.019322423303734,
+      "weighted_centroid_y": 23.764781549253286,
+      "weighted_centroid_z": 22.185102381610776
+    }
+  ],
+  "transfer_summary": {
+    "diagnostic_threshold": 0.5,
+    "diagonal_mean_auprc": 0.2329347664142206,
+    "diagonal_minus_off_diagonal_mean_auprc": 0.0030208889416371842,
+    "fraction_diagonal_is_column_maximum": 0.3333333333333333,
+    "fraction_diagonal_is_row_maximum": 0.3333333333333333,
+    "off_diagonal_mean_auprc": 0.2299138774725834,
+    "threshold_role": "retrospective visualization/overlap only; not an original Stage10 gate"
+  },
+  "truth_geometry_pairwise": [
+    {
+      "body_matching": "minimum-total-centroid-distance Hungarian assignment",
+      "centroid_distance_voxels": 1.976433055859226,
+      "component_count_i": 5,
+      "component_count_j": 5,
+      "label9_iou": 0.6294050776809398,
+      "largest_component_fraction_i": 0.2534209085933224,
+      "largest_component_fraction_j": 0.23898099474322684,
+      "matched_body_centroid_distance_max": 0.36473367798077305,
+      "matched_body_centroid_distance_mean": 0.2508208497605587,
+      "matched_body_iou_mean": 0.6372780040167844,
+      "matched_body_iou_min": 0.36717428087986465,
+      "matched_body_volume_ratio_mean": 0.7641410752385641,
+      "truth_case_i": "native_seed20260901",
+      "truth_case_j": "native_seed20260902",
+      "volume_i": 1827,
+      "volume_j": 2473,
+      "volume_ratio_min_over_max": 0.7387788111605338
+    },
+    {
+      "body_matching": "minimum-total-centroid-distance Hungarian assignment",
+      "centroid_distance_voxels": 3.4927918481358664,
+      "component_count_i": 5,
+      "component_count_j": 5,
+      "label9_iou": 0.619347227683838,
+      "largest_component_fraction_i": 0.2534209085933224,
+      "largest_component_fraction_j": 0.2492361414229594,
+      "matched_body_centroid_distance_max": 0.4157795766179504,
+      "matched_body_centroid_distance_mean": 0.23326980333078245,
+      "matched_body_iou_mean": 0.6334248590389004,
+      "matched_body_iou_min": 0.38003502626970226,
+      "matched_body_volume_ratio_mean": 0.6940975636013637,
+      "truth_case_i": "native_seed20260901",
+      "truth_case_j": "native_seed20260903",
+      "volume_i": 1827,
+      "volume_j": 2291,
+      "volume_ratio_min_over_max": 0.7974683544303798
+    },
+    {
+      "body_matching": "minimum-total-centroid-distance Hungarian assignment",
+      "centroid_distance_voxels": 2.3711374187466334,
+      "component_count_i": 5,
+      "component_count_j": 5,
+      "label9_iou": 0.7292196007259528,
+      "largest_component_fraction_i": 0.23898099474322684,
+      "largest_component_fraction_j": 0.2492361414229594,
+      "matched_body_centroid_distance_max": 0.6546876246708706,
+      "matched_body_centroid_distance_mean": 0.2450922116173441,
+      "matched_body_iou_mean": 0.7273470524939584,
+      "matched_body_iou_min": 0.4787052810902896,
+      "matched_body_volume_ratio_mean": 0.8274003476215548,
+      "truth_case_i": "native_seed20260902",
+      "truth_case_j": "native_seed20260903",
+      "volume_i": 2473,
+      "volume_j": 2291,
+      "volume_ratio_min_over_max": 0.9264051758997169
+    }
+  ],
+  "truth_loaded_only_after_prior_only_maps_written": true
+}

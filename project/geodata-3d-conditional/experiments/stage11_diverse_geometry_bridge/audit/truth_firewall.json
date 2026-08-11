@@ -1,0 +1,19 @@
+{
+  "flow_guidance_executed": false,
+  "flow_prior_sampling_executed": false,
+  "geometry_freeze": {
+    "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/audit/geometry_freeze.json",
+    "sha256": "42237097926544db94d1fd6854c043c832e96c4f5cb5f4cdd7d5e1be2de9a5fa",
+    "size_bytes": 2802
+  },
+  "observed_seismic_generated": false,
+  "old_stage10_cases_used": false,
+  "probability_bridge_executed": false,
+  "property_inversion_executed": false,
+  "retrospective_stage11a_evaluation_executed": false,
+  "schema": "stage11_truth_firewall_audit_v1",
+  "status": "STOPPED_AT_TRUTH_ONLY_GEOMETRY_PREPARATION",
+  "stop_rule_enforced": true,
+  "truth_accessed_by_geophysical_inference": false,
+  "truth_accessed_for_geometry_preparation": true
+}

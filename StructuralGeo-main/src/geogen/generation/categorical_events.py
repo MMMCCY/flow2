@@ -25,6 +25,14 @@ from geogen.generation.geowords import *
 from geogen.model import CompoundProcess, GeoProcess
 
 
+def _word(word_class, rng_contract, name):
+    """Instantiate a nested word with a stable, name-derived RNG namespace."""
+    kwargs = {}
+    if rng_contract is not None:
+        kwargs["rng_contract"] = rng_contract.child(name)
+    return word_class(**kwargs)
+
+
 class _EventTemplateClass(GeoWord):
     """
     A special case of GeoWord that selects from a set of cases with associated probabilities.
@@ -43,8 +51,9 @@ class _EventTemplateClass(GeoWord):
 
     Event = namedtuple("Case", ["name", "p", "processes"])
 
-    def __init__(self, cases: List[Event], seed=None):
-        super().__init__(seed)
+    def __init__(self, cases: List[Event], seed=None, rng_contract=None):
+        super().__init__(seed=seed, rng_contract=rng_contract)
+        self.rng = self.rng_for("event_subtype")
         self.cases = cases
         self.selected_case = None
         self.probabilities = None
@@ -117,18 +126,39 @@ class BaseStrata(_EventTemplateClass):
     A sampling regime for base strata.
     """
 
-    def __init__(self, seed=None):
+    def __init__(self, seed=None, rng_contract=None):
         cases = [
-            self.Event(name="Basement", p=0.27, processes=[InfiniteBasement(), Sediment()]),
-            self.Event(name="Sediment: Markov", p=0.22, processes=[InfiniteSedimentMarkov()]),
-            self.Event(name="Sediment: Uniform", p=0.22, processes=[InfiniteSedimentUniform()]),
+            self.Event(
+                name="Basement",
+                p=0.27,
+                processes=[
+                    _word(InfiniteBasement, rng_contract, "basement_00"),
+                    _word(Sediment, rng_contract, "basement_sediment_01"),
+                ],
+            ),
+            self.Event(
+                name="Sediment: Markov",
+                p=0.22,
+                processes=[
+                    _word(InfiniteSedimentMarkov, rng_contract, "markov_00")
+                ],
+            ),
+            self.Event(
+                name="Sediment: Uniform",
+                p=0.22,
+                processes=[
+                    _word(InfiniteSedimentUniform, rng_contract, "uniform_00")
+                ],
+            ),
             self.Event(
                 name="Sediment: Tilted Markov",
                 p=0.29,
-                processes=[InfiniteSedimentTilted()],
+                processes=[
+                    _word(InfiniteSedimentTilted, rng_contract, "tilted_markov_00")
+                ],
             ),
         ]
-        super().__init__(cases=cases, seed=seed)
+        super().__init__(cases=cases, seed=seed, rng_contract=rng_contract)
 
 
 class Sediment(_EventTemplateClass):
@@ -136,13 +166,25 @@ class Sediment(_EventTemplateClass):
     A sampling regime for sediment events.
     """
 
-    def __init__(self, seed=None):
+    def __init__(self, seed=None, rng_contract=None):
         cases = [
-            self.Event(name="Fine", p=0.4, processes=[FineRepeatSediment()]),
-            self.Event(name="Coarse", p=0.5, processes=[CoarseRepeatSediment()]),
-            self.Event(name="Single", p=0.1, processes=[SingleRandSediment()]),
+            self.Event(
+                name="Fine",
+                p=0.4,
+                processes=[_word(FineRepeatSediment, rng_contract, "fine_00")],
+            ),
+            self.Event(
+                name="Coarse",
+                p=0.5,
+                processes=[_word(CoarseRepeatSediment, rng_contract, "coarse_00")],
+            ),
+            self.Event(
+                name="Single",
+                p=0.1,
+                processes=[_word(SingleRandSediment, rng_contract, "single_00")],
+            ),
         ]
-        super().__init__(cases=cases, seed=seed)
+        super().__init__(cases=cases, seed=seed, rng_contract=rng_contract)
 
 
 class Erosion(_EventTemplateClass):
@@ -150,14 +192,30 @@ class Erosion(_EventTemplateClass):
     A sampling regime for erosion events.
     """
 
-    def __init__(self, seed=None):
+    def __init__(self, seed=None, rng_contract=None):
         cases = [
-            self.Event(name="Flat", p=0.20, processes=[FlatUnconformity()]),
-            self.Event(name="Tilted", p=0.25, processes=[TiltedUnconformity()]),
-            self.Event(name="TiltCutFill", p=0.20, processes=[TiltCutFill()]),
-            self.Event(name="Wave", p=0.35, processes=[WaveUnconformity()]),
+            self.Event(
+                name="Flat",
+                p=0.20,
+                processes=[_word(FlatUnconformity, rng_contract, "flat_00")],
+            ),
+            self.Event(
+                name="Tilted",
+                p=0.25,
+                processes=[_word(TiltedUnconformity, rng_contract, "tilted_00")],
+            ),
+            self.Event(
+                name="TiltCutFill",
+                p=0.20,
+                processes=[_word(TiltCutFill, rng_contract, "tilt_cut_fill_00")],
+            ),
+            self.Event(
+                name="Wave",
+                p=0.35,
+                processes=[_word(WaveUnconformity, rng_contract, "wave_00")],
+            ),
         ]
-        super().__init__(cases=cases, seed=seed)
+        super().__init__(cases=cases, seed=seed, rng_contract=rng_contract)
 
 
 class Dike(_EventTemplateClass):
@@ -165,13 +223,25 @@ class Dike(_EventTemplateClass):
     A sampling regime for intrusion events.
     """
 
-    def __init__(self, seed=None):
+    def __init__(self, seed=None, rng_contract=None):
         cases = [
-            self.Event(name="Dike", p=0.4, processes=[DikePlaneWord()]),
-            self.Event(name="WarpedDike", p=0.4, processes=[SingleDikeWarped()]),
-            self.Event(name="DikeGroup", p=0.2, processes=[DikeGroup()]),
+            self.Event(
+                name="Dike",
+                p=0.4,
+                processes=[_word(DikePlaneWord, rng_contract, "dike_00")],
+            ),
+            self.Event(
+                name="WarpedDike",
+                p=0.4,
+                processes=[_word(SingleDikeWarped, rng_contract, "warped_dike_00")],
+            ),
+            self.Event(
+                name="DikeGroup",
+                p=0.2,
+                processes=[_word(DikeGroup, rng_contract, "dike_group_00")],
+            ),
         ]
-        super().__init__(cases=cases, seed=seed)
+        super().__init__(cases=cases, seed=seed, rng_contract=rng_contract)
 
 
 class Sills(_EventTemplateClass):
@@ -179,13 +249,21 @@ class Sills(_EventTemplateClass):
     A sampling regime for sill events.
     """
 
-    def __init__(self, seed=None):
+    def __init__(self, seed=None, rng_contract=None):
         cases = [
-            self.Event(name="SillSingle", p=0.2, processes=[SillWord()]),
+            self.Event(
+                name="SillSingle",
+                p=0.2,
+                processes=[_word(SillWord, rng_contract, "sill_single_00")],
+            ),
             # Note the sill system places a large sediment deposit at same time for embedding
-            self.Event(name="SillSystem", p=0.8, processes=[SillSystem()]),
+            self.Event(
+                name="SillSystem",
+                p=0.8,
+                processes=[_word(SillSystem, rng_contract, "sill_system_00")],
+            ),
         ]
-        super().__init__(cases=cases, seed=seed)
+        super().__init__(cases=cases, seed=seed, rng_contract=rng_contract)
 
 
 class Pluton(_EventTemplateClass):
@@ -193,12 +271,20 @@ class Pluton(_EventTemplateClass):
     A sampling regime for volcanic events.
     """
 
-    def __init__(self, seed=None):
+    def __init__(self, seed=None, rng_contract=None):
         cases = [
-            self.Event(name="Laccolith", p=0.4, processes=[Laccolith()]),
-            self.Event(name="Lopolith", p=0.6, processes=[Lopolith()]),
+            self.Event(
+                name="Laccolith",
+                p=0.4,
+                processes=[_word(Laccolith, rng_contract, "laccolith_00")],
+            ),
+            self.Event(
+                name="Lopolith",
+                p=0.6,
+                processes=[_word(Lopolith, rng_contract, "lopolith_00")],
+            ),
         ]
-        super().__init__(cases=cases, seed=seed)
+        super().__init__(cases=cases, seed=seed, rng_contract=rng_contract)
 
 
 class OreDeposit(_EventTemplateClass):
@@ -208,11 +294,15 @@ class OreDeposit(_EventTemplateClass):
     Can be expanded to include more types in the future
     """
 
-    def __init__(self, seed=None):
+    def __init__(self, seed=None, rng_contract=None):
         cases = [
-            self.Event(name="BlobCluster", p=1.0, processes=[BlobCluster()]),
+            self.Event(
+                name="BlobCluster",
+                p=1.0,
+                processes=[_word(BlobCluster, rng_contract, "blob_cluster_00")],
+            ),
         ]
-        super().__init__(cases=cases, seed=seed)
+        super().__init__(cases=cases, seed=seed, rng_contract=rng_contract)
 
 
 class Fold(_EventTemplateClass):
@@ -220,53 +310,95 @@ class Fold(_EventTemplateClass):
     A sampling regime for folding events.
     """
 
-    def __init__(self, seed=None):
+    def __init__(self, seed=None, rng_contract=None):
         cases = [
-            self.Event(name="Simple", p=0.2, processes=[SimpleFold()]),
-            self.Event(name="Shaped", p=0.3, processes=[ShapedFold()]),
-            self.Event(name="Fourier", p=0.5, processes=[FourierFold()]),
+            self.Event(
+                name="Simple",
+                p=0.2,
+                processes=[_word(SimpleFold, rng_contract, "simple_00")],
+            ),
+            self.Event(
+                name="Shaped",
+                p=0.3,
+                processes=[_word(ShapedFold, rng_contract, "shaped_00")],
+            ),
+            self.Event(
+                name="Fourier",
+                p=0.5,
+                processes=[_word(FourierFold, rng_contract, "fourier_00")],
+            ),
         ]
-        super().__init__(cases=cases, seed=seed)
+        super().__init__(cases=cases, seed=seed, rng_contract=rng_contract)
 
 
 class Fault(_EventTemplateClass):
     """A sampling regime for fault events."""
 
-    def __init__(self, seed=None):
+    def __init__(self, seed=None, rng_contract=None):
         cases = [
-            self.Event(name="Normal", p=0.1, processes=[FaultNormal()]),
-            self.Event(name="Reverse", p=0.1, processes=[FaultReverse()]),
-            self.Event(name="StrikeSlip", p=0.1, processes=[FaultStrikeSlip()]),
-            self.Event(name="HorstGraben", p=0.1, processes=[FaultHorstGraben()]),
-            self.Event(name="StrikeSlip", p=0.25, processes=[FaultStrikeSlip()]),
-            self.Event(name="FullyRandom", p=0.2, processes=[FaultRandom()]),
-            self.Event(name="Sequence", p=0.15, processes=[FaultSequence()]),
+            self.Event(
+                name="Normal", p=0.1, processes=[_word(FaultNormal, rng_contract, "normal_00")]
+            ),
+            self.Event(
+                name="Reverse", p=0.1, processes=[_word(FaultReverse, rng_contract, "reverse_00")]
+            ),
+            self.Event(
+                name="StrikeSlip", p=0.1, processes=[_word(FaultStrikeSlip, rng_contract, "strike_slip_00")]
+            ),
+            self.Event(
+                name="HorstGraben", p=0.1, processes=[_word(FaultHorstGraben, rng_contract, "horst_graben_00")]
+            ),
+            self.Event(
+                name="StrikeSlip", p=0.25, processes=[_word(FaultStrikeSlip, rng_contract, "strike_slip_01")]
+            ),
+            self.Event(
+                name="FullyRandom", p=0.2, processes=[_word(FaultRandom, rng_contract, "fully_random_00")]
+            ),
+            self.Event(
+                name="Sequence", p=0.15, processes=[_word(FaultSequence, rng_contract, "sequence_00")]
+            ),
         ]
-        super().__init__(cases=cases, seed=seed)
+        super().__init__(cases=cases, seed=seed, rng_contract=rng_contract)
         
 class Mountains(_EventTemplateClass):
     """A sampling regime for mountain events."""
 
-    def __init__(self, seed=None):
+    def __init__(self, seed=None, rng_contract=None):
         cases = [
-            self.Event(name="TiltedMountains", p=1.0, processes=[TiltedMountains()]),
+            self.Event(
+                name="TiltedMountains",
+                p=1.0,
+                processes=[_word(TiltedMountains, rng_contract, "tilted_mountains_00")],
+            ),
         ]
-        super().__init__(cases=cases, seed=seed)
+        super().__init__(cases=cases, seed=seed, rng_contract=rng_contract)
 
 
 # TODO: Implement Slip events in GeoWords and add to the Slip class
 class Slip(_EventTemplateClass):
     """A sampling regime for slip events."""
 
-    def __init__(self, seed=None):
-        cases = [self.Event(name="Null", p=1.0, processes=[NullWord()])]
-        super().__init__(cases=cases, seed=seed)
+    def __init__(self, seed=None, rng_contract=None):
+        cases = [
+            self.Event(
+                name="Null",
+                p=1.0,
+                processes=[_word(NullWord, rng_contract, "null_00")],
+            )
+        ]
+        super().__init__(cases=cases, seed=seed, rng_contract=rng_contract)
         NotImplementedError()
 
 
 class End(_EventTemplateClass):
     """An ending flag for the geostory."""
 
-    def __init__(self, seed=None):
-        cases = [self.Event(name="Termination of Sequence", p=1.0, processes=[NullWord()])]
-        super().__init__(cases=cases, seed=seed)
+    def __init__(self, seed=None, rng_contract=None):
+        cases = [
+            self.Event(
+                name="Termination of Sequence",
+                p=1.0,
+                processes=[_word(NullWord, rng_contract, "termination_00")],
+            )
+        ]
+        super().__init__(cases=cases, seed=seed, rng_contract=rng_contract)

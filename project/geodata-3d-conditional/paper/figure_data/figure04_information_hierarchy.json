@@ -1,0 +1,75 @@
+{
+  "cross_protocol_benchmark": false,
+  "facts": {
+    "phase1_mean_label9_iou": [
+      0.03144480434529132,
+      0.8098611425842716
+    ],
+    "phase1_pairs": 12,
+    "phase2_mean_label9_iou": [
+      0.03144480434529132,
+      0.4807524758898813
+    ],
+    "phase2_pairs": 12,
+    "stage7_hidden_iou_range": [
+      0.9141716566866267,
+      0.9874266554903605
+    ],
+    "stage7_native_correct_rank_first_count": 3,
+    "stage9a_discrimination_pass": false,
+    "stage9a_full_support_candidates": 0,
+    "stage9a_support_pass": false,
+    "stage9a_unique_hard_models": 3072
+  },
+  "rows": [
+    {
+      "ambiguity": "low by construction\ntruth-aligned target",
+      "badge": [
+        "ORACLE",
+        "#B86B00"
+      ],
+      "outcome": "12/12 paired gains\nIoU$_9$ 0.031 $\\rightarrow$ 0.810",
+      "outcome_color": "#2F7D5B",
+      "representation": "$P(\\mathrm{label}\\,9)$\n3-D voxel field",
+      "specificity": "voxel-resolved\nclass-targeted",
+      "stage": "Phase 1\nprobability"
+    },
+    {
+      "ambiguity": "codebook-dependent\ncontrast sensitive",
+      "badge": [
+        "ORACLE",
+        "#B86B00"
+      ],
+      "outcome": "12/12 paired gains\nIoU$_9$ 0.031 $\\rightarrow$ 0.481",
+      "outcome_color": "#2F7D5B",
+      "representation": "density + susceptibility\n3-D property fields",
+      "specificity": "voxel-resolved\nall-class mapping",
+      "stage": "Phase 2\nproperty"
+    },
+    {
+      "ambiguity": "petrophysical +\nwavelet non-uniqueness",
+      "badge": [
+        "TRUTH-BLIND",
+        "#2B6CA3"
+      ],
+      "outcome": "correct arm ranks first 3/3\nhidden IoU 0.914–0.987",
+      "outcome_color": "#2F7D5B",
+      "representation": "full $x$-$y$-time\nseismic volume",
+      "specificity": "depth-localized,\nband-limited response",
+      "stage": "Stage 7\nstructured seismic"
+    },
+    {
+      "ambiguity": "prior support +\nlikelihood alignment",
+      "badge": [
+        "TRUTH-BLIND",
+        "#2B6CA3"
+      ],
+      "outcome": "3072 unique hard models\n0 full-support candidates\nSUPPORT=FAIL\nDISCRIMINATION=FAIL",
+      "outcome_color": "#A63C3C",
+      "representation": "full $x$-$y$-time seismic\n+ frozen Flow pool",
+      "specificity": "global likelihood;\nweak target enrichment",
+      "stage": "Stage 9A\nunrestricted Flow + seismic"
+    }
+  ],
+  "schema": "information_hierarchy_figure_data_v1"
+}

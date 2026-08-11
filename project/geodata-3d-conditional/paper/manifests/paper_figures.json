@@ -1,0 +1,150 @@
+{
+  "deterministic_policy": {
+    "fixed_camera": true,
+    "fixed_npz_member_timestamps": true,
+    "fixed_pdf_svg_png_metadata": true,
+    "fixed_robust_percentiles": true,
+    "fixed_source_data": true,
+    "pdf_metadata_timestamp_note": "CreationDate and ModDate are fixed at 2000-01-01 UTC."
+  },
+  "figure_data": [
+    {
+      "path": "project/geodata-3d-conditional/paper/figure_data/figure01_framework.json",
+      "role": "figure data",
+      "sha256": "7d460cac2b171bb3c92795b9a95150c7d124cf8c10c8b880fb34c31f09f8a556",
+      "size_bytes": 890
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figure_data/figure02_controllability.npz",
+      "role": "figure data",
+      "sha256": "8e917d6a3d530a5705c7974887079d6da6894cbaac7d42e5be1a87dd1ef67436",
+      "size_bytes": 85199
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figure_data/figure03_seismic_structured.npz",
+      "role": "figure data",
+      "sha256": "aa5390e773253fb663ef579dca8813b395a64ea77ab2693847531056cb6a17fe",
+      "size_bytes": 7211
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figure_data/figure04_information_hierarchy.json",
+      "role": "figure data",
+      "sha256": "d90c766ba1c308a22c4fbe262ed16c1d72fbc97234f1feee30ee80ffc9eb208c",
+      "size_bytes": 2370
+    }
+  ],
+  "figure_manifests": [
+    {
+      "path": "project/geodata-3d-conditional/paper/manifests/figure01_framework.json",
+      "role": "figure manifest",
+      "sha256": "ad2eddeebafa2b683a6dd9611746873e0999d54445aecdb6f8d4a490d3f2acfb",
+      "size_bytes": 3005
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/manifests/figure02_controllability.json",
+      "role": "figure manifest",
+      "sha256": "17cf7579acc61ceb176423686df7890cfb95b0a87fa3495945e38deeef411091",
+      "size_bytes": 10650
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/manifests/figure03_seismic_structured.json",
+      "role": "figure manifest",
+      "sha256": "0d00bd8265f9bde04c1c76bb173edd0fbd1c1c1d02af216de566ea6579708c9b",
+      "size_bytes": 10221
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/manifests/figure04_information_hierarchy.json",
+      "role": "figure manifest",
+      "sha256": "6fdbe04ecdec49b2354de86e5169bd56b1457f5790d8b501220184d01ea06356",
+      "size_bytes": 6339
+    }
+  ],
+  "figures": [
+    {
+      "figure": "figure01_framework",
+      "manifest": "paper/manifests/figure01_framework.json",
+      "outputs": {
+        "pdf": "paper/figures/figure01_framework.pdf",
+        "png": "paper/figures/figure01_framework.png",
+        "svg": "paper/figures/figure01_framework.svg"
+      }
+    },
+    {
+      "figure": "figure02_controllability",
+      "manifest": "paper/manifests/figure02_controllability.json",
+      "outputs": {
+        "pdf": "paper/figures/figure02_controllability.pdf",
+        "png": "paper/figures/figure02_controllability.png",
+        "svg": "paper/figures/figure02_controllability.svg"
+      }
+    },
+    {
+      "figure": "figure03_seismic_structured",
+      "manifest": "paper/manifests/figure03_seismic_structured.json",
+      "outputs": {
+        "pdf": "paper/figures/figure03_seismic_structured.pdf",
+        "png": "paper/figures/figure03_seismic_structured.png",
+        "svg": "paper/figures/figure03_seismic_structured.svg"
+      }
+    },
+    {
+      "figure": "figure04_information_hierarchy",
+      "manifest": "paper/manifests/figure04_information_hierarchy.json",
+      "outputs": {
+        "pdf": "paper/figures/figure04_information_hierarchy.pdf",
+        "png": "paper/figures/figure04_information_hierarchy.png",
+        "svg": "paper/figures/figure04_information_hierarchy.svg"
+      }
+    }
+  ],
+  "generator": {
+    "path": "project/geodata-3d-conditional/scripts/paper_figures/make_all_figures.py",
+    "role": "collection generator",
+    "sha256": "32a6c09bfb85ce95032ee5e04ca48eac3cfc3f5dcef63a211f8c5bbe6c2f0feb",
+    "size_bytes": 6412
+  },
+  "git_head": "72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f",
+  "output_checks": {
+    "figure01_framework": {
+      "dpi": [
+        599.9988,
+        599.9988
+      ],
+      "pixel_size": [
+        4204,
+        2652
+      ]
+    },
+    "figure02_controllability": {
+      "dpi": [
+        599.9988,
+        599.9988
+      ],
+      "pixel_size": [
+        4204,
+        2652
+      ]
+    },
+    "figure03_seismic_structured": {
+      "dpi": [
+        599.9988,
+        599.9988
+      ],
+      "pixel_size": [
+        4204,
+        3011
+      ]
+    },
+    "figure04_information_hierarchy": {
+      "dpi": [
+        599.9988,
+        599.9988
+      ],
+      "pixel_size": [
+        4204,
+        2268
+      ]
+    }
+  },
+  "schema": "paper_figure_collection_manifest_v1"
+}

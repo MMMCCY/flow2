@@ -1,0 +1,90 @@
+{
+  "final_interpretation": {
+    "complementary_mechanism_finding": "SEISMIC_ADDS_INCREMENTAL_INFORMATION",
+    "not_assigned": [
+      "PRIOR_TEMPLATE_DOMINATED",
+      "INCONCLUSIVE"
+    ],
+    "primary": "CASE_GEOMETRY_CONFUNDED",
+    "stage10_b_authorized": false,
+    "stage10_reinterpreted": false
+  },
+  "final_outputs": {
+    "report": {
+      "path": "STAGE10R_DIAGNOSTIC_REPORT.md",
+      "sha256": "465b34ed1d8d4cc336fc262a7a28c30911378ddd3164361395e97526d317378c",
+      "size_bytes": 4515
+    },
+    "summary": {
+      "path": "summary.json",
+      "sha256": "220cea465e3b1cea882f13911debce59afbab0c47297aec517859af8728fe5d7",
+      "size_bytes": 7906
+    },
+    "transfer_matrix": {
+      "pdf": {
+        "path": "stage10r_transfer_matrix.pdf",
+        "sha256": "423182a53a0f5a937779f470c28352bde4fec088b77eea2432ecdd226f4b5b6f",
+        "size_bytes": 14655
+      },
+      "png": {
+        "path": "stage10r_transfer_matrix.png",
+        "sha256": "22106e4ccbe324fa663b34a9fa33d864c90f23eefbcff4bd977c86f823d49e4d",
+        "size_bytes": 253184
+      },
+      "svg": {
+        "path": "stage10r_transfer_matrix.svg",
+        "sha256": "ee6891481f7e16f03e790f9272761f973856c6e9ff0617afe9c8a40c1471c24f",
+        "size_bytes": 13457
+      }
+    }
+  },
+  "finalization_generator": {
+    "path": "project/geodata-3d-conditional/scripts/stage10/finalize_stage10r_diagnostic.py",
+    "sha256": "ed8f8991d13bcb2e4bf18dd9b7dd7328a9205071c645e6dcf1745e152f89c6b4",
+    "size_bytes": 19741
+  },
+  "flow_forward_count": 0,
+  "generated_files": [
+    "all_by_all_ap_matrix.csv",
+    "all_by_all_brier_matrix.csv",
+    "all_by_all_secondary_metrics.csv",
+    "bridge_similarity.csv",
+    "bridge_top_mass_centroids.csv",
+    "prior_only/manifest.json",
+    "prior_only/native_seed20260901/entropy.pt",
+    "prior_only/native_seed20260901/manifest.json",
+    "prior_only/native_seed20260901/probability_all_classes.pt",
+    "prior_only/native_seed20260901/probability_label9.pt",
+    "prior_only/native_seed20260901/property_mean.pt",
+    "prior_only/native_seed20260901/property_samples.pt",
+    "prior_only/native_seed20260901/property_uncertainty.pt",
+    "prior_only/native_seed20260902/entropy.pt",
+    "prior_only/native_seed20260902/manifest.json",
+    "prior_only/native_seed20260902/probability_all_classes.pt",
+    "prior_only/native_seed20260902/probability_label9.pt",
+    "prior_only/native_seed20260902/property_mean.pt",
+    "prior_only/native_seed20260902/property_samples.pt",
+    "prior_only/native_seed20260902/property_uncertainty.pt",
+    "prior_only/native_seed20260903/entropy.pt",
+    "prior_only/native_seed20260903/manifest.json",
+    "prior_only/native_seed20260903/probability_all_classes.pt",
+    "prior_only/native_seed20260903/probability_label9.pt",
+    "prior_only/native_seed20260903/property_mean.pt",
+    "prior_only/native_seed20260903/property_samples.pt",
+    "prior_only/native_seed20260903/property_uncertainty.pt",
+    "prior_vs_post_metrics.csv",
+    "raw_summary.json",
+    "stage10r_prior_vs_post.pdf",
+    "stage10r_prior_vs_post.png",
+    "stage10r_prior_vs_post.svg",
+    "stage10r_transfer_matrix.pdf",
+    "stage10r_transfer_matrix.png",
+    "stage10r_transfer_matrix.svg",
+    "truth_geometry_similarity.csv"
+  ],
+  "original_stage10_files_modified": false,
+  "original_stage10_machine_decision": "STOP_BRIDGE_NO_GEOPHYSICAL_INFORMATION",
+  "schema": "stage10r_diagnostic_manifest_v1",
+  "seismic_inversion_count": 0,
+  "status": "complete_interpretation_frozen"
+}

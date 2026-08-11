@@ -1,0 +1,295 @@
+{
+  "case_ids": [
+    "fullgeo_case01",
+    "fullgeo_case02",
+    "fullgeo_case03",
+    "fullgeo_case04",
+    "fullgeo_case05"
+  ],
+  "constant_label9_probability": 0.06666666666666667,
+  "created_at_utc": "2026-08-11T12:11:09.744535+00:00",
+  "prior_only_policy": "same_frozen_12_member_property_bank_before_assimilation",
+  "schema": "stage12b_a_frozen_controls_v1",
+  "shuffle_policy": "complete_xy_column_permutation_shared_across_classes_and_z",
+  "status": "complete_frozen_before_truth_evaluation",
+  "tensors": {
+    "fullgeo_case01": {
+      "constant_prior_label9": {
+        "dtype": "torch.float32",
+        "file_sha256": "175fd610b01e8a2920ef6fdba3b05a7c982ff003597914b9ff16a02218027d11",
+        "path": "fullgeo_case01/constant_prior_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 1050153,
+        "tensor_sha256": "43986d89886518a6b8d25f58fcb274b5248de4a03a78fa622937753b76dd1e59"
+      },
+      "shuffle_seed": 20266943,
+      "shuffled_xy_all_classes": {
+        "dtype": "torch.float32",
+        "file_sha256": "de3c6e17b626563ea7be5b4b1b81cac8ecf5346d228db37d7f9535657e36375b",
+        "path": "fullgeo_case01/shuffled_xy_all_classes.pt",
+        "shape": [
+          1,
+          15,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 15730217,
+        "tensor_sha256": "8bc24272377230b0527cdb07b479509315289eaec220c63c22df2b09800beeaa"
+      },
+      "shuffled_xy_label9": {
+        "dtype": "torch.float32",
+        "file_sha256": "7afd5d6b9d5bc7b01d9cba638b1acb61105086c2bf8a7a4d7fc15724b32eba4e",
+        "path": "fullgeo_case01/shuffled_xy_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 15730217,
+        "tensor_sha256": "ce9bc535dd277ee6d54cb7d1ee39b98fe7e4ac84529ade4f3adb79618afacc88"
+      },
+      "xy_permutation": {
+        "dtype": "torch.int64",
+        "file_sha256": "fe28438a1829f0718dcc0f4f4f3993ff2f75239cedd5bd85e84f3179098f17a4",
+        "path": "fullgeo_case01/xy_permutation.pt",
+        "shape": [
+          4096
+        ],
+        "size_bytes": 34345,
+        "tensor_sha256": "ab4af144661042840f145218480dd7145d53c2dd61d366e9225caef7a473de3c"
+      }
+    },
+    "fullgeo_case02": {
+      "constant_prior_label9": {
+        "dtype": "torch.float32",
+        "file_sha256": "175fd610b01e8a2920ef6fdba3b05a7c982ff003597914b9ff16a02218027d11",
+        "path": "fullgeo_case02/constant_prior_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 1050153,
+        "tensor_sha256": "43986d89886518a6b8d25f58fcb274b5248de4a03a78fa622937753b76dd1e59"
+      },
+      "shuffle_seed": 20266944,
+      "shuffled_xy_all_classes": {
+        "dtype": "torch.float32",
+        "file_sha256": "a83fe6fc6c4534cee1ed9f1e989d148374551b9858a82ce31982af142a441764",
+        "path": "fullgeo_case02/shuffled_xy_all_classes.pt",
+        "shape": [
+          1,
+          15,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 15730217,
+        "tensor_sha256": "7564a49149be6cf4eff01126bbb275279b58d4df3315ee713fc5616f1716c089"
+      },
+      "shuffled_xy_label9": {
+        "dtype": "torch.float32",
+        "file_sha256": "107310942c03a3e72b5cc4fa156aef47b82138c6e288cf997aaeb2d72c1bdba6",
+        "path": "fullgeo_case02/shuffled_xy_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 15730217,
+        "tensor_sha256": "2d3b1c1ba43e4cd60ad4d1e8f4a8d28169644b8bcd956a34a2af76fc88a6d8c1"
+      },
+      "xy_permutation": {
+        "dtype": "torch.int64",
+        "file_sha256": "4a23b4ebf23cc15c7055570f6082065c3320afb6d8c0a2657618d981c22845d4",
+        "path": "fullgeo_case02/xy_permutation.pt",
+        "shape": [
+          4096
+        ],
+        "size_bytes": 34345,
+        "tensor_sha256": "e92deefbdc3872c16ed81e17d883b0f549a0d78d8c85c10a0a69b966f446ff4b"
+      }
+    },
+    "fullgeo_case03": {
+      "constant_prior_label9": {
+        "dtype": "torch.float32",
+        "file_sha256": "175fd610b01e8a2920ef6fdba3b05a7c982ff003597914b9ff16a02218027d11",
+        "path": "fullgeo_case03/constant_prior_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 1050153,
+        "tensor_sha256": "43986d89886518a6b8d25f58fcb274b5248de4a03a78fa622937753b76dd1e59"
+      },
+      "shuffle_seed": 20266945,
+      "shuffled_xy_all_classes": {
+        "dtype": "torch.float32",
+        "file_sha256": "54cf1bc88515d5a330f6c20beb59b61e88592efa4fef4033cb9333b33533a952",
+        "path": "fullgeo_case03/shuffled_xy_all_classes.pt",
+        "shape": [
+          1,
+          15,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 15730217,
+        "tensor_sha256": "40c868fe81a56bdcd130b96701e33ec8095669d5faf33b149cec45541028a87e"
+      },
+      "shuffled_xy_label9": {
+        "dtype": "torch.float32",
+        "file_sha256": "5aba625d1a360fe71a0d0f57cba5504ef673edc63777c8edeeee68e198bad38a",
+        "path": "fullgeo_case03/shuffled_xy_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 15730217,
+        "tensor_sha256": "18e541f8f40d51e8346d19634b261e82cfa23b70a71b54665bd526fb009ba022"
+      },
+      "xy_permutation": {
+        "dtype": "torch.int64",
+        "file_sha256": "8f69079a519772c2765ff1865c6293d426547c241f5c183e5bc7867027c24448",
+        "path": "fullgeo_case03/xy_permutation.pt",
+        "shape": [
+          4096
+        ],
+        "size_bytes": 34345,
+        "tensor_sha256": "095370a0714668e87c69e064d0e55ae087d08956e710d90d687a8905ad47e893"
+      }
+    },
+    "fullgeo_case04": {
+      "constant_prior_label9": {
+        "dtype": "torch.float32",
+        "file_sha256": "175fd610b01e8a2920ef6fdba3b05a7c982ff003597914b9ff16a02218027d11",
+        "path": "fullgeo_case04/constant_prior_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 1050153,
+        "tensor_sha256": "43986d89886518a6b8d25f58fcb274b5248de4a03a78fa622937753b76dd1e59"
+      },
+      "shuffle_seed": 20266946,
+      "shuffled_xy_all_classes": {
+        "dtype": "torch.float32",
+        "file_sha256": "f0c8752177403ced91612c03979e1fa997291cb659b6dc0989ba5ec682290fd5",
+        "path": "fullgeo_case04/shuffled_xy_all_classes.pt",
+        "shape": [
+          1,
+          15,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 15730217,
+        "tensor_sha256": "a2620aed8b8eca325c76e2424691b1aff5d75a1932a5c8e5122134e794bce8de"
+      },
+      "shuffled_xy_label9": {
+        "dtype": "torch.float32",
+        "file_sha256": "f8e88d70b6ce7bf05b1f953e2272d364aea0d44cc1da5bbd400001489c8b7fcf",
+        "path": "fullgeo_case04/shuffled_xy_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 15730217,
+        "tensor_sha256": "e2b59df9839e11ac6317ac8e536808ba3eece7dfcc1e0c6d9c668a1ccf48ec43"
+      },
+      "xy_permutation": {
+        "dtype": "torch.int64",
+        "file_sha256": "e0159a5a29cce8a96a97c9825064f01c69ea11bef19efd9783247132b5fa3948",
+        "path": "fullgeo_case04/xy_permutation.pt",
+        "shape": [
+          4096
+        ],
+        "size_bytes": 34345,
+        "tensor_sha256": "3d2ce8413209c236afdb52fef3785fc667398d1288ae3fe551afe5022f9fa7fc"
+      }
+    },
+    "fullgeo_case05": {
+      "constant_prior_label9": {
+        "dtype": "torch.float32",
+        "file_sha256": "175fd610b01e8a2920ef6fdba3b05a7c982ff003597914b9ff16a02218027d11",
+        "path": "fullgeo_case05/constant_prior_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 1050153,
+        "tensor_sha256": "43986d89886518a6b8d25f58fcb274b5248de4a03a78fa622937753b76dd1e59"
+      },
+      "shuffle_seed": 20266947,
+      "shuffled_xy_all_classes": {
+        "dtype": "torch.float32",
+        "file_sha256": "10a2526c8315650290c80cea6fb58b17a93fa6634c7ab20a555bc1f7bcc711f1",
+        "path": "fullgeo_case05/shuffled_xy_all_classes.pt",
+        "shape": [
+          1,
+          15,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 15730217,
+        "tensor_sha256": "0566471d9bf43a2039faa974fba80b961f75277b8e8f242fd535d34ad8bc497c"
+      },
+      "shuffled_xy_label9": {
+        "dtype": "torch.float32",
+        "file_sha256": "3ea080d9fad908a1a0b1ae1961d1ac328fcb18d0bac7c1dfc49f7fead854f8e2",
+        "path": "fullgeo_case05/shuffled_xy_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 15730217,
+        "tensor_sha256": "218720086813d234c42bac3d39f68132e42864b003eaa85a8a3e432bb906d29a"
+      },
+      "xy_permutation": {
+        "dtype": "torch.int64",
+        "file_sha256": "2ad8d3f1b97cbcbbcda4e65f6f586fd1bc99999ff40079daa1db7a89ff2bd6f5",
+        "path": "fullgeo_case05/xy_permutation.pt",
+        "shape": [
+          4096
+        ],
+        "size_bytes": 34345,
+        "tensor_sha256": "0aa8cccc905b6e6a2886a2ed4f7db75a8fcef2b2133d2cd90f29afa0a8395c56"
+      }
+    }
+  },
+  "truth_metric_received": false,
+  "truth_tensor_received": false,
+  "wrong_case_policy": "all_20_off_diagonal_post_seismic_bridge_truth_pairs"
+}

@@ -1,0 +1,87 @@
+{
+  "built_case_hit_records": [
+    {
+      "case_id": "stage11_case01",
+      "target_hit": false,
+      "target_hit_z": [],
+      "xy": [
+        8,
+        8
+      ]
+    },
+    {
+      "case_id": "stage11_case01",
+      "target_hit": false,
+      "target_hit_z": [],
+      "xy": [
+        32,
+        32
+      ]
+    },
+    {
+      "case_id": "stage11_case01",
+      "target_hit": false,
+      "target_hit_z": [],
+      "xy": [
+        55,
+        55
+      ]
+    },
+    {
+      "case_id": "stage11_case02",
+      "target_hit": false,
+      "target_hit_z": [],
+      "xy": [
+        8,
+        8
+      ]
+    },
+    {
+      "case_id": "stage11_case02",
+      "target_hit": false,
+      "target_hit_z": [],
+      "xy": [
+        32,
+        32
+      ]
+    },
+    {
+      "case_id": "stage11_case02",
+      "target_hit": false,
+      "target_hit_z": [],
+      "xy": [
+        55,
+        55
+      ]
+    }
+  ],
+  "cases_excluded_due_to_hits": [],
+  "layout": {
+    "air_z_start": 56,
+    "borehole_xy": [
+      [
+        8,
+        8
+      ],
+      [
+        32,
+        32
+      ],
+      [
+        55,
+        55
+      ]
+    ],
+    "rule": "fixed_fractional_diagonal_three_boreholes_v1",
+    "surface_z": 55,
+    "truth_dependent": false
+  },
+  "schema": "stage11_borehole_layout_audit_v1",
+  "selection_used_hidden_truth": false,
+  "status": "registry_frozen_benchmark_preparation_stopped",
+  "unbuilt_cases": [
+    "stage11_case03",
+    "stage11_case04",
+    "stage11_case05"
+  ]
+}

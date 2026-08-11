@@ -1,0 +1,32 @@
+{
+  "schema": "stage13_repository_review_v1",
+  "recorded_before_stage13_edits": true,
+  "git_branch": "main",
+  "git_head": "72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f",
+  "git_status_short": " M StructuralGeo-main/src/geogen/dataset/dataset.py\n M StructuralGeo-main/src/geogen/generation/categorical_events.py\n M StructuralGeo-main/src/geogen/generation/geowords.py\n M StructuralGeo-main/src/geogen/generation/model_generators.py\n M StructuralGeo-main/src/geogen/model/geomodel.py\n M StructuralGeo-main/src/geogen/model/metaballs.py\n M StructuralGeo-main/src/geogen/probability/random_varibles.py\n M StructuralGeo-main/src/geogen/probability/sedimentbuilders.py\n M StructuralGeo-main/src/geogen/probability/wavegenerators.py\n M project/geodata-3d-conditional/docs/DEVELOPMENT_HANDOFF.md\n M project/geodata-3d-conditional/docs/NEXT_CONVERSATION_PROMPT.md\n?? StructuralGeo-main/src/geogen/generation/rng_contract.py\n?? project/geodata-3d-conditional/docs/FULL_STRUCTURALGEO_BENCHMARK_AUDIT.md\n?? project/geodata-3d-conditional/docs/STAGE9A_FLOW_PRIOR_SUPPORT_SPEC.md\n?? project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/\n?? project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/\n?? project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/\n?? project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/\n?? project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/\n?? project/geodata-3d-conditional/guidance/full_structuralgeo_benchmark.py\n?? project/geodata-3d-conditional/guidance/geophysical_probability_bridge.py\n?? project/geodata-3d-conditional/guidance/prior_ensemble.py\n?? project/geodata-3d-conditional/guidance/stage11_diverse_geometry.py\n?? project/geodata-3d-conditional/paper/\n?? project/geodata-3d-conditional/scripts/benchmarks/\n?? project/geodata-3d-conditional/scripts/paper_figures/\n?? project/geodata-3d-conditional/scripts/stage10/\n?? project/geodata-3d-conditional/scripts/stage11/\n?? project/geodata-3d-conditional/scripts/stage12b/\n?? project/geodata-3d-conditional/scripts/stage9/\n?? project/geodata-3d-conditional/tests/test_paper_figures.py\n?? project/geodata-3d-conditional/tests/test_stage10_probability_bridge.py\n?? project/geodata-3d-conditional/tests/test_stage9_enrichment.py\n?? project/geodata-3d-conditional/tests/test_stage9_prior_ensemble.py\n?? project/geodata-3d-conditional/tests/test_stage9_truth_firewall.py",
+  "remote": {
+    "host": "172.27.231.254",
+    "user": "xmj",
+    "repository": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main",
+    "environment": ".venv (prompt=flowtrain)",
+    "python": "3.10.12"
+  },
+  "reviewed_assets": [
+    {"path": "project/geodata-3d-conditional/docs/FULL_STRUCTURALGEO_BENCHMARK_AUDIT.md", "sha256": "623e19bea16ca65a3b877d5a5a79ce530f6e05d99147bc6636bbad0c881d4fd2"},
+    {"path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/FULL_STRUCTURALGEO_BENCHMARK_BUILD_REPORT.md", "sha256": "bd12c8e87de3b22ed81eb105d38f8180fa10a6a72cc74140462bc66059026337"},
+    {"path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/FULL_STRUCTURALGEO_BENCHMARK_DECISION.json", "sha256": "f37c8095ec766c4ea5a9f56603e6d6736629c45ce88cf4b31f42ee01d9237694"},
+    {"path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/reports/STAGE10_MACHINE_DECISION.json", "sha256": "e03d813610f59197e0aa634769ecfcd2f810ff7c037eeeae8f64abca02fa0dae"},
+    {"path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/diagnostic_addendum/STAGE10R_DIAGNOSTIC_REPORT.md", "sha256": "465b34ed1d8d4cc336fc262a7a28c30911378ddd3164361395e97526d317378c"},
+    {"path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/reports/STAGE12B_A_MACHINE_DECISION.json", "sha256": "49def0b6bbb350f2e57728c1584fbcc05aa6add191e78ec8e5fea586ff60c6f0"},
+    {"path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/reports/STAGE12B_REPORT.md", "sha256": "d1ce620d5b6c1cde8224be7d014f5a652f36d6766b5c47055e692bf5a4759e53"},
+    {"path": "project/geodata-3d-conditional/guidance/probability_volume.py", "sha256": "2b6fb739f1a5a6901f3e5dde924520dc1893ee8acc73bb55db558151691fa44e"},
+    {"path": "project/geodata-3d-conditional/guidance/probability_sampling.py", "sha256": "2aa6119fa8517176eb0d1b8f6892ebdd14cc3051a43dd8e030099150f69bec9f"},
+    {"path": "project/geodata-3d-conditional/guidance/probability_evaluation.py", "sha256": "050d22c2543c5f3d9263b998f1481c8af31d64083df376fa8807b659e6d77ac3"},
+    {"path": "project/geodata-3d-conditional/scripts/stage1/run_probability_guidance.py", "sha256": "8ab6e81f1170a67f69ffb224a31673cb93128bc3364e59a9523611949e2dde84"},
+    {"path": "project/geodata-3d-conditional/guidance/seismic.py", "sha256": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee"},
+    {"path": "project/geodata-3d-conditional/guidance/seismic_inversion.py", "sha256": "2cc6a984002788e0216de491a9543b59098bf38f905aa1df491b472145f81c83"},
+    {"path": "project/geodata-3d-conditional/scripts/stage5/build_acoustic_inversion_posterior.py", "sha256": "eb954404d7aaa0feb82b696519d54db7cd627790261a874af0170a5e6071b2ba"},
+    {"path": "project/geodata-3d-conditional/guidance/geophysical_probability_bridge.py", "sha256": "72d8281144104a0b9d01c37638b3d838113199e952481ddadb5b4625c3085488"},
+    {"path": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json", "sha256": "8980e30c59624af9f1bfa59447b7e22c85a2975f8a556fe6e98f5346f95d10ae"}
+  ]
+}

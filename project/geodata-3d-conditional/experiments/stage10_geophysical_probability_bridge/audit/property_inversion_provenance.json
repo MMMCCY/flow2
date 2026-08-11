@@ -1,0 +1,222 @@
+{
+  "cases": [
+    {
+      "case_id": "native_seed20260901",
+      "forward_operator_config": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+      "grid_coordinates": {
+        "axis_order": [
+          "x",
+          "y",
+          "z"
+        ],
+        "cell_size_m": [
+          100.0,
+          100.0,
+          50.0
+        ],
+        "grid_shape": [
+          64,
+          64,
+          64
+        ]
+      },
+      "initialization": "each of 12 fixed hard Flow members mapped through the registered acoustic codebook",
+      "inversion_input_data": [
+        "observation_correct",
+        "surface_plus_three_fixed_native_boreholes_v1",
+        "registered acoustic codebook",
+        "fixed unranked Stage9A prior candidates 100-111"
+      ],
+      "inversion_method": "linearized post-stack log-impedance Tikhonov inversion reused from Phase 5a",
+      "observed_seismic": {
+        "dtype": "torch.float32",
+        "file_sha256": "22fa6286b7012d5b1aa1f6cf2d4961a62c746109b1afb27ad4f0d4f6f7fd9eb2",
+        "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/cases/stage9a_native_v1/native_seed20260901/inference/observation_correct.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          320
+        ],
+        "tensor_sha256": "4ca0ce9833d41353457b7c4a86cc15d932d2766125dc2368f1e104351918191a"
+      },
+      "output_posterior_representation": "12 log-impedance samples plus population mean/std",
+      "posterior_mean_std_available": true,
+      "posterior_samples_available": true,
+      "property_units": "natural log of kg m^-2 s^-1",
+      "regularization": {
+        "condition_policy": "surface_and_boreholes_exact_before_and_after_inversion_v1",
+        "description": "Single frozen no-training model-based log-impedance inversion operating point for the Phase-4c noiseless inverse-crime seismic upper bound.",
+        "id": "model_based_log_impedance_fixed12_v1",
+        "impedance_bounds": "non_air_codebook_minmax",
+        "inversion_mode": "linearized_poststack_log_impedance_tikhonov_v1",
+        "posterior_statistics": "fixed12_population_mean_std_v1",
+        "prior_relative_weight": 0.001,
+        "regularization_scale": "mean_diagonal_gtg",
+        "schema": "phase5a_model_based_log_impedance_config_v1",
+        "slowness_update": "none_keep_prior_v1",
+        "subsurface_air_policy": "codebook_rock_closest_to_median_log_impedance_v1",
+        "time_depth_mapping": "fixed_prior_slowness_cell_center_linear_interpolation_v1",
+        "time_difference": "forward_first_difference_last_row_zero",
+        "truth_tuned": false,
+        "vertical_smoothness_relative_weight": 0.01,
+        "wavelet_boundary": "zero_padding_same_length_no_wraparound"
+      },
+      "truth_derived_measurement_only": true,
+      "truth_geology_input": false,
+      "truth_property_input": false
+    },
+    {
+      "case_id": "native_seed20260902",
+      "forward_operator_config": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+      "grid_coordinates": {
+        "axis_order": [
+          "x",
+          "y",
+          "z"
+        ],
+        "cell_size_m": [
+          100.0,
+          100.0,
+          50.0
+        ],
+        "grid_shape": [
+          64,
+          64,
+          64
+        ]
+      },
+      "initialization": "each of 12 fixed hard Flow members mapped through the registered acoustic codebook",
+      "inversion_input_data": [
+        "observation_correct",
+        "surface_plus_three_fixed_native_boreholes_v1",
+        "registered acoustic codebook",
+        "fixed unranked Stage9A prior candidates 100-111"
+      ],
+      "inversion_method": "linearized post-stack log-impedance Tikhonov inversion reused from Phase 5a",
+      "observed_seismic": {
+        "dtype": "torch.float32",
+        "file_sha256": "a5f78838d20527f1e4a627830d5e88550fdacac5d44347f35fa3079b1928f2b1",
+        "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/cases/stage9a_native_v1/native_seed20260902/inference/observation_correct.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          320
+        ],
+        "tensor_sha256": "f0a3a593e416c7338150e452d371038126621193238e829813ae92ae85e896ff"
+      },
+      "output_posterior_representation": "12 log-impedance samples plus population mean/std",
+      "posterior_mean_std_available": true,
+      "posterior_samples_available": true,
+      "property_units": "natural log of kg m^-2 s^-1",
+      "regularization": {
+        "condition_policy": "surface_and_boreholes_exact_before_and_after_inversion_v1",
+        "description": "Single frozen no-training model-based log-impedance inversion operating point for the Phase-4c noiseless inverse-crime seismic upper bound.",
+        "id": "model_based_log_impedance_fixed12_v1",
+        "impedance_bounds": "non_air_codebook_minmax",
+        "inversion_mode": "linearized_poststack_log_impedance_tikhonov_v1",
+        "posterior_statistics": "fixed12_population_mean_std_v1",
+        "prior_relative_weight": 0.001,
+        "regularization_scale": "mean_diagonal_gtg",
+        "schema": "phase5a_model_based_log_impedance_config_v1",
+        "slowness_update": "none_keep_prior_v1",
+        "subsurface_air_policy": "codebook_rock_closest_to_median_log_impedance_v1",
+        "time_depth_mapping": "fixed_prior_slowness_cell_center_linear_interpolation_v1",
+        "time_difference": "forward_first_difference_last_row_zero",
+        "truth_tuned": false,
+        "vertical_smoothness_relative_weight": 0.01,
+        "wavelet_boundary": "zero_padding_same_length_no_wraparound"
+      },
+      "truth_derived_measurement_only": true,
+      "truth_geology_input": false,
+      "truth_property_input": false
+    },
+    {
+      "case_id": "native_seed20260903",
+      "forward_operator_config": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+      "grid_coordinates": {
+        "axis_order": [
+          "x",
+          "y",
+          "z"
+        ],
+        "cell_size_m": [
+          100.0,
+          100.0,
+          50.0
+        ],
+        "grid_shape": [
+          64,
+          64,
+          64
+        ]
+      },
+      "initialization": "each of 12 fixed hard Flow members mapped through the registered acoustic codebook",
+      "inversion_input_data": [
+        "observation_correct",
+        "surface_plus_three_fixed_native_boreholes_v1",
+        "registered acoustic codebook",
+        "fixed unranked Stage9A prior candidates 100-111"
+      ],
+      "inversion_method": "linearized post-stack log-impedance Tikhonov inversion reused from Phase 5a",
+      "observed_seismic": {
+        "dtype": "torch.float32",
+        "file_sha256": "8bf7eafcfbc442eac8690915b12b2923515d015f6560f3bf9d1a051b647aa4ee",
+        "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/cases/stage9a_native_v1/native_seed20260903/inference/observation_correct.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          320
+        ],
+        "tensor_sha256": "68735e1b83f85a9b3ec70b1bce49a69fca83d948a073626584530b3a48851d28"
+      },
+      "output_posterior_representation": "12 log-impedance samples plus population mean/std",
+      "posterior_mean_std_available": true,
+      "posterior_samples_available": true,
+      "property_units": "natural log of kg m^-2 s^-1",
+      "regularization": {
+        "condition_policy": "surface_and_boreholes_exact_before_and_after_inversion_v1",
+        "description": "Single frozen no-training model-based log-impedance inversion operating point for the Phase-4c noiseless inverse-crime seismic upper bound.",
+        "id": "model_based_log_impedance_fixed12_v1",
+        "impedance_bounds": "non_air_codebook_minmax",
+        "inversion_mode": "linearized_poststack_log_impedance_tikhonov_v1",
+        "posterior_statistics": "fixed12_population_mean_std_v1",
+        "prior_relative_weight": 0.001,
+        "regularization_scale": "mean_diagonal_gtg",
+        "schema": "phase5a_model_based_log_impedance_config_v1",
+        "slowness_update": "none_keep_prior_v1",
+        "subsurface_air_policy": "codebook_rock_closest_to_median_log_impedance_v1",
+        "time_depth_mapping": "fixed_prior_slowness_cell_center_linear_interpolation_v1",
+        "time_difference": "forward_first_difference_last_row_zero",
+        "truth_tuned": false,
+        "vertical_smoothness_relative_weight": 0.01,
+        "wavelet_boundary": "zero_padding_same_length_no_wraparound"
+      },
+      "truth_derived_measurement_only": true,
+      "truth_geology_input": false,
+      "truth_property_input": false
+    }
+  ],
+  "current_case_truth_used": false,
+  "inversion_config": {
+    "path": "project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/configs/model_based_log_impedance_v1.json",
+    "sha256": "6b690aec3978b48bc6922e7387fc9fca55566e2b54d5f1e2dcb2669143f79088",
+    "size_bytes": 1018
+  },
+  "only_observation_constrained_property_entering_bridge": "log_acoustic_impedance",
+  "phase5a_method_source": {
+    "path": "project/geodata-3d-conditional/guidance/seismic_inversion.py",
+    "sha256": "2cc6a984002788e0216de491a9543b59098bf38f905aa1df491b472145f81c83",
+    "size_bytes": 18021
+  },
+  "qualification": "truth-blind synthetic inverse-crime property posterior; not measured geophysics",
+  "schema": "stage10_property_inversion_provenance_v1",
+  "slowness_entering_bridge": false,
+  "status": "registered_before_bridge_truth_evaluation",
+  "susceptibility_entering_bridge": false
+}

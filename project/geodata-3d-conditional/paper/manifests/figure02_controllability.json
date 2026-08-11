@@ -1,0 +1,264 @@
+{
+  "candidate_or_sample_ids": [
+    {
+      "sample_id": 0,
+      "seed": 42
+    }
+  ],
+  "case_id": "cond_generation_0",
+  "evidence_caveat": "Neither Phase-1 probability nor Phase-2 property evidence is measured geophysics.",
+  "figure_id": "figure02_controllability",
+  "generation": {
+    "camera": {
+      "cut_fraction": 0.52,
+      "focal_point_fraction": [
+        0.5,
+        0.5,
+        0.46
+      ],
+      "parallel_projection": true,
+      "position_direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "view_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "zoom": 1.14
+    },
+    "git_head": "72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f",
+    "matplotlib": "3.8.4",
+    "python": "3.10.12",
+    "script": {
+      "path": "project/geodata-3d-conditional/scripts/paper_figures/figure02_controllability.py",
+      "role": "generation script",
+      "sha256": "c9e655404ef3f282a9c0b8fcc6ddac642e9ebe558660e97c2991c32a9d886110",
+      "size_bytes": 15141
+    },
+    "style": {
+      "base_font_size_pt": 8.0,
+      "categorical_colormap_policy": "fixed discrete raw-label palette",
+      "double_column_mm": 178.0,
+      "font_family": "STIXGeneral",
+      "label9_color": "#D95F02",
+      "label_colors": {
+        "-1": "#FFFFFF",
+        "0": "#7A6652",
+        "1": "#8C4E85",
+        "10": "#C94C4C",
+        "11": "#A33E63",
+        "12": "#7B4FA3",
+        "13": "#5E4B8B",
+        "2": "#3B6FB6",
+        "3": "#5A91C8",
+        "4": "#56B4B8",
+        "5": "#4DA66D",
+        "6": "#86B84A",
+        "7": "#C5C55A",
+        "8": "#E5C55C",
+        "9": "#D95F02"
+      },
+      "observation_color": "#168A89",
+      "seismic_colormap_policy": "zero-centered perceptually balanced diverging",
+      "single_column_mm": 85.0
+    }
+  },
+  "metrics_shown": {
+    "FLOW_ONLY": {
+      "IoU9": 0.02859647939569704,
+      "Precision9": 0.0674836861371956,
+      "Recall9": 0.04727921498661909
+    },
+    "probability_guided": {
+      "IoU9": 0.8128731343283582,
+      "Precision9": 0.8326008025988917,
+      "Recall9": 0.9716770740410348
+    },
+    "property_guided": {
+      "IoU9": 0.48163006756756754,
+      "Precision9": 0.9005132254243979,
+      "Recall9": 0.5086975914362176
+    }
+  },
+  "oracle_panels": [
+    "(d) Oracle probability guidance: truth-derived oracle probability evidence",
+    "(e) Oracle property guidance: truth-derived full-resolution ideal property evidence",
+    "(h) Oracle probability guidance label 9",
+    "(i) Oracle property guidance label 9"
+  ],
+  "outputs": [
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure02_controllability.pdf",
+      "role": "figure output (pdf)",
+      "sha256": "776cccbdd719eccc102d218fb02bcf2602527b5b9caaf1a95da6aad441844eca",
+      "size_bytes": 1364248
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure02_controllability.svg",
+      "role": "figure output (svg)",
+      "sha256": "91e2c4457169770ad53c333bb834b2039d29dc3906e82e94c5d4a79394b9ebce",
+      "size_bytes": 2005295
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure02_controllability.png",
+      "role": "figure output (png)",
+      "sha256": "81b92686aa17be797be4d50079769b139fb61debbb69f8a82841fc3964d12c51",
+      "size_bytes": 1499390
+    }
+  ],
+  "quality_control": {
+    "camera": {
+      "cut_fraction": 0.52,
+      "focal_point_fraction": [
+        0.5,
+        0.5,
+        0.46
+      ],
+      "parallel_projection": true,
+      "position_direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "view_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "zoom": 1.14
+    },
+    "camera_identical_for_all_3d_panels": true,
+    "categorical_colors_fixed": true,
+    "condition_violations": 0,
+    "cross_protocol_flow_only_byte_identical": true,
+    "flow_only_sha256": "b25189fe11ef229c7b4a6fb7a620be355503177d6f78634e1cb39d14a96f283a",
+    "metrics_recomputed_from_saved_tensors": true,
+    "no_nan_or_inf": true,
+    "same_boreholes": true,
+    "same_seed": true,
+    "same_truth": true,
+    "sample_selection": "fixed first sample (sample_0); no metric-based selection",
+    "shape": [
+      64,
+      64,
+      64
+    ],
+    "strict_phase1_pair": true,
+    "strict_phase2_pair": true
+  },
+  "sample_selection": "fixed sample_0, not selected by IoU or any plotted metric",
+  "schema": "paper_figure_manifest_v1",
+  "source_artifacts": [
+    {
+      "path": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt",
+      "role": "retrospective truth and oracle construction source",
+      "sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3",
+      "size_bytes": 1050238
+    },
+    {
+      "path": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/boreholes.pt",
+      "role": "inference-visible sparse conditions",
+      "sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41",
+      "size_bytes": 1050167
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage1_probability/runs/cond_generation_0/label9/all/phase1b_v4/calibrated_reference_windowed/seed42_n4_s32/baseline/sample_0.pt",
+      "role": "authoritative paired FLOW_ONLY sample",
+      "sha256": "b25189fe11ef229c7b4a6fb7a620be355503177d6f78634e1cb39d14a96f283a",
+      "size_bytes": 2098736
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage1_probability/runs/cond_generation_0/label9/all/phase1b_v4/calibrated_reference_windowed/seed42_n4_s32/alpha025/sample_0.pt",
+      "role": "authoritative Phase-1 probability-guided sample",
+      "sha256": "0541ea1b278bf0f1b522cf4643029b286761eedd3614c23c3d9626ace1fd40b3",
+      "size_bytes": 2098736
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_0.pt",
+      "role": "authoritative Phase-2 paired FLOW_ONLY identity check",
+      "sha256": "b25189fe11ef229c7b4a6fb7a620be355503177d6f78634e1cb39d14a96f283a",
+      "size_bytes": 2098736
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/alpha025/sample_0.pt",
+      "role": "authoritative Phase-2 property-guided sample",
+      "sha256": "54167988c9a0639a1a21fc0799bccf165cfcc8596d0d66723595ef0b91384b4f",
+      "size_bytes": 2098736
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage1_probability/runs/cond_generation_0/label9/all/phase1b_v4/calibrated_reference_windowed/seed42_n4_s32/baseline/config.json",
+      "role": "Phase-1 baseline provenance",
+      "sha256": "263f00b7fe2a3ba7c3f8487c13cff7b9c9fa9abbd283892f311e0947577f8876",
+      "size_bytes": 12427
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage1_probability/runs/cond_generation_0/label9/all/phase1b_v4/calibrated_reference_windowed/seed42_n4_s32/alpha025/config.json",
+      "role": "Phase-1 guided provenance",
+      "sha256": "9ee33a40b433d74bf96ae62b098858e04f330c2155777439f30fd6b88c72a9da",
+      "size_bytes": 12892
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/config.json",
+      "role": "Phase-2 baseline provenance",
+      "sha256": "5cac6f1934724ddaad3cf26e56772c8f684f5bc6ffbc8c4d038fb9eaefec1d2f",
+      "size_bytes": 10415
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/alpha025/config.json",
+      "role": "Phase-2 guided provenance",
+      "sha256": "f391346af6e53d662ad07b61f517ea6a72763d42868f92f2cd3f96051491e3b7",
+      "size_bytes": 10902
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage1_probability/runs/cond_generation_0/label9/all/phase1b_v4/calibrated_reference_windowed/seed42_n4_s32/baseline/sample_metrics.csv",
+      "role": "FLOW_ONLY saved metrics",
+      "sha256": "dfc4142ae674bc8387dc7c40c237756c567f9ab16e04825ab8d88662e5412cd7",
+      "size_bytes": 3186
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage1_probability/runs/cond_generation_0/label9/all/phase1b_v4/calibrated_reference_windowed/seed42_n4_s32/alpha025/sample_metrics.csv",
+      "role": "Phase-1 saved metrics",
+      "sha256": "d2e6d7e6057bd0bc07c826a086c07c7a50d146ccb96f202783494d6b5574c34c",
+      "size_bytes": 3504
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/alpha025/sample_metrics.csv",
+      "role": "Phase-2 saved metrics",
+      "sha256": "17b562a8ff5b69bd3c1f1ff10590c49f1ad6dcc5f1307d47566cb5220c0b06bf",
+      "size_bytes": 4973
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage1_probability/runs/cond_generation_0/label9/all/phase1b_v4/calibrated_reference_windowed/seed42_n4_s32/alpha025/target_mask.pt",
+      "role": "truth-derived label-9 target mask",
+      "sha256": "0028dc1fdb18611ffe4654b9d278f7be83ebda5656027cbdb87557fa72f1e481",
+      "size_bytes": 263749
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage1_probability/runs/cond_generation_0/label9/all/phase1b_v4/calibrated_reference_windowed/seed42_n4_s32/alpha025/target_probability.pt",
+      "role": "truth-derived oracle probability evidence",
+      "sha256": "b713880d4069de9e64143cb8c303022814716ae61ed996883e8b64e43cf77a75",
+      "size_bytes": 1050294
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/alpha025/target_properties.pt",
+      "role": "truth-derived oracle property evidence",
+      "sha256": "046c675c0462447a474158c2b58a3af71b4a4da521a8a8223c3218e3e3b7d4d2",
+      "size_bytes": 2098799
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figure_data/figure02_controllability.npz",
+      "role": "exact plotted figure data",
+      "sha256": "8e917d6a3d530a5705c7974887079d6da6894cbaac7d42e5be1a87dd1ef67436",
+      "size_bytes": 85199
+    }
+  ],
+  "source_experiment": [
+    "Phase1 protocol-v4 probability oracle",
+    "Phase2a ideal property upper bound"
+  ],
+  "title": "Controllability",
+  "truth_blind_panels": []
+}

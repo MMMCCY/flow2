@@ -1,0 +1,208 @@
+{
+  "acoustic_metadata": {
+    "density_table_sha256": "346f91e28a53677a534fdc295eb14cf62ce469f553f28f477ba816f297f2ce99",
+    "density_unit": "kg m^-3",
+    "description": "Synthetic complete absolute density and P-wave velocity codebook for the first Phase-4c inverse-crime upper bound. Label 9 has deliberately distinctive impedance; values are not site-calibrated petrophysics.",
+    "id": "acoustic_distinct_label9_upper_bound_v1",
+    "impedance_table_sha256": "bd0f62b3d692d8b10105b56266504e6360511191a48eb0ac11acd3b9705c9f8a",
+    "impedance_unit": "kg m^-2 s^-1",
+    "num_categories": 15,
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "scenario": "synthetic_distinct_label9_acoustic_upper_bound",
+    "schema": "phase4_acoustic_codebook_v1",
+    "site_calibrated_petrophysics": false,
+    "slowness_table_sha256": "36342444bc8042852fdb55682247fa42046cfa5ad30963d444406cac7022f37b",
+    "slowness_unit": "s m^-1",
+    "truth_derived": true,
+    "velocity_table_sha256": "f4835d84b5451bb6ec088d543e7a74b9e5e27e289432fa7b545040eaef9171fc",
+    "velocity_unit": "m s^-1"
+  },
+  "acquisition": "noiseless_full_64x64_upper_bound",
+  "axis_order": [
+    "x",
+    "y",
+    "z"
+  ],
+  "case_id": "fullgeo_case02",
+  "created_at_utc": "2026-08-11T12:06:42.444912+00:00",
+  "fixed_nine_well_layout": "canonical_nine_well_xy_v1",
+  "geological_truth_available_to_inference": false,
+  "grid_shape": [
+    64,
+    64,
+    64
+  ],
+  "prior_bank_was_frozen_before_observation": true,
+  "schema": "stage12b_inference_case_v1",
+  "seismic_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "source_assets": {
+    "acoustic_config": {
+      "path": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+      "sha256": "8980e30c59624af9f1bfa59447b7e22c85a2975f8a556fe6e98f5346f95d10ae",
+      "size_bytes": 1128
+    },
+    "builder_source": {
+      "path": "project/geodata-3d-conditional/scripts/stage12b/build_synthetic_observations.py",
+      "sha256": "43d3edb3027301d451e42e05c4fe0dc56c46ad71fa47d1f9e0bfbf878fa3d50d",
+      "size_bytes": 6953
+    },
+    "protocol": {
+      "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/configs/frozen_protocol.json",
+      "sha256": "cd727aab523eaac0424d6d6b6ffb48fb5aaf2a380528b9022db9bd103a446c0d",
+      "size_bytes": 8166
+    },
+    "seismic_config": {
+      "path": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+      "sha256": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02",
+      "size_bytes": 919
+    },
+    "stage12a_case_manifest_sha256": "826036d465bfcb289cc56baa4f4fb8e536f863cf63bf08e0613e9e7292ba1fca",
+    "stage12a_truth_tensor_sha256": "5ded009fb49b1eeb575904c725e424985e95183aacd252777227fc5f591abe3f"
+  },
+  "status": "complete_truth_generation_process_closed",
+  "tensors": {
+    "acoustic_property_table": {
+      "dtype": "torch.float32",
+      "file_sha256": "dc97b09638a79df4254c42a4538356863dea9a01d5d46caa79a6bf19f67b9d85",
+      "path": "acoustic_property_table.pt",
+      "shape": [
+        2,
+        15
+      ],
+      "size_bytes": 1641,
+      "tensor_sha256": "a70af1965ecd283a303f2ff11350ee55e355d85d2c0e9fbe4c34a9012b34970e"
+    },
+    "borehole_mask": {
+      "dtype": "torch.bool",
+      "file_sha256": "b1af341a920586b6ebb29a90acbb090713522b28f3c62810531b55a83f37a538",
+      "path": "borehole_mask.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 263721,
+      "tensor_sha256": "18519e6aae0ba8daf9b2bb635d209c1c422fb781702789813821a48dc01ce41b"
+    },
+    "condition_mask": {
+      "dtype": "torch.bool",
+      "file_sha256": "d7368b9f1c74d0698cec1c2b33e28911e71e1b74be68ab85e25ea44de1a817bb",
+      "path": "condition_mask.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 263721,
+      "tensor_sha256": "a43d56d2dec2b52d1851881bdd8ac99ed4a2773fce1d4ed6c34d50c67e2bc949"
+    },
+    "condition_values": {
+      "dtype": "torch.int64",
+      "file_sha256": "3ff3400149d0257eb0425da5590787427bd8a83874b415ae04dc4fa36558addb",
+      "path": "condition_values.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 2098729,
+      "tensor_sha256": "08235b0146b2315f5a313a5595240a4320971d78db803db4c2691fcb87869aff"
+    },
+    "observation_correct": {
+      "dtype": "torch.float32",
+      "file_sha256": "e329f5544e665b3bd2b67aefd16bef899cfedafe569ed6dd80309ba5ce9ba1ea",
+      "path": "observation_correct.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        320
+      ],
+      "size_bytes": 5244457,
+      "tensor_sha256": "0d3e857bf42e5dfa836d53862ac535bd18243a677e61736711e941bf05efbc80"
+    },
+    "subsurface_mask": {
+      "dtype": "torch.bool",
+      "file_sha256": "6bc4d4878cef490ddfdcc215dbd6e893ed90877f6b412203a6f2f5fe15966b83",
+      "path": "subsurface_mask.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 263721,
+      "tensor_sha256": "d26ec9ea64529a962939625dd9d42596b2dfdd39a6bc6e1c8b9026003d10dd7a"
+    },
+    "surface_mask": {
+      "dtype": "torch.bool",
+      "file_sha256": "6f7436cdb4b97da081ad18f1442d7862d79061aea233b6410317473d6f1e78a3",
+      "path": "surface_mask.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 263721,
+      "tensor_sha256": "464dc720e2f6b6faa72a41dd8875aa3905c0959dfa1249539783637d75d5db1f"
+    }
+  },
+  "truth_path_recorded_in_inference_manifest": false
+}

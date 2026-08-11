@@ -1,0 +1,926 @@
+{
+  "bounds": [
+    [
+      -1920,
+      1920
+    ],
+    [
+      -1920,
+      1920
+    ],
+    [
+      -1920,
+      1920
+    ]
+  ],
+  "case_id": "fullgeo_case04",
+  "child_seed_derivation": {
+    "bit_generator": "PCG64",
+    "derivation": "SeedSequence(root_seed, spawn_key=SHA256(component)[0:16] as 4 little-endian uint32 words)",
+    "namespace": [
+      "model_000000"
+    ],
+    "root_seed": 120260011,
+    "version": "structuralgeo_named_seedsequence_v1"
+  },
+  "cohort_id": "full_complexity_targeted_v1",
+  "component_statistics": {
+    "component_count_26": 2,
+    "component_count_6": 3,
+    "components_26": [
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            37,
+            63,
+            54
+          ],
+          "min_xyz": [
+            25,
+            0,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            335.2380952380954,
+            1920.0,
+            1371.4285714285716
+          ],
+          "min_xyz": [
+            -396.19047619047615,
+            -1920.0,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          30.396959180300776,
+          34.60684184432325,
+          22.346719550487524
+        ],
+        "centroid_physical_xyz": [
+          -67.2329642483337,
+          189.36940765398822,
+          -557.9142369226652
+        ],
+        "component_id": 1,
+        "hidden_voxel_count": 5875,
+        "physical_volume": 1370248002.5915127,
+        "voxel_count": 6051
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            62,
+            63,
+            53
+          ],
+          "min_xyz": [
+            50,
+            0,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1859.0476190476193,
+            1920.0,
+            1310.4761904761904
+          ],
+          "min_xyz": [
+            1127.6190476190477,
+            -1920.0,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          55.43648163490749,
+          35.859154929577464,
+          21.9928196630765
+        ],
+        "centroid_physical_xyz": [
+          1458.9855472705513,
+          265.7008718980551,
+          -579.4852776791467
+        ],
+        "component_id": 2,
+        "hidden_voxel_count": 7054,
+        "physical_volume": 1639949766.1159701,
+        "voxel_count": 7242
+      }
+    ],
+    "components_6": [
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            37,
+            63,
+            54
+          ],
+          "min_xyz": [
+            25,
+            0,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            335.2380952380954,
+            1920.0,
+            1371.4285714285716
+          ],
+          "min_xyz": [
+            -396.19047619047615,
+            -1920.0,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          30.396363636363635,
+          34.60694214876033,
+          22.342644628099173
+        ],
+        "centroid_physical_xyz": [
+          -67.26926406926418,
+          189.3755214482485,
+          -558.1626131444314
+        ],
+        "component_id": 1,
+        "hidden_voxel_count": 5875,
+        "physical_volume": 1370021552.7480834,
+        "voxel_count": 6050
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            34,
+            34,
+            47
+          ],
+          "min_xyz": [
+            34,
+            34,
+            47
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            152.3809523809523,
+            152.3809523809523,
+            944.7619047619046
+          ],
+          "min_xyz": [
+            152.3809523809523,
+            152.3809523809523,
+            944.7619047619046
+          ]
+        },
+        "centroid_index_xyz": [
+          34.0,
+          34.0,
+          47.0
+        ],
+        "centroid_physical_xyz": [
+          152.3809523809523,
+          152.3809523809523,
+          944.7619047619046
+        ],
+        "component_id": 2,
+        "hidden_voxel_count": 0,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            62,
+            63,
+            53
+          ],
+          "min_xyz": [
+            50,
+            0,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1859.0476190476193,
+            1920.0,
+            1310.4761904761904
+          ],
+          "min_xyz": [
+            1127.6190476190477,
+            -1920.0,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          55.43648163490749,
+          35.859154929577464,
+          21.9928196630765
+        ],
+        "centroid_physical_xyz": [
+          1458.9855472705513,
+          265.7008718980551,
+          -579.4852776791467
+        ],
+        "component_id": 3,
+        "hidden_voxel_count": 7054,
+        "physical_volume": 1639949766.1159701,
+        "voxel_count": 7242
+      }
+    ],
+    "connectivity_definition": {
+      "26_connected": "face, edge, or corner neighbors",
+      "6_connected": "face neighbors"
+    },
+    "overall_label9_geometry": {
+      "bbox_index_inclusive": {
+        "max_xyz": [
+          62,
+          63,
+          54
+        ],
+        "min_xyz": [
+          25,
+          0,
+          0
+        ]
+      },
+      "bbox_physical_inclusive": {
+        "max_xyz": [
+          1859.0476190476193,
+          1920.0,
+          1371.4285714285716
+        ],
+        "min_xyz": [
+          -396.19047619047615,
+          -1920.0,
+          -1920.0
+        ]
+      },
+      "centroid_index_xyz": [
+        44.03844128488678,
+        35.28909952606635,
+        22.15391559467389
+      ],
+      "centroid_physical_xyz": [
+        764.2478497454799,
+        230.95463777928217,
+        -569.6660970865439
+      ],
+      "physical_volume": 3010197768.707483,
+      "voxel_count": 13293
+    },
+    "primary_body_diagnostic": {
+      "component": {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            62,
+            63,
+            53
+          ],
+          "min_xyz": [
+            50,
+            0,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1859.0476190476193,
+            1920.0,
+            1310.4761904761904
+          ],
+          "min_xyz": [
+            1127.6190476190477,
+            -1920.0,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          55.43648163490749,
+          35.859154929577464,
+          21.9928196630765
+        ],
+        "centroid_physical_xyz": [
+          1458.9855472705513,
+          265.7008718980551,
+          -579.4852776791467
+        ],
+        "component_id": 2,
+        "hidden_voxel_count": 7054,
+        "physical_volume": 1639949766.1159701,
+        "voxel_count": 7242
+      },
+      "definition": "largest final raw-label9 26-connected component by hidden voxel count; retrospective metadata only"
+    }
+  },
+  "condition_content_hashes": {
+    "condition/borehole_mask.pt": "c7ecdc63b2042c3561961212322a58ebf87209cd01e5d5eb156873cecf16611b",
+    "condition/boreholes.pt": "a80e48dc236e43a01338e160657aa09403278f33d99a9f998246c6554c766c3a",
+    "condition/condition_mask.pt": "cff3471a03a7eceaf8d6e593cdce1cd2b8cea7f26f76a48956943c8c01549cd4",
+    "condition/condition_values.pt": "a80e48dc236e43a01338e160657aa09403278f33d99a9f998246c6554c766c3a",
+    "condition/surface_mask.pt": "2d13e3792cc7f3407634e9a976fe5539d5b263f5aecf7517f9663089fcd61a83"
+  },
+  "condition_statistics": {
+    "borehole_voxels": 576,
+    "condition_fraction": 0.36083984375,
+    "condition_union_voxels": 94592,
+    "surface_borehole_overlap_voxels": 217,
+    "surface_voxels": 94233,
+    "well_count": 9
+  },
+  "default_matrix_sha256": "cb068ecb1d65487828899179fa02e0aff279703504686c569451fc871dd3784b",
+  "environment_versions": {
+    "numpy": "1.26.4",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+    "pydtmc": "8.0.0",
+    "python": "3.10.12",
+    "scipy": "1.15.3",
+    "torch": "2.8.0+cu128"
+  },
+  "event_subtypes": [
+    "Basement",
+    "TiltCutFill",
+    "Fine",
+    "Wave",
+    "Fourier",
+    "Normal",
+    "BlobCluster",
+    "Sequence",
+    "Shaped",
+    "Simple",
+    "TiltCutFill",
+    "FullyRandom",
+    "StrikeSlip",
+    "Reverse",
+    "Wave",
+    "FullyRandom",
+    "Fourier",
+    "Reverse",
+    "DikeGroup",
+    "WarpedDike",
+    "BlobCluster"
+  ],
+  "events": [
+    {
+      "atomic_processes": [
+        "Bedrock",
+        "Sedimentation"
+      ],
+      "deposition_values": [
+        0,
+        1,
+        4
+      ],
+      "event_index": 0,
+      "state": "BaseStrata",
+      "subtype": "Basement"
+    },
+    {
+      "atomic_processes": [
+        "Tilt",
+        "Fold",
+        "Fold",
+        "UnconformityDepth",
+        "Sedimentation",
+        "Fold",
+        "Fold"
+      ],
+      "deposition_values": [
+        null,
+        1
+      ],
+      "event_index": 1,
+      "state": "Erosion",
+      "subtype": "TiltCutFill"
+    },
+    {
+      "atomic_processes": [
+        "Sedimentation"
+      ],
+      "deposition_values": [
+        3,
+        5,
+        1,
+        5
+      ],
+      "event_index": 2,
+      "state": "Sediment",
+      "subtype": "Fine"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fold",
+        "UnconformityDepth",
+        "Fold",
+        "Fold"
+      ],
+      "deposition_values": [
+        null
+      ],
+      "event_index": 3,
+      "state": "Erosion",
+      "subtype": "Wave"
+    },
+    {
+      "atomic_processes": [
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 4,
+      "state": "Fold",
+      "subtype": "Fourier"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fault",
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 5,
+      "state": "Fault",
+      "subtype": "Normal"
+    },
+    {
+      "atomic_processes": [
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall"
+      ],
+      "deposition_values": [
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13
+      ],
+      "event_index": 6,
+      "state": "OreDeposit",
+      "subtype": "BlobCluster"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fault",
+        "Fault",
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 7,
+      "state": "Fault",
+      "subtype": "Sequence"
+    },
+    {
+      "atomic_processes": [
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 8,
+      "state": "Fold",
+      "subtype": "Shaped"
+    },
+    {
+      "atomic_processes": [
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 9,
+      "state": "Fold",
+      "subtype": "Simple"
+    },
+    {
+      "atomic_processes": [
+        "Tilt",
+        "Fold",
+        "Fold",
+        "UnconformityDepth",
+        "Sedimentation",
+        "Fold",
+        "Fold"
+      ],
+      "deposition_values": [
+        null,
+        3,
+        4,
+        4
+      ],
+      "event_index": 10,
+      "state": "Erosion",
+      "subtype": "TiltCutFill"
+    },
+    {
+      "atomic_processes": [
+        "Fault"
+      ],
+      "deposition_values": [],
+      "event_index": 11,
+      "state": "Fault",
+      "subtype": "FullyRandom"
+    },
+    {
+      "atomic_processes": [
+        "Fault"
+      ],
+      "deposition_values": [],
+      "event_index": 12,
+      "state": "Fault",
+      "subtype": "StrikeSlip"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fault",
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 13,
+      "state": "Fault",
+      "subtype": "Reverse"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fold",
+        "UnconformityDepth",
+        "Fold",
+        "Fold"
+      ],
+      "deposition_values": [
+        null
+      ],
+      "event_index": 14,
+      "state": "Erosion",
+      "subtype": "Wave"
+    },
+    {
+      "atomic_processes": [
+        "Fault"
+      ],
+      "deposition_values": [],
+      "event_index": 15,
+      "state": "Fault",
+      "subtype": "FullyRandom"
+    },
+    {
+      "atomic_processes": [
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 16,
+      "state": "Fold",
+      "subtype": "Fourier"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fault",
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 17,
+      "state": "Fault",
+      "subtype": "Reverse"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "DikePlane",
+        "DikePlane",
+        "Fold"
+      ],
+      "deposition_values": [
+        9,
+        9
+      ],
+      "event_index": 18,
+      "state": "Dike",
+      "subtype": "DikeGroup"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "DikePlane",
+        "Fold"
+      ],
+      "deposition_values": [
+        6
+      ],
+      "event_index": 19,
+      "state": "Dike",
+      "subtype": "WarpedDike"
+    },
+    {
+      "atomic_processes": [
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall"
+      ],
+      "deposition_values": [
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13,
+        13
+      ],
+      "event_index": 20,
+      "state": "OreDeposit",
+      "subtype": "BlobCluster"
+    }
+  ],
+  "fill_nans": true,
+  "height_tracking": true,
+  "label9": {
+    "hidden": 12929,
+    "hidden_fraction": 0.9726171669299631,
+    "observed": 364,
+    "total": 13293
+  },
+  "markov_state_sequence": [
+    "BaseStrata",
+    "Erosion",
+    "Sediment",
+    "Erosion",
+    "Fold",
+    "Fault",
+    "OreDeposit",
+    "Fault",
+    "Fold",
+    "Fold",
+    "Erosion",
+    "Fault",
+    "Fault",
+    "Fault",
+    "Erosion",
+    "Fault",
+    "Fold",
+    "Fault",
+    "Dike",
+    "Dike",
+    "OreDeposit"
+  ],
+  "normalize": true,
+  "packed_history": [
+    "CompoundProcess (BaseStrata: Basement) with 2 sub-processes:\n    1. Bedrock: with z <= 0.0 and value 0.0\n    2. Sedimentation: rock type values [1, 4], and thicknesses 302.586, 195.930, with base = nan",
+    "CompoundProcess (Erosion: TiltCutFill) with 7 sub-processes:\n    1. Tilt: strike 245.3°, dip 0.0°,origin ((0, 0, 0))\n    2. Fold: strike 285.7°, dip 78.4°, rake -3.7°, period 9738.6,amplitude 99.2, origin ((0.00,0.00,0.00)).\n    3. Fold: strike 375.7°, dip 86.9°, rake -2.7°, period 9769.5,amplitude 56.7, origin ((0.00,0.00,0.00)).\n    4. UnconformityDepth: depth 3.2, value nan\n    5. Sedimentation: rock type values [1], and thicknesses 199.977, with base = nan\n    6. Fold: strike 375.7°, dip 86.9°, rake -2.7°, period 9769.5,amplitude -56.7, origin ((0.00,0.00,0.00)).\n    7. Fold: strike 285.7°, dip 78.4°, rake -3.7°, period 9738.6,amplitude -98.0, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Sediment: Fine) with 1 sub-processes:\n    1. Sedimentation: rock type values [3, 5, 1...], and thicknesses 165.361, 100.000, 100.000..., with base = nan",
+    "CompoundProcess (Erosion: Wave) with 5 sub-processes:\n    1. Fold: strike 142.3°, dip 90.0°, rake -1.6°, period 6538.4,amplitude 25.1, origin ((0.00,0.00,0.00)).\n    2. Fold: strike 232.3°, dip 90.0°, rake -19.8°, period 13059.9,amplitude 252.3, origin ((0.00,0.00,0.00)).\n    3. UnconformityDepth: depth 192.5, value nan\n    4. Fold: strike 232.3°, dip 90.0°, rake -19.8°, period 13059.9,amplitude -190.5, origin ((0.00,0.00,0.00)).\n    5. Fold: strike 142.3°, dip 90.0°, rake -1.6°, period 6538.4,amplitude -16.5, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Fold: Fourier) with 1 sub-processes:\n    1. Fold: strike 109.3°, dip 91.9°, rake 161.8°, period 11248.6,amplitude 701.7, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Fault: Normal) with 3 sub-processes:\n    1. Fold: strike 144.6°, dip 90.0°, rake 87.4°, period 13561.9,amplitude 42.5, origin ((0.00,0.00,0.00)).\n    2. Fault with strike 54.6°, dip 74.6°, rake 97.3°, amplitude 684.4, origin ((-2019.8934950383946, 892.1089118912414, 835.7803688518829)).\n    3. Fold: strike 144.6°, dip 90.0°, rake 87.4°, period 13561.9,amplitude -42.5, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (OreDeposit: BlobCluster) with 3 sub-processes:\n    1. CompoundProcess (BlobWord) with 3 sub-processes:\n    1. Metaball: threshold 1.0, value 13.0, with 37 balls.\n    2. Metaball: threshold 1.0, value 13.0, with 37 balls.\n    3. Metaball: threshold 1.0, value 13.0, with 37 balls.\n    2. CompoundProcess (BlobWord) with 2 sub-processes:\n    1. Metaball: threshold 1.0, value 13.0, with 32 balls.\n    2. Metaball: threshold 1.0, value 13.0, with 32 balls.\n    3. CompoundProcess (BlobWord) with 3 sub-processes:\n    1. Metaball: threshold 1.0, value 13.0, with 32 balls.\n    2. Metaball: threshold 1.0, value 13.0, with 32 balls.\n    3. Metaball: threshold 1.0, value 13.0, with 32 balls.",
+    "CompoundProcess (Fault: Sequence) with 4 sub-processes:\n    1. Fold: strike 321.2°, dip 85.4°, rake 71.7°, period 6023.0,amplitude 170.2, origin ((0.00,0.00,0.00)).\n    2. Fault with strike 231.2°, dip 76.3°, rake 93.7°, amplitude 451.4, origin ((-2495.223592361756, 814.2549205340756, -1809.403266445222)).\n    3. Fault with strike 230.7°, dip 75.2°, rake 93.7°, amplitude 430.8, origin ([-2990.38933092  1250.39016626 -1809.40326645]).\n    4. Fold: strike 321.2°, dip 85.4°, rake 71.7°, period 6023.0,amplitude -170.2, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Fold: Shaped) with 1 sub-processes:\n    1. Fold: strike 307.1°, dip 106.7°, rake 121.9°, period 3413.6,amplitude 211.0, origin ((-3027.810475178756, -1503.5374192892177, -422.38701465742326)).",
+    "CompoundProcess (Fold: Simple) with 1 sub-processes:\n    1. Fold: strike 137.1°, dip 72.5°, rake 182.1°, period 2476.6,amplitude 261.4, origin ((-431.7920004329936, 421.1422915124429, 1046.6993017703853)).",
+    "CompoundProcess (Erosion: TiltCutFill) with 7 sub-processes:\n    1. Tilt: strike 13.2°, dip -3.3°,origin ((0, 0, 0))\n    2. Fold: strike 308.1°, dip 99.3°, rake -16.2°, period 6580.4,amplitude 109.1, origin ((0.00,0.00,0.00)).\n    3. Fold: strike 398.1°, dip 89.8°, rake 3.0°, period 7889.8,amplitude 119.9, origin ((0.00,0.00,0.00)).\n    4. UnconformityDepth: depth 200.3, value nan\n    5. Sedimentation: rock type values [3, 4, 4], and thicknesses 106.022, 100.000, 100.000, with base = nan\n    6. Fold: strike 398.1°, dip 89.8°, rake 3.0°, period 7889.8,amplitude -118.8, origin ((0.00,0.00,0.00)).\n    7. Fold: strike 308.1°, dip 99.3°, rake -16.2°, period 6580.4,amplitude -108.1, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Fault: FullyRandom) with 1 sub-processes:\n    1. Fault with strike 269.2°, dip 5.2°, rake 111.2°, amplitude 302.4, origin ((-1026.09174774632, 1433.632453086917, -1228.2278748052074)).",
+    "CompoundProcess (Fault: StrikeSlip) with 1 sub-processes:\n    1. Fault with strike 202.4°, dip 106.7°, rake -5.3°, amplitude -292.5, origin ((-148.68339711269982, -327.87523926697804, 1887.2827707837455)).",
+    "CompoundProcess (Fault: Reverse) with 3 sub-processes:\n    1. Fold: strike 161.8°, dip 90.0°, rake 91.4°, period 3885.4,amplitude 31.0, origin ((0.00,0.00,0.00)).\n    2. Fault with strike 71.8°, dip 98.1°, rake 98.7°, amplitude 235.9, origin ((3524.246250825894, -3177.374121927572, -110.54062691596232)).\n    3. Fold: strike 161.8°, dip 90.0°, rake 91.4°, period 3885.4,amplitude -31.0, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Erosion: Wave) with 5 sub-processes:\n    1. Fold: strike 98.8°, dip 90.0°, rake 20.2°, period 9698.0,amplitude 90.6, origin ((0.00,0.00,0.00)).\n    2. Fold: strike 188.8°, dip 90.0°, rake -8.7°, period 13605.2,amplitude 269.6, origin ((0.00,0.00,0.00)).\n    3. UnconformityDepth: depth 231.7, value nan\n    4. Fold: strike 188.8°, dip 90.0°, rake -8.7°, period 13605.2,amplitude -226.4, origin ((0.00,0.00,0.00)).\n    5. Fold: strike 98.8°, dip 90.0°, rake 20.2°, period 9698.0,amplitude -76.0, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Fault: FullyRandom) with 1 sub-processes:\n    1. Fault with strike 121.9°, dip 62.5°, rake 340.7°, amplitude 165.7, origin ((-3424.285042885625, 115.63437831031797, -1291.4076537521555)).",
+    "CompoundProcess (Fold: Fourier) with 1 sub-processes:\n    1. Fold: strike 240.3°, dip 119.7°, rake 172.2°, period 13554.5,amplitude 600.0, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Fault: Reverse) with 3 sub-processes:\n    1. Fold: strike 339.2°, dip 90.0°, rake 92.2°, period 6387.6,amplitude 83.7, origin ((0.00,0.00,0.00)).\n    2. Fault with strike 249.2°, dip 120.5°, rake 91.8°, amplitude 276.4, origin ((2579.388466576217, 3779.4778085171693, 1073.3507306133388)).\n    3. Fold: strike 339.2°, dip 90.0°, rake 92.2°, period 6387.6,amplitude -83.7, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Dike: DikeGroup) with 4 sub-processes:\n    1. Fold: strike 272.5°, dip 87.3°, rake 98.4°, period 4075.0,amplitude 49.5, origin ((0.00,0.00,0.00)).\n    2. Dike: strike 182.5°, dip 81.9°, width 165.4, origin ((1787.1842174511523, 2114.017661723051, 1273.8225120436402)), value 9.0.\n    3. Dike: strike 181.5°, dip 81.7°, width 135.3, origin ([ 210.18523223 2040.10434123 1273.82251204]), value 9.0.\n    4. Fold: strike 272.5°, dip 87.3°, rake 98.4°, period 4075.0,amplitude -49.5, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Dike: WarpedDike) with 3 sub-processes:\n    1. Fold: strike 302.5°, dip 93.5°, rake 93.7°, period 8190.6,amplitude 153.4, origin ((0.00,0.00,0.00)).\n    2. Dike: strike 212.5°, dip 100.6°, width 232.7, origin ((-2840.6384278369396, 60.84565072733176, -132.65121669186306)), value 6.0.\n    3. Fold: strike 302.5°, dip 93.5°, rake 93.7°, period 8190.6,amplitude -153.4, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (OreDeposit: BlobCluster) with 4 sub-processes:\n    1. CompoundProcess (BlobWord) with 3 sub-processes:\n    1. Metaball: threshold 1.0, value 13.0, with 48 balls.\n    2. Metaball: threshold 1.0, value 13.0, with 48 balls.\n    3. Metaball: threshold 1.0, value 13.0, with 48 balls.\n    2. CompoundProcess (BlobWord) with 3 sub-processes:\n    1. Metaball: threshold 1.0, value 13.0, with 33 balls.\n    2. Metaball: threshold 1.0, value 13.0, with 33 balls.\n    3. Metaball: threshold 1.0, value 13.0, with 33 balls.\n    3. CompoundProcess (BlobWord) with 2 sub-processes:\n    1. Metaball: threshold 1.0, value 13.0, with 25 balls.\n    2. Metaball: threshold 1.0, value 13.0, with 25 balls.\n    4. CompoundProcess (BlobWord) with 3 sub-processes:\n    1. Metaball: threshold 1.0, value 13.0, with 30 balls.\n    2. Metaball: threshold 1.0, value 13.0, with 30 balls.\n    3. Metaball: threshold 1.0, value 13.0, with 30 balls.",
+    "Shift: vector [    0.             0.         -1426.15394397]"
+  ],
+  "raw_label_counts": {
+    "-1": 90114,
+    "0": 102493,
+    "1": 25855,
+    "13": 46,
+    "3": 5502,
+    "4": 13937,
+    "5": 9859,
+    "6": 1045,
+    "9": 13293
+  },
+  "raw_label_semantics": {
+    "labels_10_to_13_not_merged_into_9": true,
+    "mapping": {
+      "-1": "air/unfilled",
+      "0": "bedrock",
+      "1": "sediment_1",
+      "10": "intrusion_10",
+      "11": "intrusion_11",
+      "12": "blob_12",
+      "13": "blob_13",
+      "2": "sediment_2",
+      "3": "sediment_3",
+      "4": "sediment_4",
+      "5": "sediment_5",
+      "6": "dike_6",
+      "7": "dike_7",
+      "8": "dike_8",
+      "9": "intrusion_9_target"
+    },
+    "no_truth_voxel_modified": true,
+    "version": "structuralgeo_raw_labels_v1"
+  },
+  "resolution": [
+    64,
+    64,
+    64
+  ],
+  "roles": {
+    "borehole_mask": "inference_visible",
+    "component_statistics": "truth_only_retrospective_metadata",
+    "condition_mask": "inference_visible",
+    "condition_values": "inference_visible",
+    "hidden_label9_mask": "truth_only_retrospective_target_metadata",
+    "label9_mask": "truth_only_retrospective_target_metadata",
+    "surface_mask": "inference_visible",
+    "true_model": "truth_only",
+    "well_xy": "inference_visible_prospectively_fixed_layout"
+  },
+  "root_seed": 120260011,
+  "saved_file_sha256": {
+    "condition/borehole_mask.pt": "c32222af45cef6e49a4d71f5694c07d35aba8af684e40f82815bca3f6d19047c",
+    "condition/boreholes.pt": "5642c2fd00e7c10f304ac63e9d2af6b5550cc071050008ffa2b198da13b66724",
+    "condition/condition_mask.pt": "4837c19fb1a5525a823042982df853c9f1fa7dcf8d5d2d297f22edaad12c3183",
+    "condition/condition_values.pt": "843df4e13d0ef4f06a7a4ff568d274f7fc8173b2240fbe0f758e8d65f1a4917a",
+    "condition/surface_mask.pt": "a052c2bb7770d11a5de1e84fe3e906f2c777fe6af0d3b901aa8e76b4994e82ca",
+    "condition/well_xy.json": "2fe03349d486a8619d2ec2c4ab1d8d3bae306ca9c78ef484a03a6adbea190318",
+    "geometry/connected_components.json": "2633b65d7887dbb5eb11bb9725e44e064cadca1208735a845314bce6fc7e55b5",
+    "truth/hidden_label9_mask.pt": "7b37eb7108bf964df7d9564c6a13a0cd1d66a7b20bfe797e111ea2ab811c9487",
+    "truth/history.json": "a13aef8eaad6783eb7e20df36cbb4e440e93a0a8954cc276defc1eff19a52a76",
+    "truth/label9_mask.pt": "99557a698fb58cccbd9bf016a91513a161d6a020233da699e68c92cd148010b3",
+    "truth/true_model.pt": "2a281af180ef83c9157a810fc988277aa37f612506d6337662f921ba4e1c9cd9"
+  },
+  "schema_version": "full_structuralgeo_benchmark_v1",
+  "selection_firewall": {
+    "no_downstream_metric_in_selection": true,
+    "no_flow_in_selection": true,
+    "no_seismic_in_selection": true,
+    "visual_qc_not_used_for_selection": true
+  },
+  "source_hashes": {
+    "StructuralGeo-main/src/geogen/dataset/dataset.py": "abd2aca08258bc1c4f34cca0ee585878280ab204cad4aef52ce637700847db3a",
+    "StructuralGeo-main/src/geogen/generation/categorical_events.py": "63f8431e79c6b1fc4937a480c83e18bd69dd04cc18a2b81c427a4149e3233a15",
+    "StructuralGeo-main/src/geogen/generation/geowords.py": "7acb56bf56a07a1bbe4ef8a2a2c7245b3942cbcf84d55931b2025bf2b016ca03",
+    "StructuralGeo-main/src/geogen/generation/markov_matrix/default_markov_matrix.csv": "cb068ecb1d65487828899179fa02e0aff279703504686c569451fc871dd3784b",
+    "StructuralGeo-main/src/geogen/generation/model_generators.py": "2ee1b5fe4bcd89e70d80c3b78af02a7696af7fdedacca3ed391145e3df67e397",
+    "StructuralGeo-main/src/geogen/generation/rng_contract.py": "96e284b99df9ef8444b00e15e2ecfc92ce85c3c3bfdb9328474690937782a022",
+    "StructuralGeo-main/src/geogen/model/geomodel.py": "a7d575bb2864cff02bc6925f61ca7bc1a4d2c7b9f75006e61b3b30a4dc33a094",
+    "StructuralGeo-main/src/geogen/model/metaballs.py": "c0e5d2c2ccd5cdc58d4ea35639221079718a7629d6960711b75b99e53e845be6",
+    "StructuralGeo-main/src/geogen/probability/random_varibles.py": "7188a98bba406c60ea402e28d94f67aad41503d463bd25663717398226bd384e",
+    "StructuralGeo-main/src/geogen/probability/sedimentbuilders.py": "01066bd55e01f5d2354406419a70dd1056456df0da5257f7a07763840db67243",
+    "StructuralGeo-main/src/geogen/probability/wavegenerators.py": "2ff37e2df0e5b76e4d1d39a93c1af661fdda787d707da0ddde5a096f115d1e56",
+    "project/geodata-3d-conditional/boreholes.py": "b0656303987fef04241a70a1df1a6ca4c2897d6c1e4de6470f492487fc038630",
+    "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/configs/full_complexity_targeted_v1.json": "39bb41e8b7f0d6b1597c8ba81d5762603616a9484c1e3b855c8c43fd570f50b0",
+    "project/geodata-3d-conditional/guidance/full_structuralgeo_benchmark.py": "3d292e6b48dbc2ed6911315d9e736afd770e7e164785208584dc268cd1d18097",
+    "project/geodata-3d-conditional/model_train_sh_inference_cond.py": "36d0dc613d8860677f137a2f1d681ebcc50829a6d90f5547c6eac3fd12a977c2",
+    "project/geodata-3d-conditional/scripts/benchmarks/build_full_structuralgeo_benchmark.py": "96f05f1ab3e87fbb7ffcd73790cf1fa9ecbd0741c145577221d4324ea8bfda24"
+  },
+  "tensor_content_hashes": {
+    "condition/borehole_mask.pt": "c7ecdc63b2042c3561961212322a58ebf87209cd01e5d5eb156873cecf16611b",
+    "condition/boreholes.pt": "a80e48dc236e43a01338e160657aa09403278f33d99a9f998246c6554c766c3a",
+    "condition/condition_mask.pt": "cff3471a03a7eceaf8d6e593cdce1cd2b8cea7f26f76a48956943c8c01549cd4",
+    "condition/condition_values.pt": "a80e48dc236e43a01338e160657aa09403278f33d99a9f998246c6554c766c3a",
+    "condition/surface_mask.pt": "2d13e3792cc7f3407634e9a976fe5539d5b263f5aecf7517f9663089fcd61a83",
+    "truth/hidden_label9_mask.pt": "6d937719605b427d2cdd03b5f9ad198fc6bc61671aa3039e247e54f0539f08af",
+    "truth/label9_mask.pt": "b4f3c0b067af76c5e36d95c08e4c939483c26114c773bdbf4ce5d2b83f213cfa",
+    "truth/true_model.pt": "dae7584fdd0186b967a6272f963103e47dd0475e7329969b24dff161c457051a"
+  },
+  "unpacked_history": [
+    "Bedrock: with z <= 0.0 and value 0.0",
+    "Sedimentation: rock type values [1, 4], and thicknesses 302.586, 195.930, with base = nan",
+    "Tilt: strike 245.3°, dip 0.0°,origin ((100.34,-672.39,282.92))",
+    "Fold: strike 285.7°, dip 78.4°, rake -3.7°, period 9738.6,amplitude 99.2, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 375.7°, dip 86.9°, rake -2.7°, period 9769.5,amplitude 56.7, origin ((0.00,0.00,0.00)).",
+    "UnconformityDepth: depth 3.2, value nan",
+    "Sedimentation: rock type values [1], and thicknesses 199.977, with base = nan",
+    "Fold: strike 375.7°, dip 86.9°, rake -2.7°, period 9769.5,amplitude -56.7, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 285.7°, dip 78.4°, rake -3.7°, period 9738.6,amplitude -98.0, origin ((0.00,0.00,0.00)).",
+    "Sedimentation: rock type values [3, 5, 1...], and thicknesses 165.361, 100.000, 100.000..., with base = nan",
+    "Fold: strike 142.3°, dip 90.0°, rake -1.6°, period 6538.4,amplitude 25.1, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 232.3°, dip 90.0°, rake -19.8°, period 13059.9,amplitude 252.3, origin ((0.00,0.00,0.00)).",
+    "UnconformityDepth: depth 192.5, value nan",
+    "Fold: strike 232.3°, dip 90.0°, rake -19.8°, period 13059.9,amplitude -190.5, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 142.3°, dip 90.0°, rake -1.6°, period 6538.4,amplitude -16.5, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 109.3°, dip 91.9°, rake 161.8°, period 11248.6,amplitude 701.7, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 144.6°, dip 90.0°, rake 87.4°, period 13561.9,amplitude 42.5, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 54.6°, dip 74.6°, rake 97.3°, amplitude 684.4, origin ((-1897.13,340.53,1481.55)).",
+    "Fold: strike 144.6°, dip 90.0°, rake 87.4°, period 13561.9,amplitude -42.5, origin ((0.00,0.00,0.00)).",
+    "Metaball: threshold 1.0, value 13.0, with 37 balls.",
+    "Metaball: threshold 1.0, value 13.0, with 37 balls.",
+    "Metaball: threshold 1.0, value 13.0, with 37 balls.",
+    "Metaball: threshold 1.0, value 13.0, with 32 balls.",
+    "Metaball: threshold 1.0, value 13.0, with 32 balls.",
+    "Metaball: threshold 1.0, value 13.0, with 32 balls.",
+    "Metaball: threshold 1.0, value 13.0, with 32 balls.",
+    "Metaball: threshold 1.0, value 13.0, with 32 balls.",
+    "Fold: strike 321.2°, dip 85.4°, rake 71.7°, period 6023.0,amplitude 170.2, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 231.2°, dip 76.3°, rake 93.7°, amplitude 451.4, origin ((-2399.27,814.51,-351.71)).",
+    "Fault with strike 230.7°, dip 75.2°, rake 93.7°, amplitude 430.8, origin ((-2848.83,1284.41,110.75)).",
+    "Fold: strike 321.2°, dip 85.4°, rake 71.7°, period 6023.0,amplitude -170.2, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 307.1°, dip 106.7°, rake 121.9°, period 3413.6,amplitude 211.0, origin ((-3026.52,-1910.26,211.62)).",
+    "Fold: strike 137.1°, dip 72.5°, rake 182.1°, period 2476.6,amplitude 261.4, origin ((-300.53,-361.11,1617.72)).",
+    "Tilt: strike 13.2°, dip -3.3°,origin ((72.80,-770.83,543.20))",
+    "Fold: strike 308.1°, dip 99.3°, rake -16.2°, period 6580.4,amplitude 109.1, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 398.1°, dip 89.8°, rake 3.0°, period 7889.8,amplitude 119.9, origin ((0.00,0.00,0.00)).",
+    "UnconformityDepth: depth 200.3, value nan",
+    "Sedimentation: rock type values [3, 4, 4], and thicknesses 106.022, 100.000, 100.000, with base = nan",
+    "Fold: strike 398.1°, dip 89.8°, rake 3.0°, period 7889.8,amplitude -118.8, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 308.1°, dip 99.3°, rake -16.2°, period 6580.4,amplitude -108.1, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 269.2°, dip 5.2°, rake 111.2°, amplitude 302.4, origin ((-1024.83,1191.12,-19.47)).",
+    "Fault with strike 202.4°, dip 106.7°, rake -5.3°, amplitude -292.5, origin ((-162.55,-558.15,2710.60)).",
+    "Fold: strike 161.8°, dip 90.0°, rake 91.4°, period 3885.4,amplitude 31.0, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 71.8°, dip 98.1°, rake 98.7°, amplitude 235.9, origin ((3552.73,-2996.73,1612.88)).",
+    "Fold: strike 161.8°, dip 90.0°, rake 91.4°, period 3885.4,amplitude -31.0, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 98.8°, dip 90.0°, rake 20.2°, period 9698.0,amplitude 90.6, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 188.8°, dip 90.0°, rake -8.7°, period 13605.2,amplitude 269.6, origin ((0.00,0.00,0.00)).",
+    "UnconformityDepth: depth 231.7, value nan",
+    "Fold: strike 188.8°, dip 90.0°, rake -8.7°, period 13605.2,amplitude -226.4, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 98.8°, dip 90.0°, rake 20.2°, period 9698.0,amplitude -76.0, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 121.9°, dip 62.5°, rake 340.7°, amplitude 165.7, origin ((-3415.91,33.09,-1.79)).",
+    "Fold: strike 240.3°, dip 119.7°, rake 172.2°, period 13554.5,amplitude 600.0, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 339.2°, dip 90.0°, rake 92.2°, period 6387.6,amplitude 83.7, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 249.2°, dip 120.5°, rake 91.8°, amplitude 276.4, origin ((2551.59,3852.70,2496.44)).",
+    "Fold: strike 339.2°, dip 90.0°, rake 92.2°, period 6387.6,amplitude -83.7, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 272.5°, dip 87.3°, rake 98.4°, period 4075.0,amplitude 49.5, origin ((0.00,0.00,0.00)).",
+    "Dike: strike 182.5°, dip 81.9°, width 165.4, origin ((1805.28,2113.09,2702.63)), value 9.0.",
+    "Dike: strike 181.5°, dip 81.7°, width 135.3, origin ((245.71,2038.28,2705.19)), value 9.0.",
+    "Fold: strike 272.5°, dip 87.3°, rake 98.4°, period 4075.0,amplitude -49.5, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 302.5°, dip 93.5°, rake 93.7°, period 8190.6,amplitude 153.4, origin ((0.00,0.00,0.00)).",
+    "Dike: strike 212.5°, dip 100.6°, width 232.7, origin ((-2921.28,111.74,1287.29)), value 6.0.",
+    "Fold: strike 302.5°, dip 93.5°, rake 93.7°, period 8190.6,amplitude -153.4, origin ((0.00,0.00,0.00)).",
+    "Metaball: threshold 1.0, value 13.0, with 48 balls.",
+    "Metaball: threshold 1.0, value 13.0, with 48 balls.",
+    "Metaball: threshold 1.0, value 13.0, with 48 balls.",
+    "Metaball: threshold 1.0, value 13.0, with 33 balls.",
+    "Metaball: threshold 1.0, value 13.0, with 33 balls.",
+    "Metaball: threshold 1.0, value 13.0, with 33 balls.",
+    "Metaball: threshold 1.0, value 13.0, with 25 balls.",
+    "Metaball: threshold 1.0, value 13.0, with 25 balls.",
+    "Metaball: threshold 1.0, value 13.0, with 30 balls.",
+    "Metaball: threshold 1.0, value 13.0, with 30 balls.",
+    "Metaball: threshold 1.0, value 13.0, with 30 balls.",
+    "Shift: vector [    0.             0.         -1426.15394397]"
+  ],
+  "well_coordinates_xy": [
+    [
+      8,
+      46
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      10,
+      24
+    ],
+    [
+      27,
+      17
+    ],
+    [
+      35,
+      26
+    ],
+    [
+      39,
+      59
+    ],
+    [
+      44,
+      60
+    ],
+    [
+      48,
+      6
+    ],
+    [
+      57,
+      32
+    ]
+  ],
+  "well_layout_truth_independent": true
+}

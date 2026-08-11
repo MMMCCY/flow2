@@ -277,7 +277,13 @@ class GeoModel:
         self.Y = np.empty((0, 0, 0))
         self.Z = np.empty((0, 0, 0))
 
-    def compute_model(self, keep_snapshots=True, normalize=False, low_res=(8, 8, 64)):
+    def compute_model(
+        self,
+        keep_snapshots=True,
+        normalize=False,
+        low_res=(8, 8, 64),
+        normalization_rng=None,
+    ):
         """
         Compute the present-day model based on the geological history with an option to normalize the height.
 
@@ -292,7 +298,10 @@ class GeoModel:
         """
         if normalize:
             # Run a preliminary low res model to normalize the height
-            z_shift = self._get_lowres_z_shift_normalization(low_res=low_res)
+            z_shift = self._get_lowres_z_shift_normalization(
+                low_res=low_res,
+                normalization_rng=normalization_rng,
+            )
             self.add_history(Shift([0, 0, z_shift]))
 
         # Run the actual model computation (whether normalized or not)
@@ -574,7 +583,12 @@ class GeoModel:
                     index=i,  # Pass the index of the event in the history
                 )
 
-    def _get_lowres_z_shift_normalization(self, low_res=(8, 8, 64), max_iter=10):
+    def _get_lowres_z_shift_normalization(
+        self,
+        low_res=(8, 8, 64),
+        max_iter=10,
+        normalization_rng=None,
+    ):
         """
         Normalize the model to a new maximum height through iterative correction.
 
@@ -630,7 +644,7 @@ class GeoModel:
                 )
 
         # Step 4: Final adjustment to match the exact desired target height
-        target_max_z = self.get_target_normalization()
+        target_max_z = self.get_target_normalization(rng=normalization_rng)
         shift_z = target_max_z - model_max_filled_z
         total_z_shift += shift_z
 
@@ -702,6 +716,7 @@ class GeoModel:
         self,
         target_max=HEIGHT_NORMALIZATION_FILL_TARGET,
         std_dev=HEIGHT_NORMALIZATION_STD_DEV,
+        rng=None,
     ):
         """
         Calculate the target normalization height for the model with some random variance.
@@ -728,7 +743,8 @@ class GeoModel:
         bounds = self.get_z_bounds()
         zmin, zmax = bounds
         z_range = zmax - zmin
-        target_height = zmin + z_range * (target_max + np.abs(np.random.normal(0, std_dev)))
+        random_source = np.random if rng is None else rng
+        target_height = zmin + z_range * (target_max + np.abs(random_source.normal(0, std_dev)))
         log.debug(f"Normalization Target Height: {target_height}")
         return target_height
 

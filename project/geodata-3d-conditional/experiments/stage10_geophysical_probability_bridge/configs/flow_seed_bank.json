@@ -1,0 +1,29 @@
+{
+  "schema": "stage10_flow_seed_bank_v1",
+  "status": "frozen_before_stage10_truth_evaluation",
+  "seed_source": "Stage9A formal source-seed policy; disjoint from property-prior candidate indices 100-111",
+  "pilot_candidate_indices": [0, 1, 2, 3],
+  "formal_candidate_indices": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+  "spatial_control_candidate_indices": [16, 17, 18, 19],
+  "cases": {
+    "native_seed20260901": {
+      "pilot": [9301000, 9301001, 9301002, 9301003],
+      "formal": [9301004, 9301005, 9301006, 9301007, 9301008, 9301009, 9301010, 9301011, 9301012, 9301013, 9301014, 9301015],
+      "spatial_control": [9301016, 9301017, 9301018, 9301019],
+      "shuffle_seed": 20266943
+    },
+    "native_seed20260902": {
+      "pilot": [9311000, 9311001, 9311002, 9311003],
+      "formal": [9311004, 9311005, 9311006, 9311007, 9311008, 9311009, 9311010, 9311011, 9311012, 9311013, 9311014, 9311015],
+      "spatial_control": [9311016, 9311017, 9311018, 9311019],
+      "shuffle_seed": 20266944
+    },
+    "native_seed20260903": {
+      "pilot": [9321000, 9321001, 9321002, 9321003],
+      "formal": [9321004, 9321005, 9321006, 9321007, 9321008, 9321009, 9321010, 9321011, 9321012, 9321013, 9321014, 9321015],
+      "spatial_control": [9321016, 9321017, 9321018, 9321019],
+      "shuffle_seed": 20266945
+    }
+  },
+  "current_case_truth_used": false
+}

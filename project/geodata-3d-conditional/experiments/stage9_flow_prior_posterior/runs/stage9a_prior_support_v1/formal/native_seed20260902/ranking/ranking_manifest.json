@@ -1,0 +1,76 @@
+{
+  "candidate_count": 1024,
+  "case_id": "native_seed20260902",
+  "completed_at_utc": "2026-08-10T09:37:09.584750+00:00",
+  "exact_command": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/../../.venv/bin/python scripts/stage9/audit_prior_ranking.py --pool-dir experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260902/pool --case-dir experiments/stage9_flow_prior_posterior/cases/stage9a_native_v1/native_seed20260902/inference --output-dir experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260902/ranking",
+  "git_branch": "main",
+  "git_sha": "72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f",
+  "git_status": "?? project/geodata-3d-conditional/docs/STAGE9A_FLOW_PRIOR_SUPPORT_SPEC.md\n?? project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/\n?? project/geodata-3d-conditional/guidance/prior_ensemble.py\n?? project/geodata-3d-conditional/scripts/stage9/\n?? project/geodata-3d-conditional/tests/test_stage9_enrichment.py\n?? project/geodata-3d-conditional/tests/test_stage9_prior_ensemble.py\n?? project/geodata-3d-conditional/tests/test_stage9_truth_firewall.py",
+  "inference_case_manifest": {
+    "path": "experiments/stage9_flow_prior_posterior/cases/stage9a_native_v1/native_seed20260902/inference/manifest.json",
+    "sha256": "f9577e391b3e56f3839a82a93c20152f68afb3bf3afc1918bd2e6ea208eda278",
+    "size_bytes": 3628
+  },
+  "mode": "formal",
+  "observation_hashes": {
+    "correct": "f0a3a593e416c7338150e452d371038126621193238e829813ae92ae85e896ff",
+    "shuffled_xy": "caf7289631afc4354fd06569a158b07f88023fa176a0e5fdc16e3e46c610e578",
+    "wrong_case": "532685bad832d0d22463fb4ff6536e5051e7c67650da890bc63e2b94fb79ed99",
+    "zero": "881162049a8d41cfb41aaf8850e3cb4f5cc81f21b51aff8c260c035eeb0e75d0"
+  },
+  "observations": [
+    "correct",
+    "zero",
+    "shuffled_xy",
+    "wrong_case"
+  ],
+  "pool_candidate_csv": {
+    "path": "experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260902/pool/candidate_pool.csv",
+    "sha256": "c8501aaa8858d31844fbf27ca2f74f220d1ca25c851adba2f88804851304a167",
+    "size_bytes": 326564
+  },
+  "pool_manifest": {
+    "path": "experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260902/pool/manifest.json",
+    "sha256": "5c0104616c78e32ea457080e754d9793f4314bc2d0ad4bc0900237e5ebe760e8",
+    "size_bytes": 282797
+  },
+  "prior_ensemble": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/prior_ensemble.py",
+    "sha256": "a9c95977e8b60458e7431a84bec36562c6f51dfcd523df46950fe66a868268f9",
+    "size_bytes": 16244
+  },
+  "ranking_files": {
+    "correct": {
+      "path": "ranking_correct.csv",
+      "sha256": "fbc35165c75bd184d1eb6523bfa70ffc0abf6c4ea5bf852c4ec48b5db19f77a9",
+      "size_bytes": 253248
+    },
+    "shuffled_xy": {
+      "path": "ranking_shuffled.csv",
+      "sha256": "424d116fbe1660000e04e2be843c153e5d41cc68a082c3ffb7f7451075244610",
+      "size_bytes": 257297
+    },
+    "wrong_case": {
+      "path": "ranking_wrong_case.csv",
+      "sha256": "466869028f57428c8962c127454966feb305f3ad5aee2b34908d8fb3db3c03d8",
+      "size_bytes": 256299
+    },
+    "zero": {
+      "path": "ranking_zero.csv",
+      "sha256": "c586c71c39f1bf1fe4a863af4b5056d508ce783ddad181b24887103588c412bf",
+      "size_bytes": 250141
+    }
+  },
+  "ranking_policy": "ascending_plain_hard_seismic_rmse_then_candidate_id_v1",
+  "runner": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage9/audit_prior_ranking.py",
+    "sha256": "d880ddf8285380b95a4a41328580b739b50c30822a8318f549890c3c9e2bd428",
+    "size_bytes": 8469
+  },
+  "schema": "stage9a_inference_visible_ranking_v1",
+  "scientific_evidence": true,
+  "status": "complete",
+  "tie_break": "candidate_id_ascending",
+  "truth_metrics_computed": false,
+  "truth_tensor_received": false
+}

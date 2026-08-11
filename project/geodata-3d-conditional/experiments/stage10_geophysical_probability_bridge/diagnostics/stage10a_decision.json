@@ -1,0 +1,25 @@
+{
+  "bridge_collection_manifest": {
+    "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/bridge/manifest.json",
+    "sha256": "0aaed94f6d0e97b37fe08fd187c7849b5a364b319061f631648493fad03ba458",
+    "size_bytes": 2715
+  },
+  "case_passes": {
+    "native_seed20260901": false,
+    "native_seed20260902": true,
+    "native_seed20260903": false
+  },
+  "completed_at_utc": "2026-08-11T09:40:51.069463+00:00",
+  "controls_manifest": {
+    "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/controls/manifest.json",
+    "sha256": "25310a0e3eb13b54e762ca2198706134ceea8781d5bb5fd48807162052bb0ea0",
+    "size_bytes": 6359
+  },
+  "machine_action": "STOP_BRIDGE_NO_GEOPHYSICAL_INFORMATION",
+  "passing_case_count": 1,
+  "required_case_count": 2,
+  "schema": "stage10a_bridge_information_decision_v1",
+  "stage10a_pass": false,
+  "status": "complete",
+  "truth_loaded_only_after_bridge_and_controls_frozen": true
+}

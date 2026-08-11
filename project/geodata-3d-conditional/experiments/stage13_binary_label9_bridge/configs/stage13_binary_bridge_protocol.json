@@ -1,0 +1,78 @@
+{
+  "schema": "stage13_binary_label9_bridge_protocol_v1",
+  "status": "frozen_before_stage13_truth_evaluation",
+  "created_at_utc": "2026-08-11T12:56:37Z",
+  "git_branch": "main",
+  "git_head": "72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f",
+  "scientific_question": "Can the current synthetic seismic physics produce a case-specific voxelwise P(label9 | d,x) in full-complexity StructuralGeo geology?",
+  "case_ids": [
+    "fullgeo_case01",
+    "fullgeo_case02",
+    "fullgeo_case03",
+    "fullgeo_case04",
+    "fullgeo_case05"
+  ],
+  "case_replacement_authorized": false,
+  "grid_shape": [64, 64, 64],
+  "axis_order": ["x", "y", "z"],
+  "binary_semantics": {
+    "positive": "raw geology label == 9",
+    "negative": "all valid non-label9 subsurface lithologies",
+    "truth_changed": false,
+    "labels_10_through_13_merged_into_label9": false,
+    "evaluation_target": "Stage12A hidden_label9 under the frozen condition_mask and subsurface_mask"
+  },
+  "identifiability_branch": {
+    "decision": "PHYSICS_BINARY_BRIDGE_REQUIRES_LEARNED_MAPPER",
+    "reason": "The registered post-stack forward observes band-limited interface reflectivity at velocity-dependent travel times, not absolute impedance or homogeneous voxel interiors. A label9-vs-background feature likelihood additionally requires unregistered distributions over neighboring lithologies, geometry, thickness, orientation, and velocity. The acoustic codebook alone cannot supply those distributions.",
+    "stage13_a_bridge_implementation_authorized": false,
+    "stage13_a_truth_evaluation_authorized": false
+  },
+  "preferred_formulation_audit": {
+    "requested_score": "log p(feature | label9) - log p(feature | non-label9)",
+    "physically_specified_by_registered_assets": false,
+    "missing_nuisance_model": [
+      "neighboring non-label9 lithology mixture",
+      "label9 body geometry and thickness",
+      "interface orientation relative to normal-incidence acquisition",
+      "local time-depth mapping and velocity uncertainty",
+      "band-limited wavelet/deconvolution uncertainty"
+    ],
+    "forbidden_fallback_not_used": "existing multiclass P(k|log-impedance) followed by selecting label9"
+  },
+  "prospective_stage13_a_gate_if_a_future_mapper_is_separately_authorized": {
+    "diagonal_mean_auprc_strictly_above_off_diagonal_mean_auprc": true,
+    "minimum_diagonal_row_maximum_cases": 4,
+    "minimum_correct_above_shuffled_cases": 4,
+    "minimum_correct_above_constant_cases": 5,
+    "minimum_correct_seismic_above_no_seismic_cases_if_defined": 4,
+    "primary_aggregation": "per_case_then_unweighted_macro",
+    "pooled_voxels_primary": false
+  },
+  "controls_if_a_future_mapper_is_separately_authorized": {
+    "constant": "fixed prevalence/prior control",
+    "shuffled": "complete xy-column shuffle",
+    "wrong_case": "complete 5x5 transfer evaluation",
+    "no_seismic": "required when the learned mapper defines a prior-only output"
+  },
+  "frozen_historical_decisions": {
+    "stage10": "STOP_BRIDGE_NO_GEOPHYSICAL_INFORMATION",
+    "stage10r": "CASE_GEOMETRY_CONFUNDED plus SEISMIC_ADDS_INCREMENTAL_INFORMATION; diagnostic only",
+    "stage12a": "FULL_STRUCTURALGEO_BENCHMARK_READY",
+    "stage12b": "STOP_FULLGEO_BRIDGE_NOT_CASE_SPECIFIC"
+  },
+  "forbidden": [
+    "Flow sampling",
+    "Flow guidance",
+    "D-Flow",
+    "SMC",
+    "Flow retraining",
+    "adapter training",
+    "neural encoder training",
+    "additional wells",
+    "case replacement",
+    "truth-based fitting or feature selection",
+    "smoothing, sharpening, threshold, scale, or temperature sweeps",
+    "repackaging the Stage12B multiclass scalar-impedance bridge"
+  ]
+}

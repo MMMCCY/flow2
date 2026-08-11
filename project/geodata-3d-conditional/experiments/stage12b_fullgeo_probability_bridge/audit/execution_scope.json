@@ -1,0 +1,31 @@
+{
+  "schema": "stage12b_execution_scope_audit_v1",
+  "status": "stopped_at_authorized_gate",
+  "fixed_case_ids": [
+    "fullgeo_case01",
+    "fullgeo_case02",
+    "fullgeo_case03",
+    "fullgeo_case04",
+    "fullgeo_case05"
+  ],
+  "case_replacements": 0,
+  "new_flow_sampling_for_stage12b_a": false,
+  "stage12b_a_executed": true,
+  "stage12b_a_machine_decision": "STOP_FULLGEO_BRIDGE_NOT_CASE_SPECIFIC",
+  "stage12b_b_authorized": false,
+  "stage12b_b_executed": false,
+  "stage12b_flow_forwards": 0,
+  "flow_only_samples_generated": 0,
+  "probability_guided_flow_samples_generated": 0,
+  "parameter_sweeps": 0,
+  "new_benchmark_cases": 0,
+  "new_wells": 0,
+  "training_runs": 0,
+  "adapter_training_runs": 0,
+  "d_flow_runs": 0,
+  "smc_runs": 0,
+  "stage10_machine_decision_modified": false,
+  "pass_conditional_diagnostic_figure_generated": false,
+  "pass_conditional_flow_main_figure_generated": false,
+  "figure_suppression_reason": "Stage12B-A did not pass"
+}

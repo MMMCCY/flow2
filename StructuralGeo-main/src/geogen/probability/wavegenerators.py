@@ -33,10 +33,11 @@ class FourierWaveGenerator:
         Generate a random Fourier series function f(n_cycles: np.ndarray) -> np.ndarray
     """
 
-    def __init__(self, num_harmonics, frequency=1, smoothness=1.0):
+    def __init__(self, num_harmonics, frequency=1, smoothness=1.0, rng=None):
         self.num_harmonics = num_harmonics
         self.frequency = frequency
         self.smoothness = smoothness
+        self.rng = rng
 
     def generate(self):
         """
@@ -53,9 +54,10 @@ class FourierWaveGenerator:
         total_power = 0
         order = self.smoothness
         for n in range(1, self.num_harmonics + 1):
-            amplitude = np.random.normal(loc=1.0 / (n**order), scale=0.5 / (n**order))
+            random_source = np.random if self.rng is None else self.rng
+            amplitude = random_source.normal(loc=1.0 / (n**order), scale=0.5 / (n**order))
             amplitude = abs(amplitude)  # Ensure non-negative amplitude
-            phase = np.random.uniform(0, 2 * np.pi)
+            phase = random_source.uniform(0, 2 * np.pi)
             amplitudes.append(amplitude)
             phases.append(phase)
             total_power += amplitude**2
@@ -80,14 +82,15 @@ class FourierWaveGenerator:
         self.__dict__.update(state)
 
 
-def noisy_sine_wave(frequency=1, smoothing=20, noise_scale=0.1):
+def noisy_sine_wave(frequency=1, smoothing=20, noise_scale=0.1, rng=None):
     # Noisy sine
     def noisy_sin_wave_func(n_cycles):
         # Deterministic sinusoidal component
         deterministic = np.sin(2 * np.pi * frequency * n_cycles)
 
         # Generate random noise
-        random_noise = np.random.normal(scale=noise_scale, size=n_cycles.shape)
+        random_source = np.random if rng is None else rng
+        random_noise = random_source.normal(scale=noise_scale, size=n_cycles.shape)
 
         # Smooth the random noise
         smoothed_noise = gaussian_filter1d(random_noise, sigma=smoothing)

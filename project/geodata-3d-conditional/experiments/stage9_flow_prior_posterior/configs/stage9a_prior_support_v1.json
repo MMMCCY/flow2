@@ -1,0 +1,79 @@
+{
+  "schema": "stage9a_flow_prior_support_config_v1",
+  "id": "stage9a_prior_support_v1",
+  "status": "frozen_before_stage9a_cuda_evidence",
+  "checkpoint": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "model_weight_policy": "ema_trainable_raw_frozen_embedding_v1",
+  "integrator": "fixed_euler_midpoint_v1",
+  "n_euler_steps": 32,
+  "condition_projection": "project_clean_embedding_before_first_and_after_every_euler_step_v1",
+  "hard_decode": "Geo3DStochInterp.decode_argmax_minus_one_then_exact_condition_projection_v1",
+  "candidate_batch_size": 4,
+  "cache_chunk_size": 4,
+  "prediction_cache": "torch_float32_lossless_deterministic_gzip_v1",
+  "formal_candidates_per_case": 1024,
+  "smoke_candidates_per_case": 4,
+  "formal_source_seed_base": 9301000,
+  "case_source_seed_stride": 10000,
+  "smoke_source_seed_offset": 500000,
+  "primary_cases": [
+    {
+      "case_id": "native_seed20260901",
+      "case_index": 0,
+      "native_seed": 20260901,
+      "wrong_case_seed": 20261901,
+      "shuffle_seed": 20266943
+    },
+    {
+      "case_id": "native_seed20260902",
+      "case_index": 1,
+      "native_seed": 20260902,
+      "wrong_case_seed": 20261902,
+      "shuffle_seed": 20266944
+    },
+    {
+      "case_id": "native_seed20260903",
+      "case_index": 2,
+      "native_seed": 20260903,
+      "wrong_case_seed": 20261903,
+      "shuffle_seed": 20266945
+    }
+  ],
+  "native_builder": "guidance.native_geology_audit.build_structuralgeo_native_case",
+  "native_builder_eligibility": [
+    "canonical_64_cubed_grid_and_air_boundary",
+    "five_nonempty_events",
+    "no_event_mask_overlap",
+    "hidden_events_do_not_intersect_conditions"
+  ],
+  "legacy_cases_excluded_from_primary_gate": [
+    "cond_generation_0",
+    "native_seed20260807",
+    "native_seed20260808",
+    "native_seed20260809"
+  ],
+  "acoustic_config": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+  "seismic_config": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+  "observations": ["correct", "zero", "shuffled_xy", "wrong_case"],
+  "ranking": "ascending_plain_hard_seismic_rmse_then_candidate_id_v1",
+  "target_label": 9,
+  "major_component_ranks": [1, 2, 3, 4],
+  "best_of_n": [1, 4, 16, 64, 256, 1024],
+  "top_fractions": [0.10, 0.05, 0.01],
+  "support_thresholds": {
+    "label9_iou_minimum": 0.30,
+    "label9_precision_minimum": 0.75,
+    "label9_recall_minimum": 0.30,
+    "major_component_min_recall_minimum": 0.25,
+    "major_component_mean_recall_minimum": 0.40,
+    "condition_violations_maximum": 0
+  },
+  "overall_case_pass_minimum": 2,
+  "truth_visible_to_candidate_runner": false,
+  "truth_visible_to_ranking_runner": false,
+  "training_authorized": false,
+  "structured_search_authorized": false,
+  "gravity_authorized": false,
+  "posterior_chain_authorized": false
+}

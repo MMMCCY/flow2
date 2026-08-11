@@ -1,0 +1,186 @@
+{
+  "case_ids": [
+    "native_seed20260901",
+    "native_seed20260902",
+    "native_seed20260903"
+  ],
+  "completed_at_utc": "2026-08-11T09:40:50.344875+00:00",
+  "constant_prior_label9": 0.06666666666666667,
+  "control_records": {
+    "native_seed20260901": {
+      "constant_prior": {
+        "dtype": "torch.float32",
+        "file_sha256": "175fd610b01e8a2920ef6fdba3b05a7c982ff003597914b9ff16a02218027d11",
+        "path": "constant_prior/native_seed20260901/probability_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 1050153,
+        "tensor_sha256": "43986d89886518a6b8d25f58fcb274b5248de4a03a78fa622937753b76dd1e59"
+      },
+      "correct_probability_tensor_sha256": "fd08bd3478f87d414cccc299ed616d4aed548d4722758e87cd6c818e2ca81159",
+      "shuffle_permutation": {
+        "dtype": "torch.int64",
+        "file_sha256": "fe28438a1829f0718dcc0f4f4f3993ff2f75239cedd5bd85e84f3179098f17a4",
+        "path": "shuffled_xy/native_seed20260901/xy_permutation.pt",
+        "shape": [
+          4096
+        ],
+        "size_bytes": 34345,
+        "tensor_sha256": "ab4af144661042840f145218480dd7145d53c2dd61d366e9225caef7a473de3c"
+      },
+      "shuffle_seed": 20266943,
+      "shuffled_xy": {
+        "dtype": "torch.float32",
+        "file_sha256": "1d20df6477cf5aee67202adb71256363711f609d897fcb5829ae37a4ee2e4e50",
+        "path": "shuffled_xy/native_seed20260901/probability_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 15730217,
+        "tensor_sha256": "68a49b2d3b141e9fc02847b9d4b61cedc094edea02fa6274bac5ca6bf7698ba6"
+      },
+      "wrong_case": {
+        "dtype": "torch.float32",
+        "file_sha256": "7ed5025c611e5e498d7ac223e55017eb50d1d29d636562b5fbd749252d467b95",
+        "path": "wrong_case/native_seed20260901/probability_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 1050153,
+        "tensor_sha256": "32d6e42351759c8f0ddaaeac8dfbd56c6c6edebf59f8ec2ed861b011769bf0e5"
+      },
+      "wrong_case_source": "native_seed20260902"
+    },
+    "native_seed20260902": {
+      "constant_prior": {
+        "dtype": "torch.float32",
+        "file_sha256": "175fd610b01e8a2920ef6fdba3b05a7c982ff003597914b9ff16a02218027d11",
+        "path": "constant_prior/native_seed20260902/probability_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 1050153,
+        "tensor_sha256": "43986d89886518a6b8d25f58fcb274b5248de4a03a78fa622937753b76dd1e59"
+      },
+      "correct_probability_tensor_sha256": "32d6e42351759c8f0ddaaeac8dfbd56c6c6edebf59f8ec2ed861b011769bf0e5",
+      "shuffle_permutation": {
+        "dtype": "torch.int64",
+        "file_sha256": "4a23b4ebf23cc15c7055570f6082065c3320afb6d8c0a2657618d981c22845d4",
+        "path": "shuffled_xy/native_seed20260902/xy_permutation.pt",
+        "shape": [
+          4096
+        ],
+        "size_bytes": 34345,
+        "tensor_sha256": "e92deefbdc3872c16ed81e17d883b0f549a0d78d8c85c10a0a69b966f446ff4b"
+      },
+      "shuffle_seed": 20266944,
+      "shuffled_xy": {
+        "dtype": "torch.float32",
+        "file_sha256": "07e273bf1ca1503a5f9cf9a5376763435ae03d0be066530e9eccdb887b89e524",
+        "path": "shuffled_xy/native_seed20260902/probability_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 15730217,
+        "tensor_sha256": "f5402d0e38e1015048a2477d10ced016fe80ae510d6043e913388f7e868bd297"
+      },
+      "wrong_case": {
+        "dtype": "torch.float32",
+        "file_sha256": "a52e19a31dd5ca25c560ad36ff53c4dddea7e07d9a5321b881460465e1a08915",
+        "path": "wrong_case/native_seed20260902/probability_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 1050153,
+        "tensor_sha256": "a47179224ea6d2b35d1ce24eef0f49110f97c8b91df13e184ad1c638180dec03"
+      },
+      "wrong_case_source": "native_seed20260903"
+    },
+    "native_seed20260903": {
+      "constant_prior": {
+        "dtype": "torch.float32",
+        "file_sha256": "175fd610b01e8a2920ef6fdba3b05a7c982ff003597914b9ff16a02218027d11",
+        "path": "constant_prior/native_seed20260903/probability_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 1050153,
+        "tensor_sha256": "43986d89886518a6b8d25f58fcb274b5248de4a03a78fa622937753b76dd1e59"
+      },
+      "correct_probability_tensor_sha256": "a47179224ea6d2b35d1ce24eef0f49110f97c8b91df13e184ad1c638180dec03",
+      "shuffle_permutation": {
+        "dtype": "torch.int64",
+        "file_sha256": "8f69079a519772c2765ff1865c6293d426547c241f5c183e5bc7867027c24448",
+        "path": "shuffled_xy/native_seed20260903/xy_permutation.pt",
+        "shape": [
+          4096
+        ],
+        "size_bytes": 34345,
+        "tensor_sha256": "095370a0714668e87c69e064d0e55ae087d08956e710d90d687a8905ad47e893"
+      },
+      "shuffle_seed": 20266945,
+      "shuffled_xy": {
+        "dtype": "torch.float32",
+        "file_sha256": "ad41c3097642ac9e079e89dd946aa3382688ea80654908525864715ea5fe0294",
+        "path": "shuffled_xy/native_seed20260903/probability_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 15730217,
+        "tensor_sha256": "a6d59d2cfbdb6ade5354da78660e9b6d12b7ba80911b38de9205f69c586eb6f7"
+      },
+      "wrong_case": {
+        "dtype": "torch.float32",
+        "file_sha256": "eaa233bf03fcb946f1a73d3db040b942f7c44e524b89583510bf2bfa74c1efc4",
+        "path": "wrong_case/native_seed20260903/probability_label9.pt",
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "size_bytes": 1050153,
+        "tensor_sha256": "fd08bd3478f87d414cccc299ed616d4aed548d4722758e87cd6c818e2ca81159"
+      },
+      "wrong_case_source": "native_seed20260901"
+    }
+  },
+  "schema": "stage10a_frozen_bridge_controls_v1",
+  "status": "complete_frozen_before_truth_evaluation",
+  "truth_tensor_received": false,
+  "truth_used_for_construction": false
+}

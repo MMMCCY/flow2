@@ -1,0 +1,31 @@
+{
+  "additional_evidence": [
+    "probability\nevidence",
+    "property\nevidence",
+    "geophysical\nobservation"
+  ],
+  "geophysical_branch": [
+    "geology",
+    "petrophysical\nmapping",
+    "forward operator\n$\\mathcal{F}$",
+    "predicted seismic",
+    "compare with\nobserved seismic"
+  ],
+  "main_pipeline": [
+    "StructuralGeo",
+    "3-D categorical\nmodel",
+    "surface + borehole\nobservations",
+    "frozen conditional\nFlow",
+    "continuous embedding\n+ ODE",
+    "hard categorical\ndecode",
+    "geological\nensemble"
+  ],
+  "schema": "flow2_framework_figure_data_v1",
+  "scientific_boundary": {
+    "additional_evidence_role": "inference-time guidance / control",
+    "decode": "hard categorical",
+    "flow": "frozen conditional Flow",
+    "geophysical_comparison": "predicted versus observed seismic",
+    "native_conditioning": "surface + borehole observations"
+  }
+}

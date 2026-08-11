@@ -12,7 +12,11 @@ def _parse_bounds(bounds):
     return bounds
 
 
-def random_point_in_ellipsoid(bounds):
+def _rng_method(rng, name):
+    return getattr(np.random if rng is None else rng, name)
+
+
+def random_point_in_ellipsoid(bounds, rng=None):
     """Generate a random point within an ellipsoid defined by bounds on x, y, z axes."""
 
     # Parse bounds and calculate centers and radii
@@ -25,9 +29,10 @@ def random_point_in_ellipsoid(bounds):
     center_z = z_min + z_radius
 
     # Random angles and radius for a unit sphere
-    phi = np.random.uniform(0, 2 * np.pi)  # Azimuthal angle
-    theta = np.random.uniform(0, np.pi)  # Polar angle
-    u = np.random.uniform(0, 1)  # Radius
+    uniform = _rng_method(rng, "uniform")
+    phi = uniform(0, 2 * np.pi)  # Azimuthal angle
+    theta = uniform(0, np.pi)  # Polar angle
+    u = uniform(0, 1)  # Radius
     r = u ** (1 / 3)
 
     # Random point in unit sphere scaled to fit the ellipsoid
@@ -38,17 +43,18 @@ def random_point_in_ellipsoid(bounds):
     return x, y, z
 
 
-def random_point_in_box(bounds):
+def random_point_in_box(bounds, rng=None):
     (x_min, x_max), (y_min, y_max), (z_min, z_max) = _parse_bounds(bounds)
-    x_loc = np.random.uniform(x_min, x_max)
-    y_loc = np.random.uniform(y_min, y_max)
-    z_loc = np.random.uniform(z_min, z_max)
+    uniform = _rng_method(rng, "uniform")
+    x_loc = uniform(x_min, x_max)
+    y_loc = uniform(y_min, y_max)
+    z_loc = uniform(z_min, z_max)
     return x_loc, y_loc, z_loc
 
 
-def random_angle_degrees():
+def random_angle_degrees(rng=None):
     """Generate a random angle in degrees from 0 to 360."""
-    return np.random.uniform(0, 360)
+    return _rng_method(rng, "uniform")(0, 360)
 
 
 def log_normal_params(mean, std_dev):
@@ -58,6 +64,6 @@ def log_normal_params(mean, std_dev):
     return mu, sigma
 
 
-def beta_min_max(a, b, min_val, max_val):
+def beta_min_max(a, b, min_val, max_val, rng=None):
     """Generate a beta distributed random number with specified min and max values."""
-    return min_val + (max_val - min_val) * np.random.beta(a, b)
+    return min_val + (max_val - min_val) * _rng_method(rng, "beta")(a, b)

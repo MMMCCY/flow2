@@ -1,0 +1,73 @@
+{
+  "audit": {
+    "borehole_layout": {
+      "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/audit/borehole_layout.json",
+      "sha256": "f1235bfd87ab326323a5a0e7b2b0a4a830594d7cc43c57ab1a9510aaedbd7d31",
+      "size_bytes": 1482
+    },
+    "geometry_diversity": {
+      "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/audit/geometry_diversity.csv",
+      "sha256": "057f77a9cf02e6e6fea29b4da98451bab1dcb9774201ec5a9de92b4511ef992d",
+      "size_bytes": 345
+    },
+    "geometry_freeze": {
+      "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/audit/geometry_freeze.json",
+      "sha256": "42237097926544db94d1fd6854c043c832e96c4f5cb5f4cdd7d5e1be2de9a5fa",
+      "size_bytes": 2802
+    },
+    "truth_firewall": {
+      "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/audit/truth_firewall.json",
+      "sha256": "fa1a3bf8287783d2b558c1a31ffe874d9da38d6932108ec9619ee100e345b3c6",
+      "size_bytes": 776
+    }
+  },
+  "configs": {
+    "case_registry": {
+      "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/configs/case_registry.json",
+      "sha256": "dabcda15581835d3b607a564cef9c9310dc1353d26c81f4a6cd6bdbe2842fccd",
+      "size_bytes": 2543
+    },
+    "diversity_spec": {
+      "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/configs/benchmark_diversity_spec.json",
+      "sha256": "0b47338311012377ca2d57d66441506f8880e0da366052154973d1e37cdacf3d",
+      "size_bytes": 981
+    },
+    "protocol": {
+      "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/configs/frozen_protocol.json",
+      "sha256": "ce33d216ab717dcdb0245a1cf7b8b90a016f614b1f7638e793c632bd4fb61b3c",
+      "size_bytes": 3356
+    }
+  },
+  "figure": {
+    "pdf": {
+      "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/figures/stage11_geometry_diversity.pdf",
+      "sha256": "ac3d0b9a5b08e96a61590e192d1ed81bd023715ef9ce1d5fb216f3e56df2bdfa",
+      "size_bytes": 10365
+    },
+    "png": {
+      "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/figures/stage11_geometry_diversity.png",
+      "sha256": "b024a3886a79021dcf87e5aa5591b712a26259ad415276fc8b63500001a93f19",
+      "size_bytes": 226012
+    },
+    "svg": {
+      "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/figures/stage11_geometry_diversity.svg",
+      "sha256": "c217d7061807066b47bda3bc65d9590449fb962775d0296c028d50a32a006c64",
+      "size_bytes": 13088
+    }
+  },
+  "machine_decision": "STOP_BENCHMARK_NOT_DIVERSE",
+  "reports": {
+    "decision": {
+      "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/reports/STAGE11A_DECISION.json",
+      "sha256": "98f51f8490c4baea13423d787c19e823d7fb8222eb01c054927681555acb0665",
+      "size_bytes": 1179
+    },
+    "report": {
+      "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/reports/STAGE11A_REPORT.md",
+      "sha256": "917a13443c753aee95ff9eb08a005c8c422a702196f6a856749700a6e87a0f62",
+      "size_bytes": 1554
+    }
+  },
+  "schema": "stage11_experiment_manifest_v1",
+  "status": "COMPLETE_STOP"
+}

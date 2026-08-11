@@ -1,0 +1,2355 @@
+{
+  "bounds": [
+    [
+      -1920,
+      1920
+    ],
+    [
+      -1920,
+      1920
+    ],
+    [
+      -1920,
+      1920
+    ]
+  ],
+  "case_id": "fullgeo_case05",
+  "child_seed_derivation": {
+    "bit_generator": "PCG64",
+    "derivation": "SeedSequence(root_seed, spawn_key=SHA256(component)[0:16] as 4 little-endian uint32 words)",
+    "namespace": [
+      "model_000000"
+    ],
+    "root_seed": 120260012,
+    "version": "structuralgeo_named_seedsequence_v1"
+  },
+  "cohort_id": "full_complexity_targeted_v1",
+  "component_statistics": {
+    "component_count_26": 4,
+    "component_count_6": 34,
+    "components_26": [
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            26,
+            15,
+            15
+          ],
+          "min_xyz": [
+            0,
+            0,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -335.2380952380952,
+            -1005.7142857142857,
+            -1005.7142857142857
+          ],
+          "min_xyz": [
+            -1920.0,
+            -1920.0,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          12.408959537572255,
+          5.77456647398844,
+          7.157514450867052
+        ],
+        "centroid_physical_xyz": [
+          -1163.644371043215,
+          -1568.0264244426094,
+          -1483.7324525185797
+        ],
+        "component_id": 1,
+        "hidden_voxel_count": 692,
+        "physical_volume": 156703291.65316918,
+        "voxel_count": 692
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            62,
+            37,
+            14
+          ],
+          "min_xyz": [
+            13,
+            0,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1859.0476190476193,
+            335.2380952380954,
+            -1066.6666666666665
+          ],
+          "min_xyz": [
+            -1127.6190476190477,
+            -1920.0,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          34.95087719298245,
+          16.457309941520467,
+          6.097076023391812
+        ],
+        "centroid_physical_xyz": [
+          210.33918128654932,
+          -916.8877749930382,
+          -1548.3686995265944
+        ],
+        "component_id": 2,
+        "hidden_voxel_count": 851,
+        "physical_volume": 193614616.13216713,
+        "voxel_count": 855
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            63,
+            63,
+            18
+          ],
+          "min_xyz": [
+            34,
+            45,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1920.0,
+            1920.0,
+            -822.8571428571429
+          ],
+          "min_xyz": [
+            152.3809523809523,
+            822.8571428571427,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          48.27105517909003,
+          56.35527589545015,
+          8.397386253630204
+        ],
+        "centroid_physical_xyz": [
+          1022.2357442492971,
+          1514.988245056009,
+          -1408.1593140644447
+        ],
+        "component_id": 3,
+        "hidden_voxel_count": 2066,
+        "physical_volume": 467845376.52521324,
+        "voxel_count": 2066
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            63,
+            38,
+            14
+          ],
+          "min_xyz": [
+            51,
+            20,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1920.0,
+            396.19047619047615,
+            -1066.6666666666665
+          ],
+          "min_xyz": [
+            1188.5714285714284,
+            -700.952380952381,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          57.73293172690763,
+          27.29718875502008,
+          7.255020080321285
+        ],
+        "centroid_physical_xyz": [
+          1598.9596481162748,
+          -256.17135207496653,
+          -1477.7892522470836
+        ],
+        "component_id": 4,
+        "hidden_voxel_count": 493,
+        "physical_volume": 112772022.02785875,
+        "voxel_count": 498
+      }
+    ],
+    "components_6": [
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            25,
+            15,
+            15
+          ],
+          "min_xyz": [
+            0,
+            0,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -396.19047619047615,
+            -1005.7142857142857,
+            -1005.7142857142857
+          ],
+          "min_xyz": [
+            -1920.0,
+            -1920.0,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          12.313235294117646,
+          5.810294117647059,
+          7.158823529411765
+        ],
+        "centroid_physical_xyz": [
+          -1169.4789915966387,
+          -1565.8487394957983,
+          -1483.6526610644257
+        ],
+        "component_id": 1,
+        "hidden_voxel_count": 680,
+        "physical_volume": 153985893.53201598,
+        "voxel_count": 680
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            2,
+            12,
+            11
+          ],
+          "min_xyz": [
+            2,
+            12,
+            11
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1798.095238095238,
+            -1188.5714285714284,
+            -1249.5238095238096
+          ],
+          "min_xyz": [
+            -1798.095238095238,
+            -1188.5714285714284,
+            -1249.5238095238096
+          ]
+        },
+        "centroid_index_xyz": [
+          2.0,
+          12.0,
+          11.0
+        ],
+        "centroid_physical_xyz": [
+          -1798.095238095238,
+          -1188.5714285714284,
+          -1249.5238095238096
+        ],
+        "component_id": 2,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            13,
+            3,
+            12
+          ],
+          "min_xyz": [
+            13,
+            3,
+            12
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1127.6190476190477,
+            -1737.142857142857,
+            -1188.5714285714284
+          ],
+          "min_xyz": [
+            -1127.6190476190477,
+            -1737.142857142857,
+            -1188.5714285714284
+          ]
+        },
+        "centroid_index_xyz": [
+          13.0,
+          3.0,
+          12.0
+        ],
+        "centroid_physical_xyz": [
+          -1127.6190476190477,
+          -1737.142857142857,
+          -1188.5714285714284
+        ],
+        "component_id": 3,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            13,
+            35,
+            0
+          ],
+          "min_xyz": [
+            13,
+            35,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1127.6190476190477,
+            213.33333333333348,
+            -1920.0
+          ],
+          "min_xyz": [
+            -1127.6190476190477,
+            213.33333333333348,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          13.0,
+          35.0,
+          0.0
+        ],
+        "centroid_physical_xyz": [
+          -1127.6190476190477,
+          213.33333333333348,
+          -1920.0
+        ],
+        "component_id": 4,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            14,
+            7,
+            4
+          ],
+          "min_xyz": [
+            14,
+            7,
+            4
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1066.6666666666665,
+            -1493.3333333333333,
+            -1676.1904761904761
+          ],
+          "min_xyz": [
+            -1066.6666666666665,
+            -1493.3333333333333,
+            -1676.1904761904761
+          ]
+        },
+        "centroid_index_xyz": [
+          14.0,
+          7.0,
+          4.0
+        ],
+        "centroid_physical_xyz": [
+          -1066.6666666666665,
+          -1493.3333333333333,
+          -1676.1904761904761
+        ],
+        "component_id": 5,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            14,
+            34,
+            1
+          ],
+          "min_xyz": [
+            14,
+            33,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1066.6666666666665,
+            152.3809523809523,
+            -1859.047619047619
+          ],
+          "min_xyz": [
+            -1066.6666666666665,
+            91.42857142857133,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          14.0,
+          33.666666666666664,
+          0.3333333333333333
+        ],
+        "centroid_physical_xyz": [
+          -1066.6666666666665,
+          132.06349206349205,
+          -1899.6825396825398
+        ],
+        "component_id": 6,
+        "hidden_voxel_count": 3,
+        "physical_volume": 679349.5302883057,
+        "voxel_count": 3
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            14,
+            35,
+            3
+          ],
+          "min_xyz": [
+            14,
+            35,
+            2
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1066.6666666666665,
+            213.33333333333348,
+            -1737.142857142857
+          ],
+          "min_xyz": [
+            -1066.6666666666665,
+            213.33333333333348,
+            -1798.095238095238
+          ]
+        },
+        "centroid_index_xyz": [
+          14.0,
+          35.0,
+          2.5
+        ],
+        "centroid_physical_xyz": [
+          -1066.6666666666665,
+          213.33333333333348,
+          -1767.6190476190477
+        ],
+        "component_id": 7,
+        "hidden_voxel_count": 2,
+        "physical_volume": 452899.6868588705,
+        "voxel_count": 2
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            14,
+            36,
+            4
+          ],
+          "min_xyz": [
+            14,
+            36,
+            4
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1066.6666666666665,
+            274.2857142857142,
+            -1676.1904761904761
+          ],
+          "min_xyz": [
+            -1066.6666666666665,
+            274.2857142857142,
+            -1676.1904761904761
+          ]
+        },
+        "centroid_index_xyz": [
+          14.0,
+          36.0,
+          4.0
+        ],
+        "centroid_physical_xyz": [
+          -1066.6666666666665,
+          274.2857142857142,
+          -1676.1904761904761
+        ],
+        "component_id": 8,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            15,
+            2,
+            12
+          ],
+          "min_xyz": [
+            15,
+            2,
+            12
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1005.7142857142857,
+            -1798.095238095238,
+            -1188.5714285714284
+          ],
+          "min_xyz": [
+            -1005.7142857142857,
+            -1798.095238095238,
+            -1188.5714285714284
+          ]
+        },
+        "centroid_index_xyz": [
+          15.0,
+          2.0,
+          12.0
+        ],
+        "centroid_physical_xyz": [
+          -1005.7142857142857,
+          -1798.095238095238,
+          -1188.5714285714284
+        ],
+        "component_id": 9,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            49,
+            35,
+            14
+          ],
+          "min_xyz": [
+            15,
+            7,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1066.6666666666665,
+            213.33333333333348,
+            -1066.6666666666665
+          ],
+          "min_xyz": [
+            -1005.7142857142857,
+            -1493.3333333333333,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          30.985422740524783,
+          19.072886297376094,
+          6.358600583090379
+        ],
+        "centroid_physical_xyz": [
+          -31.36470914896563,
+          -757.4621685408858,
+          -1532.4281549354437
+        ],
+        "component_id": 10,
+        "hidden_voxel_count": 686,
+        "physical_volume": 155344592.59259257,
+        "voxel_count": 686
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            15,
+            35,
+            5
+          ],
+          "min_xyz": [
+            15,
+            35,
+            5
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1005.7142857142857,
+            213.33333333333348,
+            -1615.2380952380952
+          ],
+          "min_xyz": [
+            -1005.7142857142857,
+            213.33333333333348,
+            -1615.2380952380952
+          ]
+        },
+        "centroid_index_xyz": [
+          15.0,
+          35.0,
+          5.0
+        ],
+        "centroid_physical_xyz": [
+          -1005.7142857142857,
+          213.33333333333348,
+          -1615.2380952380952
+        ],
+        "component_id": 11,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            15,
+            37,
+            8
+          ],
+          "min_xyz": [
+            15,
+            36,
+            6
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1005.7142857142857,
+            335.2380952380954,
+            -1432.3809523809523
+          ],
+          "min_xyz": [
+            -1005.7142857142857,
+            274.2857142857142,
+            -1554.2857142857142
+          ]
+        },
+        "centroid_index_xyz": [
+          15.0,
+          36.5,
+          7.0
+        ],
+        "centroid_physical_xyz": [
+          -1005.7142857142857,
+          304.7619047619046,
+          -1493.3333333333333
+        ],
+        "component_id": 12,
+        "hidden_voxel_count": 4,
+        "physical_volume": 905799.373717741,
+        "voxel_count": 4
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            16,
+            6,
+            4
+          ],
+          "min_xyz": [
+            16,
+            6,
+            4
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -944.7619047619048,
+            -1554.2857142857142,
+            -1676.1904761904761
+          ],
+          "min_xyz": [
+            -944.7619047619048,
+            -1554.2857142857142,
+            -1676.1904761904761
+          ]
+        },
+        "centroid_index_xyz": [
+          16.0,
+          6.0,
+          4.0
+        ],
+        "centroid_physical_xyz": [
+          -944.7619047619048,
+          -1554.2857142857142,
+          -1676.1904761904761
+        ],
+        "component_id": 13,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            16,
+            35,
+            7
+          ],
+          "min_xyz": [
+            16,
+            35,
+            7
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -944.7619047619048,
+            213.33333333333348,
+            -1493.3333333333333
+          ],
+          "min_xyz": [
+            -944.7619047619048,
+            213.33333333333348,
+            -1493.3333333333333
+          ]
+        },
+        "centroid_index_xyz": [
+          16.0,
+          35.0,
+          7.0
+        ],
+        "centroid_physical_xyz": [
+          -944.7619047619048,
+          213.33333333333348,
+          -1493.3333333333333
+        ],
+        "component_id": 14,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            16,
+            36,
+            8
+          ],
+          "min_xyz": [
+            16,
+            36,
+            8
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -944.7619047619048,
+            274.2857142857142,
+            -1432.3809523809523
+          ],
+          "min_xyz": [
+            -944.7619047619048,
+            274.2857142857142,
+            -1432.3809523809523
+          ]
+        },
+        "centroid_index_xyz": [
+          16.0,
+          36.0,
+          8.0
+        ],
+        "centroid_physical_xyz": [
+          -944.7619047619048,
+          274.2857142857142,
+          -1432.3809523809523
+        ],
+        "component_id": 15,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            18,
+            5,
+            4
+          ],
+          "min_xyz": [
+            18,
+            5,
+            4
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -822.8571428571429,
+            -1615.2380952380952,
+            -1676.1904761904761
+          ],
+          "min_xyz": [
+            -822.8571428571429,
+            -1615.2380952380952,
+            -1676.1904761904761
+          ]
+        },
+        "centroid_index_xyz": [
+          18.0,
+          5.0,
+          4.0
+        ],
+        "centroid_physical_xyz": [
+          -822.8571428571429,
+          -1615.2380952380952,
+          -1676.1904761904761
+        ],
+        "component_id": 16,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            19,
+            0,
+            13
+          ],
+          "min_xyz": [
+            19,
+            0,
+            13
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -761.9047619047619,
+            -1920.0,
+            -1127.6190476190477
+          ],
+          "min_xyz": [
+            -761.9047619047619,
+            -1920.0,
+            -1127.6190476190477
+          ]
+        },
+        "centroid_index_xyz": [
+          19.0,
+          0.0,
+          13.0
+        ],
+        "centroid_physical_xyz": [
+          -761.9047619047619,
+          -1920.0,
+          -1127.6190476190477
+        ],
+        "component_id": 17,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            20,
+            4,
+            4
+          ],
+          "min_xyz": [
+            20,
+            4,
+            4
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -700.952380952381,
+            -1676.1904761904761,
+            -1676.1904761904761
+          ],
+          "min_xyz": [
+            -700.952380952381,
+            -1676.1904761904761,
+            -1676.1904761904761
+          ]
+        },
+        "centroid_index_xyz": [
+          20.0,
+          4.0,
+          4.0
+        ],
+        "centroid_physical_xyz": [
+          -700.952380952381,
+          -1676.1904761904761,
+          -1676.1904761904761
+        ],
+        "component_id": 18,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            22,
+            3,
+            4
+          ],
+          "min_xyz": [
+            22,
+            3,
+            4
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -579.047619047619,
+            -1737.142857142857,
+            -1676.1904761904761
+          ],
+          "min_xyz": [
+            -579.047619047619,
+            -1737.142857142857,
+            -1676.1904761904761
+          ]
+        },
+        "centroid_index_xyz": [
+          22.0,
+          3.0,
+          4.0
+        ],
+        "centroid_physical_xyz": [
+          -579.047619047619,
+          -1737.142857142857,
+          -1676.1904761904761
+        ],
+        "component_id": 19,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            24,
+            2,
+            4
+          ],
+          "min_xyz": [
+            24,
+            2,
+            4
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -457.1428571428571,
+            -1798.095238095238,
+            -1676.1904761904761
+          ],
+          "min_xyz": [
+            -457.1428571428571,
+            -1798.095238095238,
+            -1676.1904761904761
+          ]
+        },
+        "centroid_index_xyz": [
+          24.0,
+          2.0,
+          4.0
+        ],
+        "centroid_physical_xyz": [
+          -457.1428571428571,
+          -1798.095238095238,
+          -1676.1904761904761
+        ],
+        "component_id": 20,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            25,
+            1,
+            6
+          ],
+          "min_xyz": [
+            25,
+            1,
+            6
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -396.19047619047615,
+            -1859.047619047619,
+            -1554.2857142857142
+          ],
+          "min_xyz": [
+            -396.19047619047615,
+            -1859.047619047619,
+            -1554.2857142857142
+          ]
+        },
+        "centroid_index_xyz": [
+          25.0,
+          1.0,
+          6.0
+        ],
+        "centroid_physical_xyz": [
+          -396.19047619047615,
+          -1859.047619047619,
+          -1554.2857142857142
+        ],
+        "component_id": 21,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            26,
+            0,
+            7
+          ],
+          "min_xyz": [
+            26,
+            0,
+            7
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -335.2380952380952,
+            -1920.0,
+            -1493.3333333333333
+          ],
+          "min_xyz": [
+            -335.2380952380952,
+            -1920.0,
+            -1493.3333333333333
+          ]
+        },
+        "centroid_index_xyz": [
+          26.0,
+          0.0,
+          7.0
+        ],
+        "centroid_physical_xyz": [
+          -335.2380952380952,
+          -1920.0,
+          -1493.3333333333333
+        ],
+        "component_id": 22,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            63,
+            63,
+            18
+          ],
+          "min_xyz": [
+            34,
+            45,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1920.0,
+            1920.0,
+            -822.8571428571429
+          ],
+          "min_xyz": [
+            152.3809523809523,
+            822.8571428571427,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          48.27105517909003,
+          56.35527589545015,
+          8.397386253630204
+        ],
+        "centroid_physical_xyz": [
+          1022.2357442492971,
+          1514.988245056009,
+          -1408.1593140644447
+        ],
+        "component_id": 23,
+        "hidden_voxel_count": 2066,
+        "physical_volume": 467845376.52521324,
+        "voxel_count": 2066
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            51,
+            6,
+            12
+          ],
+          "min_xyz": [
+            46,
+            6,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1188.5714285714284,
+            -1554.2857142857142,
+            -1188.5714285714284
+          ],
+          "min_xyz": [
+            883.8095238095239,
+            -1554.2857142857142,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          48.64,
+          6.0,
+          5.76
+        ],
+        "centroid_physical_xyz": [
+          1044.7238095238095,
+          -1554.2857142857142,
+          -1568.9142857142858
+        ],
+        "component_id": 24,
+        "hidden_voxel_count": 21,
+        "physical_volume": 5661246.085735881,
+        "voxel_count": 25
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            53,
+            5,
+            12
+          ],
+          "min_xyz": [
+            47,
+            5,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1310.4761904761904,
+            -1615.2380952380952,
+            -1188.5714285714284
+          ],
+          "min_xyz": [
+            944.7619047619046,
+            -1615.2380952380952,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          50.583333333333336,
+          5.0,
+          5.666666666666667
+        ],
+        "centroid_physical_xyz": [
+          1163.1746031746034,
+          -1615.2380952380952,
+          -1574.6031746031745
+        ],
+        "component_id": 25,
+        "hidden_voxel_count": 24,
+        "physical_volume": 5434796.242306446,
+        "voxel_count": 24
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            55,
+            4,
+            11
+          ],
+          "min_xyz": [
+            49,
+            4,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1432.3809523809523,
+            -1676.1904761904761,
+            -1249.5238095238096
+          ],
+          "min_xyz": [
+            1066.6666666666665,
+            -1676.1904761904761,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          52.78260869565217,
+          4.0,
+          5.3478260869565215
+        ],
+        "centroid_physical_xyz": [
+          1297.225672877847,
+          -1676.1904761904761,
+          -1594.0372670807453
+        ],
+        "component_id": 26,
+        "hidden_voxel_count": 23,
+        "physical_volume": 5208346.398877011,
+        "voxel_count": 23
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            62,
+            3,
+            11
+          ],
+          "min_xyz": [
+            51,
+            0,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1859.0476190476193,
+            -1737.142857142857,
+            -1249.5238095238096
+          ],
+          "min_xyz": [
+            1188.5714285714284,
+            -1920.0,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          57.59756097560975,
+          1.5853658536585367,
+          4.634146341463414
+        ],
+        "centroid_physical_xyz": [
+          1590.708478513356,
+          -1823.3681765389083,
+          -1637.5377468060396
+        ],
+        "component_id": 27,
+        "hidden_voxel_count": 82,
+        "physical_volume": 18568887.16121369,
+        "voxel_count": 82
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            63,
+            37,
+            14
+          ],
+          "min_xyz": [
+            51,
+            20,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1920.0,
+            335.2380952380954,
+            -1066.6666666666665
+          ],
+          "min_xyz": [
+            1188.5714285714284,
+            -700.952380952381,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          57.79918864097363,
+          27.225152129817445,
+          7.257606490872211
+        ],
+        "centroid_physical_xyz": [
+          1602.9981647831546,
+          -260.56215589684143,
+          -1477.6316043658842
+        ],
+        "component_id": 28,
+        "hidden_voxel_count": 488,
+        "physical_volume": 111639772.81071158,
+        "voxel_count": 493
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            51,
+            32,
+            4
+          ],
+          "min_xyz": [
+            51,
+            32,
+            4
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1188.5714285714284,
+            30.476190476190368,
+            -1676.1904761904761
+          ],
+          "min_xyz": [
+            1188.5714285714284,
+            30.476190476190368,
+            -1676.1904761904761
+          ]
+        },
+        "centroid_index_xyz": [
+          51.0,
+          32.0,
+          4.0
+        ],
+        "centroid_physical_xyz": [
+          1188.5714285714284,
+          30.476190476190368,
+          -1676.1904761904761
+        ],
+        "component_id": 29,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            51,
+            33,
+            5
+          ],
+          "min_xyz": [
+            51,
+            33,
+            5
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1188.5714285714284,
+            91.42857142857133,
+            -1615.2380952380952
+          ],
+          "min_xyz": [
+            1188.5714285714284,
+            91.42857142857133,
+            -1615.2380952380952
+          ]
+        },
+        "centroid_index_xyz": [
+          51.0,
+          33.0,
+          5.0
+        ],
+        "centroid_physical_xyz": [
+          1188.5714285714284,
+          91.42857142857133,
+          -1615.2380952380952
+        ],
+        "component_id": 30,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            51,
+            34,
+            6
+          ],
+          "min_xyz": [
+            51,
+            34,
+            6
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1188.5714285714284,
+            152.3809523809523,
+            -1554.2857142857142
+          ],
+          "min_xyz": [
+            1188.5714285714284,
+            152.3809523809523,
+            -1554.2857142857142
+          ]
+        },
+        "centroid_index_xyz": [
+          51.0,
+          34.0,
+          6.0
+        ],
+        "centroid_physical_xyz": [
+          1188.5714285714284,
+          152.3809523809523,
+          -1554.2857142857142
+        ],
+        "component_id": 31,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            51,
+            35,
+            7
+          ],
+          "min_xyz": [
+            51,
+            35,
+            7
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1188.5714285714284,
+            213.33333333333348,
+            -1493.3333333333333
+          ],
+          "min_xyz": [
+            1188.5714285714284,
+            213.33333333333348,
+            -1493.3333333333333
+          ]
+        },
+        "centroid_index_xyz": [
+          51.0,
+          35.0,
+          7.0
+        ],
+        "centroid_physical_xyz": [
+          1188.5714285714284,
+          213.33333333333348,
+          -1493.3333333333333
+        ],
+        "component_id": 32,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            52,
+            38,
+            13
+          ],
+          "min_xyz": [
+            52,
+            38,
+            13
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1249.5238095238096,
+            396.19047619047615,
+            -1127.6190476190477
+          ],
+          "min_xyz": [
+            1249.5238095238096,
+            396.19047619047615,
+            -1127.6190476190477
+          ]
+        },
+        "centroid_index_xyz": [
+          52.0,
+          38.0,
+          13.0
+        ],
+        "centroid_physical_xyz": [
+          1249.5238095238096,
+          396.19047619047615,
+          -1127.6190476190477
+        ],
+        "component_id": 33,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            56,
+            1,
+            10
+          ],
+          "min_xyz": [
+            56,
+            1,
+            10
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1493.3333333333335,
+            -1859.047619047619,
+            -1310.4761904761904
+          ],
+          "min_xyz": [
+            1493.3333333333335,
+            -1859.047619047619,
+            -1310.4761904761904
+          ]
+        },
+        "centroid_index_xyz": [
+          56.0,
+          1.0,
+          10.0
+        ],
+        "centroid_physical_xyz": [
+          1493.3333333333335,
+          -1859.047619047619,
+          -1310.4761904761904
+        ],
+        "component_id": 34,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      }
+    ],
+    "connectivity_definition": {
+      "26_connected": "face, edge, or corner neighbors",
+      "6_connected": "face neighbors"
+    },
+    "overall_label9_geometry": {
+      "bbox_index_inclusive": {
+        "max_xyz": [
+          63,
+          63,
+          18
+        ],
+        "min_xyz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "bbox_physical_inclusive": {
+        "max_xyz": [
+          1920.0,
+          1920.0,
+          -822.8571428571429
+        ],
+        "min_xyz": [
+          -1920.0,
+          -1920.0,
+          -1920.0
+        ]
+      },
+      "centroid_index_xyz": [
+        40.610313792264655,
+        36.02310873266845,
+        7.571880321089759
+      ],
+      "centroid_physical_xyz": [
+        555.295316861846,
+        275.694246562648,
+        -1458.4758661431003
+      ],
+      "physical_volume": 930935306.3384084,
+      "voxel_count": 4111
+    },
+    "primary_body_diagnostic": {
+      "component": {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            63,
+            63,
+            18
+          ],
+          "min_xyz": [
+            34,
+            45,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1920.0,
+            1920.0,
+            -822.8571428571429
+          ],
+          "min_xyz": [
+            152.3809523809523,
+            822.8571428571427,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          48.27105517909003,
+          56.35527589545015,
+          8.397386253630204
+        ],
+        "centroid_physical_xyz": [
+          1022.2357442492971,
+          1514.988245056009,
+          -1408.1593140644447
+        ],
+        "component_id": 3,
+        "hidden_voxel_count": 2066,
+        "physical_volume": 467845376.52521324,
+        "voxel_count": 2066
+      },
+      "definition": "largest final raw-label9 26-connected component by hidden voxel count; retrospective metadata only"
+    }
+  },
+  "condition_content_hashes": {
+    "condition/borehole_mask.pt": "c7ecdc63b2042c3561961212322a58ebf87209cd01e5d5eb156873cecf16611b",
+    "condition/boreholes.pt": "16ad42eedc1610351fdcab45634a9273d66cc336cf4f7d1d6f14fa1d6f46fc6b",
+    "condition/condition_mask.pt": "f4d14d2a5902aff05669d18c4305983605ffa1f2189a00e188ea7605e17806f5",
+    "condition/condition_values.pt": "16ad42eedc1610351fdcab45634a9273d66cc336cf4f7d1d6f14fa1d6f46fc6b",
+    "condition/surface_mask.pt": "46a648d0954d61c09137896f4a7d500f90654bee498d2c331dad645826417ba7"
+  },
+  "condition_statistics": {
+    "borehole_voxels": 576,
+    "condition_fraction": 0.15810394287109375,
+    "condition_union_voxels": 41446,
+    "surface_borehole_overlap_voxels": 90,
+    "surface_voxels": 40960,
+    "well_count": 9
+  },
+  "default_matrix_sha256": "cb068ecb1d65487828899179fa02e0aff279703504686c569451fc871dd3784b",
+  "environment_versions": {
+    "numpy": "1.26.4",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+    "pydtmc": "8.0.0",
+    "python": "3.10.12",
+    "scipy": "1.15.3",
+    "torch": "2.8.0+cu128"
+  },
+  "event_subtypes": [
+    "Sediment: Tilted Markov",
+    "BlobCluster",
+    "BlobCluster",
+    "Reverse",
+    "DikeGroup",
+    "TiltCutFill",
+    "DikeGroup",
+    "Shaped",
+    "Shaped",
+    "Fine",
+    "Wave",
+    "Sequence",
+    "Coarse",
+    "Normal",
+    "Tilted",
+    "StrikeSlip",
+    "Fine",
+    "Fourier",
+    "Normal",
+    "Coarse",
+    "Flat"
+  ],
+  "events": [
+    {
+      "atomic_processes": [
+        "Bedrock",
+        "Sedimentation",
+        "Tilt",
+        "UnconformityBase"
+      ],
+      "deposition_values": [
+        0,
+        2,
+        1,
+        5,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        1,
+        2,
+        3,
+        2,
+        3,
+        4,
+        1,
+        2,
+        3,
+        1,
+        4,
+        1,
+        5,
+        2,
+        3,
+        2,
+        3,
+        5,
+        3,
+        2,
+        5,
+        2,
+        3,
+        1,
+        5,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        1,
+        3,
+        1,
+        5,
+        2,
+        3,
+        1,
+        2,
+        5,
+        2,
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        3,
+        2,
+        5,
+        2,
+        3,
+        1,
+        5,
+        2,
+        3,
+        2,
+        3,
+        4,
+        1,
+        3,
+        2,
+        5,
+        3,
+        1,
+        4,
+        1,
+        5,
+        3,
+        1,
+        2,
+        1,
+        5,
+        3,
+        null
+      ],
+      "event_index": 0,
+      "state": "BaseStrata",
+      "subtype": "Sediment: Tilted Markov"
+    },
+    {
+      "atomic_processes": [
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall"
+      ],
+      "deposition_values": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "event_index": 1,
+      "state": "OreDeposit",
+      "subtype": "BlobCluster"
+    },
+    {
+      "atomic_processes": [
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall"
+      ],
+      "deposition_values": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "event_index": 2,
+      "state": "OreDeposit",
+      "subtype": "BlobCluster"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fault",
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 3,
+      "state": "Fault",
+      "subtype": "Reverse"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "DikePlane",
+        "DikePlane",
+        "DikePlane",
+        "Fold"
+      ],
+      "deposition_values": [
+        9,
+        9,
+        9
+      ],
+      "event_index": 4,
+      "state": "Dike",
+      "subtype": "DikeGroup"
+    },
+    {
+      "atomic_processes": [
+        "Tilt",
+        "Fold",
+        "Fold",
+        "UnconformityDepth",
+        "Sedimentation",
+        "Fold",
+        "Fold"
+      ],
+      "deposition_values": [
+        null,
+        4
+      ],
+      "event_index": 5,
+      "state": "Erosion",
+      "subtype": "TiltCutFill"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "DikePlane",
+        "DikePlane",
+        "Fold"
+      ],
+      "deposition_values": [
+        9,
+        9
+      ],
+      "event_index": 6,
+      "state": "Dike",
+      "subtype": "DikeGroup"
+    },
+    {
+      "atomic_processes": [
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 7,
+      "state": "Fold",
+      "subtype": "Shaped"
+    },
+    {
+      "atomic_processes": [
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 8,
+      "state": "Fold",
+      "subtype": "Shaped"
+    },
+    {
+      "atomic_processes": [
+        "Sedimentation"
+      ],
+      "deposition_values": [
+        4,
+        3,
+        2,
+        3
+      ],
+      "event_index": 9,
+      "state": "Sediment",
+      "subtype": "Fine"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fold",
+        "UnconformityDepth",
+        "Fold",
+        "Fold"
+      ],
+      "deposition_values": [
+        null
+      ],
+      "event_index": 10,
+      "state": "Erosion",
+      "subtype": "Wave"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fault",
+        "Fault",
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 11,
+      "state": "Fault",
+      "subtype": "Sequence"
+    },
+    {
+      "atomic_processes": [
+        "Sedimentation"
+      ],
+      "deposition_values": [
+        5,
+        2
+      ],
+      "event_index": 12,
+      "state": "Sediment",
+      "subtype": "Coarse"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fault",
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 13,
+      "state": "Fault",
+      "subtype": "Normal"
+    },
+    {
+      "atomic_processes": [
+        "Tilt",
+        "UnconformityDepth",
+        "Tilt",
+        "Tilt",
+        "UnconformityDepth",
+        "Tilt",
+        "Tilt",
+        "UnconformityDepth",
+        "Tilt"
+      ],
+      "deposition_values": [
+        null,
+        null,
+        null
+      ],
+      "event_index": 14,
+      "state": "Erosion",
+      "subtype": "Tilted"
+    },
+    {
+      "atomic_processes": [
+        "Fault"
+      ],
+      "deposition_values": [],
+      "event_index": 15,
+      "state": "Fault",
+      "subtype": "StrikeSlip"
+    },
+    {
+      "atomic_processes": [
+        "Sedimentation"
+      ],
+      "deposition_values": [
+        3,
+        1
+      ],
+      "event_index": 16,
+      "state": "Sediment",
+      "subtype": "Fine"
+    },
+    {
+      "atomic_processes": [
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 17,
+      "state": "Fold",
+      "subtype": "Fourier"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fault",
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 18,
+      "state": "Fault",
+      "subtype": "Normal"
+    },
+    {
+      "atomic_processes": [
+        "Sedimentation"
+      ],
+      "deposition_values": [
+        5,
+        2
+      ],
+      "event_index": 19,
+      "state": "Sediment",
+      "subtype": "Coarse"
+    },
+    {
+      "atomic_processes": [
+        "UnconformityDepth"
+      ],
+      "deposition_values": [
+        null
+      ],
+      "event_index": 20,
+      "state": "Erosion",
+      "subtype": "Flat"
+    }
+  ],
+  "fill_nans": true,
+  "height_tracking": true,
+  "label9": {
+    "hidden": 4102,
+    "hidden_fraction": 0.9978107516419362,
+    "observed": 9,
+    "total": 4111
+  },
+  "markov_state_sequence": [
+    "BaseStrata",
+    "OreDeposit",
+    "OreDeposit",
+    "Fault",
+    "Dike",
+    "Erosion",
+    "Dike",
+    "Fold",
+    "Fold",
+    "Sediment",
+    "Erosion",
+    "Fault",
+    "Sediment",
+    "Fault",
+    "Erosion",
+    "Fault",
+    "Sediment",
+    "Fold",
+    "Fault",
+    "Sediment",
+    "Erosion"
+  ],
+  "normalize": true,
+  "packed_history": [
+    "CompoundProcess (BaseStrata: Sediment: Tilted Markov) with 4 sub-processes:\n    1. Bedrock: with z <= -17280.0 and value 0.0\n    2. Sedimentation: rock type values [2, 1, 5...], and thicknesses 231.637, 498.823, 593.449..., with base = -17280.0\n    3. Tilt: strike 135.2°, dip -7.1°,origin ((0, 0, 0))\n    4. UnconformityBase: base 1000.0, value nan",
+    "CompoundProcess (OreDeposit: BlobCluster) with 4 sub-processes:\n    1. CompoundProcess (BlobWord) with 2 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 25 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 25 balls.\n    2. CompoundProcess (BlobWord) with 2 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 28 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 28 balls.\n    3. CompoundProcess (BlobWord) with 2 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 27 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 27 balls.\n    4. CompoundProcess (BlobWord) with 3 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 25 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 25 balls.\n    3. Metaball: threshold 1.0, value 12.0, with 25 balls.",
+    "CompoundProcess (OreDeposit: BlobCluster) with 6 sub-processes:\n    1. CompoundProcess (BlobWord) with 3 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 22 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 22 balls.\n    3. Metaball: threshold 1.0, value 12.0, with 22 balls.\n    2. CompoundProcess (BlobWord) with 2 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 41 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 41 balls.\n    3. CompoundProcess (BlobWord) with 3 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 31 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 31 balls.\n    3. Metaball: threshold 1.0, value 12.0, with 31 balls.\n    4. CompoundProcess (BlobWord) with 3 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 23 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 23 balls.\n    3. Metaball: threshold 1.0, value 12.0, with 23 balls.\n    5. CompoundProcess (BlobWord) with 2 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 34 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 34 balls.\n    6. CompoundProcess (BlobWord) with 2 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 9 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 9 balls.",
+    "CompoundProcess (Fault: Reverse) with 3 sub-processes:\n    1. Fold: strike 109.7°, dip 90.0°, rake 86.6°, period 7637.5,amplitude 32.5, origin ((0.00,0.00,0.00)).\n    2. Fault with strike 19.7°, dip 93.9°, rake 87.1°, amplitude 139.3, origin ((-2152.1755144155404, 1719.2130110332773, 214.3867481124962)).\n    3. Fold: strike 109.7°, dip 90.0°, rake 86.6°, period 7637.5,amplitude -32.5, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Dike: DikeGroup) with 5 sub-processes:\n    1. Fold: strike 401.0°, dip 89.8°, rake 77.7°, period 6223.3,amplitude 42.5, origin ((0.00,0.00,0.00)).\n    2. Dike: strike 311.0°, dip 89.4°, width 86.7, origin ((571.2082736604295, -2786.6544475615506, 1165.9922578454002)), value 9.0.\n    3. Dike: strike 308.9°, dip 88.8°, width 95.2, origin ([ 1608.15638996 -1604.7500136   1165.99225785]), value 9.0.\n    4. Dike: strike 308.5°, dip 89.9°, width 97.3, origin ([2379.04927374 -523.1560207  1165.99225785]), value 9.0.\n    5. Fold: strike 401.0°, dip 89.8°, rake 77.7°, period 6223.3,amplitude -42.5, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Erosion: TiltCutFill) with 7 sub-processes:\n    1. Tilt: strike 265.0°, dip 4.0°,origin ((0, 0, 0))\n    2. Fold: strike 223.4°, dip 80.7°, rake -3.8°, period 7733.5,amplitude 121.7, origin ((0.00,0.00,0.00)).\n    3. Fold: strike 313.4°, dip 86.4°, rake 12.2°, period 11108.6,amplitude 160.6, origin ((0.00,0.00,0.00)).\n    4. UnconformityDepth: depth 269.4, value nan\n    5. Sedimentation: rock type values [4], and thicknesses 632.936, with base = nan\n    6. Fold: strike 313.4°, dip 86.4°, rake 12.2°, period 11108.6,amplitude -157.6, origin ((0.00,0.00,0.00)).\n    7. Fold: strike 223.4°, dip 80.7°, rake -3.8°, period 7733.5,amplitude -120.1, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Dike: DikeGroup) with 4 sub-processes:\n    1. Fold: strike 334.2°, dip 90.9°, rake 97.0°, period 8322.5,amplitude 46.5, origin ((0.00,0.00,0.00)).\n    2. Dike: strike 244.2°, dip 92.7°, width 248.9, origin ((1241.758381469504, 1743.5096732649456, -377.40251363526835)), value 9.0.\n    3. Dike: strike 236.5°, dip 91.8°, width 249.2, origin ([ 362.53741436 2956.58732797 -377.40251364]), value 9.0.\n    4. Fold: strike 334.2°, dip 90.9°, rake 97.0°, period 8322.5,amplitude -46.5, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Fold: Shaped) with 1 sub-processes:\n    1. Fold: strike 159.1°, dip 68.5°, rake 267.1°, period 4505.7,amplitude 210.0, origin ((297.6243283627126, 1181.96631382889, 1673.8248257832504)).",
+    "CompoundProcess (Fold: Shaped) with 1 sub-processes:\n    1. Fold: strike 16.8°, dip 15.1°, rake 47.1°, period 4446.6,amplitude 229.0, origin ((-2425.5784523318944, 1144.360460173348, -1333.1056378770495)).",
+    "CompoundProcess (Sediment: Fine) with 1 sub-processes:\n    1. Sedimentation: rock type values [4, 3, 2...], and thicknesses 121.980, 144.725, 116.811..., with base = nan",
+    "CompoundProcess (Erosion: Wave) with 5 sub-processes:\n    1. Fold: strike 175.9°, dip 90.0°, rake 4.0°, period 11262.8,amplitude 288.8, origin ((0.00,0.00,0.00)).\n    2. Fold: strike 265.9°, dip 90.0°, rake 6.1°, period 8546.4,amplitude 316.1, origin ((0.00,0.00,0.00)).\n    3. UnconformityDepth: depth 349.1, value nan\n    4. Fold: strike 265.9°, dip 90.0°, rake 6.1°, period 8546.4,amplitude -222.2, origin ((0.00,0.00,0.00)).\n    5. Fold: strike 175.9°, dip 90.0°, rake 4.0°, period 11262.8,amplitude -243.0, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Fault: Sequence) with 4 sub-processes:\n    1. Fold: strike 431.0°, dip 88.0°, rake 91.7°, period 12279.7,amplitude 104.7, origin ((0.00,0.00,0.00)).\n    2. Fault with strike 341.0°, dip 84.0°, rake 105.7°, amplitude 245.5, origin ((2414.2123050268365, 3667.314777398812, -793.0198304680466)).\n    3. Fault with strike 332.0°, dip 83.8°, rake 105.7°, amplitude 215.9, origin ([2554.52958899 3731.57456943 -793.01983047]).\n    4. Fold: strike 431.0°, dip 88.0°, rake 91.7°, period 12279.7,amplitude -104.7, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Sediment: Coarse) with 1 sub-processes:\n    1. Sedimentation: rock type values [5, 2], and thicknesses 351.942, 379.267, with base = nan",
+    "CompoundProcess (Fault: Normal) with 3 sub-processes:\n    1. Fold: strike 395.1°, dip 90.0°, rake 87.9°, period 8337.0,amplitude 80.2, origin ((0.00,0.00,0.00)).\n    2. Fault with strike 305.1°, dip 78.8°, rake 83.3°, amplitude 295.5, origin ((1080.745084125795, -2846.653998610409, -1615.4216526897276)).\n    3. Fold: strike 395.1°, dip 90.0°, rake 87.9°, period 8337.0,amplitude -80.2, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Erosion: Tilted) with 9 sub-processes:\n    1. Tilt: strike 226.9°, dip -2.4°,origin ((-97.49348047901786, -2235.945132208327, 0))\n    2. UnconformityDepth: depth 83.6, value nan\n    3. Tilt: strike 226.9°, dip 2.4°,origin ((-97.49348047901786, -2235.945132208327, 0))\n    4. Tilt: strike 273.8°, dip 6.0°,origin ((-2157.8654618937867, -912.9209852790167, 0))\n    5. UnconformityDepth: depth 184.6, value nan\n    6. Tilt: strike 273.8°, dip -6.0°,origin ((-2157.8654618937867, -912.9209852790167, 0))\n    7. Tilt: strike 49.9°, dip -3.2°,origin ((-303.36958905841635, 702.7157428072908, 0))\n    8. UnconformityDepth: depth 105.8, value nan\n    9. Tilt: strike 49.9°, dip 3.2°,origin ((-303.36958905841635, 702.7157428072908, 0))",
+    "CompoundProcess (Fault: StrikeSlip) with 1 sub-processes:\n    1. Fault with strike 185.6°, dip 110.5°, rake -1.9°, amplitude -221.0, origin ((-2792.1658630196607, 168.127507918854, -328.2544596970604)).",
+    "CompoundProcess (Sediment: Fine) with 1 sub-processes:\n    1. Sedimentation: rock type values [3, 1], and thicknesses 385.676, 382.468, with base = nan",
+    "CompoundProcess (Fold: Fourier) with 1 sub-processes:\n    1. Fold: strike 268.4°, dip 41.2°, rake 43.4°, period 3430.6,amplitude 205.8, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Fault: Normal) with 3 sub-processes:\n    1. Fold: strike 446.3°, dip 90.0°, rake 86.6°, period 15256.9,amplitude 40.6, origin ((0.00,0.00,0.00)).\n    2. Fault with strike 356.3°, dip 83.5°, rake 79.2°, amplitude 264.6, origin ((-3055.717664187352, -324.1735356246518, -969.7205825105731)).\n    3. Fold: strike 446.3°, dip 90.0°, rake 86.6°, period 15256.9,amplitude -40.6, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Sediment: Coarse) with 1 sub-processes:\n    1. Sedimentation: rock type values [5, 2], and thicknesses 579.524, 590.781, with base = nan",
+    "CompoundProcess (Erosion: Flat) with 1 sub-processes:\n    1. UnconformityDepth: depth 386.0, value nan",
+    "Shift: vector [    0.            0.        -2058.7025401]"
+  ],
+  "raw_label_counts": {
+    "-1": 36864,
+    "1": 25970,
+    "2": 65834,
+    "3": 50102,
+    "4": 30624,
+    "5": 48639,
+    "9": 4111
+  },
+  "raw_label_semantics": {
+    "labels_10_to_13_not_merged_into_9": true,
+    "mapping": {
+      "-1": "air/unfilled",
+      "0": "bedrock",
+      "1": "sediment_1",
+      "10": "intrusion_10",
+      "11": "intrusion_11",
+      "12": "blob_12",
+      "13": "blob_13",
+      "2": "sediment_2",
+      "3": "sediment_3",
+      "4": "sediment_4",
+      "5": "sediment_5",
+      "6": "dike_6",
+      "7": "dike_7",
+      "8": "dike_8",
+      "9": "intrusion_9_target"
+    },
+    "no_truth_voxel_modified": true,
+    "version": "structuralgeo_raw_labels_v1"
+  },
+  "resolution": [
+    64,
+    64,
+    64
+  ],
+  "roles": {
+    "borehole_mask": "inference_visible",
+    "component_statistics": "truth_only_retrospective_metadata",
+    "condition_mask": "inference_visible",
+    "condition_values": "inference_visible",
+    "hidden_label9_mask": "truth_only_retrospective_target_metadata",
+    "label9_mask": "truth_only_retrospective_target_metadata",
+    "surface_mask": "inference_visible",
+    "true_model": "truth_only",
+    "well_xy": "inference_visible_prospectively_fixed_layout"
+  },
+  "root_seed": 120260012,
+  "saved_file_sha256": {
+    "condition/borehole_mask.pt": "c32222af45cef6e49a4d71f5694c07d35aba8af684e40f82815bca3f6d19047c",
+    "condition/boreholes.pt": "c89286312039eac002755b7967a4f63ba9c976f38af9765f1f778d04fac0cb92",
+    "condition/condition_mask.pt": "cbf70df8873c6c695b6cc91fab2f5c306dd83917301aad943c4f67aae1bca146",
+    "condition/condition_values.pt": "5f5cd65c1559df9b30d60a4c3231c094d35befcd6f4538aab2695359b9812fb0",
+    "condition/surface_mask.pt": "13f9ba662bf86cda5d051218eb9f77d3b4ac0ddaa6c23bb0e15ee1ece6585af3",
+    "condition/well_xy.json": "2fe03349d486a8619d2ec2c4ab1d8d3bae306ca9c78ef484a03a6adbea190318",
+    "geometry/connected_components.json": "0b5cc62d071c651224dfc45ce0e78dc4a6bb0233291baf21aaeeda5b4b4d950c",
+    "truth/hidden_label9_mask.pt": "783031f49a634694f467a9aa1686d749135f47ed57519e35c915333b8c73399c",
+    "truth/history.json": "f1380eb8486409d48151408bdbf3b9c0ecee8c59ac5ede82bc99ade8c8f75ebc",
+    "truth/label9_mask.pt": "3fe7697a90cb5c9601dc9c933407afad35267c2c658838b258cfc1b72f10f00f",
+    "truth/true_model.pt": "093a97475d88763f398b27ee534bf7e73070f5e2d19111c0d63e010a4cf73530"
+  },
+  "schema_version": "full_structuralgeo_benchmark_v1",
+  "selection_firewall": {
+    "no_downstream_metric_in_selection": true,
+    "no_flow_in_selection": true,
+    "no_seismic_in_selection": true,
+    "visual_qc_not_used_for_selection": true
+  },
+  "source_hashes": {
+    "StructuralGeo-main/src/geogen/dataset/dataset.py": "abd2aca08258bc1c4f34cca0ee585878280ab204cad4aef52ce637700847db3a",
+    "StructuralGeo-main/src/geogen/generation/categorical_events.py": "63f8431e79c6b1fc4937a480c83e18bd69dd04cc18a2b81c427a4149e3233a15",
+    "StructuralGeo-main/src/geogen/generation/geowords.py": "7acb56bf56a07a1bbe4ef8a2a2c7245b3942cbcf84d55931b2025bf2b016ca03",
+    "StructuralGeo-main/src/geogen/generation/markov_matrix/default_markov_matrix.csv": "cb068ecb1d65487828899179fa02e0aff279703504686c569451fc871dd3784b",
+    "StructuralGeo-main/src/geogen/generation/model_generators.py": "2ee1b5fe4bcd89e70d80c3b78af02a7696af7fdedacca3ed391145e3df67e397",
+    "StructuralGeo-main/src/geogen/generation/rng_contract.py": "96e284b99df9ef8444b00e15e2ecfc92ce85c3c3bfdb9328474690937782a022",
+    "StructuralGeo-main/src/geogen/model/geomodel.py": "a7d575bb2864cff02bc6925f61ca7bc1a4d2c7b9f75006e61b3b30a4dc33a094",
+    "StructuralGeo-main/src/geogen/model/metaballs.py": "c0e5d2c2ccd5cdc58d4ea35639221079718a7629d6960711b75b99e53e845be6",
+    "StructuralGeo-main/src/geogen/probability/random_varibles.py": "7188a98bba406c60ea402e28d94f67aad41503d463bd25663717398226bd384e",
+    "StructuralGeo-main/src/geogen/probability/sedimentbuilders.py": "01066bd55e01f5d2354406419a70dd1056456df0da5257f7a07763840db67243",
+    "StructuralGeo-main/src/geogen/probability/wavegenerators.py": "2ff37e2df0e5b76e4d1d39a93c1af661fdda787d707da0ddde5a096f115d1e56",
+    "project/geodata-3d-conditional/boreholes.py": "b0656303987fef04241a70a1df1a6ca4c2897d6c1e4de6470f492487fc038630",
+    "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/configs/full_complexity_targeted_v1.json": "39bb41e8b7f0d6b1597c8ba81d5762603616a9484c1e3b855c8c43fd570f50b0",
+    "project/geodata-3d-conditional/guidance/full_structuralgeo_benchmark.py": "3d292e6b48dbc2ed6911315d9e736afd770e7e164785208584dc268cd1d18097",
+    "project/geodata-3d-conditional/model_train_sh_inference_cond.py": "36d0dc613d8860677f137a2f1d681ebcc50829a6d90f5547c6eac3fd12a977c2",
+    "project/geodata-3d-conditional/scripts/benchmarks/build_full_structuralgeo_benchmark.py": "96f05f1ab3e87fbb7ffcd73790cf1fa9ecbd0741c145577221d4324ea8bfda24"
+  },
+  "tensor_content_hashes": {
+    "condition/borehole_mask.pt": "c7ecdc63b2042c3561961212322a58ebf87209cd01e5d5eb156873cecf16611b",
+    "condition/boreholes.pt": "16ad42eedc1610351fdcab45634a9273d66cc336cf4f7d1d6f14fa1d6f46fc6b",
+    "condition/condition_mask.pt": "f4d14d2a5902aff05669d18c4305983605ffa1f2189a00e188ea7605e17806f5",
+    "condition/condition_values.pt": "16ad42eedc1610351fdcab45634a9273d66cc336cf4f7d1d6f14fa1d6f46fc6b",
+    "condition/surface_mask.pt": "46a648d0954d61c09137896f4a7d500f90654bee498d2c331dad645826417ba7",
+    "truth/hidden_label9_mask.pt": "2f68ecde1d8705dfa14b581801bcb492b6569628b117c36361e14d3e10e7df43",
+    "truth/label9_mask.pt": "1908fc90353363d5fe30d24dfd8b31a1280e3edfb8ffa7bc33e8f8a6f6ec1b6a",
+    "truth/true_model.pt": "3c6139f958f8c0797ed6f26de4d6aab25f16a0541f22ffcfa2a2b2fe0280b791"
+  },
+  "unpacked_history": [
+    "Bedrock: with z <= -17280.0 and value 0.0",
+    "Sedimentation: rock type values [2, 1, 5...], and thicknesses 231.637, 498.823, 593.449..., with base = -17280.0",
+    "Tilt: strike 135.2°, dip -7.1°,origin ((107.96,-398.03,2053.64))",
+    "UnconformityBase: base 1000.0, value nan",
+    "Metaball: threshold 1.0, value 12.0, with 25 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 25 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 28 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 28 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 27 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 27 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 25 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 25 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 25 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 22 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 22 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 22 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 41 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 41 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 31 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 31 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 31 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 23 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 23 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 23 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 34 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 34 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 9 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 9 balls.",
+    "Fold: strike 109.7°, dip 90.0°, rake 86.6°, period 7637.5,amplitude 32.5, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 19.7°, dip 93.9°, rake 87.1°, amplitude 139.3, origin ((-1921.36,1611.50,2364.04)).",
+    "Fold: strike 109.7°, dip 90.0°, rake 86.6°, period 7637.5,amplitude -32.5, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 401.0°, dip 89.8°, rake 77.7°, period 6223.3,amplitude 42.5, origin ((0.00,0.00,0.00)).",
+    "Dike: strike 311.0°, dip 89.4°, width 86.7, origin ((632.83,-2902.35,3158.25)), value 9.0.",
+    "Dike: strike 308.9°, dip 88.8°, width 95.2, origin ((1547.89,-1748.88,3342.40)), value 9.0.",
+    "Dike: strike 308.5°, dip 89.9°, width 97.3, origin ((2270.96,-385.15,3327.91)), value 9.0.",
+    "Fold: strike 401.0°, dip 89.8°, rake 77.7°, period 6223.3,amplitude -42.5, origin ((0.00,0.00,0.00)).",
+    "Tilt: strike 265.0°, dip 4.0°,origin ((104.82,-393.21,1984.23))",
+    "Fold: strike 223.4°, dip 80.7°, rake -3.8°, period 7733.5,amplitude 121.7, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 313.4°, dip 86.4°, rake 12.2°, period 11108.6,amplitude 160.6, origin ((0.00,0.00,0.00)).",
+    "UnconformityDepth: depth 269.4, value nan",
+    "Sedimentation: rock type values [4], and thicknesses 632.936, with base = nan",
+    "Fold: strike 313.4°, dip 86.4°, rake 12.2°, period 11108.6,amplitude -157.6, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 223.4°, dip 80.7°, rake -3.8°, period 7733.5,amplitude -120.1, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 334.2°, dip 90.9°, rake 97.0°, period 8322.5,amplitude 46.5, origin ((0.00,0.00,0.00)).",
+    "Dike: strike 244.2°, dip 92.7°, width 248.9, origin ((1190.99,1756.07,1705.67)), value 9.0.",
+    "Dike: strike 236.5°, dip 91.8°, width 249.2, origin ((544.94,3231.56,1513.54)), value 9.0.",
+    "Fold: strike 334.2°, dip 90.9°, rake 97.0°, period 8322.5,amplitude -46.5, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 159.1°, dip 68.5°, rake 267.1°, period 4505.7,amplitude 210.0, origin ((405.17,1406.48,3673.42)).",
+    "Fold: strike 16.8°, dip 15.1°, rake 47.1°, period 4446.6,amplitude 229.0, origin ((-2493.62,850.71,874.68)).",
+    "Sedimentation: rock type values [4, 3, 2...], and thicknesses 121.980, 144.725, 116.811..., with base = nan",
+    "Fold: strike 175.9°, dip 90.0°, rake 4.0°, period 11262.8,amplitude 288.8, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 265.9°, dip 90.0°, rake 6.1°, period 8546.4,amplitude 316.1, origin ((0.00,0.00,0.00)).",
+    "UnconformityDepth: depth 349.1, value nan",
+    "Fold: strike 265.9°, dip 90.0°, rake 6.1°, period 8546.4,amplitude -222.2, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 175.9°, dip 90.0°, rake 4.0°, period 11262.8,amplitude -243.0, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 431.0°, dip 88.0°, rake 91.7°, period 12279.7,amplitude 104.7, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 341.0°, dip 84.0°, rake 105.7°, amplitude 245.5, origin ((2649.97,3860.23,1305.11)).",
+    "Fault with strike 332.0°, dip 83.8°, rake 105.7°, amplitude 215.9, origin ((2762.28,3941.36,1411.72)).",
+    "Fold: strike 431.0°, dip 88.0°, rake 91.7°, period 12279.7,amplitude -104.7, origin ((0.00,0.00,0.00)).",
+    "Sedimentation: rock type values [5, 2], and thicknesses 351.942, 379.267, with base = nan",
+    "Fold: strike 395.1°, dip 90.0°, rake 87.9°, period 8337.0,amplitude 80.2, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 305.1°, dip 78.8°, rake 83.3°, amplitude 295.5, origin ((996.00,-2832.34,630.63)).",
+    "Fold: strike 395.1°, dip 90.0°, rake 87.9°, period 8337.0,amplitude -80.2, origin ((0.00,0.00,0.00)).",
+    "Tilt: strike 226.9°, dip -2.4°,origin ((43.25,-2032.24,2083.63))",
+    "UnconformityDepth: depth 83.6, value nan",
+    "Tilt: strike 226.9°, dip 2.4°,origin ((43.25,-2032.24,2083.63))",
+    "Tilt: strike 273.8°, dip 6.0°,origin ((-2228.17,-887.80,2234.44))",
+    "UnconformityDepth: depth 184.6, value nan",
+    "Tilt: strike 273.8°, dip -6.0°,origin ((-2228.17,-887.80,2234.44))",
+    "Tilt: strike 49.9°, dip -3.2°,origin ((-395.97,709.77,2249.58))",
+    "UnconformityDepth: depth 105.8, value nan",
+    "Tilt: strike 49.9°, dip 3.2°,origin ((-395.97,709.77,2249.58))",
+    "Fault with strike 185.6°, dip 110.5°, rake -1.9°, amplitude -221.0, origin ((-2897.41,64.64,1925.35)).",
+    "Sedimentation: rock type values [3, 1], and thicknesses 385.676, 382.468, with base = nan",
+    "Fold: strike 268.4°, dip 41.2°, rake 43.4°, period 3430.6,amplitude 205.8, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 446.3°, dip 90.0°, rake 86.6°, period 15256.9,amplitude 40.6, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 356.3°, dip 83.5°, rake 79.2°, amplitude 264.6, origin ((-3019.06,-321.81,1091.16)).",
+    "Fold: strike 446.3°, dip 90.0°, rake 86.6°, period 15256.9,amplitude -40.6, origin ((0.00,0.00,0.00)).",
+    "Sedimentation: rock type values [5, 2], and thicknesses 579.524, 590.781, with base = nan",
+    "UnconformityDepth: depth 386.0, value nan",
+    "Shift: vector [    0.            0.        -2058.7025401]"
+  ],
+  "well_coordinates_xy": [
+    [
+      8,
+      46
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      10,
+      24
+    ],
+    [
+      27,
+      17
+    ],
+    [
+      35,
+      26
+    ],
+    [
+      39,
+      59
+    ],
+    [
+      44,
+      60
+    ],
+    [
+      48,
+      6
+    ],
+    [
+      57,
+      32
+    ]
+  ],
+  "well_layout_truth_independent": true
+}

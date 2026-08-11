@@ -1,19 +1,20 @@
 # Development handoff
 
-Updated: 2026-08-09 after final standalone Stage 8A-v4 failed the unchanged
-gate and permanently closed standalone Stage8A development. Stage 8B was not
-run. The project has returned to the Flow-prior integration decision. Formal
-Phase-6B training has not started.
+Updated: 2026-08-11 after the new end-to-end exploratory Stage 14 pilot tested
+whether the previous bridge-only stop rule was overly conservative. The frozen
+Flow did not benefit from the existing Stage12B post-seismic P(label9) volume:
+the machine decision is `GANSIM_STYLE_GEO_GUIDANCE_NOT_SUPPORTED`. Historical
+Stage10, Stage12 and Stage13 machine decisions remain unchanged.
 
 ## Read this first in a new conversation
 
-For a paste-ready continuation prompt and a compact statement of the active
-Phase-6B task, first open `docs/NEXT_CONVERSATION_PROMPT.md`. This handoff
+For a paste-ready continuation prompt and a compact statement of the terminal
+Stage 9A result, first open `docs/NEXT_CONVERSATION_PROMPT.md`. This handoff
 remains the authoritative detailed history.
 
-The active implementation is `flow2` on branch `main`, starting from frozen
-commit `85d5deb4555430117887a8ba173a0222c6b899ae`. The working tree contains the
-new Stage-7 code and immutable run outputs. Never
+The active implementation is `flow2` on branch `main`, starting from commit
+`72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f` for Stage 9A. The working tree
+contains the new Stage-9 code and immutable formal run outputs. Never
 discard, reset, upload-overwrite or silently reorganize those files. Inspect
 `git status` and overlapping diffs before every edit.
 
@@ -58,6 +59,10 @@ Required reading:
 37. `docs/PHASE6P_REPORT.md`
 38. `experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d7_observation_specificity_v1/D7_OBSERVATION_SPECIFICITY_REPORT.md`
 39. `experiments/stage6_inference_causality/reports/stage7_v1_final_v2/STAGE7_REPORT.md`
+40. `experiments/stage8_structured_posterior/runs/stage8a_v4/STAGE8A_V4_FINAL_REPORT.md`
+41. `docs/STAGE9A_FLOW_PRIOR_SUPPORT_SPEC.md`
+42. `experiments/stage9_flow_prior_posterior/README.md`
+43. `experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/STAGE9A_REPORT.md`
 
 ## Global goal and immutable boundary
 
@@ -252,6 +257,57 @@ historical 2-D gravity path yet.
   run is not authorized. Do not implement v5. Standalone Stage8A is closed;
   Stage8B remains unrun, and the next action is a newly authorized Flow-prior
   integration decision rather than another standalone structured-search edit.
+- Stage 9A frozen Flow-prior support and geophysical enrichment: complete
+  negative gate and terminal. Three new deterministic StructuralGeo cases each
+  use 1024 independent Gaussian sources, frozen EMA, normal embedding,
+  32-step midpoint fixed Euler, exact condition projection, hard decoding and
+  one cached hard-seismic prediction. Correct, zero, shuffled-XY and
+  independent wrong-case observations rank the same immutable predictions;
+  all rankings and hashes freeze before retrospective truth is loaded. All
+  3072 hard models are unique, but no candidate in any case passes the complete
+  Phase-4d geological support gate. Correct-observation ranking does not
+  jointly enrich label-9 IoU, label-9 recall and major-component mean recall;
+  discrimination fails in 0/3 cases. Overall `SUPPORT=false`,
+  `DISCRIMINATION=false`, and the machine action is
+  `STOP_REASSESS_FROZEN_INFERENCE_ROUTE`. Do not implement Stage 9B/9C,
+  posterior weighting, adaptive proposals, SMC, D-Flow, a new likelihood or
+  training under this protocol.
+
+## Stage-9A frozen Flow-prior support result
+
+`docs/STAGE9A_FLOW_PRIOR_SUPPORT_SPEC.md` was frozen before CUDA evidence. The
+candidate-generation API cannot receive truth; the ranking API sees only the
+four observation controls; and the retrospective auditor validates immutable
+pool/ranking hashes before it can load truth. Formal predictions are stored in
+deterministic, lossless gzip-compressed float32 chunks with both compressed and
+decompressed hashes. This reduces disk use without changing numerical values
+or later readability; models remain hard int8 categorical volumes.
+
+The three formal pools contain 1024 candidates each and use 3072 hard-seismic
+forwards plus 98,304 Flow velocity forwards. Candidate-generation runtimes are
+`3342.224`, `3508.668` and `3189.077` seconds, totaling `10039.969` seconds.
+Every pool contains 1024/1024 unique hard models. The deployable correct-
+observation tops are `candidate_000066`, `candidate_000862` and
+`candidate_000567`, with hard-seismic RMSE `0.0318388`, `0.03101524` and
+`0.03161827` respectively.
+
+Retrospectively, the number of candidates passing the complete registered
+support gate is `0/1024` in every case. Even the truth-oracle best label-9 IoU
+is only `0.1170`, `0.1348` and `0.1289`; oracle selection is explicitly not
+deployable. Correct-observation RMSE ranking enriches label-9 IoU in some
+checks, but its Spearman/enrichment directions fail for label-9 recall and
+major-component mean recall, so every case has `DISCRIMINATION_PASS=false`.
+The aggregate gate is support `0/3` and discrimination `0/3`, both below the
+required `2/3`.
+
+The authoritative machine summary and human report are under
+`experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/`.
+The immutable case evidence is under the sibling
+`runs/stage9a_prior_support_v1/formal/` tree. Smoke runs are engineering only;
+they are not scientific evidence. Stage 9A stops at
+`STOP_REASSESS_FROZEN_INFERENCE_ROUTE`: lower seismic loss alone is not project
+success, and these three synthetic inverse-crime cases do not establish field
+generalization.
 
 ## Phase-0 result
 
@@ -952,8 +1008,8 @@ LoRA, U-Net fine-tuning or generator retraining was started.
 
 - Phase-1 report regeneration succeeded locally with `.venv/bin/python`.
 - Phase-2/Phase-3 focused property and sampler tests: `24 passed`.
-- Complete local lightweight suite after Stage-7 implementation:
-  `186 passed`,
+- Complete local lightweight suite after Stage-9A implementation and formal
+  evidence: `231 passed`,
   with 13 existing Matplotlib/pyparsing deprecation warnings.
 - The default system Python lacks PyTorch; use `.venv/bin/python` locally or the
   user's CUDA environment on the remote terminal.
@@ -1002,4 +1058,75 @@ LoRA, U-Net fine-tuning or generator retraining was started.
   correct-observation specificity and hidden recovery with a low-dimensional
   hard-physics search, including three native replicas. Formal Phase-6B
   training has not started and is not presently required for this bounded
-  structured family.
+  structured family. Standalone Stage 8A then closed terminally after four
+  negative gates. Stage 9A finally tested the frozen Flow prior directly at
+  N=1024 on three new cases: all 3072 hard models are unique, but no candidate
+  passes the complete geological support gate and correct seismic ranking does
+  not pass the complete discrimination gate. The current terminal action is
+  `STOP_REASSESS_FROZEN_INFERENCE_ROUTE`; no later stage is authorized by this
+  result.
+
+## Stage-13 binary label-9 bridge identifiability stop
+
+Stage 13 reviewed the frozen Stage10/10R, Stage12A and Stage12B decisions plus
+the Phase1 probability path, convolutional seismic forward, Phase5a inversion,
+acoustic codebook and scalar categorical bridge. Its pre-implementation result
+is `PHYSICS_BINARY_BRIDGE_REQUIRES_LEARNED_MAPPER`, with final machine decision
+`STOP_PHYSICS_BINARY_BRIDGE_NOT_IDENTIFIABLE`.
+
+The existing normal-incidence post-stack operator observes band-limited
+interface reflectivity at slowness-dependent travel times. It does not observe
+absolute impedance or homogeneous voxel interiors. The codebook alone does not
+specify the surrounding-lithology, geometry, thickness, orientation and
+time-depth nuisance distributions required for a direct
+`p(feature|label9)/p(feature|non-label9)` likelihood. Local amplitude, envelope,
+energy and multiscale context are therefore not defensible label-9 probability
+rules. Using the Phase5a scalar inversion would only reopen the prohibited
+Stage12B bridge.
+
+Stage13-A bridge construction and truth evaluation were not executed; no
+probability/score/uncertainty volume or figure exists. Flow forward count is 0
+and Stage13-B is not authorized. The explicit `NOT_EXECUTED` manifests,
+identifiability audit, frozen protocol, report and machine decision are under
+`experiments/stage13_binary_label9_bridge/`. A future learned
+`seismic -> P(label9)` mapper requires a new prospectively frozen protocol and
+manual approval; none was implemented.
+
+## Stage-14 GANSim-style geophysical probability-guidance pilot
+
+Stage 14 is a new end-to-end exploratory experiment, explicitly separated from
+the historical Stage12B bridge-only decision. It tests whether that stop rule
+was overly conservative by passing each existing Stage12B post-seismic
+`P(label9)` volume directly through the already validated Phase1 probability-
+guidance interface. It does not reopen or modify Stage12B.
+
+The five frozen Stage12A full StructuralGeo cases each use the four source
+seeds preregistered in the Stage12B protocol, for 20 strict pairs. The only
+arms are `BASELINE` and `GEO_PROB_GUIDED`; each pair shares checkpoint, EMA
+policy, source noise, 32-step midpoint fixed-Euler solver, conditions and every
+non-alpha setting. Guidance reuses alpha/cap 0.25, cosine temperature,
+windowed-sine scheduling, `reference_norm_relative_v2` and
+`calibrated_soft_bce_hard_dice_v2`. No bridge, training, AUPRC gate, sweep,
+probability preprocessing, truth-based tuning or best-sample selection was
+performed. The Flow runner did not load truth; a separate retrospective
+evaluator opened frozen truth only after all hard samples were saved.
+
+The primary overall paired median hidden-label9 IoU change is `-0.031508`.
+Only `1/5` cases has a positive case-median change: case medians are
+`-0.003025`, `-0.093144`, `+0.001386`, `-0.166759` and `-0.031508`.
+Across all 20 pairs, median label9 IoU/precision/recall changes are
+`-0.030919/-0.001952/-0.155972`; hidden-label9 recall changes `-0.156332`, and
+largest-hidden-component recall changes `-0.158806`. Truth-present mIoU changes
+`-0.017098`, while global accuracy changes `+0.000198`. All per-step and final
+condition violations are zero. No case crosses the preregistered `-0.1`
+catastrophic median mIoU/accuracy degradation threshold.
+
+The machine decision is therefore
+`GANSIM_STYLE_GEO_GUIDANCE_NOT_SUPPORTED`: the positive-case and overall-
+positive primary clauses fail, while the exact-condition and no-catastrophic-
+degradation clauses pass. Stop after this decision; do not run more seeds,
+guidance settings, probability transformations or training under this
+protocol. Authoritative artifacts are under
+`experiments/stage14_gansim_style_geo_guidance/`, including the frozen
+protocol, truth-blind run manifests/traces, per-arm metrics, paired deltas,
+human report and machine decision.

@@ -1,0 +1,55 @@
+{
+  "case_ids": [
+    "fullgeo_case01",
+    "fullgeo_case02",
+    "fullgeo_case03",
+    "fullgeo_case04",
+    "fullgeo_case05"
+  ],
+  "case_manifests": {
+    "fullgeo_case01": {
+      "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/bridge/fullgeo_case01/manifest.json",
+      "sha256": "70c65994b2debd0d5d9fb134a33bf065f44e3ac88e5ad1fc6c14fcfca168a602",
+      "size_bytes": 17189
+    },
+    "fullgeo_case02": {
+      "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/bridge/fullgeo_case02/manifest.json",
+      "sha256": "69304088d7d3e5d6a3af3bc434b1815aba42ab477a3edb8fcd4607d1c16b7a29",
+      "size_bytes": 17189
+    },
+    "fullgeo_case03": {
+      "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/bridge/fullgeo_case03/manifest.json",
+      "sha256": "0e660daa5b06889e6d02a7921d42a0ccdc01b9b741fbffbe4581f479b223e6fe",
+      "size_bytes": 17189
+    },
+    "fullgeo_case04": {
+      "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/bridge/fullgeo_case04/manifest.json",
+      "sha256": "3c3ca9b2dc5c9f67629ced19c2161c9cff7b8813c3bd5f9699ec1c00704dd426",
+      "size_bytes": 17189
+    },
+    "fullgeo_case05": {
+      "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/bridge/fullgeo_case05/manifest.json",
+      "sha256": "74850cbf58355e8b631a02cb46ba81a8a20f439ee1634be2fff3de2477b6c7c7",
+      "size_bytes": 17190
+    }
+  },
+  "created_at_utc": "2026-08-11T12:08:52.791661+00:00",
+  "post_label9_tensor_sha256": {
+    "fullgeo_case01": "4930c8b7304994bfdde5f856565c7e87581c6b27949cc3576fb5f3b5f6b43275",
+    "fullgeo_case02": "0ef8a2a2e7f110f6cd9c5500a16ca3f649bd16ff390c51d315d8e7c4669e092d",
+    "fullgeo_case03": "1ac710708e54e7c4856be5f2bea067276379169d9eb2dedff8595689c796888c",
+    "fullgeo_case04": "9a6943147e34d1f4dd5559c2360489503a968e902efd5aaf59b3c79082ec2644",
+    "fullgeo_case05": "bf94e1ef9353896a228be88d270c6885a14153cb2329e61f89ce3d54d0786870"
+  },
+  "prior_label9_tensor_sha256": {
+    "fullgeo_case01": "7799d36e24a5ed5adb74473df5d4add81372775788f4a4ae9d4e48afef09dbab",
+    "fullgeo_case02": "0fb18f3dedb31f2758ded909cad867d86495ba296dbb83565e3d28c5e010a0ac",
+    "fullgeo_case03": "b0229afb8ffb3e1161f1b4019ac5b2ce610ee593338106840ee2d8c95d1fb21e",
+    "fullgeo_case04": "efe050571738a0ef361b3b503e54fc9a73a19b7f2869aa424fce4576cfe54ad9",
+    "fullgeo_case05": "fa0e8f7952202f5fb6f750276998992c567beb2f4205ea1aefcd0cdc49c23ae2"
+  },
+  "protocol_sha256": "cd727aab523eaac0424d6d6b6ffb48fb5aaf2a380528b9022db9bd103a446c0d",
+  "schema": "stage12b_bridge_collection_v1",
+  "status": "complete_frozen_before_truth_evaluation",
+  "truth_tensor_received": false
+}

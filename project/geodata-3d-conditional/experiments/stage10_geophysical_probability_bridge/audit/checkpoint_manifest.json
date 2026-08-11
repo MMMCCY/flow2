@@ -1,0 +1,12 @@
+{
+  "schema": "stage10_checkpoint_manifest_v1",
+  "status": "frozen",
+  "checkpoint": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "weight_policy": "EMA for trainable parameters; frozen embedding.weight remains raw checkpoint value",
+  "integrator": "fixed_euler_midpoint_v1",
+  "n_euler_steps": 32,
+  "condition_projection": "project_clean_embedding_before_first_and_after_every_euler_step_v1",
+  "hard_decode": "argmax embedding category minus one, followed by exact categorical condition projection",
+  "weights_optimized_in_stage10": false
+}

@@ -1,0 +1,129 @@
+{
+  "air_start_z": 56,
+  "case_id": "native_seed20260903",
+  "case_index": 2,
+  "condition_policy": "surface_plus_three_fixed_native_boreholes_v1",
+  "geological_labels_available_to_inference": false,
+  "grid_shape": [
+    64,
+    64,
+    64
+  ],
+  "native_seed": 20260903,
+  "observation_role": "synthetic_observation_generation_only",
+  "schema": "stage9a_inference_case_assets_v1",
+  "shuffle_seed": 20266945,
+  "status": "complete",
+  "tensors": {
+    "acoustic_property_table": {
+      "dtype": "torch.float32",
+      "file_sha256": "dc97b09638a79df4254c42a4538356863dea9a01d5d46caa79a6bf19f67b9d85",
+      "path": "acoustic_property_table.pt",
+      "shape": [
+        2,
+        15
+      ],
+      "size_bytes": 1641,
+      "tensor_sha256": "a70af1965ecd283a303f2ff11350ee55e355d85d2c0e9fbe4c34a9012b34970e"
+    },
+    "condition_mask": {
+      "dtype": "torch.bool",
+      "file_sha256": "931f92e4cfbac47dcd1f01396c62f2173da784ec89c5ab7a80877fe3d3ac31ea",
+      "path": "condition_mask.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 263721,
+      "tensor_sha256": "16294cf618eb9b4301ececc800f414be4d152f2134c9525f2b9256e00554a9f7"
+    },
+    "condition_values": {
+      "dtype": "torch.int64",
+      "file_sha256": "305ae7ac99d141f8bd44c86a5580d40b215e9f3252a8e416234811fa75dcbab9",
+      "path": "condition_values.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 2098729,
+      "tensor_sha256": "68c5132b777947cf4c2ba366f0fb5d0648246f836aaa1eb5d5f267704d077a43"
+    },
+    "observation_correct": {
+      "dtype": "torch.float32",
+      "file_sha256": "8bf7eafcfbc442eac8690915b12b2923515d015f6560f3bf9d1a051b647aa4ee",
+      "path": "observation_correct.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        320
+      ],
+      "size_bytes": 5244457,
+      "tensor_sha256": "68735e1b83f85a9b3ec70b1bce49a69fca83d948a073626584530b3a48851d28"
+    },
+    "observation_shuffled_xy": {
+      "dtype": "torch.float32",
+      "file_sha256": "c261c6c1c99721ddaca053656f293244d637843849f9e3be283af944f371639d",
+      "path": "observation_shuffled_xy.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        320
+      ],
+      "size_bytes": 5244457,
+      "tensor_sha256": "9a3042139a5fcc97c4b367ccd74edd72f667aadf2ff725ef52e34aa59e1fae92"
+    },
+    "observation_wrong_case": {
+      "dtype": "torch.float32",
+      "file_sha256": "d54419bd6bc34ce526e0d805cebf16b44b704ccf0586bb6b5580970e48263158",
+      "path": "observation_wrong_case.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        320
+      ],
+      "size_bytes": 5244457,
+      "tensor_sha256": "99eec2dd1edf11af410e8c6f7bdaca9d304146169d872b2f66699a0253e9c668"
+    },
+    "observation_zero": {
+      "dtype": "torch.float32",
+      "file_sha256": "e9d5124193ee0ee6c9676aa427d53705bbb885044a1eca27555afcd96791667b",
+      "path": "observation_zero.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        320
+      ],
+      "size_bytes": 5244457,
+      "tensor_sha256": "881162049a8d41cfb41aaf8850e3cb4f5cc81f21b51aff8c260c035eeb0e75d0"
+    },
+    "subsurface_mask": {
+      "dtype": "torch.bool",
+      "file_sha256": "ceec4167139dc6f4ace188bf4f084e8b52f161fcc5dcb3ae598525fdfaaf8ee6",
+      "path": "subsurface_mask.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 263721,
+      "tensor_sha256": "379d38e5ca6240a6dc3747e71feda6ddd14041b280c2dce2ed6006d31de0bc1a"
+    }
+  },
+  "wrong_case_seed": 20261903
+}

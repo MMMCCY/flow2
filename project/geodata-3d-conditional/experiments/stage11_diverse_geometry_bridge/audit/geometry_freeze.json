@@ -1,0 +1,65 @@
+{
+  "bridge_construction_count": 0,
+  "case_registry": {
+    "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/configs/case_registry.json",
+    "sha256": "dabcda15581835d3b607a564cef9c9310dc1353d26c81f4a6cd6bdbe2842fccd",
+    "size_bytes": 2543
+  },
+  "case_registry_modified_after_failure": false,
+  "case_replacement_attempted": false,
+  "completed_at_utc": "2026-08-11T10:54:50.448460+00:00",
+  "diversity_gate_evaluated": false,
+  "diversity_spec": {
+    "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/configs/benchmark_diversity_spec.json",
+    "sha256": "0b47338311012377ca2d57d66441506f8880e0da366052154973d1e37cdacf3d",
+    "size_bytes": 981
+  },
+  "failed_case": "stage11_case03",
+  "failure_message": "a registered Stage11 target event is empty",
+  "failure_type": "REGISTERED_STRUCTURALGEO_EVENT_EMPTY",
+  "figures": {
+    "pdf": {
+      "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/figures/stage11_geometry_diversity.pdf",
+      "sha256": "ac3d0b9a5b08e96a61590e192d1ed81bd023715ef9ce1d5fb216f3e56df2bdfa",
+      "size_bytes": 10365
+    },
+    "png": {
+      "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/figures/stage11_geometry_diversity.png",
+      "sha256": "b024a3886a79021dcf87e5aa5591b712a26259ad415276fc8b63500001a93f19",
+      "size_bytes": 226012
+    },
+    "svg": {
+      "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/figures/stage11_geometry_diversity.svg",
+      "sha256": "c217d7061807066b47bda3bc65d9590449fb962775d0296c028d50a32a006c64",
+      "size_bytes": 13088
+    }
+  },
+  "flow_guidance_forward_count": 0,
+  "flow_prior_forward_count": 0,
+  "machine_decision": "STOP_BENCHMARK_NOT_DIVERSE",
+  "partial_geometry_csv": {
+    "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/audit/geometry_diversity.csv",
+    "sha256": "057f77a9cf02e6e6fea29b4da98451bab1dcb9774201ec5a9de92b4511ef992d",
+    "size_bytes": 345
+  },
+  "property_inversion_count": 0,
+  "protocol": {
+    "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/configs/frozen_protocol.json",
+    "sha256": "ce33d216ab717dcdb0245a1cf7b8b90a016f614b1f7638e793c632bd4fb61b3c",
+    "size_bytes": 3356
+  },
+  "reason_diversity_gate_not_evaluated": "registered N=5 cohort could not be constructed",
+  "registered_benchmark_size": 5,
+  "schema": "stage11_geometry_freeze_v1",
+  "status": "STOPPED_BEFORE_GEOPHYSICAL_COMPUTATION",
+  "successfully_built_case_count": 2,
+  "successfully_built_cases": [
+    "stage11_case01",
+    "stage11_case02"
+  ],
+  "synthetic_seismic_forward_count": 0,
+  "unattempted_after_stop": [
+    "stage11_case04",
+    "stage11_case05"
+  ]
+}

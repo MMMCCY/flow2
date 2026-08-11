@@ -1,0 +1,22 @@
+{
+  "schema": "stage11_benchmark_diversity_spec_v1",
+  "status": "frozen_before_geometry_audit_and_all_geophysical_computation",
+  "benchmark_size": 5,
+  "primary_pairwise_criteria": {
+    "label9_iou_strictly_below": 0.2,
+    "union_centroid_distance_voxels_at_least": 12.0
+  },
+  "cohort_criteria": {
+    "unique_component_counts_at_least": 3,
+    "union_centroid_span_x_voxels_at_least": 20.0,
+    "union_centroid_span_y_voxels_at_least": 20.0,
+    "union_centroid_span_z_voxels_at_least": 15.0,
+    "registered_intrusion_kinds_at_least": 3,
+    "registered_rotation_span_degrees_at_least": 120.0,
+    "registered_diameter_span_voxels_at_least": 8.0,
+    "registered_minor_axis_scale_span_at_least": 0.8
+  },
+  "selection_policy": "all five registered cases are retained or the benchmark stops; no replacement after this file is frozen",
+  "failure_decision": "STOP_BENCHMARK_NOT_DIVERSE",
+  "truth_access_boundary": "geometry-preparation-only before geophysical computation"
+}

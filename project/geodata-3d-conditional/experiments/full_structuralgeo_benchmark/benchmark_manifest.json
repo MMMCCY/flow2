@@ -1,0 +1,133 @@
+{
+  "accepted_case_count": 5,
+  "cases": [
+    {
+      "case_id": "fullgeo_case01",
+      "manifest_path": "cases/fullgeo_case01/manifest.json",
+      "manifest_sha256": "7e63cc34f21a401a665bf6577f3031db8da6fce6e893c6a5fa16f79117226ee6",
+      "root_seed": 120260003
+    },
+    {
+      "case_id": "fullgeo_case02",
+      "manifest_path": "cases/fullgeo_case02/manifest.json",
+      "manifest_sha256": "826036d465bfcb289cc56baa4f4fb8e536f863cf63bf08e0613e9e7292ba1fca",
+      "root_seed": 120260004
+    },
+    {
+      "case_id": "fullgeo_case03",
+      "manifest_path": "cases/fullgeo_case03/manifest.json",
+      "manifest_sha256": "f513ed1244c56433c9eab9046550eadf41b6694921ea3b38b4456f798c7de486",
+      "root_seed": 120260008
+    },
+    {
+      "case_id": "fullgeo_case04",
+      "manifest_path": "cases/fullgeo_case04/manifest.json",
+      "manifest_sha256": "8e0f9b273a7b3fa6544a167396285cb67cd1bee3210c7ffb8a6bd45abc5acab2",
+      "root_seed": 120260011
+    },
+    {
+      "case_id": "fullgeo_case05",
+      "manifest_path": "cases/fullgeo_case05/manifest.json",
+      "manifest_sha256": "2a4fa521b35e0c63e2f21092140f54b24b6940667b891428430890dc0247a76d",
+      "root_seed": 120260012
+    }
+  ],
+  "cohort_id": "full_complexity_targeted_v1",
+  "config_path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/configs/full_complexity_targeted_v1.json",
+  "config_sha256": "39bb41e8b7f0d6b1597c8ba81d5762603616a9484c1e3b855c8c43fd570f50b0",
+  "default_matrix_path": "StructuralGeo-main/src/geogen/generation/markov_matrix/default_markov_matrix.csv",
+  "default_matrix_sha256": "cb068ecb1d65487828899179fa02e0aff279703504686c569451fc871dd3784b",
+  "determinism_audit": "audit/determinism_audit.json",
+  "determinism_audit_sha256": "b0ffcb40babdf160fcd929aeda15d983d471591e197f551b28d9226764d95e70",
+  "environment_versions": {
+    "numpy": "1.26.4",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+    "pydtmc": "8.0.0",
+    "python": "3.10.12",
+    "scipy": "1.15.3",
+    "torch": "2.8.0+cu128"
+  },
+  "git": {
+    "branch": "main",
+    "dirty": true,
+    "head": "72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f",
+    "status_short": [
+      " M StructuralGeo-main/src/geogen/dataset/dataset.py",
+      " M StructuralGeo-main/src/geogen/generation/categorical_events.py",
+      " M StructuralGeo-main/src/geogen/generation/geowords.py",
+      " M StructuralGeo-main/src/geogen/generation/model_generators.py",
+      " M StructuralGeo-main/src/geogen/model/geomodel.py",
+      " M StructuralGeo-main/src/geogen/model/metaballs.py",
+      " M StructuralGeo-main/src/geogen/probability/random_varibles.py",
+      " M StructuralGeo-main/src/geogen/probability/sedimentbuilders.py",
+      " M StructuralGeo-main/src/geogen/probability/wavegenerators.py",
+      " M project/geodata-3d-conditional/docs/DEVELOPMENT_HANDOFF.md",
+      " M project/geodata-3d-conditional/docs/NEXT_CONVERSATION_PROMPT.md",
+      "?? StructuralGeo-main/src/geogen/generation/rng_contract.py",
+      "?? project/geodata-3d-conditional/docs/FULL_STRUCTURALGEO_BENCHMARK_AUDIT.md",
+      "?? project/geodata-3d-conditional/docs/STAGE9A_FLOW_PRIOR_SUPPORT_SPEC.md",
+      "?? project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/",
+      "?? project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/",
+      "?? project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/",
+      "?? project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/",
+      "?? project/geodata-3d-conditional/guidance/full_structuralgeo_benchmark.py",
+      "?? project/geodata-3d-conditional/guidance/geophysical_probability_bridge.py",
+      "?? project/geodata-3d-conditional/guidance/prior_ensemble.py",
+      "?? project/geodata-3d-conditional/guidance/stage11_diverse_geometry.py",
+      "?? project/geodata-3d-conditional/paper/",
+      "?? project/geodata-3d-conditional/scripts/benchmarks/",
+      "?? project/geodata-3d-conditional/scripts/paper_figures/",
+      "?? project/geodata-3d-conditional/scripts/stage10/",
+      "?? project/geodata-3d-conditional/scripts/stage11/",
+      "?? project/geodata-3d-conditional/scripts/stage9/",
+      "?? project/geodata-3d-conditional/tests/test_paper_figures.py",
+      "?? project/geodata-3d-conditional/tests/test_stage10_probability_bridge.py",
+      "?? project/geodata-3d-conditional/tests/test_stage9_enrichment.py",
+      "?? project/geodata-3d-conditional/tests/test_stage9_prior_ensemble.py",
+      "?? project/geodata-3d-conditional/tests/test_stage9_truth_firewall.py"
+    ]
+  },
+  "machine_decision": "FULL_STRUCTURALGEO_BENCHMARK_READY",
+  "qc_files": {
+    "qc/fullgeo_case01_qc.pdf": "303bcd1a6bb546c63ef2212ee696135efc952ef5aee3da9f4e48105fa917d688",
+    "qc/fullgeo_case01_qc.png": "a274a8c343a9e95f4c0ae9c164b1e2772aba7676dd2ae7e5d632c2240b9c23a4",
+    "qc/fullgeo_case02_qc.pdf": "8ed9b35d9cc93608cfe1d201cc2ed313071967ff92a3eec800b1e41a79d902a0",
+    "qc/fullgeo_case02_qc.png": "a0d09ab715fa69a205b651f7996fdd93409f145c4efa03df5b20aed638e7ffb2",
+    "qc/fullgeo_case03_qc.pdf": "992f4ed30352014e9abb37f02508994455ecdef1bf4963929c0a60207e10aeb7",
+    "qc/fullgeo_case03_qc.png": "1b06c68a47afe923ed07349602dab6a416d60aadce79736518e0c383f13c3f59",
+    "qc/fullgeo_case04_qc.pdf": "7b8a4b8d7941ed5e8d6e038ef600297001d77a1d2b7eddc646b7443511a491ba",
+    "qc/fullgeo_case04_qc.png": "52b15e98d34963d19b9c86fbd48d5627e179968cd2e3a3456bff9eb9a6988f42",
+    "qc/fullgeo_case05_qc.pdf": "35a059655d43ba825163b071b563bb03d3177e633d831d85629f21a64bce6921",
+    "qc/fullgeo_case05_qc.png": "59910365b2653c7cf9698722ea4ccb824639b7987e6a787ad6fa1addecfb47fd"
+  },
+  "rejected_seed_count": 7,
+  "report_path": "FULL_STRUCTURALGEO_BENCHMARK_BUILD_REPORT.md",
+  "report_sha256": "bd12c8e87de3b22ed81eb105d38f8180fa10a6a72cc74140462bc66059026337",
+  "rng_contract_version": "structuralgeo_named_seedsequence_v1",
+  "schema_version": "full_structuralgeo_benchmark_v1",
+  "selection_firewall": {
+    "no_downstream_metric": true,
+    "no_flow": true,
+    "no_seismic": true,
+    "qc_generated_after_acceptance": true
+  },
+  "source_hashes": {
+    "StructuralGeo-main/src/geogen/dataset/dataset.py": "abd2aca08258bc1c4f34cca0ee585878280ab204cad4aef52ce637700847db3a",
+    "StructuralGeo-main/src/geogen/generation/categorical_events.py": "63f8431e79c6b1fc4937a480c83e18bd69dd04cc18a2b81c427a4149e3233a15",
+    "StructuralGeo-main/src/geogen/generation/geowords.py": "7acb56bf56a07a1bbe4ef8a2a2c7245b3942cbcf84d55931b2025bf2b016ca03",
+    "StructuralGeo-main/src/geogen/generation/markov_matrix/default_markov_matrix.csv": "cb068ecb1d65487828899179fa02e0aff279703504686c569451fc871dd3784b",
+    "StructuralGeo-main/src/geogen/generation/model_generators.py": "2ee1b5fe4bcd89e70d80c3b78af02a7696af7fdedacca3ed391145e3df67e397",
+    "StructuralGeo-main/src/geogen/generation/rng_contract.py": "96e284b99df9ef8444b00e15e2ecfc92ce85c3c3bfdb9328474690937782a022",
+    "StructuralGeo-main/src/geogen/model/geomodel.py": "a7d575bb2864cff02bc6925f61ca7bc1a4d2c7b9f75006e61b3b30a4dc33a094",
+    "StructuralGeo-main/src/geogen/model/metaballs.py": "c0e5d2c2ccd5cdc58d4ea35639221079718a7629d6960711b75b99e53e845be6",
+    "StructuralGeo-main/src/geogen/probability/random_varibles.py": "7188a98bba406c60ea402e28d94f67aad41503d463bd25663717398226bd384e",
+    "StructuralGeo-main/src/geogen/probability/sedimentbuilders.py": "01066bd55e01f5d2354406419a70dd1056456df0da5257f7a07763840db67243",
+    "StructuralGeo-main/src/geogen/probability/wavegenerators.py": "2ff37e2df0e5b76e4d1d39a93c1af661fdda787d707da0ddde5a096f115d1e56",
+    "project/geodata-3d-conditional/boreholes.py": "b0656303987fef04241a70a1df1a6ca4c2897d6c1e4de6470f492487fc038630",
+    "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/configs/full_complexity_targeted_v1.json": "39bb41e8b7f0d6b1597c8ba81d5762603616a9484c1e3b855c8c43fd570f50b0",
+    "project/geodata-3d-conditional/guidance/full_structuralgeo_benchmark.py": "3d292e6b48dbc2ed6911315d9e736afd770e7e164785208584dc268cd1d18097",
+    "project/geodata-3d-conditional/model_train_sh_inference_cond.py": "36d0dc613d8860677f137a2f1d681ebcc50829a6d90f5547c6eac3fd12a977c2",
+    "project/geodata-3d-conditional/scripts/benchmarks/build_full_structuralgeo_benchmark.py": "96f05f1ab3e87fbb7ffcd73790cf1fa9ecbd0741c145577221d4324ea8bfda24"
+  },
+  "training_overlap_wording": "independently generated, prospectively registered same-recipe test cohort; no case was used to choose inference parameters or update the frozen checkpoint. Historical sample-level overlap with the original streaming training run cannot be certified because no seed/sample manifest was retained."
+}

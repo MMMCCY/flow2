@@ -1,0 +1,48 @@
+{
+  "case_ids": [
+    "fullgeo_case01",
+    "fullgeo_case02",
+    "fullgeo_case03",
+    "fullgeo_case04",
+    "fullgeo_case05"
+  ],
+  "case_manifests": {
+    "fullgeo_case01": {
+      "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/observations/fullgeo_case01/manifest.json",
+      "sha256": "2ff0ea93259a759f8288adaae224d2b1f043a8d904b97cadbff35d4bd0d8e208",
+      "size_bytes": 6755
+    },
+    "fullgeo_case02": {
+      "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/observations/fullgeo_case02/manifest.json",
+      "sha256": "6a5246cf1a3ef63aad16ea9c724bbc38b840834441fbdbebcb5b8296a56e5cb1",
+      "size_bytes": 6755
+    },
+    "fullgeo_case03": {
+      "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/observations/fullgeo_case03/manifest.json",
+      "sha256": "fadf3e45b27d1421cc2799396fa5de5290c7e465c3a5eedd19508c31d4289901",
+      "size_bytes": 6755
+    },
+    "fullgeo_case04": {
+      "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/observations/fullgeo_case04/manifest.json",
+      "sha256": "62bb03282d6b6228c53cf433c974a07d3a19b5391fa18871a516cb8cd38fd827",
+      "size_bytes": 6755
+    },
+    "fullgeo_case05": {
+      "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/observations/fullgeo_case05/manifest.json",
+      "sha256": "621587e310269f48cff19421d314423d4e70b0e1c8725e83aba00c36da612d3c",
+      "size_bytes": 6755
+    }
+  },
+  "created_at_utc": "2026-08-11T12:06:42.606080+00:00",
+  "geological_truth_available_to_downstream_inference": false,
+  "noise_type": "none",
+  "property_prior_bank_manifest": {
+    "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/prior_bank/manifest.json",
+    "sha256": "8b35dea936dbdae8d9c6bd3ff0179413ee49276f6f2b6bf78d045db41bac0618",
+    "size_bytes": 9700
+  },
+  "property_prior_frozen_before_observation": true,
+  "schema": "stage12b_observation_collection_v1",
+  "status": "complete_truth_generation_process_closed",
+  "trace_grid": "all_xy_columns"
+}

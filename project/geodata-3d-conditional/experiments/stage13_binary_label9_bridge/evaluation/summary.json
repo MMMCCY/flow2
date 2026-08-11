@@ -1,0 +1,20 @@
+{
+  "schema": "stage13a_evaluation_summary_v1",
+  "status": "NOT_EXECUTED",
+  "reason": "PHYSICS_BINARY_BRIDGE_REQUIRES_LEARNED_MAPPER",
+  "case_ids": [
+    "fullgeo_case01",
+    "fullgeo_case02",
+    "fullgeo_case03",
+    "fullgeo_case04",
+    "fullgeo_case05"
+  ],
+  "probability_volume_count": 0,
+  "truth_evaluation_count": 0,
+  "flow_forward_count": 0,
+  "transfer_auprc_matrix_computed": false,
+  "transfer_brier_matrix_computed": false,
+  "per_case_metrics_computed": false,
+  "diagnostic_figures_generated": false,
+  "stage13b_authorized": false
+}

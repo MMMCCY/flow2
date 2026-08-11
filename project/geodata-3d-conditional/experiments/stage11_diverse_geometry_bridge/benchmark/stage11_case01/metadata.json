@@ -1,0 +1,63 @@
+{
+  "air_start_z": 56,
+  "body_voxel_counts": [
+    525
+  ],
+  "borehole_layout_truth_dependent": false,
+  "borehole_target_hits": [
+    {
+      "target_hit": false,
+      "target_hit_z": [],
+      "xy": [
+        8,
+        8
+      ]
+    },
+    {
+      "target_hit": false,
+      "target_hit_z": [],
+      "xy": [
+        32,
+        32
+      ]
+    },
+    {
+      "target_hit": false,
+      "target_hit_z": [],
+      "xy": [
+        55,
+        55
+      ]
+    }
+  ],
+  "case_id": "stage11_case01",
+  "event_audit_labels": [
+    9
+  ],
+  "event_history": "Geological History:\n1: Bedrock: with z <= 55.0 and value 0.0\n2: DikeHemisphere: origin ((9.00,48.00,10.00)), diam 16.0, height 8.0, minor_axis_scale 0.6, rotation 15.0, value 9.0.",
+  "generator": "StructuralGeo ParametricGeoEngine",
+  "generator_seed": 20261101,
+  "grid_shape": [
+    64,
+    64,
+    64
+  ],
+  "merged_target_label": 9,
+  "model_name": "stage11_diverse_stage11_case01",
+  "registered_events": [
+    {
+      "anchor_xyz": [
+        9,
+        48,
+        14
+      ],
+      "diameter": 16.0,
+      "height": 8.0,
+      "kind": "hemisphere",
+      "minor_axis_scale": 0.55,
+      "rotation_deg": 15.0,
+      "upper": true
+    }
+  ],
+  "schema": "stage11_diverse_structuralgeo_builder_v1"
+}

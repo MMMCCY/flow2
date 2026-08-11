@@ -1,0 +1,80 @@
+{
+  "case_id": "fullgeo_case01",
+  "condition_mask_asset": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/observations/fullgeo_case01/condition_mask.pt",
+    "sha256": "2682badf5d6d295287ffe47219a3dbd61d39f389b4175d3f2633943c6163aeac",
+    "size_bytes": 263721
+  },
+  "condition_mask_tensor_sha256": "50592bcdda16884c3103b60f2a9345a0dcf6c3d0a099c00be3f29148997628a9",
+  "condition_values_asset": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/observations/fullgeo_case01/condition_values.pt",
+    "sha256": "e6945c823f4b4f66dfd34b0211c1d13df018cdf5f2669a5bf39366beebb8f515",
+    "size_bytes": 2098729
+  },
+  "fixed_internal_dice_core_voxels": 1552,
+  "guidance_roi_tensor_sha256": "69ddf5904fb0f36613004deb0e0c97c48fddf3ae0bd3affbc03aa4873a3bf573",
+  "guidance_roi_voxels": 150764,
+  "probability_asset": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/bridge/fullgeo_case01/probability_label9_post.pt",
+    "sha256": "476b3bb36508f6fa232369edd84e76ddd39baa527d42eece5489951621253ba2",
+    "size_bytes": 15730217
+  },
+  "probability_preprocessing": null,
+  "probability_tensor_sha256": "4930c8b7304994bfdde5f856565c7e87581c6b27949cc3576fb5f3b5f6b43275",
+  "samples": [
+    {
+      "baseline_condition_violations": 0,
+      "baseline_sample_sha256": "3c3f0f4c226d5b6ae58665f2c677b71d5a07a2abd395c30c007db3a43fcc15ca",
+      "case_id": "fullgeo_case01",
+      "guided_condition_violations": 0,
+      "guided_sample_sha256": "f8ff97477c73d9bb032e1644ef6a40a911728ce2c808ede10a408082821ff931",
+      "initial_noise_sha256": "4264a2790c9b34136905ad31038e8f1f38d741ac3a91e1aa02e36801e4251371",
+      "sample_id": 0,
+      "source_seed": 9301000
+    },
+    {
+      "baseline_condition_violations": 0,
+      "baseline_sample_sha256": "129b7654d74000ddb9b00dfe753796d33caf1468ff76007952d9a72cd2f78a8e",
+      "case_id": "fullgeo_case01",
+      "guided_condition_violations": 0,
+      "guided_sample_sha256": "fa284f9b7c5aae086d1382311130e180576987c5c6019940386f6d7edca9a652",
+      "initial_noise_sha256": "20b5a2f01456446706846c2083854baa3267598ffbc8c2ad226d7c438440979a",
+      "sample_id": 1,
+      "source_seed": 9301001
+    },
+    {
+      "baseline_condition_violations": 0,
+      "baseline_sample_sha256": "6f119ee5dc6c9955c4eee730a4e766dc0c153dfdf2cf24127212611187df6861",
+      "case_id": "fullgeo_case01",
+      "guided_condition_violations": 0,
+      "guided_sample_sha256": "2cfd94f0652a3fb6db3e1e6d674d41c123e6a3cf8bbfa20d239c07b7689fba72",
+      "initial_noise_sha256": "5e3c888815cf65e75d8ba6cfd2bbeaceda46a9e61195a6bd2b705236edc32ca2",
+      "sample_id": 2,
+      "source_seed": 9301002
+    },
+    {
+      "baseline_condition_violations": 0,
+      "baseline_sample_sha256": "b72eb299cf468e18fb90c964ea39559696e4c3f9d997ec47e59b977b7efe76ed",
+      "case_id": "fullgeo_case01",
+      "guided_condition_violations": 0,
+      "guided_sample_sha256": "3706a3738ac0ab72f82571e36be1a78ea2fd9495364fada824adb86be63c2194",
+      "initial_noise_sha256": "ded5c10b9acbf3ff0cb03d2289ba1a15ad6844dfe5b4eeb972a6f3d7dbd93ffe",
+      "sample_id": 3,
+      "source_seed": 9301003
+    }
+  ],
+  "schema": "stage14_truth_blind_flow_case_v1",
+  "source_seeds": [
+    9301000,
+    9301001,
+    9301002,
+    9301003
+  ],
+  "status": "completed",
+  "subsurface_mask_asset": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/observations/fullgeo_case01/subsurface_mask.pt",
+    "sha256": "ad4bc5aae401a5149fea9a1ef46d227afccd11507605bc537236e42a7c0497a4",
+    "size_bytes": 263721
+  },
+  "truth_loaded_by_flow_runner": false
+}

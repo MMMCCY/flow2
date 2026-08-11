@@ -1,0 +1,226 @@
+{
+  "case_summaries": {
+    "fullgeo_case01": {
+      "arm_medians": {
+        "BASELINE": {
+          "condition_violation_count": 0.0,
+          "global_accuracy": 0.5381267196329731,
+          "hidden_label9_iou": 0.0032700146225431025,
+          "hidden_label9_precision": 0.003292659987588799,
+          "hidden_label9_recall": 0.3135593220338983,
+          "label9_iou": 0.0034415825142149036,
+          "label9_precision": 0.003465413842525777,
+          "label9_recall": 0.32499999999999996,
+          "largest_hidden_component_recall": 0.31862745098039214,
+          "truth_present_miou": 0.20833970612657376
+        },
+        "GEO_PROB_GUIDED": {
+          "condition_violation_count": 0.0,
+          "global_accuracy": 0.5462037591901696,
+          "hidden_label9_iou": 0.0,
+          "hidden_label9_precision": 0.0,
+          "hidden_label9_recall": 0.0,
+          "label9_iou": 0.0011800740835889289,
+          "label9_precision": 0.0012683960661222832,
+          "label9_recall": 0.016666666666666666,
+          "largest_hidden_component_recall": 0.0,
+          "truth_present_miou": 0.206284700807212
+        }
+      },
+      "paired_delta_medians": {
+        "global_accuracy": 0.00871495492709079,
+        "hidden_label9_iou": -0.003025032313311691,
+        "hidden_label9_precision": -0.003027683054010852,
+        "hidden_label9_recall": -0.3093220338983051,
+        "label9_iou": -0.002034024111894296,
+        "label9_precision": -0.0019516806110107744,
+        "label9_recall": -0.30416666666666664,
+        "largest_hidden_component_recall": -0.31862745098039214,
+        "truth_present_miou": -0.0026712761090083442
+      },
+      "positive_median_hidden_label9_iou_delta": false
+    },
+    "fullgeo_case02": {
+      "arm_medians": {
+        "BASELINE": {
+          "condition_violation_count": 0.0,
+          "global_accuracy": 0.4186561630702239,
+          "hidden_label9_iou": 0.10853984461354453,
+          "hidden_label9_precision": 0.16066016204233724,
+          "hidden_label9_recall": 0.23738003240683037,
+          "label9_iou": 0.10942642116244092,
+          "label9_precision": 0.16189605914600363,
+          "label9_recall": 0.2391344898339862,
+          "largest_hidden_component_recall": 0.24278927723108246,
+          "truth_present_miou": 0.17378885013754325
+        },
+        "GEO_PROB_GUIDED": {
+          "condition_violation_count": 0.0,
+          "global_accuracy": 0.4185593448476176,
+          "hidden_label9_iou": 0.015212633568844695,
+          "hidden_label9_precision": 0.16760217312863696,
+          "hidden_label9_recall": 0.016452698491835973,
+          "label9_iou": 0.01730780569062135,
+          "label9_precision": 0.1864645214521452,
+          "label9_recall": 0.0187154137909594,
+          "largest_hidden_component_recall": 0.024092297251442144,
+          "truth_present_miou": 0.15847703711817146
+        }
+      },
+      "paired_delta_medians": {
+        "global_accuracy": -0.0006564747776723057,
+        "hidden_label9_iou": -0.09314386533393552,
+        "hidden_label9_precision": 0.006942011086299743,
+        "hidden_label9_recall": -0.2209273339149944,
+        "label9_iou": -0.09193812495992222,
+        "label9_precision": 0.024568462306141584,
+        "label9_recall": -0.2204190760430268,
+        "largest_hidden_component_recall": -0.21869697997964033,
+        "truth_present_miou": -0.017396163066463993
+      },
+      "positive_median_hidden_label9_iou_delta": false
+    },
+    "fullgeo_case03": {
+      "arm_medians": {
+        "BASELINE": {
+          "condition_violation_count": 0.0,
+          "global_accuracy": 0.42155798856699933,
+          "hidden_label9_iou": 0.007585104198617445,
+          "hidden_label9_precision": 0.010336258189589621,
+          "hidden_label9_recall": 0.027697634160415464,
+          "label9_iou": 0.008059127178186114,
+          "label9_precision": 0.010982725965557915,
+          "label9_recall": 0.029377880184331795,
+          "largest_hidden_component_recall": 0.026239067055393587,
+          "truth_present_miou": 0.16146973155108718
+        },
+        "GEO_PROB_GUIDED": {
+          "condition_violation_count": 0.0,
+          "global_accuracy": 0.4194651681038659,
+          "hidden_label9_iou": 0.008982499828267909,
+          "hidden_label9_precision": 0.01902263241684953,
+          "hidden_label9_recall": 0.01673398730525101,
+          "label9_iou": 0.00990252228565475,
+          "label9_precision": 0.020949265747093333,
+          "label9_recall": 0.018433179723502304,
+          "largest_hidden_component_recall": 0.03206997084548105,
+          "truth_present_miou": 0.12849765274683617
+        }
+      },
+      "paired_delta_medians": {
+        "global_accuracy": -0.002241384878726216,
+        "hidden_label9_iou": 0.0013863164540872022,
+        "hidden_label9_precision": 0.008636934121230618,
+        "hidden_label9_recall": -0.010963646855164455,
+        "label9_iou": 0.0018311924479503267,
+        "label9_precision": 0.009912198249411494,
+        "label9_recall": -0.010944700460829493,
+        "largest_hidden_component_recall": 0.005830903790087463,
+        "truth_present_miou": -0.031209093218872483
+      },
+      "positive_median_hidden_label9_iou_delta": true
+    },
+    "fullgeo_case04": {
+      "arm_medians": {
+        "BASELINE": {
+          "condition_violation_count": 0.0,
+          "global_accuracy": 0.6457216764517817,
+          "hidden_label9_iou": 0.176003513635189,
+          "hidden_label9_precision": 0.2396747212313864,
+          "hidden_label9_recall": 0.4103952355170547,
+          "label9_iou": 0.18586554399712124,
+          "label9_precision": 0.25268185253752096,
+          "label9_recall": 0.4265402843601896,
+          "largest_hidden_component_recall": 0.41515452225687555,
+          "truth_present_miou": 0.21688122228282103
+        },
+        "GEO_PROB_GUIDED": {
+          "condition_violation_count": 0.0,
+          "global_accuracy": 0.6476312271115503,
+          "hidden_label9_iou": 0.007106107870271144,
+          "hidden_label9_precision": 0.06755039262435025,
+          "hidden_label9_recall": 0.007889241240621857,
+          "label9_iou": 0.031679542314567995,
+          "label9_precision": 0.24940178374080357,
+          "label9_recall": 0.03505604453471752,
+          "largest_hidden_component_recall": 0.012120782534732068,
+          "truth_present_miou": 0.19471885759608643
+        }
+      },
+      "paired_delta_medians": {
+        "global_accuracy": 0.005129919200139499,
+        "hidden_label9_iou": -0.16675911229162563,
+        "hidden_label9_precision": -0.17286666139162246,
+        "hidden_label9_recall": -0.40010828370330265,
+        "label9_iou": -0.152329007077598,
+        "label9_precision": -0.0062361097036462,
+        "label9_recall": -0.38915218536071616,
+        "largest_hidden_component_recall": -0.40055287779982984,
+        "truth_present_miou": -0.02069807673583904
+      },
+      "positive_median_hidden_label9_iou_delta": false
+    },
+    "fullgeo_case05": {
+      "arm_medians": {
+        "BASELINE": {
+          "condition_violation_count": 0.0,
+          "global_accuracy": 0.7496160333806818,
+          "hidden_label9_iou": 0.03195092870726064,
+          "hidden_label9_precision": 0.05737181758043261,
+          "hidden_label9_recall": 0.07849829351535836,
+          "label9_iou": 0.03295429927420342,
+          "label9_precision": 0.058707886142173246,
+          "label9_recall": 0.0805156896132328,
+          "largest_hidden_component_recall": 0.008470474346563409,
+          "truth_present_miou": 0.539101364599214
+        },
+        "GEO_PROB_GUIDED": {
+          "condition_violation_count": 0.0,
+          "global_accuracy": 0.7488481001420455,
+          "hidden_label9_iou": 0.00044310528181495923,
+          "hidden_label9_precision": 0.0016206406405901552,
+          "hidden_label9_recall": 0.0006094588005850804,
+          "label9_iou": 0.0020350380463634754,
+          "label9_precision": 0.007412078672223441,
+          "label9_recall": 0.0027973729019703233,
+          "largest_hidden_component_recall": 0.0,
+          "truth_present_miou": 0.5287304264089855
+        }
+      },
+      "paired_delta_medians": {
+        "global_accuracy": -0.0004882812500000555,
+        "hidden_label9_iou": -0.031507776294942384,
+        "hidden_label9_precision": -0.05575264252339991,
+        "hidden_label9_recall": -0.07776694295465626,
+        "label9_iou": -0.03091907330589646,
+        "label9_precision": -0.051304709818414965,
+        "label9_recall": -0.07759669180248116,
+        "largest_hidden_component_recall": -0.008470474346563409,
+        "truth_present_miou": -0.011435633193332295
+      },
+      "positive_median_hidden_label9_iou_delta": false
+    }
+  },
+  "catastrophic_cases": [],
+  "catastrophic_global_degradation_threshold": -0.1,
+  "clauses": {
+    "at_least_4_of_5_cases_positive_median_hidden_label9_iou_delta": false,
+    "no_catastrophic_global_geology_degradation": true,
+    "overall_paired_median_hidden_label9_iou_delta_positive": false,
+    "zero_hard_condition_violations": true
+  },
+  "created_at_utc": "2026-08-11T15:21:08.560389+00:00",
+  "decision": "GANSIM_STYLE_GEO_GUIDANCE_NOT_SUPPORTED",
+  "experiment_role": "new_end_to_end_exploratory_experiment_testing_whether_the_previous_bridge_only_stop_rule_was_overly_conservative",
+  "historical_machine_decisions_unchanged": true,
+  "n_cases": 5,
+  "n_pairs": 20,
+  "overall_paired_median_hidden_label9_iou_delta": -0.031507776294942384,
+  "parameter_sweep_performed": false,
+  "positive_case_count": 1,
+  "sample_selection_performed": false,
+  "schema": "stage14_gansim_style_evaluation_v1",
+  "status": "complete_stop_no_further_experiments",
+  "total_condition_violations": 0,
+  "training_performed": false
+}

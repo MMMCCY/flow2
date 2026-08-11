@@ -1,0 +1,32 @@
+{
+  "schema": "stage13a_machine_decision_v1",
+  "status": "final",
+  "created_at_utc": "2026-08-11T12:56:37Z",
+  "git_branch": "main",
+  "git_head": "72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f",
+  "identifiability_classification": "PHYSICS_BINARY_BRIDGE_REQUIRES_LEARNED_MAPPER",
+  "machine_decision": "STOP_PHYSICS_BINARY_BRIDGE_NOT_IDENTIFIABLE",
+  "stage13a_executed": false,
+  "stage13b_authorized": false,
+  "flow_forward_count": 0,
+  "probability_volume_count": 0,
+  "truth_evaluation_count": 0,
+  "historical_decisions_modified": false,
+  "protocol": {
+    "path": "project/geodata-3d-conditional/experiments/stage13_binary_label9_bridge/configs/stage13_binary_bridge_protocol.json",
+    "sha256": "c33a8036cc20ebcfbb46b12aff06d012024e314ed9c2b4b24da1c019a5933584"
+  },
+  "physics_identifiability_audit": {
+    "path": "project/geodata-3d-conditional/experiments/stage13_binary_label9_bridge/audit/physics_identifiability_audit.md",
+    "sha256": "ee2dfe4de9ef15c8b9b0ab9648dc865e2de5d847eaf5ad2d18db88dc5d999dba"
+  },
+  "truth_firewall": {
+    "path": "project/geodata-3d-conditional/experiments/stage13_binary_label9_bridge/audit/truth_firewall.json",
+    "sha256": "195ba808bf1bc6aae2ff0f7b49fe961e0752937d202437f9f21e645d43208bce"
+  },
+  "evaluation_summary": {
+    "path": "project/geodata-3d-conditional/experiments/stage13_binary_label9_bridge/evaluation/summary.json",
+    "sha256": "715fe166911c787c5cfa091b6bdbb9177224cb61b844227f08d50b14fb44fc33"
+  },
+  "recommended_next_stage": "Prospectively registered learned seismic-to-label9 probability encoder; do not implement without manual approval."
+}

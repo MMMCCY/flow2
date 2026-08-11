@@ -1,0 +1,24 @@
+{
+  "case_manifests": {
+    "native_seed20260901": {
+      "path": "prior_only/native_seed20260901/manifest.json",
+      "sha256": "1b9d46b663b64e6136de10a59acabbf15f386dc9802042912a43fcf547057025",
+      "size_bytes": 13228
+    },
+    "native_seed20260902": {
+      "path": "prior_only/native_seed20260902/manifest.json",
+      "sha256": "a47bc9fd2d3fe24697411e29ba9ea3b6d7c7b218a1afa4c69240dfc41a9cdffa",
+      "size_bytes": 13228
+    },
+    "native_seed20260903": {
+      "path": "prior_only/native_seed20260903/manifest.json",
+      "sha256": "c227052512ae7fb06da0541a791c40949799a5193ea5f0a9f0d06d382cae6c7c",
+      "size_bytes": 13228
+    }
+  },
+  "flow_forward_count": 0,
+  "schema": "stage10r_prior_only_bridge_collection_v1",
+  "seismic_inversion_called": false,
+  "status": "complete_before_retrospective_truth_load",
+  "truth_tensor_received": false
+}

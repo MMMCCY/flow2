@@ -1,0 +1,466 @@
+{
+  "axis_order": [
+    "x",
+    "y",
+    "z"
+  ],
+  "bridge_schema": "stage10_scalar_gaussian_sample_bridge_v1",
+  "case_id": "fullgeo_case03",
+  "created_at_utc": "2026-08-11T12:08:49.338967+00:00",
+  "generated_tensors": {
+    "entropy_post": {
+      "dtype": "torch.float32",
+      "file_sha256": "b549c7dae8a5ad880432f1e8b58ee359c24c71496f2c7854788073d0b70e91ad",
+      "path": "entropy_post.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 1050153,
+      "tensor_sha256": "814bbfd89f90611238e41daf8cd1a0f77a34a3d396381a9893dc4fefb68f1b7e"
+    },
+    "entropy_prior": {
+      "dtype": "torch.float32",
+      "file_sha256": "c40ba330aea63905809ecdf144a5fa12505ee9aeae959880c7c08f300857e956",
+      "path": "entropy_prior.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 1050153,
+      "tensor_sha256": "9fd3fd760783fbc4776e99e758eb77aab2c648f4bbbcb738aac8763f0187ff1b"
+    },
+    "probability_all_classes_post": {
+      "dtype": "torch.float32",
+      "file_sha256": "b1b382369cd16438f329fd57edf50a15aa77a6efe5c29ba60fda4f85264afb01",
+      "path": "probability_all_classes_post.pt",
+      "shape": [
+        1,
+        15,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 15730217,
+      "tensor_sha256": "b3b7a4d0f248439ee4addfdfb8157317c7768d6503d73d3d85655af92e194e5c"
+    },
+    "probability_all_classes_prior": {
+      "dtype": "torch.float32",
+      "file_sha256": "984eff2a85c9b62024ae68c5428db2f791ae206888a2ffa79b0c6c6d4b2d4fa3",
+      "path": "probability_all_classes_prior.pt",
+      "shape": [
+        1,
+        15,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 15730217,
+      "tensor_sha256": "380b4997e9903559a18db9ff49ab9ced7b525a45f1291f49f5e164f362fd36ef"
+    },
+    "probability_label9_post": {
+      "dtype": "torch.float32",
+      "file_sha256": "c0ec7ce1f3ca2bfe54d926f5ae4b3ab4f7cea23ad411387997efc0b059e9d072",
+      "path": "probability_label9_post.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 15730217,
+      "tensor_sha256": "1ac710708e54e7c4856be5f2bea067276379169d9eb2dedff8595689c796888c"
+    },
+    "probability_label9_prior": {
+      "dtype": "torch.float32",
+      "file_sha256": "fd9fbc70632ec4bf72c25c9eed30f94b59d7d3e4f0f72a4549161392faf7d9da",
+      "path": "probability_label9_prior.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 15730217,
+      "tensor_sha256": "b0229afb8ffb3e1161f1b4019ac5b2ce610ee593338106840ee2d8c95d1fb21e"
+    },
+    "property_mean_post": {
+      "dtype": "torch.float32",
+      "file_sha256": "7826769729357caa9abf6b15a1f280c82deca41223cda93a9414794165ee2505",
+      "path": "property_mean_post.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 1050153,
+      "tensor_sha256": "cb2787b4c034824bb5b2076ccaaa38d1a57b474dc515ab8291b34ddbce75d6eb"
+    },
+    "property_mean_prior": {
+      "dtype": "torch.float32",
+      "file_sha256": "7e5a50d27dfa4fb5ac2aedf640a82333be21e33d960474d43f41180af2ee1c7d",
+      "path": "property_mean_prior.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 1050153,
+      "tensor_sha256": "6a8fce955fe308f3168fa6665a6c277afa9179afc141fbb6257f3468c66e2ab6"
+    },
+    "property_samples_post": {
+      "dtype": "torch.float32",
+      "file_sha256": "c4a545812ccb2bae271d71105efe0ba41656bdea4b61aea6ac5f44fd40877b93",
+      "path": "property_samples_post.pt",
+      "shape": [
+        12,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 12584489,
+      "tensor_sha256": "77a1faee9d7d22cbc3fdf3947a29f6ed6633174f27769fe2cf6a1dce3f9bdd16"
+    },
+    "property_samples_prior": {
+      "dtype": "torch.float32",
+      "file_sha256": "dd00461f1d45cd848269e9b7b2c2dbcbae5269840db50788661813f18e18c1c9",
+      "path": "property_samples_prior.pt",
+      "shape": [
+        12,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 12584489,
+      "tensor_sha256": "8294ec90f5d34742ba8ce20f4435748a93bdb2525b83c1a666188921e54abade"
+    },
+    "property_spread_post": {
+      "dtype": "torch.float32",
+      "file_sha256": "30e58624f7bdf5faa7305705ab4491b9c838e618e0a4850cd1bca5f227713526",
+      "path": "property_spread_post.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 1050153,
+      "tensor_sha256": "468c3d2ee472591ee18915d5612cd5de5f517ea837f7c11e2dd378b2d4bba273"
+    },
+    "property_spread_prior": {
+      "dtype": "torch.float32",
+      "file_sha256": "00284a429f26c92f503899b583448d622cbe4b250f9a5cd9cfe6fcaa90c07e0d",
+      "path": "property_spread_prior.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 1050153,
+      "tensor_sha256": "6042879ee9dac184979712ae804b19ed6d6617f224ae4273a0c547a290ea87dd"
+    }
+  },
+  "grid_shape": [
+    64,
+    64,
+    64
+  ],
+  "inference_manifest_truth_available": false,
+  "member_metrics": {
+    "path": "member_inversion_metrics.csv",
+    "sha256": "044fa25e20cda091f2a04a3ef49ee2fd4329f571150023a8a8628d8defa45644",
+    "size_bytes": 3036
+  },
+  "member_records": [
+    {
+      "candidate_id": "candidate_000100",
+      "candidate_index": 100,
+      "chunk_offset": 0,
+      "hard_model_sha256": "48072d366b9ac299fddb088f1859e533a932a9e5f6ffee0fc74ec72814668769",
+      "model_chunk": {
+        "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260901/pool/cache/models_000100_000103.pt.gz",
+        "sha256": "bc10ac0d4489fc2ee1b9569a59c2a1ca5d4b5bf03e076e3fe084636ce0d19b48",
+        "size_bytes": 35724
+      },
+      "source_noise_sha256": "0bba586f47a0b239f2ce4876d41978c85e95a8be8ebe969f1f1e689945299aee",
+      "source_seed": 9301100
+    },
+    {
+      "candidate_id": "candidate_000101",
+      "candidate_index": 101,
+      "chunk_offset": 1,
+      "hard_model_sha256": "ad7f0d896d5d5ed3baa2c44c1a89adae364e6b8f611775f0d5f89e837b75d893",
+      "model_chunk": {
+        "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260901/pool/cache/models_000100_000103.pt.gz",
+        "sha256": "bc10ac0d4489fc2ee1b9569a59c2a1ca5d4b5bf03e076e3fe084636ce0d19b48",
+        "size_bytes": 35724
+      },
+      "source_noise_sha256": "e16dde16b814bf54efadbc5721ad374957a600e37fd5a2cbdc678c5b46db41e6",
+      "source_seed": 9301101
+    },
+    {
+      "candidate_id": "candidate_000102",
+      "candidate_index": 102,
+      "chunk_offset": 2,
+      "hard_model_sha256": "f1f63ed8e4e38c2daf6a2bb29c7cb18f8155beb2b3ba57d58a5c48947bed490e",
+      "model_chunk": {
+        "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260901/pool/cache/models_000100_000103.pt.gz",
+        "sha256": "bc10ac0d4489fc2ee1b9569a59c2a1ca5d4b5bf03e076e3fe084636ce0d19b48",
+        "size_bytes": 35724
+      },
+      "source_noise_sha256": "72a0fec4f80dbf50811c13b2b198ae16d108f88b656aadd02850f68d50ff3ba8",
+      "source_seed": 9301102
+    },
+    {
+      "candidate_id": "candidate_000103",
+      "candidate_index": 103,
+      "chunk_offset": 3,
+      "hard_model_sha256": "29d03069344adc08a5ef1fd9dfc81f54e23255267235ac67008a22b479827abe",
+      "model_chunk": {
+        "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260901/pool/cache/models_000100_000103.pt.gz",
+        "sha256": "bc10ac0d4489fc2ee1b9569a59c2a1ca5d4b5bf03e076e3fe084636ce0d19b48",
+        "size_bytes": 35724
+      },
+      "source_noise_sha256": "7c8c92ccd972cd9a78bdd765439874c996b9d7a79e9073a3fc53583b1b488516",
+      "source_seed": 9301103
+    },
+    {
+      "candidate_id": "candidate_000104",
+      "candidate_index": 104,
+      "chunk_offset": 0,
+      "hard_model_sha256": "febb1b9189980fc193df4c768e3076f67e854b67da90509ec33d3a7f1bbf5e36",
+      "model_chunk": {
+        "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260901/pool/cache/models_000104_000107.pt.gz",
+        "sha256": "d216e57ffc1bd5217e46cdd4f8dbaad724c4a949d63b04129d8804b9b53c6a7f",
+        "size_bytes": 41325
+      },
+      "source_noise_sha256": "9e22690b6a5ff6624494b08e44b0c219a0f40e231a363efebd04d98e724f6235",
+      "source_seed": 9301104
+    },
+    {
+      "candidate_id": "candidate_000105",
+      "candidate_index": 105,
+      "chunk_offset": 1,
+      "hard_model_sha256": "f7cea92a11719f86f01ed51d7052ff96bbff591fedb3cf26236a12f2d382b3e5",
+      "model_chunk": {
+        "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260901/pool/cache/models_000104_000107.pt.gz",
+        "sha256": "d216e57ffc1bd5217e46cdd4f8dbaad724c4a949d63b04129d8804b9b53c6a7f",
+        "size_bytes": 41325
+      },
+      "source_noise_sha256": "d7acb3b40f1c47bf162e66480babf7419d01adf8b5a8dd97dd9122f6f07d3a1c",
+      "source_seed": 9301105
+    },
+    {
+      "candidate_id": "candidate_000106",
+      "candidate_index": 106,
+      "chunk_offset": 2,
+      "hard_model_sha256": "7609faf8467eeb3136953d9badc349c51b6a2720d7ca100ae428a3199c6e805f",
+      "model_chunk": {
+        "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260901/pool/cache/models_000104_000107.pt.gz",
+        "sha256": "d216e57ffc1bd5217e46cdd4f8dbaad724c4a949d63b04129d8804b9b53c6a7f",
+        "size_bytes": 41325
+      },
+      "source_noise_sha256": "ea428e64929b15ccc5f78777bd3f49807d79039944a48912cd94923a1762bf1b",
+      "source_seed": 9301106
+    },
+    {
+      "candidate_id": "candidate_000107",
+      "candidate_index": 107,
+      "chunk_offset": 3,
+      "hard_model_sha256": "675a8e73bf1193fd1608a5897f0df9918f34897a9ddff6920c722c970a781d20",
+      "model_chunk": {
+        "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260901/pool/cache/models_000104_000107.pt.gz",
+        "sha256": "d216e57ffc1bd5217e46cdd4f8dbaad724c4a949d63b04129d8804b9b53c6a7f",
+        "size_bytes": 41325
+      },
+      "source_noise_sha256": "01dfd90b854be1c2a625fcd3688d9f819ae9eb99f7059dffc5dab260f9dc080a",
+      "source_seed": 9301107
+    },
+    {
+      "candidate_id": "candidate_000108",
+      "candidate_index": 108,
+      "chunk_offset": 0,
+      "hard_model_sha256": "98079388d5f582ef7eeda77f39ca6458dcbeea8fb61dd622e5c84cb1abb24aa1",
+      "model_chunk": {
+        "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260901/pool/cache/models_000108_000111.pt.gz",
+        "sha256": "bb8c0194108936f725bc69f541db2d750170e585958377ff1a34c8e8ec858c9c",
+        "size_bytes": 34730
+      },
+      "source_noise_sha256": "31751662b37f2bc2fe680bea27be475488273a55c0a4c4f6ae04a121b236d896",
+      "source_seed": 9301108
+    },
+    {
+      "candidate_id": "candidate_000109",
+      "candidate_index": 109,
+      "chunk_offset": 1,
+      "hard_model_sha256": "24c21365f8c1d8fc114ee6c01d1ca972e465bc55c3e980eb2a849db1a722e164",
+      "model_chunk": {
+        "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260901/pool/cache/models_000108_000111.pt.gz",
+        "sha256": "bb8c0194108936f725bc69f541db2d750170e585958377ff1a34c8e8ec858c9c",
+        "size_bytes": 34730
+      },
+      "source_noise_sha256": "1a26063adb0e841e327c7c59e162b178103b37ecd4b73a01566a088745adf2eb",
+      "source_seed": 9301109
+    },
+    {
+      "candidate_id": "candidate_000110",
+      "candidate_index": 110,
+      "chunk_offset": 2,
+      "hard_model_sha256": "758410c2f568a679fc0fdef62b1ad03fd876aee5322761c6d9ef6b3efaff96ff",
+      "model_chunk": {
+        "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260901/pool/cache/models_000108_000111.pt.gz",
+        "sha256": "bb8c0194108936f725bc69f541db2d750170e585958377ff1a34c8e8ec858c9c",
+        "size_bytes": 34730
+      },
+      "source_noise_sha256": "897b4e8f6d5fc985ddc65b15252a87e75cb9521cdc40a0898c38ee57626e6574",
+      "source_seed": 9301110
+    },
+    {
+      "candidate_id": "candidate_000111",
+      "candidate_index": 111,
+      "chunk_offset": 3,
+      "hard_model_sha256": "1227386ec32c50b6735c60cd647f534e3e0ecb7e28c99e119fdfa31ebf965adf",
+      "model_chunk": {
+        "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260901/pool/cache/models_000108_000111.pt.gz",
+        "sha256": "bb8c0194108936f725bc69f541db2d750170e585958377ff1a34c8e8ec858c9c",
+        "size_bytes": 34730
+      },
+      "source_noise_sha256": "ec371040ed27e67d7ff5fb13590cc06ff1966ce8eb9a827658f6e85381d47e5e",
+      "source_seed": 9301111
+    }
+  ],
+  "post_probability_checks": {
+    "maximum": 1.0,
+    "minimum": 0.0,
+    "normalization_max_error": 2.980232238769531e-07
+  },
+  "prior_candidate_indices": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111
+  ],
+  "prior_member_count": 12,
+  "prior_probability_checks": {
+    "maximum": 1.0,
+    "minimum": 0.0,
+    "normalization_max_error": 2.384185791015625e-07
+  },
+  "prior_selection_used_ranking": false,
+  "property": "natural_log_acoustic_impedance",
+  "property_units": "ln(kg m^-2 s^-1)",
+  "schema": "stage12b_truth_blind_bridge_case_v1",
+  "seismic_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "source_assets": {
+    "builder_source": {
+      "path": "project/geodata-3d-conditional/scripts/stage12b/build_probability_bridges.py",
+      "sha256": "e81c0a0f427b3c448e61d34d7b752e800dc34ea2e9e160e3bf1cfc03b5fd9625",
+      "size_bytes": 13600
+    },
+    "class_model": {
+      "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/configs/petrophysical_class_model.json",
+      "sha256": "106afc9075e5da5e488d6cc84cbdf7ba1335f760f2a74547a769927d6ad86c2b",
+      "size_bytes": 2226
+    },
+    "inference_case_manifest": {
+      "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/observations/fullgeo_case03/manifest.json",
+      "sha256": "fadf3e45b27d1421cc2799396fa5de5290c7e465c3a5eedd19508c31d4289901",
+      "size_bytes": 6755
+    },
+    "inversion_config": {
+      "path": "project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/configs/model_based_log_impedance_v1.json",
+      "sha256": "6b690aec3978b48bc6922e7387fc9fca55566e2b54d5f1e2dcb2669143f79088",
+      "size_bytes": 1018
+    },
+    "observation_correct": {
+      "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/observations/fullgeo_case03/observation_correct.pt",
+      "sha256": "4c632b836aa4bb0703bd31cd62874b1930de4b56a29611aac31200e56791fed3",
+      "size_bytes": 5244457
+    },
+    "prior_bank_manifest": {
+      "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/prior_bank/manifest.json",
+      "sha256": "8b35dea936dbdae8d9c6bd3ff0179413ee49276f6f2b6bf78d045db41bac0618",
+      "size_bytes": 9700
+    },
+    "protocol": {
+      "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/configs/frozen_protocol.json",
+      "sha256": "cd727aab523eaac0424d6d6b6ffb48fb5aaf2a380528b9022db9bd103a446c0d",
+      "size_bytes": 8166
+    }
+  },
+  "status": "complete_frozen_before_truth_evaluation",
+  "target_label": 9,
+  "target_probability_channel": 10,
+  "truth_property_received": false,
+  "truth_tensor_received": false,
+  "truth_visible_selection": false
+}

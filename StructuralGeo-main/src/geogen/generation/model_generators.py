@@ -1,6 +1,7 @@
 """ Sentence structures and generation processes for geo histories. """
 
 import abc as _abc
+import copy
 import csv
 import importlib.resources as resources
 import os
@@ -11,6 +12,7 @@ from pydtmc import MarkovChain
 
 import geogen.generation.categorical_events as events
 from geogen.generation.geowords import BOUNDS_X, BOUNDS_Y, BOUNDS_Z
+from geogen.generation.rng_contract import NamedSeedSequence
 from geogen.model.geomodel import GeoModel, GeoProcess
 
 
@@ -41,12 +43,14 @@ class _GeostoryGenerator(_abc.ABC):
         self.config = config
         self.additional_params = kwargs
 
-    def _history_to_model(self, hist: List[GeoProcess]) -> GeoModel:
+    def _history_to_model(
+        self, hist: List[GeoProcess], normalization_rng=None
+    ) -> GeoModel:
         """Generate a model from a history and normalize the height."""
         model = GeoModel(bounds=self.model_bounds, resolution=self.model_resolution)
         model.add_history(hist)
         model.clear_data()
-        model.compute_model(normalize=True)
+        model.compute_model(normalize=True, normalization_rng=normalization_rng)
         return model
 
     @_abc.abstractmethod
@@ -87,32 +91,87 @@ class MarkovGeostoryGenerator(_GeostoryGenerator):
     _END_STATE = "End"  # Name of the Markov chain termination event, must reference valid events class
     _MAX_STEPS = 20
 
-    def __init__(self, **kwargs):
+    def __init__(self, root_seed=None, rng_contract=None, **kwargs):
+        if root_seed is not None and rng_contract is not None:
+            raise ValueError("pass either root_seed or rng_contract, not both")
         super().__init__(**kwargs)
+        self.rng_contract = (
+            NamedSeedSequence.root(int(root_seed))
+            if root_seed is not None
+            else rng_contract
+        )
+        self._generation_index = 0
+        self.last_generation_metadata = None
         self.markov_matrix_parser = MarkovMatrixParser(self.config)
         self.mc: MarkovChain = self.markov_matrix_parser.get_markov_chain()
         self.event_dictionary = self.markov_matrix_parser.get_event_dictionary()
 
-    def build_sentence(self) -> List[str]:
+    def build_sentence(self, rng_contract=None) -> List[str]:
         """Build a geological sentence from a Markov chain."""
-        sequence = self._build_markov_sequence()
+        sequence = self._build_markov_sequence(rng_contract=rng_contract)
         # Instantiate the event classes from the sequence
-        sentence = [self.event_dictionary[state]() for state in sequence]
+        sentence = []
+        for event_index, state in enumerate(sequence):
+            event_contract = None
+            if rng_contract is not None:
+                event_contract = rng_contract.child(
+                    f"event_{event_index:02d}_{state}"
+                )
+            sentence.append(
+                self.event_dictionary[state](rng_contract=event_contract)
+                if event_contract is not None
+                else self.event_dictionary[state]()
+            )
+        self._last_sequence = list(sequence)
         return sentence
 
-    def build_geostory(self):
+    def build_geostory(self, rng_contract=None):
         """Build a geological history from a Markov chain."""
-        sentence = self.build_sentence()
+        sentence = self.build_sentence(rng_contract=rng_contract)
         # Generate the history from the instantiated events
         history = [word.generate() for word in sentence]
+        self._last_event_records = []
+        for event_index, (state, word, process) in enumerate(
+            zip(self._last_sequence, sentence, history)
+        ):
+            atomic_processes = process.unpack()
+            deposition_values = []
+            for atomic_process in atomic_processes:
+                if hasattr(atomic_process, "value"):
+                    deposition_values.append(
+                        _json_scalar(getattr(atomic_process, "value"))
+                    )
+                if hasattr(atomic_process, "value_list"):
+                    deposition_values.extend(
+                        _json_scalar(value)
+                        for value in getattr(atomic_process, "value_list")
+                    )
+            self._last_event_records.append(
+                {
+                    "event_index": event_index,
+                    "state": state,
+                    "subtype": word.selected_case.name,
+                    "atomic_processes": [
+                        atomic_process.__class__.__name__
+                        for atomic_process in atomic_processes
+                    ],
+                    "deposition_values": deposition_values,
+                }
+            )
         return history
 
-    def _build_markov_sequence(self) -> List[str]:
+    def _build_markov_sequence(self, rng_contract=None) -> List[str]:
         """Generate a list of dictionary keys using the Markov chain."""
+        seed = (
+            rng_contract.uint32_seed("markov_sequence")
+            if rng_contract is not None
+            else None
+        )
         sequence = self.mc.simulate(
             steps=self._MAX_STEPS,
             initial_state=self._START_STATE,
             final_state=self._END_STATE,
+            seed=seed,
         )
         return sequence
 
@@ -120,14 +179,59 @@ class MarkovGeostoryGenerator(_GeostoryGenerator):
         """Generate multiple geological models."""
         models = []
         for _ in range(n_samples):
-            history = self.build_geostory()
-            model = self._history_to_model(history)
+            model_index = self._generation_index
+            model_contract = (
+                self.rng_contract.child(f"model_{model_index:06d}")
+                if self.rng_contract is not None
+                else None
+            )
+            history = self.build_geostory(rng_contract=model_contract)
+            normalization_rng = (
+                model_contract.generator("height_normalization")
+                if model_contract is not None
+                else None
+            )
+            model = self._history_to_model(
+                history, normalization_rng=normalization_rng
+            )
+            packed_history = [str(process) for process in model.history]
+            unpacked_history = [str(process) for process in model.history_unpacked]
+            self.last_generation_metadata = {
+                "model_index": model_index,
+                "rng_contract": (
+                    model_contract.describe()
+                    if model_contract is not None
+                    else None
+                ),
+                "markov_sequence": list(self._last_sequence),
+                "events": copy.deepcopy(self._last_event_records),
+                "packed_history": packed_history,
+                "unpacked_history": unpacked_history,
+                "normalization_stream": (
+                    "height_normalization" if model_contract is not None else None
+                ),
+            }
+            self._generation_index += 1
             models.append(model)
         return models
+
+    def generate_model_with_metadata(self):
+        """Generate one model and return an independent metadata snapshot."""
+        model = self.generate_model()
+        return model, copy.deepcopy(self.last_generation_metadata)
 
     def generate_model(self) -> GeoModel:
         """Generate a single geological model."""
         return self.generate_models(1)[0]
+
+
+def _json_scalar(value):
+    """Convert numpy scalar deposition labels to JSON-native values."""
+    if isinstance(value, np.generic):
+        value = value.item()
+    if isinstance(value, float) and not np.isfinite(value):
+        return None
+    return value
 
 
 class MarkovMatrixParser:

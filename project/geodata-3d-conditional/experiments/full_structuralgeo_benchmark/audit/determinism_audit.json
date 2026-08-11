@@ -1,0 +1,370 @@
+{
+  "checks": {
+    "bounds": true,
+    "config_matches_training_recipe": true,
+    "different_seed_changes_history_or_tensor": true,
+    "fill_nans": true,
+    "finite": true,
+    "height_tracking": true,
+    "integer_valued": true,
+    "labels_within_frozen_range": true,
+    "normalize": true,
+    "resolution": true,
+    "same_seed_two_fresh_processes": true,
+    "shape": true,
+    "single_process_matches_fresh_process": true,
+    "source_and_matrix_hashes_identical_across_processes": true
+  },
+  "different_seed": 120260002,
+  "invariant_keys": [
+    "shape",
+    "finite",
+    "integer_valued",
+    "labels_within_frozen_range",
+    "bounds",
+    "resolution",
+    "height_tracking",
+    "normalize",
+    "fill_nans"
+  ],
+  "passed": true,
+  "probe_summaries": {
+    "fresh_a": {
+      "bounds": [
+        [
+          -1920,
+          1920
+        ],
+        [
+          -1920,
+          1920
+        ],
+        [
+          -1920,
+          1920
+        ]
+      ],
+      "default_matrix_sha256": "cb068ecb1d65487828899179fa02e0aff279703504686c569451fc871dd3784b",
+      "dtype": "torch.float32",
+      "event_subtypes": [
+        "Basement",
+        "Shaped",
+        "FullyRandom",
+        "Tilted",
+        "Fine",
+        "Wave",
+        "Termination of Sequence"
+      ],
+      "fill_nans": true,
+      "finite": true,
+      "height_tracking": true,
+      "history_sha256": "247229f7c11b6a5c292df7dc0a8cee261d66fd1b6516af7c45707693e1d6c754",
+      "integer_valued": true,
+      "labels": [
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_within_frozen_range": true,
+      "markov_sequence": [
+        "BaseStrata",
+        "Fold",
+        "Fault",
+        "Erosion",
+        "Sediment",
+        "Erosion",
+        "End"
+      ],
+      "normalize": true,
+      "resolution": [
+        64,
+        64,
+        64
+      ],
+      "rng_contract_version": "structuralgeo_named_seedsequence_v1",
+      "root_seed": 120260001,
+      "schema_version": "full_structuralgeo_determinism_probe_v1",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "source_hashes": {
+        "StructuralGeo-main/src/geogen/dataset/dataset.py": "abd2aca08258bc1c4f34cca0ee585878280ab204cad4aef52ce637700847db3a",
+        "StructuralGeo-main/src/geogen/generation/categorical_events.py": "63f8431e79c6b1fc4937a480c83e18bd69dd04cc18a2b81c427a4149e3233a15",
+        "StructuralGeo-main/src/geogen/generation/geowords.py": "7acb56bf56a07a1bbe4ef8a2a2c7245b3942cbcf84d55931b2025bf2b016ca03",
+        "StructuralGeo-main/src/geogen/generation/markov_matrix/default_markov_matrix.csv": "cb068ecb1d65487828899179fa02e0aff279703504686c569451fc871dd3784b",
+        "StructuralGeo-main/src/geogen/generation/model_generators.py": "2ee1b5fe4bcd89e70d80c3b78af02a7696af7fdedacca3ed391145e3df67e397",
+        "StructuralGeo-main/src/geogen/generation/rng_contract.py": "96e284b99df9ef8444b00e15e2ecfc92ce85c3c3bfdb9328474690937782a022",
+        "StructuralGeo-main/src/geogen/model/geomodel.py": "a7d575bb2864cff02bc6925f61ca7bc1a4d2c7b9f75006e61b3b30a4dc33a094",
+        "StructuralGeo-main/src/geogen/model/metaballs.py": "c0e5d2c2ccd5cdc58d4ea35639221079718a7629d6960711b75b99e53e845be6",
+        "StructuralGeo-main/src/geogen/probability/random_varibles.py": "7188a98bba406c60ea402e28d94f67aad41503d463bd25663717398226bd384e",
+        "StructuralGeo-main/src/geogen/probability/sedimentbuilders.py": "01066bd55e01f5d2354406419a70dd1056456df0da5257f7a07763840db67243",
+        "StructuralGeo-main/src/geogen/probability/wavegenerators.py": "2ff37e2df0e5b76e4d1d39a93c1af661fdda787d707da0ddde5a096f115d1e56",
+        "project/geodata-3d-conditional/boreholes.py": "b0656303987fef04241a70a1df1a6ca4c2897d6c1e4de6470f492487fc038630",
+        "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/configs/full_complexity_targeted_v1.json": "39bb41e8b7f0d6b1597c8ba81d5762603616a9484c1e3b855c8c43fd570f50b0",
+        "project/geodata-3d-conditional/guidance/full_structuralgeo_benchmark.py": "3d292e6b48dbc2ed6911315d9e736afd770e7e164785208584dc268cd1d18097",
+        "project/geodata-3d-conditional/model_train_sh_inference_cond.py": "36d0dc613d8860677f137a2f1d681ebcc50829a6d90f5547c6eac3fd12a977c2",
+        "project/geodata-3d-conditional/scripts/benchmarks/build_full_structuralgeo_benchmark.py": "96f05f1ab3e87fbb7ffcd73790cf1fa9ecbd0741c145577221d4324ea8bfda24"
+      },
+      "tensor_sha256": "30121141607e549c3c01c4fbd592e7710d1a189316de73ea55d99755117efdf1"
+    },
+    "fresh_b": {
+      "bounds": [
+        [
+          -1920,
+          1920
+        ],
+        [
+          -1920,
+          1920
+        ],
+        [
+          -1920,
+          1920
+        ]
+      ],
+      "default_matrix_sha256": "cb068ecb1d65487828899179fa02e0aff279703504686c569451fc871dd3784b",
+      "dtype": "torch.float32",
+      "event_subtypes": [
+        "Basement",
+        "Shaped",
+        "FullyRandom",
+        "Tilted",
+        "Fine",
+        "Wave",
+        "Termination of Sequence"
+      ],
+      "fill_nans": true,
+      "finite": true,
+      "height_tracking": true,
+      "history_sha256": "247229f7c11b6a5c292df7dc0a8cee261d66fd1b6516af7c45707693e1d6c754",
+      "integer_valued": true,
+      "labels": [
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_within_frozen_range": true,
+      "markov_sequence": [
+        "BaseStrata",
+        "Fold",
+        "Fault",
+        "Erosion",
+        "Sediment",
+        "Erosion",
+        "End"
+      ],
+      "normalize": true,
+      "resolution": [
+        64,
+        64,
+        64
+      ],
+      "rng_contract_version": "structuralgeo_named_seedsequence_v1",
+      "root_seed": 120260001,
+      "schema_version": "full_structuralgeo_determinism_probe_v1",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "source_hashes": {
+        "StructuralGeo-main/src/geogen/dataset/dataset.py": "abd2aca08258bc1c4f34cca0ee585878280ab204cad4aef52ce637700847db3a",
+        "StructuralGeo-main/src/geogen/generation/categorical_events.py": "63f8431e79c6b1fc4937a480c83e18bd69dd04cc18a2b81c427a4149e3233a15",
+        "StructuralGeo-main/src/geogen/generation/geowords.py": "7acb56bf56a07a1bbe4ef8a2a2c7245b3942cbcf84d55931b2025bf2b016ca03",
+        "StructuralGeo-main/src/geogen/generation/markov_matrix/default_markov_matrix.csv": "cb068ecb1d65487828899179fa02e0aff279703504686c569451fc871dd3784b",
+        "StructuralGeo-main/src/geogen/generation/model_generators.py": "2ee1b5fe4bcd89e70d80c3b78af02a7696af7fdedacca3ed391145e3df67e397",
+        "StructuralGeo-main/src/geogen/generation/rng_contract.py": "96e284b99df9ef8444b00e15e2ecfc92ce85c3c3bfdb9328474690937782a022",
+        "StructuralGeo-main/src/geogen/model/geomodel.py": "a7d575bb2864cff02bc6925f61ca7bc1a4d2c7b9f75006e61b3b30a4dc33a094",
+        "StructuralGeo-main/src/geogen/model/metaballs.py": "c0e5d2c2ccd5cdc58d4ea35639221079718a7629d6960711b75b99e53e845be6",
+        "StructuralGeo-main/src/geogen/probability/random_varibles.py": "7188a98bba406c60ea402e28d94f67aad41503d463bd25663717398226bd384e",
+        "StructuralGeo-main/src/geogen/probability/sedimentbuilders.py": "01066bd55e01f5d2354406419a70dd1056456df0da5257f7a07763840db67243",
+        "StructuralGeo-main/src/geogen/probability/wavegenerators.py": "2ff37e2df0e5b76e4d1d39a93c1af661fdda787d707da0ddde5a096f115d1e56",
+        "project/geodata-3d-conditional/boreholes.py": "b0656303987fef04241a70a1df1a6ca4c2897d6c1e4de6470f492487fc038630",
+        "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/configs/full_complexity_targeted_v1.json": "39bb41e8b7f0d6b1597c8ba81d5762603616a9484c1e3b855c8c43fd570f50b0",
+        "project/geodata-3d-conditional/guidance/full_structuralgeo_benchmark.py": "3d292e6b48dbc2ed6911315d9e736afd770e7e164785208584dc268cd1d18097",
+        "project/geodata-3d-conditional/model_train_sh_inference_cond.py": "36d0dc613d8860677f137a2f1d681ebcc50829a6d90f5547c6eac3fd12a977c2",
+        "project/geodata-3d-conditional/scripts/benchmarks/build_full_structuralgeo_benchmark.py": "96f05f1ab3e87fbb7ffcd73790cf1fa9ecbd0741c145577221d4324ea8bfda24"
+      },
+      "tensor_sha256": "30121141607e549c3c01c4fbd592e7710d1a189316de73ea55d99755117efdf1"
+    },
+    "fresh_different": {
+      "bounds": [
+        [
+          -1920,
+          1920
+        ],
+        [
+          -1920,
+          1920
+        ],
+        [
+          -1920,
+          1920
+        ]
+      ],
+      "default_matrix_sha256": "cb068ecb1d65487828899179fa02e0aff279703504686c569451fc871dd3784b",
+      "dtype": "torch.float32",
+      "event_subtypes": [
+        "Sediment: Uniform",
+        "Fourier",
+        "Coarse",
+        "Sequence",
+        "Termination of Sequence"
+      ],
+      "fill_nans": true,
+      "finite": true,
+      "height_tracking": true,
+      "history_sha256": "a528b19fd78a0033cf4b7850edc70499fe9d40aeded339c774b042aead024b62",
+      "integer_valued": true,
+      "labels": [
+        -1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "labels_within_frozen_range": true,
+      "markov_sequence": [
+        "BaseStrata",
+        "Fold",
+        "Sediment",
+        "Fault",
+        "End"
+      ],
+      "normalize": true,
+      "resolution": [
+        64,
+        64,
+        64
+      ],
+      "rng_contract_version": "structuralgeo_named_seedsequence_v1",
+      "root_seed": 120260002,
+      "schema_version": "full_structuralgeo_determinism_probe_v1",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "source_hashes": {
+        "StructuralGeo-main/src/geogen/dataset/dataset.py": "abd2aca08258bc1c4f34cca0ee585878280ab204cad4aef52ce637700847db3a",
+        "StructuralGeo-main/src/geogen/generation/categorical_events.py": "63f8431e79c6b1fc4937a480c83e18bd69dd04cc18a2b81c427a4149e3233a15",
+        "StructuralGeo-main/src/geogen/generation/geowords.py": "7acb56bf56a07a1bbe4ef8a2a2c7245b3942cbcf84d55931b2025bf2b016ca03",
+        "StructuralGeo-main/src/geogen/generation/markov_matrix/default_markov_matrix.csv": "cb068ecb1d65487828899179fa02e0aff279703504686c569451fc871dd3784b",
+        "StructuralGeo-main/src/geogen/generation/model_generators.py": "2ee1b5fe4bcd89e70d80c3b78af02a7696af7fdedacca3ed391145e3df67e397",
+        "StructuralGeo-main/src/geogen/generation/rng_contract.py": "96e284b99df9ef8444b00e15e2ecfc92ce85c3c3bfdb9328474690937782a022",
+        "StructuralGeo-main/src/geogen/model/geomodel.py": "a7d575bb2864cff02bc6925f61ca7bc1a4d2c7b9f75006e61b3b30a4dc33a094",
+        "StructuralGeo-main/src/geogen/model/metaballs.py": "c0e5d2c2ccd5cdc58d4ea35639221079718a7629d6960711b75b99e53e845be6",
+        "StructuralGeo-main/src/geogen/probability/random_varibles.py": "7188a98bba406c60ea402e28d94f67aad41503d463bd25663717398226bd384e",
+        "StructuralGeo-main/src/geogen/probability/sedimentbuilders.py": "01066bd55e01f5d2354406419a70dd1056456df0da5257f7a07763840db67243",
+        "StructuralGeo-main/src/geogen/probability/wavegenerators.py": "2ff37e2df0e5b76e4d1d39a93c1af661fdda787d707da0ddde5a096f115d1e56",
+        "project/geodata-3d-conditional/boreholes.py": "b0656303987fef04241a70a1df1a6ca4c2897d6c1e4de6470f492487fc038630",
+        "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/configs/full_complexity_targeted_v1.json": "39bb41e8b7f0d6b1597c8ba81d5762603616a9484c1e3b855c8c43fd570f50b0",
+        "project/geodata-3d-conditional/guidance/full_structuralgeo_benchmark.py": "3d292e6b48dbc2ed6911315d9e736afd770e7e164785208584dc268cd1d18097",
+        "project/geodata-3d-conditional/model_train_sh_inference_cond.py": "36d0dc613d8860677f137a2f1d681ebcc50829a6d90f5547c6eac3fd12a977c2",
+        "project/geodata-3d-conditional/scripts/benchmarks/build_full_structuralgeo_benchmark.py": "96f05f1ab3e87fbb7ffcd73790cf1fa9ecbd0741c145577221d4324ea8bfda24"
+      },
+      "tensor_sha256": "176f4b782538a9c5a9094000eb492bba7c02536cf2419a56f713febb2d8afc85"
+    },
+    "single_process": {
+      "bounds": [
+        [
+          -1920,
+          1920
+        ],
+        [
+          -1920,
+          1920
+        ],
+        [
+          -1920,
+          1920
+        ]
+      ],
+      "default_matrix_sha256": "cb068ecb1d65487828899179fa02e0aff279703504686c569451fc871dd3784b",
+      "dtype": "torch.float32",
+      "event_subtypes": [
+        "Basement",
+        "Shaped",
+        "FullyRandom",
+        "Tilted",
+        "Fine",
+        "Wave",
+        "Termination of Sequence"
+      ],
+      "fill_nans": true,
+      "finite": true,
+      "height_tracking": true,
+      "history_sha256": "247229f7c11b6a5c292df7dc0a8cee261d66fd1b6516af7c45707693e1d6c754",
+      "integer_valued": true,
+      "labels": [
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels_within_frozen_range": true,
+      "markov_sequence": [
+        "BaseStrata",
+        "Fold",
+        "Fault",
+        "Erosion",
+        "Sediment",
+        "Erosion",
+        "End"
+      ],
+      "normalize": true,
+      "resolution": [
+        64,
+        64,
+        64
+      ],
+      "rng_contract_version": "structuralgeo_named_seedsequence_v1",
+      "root_seed": 120260001,
+      "schema_version": "full_structuralgeo_determinism_probe_v1",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "source_hashes": {
+        "StructuralGeo-main/src/geogen/dataset/dataset.py": "abd2aca08258bc1c4f34cca0ee585878280ab204cad4aef52ce637700847db3a",
+        "StructuralGeo-main/src/geogen/generation/categorical_events.py": "63f8431e79c6b1fc4937a480c83e18bd69dd04cc18a2b81c427a4149e3233a15",
+        "StructuralGeo-main/src/geogen/generation/geowords.py": "7acb56bf56a07a1bbe4ef8a2a2c7245b3942cbcf84d55931b2025bf2b016ca03",
+        "StructuralGeo-main/src/geogen/generation/markov_matrix/default_markov_matrix.csv": "cb068ecb1d65487828899179fa02e0aff279703504686c569451fc871dd3784b",
+        "StructuralGeo-main/src/geogen/generation/model_generators.py": "2ee1b5fe4bcd89e70d80c3b78af02a7696af7fdedacca3ed391145e3df67e397",
+        "StructuralGeo-main/src/geogen/generation/rng_contract.py": "96e284b99df9ef8444b00e15e2ecfc92ce85c3c3bfdb9328474690937782a022",
+        "StructuralGeo-main/src/geogen/model/geomodel.py": "a7d575bb2864cff02bc6925f61ca7bc1a4d2c7b9f75006e61b3b30a4dc33a094",
+        "StructuralGeo-main/src/geogen/model/metaballs.py": "c0e5d2c2ccd5cdc58d4ea35639221079718a7629d6960711b75b99e53e845be6",
+        "StructuralGeo-main/src/geogen/probability/random_varibles.py": "7188a98bba406c60ea402e28d94f67aad41503d463bd25663717398226bd384e",
+        "StructuralGeo-main/src/geogen/probability/sedimentbuilders.py": "01066bd55e01f5d2354406419a70dd1056456df0da5257f7a07763840db67243",
+        "StructuralGeo-main/src/geogen/probability/wavegenerators.py": "2ff37e2df0e5b76e4d1d39a93c1af661fdda787d707da0ddde5a096f115d1e56",
+        "project/geodata-3d-conditional/boreholes.py": "b0656303987fef04241a70a1df1a6ca4c2897d6c1e4de6470f492487fc038630",
+        "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/configs/full_complexity_targeted_v1.json": "39bb41e8b7f0d6b1597c8ba81d5762603616a9484c1e3b855c8c43fd570f50b0",
+        "project/geodata-3d-conditional/guidance/full_structuralgeo_benchmark.py": "3d292e6b48dbc2ed6911315d9e736afd770e7e164785208584dc268cd1d18097",
+        "project/geodata-3d-conditional/model_train_sh_inference_cond.py": "36d0dc613d8860677f137a2f1d681ebcc50829a6d90f5547c6eac3fd12a977c2",
+        "project/geodata-3d-conditional/scripts/benchmarks/build_full_structuralgeo_benchmark.py": "96f05f1ab3e87fbb7ffcd73790cf1fa9ecbd0741c145577221d4324ea8bfda24"
+      },
+      "tensor_sha256": "30121141607e549c3c01c4fbd592e7710d1a189316de73ea55d99755117efdf1"
+    }
+  },
+  "reference_seed": 120260001,
+  "schema_version": "full_structuralgeo_determinism_audit_v1"
+}

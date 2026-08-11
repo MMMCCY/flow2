@@ -1,0 +1,126 @@
+{
+  "candidate_count": 1024,
+  "case_discrimination_pass": false,
+  "case_id": "native_seed20260902",
+  "case_support_pass": false,
+  "completed_at_utc": "2026-08-10T10:20:03.059071+00:00",
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/configs/stage9a_prior_support_v1.json",
+    "sha256": "1311689d37f9989bec520d83ba7097914545e2803d1f87fe2dc45d5af8d5f41f",
+    "size_bytes": 3015
+  },
+  "discrimination_checks": {
+    "correct_target_spearman_strictly_negative": {
+      "label9_iou": true,
+      "label9_recall": false,
+      "major_component_mean_recall": false
+    },
+    "correct_top5_enrichment_strictly_above_controls": {
+      "label9_iou": {
+        "shuffled_xy": true,
+        "wrong_case": true,
+        "zero": true
+      },
+      "label9_recall": {
+        "shuffled_xy": true,
+        "wrong_case": true,
+        "zero": true
+      },
+      "major_component_mean_recall": {
+        "shuffled_xy": true,
+        "wrong_case": true,
+        "zero": true
+      }
+    },
+    "correct_top5_mean_strictly_above_full": {
+      "label9_iou": true,
+      "label9_recall": false,
+      "major_component_mean_recall": false
+    },
+    "passed": false
+  },
+  "ensemble": {
+    "candidate_count": 1024,
+    "expected_pairwise_hard_label_disagreement": 0.0984530961204717,
+    "mean_voxel_modal_disagreement": 0.057925451546907425,
+    "nonunanimous_voxel_fraction": 0.7080841064453125,
+    "unique_hard_model_count": 1024
+  },
+  "exact_command": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/../../.venv/bin/python scripts/stage9/audit_prior_truth.py --pool-dir experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260902/pool --ranking-dir experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260902/ranking --case-dir experiments/stage9_flow_prior_posterior/cases/stage9a_native_v1/native_seed20260902/inference --retrospective-dir experiments/stage9_flow_prior_posterior/cases/stage9a_native_v1/native_seed20260902/retrospective --output-dir experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260902/audit",
+  "git_branch": "main",
+  "git_sha": "72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f",
+  "git_status": "?? project/geodata-3d-conditional/docs/STAGE9A_FLOW_PRIOR_SUPPORT_SPEC.md\n?? project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/\n?? project/geodata-3d-conditional/guidance/prior_ensemble.py\n?? project/geodata-3d-conditional/scripts/stage9/\n?? project/geodata-3d-conditional/tests/test_stage9_enrichment.py\n?? project/geodata-3d-conditional/tests/test_stage9_prior_ensemble.py\n?? project/geodata-3d-conditional/tests/test_stage9_truth_firewall.py",
+  "inference_case_manifest": {
+    "path": "experiments/stage9_flow_prior_posterior/cases/stage9a_native_v1/native_seed20260902/inference/manifest.json",
+    "sha256": "f9577e391b3e56f3839a82a93c20152f68afb3bf3afc1918bd2e6ea208eda278",
+    "size_bytes": 3628
+  },
+  "mode": "formal",
+  "outputs": {
+    "best_of_n.csv": {
+      "path": "best_of_n.csv",
+      "sha256": "b7ffe3f16f395114f8575fe8d2dee1a51bfcdd2909309299e49b7f840a7abdf9",
+      "size_bytes": 2179
+    },
+    "component_metrics.csv": {
+      "path": "component_metrics.csv",
+      "sha256": "fbe88b378b306088d00b97d36d27d957642bc5229084a6fbe73d14fa1477a576",
+      "size_bytes": 301679
+    },
+    "correlations.csv": {
+      "path": "correlations.csv",
+      "sha256": "ee7b33b572a519055e35f90840ccfb4a0a0af18110f4cf6b70abf8edd632e032",
+      "size_bytes": 1192
+    },
+    "enrichment.csv": {
+      "path": "enrichment.csv",
+      "sha256": "b66c450fe8be664774c9eb163a573a388b8812989368ebd0be0e55913cf7c042",
+      "size_bytes": 4855
+    },
+    "per_class_metrics.csv": {
+      "path": "per_class_metrics.csv",
+      "sha256": "e7681b3bb88342ac2d51081409722b6c454663d9e6e284a63a410c74b51938d2",
+      "size_bytes": 277909
+    },
+    "truth_metrics.csv": {
+      "path": "truth_metrics.csv",
+      "sha256": "e5ac506e866f41c2032e7866a6525dd6681d7eb6814c79f64e625d0b200ff9b3",
+      "size_bytes": 624802
+    }
+  },
+  "pool_manifest": {
+    "path": "experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260902/pool/manifest.json",
+    "sha256": "5c0104616c78e32ea457080e754d9793f4314bc2d0ad4bc0900237e5ebe760e8",
+    "size_bytes": 282797
+  },
+  "pool_manifest_sha256_before_truth_load": "5c0104616c78e32ea457080e754d9793f4314bc2d0ad4bc0900237e5ebe760e8",
+  "prior_ensemble": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/prior_ensemble.py",
+    "sha256": "a9c95977e8b60458e7431a84bec36562c6f51dfcd523df46950fe66a868268f9",
+    "size_bytes": 16244
+  },
+  "ranking_manifest": {
+    "path": "experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260902/ranking/ranking_manifest.json",
+    "sha256": "4cdd831c411d9a4d2a65774f2e49102629e5f509a578e189de693169a5519592",
+    "size_bytes": 4011
+  },
+  "ranking_manifest_sha256_before_truth_load": "4cdd831c411d9a4d2a65774f2e49102629e5f509a578e189de693169a5519592",
+  "retrospective_case_manifest": {
+    "path": "experiments/stage9_flow_prior_posterior/cases/stage9a_native_v1/native_seed20260902/retrospective/manifest.json",
+    "sha256": "f1f33fa3ace1aaeadf741360f9877fb8ea2d5976d6f143992747780825ae7f06",
+    "size_bytes": 5219
+  },
+  "runner": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage9/audit_prior_truth.py",
+    "sha256": "fe1f37ddc64e7e32d80f8c81818acebe3c05d203255efde349de277b39e3fb16",
+    "size_bytes": 24132
+  },
+  "schema": "stage9a_retrospective_truth_audit_v1",
+  "scientific_evidence": true,
+  "status": "complete",
+  "support_passing_candidate_ids": [],
+  "truth_loaded_only_after_inference_validation": true,
+  "truth_used_for_generation": false,
+  "truth_used_for_metrics_only": true,
+  "truth_used_for_ranking": false
+}

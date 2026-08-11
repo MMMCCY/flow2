@@ -1,0 +1,69 @@
+{
+  "case_id": "stage11_case02",
+  "case_registry_sha256": "dabcda15581835d3b607a564cef9c9310dc1353d26c81f4a6cd6bdbe2842fccd",
+  "metadata": {
+    "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/benchmark/stage11_case02/metadata.json",
+    "sha256": "7c938ea7496a928c7cee33ae5e62732b80d750f3603631a1dd2463e7dab2112b",
+    "size_bytes": 1636
+  },
+  "schema": "stage11_truth_only_case_v1",
+  "status": "frozen_before_geophysical_computation",
+  "tensors": {
+    "body_masks": {
+      "dtype": "torch.bool",
+      "file_sha256": "a247ae9cf050764594ce828119b1fdc7b62e777d5c811fd10e241cec6f2437b7",
+      "path": "body_masks.pt",
+      "shape": [
+        2,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 525865,
+      "tensor_sha256": "8bb44621febe1ef116572c1f91c8a314f401ab9d3a8d4fe0497bce3b42cdbf8a"
+    },
+    "condition_mask": {
+      "dtype": "torch.bool",
+      "file_sha256": "e9906369e49802de213845dfd1482c730003316cd1b46c349934318c193fa143",
+      "path": "condition_mask.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 263721,
+      "tensor_sha256": "40f1b3bdf3361fd2d5bfd412be014cd340b9b24593bb43890d9d9cf752bf2f6c"
+    },
+    "subsurface_mask": {
+      "dtype": "torch.bool",
+      "file_sha256": "ceec4167139dc6f4ace188bf4f084e8b52f161fcc5dcb3ae598525fdfaaf8ee6",
+      "path": "subsurface_mask.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 263721,
+      "tensor_sha256": "379d38e5ca6240a6dc3747e71feda6ddd14041b280c2dce2ed6006d31de0bc1a"
+    },
+    "truth_labels": {
+      "dtype": "torch.int64",
+      "file_sha256": "bfb478fb3c3719fe3fadb64ead99ff96df57242d7734f3717cfba929cfc3eccb",
+      "path": "truth_labels.pt",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 2098729,
+      "tensor_sha256": "a5bb9b38279a801f96964ac93843ee4bf776df34d9028b98a9765ac08b5c2117"
+    }
+  },
+  "truth_role": "geometry audit and later retrospective evaluation only"
+}

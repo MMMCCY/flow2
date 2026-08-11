@@ -1,0 +1,51 @@
+{
+  "schema_version": "full_structuralgeo_benchmark_config_v1",
+  "frozen_before_generation": true,
+  "cohort_id": "full_complexity_targeted_v1",
+  "accepted_case_target": 5,
+  "maximum_seed_budget": 128,
+  "root_seed_order": {
+    "kind": "arithmetic_sequence",
+    "start": 120260001,
+    "step": 1,
+    "count": 128
+  },
+  "recipe": {
+    "bounds": [[-1920, 1920], [-1920, 1920], [-1920, 1920]],
+    "resolution": [64, 64, 64],
+    "markov_matrix": "packaged_default",
+    "height_tracking": true,
+    "normalize": true,
+    "fill_nans": true,
+    "raw_label_range": [-1, 13]
+  },
+  "eligibility": {
+    "raw_label9_voxels_positive": true,
+    "hidden_label9_voxels_positive": true,
+    "base_strata_history_required": true,
+    "fold_or_fault_event_required": true,
+    "label9_producing_intrusion_event_required": true
+  },
+  "fixed_well_xy": [
+    [8, 46], [9, 5], [10, 24],
+    [27, 17], [35, 26], [39, 59],
+    [44, 60], [48, 6], [57, 32]
+  ],
+  "selection_exclusions": [
+    "target_centroid",
+    "visual_attractiveness",
+    "similarity_to_cond_generation_0",
+    "seismic_response",
+    "future_bridge_performance",
+    "flow_performance"
+  ],
+  "forbidden_during_build": [
+    "seismic",
+    "property_inversion",
+    "probability_bridge",
+    "flow_checkpoint",
+    "flow_inference",
+    "stage11",
+    "stage12b"
+  ]
+}

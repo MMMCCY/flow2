@@ -1,0 +1,26 @@
+{
+  "benchmark_diversity_evaluable": false,
+  "benchmark_geometry_diverse": false,
+  "completed_at_utc": "2026-08-11T10:54:50.448460+00:00",
+  "failure_case": "stage11_case03",
+  "failure_message": "a registered Stage11 target event is empty",
+  "flow_guidance_executed": false,
+  "geometry_freeze": {
+    "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/audit/geometry_freeze.json",
+    "sha256": "42237097926544db94d1fd6854c043c832e96c4f5cb5f4cdd7d5e1be2de9a5fa",
+    "size_bytes": 2802
+  },
+  "git_head": "72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f",
+  "machine_decision": "STOP_BENCHMARK_NOT_DIVERSE",
+  "original_stage10_machine_decision_unchanged": "STOP_BRIDGE_NO_GEOPHYSICAL_INFORMATION",
+  "schema": "stage11a_machine_decision_v1",
+  "stage10r_interpretation_unchanged": "CASE_GEOMETRY_CONFUNDED",
+  "stage11a_executed": false,
+  "stage11b_authorized": false,
+  "status": "COMPLETE_STOP",
+  "truth_firewall": {
+    "path": "project/geodata-3d-conditional/experiments/stage11_diverse_geometry_bridge/audit/truth_firewall.json",
+    "sha256": "fa1a3bf8287783d2b558c1a31ffe874d9da38d6932108ec9619ee100e345b3c6",
+    "size_bytes": 776
+  }
+}

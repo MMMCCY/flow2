@@ -38,11 +38,13 @@ class GeoData3DStreamingDataset(Dataset):
         dataset_size=int(1e6),
         device="cpu",
         transform=None,  # Add the transform parameter
+        root_seed=None,
     ):
         self.model_generator = _DEFAULT_GENERATOR_CLASS(
             model_bounds=model_bounds,
             model_resolution=model_resolution,
             config=generator_config,
+            root_seed=root_seed,
         )
         self.device = device
         self.size = dataset_size

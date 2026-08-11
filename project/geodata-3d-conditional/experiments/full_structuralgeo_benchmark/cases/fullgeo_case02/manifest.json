@@ -1,0 +1,4236 @@
+{
+  "bounds": [
+    [
+      -1920,
+      1920
+    ],
+    [
+      -1920,
+      1920
+    ],
+    [
+      -1920,
+      1920
+    ]
+  ],
+  "case_id": "fullgeo_case02",
+  "child_seed_derivation": {
+    "bit_generator": "PCG64",
+    "derivation": "SeedSequence(root_seed, spawn_key=SHA256(component)[0:16] as 4 little-endian uint32 words)",
+    "namespace": [
+      "model_000000"
+    ],
+    "root_seed": 120260004,
+    "version": "structuralgeo_named_seedsequence_v1"
+  },
+  "cohort_id": "full_complexity_targeted_v1",
+  "component_statistics": {
+    "component_count_26": 16,
+    "component_count_6": 71,
+    "components_26": [
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            31,
+            54,
+            49
+          ],
+          "min_xyz": [
+            0,
+            9,
+            14
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -30.476190476190368,
+            1371.4285714285716,
+            1066.6666666666665
+          ],
+          "min_xyz": [
+            -1920.0,
+            -1371.4285714285716,
+            -1066.6666666666665
+          ]
+        },
+        "centroid_index_xyz": [
+          16.913197519929142,
+          32.95571302037201,
+          37.359610274579275
+        ],
+        "centroid_physical_xyz": [
+          -889.1003416424144,
+          88.72917457505582,
+          357.15719768864165
+        ],
+        "component_id": 1,
+        "hidden_voxel_count": 1128,
+        "physical_volume": 255661873.23183239,
+        "voxel_count": 1129
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            32,
+            61,
+            45
+          ],
+          "min_xyz": [
+            0,
+            2,
+            1
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            30.476190476190368,
+            1798.095238095238,
+            822.8571428571427
+          ],
+          "min_xyz": [
+            -1920.0,
+            -1798.095238095238,
+            -1859.047619047619
+          ]
+        },
+        "centroid_index_xyz": [
+          13.718700725323242,
+          25.898139388205614,
+          24.389151687164933
+        ],
+        "centroid_physical_xyz": [
+          -1083.812527218393,
+          -341.4467420522292,
+          -433.4231352585184
+        ],
+        "component_id": 2,
+        "hidden_voxel_count": 3164,
+        "physical_volume": 718072453.5147392,
+        "voxel_count": 3171
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            8,
+            43,
+            8
+          ],
+          "min_xyz": [
+            0,
+            40,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1432.3809523809523,
+            700.9523809523807,
+            -1432.3809523809523
+          ],
+          "min_xyz": [
+            -1920.0,
+            518.0952380952381,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          3.75,
+          41.09375,
+          3.03125
+        ],
+        "centroid_physical_xyz": [
+          -1691.4285714285713,
+          584.7619047619046,
+          -1735.2380952380952
+        ],
+        "component_id": 3,
+        "hidden_voxel_count": 32,
+        "physical_volume": 7246394.989741928,
+        "voxel_count": 32
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            63,
+            63,
+            44
+          ],
+          "min_xyz": [
+            0,
+            27,
+            18
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1920.0,
+            1920.0,
+            761.9047619047619
+          ],
+          "min_xyz": [
+            -1920.0,
+            -274.2857142857142,
+            -822.8571428571429
+          ]
+        },
+        "centroid_index_xyz": [
+          34.816489361702125,
+          49.665226063829785,
+          26.267952127659573
+        ],
+        "centroid_physical_xyz": [
+          202.14792299898681,
+          1107.2137791286727,
+          -318.9057750759878
+        ],
+        "component_id": 4,
+        "hidden_voxel_count": 3004,
+        "physical_volume": 681161129.0357412,
+        "voxel_count": 3008
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            6,
+            47,
+            5
+          ],
+          "min_xyz": [
+            1,
+            46,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1554.2857142857142,
+            944.7619047619046,
+            -1615.2380952380952
+          ],
+          "min_xyz": [
+            -1859.047619047619,
+            883.8095238095239,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          3.4,
+          46.7,
+          2.5
+        ],
+        "centroid_physical_xyz": [
+          -1712.7619047619048,
+          926.4761904761904,
+          -1767.6190476190477
+        ],
+        "component_id": 5,
+        "hidden_voxel_count": 10,
+        "physical_volume": 2264498.4342943523,
+        "voxel_count": 10
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            5,
+            37,
+            49
+          ],
+          "min_xyz": [
+            5,
+            37,
+            49
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1615.2380952380952,
+            335.2380952380954,
+            1066.6666666666665
+          ],
+          "min_xyz": [
+            -1615.2380952380952,
+            335.2380952380954,
+            1066.6666666666665
+          ]
+        },
+        "centroid_index_xyz": [
+          5.0,
+          37.0,
+          49.0
+        ],
+        "centroid_physical_xyz": [
+          -1615.2380952380952,
+          335.2380952380954,
+          1066.6666666666665
+        ],
+        "component_id": 6,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            5,
+            39,
+            50
+          ],
+          "min_xyz": [
+            5,
+            39,
+            50
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1615.2380952380952,
+            457.14285714285734,
+            1127.6190476190477
+          ],
+          "min_xyz": [
+            -1615.2380952380952,
+            457.14285714285734,
+            1127.6190476190477
+          ]
+        },
+        "centroid_index_xyz": [
+          5.0,
+          39.0,
+          50.0
+        ],
+        "centroid_physical_xyz": [
+          -1615.2380952380952,
+          457.14285714285734,
+          1127.6190476190477
+        ],
+        "component_id": 7,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            63,
+            63,
+            36
+          ],
+          "min_xyz": [
+            6,
+            5,
+            6
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1920.0,
+            1920.0,
+            274.2857142857142
+          ],
+          "min_xyz": [
+            -1554.2857142857142,
+            -1615.2380952380952,
+            -1554.2857142857142
+          ]
+        },
+        "centroid_index_xyz": [
+          36.20902331868874,
+          37.093105778979385,
+          17.770530584656978
+        ],
+        "centroid_physical_xyz": [
+          287.02618323436127,
+          340.9131141473149,
+          -836.8438500780508
+        ],
+        "component_id": 8,
+        "hidden_voxel_count": 5904,
+        "physical_volume": 1340130173.415398,
+        "voxel_count": 5918
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            7,
+            47,
+            8
+          ],
+          "min_xyz": [
+            7,
+            47,
+            8
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1493.3333333333333,
+            944.7619047619046,
+            -1432.3809523809523
+          ],
+          "min_xyz": [
+            -1493.3333333333333,
+            944.7619047619046,
+            -1432.3809523809523
+          ]
+        },
+        "centroid_index_xyz": [
+          7.0,
+          47.0,
+          8.0
+        ],
+        "centroid_physical_xyz": [
+          -1493.3333333333333,
+          944.7619047619046,
+          -1432.3809523809523
+        ],
+        "component_id": 9,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            8,
+            49,
+            47
+          ],
+          "min_xyz": [
+            8,
+            49,
+            47
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1432.3809523809523,
+            1066.6666666666665,
+            944.7619047619046
+          ],
+          "min_xyz": [
+            -1432.3809523809523,
+            1066.6666666666665,
+            944.7619047619046
+          ]
+        },
+        "centroid_index_xyz": [
+          8.0,
+          49.0,
+          47.0
+        ],
+        "centroid_physical_xyz": [
+          -1432.3809523809523,
+          1066.6666666666665,
+          944.7619047619046
+        ],
+        "component_id": 10,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            48,
+            21,
+            15
+          ],
+          "min_xyz": [
+            14,
+            2,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1005.7142857142858,
+            -640.0,
+            -1005.7142857142857
+          ],
+          "min_xyz": [
+            -1066.6666666666665,
+            -1798.095238095238,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          30.60475161987041,
+          11.929805615550755,
+          7.00755939524838
+        ],
+        "centroid_physical_xyz": [
+          -54.56752031266069,
+          -1192.8499434330968,
+          -1492.8725701943845
+        ],
+        "component_id": 11,
+        "hidden_voxel_count": 926,
+        "physical_volume": 209692555.01565704,
+        "voxel_count": 926
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            63,
+            39,
+            20
+          ],
+          "min_xyz": [
+            28,
+            4,
+            2
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1920.0,
+            457.14285714285734,
+            -700.952380952381
+          ],
+          "min_xyz": [
+            -213.33333333333326,
+            -1676.1904761904761,
+            -1798.095238095238
+          ]
+        },
+        "centroid_index_xyz": [
+          45.00176470588235,
+          17.070588235294117,
+          12.954117647058824
+        ],
+        "centroid_physical_xyz": [
+          822.964705882353,
+          -879.5070028011205,
+          -1130.4156862745099
+        ],
+        "component_id": 12,
+        "hidden_voxel_count": 1689,
+        "physical_volume": 384964733.8300399,
+        "voxel_count": 1700
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            34,
+            0,
+            24
+          ],
+          "min_xyz": [
+            32,
+            0,
+            22
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            152.3809523809523,
+            -1920.0,
+            -457.1428571428571
+          ],
+          "min_xyz": [
+            30.476190476190368,
+            -1920.0,
+            -579.047619047619
+          ]
+        },
+        "centroid_index_xyz": [
+          33.285714285714285,
+          0.0,
+          23.0
+        ],
+        "centroid_physical_xyz": [
+          108.84353741496602,
+          -1920.0,
+          -518.0952380952381
+        ],
+        "component_id": 13,
+        "hidden_voxel_count": 7,
+        "physical_volume": 1585148.9040060467,
+        "voxel_count": 7
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            63,
+            3,
+            31
+          ],
+          "min_xyz": [
+            39,
+            0,
+            21
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1920.0,
+            -1737.142857142857,
+            -30.476190476190368
+          ],
+          "min_xyz": [
+            457.14285714285734,
+            -1920.0,
+            -640.0
+          ]
+        },
+        "centroid_index_xyz": [
+          49.35658914728682,
+          0.9767441860465116,
+          27.651162790697676
+        ],
+        "centroid_physical_xyz": [
+          1088.4016242155772,
+          -1860.4651162790697,
+          -234.59579180509422
+        ],
+        "component_id": 14,
+        "hidden_voxel_count": 129,
+        "physical_volume": 29212029.802397147,
+        "voxel_count": 129
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            50,
+            0,
+            11
+          ],
+          "min_xyz": [
+            46,
+            0,
+            8
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1127.6190476190477,
+            -1920.0,
+            -1249.5238095238096
+          ],
+          "min_xyz": [
+            883.8095238095239,
+            -1920.0,
+            -1432.3809523809523
+          ]
+        },
+        "centroid_index_xyz": [
+          48.0,
+          0.0,
+          9.5
+        ],
+        "centroid_physical_xyz": [
+          1005.7142857142858,
+          -1920.0,
+          -1340.952380952381
+        ],
+        "component_id": 15,
+        "hidden_voxel_count": 8,
+        "physical_volume": 1811598.747435482,
+        "voxel_count": 8
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            63,
+            2,
+            12
+          ],
+          "min_xyz": [
+            53,
+            0,
+            8
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1920.0,
+            -1798.095238095238,
+            -1188.5714285714284
+          ],
+          "min_xyz": [
+            1310.4761904761904,
+            -1920.0,
+            -1432.3809523809523
+          ]
+        },
+        "centroid_index_xyz": [
+          59.146341463414636,
+          0.926829268292683,
+          10.292682926829269
+        ],
+        "centroid_physical_xyz": [
+          1685.1103368176541,
+          -1863.5075493612078,
+          -1292.636469221835
+        ],
+        "component_id": 16,
+        "hidden_voxel_count": 41,
+        "physical_volume": 9284443.580606844,
+        "voxel_count": 41
+      }
+    ],
+    "components_6": [
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            0,
+            9,
+            14
+          ],
+          "min_xyz": [
+            0,
+            9,
+            14
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1920.0,
+            -1371.4285714285716,
+            -1066.6666666666665
+          ],
+          "min_xyz": [
+            -1920.0,
+            -1371.4285714285716,
+            -1066.6666666666665
+          ]
+        },
+        "centroid_index_xyz": [
+          0.0,
+          9.0,
+          14.0
+        ],
+        "centroid_physical_xyz": [
+          -1920.0,
+          -1371.4285714285716,
+          -1066.6666666666665
+        ],
+        "component_id": 1,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            31,
+            51,
+            49
+          ],
+          "min_xyz": [
+            0,
+            10,
+            15
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -30.476190476190368,
+            1188.5714285714284,
+            1066.6666666666665
+          ],
+          "min_xyz": [
+            -1920.0,
+            -1310.4761904761904,
+            -1005.7142857142857
+          ]
+        },
+        "centroid_index_xyz": [
+          17.251612903225805,
+          32.28294930875576,
+          37.05069124423963
+        ],
+        "centroid_physical_xyz": [
+          -868.4731182795699,
+          47.72262453368444,
+          338.32784726793943
+        ],
+        "component_id": 2,
+        "hidden_voxel_count": 1084,
+        "physical_volume": 245698080.12093726,
+        "voxel_count": 1085
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            32,
+            60,
+            44
+          ],
+          "min_xyz": [
+            0,
+            2,
+            1
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            30.476190476190368,
+            1737.1428571428573,
+            761.9047619047619
+          ],
+          "min_xyz": [
+            -1920.0,
+            -1798.095238095238,
+            -1859.047619047619
+          ]
+        },
+        "centroid_index_xyz": [
+          13.754591513616212,
+          25.8777707409753,
+          24.36827105763141
+        ],
+        "centroid_physical_xyz": [
+          -1081.6248982176785,
+          -342.68825959769583,
+          -434.69585934437123
+        ],
+        "component_id": 3,
+        "hidden_voxel_count": 3151,
+        "physical_volume": 715128605.5501565,
+        "voxel_count": 3158
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            1,
+            44,
+            45
+          ],
+          "min_xyz": [
+            0,
+            41,
+            45
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1859.047619047619,
+            761.9047619047619,
+            822.8571428571427
+          ],
+          "min_xyz": [
+            -1920.0,
+            579.0476190476193,
+            822.8571428571427
+          ]
+        },
+        "centroid_index_xyz": [
+          0.5,
+          42.5,
+          45.0
+        ],
+        "centroid_physical_xyz": [
+          -1889.5238095238096,
+          670.4761904761904,
+          822.8571428571427
+        ],
+        "component_id": 4,
+        "hidden_voxel_count": 6,
+        "physical_volume": 1358699.0605766114,
+        "voxel_count": 6
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            0,
+            43,
+            1
+          ],
+          "min_xyz": [
+            0,
+            43,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1920.0,
+            700.9523809523807,
+            -1859.047619047619
+          ],
+          "min_xyz": [
+            -1920.0,
+            700.9523809523807,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          0.0,
+          43.0,
+          0.5
+        ],
+        "centroid_physical_xyz": [
+          -1920.0,
+          700.9523809523807,
+          -1889.5238095238096
+        ],
+        "component_id": 5,
+        "hidden_voxel_count": 2,
+        "physical_volume": 452899.6868588705,
+        "voxel_count": 2
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            1,
+            51,
+            47
+          ],
+          "min_xyz": [
+            0,
+            51,
+            47
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1859.047619047619,
+            1188.5714285714284,
+            944.7619047619046
+          ],
+          "min_xyz": [
+            -1920.0,
+            1188.5714285714284,
+            944.7619047619046
+          ]
+        },
+        "centroid_index_xyz": [
+          0.5,
+          51.0,
+          47.0
+        ],
+        "centroid_physical_xyz": [
+          -1889.5238095238096,
+          1188.5714285714284,
+          944.7619047619046
+        ],
+        "component_id": 6,
+        "hidden_voxel_count": 2,
+        "physical_volume": 452899.6868588705,
+        "voxel_count": 2
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            13,
+            53,
+            46
+          ],
+          "min_xyz": [
+            0,
+            50,
+            46
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1127.6190476190477,
+            1310.4761904761904,
+            883.8095238095239
+          ],
+          "min_xyz": [
+            -1920.0,
+            1127.6190476190477,
+            883.8095238095239
+          ]
+        },
+        "centroid_index_xyz": [
+          6.052631578947368,
+          51.421052631578945,
+          46.0
+        ],
+        "centroid_physical_xyz": [
+          -1551.077694235589,
+          1214.2355889724308,
+          883.8095238095239
+        ],
+        "component_id": 7,
+        "hidden_voxel_count": 19,
+        "physical_volume": 4302547.02515927,
+        "voxel_count": 19
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            0,
+            54,
+            45
+          ],
+          "min_xyz": [
+            0,
+            54,
+            45
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1920.0,
+            1371.4285714285716,
+            822.8571428571427
+          ],
+          "min_xyz": [
+            -1920.0,
+            1371.4285714285716,
+            822.8571428571427
+          ]
+        },
+        "centroid_index_xyz": [
+          0.0,
+          54.0,
+          45.0
+        ],
+        "centroid_physical_xyz": [
+          -1920.0,
+          1371.4285714285716,
+          822.8571428571427
+        ],
+        "component_id": 8,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            63,
+            63,
+            44
+          ],
+          "min_xyz": [
+            0,
+            27,
+            18
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1920.0,
+            1920.0,
+            761.9047619047619
+          ],
+          "min_xyz": [
+            -1920.0,
+            -274.2857142857142,
+            -822.8571428571429
+          ]
+        },
+        "centroid_index_xyz": [
+          34.831112591605596,
+          49.66322451698868,
+          26.24450366422385
+        ],
+        "centroid_physical_xyz": [
+          203.03924367881746,
+          1107.0917800831194,
+          -320.33501475207004
+        ],
+        "component_id": 9,
+        "hidden_voxel_count": 2998,
+        "physical_volume": 679802429.9751647,
+        "voxel_count": 3002
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            1,
+            61,
+            36
+          ],
+          "min_xyz": [
+            0,
+            61,
+            36
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1859.047619047619,
+            1798.095238095238,
+            274.2857142857142
+          ],
+          "min_xyz": [
+            -1920.0,
+            1798.095238095238,
+            274.2857142857142
+          ]
+        },
+        "centroid_index_xyz": [
+          0.5,
+          61.0,
+          36.0
+        ],
+        "centroid_physical_xyz": [
+          -1889.5238095238096,
+          1798.095238095238,
+          274.2857142857142
+        ],
+        "component_id": 10,
+        "hidden_voxel_count": 2,
+        "physical_volume": 452899.6868588705,
+        "voxel_count": 2
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            5,
+            42,
+            6
+          ],
+          "min_xyz": [
+            1,
+            41,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1615.2380952380952,
+            640.0,
+            -1554.2857142857142
+          ],
+          "min_xyz": [
+            -1859.047619047619,
+            579.0476190476193,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          2.875,
+          41.375,
+          2.25
+        ],
+        "centroid_physical_xyz": [
+          -1744.7619047619048,
+          601.9047619047619,
+          -1782.857142857143
+        ],
+        "component_id": 11,
+        "hidden_voxel_count": 16,
+        "physical_volume": 3623197.494870964,
+        "voxel_count": 16
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            2,
+            47,
+            1
+          ],
+          "min_xyz": [
+            1,
+            47,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1798.095238095238,
+            944.7619047619046,
+            -1859.047619047619
+          ],
+          "min_xyz": [
+            -1859.047619047619,
+            944.7619047619046,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          1.6666666666666667,
+          47.0,
+          0.3333333333333333
+        ],
+        "centroid_physical_xyz": [
+          -1818.4126984126983,
+          944.7619047619046,
+          -1899.6825396825398
+        ],
+        "component_id": 12,
+        "hidden_voxel_count": 3,
+        "physical_volume": 679349.5302883057,
+        "voxel_count": 3
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            2,
+            43,
+            4
+          ],
+          "min_xyz": [
+            2,
+            43,
+            4
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1798.095238095238,
+            700.9523809523807,
+            -1676.1904761904761
+          ],
+          "min_xyz": [
+            -1798.095238095238,
+            700.9523809523807,
+            -1676.1904761904761
+          ]
+        },
+        "centroid_index_xyz": [
+          2.0,
+          43.0,
+          4.0
+        ],
+        "centroid_physical_xyz": [
+          -1798.095238095238,
+          700.9523809523807,
+          -1676.1904761904761
+        ],
+        "component_id": 13,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            3,
+            42,
+            4
+          ],
+          "min_xyz": [
+            3,
+            42,
+            4
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1737.142857142857,
+            640.0,
+            -1676.1904761904761
+          ],
+          "min_xyz": [
+            -1737.142857142857,
+            640.0,
+            -1676.1904761904761
+          ]
+        },
+        "centroid_index_xyz": [
+          3.0,
+          42.0,
+          4.0
+        ],
+        "centroid_physical_xyz": [
+          -1737.142857142857,
+          640.0,
+          -1676.1904761904761
+        ],
+        "component_id": 14,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            3,
+            46,
+            1
+          ],
+          "min_xyz": [
+            3,
+            46,
+            1
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1737.142857142857,
+            883.8095238095239,
+            -1859.047619047619
+          ],
+          "min_xyz": [
+            -1737.142857142857,
+            883.8095238095239,
+            -1859.047619047619
+          ]
+        },
+        "centroid_index_xyz": [
+          3.0,
+          46.0,
+          1.0
+        ],
+        "centroid_physical_xyz": [
+          -1737.142857142857,
+          883.8095238095239,
+          -1859.047619047619
+        ],
+        "component_id": 15,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            3,
+            47,
+            3
+          ],
+          "min_xyz": [
+            3,
+            47,
+            2
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1737.142857142857,
+            944.7619047619046,
+            -1737.142857142857
+          ],
+          "min_xyz": [
+            -1737.142857142857,
+            944.7619047619046,
+            -1798.095238095238
+          ]
+        },
+        "centroid_index_xyz": [
+          3.0,
+          47.0,
+          2.5
+        ],
+        "centroid_physical_xyz": [
+          -1737.142857142857,
+          944.7619047619046,
+          -1767.6190476190477
+        ],
+        "component_id": 16,
+        "hidden_voxel_count": 2,
+        "physical_volume": 452899.6868588705,
+        "voxel_count": 2
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            4,
+            50,
+            47
+          ],
+          "min_xyz": [
+            3,
+            50,
+            47
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1676.1904761904761,
+            1127.6190476190477,
+            944.7619047619046
+          ],
+          "min_xyz": [
+            -1737.142857142857,
+            1127.6190476190477,
+            944.7619047619046
+          ]
+        },
+        "centroid_index_xyz": [
+          3.5,
+          50.0,
+          47.0
+        ],
+        "centroid_physical_xyz": [
+          -1706.6666666666667,
+          1127.6190476190477,
+          944.7619047619046
+        ],
+        "component_id": 17,
+        "hidden_voxel_count": 2,
+        "physical_volume": 452899.6868588705,
+        "voxel_count": 2
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            4,
+            53,
+            45
+          ],
+          "min_xyz": [
+            3,
+            53,
+            45
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1676.1904761904761,
+            1310.4761904761904,
+            822.8571428571427
+          ],
+          "min_xyz": [
+            -1737.142857142857,
+            1310.4761904761904,
+            822.8571428571427
+          ]
+        },
+        "centroid_index_xyz": [
+          3.5,
+          53.0,
+          45.0
+        ],
+        "centroid_physical_xyz": [
+          -1706.6666666666667,
+          1310.4761904761904,
+          822.8571428571427
+        ],
+        "component_id": 18,
+        "hidden_voxel_count": 2,
+        "physical_volume": 452899.6868588705,
+        "voxel_count": 2
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            5,
+            40,
+            4
+          ],
+          "min_xyz": [
+            4,
+            40,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1615.2380952380952,
+            518.0952380952381,
+            -1676.1904761904761
+          ],
+          "min_xyz": [
+            -1676.1904761904761,
+            518.0952380952381,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          4.833333333333333,
+          40.0,
+          1.8333333333333333
+        ],
+        "centroid_physical_xyz": [
+          -1625.3968253968255,
+          518.0952380952381,
+          -1808.2539682539682
+        ],
+        "component_id": 19,
+        "hidden_voxel_count": 6,
+        "physical_volume": 1358699.0605766114,
+        "voxel_count": 6
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            4,
+            47,
+            4
+          ],
+          "min_xyz": [
+            4,
+            47,
+            4
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1676.1904761904761,
+            944.7619047619046,
+            -1676.1904761904761
+          ],
+          "min_xyz": [
+            -1676.1904761904761,
+            944.7619047619046,
+            -1676.1904761904761
+          ]
+        },
+        "centroid_index_xyz": [
+          4.0,
+          47.0,
+          4.0
+        ],
+        "centroid_physical_xyz": [
+          -1676.1904761904761,
+          944.7619047619046,
+          -1676.1904761904761
+        ],
+        "component_id": 20,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            5,
+            9,
+            4
+          ],
+          "min_xyz": [
+            5,
+            9,
+            4
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1615.2380952380952,
+            -1371.4285714285716,
+            -1676.1904761904761
+          ],
+          "min_xyz": [
+            -1615.2380952380952,
+            -1371.4285714285716,
+            -1676.1904761904761
+          ]
+        },
+        "centroid_index_xyz": [
+          5.0,
+          9.0,
+          4.0
+        ],
+        "centroid_physical_xyz": [
+          -1615.2380952380952,
+          -1371.4285714285716,
+          -1676.1904761904761
+        ],
+        "component_id": 21,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            5,
+            37,
+            49
+          ],
+          "min_xyz": [
+            5,
+            37,
+            49
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1615.2380952380952,
+            335.2380952380954,
+            1066.6666666666665
+          ],
+          "min_xyz": [
+            -1615.2380952380952,
+            335.2380952380954,
+            1066.6666666666665
+          ]
+        },
+        "centroid_index_xyz": [
+          5.0,
+          37.0,
+          49.0
+        ],
+        "centroid_physical_xyz": [
+          -1615.2380952380952,
+          335.2380952380954,
+          1066.6666666666665
+        ],
+        "component_id": 22,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            5,
+            39,
+            50
+          ],
+          "min_xyz": [
+            5,
+            39,
+            50
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1615.2380952380952,
+            457.14285714285734,
+            1127.6190476190477
+          ],
+          "min_xyz": [
+            -1615.2380952380952,
+            457.14285714285734,
+            1127.6190476190477
+          ]
+        },
+        "centroid_index_xyz": [
+          5.0,
+          39.0,
+          50.0
+        ],
+        "centroid_physical_xyz": [
+          -1615.2380952380952,
+          457.14285714285734,
+          1127.6190476190477
+        ],
+        "component_id": 23,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            5,
+            46,
+            4
+          ],
+          "min_xyz": [
+            5,
+            46,
+            4
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1615.2380952380952,
+            883.8095238095239,
+            -1676.1904761904761
+          ],
+          "min_xyz": [
+            -1615.2380952380952,
+            883.8095238095239,
+            -1676.1904761904761
+          ]
+        },
+        "centroid_index_xyz": [
+          5.0,
+          46.0,
+          4.0
+        ],
+        "centroid_physical_xyz": [
+          -1615.2380952380952,
+          883.8095238095239,
+          -1676.1904761904761
+        ],
+        "component_id": 24,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            5,
+            47,
+            5
+          ],
+          "min_xyz": [
+            5,
+            47,
+            5
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1615.2380952380952,
+            944.7619047619046,
+            -1615.2380952380952
+          ],
+          "min_xyz": [
+            -1615.2380952380952,
+            944.7619047619046,
+            -1615.2380952380952
+          ]
+        },
+        "centroid_index_xyz": [
+          5.0,
+          47.0,
+          5.0
+        ],
+        "centroid_physical_xyz": [
+          -1615.2380952380952,
+          944.7619047619046,
+          -1615.2380952380952
+        ],
+        "component_id": 25,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            6,
+            40,
+            6
+          ],
+          "min_xyz": [
+            6,
+            40,
+            5
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1554.2857142857142,
+            518.0952380952381,
+            -1554.2857142857142
+          ],
+          "min_xyz": [
+            -1554.2857142857142,
+            518.0952380952381,
+            -1615.2380952380952
+          ]
+        },
+        "centroid_index_xyz": [
+          6.0,
+          40.0,
+          5.5
+        ],
+        "centroid_physical_xyz": [
+          -1554.2857142857142,
+          518.0952380952381,
+          -1584.7619047619048
+        ],
+        "component_id": 26,
+        "hidden_voxel_count": 2,
+        "physical_volume": 452899.6868588705,
+        "voxel_count": 2
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            6,
+            41,
+            7
+          ],
+          "min_xyz": [
+            6,
+            41,
+            7
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1554.2857142857142,
+            579.0476190476193,
+            -1493.3333333333333
+          ],
+          "min_xyz": [
+            -1554.2857142857142,
+            579.0476190476193,
+            -1493.3333333333333
+          ]
+        },
+        "centroid_index_xyz": [
+          6.0,
+          41.0,
+          7.0
+        ],
+        "centroid_physical_xyz": [
+          -1554.2857142857142,
+          579.0476190476193,
+          -1493.3333333333333
+        ],
+        "component_id": 27,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            6,
+            46,
+            5
+          ],
+          "min_xyz": [
+            6,
+            46,
+            5
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1554.2857142857142,
+            883.8095238095239,
+            -1615.2380952380952
+          ],
+          "min_xyz": [
+            -1554.2857142857142,
+            883.8095238095239,
+            -1615.2380952380952
+          ]
+        },
+        "centroid_index_xyz": [
+          6.0,
+          46.0,
+          5.0
+        ],
+        "centroid_physical_xyz": [
+          -1554.2857142857142,
+          883.8095238095239,
+          -1615.2380952380952
+        ],
+        "component_id": 28,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            7,
+            63,
+            36
+          ],
+          "min_xyz": [
+            6,
+            63,
+            36
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1493.3333333333333,
+            1920.0,
+            274.2857142857142
+          ],
+          "min_xyz": [
+            -1554.2857142857142,
+            1920.0,
+            274.2857142857142
+          ]
+        },
+        "centroid_index_xyz": [
+          6.5,
+          63.0,
+          36.0
+        ],
+        "centroid_physical_xyz": [
+          -1523.8095238095239,
+          1920.0,
+          274.2857142857142
+        ],
+        "component_id": 29,
+        "hidden_voxel_count": 2,
+        "physical_volume": 452899.6868588705,
+        "voxel_count": 2
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            7,
+            4,
+            4
+          ],
+          "min_xyz": [
+            7,
+            4,
+            4
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1493.3333333333333,
+            -1676.1904761904761,
+            -1676.1904761904761
+          ],
+          "min_xyz": [
+            -1493.3333333333333,
+            -1676.1904761904761,
+            -1676.1904761904761
+          ]
+        },
+        "centroid_index_xyz": [
+          7.0,
+          4.0,
+          4.0
+        ],
+        "centroid_physical_xyz": [
+          -1493.3333333333333,
+          -1676.1904761904761,
+          -1676.1904761904761
+        ],
+        "component_id": 30,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            7,
+            40,
+            7
+          ],
+          "min_xyz": [
+            7,
+            40,
+            7
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1493.3333333333333,
+            518.0952380952381,
+            -1493.3333333333333
+          ],
+          "min_xyz": [
+            -1493.3333333333333,
+            518.0952380952381,
+            -1493.3333333333333
+          ]
+        },
+        "centroid_index_xyz": [
+          7.0,
+          40.0,
+          7.0
+        ],
+        "centroid_physical_xyz": [
+          -1493.3333333333333,
+          518.0952380952381,
+          -1493.3333333333333
+        ],
+        "component_id": 31,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            7,
+            41,
+            8
+          ],
+          "min_xyz": [
+            7,
+            41,
+            8
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1493.3333333333333,
+            579.0476190476193,
+            -1432.3809523809523
+          ],
+          "min_xyz": [
+            -1493.3333333333333,
+            579.0476190476193,
+            -1432.3809523809523
+          ]
+        },
+        "centroid_index_xyz": [
+          7.0,
+          41.0,
+          8.0
+        ],
+        "centroid_physical_xyz": [
+          -1493.3333333333333,
+          579.0476190476193,
+          -1432.3809523809523
+        ],
+        "component_id": 32,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            7,
+            47,
+            8
+          ],
+          "min_xyz": [
+            7,
+            47,
+            8
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1493.3333333333333,
+            944.7619047619046,
+            -1432.3809523809523
+          ],
+          "min_xyz": [
+            -1493.3333333333333,
+            944.7619047619046,
+            -1432.3809523809523
+          ]
+        },
+        "centroid_index_xyz": [
+          7.0,
+          47.0,
+          8.0
+        ],
+        "centroid_physical_xyz": [
+          -1493.3333333333333,
+          944.7619047619046,
+          -1432.3809523809523
+        ],
+        "component_id": 33,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            11,
+            52,
+            45
+          ],
+          "min_xyz": [
+            7,
+            52,
+            45
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1249.5238095238096,
+            1249.5238095238096,
+            822.8571428571427
+          ],
+          "min_xyz": [
+            -1493.3333333333333,
+            1249.5238095238096,
+            822.8571428571427
+          ]
+        },
+        "centroid_index_xyz": [
+          9.0,
+          52.0,
+          45.0
+        ],
+        "centroid_physical_xyz": [
+          -1371.4285714285716,
+          1249.5238095238096,
+          822.8571428571427
+        ],
+        "component_id": 34,
+        "hidden_voxel_count": 5,
+        "physical_volume": 1132249.2171471762,
+        "voxel_count": 5
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            9,
+            3,
+            4
+          ],
+          "min_xyz": [
+            8,
+            3,
+            4
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1371.4285714285716,
+            -1737.142857142857,
+            -1676.1904761904761
+          ],
+          "min_xyz": [
+            -1432.3809523809523,
+            -1737.142857142857,
+            -1676.1904761904761
+          ]
+        },
+        "centroid_index_xyz": [
+          8.5,
+          3.0,
+          4.0
+        ],
+        "centroid_physical_xyz": [
+          -1401.904761904762,
+          -1737.142857142857,
+          -1676.1904761904761
+        ],
+        "component_id": 35,
+        "hidden_voxel_count": 2,
+        "physical_volume": 452899.6868588705,
+        "voxel_count": 2
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            8,
+            40,
+            8
+          ],
+          "min_xyz": [
+            8,
+            40,
+            8
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1432.3809523809523,
+            518.0952380952381,
+            -1432.3809523809523
+          ],
+          "min_xyz": [
+            -1432.3809523809523,
+            518.0952380952381,
+            -1432.3809523809523
+          ]
+        },
+        "centroid_index_xyz": [
+          8.0,
+          40.0,
+          8.0
+        ],
+        "centroid_physical_xyz": [
+          -1432.3809523809523,
+          518.0952380952381,
+          -1432.3809523809523
+        ],
+        "component_id": 36,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            8,
+            49,
+            47
+          ],
+          "min_xyz": [
+            8,
+            49,
+            47
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1432.3809523809523,
+            1066.6666666666665,
+            944.7619047619046
+          ],
+          "min_xyz": [
+            -1432.3809523809523,
+            1066.6666666666665,
+            944.7619047619046
+          ]
+        },
+        "centroid_index_xyz": [
+          8.0,
+          49.0,
+          47.0
+        ],
+        "centroid_physical_xyz": [
+          -1432.3809523809523,
+          1066.6666666666665,
+          944.7619047619046
+        ],
+        "component_id": 37,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            63,
+            63,
+            35
+          ],
+          "min_xyz": [
+            8,
+            5,
+            6
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1920.0,
+            1920.0,
+            213.33333333333348
+          ],
+          "min_xyz": [
+            -1432.3809523809523,
+            -1615.2380952380952,
+            -1554.2857142857142
+          ]
+        },
+        "centroid_index_xyz": [
+          36.23798239675017,
+          37.07752200406229,
+          17.76726472579553
+        ],
+        "centroid_physical_xyz": [
+          288.79130799239147,
+          339.96324596189197,
+          -837.0429119515106
+        ],
+        "component_id": 38,
+        "hidden_voxel_count": 5894,
+        "physical_volume": 1337865674.9811034,
+        "voxel_count": 5908
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            9,
+            37,
+            48
+          ],
+          "min_xyz": [
+            9,
+            37,
+            48
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1371.4285714285716,
+            335.2380952380954,
+            1005.7142857142858
+          ],
+          "min_xyz": [
+            -1371.4285714285716,
+            335.2380952380954,
+            1005.7142857142858
+          ]
+        },
+        "centroid_index_xyz": [
+          9.0,
+          37.0,
+          48.0
+        ],
+        "centroid_physical_xyz": [
+          -1371.4285714285716,
+          335.2380952380954,
+          1005.7142857142858
+        ],
+        "component_id": 39,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            13,
+            36,
+            46
+          ],
+          "min_xyz": [
+            13,
+            36,
+            46
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1127.6190476190477,
+            274.2857142857142,
+            883.8095238095239
+          ],
+          "min_xyz": [
+            -1127.6190476190477,
+            274.2857142857142,
+            883.8095238095239
+          ]
+        },
+        "centroid_index_xyz": [
+          13.0,
+          36.0,
+          46.0
+        ],
+        "centroid_physical_xyz": [
+          -1127.6190476190477,
+          274.2857142857142,
+          883.8095238095239
+        ],
+        "component_id": 40,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            48,
+            20,
+            14
+          ],
+          "min_xyz": [
+            14,
+            2,
+            0
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1005.7142857142858,
+            -700.952380952381,
+            -1066.6666666666665
+          ],
+          "min_xyz": [
+            -1066.6666666666665,
+            -1798.095238095238,
+            -1920.0
+          ]
+        },
+        "centroid_index_xyz": [
+          30.60822510822511,
+          11.923160173160174,
+          6.9935064935064934
+        ],
+        "centroid_physical_xyz": [
+          -54.35580292723125,
+          -1193.2549989692848,
+          -1493.7291280148422
+        ],
+        "component_id": 41,
+        "hidden_voxel_count": 924,
+        "physical_volume": 209239655.32879817,
+        "voxel_count": 924
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            16,
+            49,
+            46
+          ],
+          "min_xyz": [
+            14,
+            49,
+            46
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -944.7619047619048,
+            1066.6666666666665,
+            883.8095238095239
+          ],
+          "min_xyz": [
+            -1066.6666666666665,
+            1066.6666666666665,
+            883.8095238095239
+          ]
+        },
+        "centroid_index_xyz": [
+          15.0,
+          49.0,
+          46.0
+        ],
+        "centroid_physical_xyz": [
+          -1005.7142857142857,
+          1066.6666666666665,
+          883.8095238095239
+        ],
+        "component_id": 42,
+        "hidden_voxel_count": 3,
+        "physical_volume": 679349.5302883057,
+        "voxel_count": 3
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            15,
+            43,
+            14
+          ],
+          "min_xyz": [
+            15,
+            43,
+            13
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1005.7142857142857,
+            700.9523809523807,
+            -1066.6666666666665
+          ],
+          "min_xyz": [
+            -1005.7142857142857,
+            700.9523809523807,
+            -1127.6190476190477
+          ]
+        },
+        "centroid_index_xyz": [
+          15.0,
+          43.0,
+          13.5
+        ],
+        "centroid_physical_xyz": [
+          -1005.7142857142857,
+          700.9523809523807,
+          -1097.142857142857
+        ],
+        "component_id": 43,
+        "hidden_voxel_count": 2,
+        "physical_volume": 452899.6868588705,
+        "voxel_count": 2
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            15,
+            52,
+            44
+          ],
+          "min_xyz": [
+            15,
+            52,
+            44
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -1005.7142857142857,
+            1249.5238095238096,
+            761.9047619047619
+          ],
+          "min_xyz": [
+            -1005.7142857142857,
+            1249.5238095238096,
+            761.9047619047619
+          ]
+        },
+        "centroid_index_xyz": [
+          15.0,
+          52.0,
+          44.0
+        ],
+        "centroid_physical_xyz": [
+          -1005.7142857142857,
+          1249.5238095238096,
+          761.9047619047619
+        ],
+        "component_id": 44,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            16,
+            42,
+            13
+          ],
+          "min_xyz": [
+            16,
+            42,
+            13
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -944.7619047619048,
+            640.0,
+            -1127.6190476190477
+          ],
+          "min_xyz": [
+            -944.7619047619048,
+            640.0,
+            -1127.6190476190477
+          ]
+        },
+        "centroid_index_xyz": [
+          16.0,
+          42.0,
+          13.0
+        ],
+        "centroid_physical_xyz": [
+          -944.7619047619048,
+          640.0,
+          -1127.6190476190477
+        ],
+        "component_id": 45,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            17,
+            41,
+            14
+          ],
+          "min_xyz": [
+            17,
+            41,
+            14
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -883.8095238095239,
+            579.0476190476193,
+            -1066.6666666666665
+          ],
+          "min_xyz": [
+            -883.8095238095239,
+            579.0476190476193,
+            -1066.6666666666665
+          ]
+        },
+        "centroid_index_xyz": [
+          17.0,
+          41.0,
+          14.0
+        ],
+        "centroid_physical_xyz": [
+          -883.8095238095239,
+          579.0476190476193,
+          -1066.6666666666665
+        ],
+        "component_id": 46,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            17,
+            42,
+            16
+          ],
+          "min_xyz": [
+            17,
+            42,
+            15
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -883.8095238095239,
+            640.0,
+            -944.7619047619048
+          ],
+          "min_xyz": [
+            -883.8095238095239,
+            640.0,
+            -1005.7142857142857
+          ]
+        },
+        "centroid_index_xyz": [
+          17.0,
+          42.0,
+          15.5
+        ],
+        "centroid_physical_xyz": [
+          -883.8095238095239,
+          640.0,
+          -975.2380952380952
+        ],
+        "component_id": 47,
+        "hidden_voxel_count": 2,
+        "physical_volume": 452899.6868588705,
+        "voxel_count": 2
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            19,
+            48,
+            46
+          ],
+          "min_xyz": [
+            18,
+            48,
+            46
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -761.9047619047619,
+            1005.7142857142858,
+            883.8095238095239
+          ],
+          "min_xyz": [
+            -822.8571428571429,
+            1005.7142857142858,
+            883.8095238095239
+          ]
+        },
+        "centroid_index_xyz": [
+          18.5,
+          48.0,
+          46.0
+        ],
+        "centroid_physical_xyz": [
+          -792.3809523809523,
+          1005.7142857142858,
+          883.8095238095239
+        ],
+        "component_id": 48,
+        "hidden_voxel_count": 2,
+        "physical_volume": 452899.6868588705,
+        "voxel_count": 2
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            21,
+            51,
+            44
+          ],
+          "min_xyz": [
+            19,
+            51,
+            44
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -640.0,
+            1188.5714285714284,
+            761.9047619047619
+          ],
+          "min_xyz": [
+            -761.9047619047619,
+            1188.5714285714284,
+            761.9047619047619
+          ]
+        },
+        "centroid_index_xyz": [
+          20.0,
+          51.0,
+          44.0
+        ],
+        "centroid_physical_xyz": [
+          -700.952380952381,
+          1188.5714285714284,
+          761.9047619047619
+        ],
+        "component_id": 49,
+        "hidden_voxel_count": 3,
+        "physical_volume": 679349.5302883057,
+        "voxel_count": 3
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            19,
+            57,
+            41
+          ],
+          "min_xyz": [
+            19,
+            57,
+            41
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -761.9047619047619,
+            1554.2857142857142,
+            579.0476190476193
+          ],
+          "min_xyz": [
+            -761.9047619047619,
+            1554.2857142857142,
+            579.0476190476193
+          ]
+        },
+        "centroid_index_xyz": [
+          19.0,
+          57.0,
+          41.0
+        ],
+        "centroid_physical_xyz": [
+          -761.9047619047619,
+          1554.2857142857142,
+          579.0476190476193
+        ],
+        "component_id": 50,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            21,
+            38,
+            20
+          ],
+          "min_xyz": [
+            21,
+            38,
+            20
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -640.0,
+            396.19047619047615,
+            -700.952380952381
+          ],
+          "min_xyz": [
+            -640.0,
+            396.19047619047615,
+            -700.952380952381
+          ]
+        },
+        "centroid_index_xyz": [
+          21.0,
+          38.0,
+          20.0
+        ],
+        "centroid_physical_xyz": [
+          -640.0,
+          396.19047619047615,
+          -700.952380952381
+        ],
+        "component_id": 51,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            22,
+            21,
+            15
+          ],
+          "min_xyz": [
+            22,
+            21,
+            15
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -579.047619047619,
+            -640.0,
+            -1005.7142857142857
+          ],
+          "min_xyz": [
+            -579.047619047619,
+            -640.0,
+            -1005.7142857142857
+          ]
+        },
+        "centroid_index_xyz": [
+          22.0,
+          21.0,
+          15.0
+        ],
+        "centroid_physical_xyz": [
+          -579.047619047619,
+          -640.0,
+          -1005.7142857142857
+        ],
+        "component_id": 52,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            23,
+            51,
+            43
+          ],
+          "min_xyz": [
+            23,
+            51,
+            43
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -518.0952380952381,
+            1188.5714285714284,
+            700.9523809523807
+          ],
+          "min_xyz": [
+            -518.0952380952381,
+            1188.5714285714284,
+            700.9523809523807
+          ]
+        },
+        "centroid_index_xyz": [
+          23.0,
+          51.0,
+          43.0
+        ],
+        "centroid_physical_xyz": [
+          -518.0952380952381,
+          1188.5714285714284,
+          700.9523809523807
+        ],
+        "component_id": 53,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            63,
+            39,
+            20
+          ],
+          "min_xyz": [
+            28,
+            4,
+            2
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1920.0,
+            457.14285714285734,
+            -700.952380952381
+          ],
+          "min_xyz": [
+            -213.33333333333326,
+            -1676.1904761904761,
+            -1798.095238095238
+          ]
+        },
+        "centroid_index_xyz": [
+          44.96394799054374,
+          17.076832151300238,
+          12.949763593380615
+        ],
+        "centroid_physical_xyz": [
+          820.6596870426661,
+          -879.1264212540807,
+          -1130.6810762129912
+        ],
+        "component_id": 54,
+        "hidden_voxel_count": 1681,
+        "physical_volume": 383153135.08260447,
+        "voxel_count": 1692
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            29,
+            19,
+            15
+          ],
+          "min_xyz": [
+            29,
+            19,
+            15
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -152.3809523809523,
+            -761.9047619047619,
+            -1005.7142857142857
+          ],
+          "min_xyz": [
+            -152.3809523809523,
+            -761.9047619047619,
+            -1005.7142857142857
+          ]
+        },
+        "centroid_index_xyz": [
+          29.0,
+          19.0,
+          15.0
+        ],
+        "centroid_physical_xyz": [
+          -152.3809523809523,
+          -761.9047619047619,
+          -1005.7142857142857
+        ],
+        "component_id": 55,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            29,
+            50,
+            37
+          ],
+          "min_xyz": [
+            29,
+            48,
+            37
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -152.3809523809523,
+            1127.6190476190477,
+            335.2380952380954
+          ],
+          "min_xyz": [
+            -152.3809523809523,
+            1005.7142857142858,
+            335.2380952380954
+          ]
+        },
+        "centroid_index_xyz": [
+          29.0,
+          49.0,
+          37.0
+        ],
+        "centroid_physical_xyz": [
+          -152.3809523809523,
+          1066.6666666666665,
+          335.2380952380954
+        ],
+        "component_id": 56,
+        "hidden_voxel_count": 3,
+        "physical_volume": 679349.5302883057,
+        "voxel_count": 3
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            29,
+            51,
+            38
+          ],
+          "min_xyz": [
+            29,
+            51,
+            38
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -152.3809523809523,
+            1188.5714285714284,
+            396.19047619047615
+          ],
+          "min_xyz": [
+            -152.3809523809523,
+            1188.5714285714284,
+            396.19047619047615
+          ]
+        },
+        "centroid_index_xyz": [
+          29.0,
+          51.0,
+          38.0
+        ],
+        "centroid_physical_xyz": [
+          -152.3809523809523,
+          1188.5714285714284,
+          396.19047619047615
+        ],
+        "component_id": 57,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            30,
+            49,
+            38
+          ],
+          "min_xyz": [
+            30,
+            49,
+            38
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            -91.42857142857133,
+            1066.6666666666665,
+            396.19047619047615
+          ],
+          "min_xyz": [
+            -91.42857142857133,
+            1066.6666666666665,
+            396.19047619047615
+          ]
+        },
+        "centroid_index_xyz": [
+          30.0,
+          49.0,
+          38.0
+        ],
+        "centroid_physical_xyz": [
+          -91.42857142857133,
+          1066.6666666666665,
+          396.19047619047615
+        ],
+        "component_id": 58,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            34,
+            0,
+            24
+          ],
+          "min_xyz": [
+            32,
+            0,
+            22
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            152.3809523809523,
+            -1920.0,
+            -457.1428571428571
+          ],
+          "min_xyz": [
+            30.476190476190368,
+            -1920.0,
+            -579.047619047619
+          ]
+        },
+        "centroid_index_xyz": [
+          33.285714285714285,
+          0.0,
+          23.0
+        ],
+        "centroid_physical_xyz": [
+          108.84353741496602,
+          -1920.0,
+          -518.0952380952381
+        ],
+        "component_id": 59,
+        "hidden_voxel_count": 7,
+        "physical_volume": 1585148.9040060467,
+        "voxel_count": 7
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            32,
+            5,
+            25
+          ],
+          "min_xyz": [
+            32,
+            5,
+            25
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            30.476190476190368,
+            -1615.2380952380952,
+            -396.19047619047615
+          ],
+          "min_xyz": [
+            30.476190476190368,
+            -1615.2380952380952,
+            -396.19047619047615
+          ]
+        },
+        "centroid_index_xyz": [
+          32.0,
+          5.0,
+          25.0
+        ],
+        "centroid_physical_xyz": [
+          30.476190476190368,
+          -1615.2380952380952,
+          -396.19047619047615
+        ],
+        "component_id": 60,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            36,
+            9,
+            12
+          ],
+          "min_xyz": [
+            36,
+            9,
+            12
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            274.2857142857142,
+            -1371.4285714285716,
+            -1188.5714285714284
+          ],
+          "min_xyz": [
+            274.2857142857142,
+            -1371.4285714285716,
+            -1188.5714285714284
+          ]
+        },
+        "centroid_index_xyz": [
+          36.0,
+          9.0,
+          12.0
+        ],
+        "centroid_physical_xyz": [
+          274.2857142857142,
+          -1371.4285714285716,
+          -1188.5714285714284
+        ],
+        "component_id": 61,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            55,
+            3,
+            31
+          ],
+          "min_xyz": [
+            39,
+            0,
+            25
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1432.3809523809523,
+            -1737.142857142857,
+            -30.476190476190368
+          ],
+          "min_xyz": [
+            457.14285714285734,
+            -1920.0,
+            -396.19047619047615
+          ]
+        },
+        "centroid_index_xyz": [
+          47.177570093457945,
+          0.9532710280373832,
+          28.7196261682243
+        ],
+        "centroid_physical_xyz": [
+          955.5852247441035,
+          -1861.8958611481976,
+          -169.4704049844238
+        ],
+        "component_id": 62,
+        "hidden_voxel_count": 107,
+        "physical_volume": 24230133.246949572,
+        "voxel_count": 107
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            50,
+            0,
+            11
+          ],
+          "min_xyz": [
+            46,
+            0,
+            8
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1127.6190476190477,
+            -1920.0,
+            -1249.5238095238096
+          ],
+          "min_xyz": [
+            883.8095238095239,
+            -1920.0,
+            -1432.3809523809523
+          ]
+        },
+        "centroid_index_xyz": [
+          48.0,
+          0.0,
+          9.5
+        ],
+        "centroid_physical_xyz": [
+          1005.7142857142858,
+          -1920.0,
+          -1340.952380952381
+        ],
+        "component_id": 63,
+        "hidden_voxel_count": 8,
+        "physical_volume": 1811598.747435482,
+        "voxel_count": 8
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            63,
+            2,
+            12
+          ],
+          "min_xyz": [
+            53,
+            0,
+            8
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1920.0,
+            -1798.095238095238,
+            -1188.5714285714284
+          ],
+          "min_xyz": [
+            1310.4761904761904,
+            -1920.0,
+            -1432.3809523809523
+          ]
+        },
+        "centroid_index_xyz": [
+          59.146341463414636,
+          0.926829268292683,
+          10.292682926829269
+        ],
+        "centroid_physical_xyz": [
+          1685.1103368176541,
+          -1863.5075493612078,
+          -1292.636469221835
+        ],
+        "component_id": 64,
+        "hidden_voxel_count": 41,
+        "physical_volume": 9284443.580606844,
+        "voxel_count": 41
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            57,
+            15,
+            14
+          ],
+          "min_xyz": [
+            55,
+            15,
+            14
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1554.2857142857142,
+            -1005.7142857142857,
+            -1066.6666666666665
+          ],
+          "min_xyz": [
+            1432.3809523809523,
+            -1005.7142857142857,
+            -1066.6666666666665
+          ]
+        },
+        "centroid_index_xyz": [
+          56.0,
+          15.0,
+          14.0
+        ],
+        "centroid_physical_xyz": [
+          1493.3333333333335,
+          -1005.7142857142857,
+          -1066.6666666666665
+        ],
+        "component_id": 65,
+        "hidden_voxel_count": 3,
+        "physical_volume": 679349.5302883057,
+        "voxel_count": 3
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            57,
+            17,
+            13
+          ],
+          "min_xyz": [
+            55,
+            17,
+            13
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1554.2857142857142,
+            -883.8095238095239,
+            -1127.6190476190477
+          ],
+          "min_xyz": [
+            1432.3809523809523,
+            -883.8095238095239,
+            -1127.6190476190477
+          ]
+        },
+        "centroid_index_xyz": [
+          56.0,
+          17.0,
+          13.0
+        ],
+        "centroid_physical_xyz": [
+          1493.3333333333335,
+          -883.8095238095239,
+          -1127.6190476190477
+        ],
+        "component_id": 66,
+        "hidden_voxel_count": 3,
+        "physical_volume": 679349.5302883057,
+        "voxel_count": 3
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            57,
+            2,
+            24
+          ],
+          "min_xyz": [
+            56,
+            0,
+            24
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1554.2857142857142,
+            -1798.095238095238,
+            -457.1428571428571
+          ],
+          "min_xyz": [
+            1493.3333333333335,
+            -1920.0,
+            -457.1428571428571
+          ]
+        },
+        "centroid_index_xyz": [
+          56.25,
+          0.75,
+          24.0
+        ],
+        "centroid_physical_xyz": [
+          1508.5714285714284,
+          -1874.2857142857142,
+          -457.1428571428571
+        ],
+        "component_id": 67,
+        "hidden_voxel_count": 4,
+        "physical_volume": 905799.373717741,
+        "voxel_count": 4
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            60,
+            2,
+            23
+          ],
+          "min_xyz": [
+            58,
+            0,
+            23
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1737.1428571428573,
+            -1798.095238095238,
+            -518.0952380952381
+          ],
+          "min_xyz": [
+            1615.2380952380954,
+            -1920.0,
+            -518.0952380952381
+          ]
+        },
+        "centroid_index_xyz": [
+          58.714285714285715,
+          0.8571428571428571,
+          23.0
+        ],
+        "centroid_physical_xyz": [
+          1658.775510204082,
+          -1867.7551020408164,
+          -518.0952380952381
+        ],
+        "component_id": 68,
+        "hidden_voxel_count": 7,
+        "physical_volume": 1585148.9040060467,
+        "voxel_count": 7
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            59,
+            11,
+            15
+          ],
+          "min_xyz": [
+            59,
+            11,
+            15
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1676.1904761904761,
+            -1249.5238095238096,
+            -1005.7142857142857
+          ],
+          "min_xyz": [
+            1676.1904761904761,
+            -1249.5238095238096,
+            -1005.7142857142857
+          ]
+        },
+        "centroid_index_xyz": [
+          59.0,
+          11.0,
+          15.0
+        ],
+        "centroid_physical_xyz": [
+          1676.1904761904761,
+          -1249.5238095238096,
+          -1005.7142857142857
+        ],
+        "component_id": 69,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            60,
+            46,
+            20
+          ],
+          "min_xyz": [
+            60,
+            46,
+            20
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1737.1428571428573,
+            883.8095238095239,
+            -700.952380952381
+          ],
+          "min_xyz": [
+            1737.1428571428573,
+            883.8095238095239,
+            -700.952380952381
+          ]
+        },
+        "centroid_index_xyz": [
+          60.0,
+          46.0,
+          20.0
+        ],
+        "centroid_physical_xyz": [
+          1737.1428571428573,
+          883.8095238095239,
+          -700.952380952381
+        ],
+        "component_id": 70,
+        "hidden_voxel_count": 1,
+        "physical_volume": 226449.84342943525,
+        "voxel_count": 1
+      },
+      {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            63,
+            3,
+            22
+          ],
+          "min_xyz": [
+            61,
+            0,
+            21
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1920.0,
+            -1737.142857142857,
+            -579.047619047619
+          ],
+          "min_xyz": [
+            1798.095238095238,
+            -1920.0,
+            -640.0
+          ]
+        },
+        "centroid_index_xyz": [
+          62.09090909090909,
+          1.3636363636363635,
+          21.545454545454547
+        ],
+        "centroid_physical_xyz": [
+          1864.5887445887447,
+          -1836.8831168831168,
+          -606.7532467532467
+        ],
+        "component_id": 71,
+        "hidden_voxel_count": 11,
+        "physical_volume": 2490948.277723788,
+        "voxel_count": 11
+      }
+    ],
+    "connectivity_definition": {
+      "26_connected": "face, edge, or corner neighbors",
+      "6_connected": "face neighbors"
+    },
+    "overall_label9_geometry": {
+      "bbox_index_inclusive": {
+        "max_xyz": [
+          63,
+          63,
+          50
+        ],
+        "min_xyz": [
+          0,
+          0,
+          0
+        ]
+      },
+      "bbox_physical_inclusive": {
+        "max_xyz": [
+          1920.0,
+          1920.0,
+          1127.6190476190477
+        ],
+        "min_xyz": [
+          -1920.0,
+          -1920.0,
+          -1920.0
+        ]
+      },
+      "centroid_index_xyz": [
+        30.842566685319902,
+        32.98047627930112,
+        20.93577068954797
+      ],
+      "centroid_physical_xyz": [
+        -40.07212584716808,
+        90.2385541669255,
+        -643.9149293989808
+      ],
+      "physical_volume": 3641992831.875607,
+      "voxel_count": 16083
+    },
+    "primary_body_diagnostic": {
+      "component": {
+        "bbox_index_inclusive": {
+          "max_xyz": [
+            63,
+            63,
+            36
+          ],
+          "min_xyz": [
+            6,
+            5,
+            6
+          ]
+        },
+        "bbox_physical_inclusive": {
+          "max_xyz": [
+            1920.0,
+            1920.0,
+            274.2857142857142
+          ],
+          "min_xyz": [
+            -1554.2857142857142,
+            -1615.2380952380952,
+            -1554.2857142857142
+          ]
+        },
+        "centroid_index_xyz": [
+          36.20902331868874,
+          37.093105778979385,
+          17.770530584656978
+        ],
+        "centroid_physical_xyz": [
+          287.02618323436127,
+          340.9131141473149,
+          -836.8438500780508
+        ],
+        "component_id": 8,
+        "hidden_voxel_count": 5904,
+        "physical_volume": 1340130173.415398,
+        "voxel_count": 5918
+      },
+      "definition": "largest final raw-label9 26-connected component by hidden voxel count; retrospective metadata only"
+    }
+  },
+  "condition_content_hashes": {
+    "condition/borehole_mask.pt": "c7ecdc63b2042c3561961212322a58ebf87209cd01e5d5eb156873cecf16611b",
+    "condition/boreholes.pt": "a367b177f2946e103025343d50571c85827797aa13f7c5cd69a83a8b2a148321",
+    "condition/condition_mask.pt": "b27293914db726cdc9ba932bb632ae03672cbab63438cfc5ee21a56d925407a4",
+    "condition/condition_values.pt": "a367b177f2946e103025343d50571c85827797aa13f7c5cd69a83a8b2a148321",
+    "condition/surface_mask.pt": "5d0b4a18755311df35e6878a65f88d4d780c7143f4efb5187579ee1277756c04"
+  },
+  "condition_statistics": {
+    "borehole_voxels": 576,
+    "condition_fraction": 0.20962142944335938,
+    "condition_union_voxels": 54951,
+    "surface_borehole_overlap_voxels": 128,
+    "surface_voxels": 54503,
+    "well_count": 9
+  },
+  "default_matrix_sha256": "cb068ecb1d65487828899179fa02e0aff279703504686c569451fc871dd3784b",
+  "environment_versions": {
+    "numpy": "1.26.4",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+    "pydtmc": "8.0.0",
+    "python": "3.10.12",
+    "scipy": "1.15.3",
+    "torch": "2.8.0+cu128"
+  },
+  "event_subtypes": [
+    "Sediment: Uniform",
+    "SillSystem",
+    "Wave",
+    "Fourier",
+    "Fourier",
+    "Flat",
+    "Normal",
+    "WarpedDike",
+    "Single",
+    "TiltCutFill",
+    "Shaped",
+    "Fourier",
+    "HorstGraben",
+    "Coarse",
+    "BlobCluster",
+    "Reverse",
+    "Coarse",
+    "Shaped",
+    "StrikeSlip",
+    "Fourier",
+    "WarpedDike"
+  ],
+  "events": [
+    {
+      "atomic_processes": [
+        "Bedrock",
+        "Sedimentation"
+      ],
+      "deposition_values": [
+        0,
+        2,
+        3,
+        5,
+        3,
+        2,
+        4,
+        2,
+        4,
+        2,
+        1,
+        3,
+        3,
+        1,
+        5,
+        5,
+        1,
+        3,
+        5,
+        4,
+        4,
+        5,
+        2,
+        4,
+        5,
+        5,
+        2,
+        3,
+        3,
+        5,
+        4,
+        3,
+        5,
+        4,
+        2,
+        4,
+        5,
+        4,
+        3,
+        1,
+        4,
+        1,
+        4,
+        1,
+        3,
+        1,
+        5,
+        1,
+        4,
+        1,
+        4,
+        1,
+        4,
+        1,
+        3,
+        5,
+        5,
+        1,
+        5,
+        2,
+        2,
+        2,
+        2,
+        1,
+        4,
+        3,
+        4,
+        4,
+        2,
+        5,
+        4,
+        5
+      ],
+      "event_index": 0,
+      "state": "BaseStrata",
+      "subtype": "Sediment: Uniform"
+    },
+    {
+      "atomic_processes": [
+        "Sedimentation",
+        "DikePlane",
+        "DikePlane",
+        "DikeColumn",
+        "DikeColumn"
+      ],
+      "deposition_values": [
+        1,
+        5,
+        4,
+        5,
+        9,
+        9,
+        9,
+        9
+      ],
+      "event_index": 1,
+      "state": "Sills",
+      "subtype": "SillSystem"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fold",
+        "UnconformityDepth",
+        "Fold",
+        "Fold"
+      ],
+      "deposition_values": [
+        null
+      ],
+      "event_index": 2,
+      "state": "Erosion",
+      "subtype": "Wave"
+    },
+    {
+      "atomic_processes": [
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 3,
+      "state": "Fold",
+      "subtype": "Fourier"
+    },
+    {
+      "atomic_processes": [
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 4,
+      "state": "Fold",
+      "subtype": "Fourier"
+    },
+    {
+      "atomic_processes": [
+        "UnconformityDepth"
+      ],
+      "deposition_values": [
+        null
+      ],
+      "event_index": 5,
+      "state": "Erosion",
+      "subtype": "Flat"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fault",
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 6,
+      "state": "Fault",
+      "subtype": "Normal"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "DikePlane",
+        "Fold"
+      ],
+      "deposition_values": [
+        6
+      ],
+      "event_index": 7,
+      "state": "Dike",
+      "subtype": "WarpedDike"
+    },
+    {
+      "atomic_processes": [
+        "Sedimentation"
+      ],
+      "deposition_values": [
+        4
+      ],
+      "event_index": 8,
+      "state": "Sediment",
+      "subtype": "Single"
+    },
+    {
+      "atomic_processes": [
+        "Tilt",
+        "Fold",
+        "Fold",
+        "UnconformityDepth",
+        "Sedimentation",
+        "Fold",
+        "Fold"
+      ],
+      "deposition_values": [
+        null,
+        5,
+        2,
+        4,
+        3,
+        5,
+        2,
+        1,
+        4
+      ],
+      "event_index": 9,
+      "state": "Erosion",
+      "subtype": "TiltCutFill"
+    },
+    {
+      "atomic_processes": [
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 10,
+      "state": "Fold",
+      "subtype": "Shaped"
+    },
+    {
+      "atomic_processes": [
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 11,
+      "state": "Fold",
+      "subtype": "Fourier"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fault",
+        "Fold",
+        "Fault",
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 12,
+      "state": "Fault",
+      "subtype": "HorstGraben"
+    },
+    {
+      "atomic_processes": [
+        "Sedimentation"
+      ],
+      "deposition_values": [
+        3
+      ],
+      "event_index": 13,
+      "state": "Sediment",
+      "subtype": "Coarse"
+    },
+    {
+      "atomic_processes": [
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall"
+      ],
+      "deposition_values": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "event_index": 14,
+      "state": "OreDeposit",
+      "subtype": "BlobCluster"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fault",
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 15,
+      "state": "Fault",
+      "subtype": "Reverse"
+    },
+    {
+      "atomic_processes": [
+        "Sedimentation"
+      ],
+      "deposition_values": [
+        2,
+        4
+      ],
+      "event_index": 16,
+      "state": "Sediment",
+      "subtype": "Coarse"
+    },
+    {
+      "atomic_processes": [
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 17,
+      "state": "Fold",
+      "subtype": "Shaped"
+    },
+    {
+      "atomic_processes": [
+        "Fault"
+      ],
+      "deposition_values": [],
+      "event_index": 18,
+      "state": "Fault",
+      "subtype": "StrikeSlip"
+    },
+    {
+      "atomic_processes": [
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 19,
+      "state": "Fold",
+      "subtype": "Fourier"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "DikePlane",
+        "Fold"
+      ],
+      "deposition_values": [
+        6
+      ],
+      "event_index": 20,
+      "state": "Dike",
+      "subtype": "WarpedDike"
+    }
+  ],
+  "fill_nans": true,
+  "height_tracking": true,
+  "label9": {
+    "hidden": 16046,
+    "hidden_fraction": 0.9976994341851645,
+    "observed": 37,
+    "total": 16083
+  },
+  "markov_state_sequence": [
+    "BaseStrata",
+    "Sills",
+    "Erosion",
+    "Fold",
+    "Fold",
+    "Erosion",
+    "Fault",
+    "Dike",
+    "Sediment",
+    "Erosion",
+    "Fold",
+    "Fold",
+    "Fault",
+    "Sediment",
+    "OreDeposit",
+    "Fault",
+    "Sediment",
+    "Fold",
+    "Fault",
+    "Fold",
+    "Dike"
+  ],
+  "normalize": true,
+  "packed_history": [
+    "CompoundProcess (BaseStrata: Sediment: Uniform) with 2 sub-processes:\n    1. Bedrock: with z <= -34560.0 and value 0.0\n    2. Sedimentation: rock type values [2, 3, 5...], and thicknesses 595.603, 189.104, 835.916..., with base = -34560",
+    "CompoundProcess (Sills: SillSystem) with 5 sub-processes:\n    1. Sedimentation: rock type values [1, 5, 4...], and thicknesses 635.295, 640.000, 640.000..., with base = nan\n    2. Dike: strike 122.2°, dip -0.3°, width 134.0, origin ((-1228.4483107137517, -15.452316849281488, boundary 2)), value 9.0.\n    3. Dike: strike 333.5°, dip 0.7°, width 175.0, origin ((-738.0002524705363, 361.01225016032663, boundary 1)), value 9.0.\n    4. DikeColumn: origin ((-1228.4483107137517, -15.452316849281488, boundary 2)), diam 554.8, depth inf, minor_axis_scale 0.23, rotation 168.1, value 9.0.\n    5. DikeColumn: origin ((-738.0002524705363, 361.01225016032663, boundary 1)), diam 654.3, depth inf, minor_axis_scale 0.23, rotation 297.4, value 9.0.",
+    "CompoundProcess (Erosion: Wave) with 5 sub-processes:\n    1. Fold: strike 49.7°, dip 90.0°, rake 8.4°, period 11515.2,amplitude 262.4, origin ((0.00,0.00,0.00)).\n    2. Fold: strike 139.7°, dip 90.0°, rake 3.0°, period 5032.9,amplitude 143.7, origin ((0.00,0.00,0.00)).\n    3. UnconformityDepth: depth 443.9, value nan\n    4. Fold: strike 139.7°, dip 90.0°, rake 3.0°, period 5032.9,amplitude -113.2, origin ((0.00,0.00,0.00)).\n    5. Fold: strike 49.7°, dip 90.0°, rake 8.4°, period 11515.2,amplitude -168.3, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Fold: Fourier) with 1 sub-processes:\n    1. Fold: strike 296.5°, dip 108.6°, rake 126.3°, period 5291.1,amplitude 255.3, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Fold: Fourier) with 1 sub-processes:\n    1. Fold: strike 98.8°, dip 117.3°, rake 120.1°, period 4959.3,amplitude 511.2, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Erosion: Flat) with 1 sub-processes:\n    1. UnconformityDepth: depth 346.5, value nan",
+    "CompoundProcess (Fault: Normal) with 3 sub-processes:\n    1. Fold: strike 375.2°, dip 90.0°, rake 88.0°, period 15204.7,amplitude 7.1, origin ((0.00,0.00,0.00)).\n    2. Fault with strike 285.2°, dip 64.6°, rake 90.6°, amplitude 92.5, origin ((-956.2578276065565, 134.60892313380464, -1413.656294706384)).\n    3. Fold: strike 375.2°, dip 90.0°, rake 88.0°, period 15204.7,amplitude -7.1, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Dike: WarpedDike) with 3 sub-processes:\n    1. Fold: strike 227.4°, dip 91.9°, rake 87.6°, period 7031.0,amplitude 110.3, origin ((0.00,0.00,0.00)).\n    2. Dike: strike 137.4°, dip 95.7°, width 258.1, origin ((-2644.7390226866287, 2170.632108072301, 104.83243485416209)), value 6.0.\n    3. Fold: strike 227.4°, dip 91.9°, rake 87.6°, period 7031.0,amplitude -110.3, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Sediment: Single) with 1 sub-processes:\n    1. Sedimentation: rock type values [4], and thicknesses 425.565, with base = nan",
+    "CompoundProcess (Erosion: TiltCutFill) with 7 sub-processes:\n    1. Tilt: strike 27.8°, dip 18.7°,origin ((0, 0, 0))\n    2. Fold: strike 336.3°, dip 84.9°, rake 14.6°, period 10012.7,amplitude 103.0, origin ((0.00,0.00,0.00)).\n    3. Fold: strike 426.3°, dip 88.7°, rake -0.3°, period 5792.6,amplitude 57.3, origin ((0.00,0.00,0.00)).\n    4. UnconformityDepth: depth 1239.7, value nan\n    5. Sedimentation: rock type values [5, 2, 4...], and thicknesses 184.937, 100.000, 109.464..., with base = nan\n    6. Fold: strike 426.3°, dip 88.7°, rake -0.3°, period 5792.6,amplitude -56.4, origin ((0.00,0.00,0.00)).\n    7. Fold: strike 336.3°, dip 84.9°, rake 14.6°, period 10012.7,amplitude -102.0, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Fold: Shaped) with 1 sub-processes:\n    1. Fold: strike 294.2°, dip 94.9°, rake 186.2°, period 8305.2,amplitude 520.2, origin ((-485.19664332832, 257.04637880996455, 1333.7288305517338)).",
+    "CompoundProcess (Fold: Fourier) with 1 sub-processes:\n    1. Fold: strike 34.6°, dip 93.8°, rake 177.7°, period 13117.6,amplitude 602.1, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Fault: HorstGraben) with 5 sub-processes:\n    1. Fold: strike 329.4°, dip 90.0°, rake 88.3°, period 10780.1,amplitude 122.7, origin ((0.00,0.00,0.00)).\n    2. Fault with strike 239.4°, dip 97.5°, rake 95.1°, amplitude -472.9, origin ((-796.7736567741285, -745.6344345714019, -620.0112870417597)).\n    3. Fold: strike 329.4°, dip 90.0°, rake 88.3°, period 10780.1,amplitude -118.7, origin ((0.00,0.00,0.00)).\n    4. Fault with strike 238.0°, dip 82.5°, rake 94.0°, amplitude 497.6, origin ((-2520.0229111423378, 2360.798911948649, -620.0112870417597)).\n    5. Fold: strike 329.4°, dip 90.0°, rake 88.3°, period 10780.1,amplitude 241.4, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Sediment: Coarse) with 1 sub-processes:\n    1. Sedimentation: rock type values [3], and thicknesses 557.671, with base = nan",
+    "CompoundProcess (OreDeposit: BlobCluster) with 3 sub-processes:\n    1. CompoundProcess (BlobWord) with 2 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 56 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 56 balls.\n    2. CompoundProcess (BlobWord) with 2 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 48 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 48 balls.\n    3. CompoundProcess (BlobWord) with 3 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 35 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 35 balls.\n    3. Metaball: threshold 1.0, value 12.0, with 35 balls.",
+    "CompoundProcess (Fault: Reverse) with 3 sub-processes:\n    1. Fold: strike 279.6°, dip 90.0°, rake 88.9°, period 9832.9,amplitude 65.5, origin ((0.00,0.00,0.00)).\n    2. Fault with strike 189.6°, dip 115.5°, rake 87.6°, amplitude 547.2, origin ((3196.8128711418713, -600.2112641435729, 516.8843547921565)).\n    3. Fold: strike 279.6°, dip 90.0°, rake 88.9°, period 9832.9,amplitude -65.5, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Sediment: Coarse) with 1 sub-processes:\n    1. Sedimentation: rock type values [2, 4], and thicknesses 336.975, 413.877, with base = nan",
+    "CompoundProcess (Fold: Shaped) with 1 sub-processes:\n    1. Fold: strike 50.0°, dip 86.5°, rake 246.2°, period 8678.6,amplitude 587.1, origin ((-1291.9073444971184, -232.1799189071048, 1351.0836353687691)).",
+    "CompoundProcess (Fault: StrikeSlip) with 1 sub-processes:\n    1. Fault with strike 326.6°, dip 99.4°, rake 1.4°, amplitude 106.1, origin ((-3733.8854908658222, 2377.3805083194293, -524.0410516326883)).",
+    "CompoundProcess (Fold: Fourier) with 1 sub-processes:\n    1. Fold: strike 57.3°, dip 156.9°, rake 258.6°, period 4592.9,amplitude 561.9, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Dike: WarpedDike) with 3 sub-processes:\n    1. Fold: strike 179.7°, dip 88.1°, rake 87.8°, period 14602.0,amplitude 141.4, origin ((0.00,0.00,0.00)).\n    2. Dike: strike 89.7°, dip 84.3°, width 159.3, origin ((-2009.2302228929586, -1812.3409577963027, -1078.2958843325541)), value 6.0.\n    3. Fold: strike 179.7°, dip 88.1°, rake 87.8°, period 14602.0,amplitude -141.4, origin ((0.00,0.00,0.00)).",
+    "Shift: vector [    0.             0.         -1989.30527186]"
+  ],
+  "raw_label_counts": {
+    "-1": 50407,
+    "1": 45522,
+    "12": 54,
+    "2": 12406,
+    "3": 1863,
+    "4": 61405,
+    "5": 52502,
+    "6": 21902,
+    "9": 16083
+  },
+  "raw_label_semantics": {
+    "labels_10_to_13_not_merged_into_9": true,
+    "mapping": {
+      "-1": "air/unfilled",
+      "0": "bedrock",
+      "1": "sediment_1",
+      "10": "intrusion_10",
+      "11": "intrusion_11",
+      "12": "blob_12",
+      "13": "blob_13",
+      "2": "sediment_2",
+      "3": "sediment_3",
+      "4": "sediment_4",
+      "5": "sediment_5",
+      "6": "dike_6",
+      "7": "dike_7",
+      "8": "dike_8",
+      "9": "intrusion_9_target"
+    },
+    "no_truth_voxel_modified": true,
+    "version": "structuralgeo_raw_labels_v1"
+  },
+  "resolution": [
+    64,
+    64,
+    64
+  ],
+  "roles": {
+    "borehole_mask": "inference_visible",
+    "component_statistics": "truth_only_retrospective_metadata",
+    "condition_mask": "inference_visible",
+    "condition_values": "inference_visible",
+    "hidden_label9_mask": "truth_only_retrospective_target_metadata",
+    "label9_mask": "truth_only_retrospective_target_metadata",
+    "surface_mask": "inference_visible",
+    "true_model": "truth_only",
+    "well_xy": "inference_visible_prospectively_fixed_layout"
+  },
+  "root_seed": 120260004,
+  "saved_file_sha256": {
+    "condition/borehole_mask.pt": "c32222af45cef6e49a4d71f5694c07d35aba8af684e40f82815bca3f6d19047c",
+    "condition/boreholes.pt": "15dcec529264849a69b0cc206cddf4a92687685cb2d0ba00b659abd329361d5a",
+    "condition/condition_mask.pt": "f2460e7dc136f9defc5f1859d9d6d84b9f3d2b08b0ed64fb3a7b61241b06383f",
+    "condition/condition_values.pt": "f9326a48dc2ff7568141231382dfcde8a1a39ad4cb9859c17b6a2be8652f8de0",
+    "condition/surface_mask.pt": "cb391db93c8bf3b191d784be98b5df93ffee96ed1c296465ddb690fac686b625",
+    "condition/well_xy.json": "2fe03349d486a8619d2ec2c4ab1d8d3bae306ca9c78ef484a03a6adbea190318",
+    "geometry/connected_components.json": "e28c04e65ce3ac2bfd3954eaf0b1355df0ad6703614e4318a2834fd037304558",
+    "truth/hidden_label9_mask.pt": "e4d83312f3649221d720200b7ca15af461fa6a6b2f99fd6a31248c712e031a3d",
+    "truth/history.json": "8c491a207465aa28076d8f2d41e88927182bd2e01bb78cb30f20cc49233793fb",
+    "truth/label9_mask.pt": "1772a1aaefee7a5b13c840aa15c99a492b78ce3ccfb82c119762da47d18af4a6",
+    "truth/true_model.pt": "5ded009fb49b1eeb575904c725e424985e95183aacd252777227fc5f591abe3f"
+  },
+  "schema_version": "full_structuralgeo_benchmark_v1",
+  "selection_firewall": {
+    "no_downstream_metric_in_selection": true,
+    "no_flow_in_selection": true,
+    "no_seismic_in_selection": true,
+    "visual_qc_not_used_for_selection": true
+  },
+  "source_hashes": {
+    "StructuralGeo-main/src/geogen/dataset/dataset.py": "abd2aca08258bc1c4f34cca0ee585878280ab204cad4aef52ce637700847db3a",
+    "StructuralGeo-main/src/geogen/generation/categorical_events.py": "63f8431e79c6b1fc4937a480c83e18bd69dd04cc18a2b81c427a4149e3233a15",
+    "StructuralGeo-main/src/geogen/generation/geowords.py": "7acb56bf56a07a1bbe4ef8a2a2c7245b3942cbcf84d55931b2025bf2b016ca03",
+    "StructuralGeo-main/src/geogen/generation/markov_matrix/default_markov_matrix.csv": "cb068ecb1d65487828899179fa02e0aff279703504686c569451fc871dd3784b",
+    "StructuralGeo-main/src/geogen/generation/model_generators.py": "2ee1b5fe4bcd89e70d80c3b78af02a7696af7fdedacca3ed391145e3df67e397",
+    "StructuralGeo-main/src/geogen/generation/rng_contract.py": "96e284b99df9ef8444b00e15e2ecfc92ce85c3c3bfdb9328474690937782a022",
+    "StructuralGeo-main/src/geogen/model/geomodel.py": "a7d575bb2864cff02bc6925f61ca7bc1a4d2c7b9f75006e61b3b30a4dc33a094",
+    "StructuralGeo-main/src/geogen/model/metaballs.py": "c0e5d2c2ccd5cdc58d4ea35639221079718a7629d6960711b75b99e53e845be6",
+    "StructuralGeo-main/src/geogen/probability/random_varibles.py": "7188a98bba406c60ea402e28d94f67aad41503d463bd25663717398226bd384e",
+    "StructuralGeo-main/src/geogen/probability/sedimentbuilders.py": "01066bd55e01f5d2354406419a70dd1056456df0da5257f7a07763840db67243",
+    "StructuralGeo-main/src/geogen/probability/wavegenerators.py": "2ff37e2df0e5b76e4d1d39a93c1af661fdda787d707da0ddde5a096f115d1e56",
+    "project/geodata-3d-conditional/boreholes.py": "b0656303987fef04241a70a1df1a6ca4c2897d6c1e4de6470f492487fc038630",
+    "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/configs/full_complexity_targeted_v1.json": "39bb41e8b7f0d6b1597c8ba81d5762603616a9484c1e3b855c8c43fd570f50b0",
+    "project/geodata-3d-conditional/guidance/full_structuralgeo_benchmark.py": "3d292e6b48dbc2ed6911315d9e736afd770e7e164785208584dc268cd1d18097",
+    "project/geodata-3d-conditional/model_train_sh_inference_cond.py": "36d0dc613d8860677f137a2f1d681ebcc50829a6d90f5547c6eac3fd12a977c2",
+    "project/geodata-3d-conditional/scripts/benchmarks/build_full_structuralgeo_benchmark.py": "96f05f1ab3e87fbb7ffcd73790cf1fa9ecbd0741c145577221d4324ea8bfda24"
+  },
+  "tensor_content_hashes": {
+    "condition/borehole_mask.pt": "c7ecdc63b2042c3561961212322a58ebf87209cd01e5d5eb156873cecf16611b",
+    "condition/boreholes.pt": "a367b177f2946e103025343d50571c85827797aa13f7c5cd69a83a8b2a148321",
+    "condition/condition_mask.pt": "b27293914db726cdc9ba932bb632ae03672cbab63438cfc5ee21a56d925407a4",
+    "condition/condition_values.pt": "a367b177f2946e103025343d50571c85827797aa13f7c5cd69a83a8b2a148321",
+    "condition/surface_mask.pt": "5d0b4a18755311df35e6878a65f88d4d780c7143f4efb5187579ee1277756c04",
+    "truth/hidden_label9_mask.pt": "4264ccc8051f30b8d35c9d308aa55302e0b7c94be2ac295f75dceeb047c332db",
+    "truth/label9_mask.pt": "ee5c2c14b3bf0124f678f96896409c3ee4b3f66925dedc3531ad8f51e615e34d",
+    "truth/true_model.pt": "3adfe816b346069c8ce2e4019cbcade1514c6258b303ae0cb32ff57f8088baf4"
+  },
+  "unpacked_history": [
+    "Bedrock: with z <= -34560.0 and value 0.0",
+    "Sedimentation: rock type values [2, 3, 5...], and thicknesses 595.603, 189.104, 835.916..., with base = -34560",
+    "Sedimentation: rock type values [1, 5, 4...], and thicknesses 635.295, 640.000, 640.000..., with base = nan",
+    "Dike: strike 122.2°, dip -0.3°, width 134.0, origin ((-1228.45,-15.45,1304.69)), value 9.0.",
+    "Dike: strike 333.5°, dip 0.7°, width 175.0, origin ((-738.00,361.01,664.69)), value 9.0.",
+    "DikeColumn: origin ((-1228.45,-15.45,1304.69)), diam 554.8, depth 889.9, minor_axis_scale 0.23, rotation 168.1, value 9.0.",
+    "DikeColumn: origin ((-738.00,361.01,664.69)), diam 654.3, depth 10897.9, minor_axis_scale 0.23, rotation 297.4, value 9.0.",
+    "Fold: strike 49.7°, dip 90.0°, rake 8.4°, period 11515.2,amplitude 262.4, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 139.7°, dip 90.0°, rake 3.0°, period 5032.9,amplitude 143.7, origin ((0.00,0.00,0.00)).",
+    "UnconformityDepth: depth 443.9, value nan",
+    "Fold: strike 139.7°, dip 90.0°, rake 3.0°, period 5032.9,amplitude -113.2, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 49.7°, dip 90.0°, rake 8.4°, period 11515.2,amplitude -168.3, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 296.5°, dip 108.6°, rake 126.3°, period 5291.1,amplitude 255.3, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 98.8°, dip 117.3°, rake 120.1°, period 4959.3,amplitude 511.2, origin ((0.00,0.00,0.00)).",
+    "UnconformityDepth: depth 346.5, value nan",
+    "Fold: strike 375.2°, dip 90.0°, rake 88.0°, period 15204.7,amplitude 7.1, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 285.2°, dip 64.6°, rake 90.6°, amplitude 92.5, origin ((-536.16,-162.60,131.40)).",
+    "Fold: strike 375.2°, dip 90.0°, rake 88.0°, period 15204.7,amplitude -7.1, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 227.4°, dip 91.9°, rake 87.6°, period 7031.0,amplitude 110.3, origin ((0.00,0.00,0.00)).",
+    "Dike: strike 137.4°, dip 95.7°, width 258.1, origin ((-2770.96,2323.41,459.77)), value 6.0.",
+    "Fold: strike 227.4°, dip 91.9°, rake 87.6°, period 7031.0,amplitude -110.3, origin ((0.00,0.00,0.00)).",
+    "Sedimentation: rock type values [4], and thicknesses 425.565, with base = nan",
+    "Tilt: strike 27.8°, dip 18.7°,origin ((-109.36,-99.47,1776.39))",
+    "Fold: strike 336.3°, dip 84.9°, rake 14.6°, period 10012.7,amplitude 103.0, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 426.3°, dip 88.7°, rake -0.3°, period 5792.6,amplitude 57.3, origin ((0.00,0.00,0.00)).",
+    "UnconformityDepth: depth 1239.7, value nan",
+    "Sedimentation: rock type values [5, 2, 4...], and thicknesses 184.937, 100.000, 109.464..., with base = nan",
+    "Fold: strike 426.3°, dip 88.7°, rake -0.3°, period 5792.6,amplitude -56.4, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 336.3°, dip 84.9°, rake 14.6°, period 10012.7,amplitude -102.0, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 294.2°, dip 94.9°, rake 186.2°, period 8305.2,amplitude 520.2, origin ((-1444.87,-79.29,3330.60)).",
+    "Fold: strike 34.6°, dip 93.8°, rake 177.7°, period 13117.6,amplitude 602.1, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 329.4°, dip 90.0°, rake 88.3°, period 10780.1,amplitude 122.7, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 239.4°, dip 97.5°, rake 95.1°, amplitude -472.9, origin ((-996.79,-814.75,1178.95)).",
+    "Fold: strike 329.4°, dip 90.0°, rake 88.3°, period 10780.1,amplitude -118.7, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 238.0°, dip 82.5°, rake 94.0°, amplitude 497.6, origin ((-2971.86,2597.91,1745.00)).",
+    "Fold: strike 329.4°, dip 90.0°, rake 88.3°, period 10780.1,amplitude 241.4, origin ((0.00,0.00,0.00)).",
+    "Sedimentation: rock type values [3], and thicknesses 557.671, with base = nan",
+    "Metaball: threshold 1.0, value 12.0, with 56 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 56 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 48 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 48 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 35 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 35 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 35 balls.",
+    "Fold: strike 279.6°, dip 90.0°, rake 88.9°, period 9832.9,amplitude 65.5, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 189.6°, dip 115.5°, rake 87.6°, amplitude 547.2, origin ((3666.84,-350.63,2639.82)).",
+    "Fold: strike 279.6°, dip 90.0°, rake 88.9°, period 9832.9,amplitude -65.5, origin ((0.00,0.00,0.00)).",
+    "Sedimentation: rock type values [2, 4], and thicknesses 336.975, 413.877, with base = nan",
+    "Fold: strike 50.0°, dip 86.5°, rake 246.2°, period 8678.6,amplitude 587.1, origin ((-1600.24,-414.06,3313.25)).",
+    "Fault with strike 326.6°, dip 99.4°, rake 1.4°, amplitude 106.1, origin ((-4430.45,2093.25,1406.65)).",
+    "Fold: strike 57.3°, dip 156.9°, rake 258.6°, period 4592.9,amplitude 561.9, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 179.7°, dip 88.1°, rake 87.8°, period 14602.0,amplitude 141.4, origin ((0.00,0.00,0.00)).",
+    "Dike: strike 89.7°, dip 84.3°, width 159.3, origin ((-2009.55,-1763.66,909.13)), value 6.0.",
+    "Fold: strike 179.7°, dip 88.1°, rake 87.8°, period 14602.0,amplitude -141.4, origin ((0.00,0.00,0.00)).",
+    "Shift: vector [    0.             0.         -1989.30527186]"
+  ],
+  "well_coordinates_xy": [
+    [
+      8,
+      46
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      10,
+      24
+    ],
+    [
+      27,
+      17
+    ],
+    [
+      35,
+      26
+    ],
+    [
+      39,
+      59
+    ],
+    [
+      44,
+      60
+    ],
+    [
+      48,
+      6
+    ],
+    [
+      57,
+      32
+    ]
+  ],
+  "well_layout_truth_independent": true
+}

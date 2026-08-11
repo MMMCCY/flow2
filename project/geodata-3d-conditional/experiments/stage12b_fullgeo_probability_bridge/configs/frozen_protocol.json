@@ -1,0 +1,180 @@
+{
+  "schema": "stage12b_fullgeo_probability_bridge_protocol_v1",
+  "status": "frozen_before_stage12b_seismic_generation",
+  "git_head_at_registration": "72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f",
+  "case_ids": [
+    "fullgeo_case01",
+    "fullgeo_case02",
+    "fullgeo_case03",
+    "fullgeo_case04",
+    "fullgeo_case05"
+  ],
+  "case_replacement_authorized": false,
+  "stage12a": {
+    "root": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark",
+    "benchmark_manifest_sha256": "16f8e36b94b1e89ae9798615d0d466c1d8631501c73830fc54c117285f610968",
+    "decision_sha256": "f37c8095ec766c4ea5a9f56603e6d6736629c45ce88cf4b31f42ee01d9237694",
+    "required_machine_decision": "FULL_STRUCTURALGEO_BENCHMARK_READY",
+    "case_hashes": {
+      "fullgeo_case01": {
+        "manifest": "7e63cc34f21a401a665bf6577f3031db8da6fce6e893c6a5fa16f79117226ee6",
+        "true_model": "bc32a2f4705f18655bddba56b67ad1ffc55e8a23444b6910573a3b8cbd44f3e9",
+        "condition_mask": "6486ac303357d36ab38c7d82149c44ca0aeb675a0853ccc3df6deed769097b98"
+      },
+      "fullgeo_case02": {
+        "manifest": "826036d465bfcb289cc56baa4f4fb8e536f863cf63bf08e0613e9e7292ba1fca",
+        "true_model": "5ded009fb49b1eeb575904c725e424985e95183aacd252777227fc5f591abe3f",
+        "condition_mask": "f2460e7dc136f9defc5f1859d9d6d84b9f3d2b08b0ed64fb3a7b61241b06383f"
+      },
+      "fullgeo_case03": {
+        "manifest": "f513ed1244c56433c9eab9046550eadf41b6694921ea3b38b4456f798c7de486",
+        "true_model": "e79a5c8276fbaa7ae9b46c217f1df9ad041b53fbd5b4b4fedc4d59aa8b351576",
+        "condition_mask": "a4c1579e85219122904c9b1b707b0e58c7da2f7a4034a3a8351b7151e8126efb"
+      },
+      "fullgeo_case04": {
+        "manifest": "8e0f9b273a7b3fa6544a167396285cb67cd1bee3210c7ffb8a6bd45abc5acab2",
+        "true_model": "2a281af180ef83c9157a810fc988277aa37f612506d6337662f921ba4e1c9cd9",
+        "condition_mask": "4837c19fb1a5525a823042982df853c9f1fa7dcf8d5d2d297f22edaad12c3183"
+      },
+      "fullgeo_case05": {
+        "manifest": "2a4fa521b35e0c63e2f21092140f54b24b6940667b891428430890dc0247a76d",
+        "true_model": "093a97475d88763f398b27ee534bf7e73070f5e2d19111c0d63e010a4cf73530",
+        "condition_mask": "cbf70df8873c6c695b6cc91fab2f5c306dd83917301aad943c4f67aae1bca146"
+      }
+    }
+  },
+  "target_label": 9,
+  "axis_order": ["x", "y", "z"],
+  "grid_shape": [64, 64, 64],
+  "fixed_well_layout": "canonical_nine_well_xy_v1",
+  "geometry_audit_role": "retrospective_descriptive_only_never_case_selection",
+  "acoustic_config": {
+    "path": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+    "sha256": "8980e30c59624af9f1bfa59447b7e22c85a2975f8a556fe6e98f5346f95d10ae"
+  },
+  "seismic_config": {
+    "path": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+    "sha256": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02"
+  },
+  "inversion_config": {
+    "path": "project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/configs/model_based_log_impedance_v1.json",
+    "sha256": "6b690aec3978b48bc6922e7387fc9fca55566e2b54d5f1e2dcb2669143f79088"
+  },
+  "class_model": {
+    "path": "project/geodata-3d-conditional/experiments/stage10_geophysical_probability_bridge/configs/petrophysical_class_model.json",
+    "sha256": "106afc9075e5da5e488d6cc84cbdf7ba1335f760f2a74547a769927d6ad86c2b"
+  },
+  "property_prior_bank": {
+    "policy": "single_common_stage10_frozen_unranked_bank_for_all_fullgeo_cases_v1",
+    "source_pool": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/runs/stage9a_prior_support_v1/formal/native_seed20260901/pool",
+    "source_pool_manifest_sha256": "1d9d4a7582b6cf0c0b9884c7d35ac47740044fef7e4b0d32d7bff24c406ec490",
+    "candidate_pool_csv_sha256": "7aed47c48a2ad3263beab668f783de0bb8bb8cac14fe07f543a0bfc6e1062708",
+    "candidate_indices": [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111],
+    "selection_uses_ranking": false,
+    "selection_frozen_before_stage12b_seismic": true,
+    "new_flow_sampling_for_stage12b_a": false,
+    "new_case_conditions_exactly_overwrite_prior_acoustics": true,
+    "qualification": "common low-frequency Flow prior sensitivity bank; source hard models were originally conditioned on a different registered synthetic case"
+  },
+  "bridge": {
+    "schema": "stage10_scalar_gaussian_sample_bridge_v1",
+    "internal_dtype": "torch.float64",
+    "saved_dtype": "torch.float32",
+    "class_variance_tuned": false,
+    "class_prior_tuned": false,
+    "temperature": null,
+    "smoothing": null,
+    "sharpening": null,
+    "threshold": null
+  },
+  "stage12b_a": {
+    "evaluation_domain": "per_case_unconstrained_subsurface",
+    "primary_aggregation": "per_case_then_unweighted_macro",
+    "pooled_voxels_primary": false,
+    "constant_label9_probability": 0.06666666666666667,
+    "shuffle_policy": "complete_xy_column_permutation_shared_across_classes_and_z",
+    "shuffle_seeds": {
+      "fullgeo_case01": 20266943,
+      "fullgeo_case02": 20266944,
+      "fullgeo_case03": 20266945,
+      "fullgeo_case04": 20266946,
+      "fullgeo_case05": 20266947
+    },
+    "success_gate": {
+      "diagonal_mean_strictly_above_off_diagonal_mean": true,
+      "minimum_diagonal_row_maximum_cases": 4,
+      "minimum_diagonal_column_maximum_cases": 4,
+      "minimum_correct_above_shuffled_cases": 4,
+      "minimum_correct_above_constant_cases": 5,
+      "minimum_post_ap_above_prior_ap_cases": 4,
+      "catastrophic_brier_absolute_increase": 0.05,
+      "catastrophic_brier_relative_factor": 2.0,
+      "catastrophic_brier_rule": "post_brier_minus_prior_brier_gt_0.05_and_post_brier_gt_2_times_prior_brier"
+    }
+  },
+  "checkpoint": {
+    "path": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+    "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+    "weight_policy": "ema_trainable_raw_frozen_embedding_v1"
+  },
+  "stage12b_b": {
+    "authorized_only_if_stage12b_a_pass": true,
+    "source_seeds": {
+      "fullgeo_case01": [9301000, 9301001, 9301002, 9301003],
+      "fullgeo_case02": [9311000, 9311001, 9311002, 9311003],
+      "fullgeo_case03": [9321000, 9321001, 9321002, 9321003],
+      "fullgeo_case04": [9331000, 9331001, 9331002, 9331003],
+      "fullgeo_case05": [9341000, 9341001, 9341002, 9341003]
+    },
+    "arms": ["FLOW_ONLY", "FLOW_PLUS_CORRECT_P_BRIDGE"],
+    "n_euler_steps": 32,
+    "integrator": "fixed_euler_midpoint_v1",
+    "condition_projection": "project_clean_embedding_before_first_and_after_every_euler_step_v1",
+    "hard_decode": "Geo3DStochInterp.decode_argmax_minus_one_then_exact_condition_projection_v1",
+    "guidance": {
+      "alpha": 0.25,
+      "max_guidance_ratio": 0.25,
+      "tau_start": 0.5,
+      "tau_end": 0.1,
+      "tau_schedule": "cosine",
+      "guidance_start": 0.25,
+      "guidance_schedule": "windowed_sine",
+      "guidance_scaling_mode": "reference_norm_relative_v2",
+      "grad_clip_norm": 1.0,
+      "probability_loss_mode": "calibrated_soft_bce_hard_dice_v2",
+      "bce_weight": 1.0,
+      "dice_weight": 1.0,
+      "spatial_gradient_weight": 0.0,
+      "inference_visible_core_threshold": 0.5,
+      "guidance_roi": "unconstrained_subsurface"
+    },
+    "success_gate": {
+      "minimum_cases_positive_median_label9_iou_delta": 4,
+      "condition_violations_required": 0,
+      "catastrophic_global_degradation_threshold": -0.1,
+      "catastrophic_global_degradation_metrics": [
+        "median_truth_present_miou_delta",
+        "median_global_accuracy_delta"
+      ]
+    }
+  },
+  "truth_firewall": {
+    "truth_allowed_for_geometry_audit": true,
+    "truth_allowed_for_synthetic_observation_generation": true,
+    "truth_allowed_for_bridge_build": false,
+    "truth_allowed_for_flow_runner": false,
+    "truth_allowed_for_retrospective_metrics": true,
+    "truth_visible_sample_selection": false
+  },
+  "forbidden": [
+    "case_replacement",
+    "parameter_sweep",
+    "new_benchmark_cases",
+    "more_flow_seeds",
+    "d_flow",
+    "smc",
+    "training",
+    "adapter_training",
+    "more_wells"
+  ]
+}
