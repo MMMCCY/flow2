@@ -9,10 +9,10 @@
   },
   "figure_data": [
     {
-      "path": "project/geodata-3d-conditional/paper/figure_data/figure01_framework.json",
+      "path": "project/geodata-3d-conditional/paper/figure_data/figure01_joint_framework.json",
       "role": "figure data",
-      "sha256": "7d460cac2b171bb3c92795b9a95150c7d124cf8c10c8b880fb34c31f09f8a556",
-      "size_bytes": 890
+      "sha256": "e169b48cd0e1214fc926e9cc7534a6347e32b349dc62e4f88641730fdf6684da",
+      "size_bytes": 1271
     },
     {
       "path": "project/geodata-3d-conditional/paper/figure_data/figure02_controllability.npz",
@@ -21,52 +21,64 @@
       "size_bytes": 85199
     },
     {
-      "path": "project/geodata-3d-conditional/paper/figure_data/figure03_seismic_structured.npz",
+      "path": "project/geodata-3d-conditional/paper/figure_data/figure03_joint_inference.json",
       "role": "figure data",
-      "sha256": "aa5390e773253fb663ef579dca8813b395a64ea77ab2693847531056cb6a17fe",
-      "size_bytes": 7211
+      "sha256": "9182f4241d931d10ab432ce7c161d21cb2abbe8d1b391ca9867addc58fe005fe",
+      "size_bytes": 1459
     },
     {
-      "path": "project/geodata-3d-conditional/paper/figure_data/figure04_information_hierarchy.json",
+      "path": "project/geodata-3d-conditional/paper/figure_data/figure04_evidence_hierarchy.json",
       "role": "figure data",
-      "sha256": "d90c766ba1c308a22c4fbe262ed16c1d72fbc97234f1feee30ee80ffc9eb208c",
-      "size_bytes": 2370
+      "sha256": "abab2976cdfb74c4c3a81b1bfe561181109093c9d0f7e99e4e489293d6fdf027",
+      "size_bytes": 5769
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figure_data/fullgeo_3d_benchmark.json",
+      "role": "figure data",
+      "sha256": "44dc3da5067a1d356ef28d6331e55af6a2ea557995720063d4ddfe186dd8dfe8",
+      "size_bytes": 1803
     }
   ],
   "figure_manifests": [
     {
-      "path": "project/geodata-3d-conditional/paper/manifests/figure01_framework.json",
+      "path": "project/geodata-3d-conditional/paper/manifests/figure01_joint_framework.json",
       "role": "figure manifest",
-      "sha256": "ad2eddeebafa2b683a6dd9611746873e0999d54445aecdb6f8d4a490d3f2acfb",
-      "size_bytes": 3005
+      "sha256": "265e5e92447b2ca6f4520783ae774494de80c8b888ac6a7682c8abe41f0f5d30",
+      "size_bytes": 4834
     },
     {
       "path": "project/geodata-3d-conditional/paper/manifests/figure02_controllability.json",
       "role": "figure manifest",
-      "sha256": "17cf7579acc61ceb176423686df7890cfb95b0a87fa3495945e38deeef411091",
+      "sha256": "742548f3895497cb168c765b3df86a5c753cee1346f5d21abe01f6a3e9da09bd",
       "size_bytes": 10650
     },
     {
-      "path": "project/geodata-3d-conditional/paper/manifests/figure03_seismic_structured.json",
+      "path": "project/geodata-3d-conditional/paper/manifests/figure03_joint_inference.json",
       "role": "figure manifest",
-      "sha256": "0d00bd8265f9bde04c1c76bb173edd0fbd1c1c1d02af216de566ea6579708c9b",
-      "size_bytes": 10221
+      "sha256": "e237a6cacc1dab1ec26869a08ae7fb96d5c98d423267057e01ea728f1f82d04c",
+      "size_bytes": 12836
     },
     {
-      "path": "project/geodata-3d-conditional/paper/manifests/figure04_information_hierarchy.json",
+      "path": "project/geodata-3d-conditional/paper/manifests/figure04_evidence_hierarchy.json",
       "role": "figure manifest",
-      "sha256": "6fdbe04ecdec49b2354de86e5169bd56b1457f5790d8b501220184d01ea06356",
-      "size_bytes": 6339
+      "sha256": "abbd2f10354d37710684cf520dcb3b4d2b3b56e36d5b17d22d18a0260a942f35",
+      "size_bytes": 11157
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/manifests/fullgeo_3d_benchmark.json",
+      "role": "figure manifest",
+      "sha256": "8e3b44ae71e90232540af5b7e139867c6ae5ad87a398921e8ba1f6b5f6ffe1fe",
+      "size_bytes": 13543
     }
   ],
   "figures": [
     {
-      "figure": "figure01_framework",
-      "manifest": "paper/manifests/figure01_framework.json",
+      "figure": "figure01_joint_framework",
+      "manifest": "paper/manifests/figure01_joint_framework.json",
       "outputs": {
-        "pdf": "paper/figures/figure01_framework.pdf",
-        "png": "paper/figures/figure01_framework.png",
-        "svg": "paper/figures/figure01_framework.svg"
+        "pdf": "paper/figures/figure01_joint_framework.pdf",
+        "png": "paper/figures/figure01_joint_framework.png",
+        "svg": "paper/figures/figure01_joint_framework.svg"
       }
     },
     {
@@ -79,40 +91,96 @@
       }
     },
     {
-      "figure": "figure03_seismic_structured",
-      "manifest": "paper/manifests/figure03_seismic_structured.json",
+      "figure": "figure03_joint_inference",
+      "gallery_manifest": "paper/manifests/3d_gallery.json",
+      "gallery_outputs": {
+        "condition_exact_cfm_ensemble": {
+          "pdf": "paper/figures/3d_gallery/condition_exact_cfm_ensemble.pdf",
+          "png": "paper/figures/3d_gallery/condition_exact_cfm_ensemble.png",
+          "svg": "paper/figures/3d_gallery/condition_exact_cfm_ensemble.svg"
+        },
+        "full_structuralgeo_montage": {
+          "pdf": "paper/figures/3d_gallery/full_structuralgeo_montage.pdf",
+          "png": "paper/figures/3d_gallery/full_structuralgeo_montage.png",
+          "svg": "paper/figures/3d_gallery/full_structuralgeo_montage.svg"
+        },
+        "sparse_constraints_hidden_target": {
+          "pdf": "paper/figures/3d_gallery/sparse_constraints_hidden_target.pdf",
+          "png": "paper/figures/3d_gallery/sparse_constraints_hidden_target.png",
+          "svg": "paper/figures/3d_gallery/sparse_constraints_hidden_target.svg"
+        },
+        "stage7_perspective_iso": {
+          "pdf": "paper/figures/3d_gallery/stage7_perspective_iso.pdf",
+          "png": "paper/figures/3d_gallery/stage7_perspective_iso.png",
+          "svg": "paper/figures/3d_gallery/stage7_perspective_iso.svg"
+        },
+        "stage7_perspective_oblique": {
+          "pdf": "paper/figures/3d_gallery/stage7_perspective_oblique.pdf",
+          "png": "paper/figures/3d_gallery/stage7_perspective_oblique.png",
+          "svg": "paper/figures/3d_gallery/stage7_perspective_oblique.svg"
+        },
+        "stage7_top_oblique": {
+          "pdf": "paper/figures/3d_gallery/stage7_top_oblique.pdf",
+          "png": "paper/figures/3d_gallery/stage7_top_oblique.png",
+          "svg": "paper/figures/3d_gallery/stage7_top_oblique.svg"
+        }
+      },
+      "manifest": "paper/manifests/figure03_joint_inference.json",
       "outputs": {
-        "pdf": "paper/figures/figure03_seismic_structured.pdf",
-        "png": "paper/figures/figure03_seismic_structured.png",
-        "svg": "paper/figures/figure03_seismic_structured.svg"
+        "pdf": "paper/figures/figure03_joint_inference.pdf",
+        "png": "paper/figures/figure03_joint_inference.png",
+        "svg": "paper/figures/figure03_joint_inference.svg"
       }
     },
     {
-      "figure": "figure04_information_hierarchy",
-      "manifest": "paper/manifests/figure04_information_hierarchy.json",
+      "figure": "figure04_evidence_hierarchy",
+      "manifest": "paper/manifests/figure04_evidence_hierarchy.json",
       "outputs": {
-        "pdf": "paper/figures/figure04_information_hierarchy.pdf",
-        "png": "paper/figures/figure04_information_hierarchy.png",
-        "svg": "paper/figures/figure04_information_hierarchy.svg"
+        "pdf": "paper/figures/figure04_evidence_hierarchy.pdf",
+        "png": "paper/figures/figure04_evidence_hierarchy.png",
+        "svg": "paper/figures/figure04_evidence_hierarchy.svg"
+      }
+    },
+    {
+      "figure": "fullgeo_3d_benchmark",
+      "manifest": "paper/manifests/fullgeo_3d_benchmark.json",
+      "outputs": {
+        "pdf": "paper/figures/fullgeo_3d_benchmark.pdf",
+        "png": "paper/figures/fullgeo_3d_benchmark.png",
+        "svg": "paper/figures/fullgeo_3d_benchmark.svg"
+      },
+      "presentation_outputs": {
+        "pdf": "paper/figures/fullgeo_3d_benchmark_presentation.pdf",
+        "png": "paper/figures/fullgeo_3d_benchmark_presentation.png",
+        "svg": "paper/figures/fullgeo_3d_benchmark_presentation.svg"
       }
     }
   ],
   "generator": {
     "path": "project/geodata-3d-conditional/scripts/paper_figures/make_all_figures.py",
     "role": "collection generator",
-    "sha256": "32a6c09bfb85ce95032ee5e04ca48eac3cfc3f5dcef63a211f8c5bbe6c2f0feb",
-    "size_bytes": 6412
+    "sha256": "1348a3e1f8c0e946c0b416cf3b493aa7f17d8add9acadfbad4c7af95a61d45ce",
+    "size_bytes": 7604
   },
-  "git_head": "72a8eed6ffc9c3bc07d7942709a68fbc6bc9896f",
+  "git_head": "cd4b097becaad2f3b8a7cfe91ac3713f2248a1e4",
   "output_checks": {
-    "figure01_framework": {
+    "figure01_joint_framework": {
       "dpi": [
         599.9988,
         599.9988
       ],
+      "manifest_outputs": [
+        {
+          "path": "project/geodata-3d-conditional/paper/figures/figure01_joint_framework.png",
+          "pixel_size": [
+            4204,
+            2910
+          ]
+        }
+      ],
       "pixel_size": [
         4204,
-        2652
+        2910
       ]
     },
     "figure02_controllability": {
@@ -120,29 +188,82 @@
         599.9988,
         599.9988
       ],
+      "manifest_outputs": [
+        {
+          "path": "project/geodata-3d-conditional/paper/figures/figure02_controllability.png",
+          "pixel_size": [
+            4204,
+            2652
+          ]
+        }
+      ],
       "pixel_size": [
         4204,
         2652
       ]
     },
-    "figure03_seismic_structured": {
+    "figure03_joint_inference": {
       "dpi": [
         599.9988,
         599.9988
       ],
+      "manifest_outputs": [
+        {
+          "path": "project/geodata-3d-conditional/paper/figures/figure03_joint_inference.png",
+          "pixel_size": [
+            4204,
+            3270
+          ]
+        }
+      ],
       "pixel_size": [
         4204,
-        3011
+        3270
       ]
     },
-    "figure04_information_hierarchy": {
+    "figure04_evidence_hierarchy": {
       "dpi": [
         599.9988,
         599.9988
       ],
+      "manifest_outputs": [
+        {
+          "path": "project/geodata-3d-conditional/paper/figures/figure04_evidence_hierarchy.png",
+          "pixel_size": [
+            4204,
+            2790
+          ]
+        }
+      ],
       "pixel_size": [
         4204,
-        2268
+        2790
+      ]
+    },
+    "fullgeo_3d_benchmark": {
+      "dpi": [
+        599.9988,
+        599.9988
+      ],
+      "manifest_outputs": [
+        {
+          "path": "project/geodata-3d-conditional/paper/figures/fullgeo_3d_benchmark.png",
+          "pixel_size": [
+            4204,
+            2778
+          ]
+        },
+        {
+          "path": "project/geodata-3d-conditional/paper/figures/fullgeo_3d_benchmark_presentation.png",
+          "pixel_size": [
+            7999,
+            2610
+          ]
+        }
+      ],
+      "pixel_size": [
+        4204,
+        2778
       ]
     }
   },

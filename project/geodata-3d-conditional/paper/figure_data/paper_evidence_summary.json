@@ -1,0 +1,1629 @@
+{
+  "experiments": [
+    {
+      "display_name": "Sparse conditional Flow baseline",
+      "evidence_type": "reference prior sample",
+      "experiment_id": "sparse_cfm_baseline",
+      "inference_method": "frozen conditional Flow; alpha-zero paired baseline",
+      "machine_decision": "REFERENCE_BASELINE",
+      "n_cases": 1,
+      "n_pairs_or_samples": {
+        "paired_runs": 12,
+        "samples_per_seed": 4,
+        "seeds": 3
+      },
+      "observation_type": "surface and borehole categorical conditions",
+      "observation_visible": true,
+      "primary_metrics": [
+        {
+          "display_name": "Global voxel accuracy",
+          "metric_id": "sparse_global_accuracy",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.global_voxel_accuracy.baseline.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json",
+            "sha256": "dd25face4cf7f29d0d810b4506afb7fa0a873dd36dc8ba5a0f698b4edaaf2336"
+          },
+          "unit": "fraction",
+          "value": 0.5972100545962652
+        },
+        {
+          "display_name": "Global dynamic-union mIoU",
+          "metric_id": "sparse_global_miou",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.global_mean_iou.baseline.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json",
+            "sha256": "dd25face4cf7f29d0d810b4506afb7fa0a873dd36dc8ba5a0f698b4edaaf2336"
+          },
+          "unit": "fraction",
+          "value": 0.18044054011503854
+        },
+        {
+          "display_name": "Label-9 IoU",
+          "metric_id": "sparse_label9_iou",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.target_iou.baseline.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json",
+            "sha256": "dd25face4cf7f29d0d810b4506afb7fa0a873dd36dc8ba5a0f698b4edaaf2336"
+          },
+          "unit": "fraction",
+          "value": 0.03144480434529132
+        },
+        {
+          "display_name": "Condition violations",
+          "metric_id": "sparse_condition_violations",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "gate.entries.zero_condition_violations.value",
+            "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json",
+            "sha256": "dd25face4cf7f29d0d810b4506afb7fa0a873dd36dc8ba5a0f698b4edaaf2336"
+          },
+          "unit": "voxels",
+          "value": 0
+        }
+      ],
+      "scientific_interpretation": "Sparse categorical conditions under-constrain the hidden label-9 target in this registered case.",
+      "selection_rule": "paired alpha-zero baseline; no physics or truth ranking",
+      "source_files": [
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json",
+          "role": "authoritative Phase-1 machine summary",
+          "sha256": "dd25face4cf7f29d0d810b4506afb7fa0a873dd36dc8ba5a0f698b4edaaf2336",
+          "size_bytes": 15258
+        },
+        {
+          "path": "project/geodata-3d-conditional/docs/PHASE1_REPORT.md",
+          "role": "formal Phase-1 interpretation",
+          "sha256": "f2d5976800fd99e3a8782cf9b46699ad82c12650a0b03d4415c3d7759461855b",
+          "size_bytes": 6137
+        },
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/paired_samples.csv",
+          "role": "strict paired Phase-1 rows",
+          "sha256": "481baa723fbbdecace6e20b84902124cddd8dd80c19bf35526fa892d62f46a7e",
+          "size_bytes": 19333
+        }
+      ],
+      "truth_visible_during_inference": false
+    },
+    {
+      "display_name": "Phase 1 oracle 3-D probability guidance",
+      "evidence_type": "truth-derived controllability upper bound",
+      "experiment_id": "phase1_oracle_probability",
+      "inference_method": "gradient guidance through frozen Flow integration",
+      "machine_decision": "mechanism_validated_with_topology_and_endpoint_caveats",
+      "n_cases": 1,
+      "n_pairs_or_samples": {
+        "paired_runs": 12,
+        "samples_per_seed": 4,
+        "seeds": 3
+      },
+      "observation_type": "truth-derived 3-D label-9 probability volume",
+      "observation_visible": true,
+      "primary_metrics": [
+        {
+          "display_name": "Global voxel accuracy",
+          "metric_id": "p1_global_accuracy",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.global_voxel_accuracy.{baseline,guided}.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json",
+            "sha256": "dd25face4cf7f29d0d810b4506afb7fa0a873dd36dc8ba5a0f698b4edaaf2336"
+          },
+          "unit": "fraction",
+          "value": {
+            "baseline": 0.5972100545962652,
+            "guided": 0.6431517054637274
+          }
+        },
+        {
+          "display_name": "Global dynamic-union mIoU",
+          "metric_id": "p1_global_miou",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.global_mean_iou.{baseline,guided}.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json",
+            "sha256": "dd25face4cf7f29d0d810b4506afb7fa0a873dd36dc8ba5a0f698b4edaaf2336"
+          },
+          "unit": "fraction",
+          "value": {
+            "baseline": 0.18044054011503854,
+            "guided": 0.21781629572312036
+          }
+        },
+        {
+          "display_name": "Label-9 IoU",
+          "metric_id": "p1_label9_iou",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.target_iou.{baseline,guided}.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json",
+            "sha256": "dd25face4cf7f29d0d810b4506afb7fa0a873dd36dc8ba5a0f698b4edaaf2336"
+          },
+          "unit": "fraction",
+          "value": {
+            "baseline": 0.03144480434529132,
+            "guided": 0.8098611425842716
+          }
+        },
+        {
+          "display_name": "Label-9 precision",
+          "metric_id": "p1_label9_precision",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.target_precision.{baseline,guided}.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json",
+            "sha256": "dd25face4cf7f29d0d810b4506afb7fa0a873dd36dc8ba5a0f698b4edaaf2336"
+          },
+          "unit": "fraction",
+          "value": {
+            "baseline": 0.07878691276852436,
+            "guided": 0.8273961957231815
+          }
+        },
+        {
+          "display_name": "Label-9 recall",
+          "metric_id": "p1_label9_recall",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.target_recall.{baseline,guided}.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json",
+            "sha256": "dd25face4cf7f29d0d810b4506afb7fa0a873dd36dc8ba5a0f698b4edaaf2336"
+          },
+          "unit": "fraction",
+          "value": {
+            "baseline": 0.05196253345227476,
+            "guided": 0.9747249479631281
+          }
+        },
+        {
+          "display_name": "Label-9 centroid distance",
+          "metric_id": "p1_centroid_distance",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.target_centroid_distance.{baseline,guided}.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json",
+            "sha256": "dd25face4cf7f29d0d810b4506afb7fa0a873dd36dc8ba5a0f698b4edaaf2336"
+          },
+          "unit": "voxels",
+          "value": {
+            "baseline": 16.951820214589436,
+            "guided": 3.3798132836818695
+          }
+        },
+        {
+          "display_name": "Selected-ROI IoU",
+          "metric_id": "p1_roi_iou",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.selected_roi_iou.{baseline,guided}.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json",
+            "sha256": "dd25face4cf7f29d0d810b4506afb7fa0a873dd36dc8ba5a0f698b4edaaf2336"
+          },
+          "unit": "fraction",
+          "value": {
+            "baseline": 0.035113658956849265,
+            "guided": 0.93923418728028
+          }
+        },
+        {
+          "display_name": "Condition violations",
+          "metric_id": "p1_condition_violations",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "gate.entries.zero_condition_violations.value",
+            "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json",
+            "sha256": "dd25face4cf7f29d0d810b4506afb7fa0a873dd36dc8ba5a0f698b4edaaf2336"
+          },
+          "unit": "voxels",
+          "value": 0
+        },
+        {
+          "display_name": "Strict paired runs",
+          "metric_id": "p1_paired_runs",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "n_pairs",
+            "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json",
+            "sha256": "dd25face4cf7f29d0d810b4506afb7fa0a873dd36dc8ba5a0f698b4edaaf2336"
+          },
+          "unit": "pairs",
+          "value": 12
+        }
+      ],
+      "scientific_interpretation": "Strong frozen-Flow controllability is demonstrated under privileged truth-derived probability evidence, with retained topology and endpoint caveats.",
+      "selection_rule": "strict baseline/guided pairing; no sample selection",
+      "source_files": [
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json",
+          "role": "authoritative Phase-1 machine summary",
+          "sha256": "dd25face4cf7f29d0d810b4506afb7fa0a873dd36dc8ba5a0f698b4edaaf2336",
+          "size_bytes": 15258
+        },
+        {
+          "path": "project/geodata-3d-conditional/docs/PHASE1_REPORT.md",
+          "role": "formal Phase-1 interpretation",
+          "sha256": "f2d5976800fd99e3a8782cf9b46699ad82c12650a0b03d4415c3d7759461855b",
+          "size_bytes": 6137
+        },
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/paired_samples.csv",
+          "role": "strict paired Phase-1 rows",
+          "sha256": "481baa723fbbdecace6e20b84902124cddd8dd80c19bf35526fa892d62f46a7e",
+          "size_bytes": 19333
+        }
+      ],
+      "truth_visible_during_inference": true
+    },
+    {
+      "display_name": "Phase 2a ideal 3-D property guidance",
+      "evidence_type": "truth-derived physical-property upper bound",
+      "experiment_id": "phase2a_ideal_property",
+      "inference_method": "two-channel differentiable property guidance through frozen Flow",
+      "machine_decision": "PASS: Phase-2a ideal 3-D property upper bound validated with caveats",
+      "n_cases": 1,
+      "n_pairs_or_samples": {
+        "paired_runs": 12,
+        "samples_per_seed": 4,
+        "seeds": 3
+      },
+      "observation_type": "full-resolution noiseless truth-derived 3-D properties",
+      "observation_visible": true,
+      "primary_metrics": [
+        {
+          "display_name": "Global voxel accuracy",
+          "metric_id": "p2_global_accuracy",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.global_voxel_accuracy.{baseline,guided}.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage2_property/reports/phase2a_v1_12pair/summary.json",
+            "sha256": "943573d4ed0ccf428b0201deb02182dbfd8c667777e67c2e062e6cf849ecd10d"
+          },
+          "unit": "fraction",
+          "value": {
+            "baseline": 0.5972100545962652,
+            "guided": 0.6381298899650574
+          }
+        },
+        {
+          "display_name": "Global dynamic-union mIoU",
+          "metric_id": "p2_dynamic_miou",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.global_mean_iou.{baseline,guided}.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage2_property/reports/phase2a_v1_12pair/summary.json",
+            "sha256": "943573d4ed0ccf428b0201deb02182dbfd8c667777e67c2e062e6cf849ecd10d"
+          },
+          "unit": "fraction",
+          "value": {
+            "baseline": 0.18044054011503854,
+            "guided": 0.19801797345280647
+          }
+        },
+        {
+          "display_name": "Truth-present fixed-set mIoU",
+          "metric_id": "p2_truth_present_miou",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.truth_present_mean_iou.{baseline,guided}.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage2_property/reports/phase2a_v1_12pair/summary.json",
+            "sha256": "943573d4ed0ccf428b0201deb02182dbfd8c667777e67c2e062e6cf849ecd10d"
+          },
+          "unit": "fraction",
+          "value": {
+            "baseline": 0.27712642401456833,
+            "guided": 0.34433496246735257
+          }
+        },
+        {
+          "display_name": "Hard property loss",
+          "metric_id": "p2_hard_property_loss",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.hard_property_loss.{baseline,guided}.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage2_property/reports/phase2a_v1_12pair/summary.json",
+            "sha256": "943573d4ed0ccf428b0201deb02182dbfd8c667777e67c2e062e6cf849ecd10d"
+          },
+          "unit": "loss",
+          "value": {
+            "baseline": 1.478074053923289,
+            "guided": 0.5186778654654821
+          }
+        },
+        {
+          "display_name": "Label-9 IoU",
+          "metric_id": "p2_label9_iou",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.target_iou.{baseline,guided}.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage2_property/reports/phase2a_v1_12pair/summary.json",
+            "sha256": "943573d4ed0ccf428b0201deb02182dbfd8c667777e67c2e062e6cf849ecd10d"
+          },
+          "unit": "fraction",
+          "value": {
+            "baseline": 0.03144480434529132,
+            "guided": 0.4807524758898813
+          }
+        },
+        {
+          "display_name": "Label-9 precision",
+          "metric_id": "p2_label9_precision",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.target_precision.{baseline,guided}.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage2_property/reports/phase2a_v1_12pair/summary.json",
+            "sha256": "943573d4ed0ccf428b0201deb02182dbfd8c667777e67c2e062e6cf849ecd10d"
+          },
+          "unit": "fraction",
+          "value": {
+            "baseline": 0.07878691276852436,
+            "guided": 0.903246328965435
+          }
+        },
+        {
+          "display_name": "Label-9 recall",
+          "metric_id": "p2_label9_recall",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.target_recall.{baseline,guided}.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage2_property/reports/phase2a_v1_12pair/summary.json",
+            "sha256": "943573d4ed0ccf428b0201deb02182dbfd8c667777e67c2e062e6cf849ecd10d"
+          },
+          "unit": "fraction",
+          "value": {
+            "baseline": 0.05196253345227476,
+            "guided": 0.507461715730003
+          }
+        },
+        {
+          "display_name": "Label-9 centroid distance",
+          "metric_id": "p2_centroid_distance",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "metrics.target_centroid_distance.{baseline,guided}.mean",
+            "path": "project/geodata-3d-conditional/experiments/stage2_property/reports/phase2a_v1_12pair/summary.json",
+            "sha256": "943573d4ed0ccf428b0201deb02182dbfd8c667777e67c2e062e6cf849ecd10d"
+          },
+          "unit": "voxels",
+          "value": {
+            "baseline": 16.951820214589436,
+            "guided": 3.9824511408805847
+          }
+        },
+        {
+          "display_name": "Condition violations",
+          "metric_id": "p2_condition_violations",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "sum(condition_violation_count) over all paired rows",
+            "path": "project/geodata-3d-conditional/experiments/stage2_property/reports/phase2a_v1_12pair/paired_samples.csv",
+            "sha256": "7765c7c5c505bec4d0a80b8a7a7b07b38748b9d7c689ce827b129b8017823301"
+          },
+          "unit": "voxels",
+          "value": 0
+        },
+        {
+          "display_name": "Strict paired runs",
+          "metric_id": "p2_paired_runs",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "n_pairs",
+            "path": "project/geodata-3d-conditional/experiments/stage2_property/reports/phase2a_v1_12pair/summary.json",
+            "sha256": "943573d4ed0ccf428b0201deb02182dbfd8c667777e67c2e062e6cf849ecd10d"
+          },
+          "unit": "pairs",
+          "value": 12
+        }
+      ],
+      "scientific_interpretation": "Complete ideal properties control the frozen generator, but remain a truth-derived noiseless upper bound rather than acquisition-domain geophysics.",
+      "selection_rule": "strict baseline/guided pairing; no sample selection",
+      "source_files": [
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage2_property/reports/phase2a_v1_12pair/summary.json",
+          "role": "authoritative Phase-2a machine summary",
+          "sha256": "943573d4ed0ccf428b0201deb02182dbfd8c667777e67c2e062e6cf849ecd10d",
+          "size_bytes": 15531
+        },
+        {
+          "path": "project/geodata-3d-conditional/docs/PHASE2A_REPORT.md",
+          "role": "formal Phase-2a interpretation",
+          "sha256": "c370bbbd3b38eabb214baa4b4884b7a373e59162dc1478c82c3bef53a53e07bc",
+          "size_bytes": 6254
+        },
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage2_property/reports/phase2a_v1_12pair/paired_samples.csv",
+          "role": "strict paired Phase-2a rows",
+          "sha256": "7765c7c5c505bec4d0a80b8a7a7b07b38748b9d7c689ce827b129b8017823301",
+          "size_bytes": 17823
+        }
+      ],
+      "truth_visible_during_inference": true
+    },
+    {
+      "display_name": "Direct geophysical gradient guidance",
+      "evidence_type": "synthetic acquisition-domain diagnostic",
+      "experiment_id": "stage6_direct_geophysical",
+      "inference_method": "direct continuous-state seismic gradient guidance",
+      "machine_decision": "IMPLEMENTATION_GATES_PASS; DIRECT_GUIDANCE_LIMITED",
+      "n_cases": 1,
+      "n_pairs_or_samples": {
+        "diagnostic_control_runs": 12
+      },
+      "observation_type": "noiseless synthetic post-stack seismic",
+      "observation_visible": true,
+      "primary_metrics": [
+        {
+          "display_name": "Seismic soft attainment (max/final)",
+          "metric_id": "s6_seismic_soft_attainment",
+          "qualification": "",
+          "scientific_role": "diagnostic",
+          "source": {
+            "json_key": "hypotheses[id=H7].relevant_metric.seismic_max_final_soft",
+            "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/diagnostic_verdict.json",
+            "sha256": "0c823db27a012fa1789874ffd5e9e2b5493fc9c843c2ff50f7942d70704186b0"
+          },
+          "unit": "fraction",
+          "value": [
+            0.19093868190850125,
+            0.19093868190850125
+          ]
+        },
+        {
+          "display_name": "Seismic hard attainment (max/final)",
+          "metric_id": "s6_seismic_hard_attainment",
+          "qualification": "",
+          "scientific_role": "diagnostic",
+          "source": {
+            "json_key": "hypotheses[id=H7].relevant_metric.seismic_max_final_hard",
+            "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/diagnostic_verdict.json",
+            "sha256": "0c823db27a012fa1789874ffd5e9e2b5493fc9c843c2ff50f7942d70704186b0"
+          },
+          "unit": "fraction",
+          "value": [
+            0.024435381606903943,
+            -0.007974373489145252
+          ]
+        },
+        {
+          "display_name": "First soft-hard divergent level",
+          "metric_id": "s6_first_divergent_level",
+          "qualification": "",
+          "scientific_role": "diagnostic",
+          "source": {
+            "json_key": "hypotheses[id=H7].relevant_metric.first_divergent_level",
+            "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/diagnostic_verdict.json",
+            "sha256": "0c823db27a012fa1789874ffd5e9e2b5493fc9c843c2ff50f7942d70704186b0"
+          },
+          "unit": "categorical level",
+          "value": "L3 reflectivity/TWT"
+        },
+        {
+          "display_name": "Observation-selected best hard step",
+          "metric_id": "s6_best_hard_step",
+          "qualification": "",
+          "scientific_role": "diagnostic",
+          "source": {
+            "json_key": "hypotheses[id=H13].relevant_metric.D3_observation_selected_best_step",
+            "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/diagnostic_verdict.json",
+            "sha256": "0c823db27a012fa1789874ffd5e9e2b5493fc9c843c2ff50f7942d70704186b0"
+          },
+          "unit": "step",
+          "value": 126
+        }
+      ],
+      "scientific_interpretation": "The continuous seismic objective improves, but hard categorical attainment is weak and degrades at the endpoint; the first reproducible divergence occurs at reflectivity/TWT.",
+      "selection_rule": "observation-only best iterate; truth used for retrospective mechanism diagnostics",
+      "source_files": [
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/diagnostic_verdict.json",
+          "role": "authoritative causal diagnostic verdict",
+          "sha256": "0c823db27a012fa1789874ffd5e9e2b5493fc9c843c2ff50f7942d70704186b0",
+          "size_bytes": 13820
+        },
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/DIAGNOSTIC_SYNTHESIS.md",
+          "role": "formal Stage-6 diagnostic synthesis",
+          "sha256": "d607ea4e398cec7465da2e548742c12a38faeb08bbda6f75ef52f7e63b3bd553",
+          "size_bytes": 7587
+        },
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d3_soft_hard_transfer_v1_provenance_85d5deb_clean/summary.json",
+          "role": "direct soft/hard transfer machine summary",
+          "sha256": "4c9bb1788dd787d54fba3bf211b506d17233c2f3839e67778f90f46a1c238c99",
+          "size_bytes": 18383
+        }
+      ],
+      "truth_visible_during_inference": false
+    },
+    {
+      "display_name": "Stage 7 structured hard-seismic inference",
+      "evidence_type": "bounded structured geophysical inference",
+      "experiment_id": "stage7_structured_hard_seismic",
+      "inference_method": "hard-seismic beam search over a registered structured hypothesis family",
+      "machine_decision": "STRUCTURED_HARD_INFERENCE_VALIDATED",
+      "n_cases": 3,
+      "n_pairs_or_samples": {
+        "registered_native_cases": 3
+      },
+      "observation_type": "noiseless synthetic hard seismic",
+      "observation_visible": true,
+      "primary_metrics": [
+        {
+          "display_name": "Correct observation ranks first",
+          "metric_id": "s7_correct_rank_first",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "native_replicas[*].correct_optimized_is_best_against_correct",
+            "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json",
+            "sha256": "52e4a1d24ddde0fcfaecaf1bd2b707e10a1db04d16faabed3fc46c6b211e4a98"
+          },
+          "unit": "cases",
+          "value": 3
+        },
+        {
+          "display_name": "Registered native cases",
+          "metric_id": "s7_registered_case_count",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "len(native_replicas)",
+            "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json",
+            "sha256": "52e4a1d24ddde0fcfaecaf1bd2b707e10a1db04d16faabed3fc46c6b211e4a98"
+          },
+          "unit": "cases",
+          "value": 3
+        },
+        {
+          "display_name": "Mean correct hard attainment",
+          "metric_id": "s7_mean_hard_attainment",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "mean(native_replicas[*].arms[optimized_by=correct].hard_correct_observation_attainment)",
+            "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json",
+            "sha256": "52e4a1d24ddde0fcfaecaf1bd2b707e10a1db04d16faabed3fc46c6b211e4a98"
+          },
+          "unit": "fraction",
+          "value": 0.4269522824226746
+        },
+        {
+          "display_name": "Hidden label-9 IoU range",
+          "metric_id": "s7_hidden_iou_range",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "range(native_replicas[*].arms[optimized_by=correct].hidden_target_iou)",
+            "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json",
+            "sha256": "52e4a1d24ddde0fcfaecaf1bd2b707e10a1db04d16faabed3fc46c6b211e4a98"
+          },
+          "unit": "fraction",
+          "value": [
+            0.9141716566866267,
+            0.9874266554903605
+          ]
+        },
+        {
+          "display_name": "Hidden label-9 recall range",
+          "metric_id": "s7_hidden_recall_range",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "range(native_replicas[*].arms[optimized_by=correct].hidden_target_recall)",
+            "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json",
+            "sha256": "52e4a1d24ddde0fcfaecaf1bd2b707e10a1db04d16faabed3fc46c6b211e4a98"
+          },
+          "unit": "fraction",
+          "value": [
+            0.916,
+            0.9957537154989384
+          ]
+        },
+        {
+          "display_name": "Condition violations",
+          "metric_id": "s7_condition_violations",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "sum(native_replicas[*].arms[optimized_by=correct].condition_violations)",
+            "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json",
+            "sha256": "52e4a1d24ddde0fcfaecaf1bd2b707e10a1db04d16faabed3fc46c6b211e4a98"
+          },
+          "unit": "voxels",
+          "value": 0
+        },
+        {
+          "display_name": "Hero hard seismic RMSE",
+          "metric_id": "s7_hero_rmse",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "native_replicas[case_id=native_seed20260809].arms[optimized_by=zero|correct].hard_correct_observation_rmse",
+            "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json",
+            "sha256": "52e4a1d24ddde0fcfaecaf1bd2b707e10a1db04d16faabed3fc46c6b211e4a98"
+          },
+          "unit": "RMSE",
+          "value": {
+            "after": 0.00431425217539072,
+            "before": 0.010582241229712963
+          }
+        },
+        {
+          "display_name": "Hero hidden label-9 IoU",
+          "metric_id": "s7_hero_hidden_iou",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "native_replicas[case_id=native_seed20260809].arms[optimized_by=zero|correct].hidden_target_iou",
+            "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json",
+            "sha256": "52e4a1d24ddde0fcfaecaf1bd2b707e10a1db04d16faabed3fc46c6b211e4a98"
+          },
+          "unit": "fraction",
+          "value": {
+            "after": 0.9874266554903605,
+            "before": 0.0
+          }
+        }
+      ],
+      "scientific_interpretation": "Synthetic seismic discriminates the correct observation within a bounded structured geological family; this is not a CFM posterior.",
+      "selection_rule": "minimum hard observed seismic RMSE only; truth metrics retrospective",
+      "source_files": [
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json",
+          "role": "authoritative Stage-7 machine summary",
+          "sha256": "52e4a1d24ddde0fcfaecaf1bd2b707e10a1db04d16faabed3fc46c6b211e4a98",
+          "size_bytes": 71743
+        },
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/STAGE7_REPORT.md",
+          "role": "formal Stage-7 report",
+          "sha256": "e0faa4bbb1704d168d15402f31693c06e8340ea0ea213150f5fdf3bae709cd44",
+          "size_bytes": 3002
+        },
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/native_cross_evaluation.csv",
+          "role": "native cross-evaluation matrix",
+          "sha256": "584933e1b14ab0ff0a62727ae3991f5fbc4ce217fa6156df0bdaae78df660561",
+          "size_bytes": 3533
+        }
+      ],
+      "truth_visible_during_inference": false
+    },
+    {
+      "display_name": "Stage 9A unrestricted frozen-Flow ranking",
+      "evidence_type": "prior-support and discrimination audit",
+      "experiment_id": "stage9a_unrestricted_flow_prior",
+      "inference_method": "unrestricted frozen-Flow sampling followed by hard-seismic ranking",
+      "machine_decision": "STOP_REASSESS_FROZEN_INFERENCE_ROUTE",
+      "n_cases": 3,
+      "n_pairs_or_samples": {
+        "samples_per_case": 1024,
+        "total_samples": 3072
+      },
+      "observation_type": "surface/boreholes for generation; synthetic hard seismic for ranking",
+      "observation_visible": true,
+      "primary_metrics": [
+        {
+          "display_name": "Frozen-Flow samples per case",
+          "metric_id": "s9_samples_per_case",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "formal_candidates_per_case",
+            "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/summary.json",
+            "sha256": "f801684109f85218742f85531887b7cd12d2cc794e4fef8069310f2e3cfb837b"
+          },
+          "unit": "samples/case",
+          "value": 1024
+        },
+        {
+          "display_name": "Primary registered cases",
+          "metric_id": "s9_case_count",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "primary_case_count",
+            "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/summary.json",
+            "sha256": "f801684109f85218742f85531887b7cd12d2cc794e4fef8069310f2e3cfb837b"
+          },
+          "unit": "cases",
+          "value": 3
+        },
+        {
+          "display_name": "Unique hard models",
+          "metric_id": "s9_unique_hard_models",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "sum(cases[*].ensemble.unique_hard_model_count)",
+            "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/summary.json",
+            "sha256": "f801684109f85218742f85531887b7cd12d2cc794e4fef8069310f2e3cfb837b"
+          },
+          "unit": "models",
+          "value": 3072
+        },
+        {
+          "display_name": "Flow velocity forwards",
+          "metric_id": "s9_flow_velocity_forwards",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "flow_velocity_forward_count_total",
+            "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/summary.json",
+            "sha256": "f801684109f85218742f85531887b7cd12d2cc794e4fef8069310f2e3cfb837b"
+          },
+          "unit": "forwards",
+          "value": 98304
+        },
+        {
+          "display_name": "Hard seismic forwards",
+          "metric_id": "s9_hard_seismic_forwards",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "hard_seismic_forward_count_total",
+            "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/summary.json",
+            "sha256": "f801684109f85218742f85531887b7cd12d2cc794e4fef8069310f2e3cfb837b"
+          },
+          "unit": "forwards",
+          "value": 3072
+        },
+        {
+          "display_name": "Support pass count",
+          "metric_id": "s9_support_pass_count",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "support_case_pass_count",
+            "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/summary.json",
+            "sha256": "f801684109f85218742f85531887b7cd12d2cc794e4fef8069310f2e3cfb837b"
+          },
+          "unit": "cases",
+          "value": 0
+        },
+        {
+          "display_name": "Discrimination pass count",
+          "metric_id": "s9_discrimination_pass_count",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "discrimination_case_pass_count",
+            "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/summary.json",
+            "sha256": "f801684109f85218742f85531887b7cd12d2cc794e4fef8069310f2e3cfb837b"
+          },
+          "unit": "cases",
+          "value": 0
+        },
+        {
+          "display_name": "Oracle-best label-9 IoU by case",
+          "metric_id": "s9_oracle_best_label9_iou",
+          "qualification": "Not a deployable selector; truth was used only after pool/ranking freeze.",
+          "scientific_role": "retrospective upper bound",
+          "source": {
+            "json_key": "cases[*].oracle_best_label9_iou.label9_iou",
+            "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/summary.json",
+            "sha256": "f801684109f85218742f85531887b7cd12d2cc794e4fef8069310f2e3cfb837b"
+          },
+          "unit": "fraction",
+          "value": {
+            "native_seed20260901": 0.11701541850220264,
+            "native_seed20260902": 0.13477816017114688,
+            "native_seed20260903": 0.12891236306729265
+          }
+        }
+      ],
+      "scientific_interpretation": "The registered hidden-target tasks are outside adequate support/discrimination of the tested unrestricted frozen-Flow proposal pool.",
+      "selection_rule": "ascending hard seismic RMSE with candidate-ID ties; truth loaded only after ranking",
+      "source_files": [
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/summary.json",
+          "role": "authoritative Stage-9A machine summary",
+          "sha256": "f801684109f85218742f85531887b7cd12d2cc794e4fef8069310f2e3cfb837b",
+          "size_bytes": 56115
+        },
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/STAGE9A_REPORT.md",
+          "role": "formal Stage-9A report",
+          "sha256": "52d40831f0cf221035fb80fd08d952e9c65afb7af1fbcd3b79e742ea457aae0c",
+          "size_bytes": 2295
+        }
+      ],
+      "truth_visible_during_inference": false
+    },
+    {
+      "display_name": "Full StructuralGeo registered benchmark",
+      "evidence_type": "prospectively registered geology-only cohort",
+      "experiment_id": "full_structuralgeo_registered_cohort",
+      "inference_method": "no inference",
+      "machine_decision": "FULL_STRUCTURALGEO_BENCHMARK_READY",
+      "n_cases": 5,
+      "n_pairs_or_samples": {
+        "registered_cases": 5
+      },
+      "observation_type": "none; geology-only benchmark construction",
+      "observation_visible": false,
+      "primary_metrics": [
+        {
+          "display_name": "Raw label-9 voxel counts",
+          "metric_id": "fullgeo_label9_voxel_counts",
+          "qualification": "",
+          "scientific_role": "cohort descriptor",
+          "source": {
+            "json_key": "raw_label_counts.9 for each registered case",
+            "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/manifest.json",
+            "sha256": "7e63cc34f21a401a665bf6577f3031db8da6fce6e893c6a5fa16f79117226ee6"
+          },
+          "source_by_case": {
+            "fullgeo_case01": {
+              "json_key": "raw_label_counts.9",
+              "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/manifest.json",
+              "sha256": "7e63cc34f21a401a665bf6577f3031db8da6fce6e893c6a5fa16f79117226ee6"
+            },
+            "fullgeo_case02": {
+              "json_key": "raw_label_counts.9",
+              "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case02/manifest.json",
+              "sha256": "826036d465bfcb289cc56baa4f4fb8e536f863cf63bf08e0613e9e7292ba1fca"
+            },
+            "fullgeo_case03": {
+              "json_key": "raw_label_counts.9",
+              "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case03/manifest.json",
+              "sha256": "f513ed1244c56433c9eab9046550eadf41b6694921ea3b38b4456f798c7de486"
+            },
+            "fullgeo_case04": {
+              "json_key": "raw_label_counts.9",
+              "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case04/manifest.json",
+              "sha256": "8e0f9b273a7b3fa6544a167396285cb67cd1bee3210c7ffb8a6bd45abc5acab2"
+            },
+            "fullgeo_case05": {
+              "json_key": "raw_label_counts.9",
+              "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case05/manifest.json",
+              "sha256": "2a4fa521b35e0c63e2f21092140f54b24b6940667b891428430890dc0247a76d"
+            }
+          },
+          "unit": "voxels",
+          "value": {
+            "fullgeo_case01": 120,
+            "fullgeo_case02": 16083,
+            "fullgeo_case03": 1736,
+            "fullgeo_case04": 13293,
+            "fullgeo_case05": 4111
+          }
+        },
+        {
+          "display_name": "Model resolution",
+          "metric_id": "fullgeo_resolution",
+          "qualification": "",
+          "scientific_role": "method",
+          "source": {
+            "json_key": "resolution",
+            "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/manifest.json",
+            "sha256": "7e63cc34f21a401a665bf6577f3031db8da6fce6e893c6a5fa16f79117226ee6"
+          },
+          "unit": "voxels",
+          "value": [
+            64,
+            64,
+            64
+          ]
+        },
+        {
+          "display_name": "Fixed vertical wells",
+          "metric_id": "fullgeo_well_count",
+          "qualification": "",
+          "scientific_role": "method",
+          "source": {
+            "json_key": "condition_statistics.well_count",
+            "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/manifest.json",
+            "sha256": "7e63cc34f21a401a665bf6577f3031db8da6fce6e893c6a5fa16f79117226ee6"
+          },
+          "unit": "wells",
+          "value": 9
+        }
+      ],
+      "scientific_interpretation": "The five-case cohort is a frozen, diverse synthetic benchmark; it is not an inference result and cannot establish training-set non-overlap at sample level.",
+      "selection_rule": "first five prospectively eligible seeds; no visual or downstream replacement",
+      "source_files": [
+        {
+          "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/FULL_STRUCTURALGEO_BENCHMARK_BUILD_REPORT.md",
+          "role": "authoritative benchmark build report",
+          "sha256": "bd12c8e87de3b22ed81eb105d38f8180fa10a6a72cc74140462bc66059026337",
+          "size_bytes": 12874
+        },
+        {
+          "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/manifest.json",
+          "role": "registered FullGeo case 1 manifest",
+          "sha256": "7e63cc34f21a401a665bf6577f3031db8da6fce6e893c6a5fa16f79117226ee6",
+          "size_bytes": 40772
+        },
+        {
+          "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case02/manifest.json",
+          "role": "registered FullGeo case 2 manifest",
+          "sha256": "826036d465bfcb289cc56baa4f4fb8e536f863cf63bf08e0613e9e7292ba1fca",
+          "size_bytes": 106669
+        },
+        {
+          "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case03/manifest.json",
+          "role": "registered FullGeo case 3 manifest",
+          "sha256": "f513ed1244c56433c9eab9046550eadf41b6694921ea3b38b4456f798c7de486",
+          "size_bytes": 108317
+        },
+        {
+          "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case04/manifest.json",
+          "role": "registered FullGeo case 4 manifest",
+          "sha256": "8e0f9b273a7b3fa6544a167396285cb67cd1bee3210c7ffb8a6bd45abc5acab2",
+          "size_bytes": 36258
+        },
+        {
+          "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case05/manifest.json",
+          "role": "registered FullGeo case 5 manifest",
+          "sha256": "2a4fa521b35e0c63e2f21092140f54b24b6940667b891428430890dc0247a76d",
+          "size_bytes": 67393
+        }
+      ],
+      "truth_visible_during_inference": false
+    },
+    {
+      "display_name": "Stage 12B FullGeo probability bridge",
+      "evidence_type": "synthetic bridge-specificity gate",
+      "experiment_id": "stage12b_fullgeo_probability_bridge",
+      "inference_method": "fixed seismic-to-property inversion and probability construction; no Flow forward",
+      "machine_decision": "STOP_FULLGEO_BRIDGE_NOT_CASE_SPECIFIC",
+      "n_cases": 5,
+      "n_pairs_or_samples": {
+        "flow_forwards": 0,
+        "registered_cases": 5
+      },
+      "observation_type": "noiseless synthetic seismic; derived post-seismic label-9 probabilities",
+      "observation_visible": true,
+      "primary_metrics": [
+        {
+          "display_name": "Diagonal mean AUPRC",
+          "metric_id": "s12_diagonal_mean_auprc",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "diagonal_mean_auprc",
+            "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/evaluation/stage12b_a/summary.json",
+            "sha256": "d6b4119462a8349452dcc3e02e873262135bc5601d6c4b1e1ba8ea3b42ddf592"
+          },
+          "unit": "AUPRC",
+          "value": 0.04176687121111301
+        },
+        {
+          "display_name": "Registered FullGeo cases",
+          "metric_id": "s12_case_count",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "len(case_ids)",
+            "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/evaluation/stage12b_a/summary.json",
+            "sha256": "d6b4119462a8349452dcc3e02e873262135bc5601d6c4b1e1ba8ea3b42ddf592"
+          },
+          "unit": "cases",
+          "value": 5
+        },
+        {
+          "display_name": "Off-diagonal mean AUPRC",
+          "metric_id": "s12_off_diagonal_mean_auprc",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "off_diagonal_mean_auprc",
+            "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/evaluation/stage12b_a/summary.json",
+            "sha256": "d6b4119462a8349452dcc3e02e873262135bc5601d6c4b1e1ba8ea3b42ddf592"
+          },
+          "unit": "AUPRC",
+          "value": 0.04187063309937007
+        },
+        {
+          "display_name": "Diagonal row maxima",
+          "metric_id": "s12_diagonal_row_maxima",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "diagonal_row_maximum_count",
+            "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/evaluation/stage12b_a/summary.json",
+            "sha256": "d6b4119462a8349452dcc3e02e873262135bc5601d6c4b1e1ba8ea3b42ddf592"
+          },
+          "unit": "cases",
+          "value": 1
+        },
+        {
+          "display_name": "Correct above shuffled",
+          "metric_id": "s12_correct_above_shuffled",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "correct_above_shuffled_count",
+            "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/evaluation/stage12b_a/summary.json",
+            "sha256": "d6b4119462a8349452dcc3e02e873262135bc5601d6c4b1e1ba8ea3b42ddf592"
+          },
+          "unit": "cases",
+          "value": 2
+        },
+        {
+          "display_name": "Correct above constant",
+          "metric_id": "s12_correct_above_constant",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "correct_above_constant_count",
+            "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/evaluation/stage12b_a/summary.json",
+            "sha256": "d6b4119462a8349452dcc3e02e873262135bc5601d6c4b1e1ba8ea3b42ddf592"
+          },
+          "unit": "cases",
+          "value": 2
+        },
+        {
+          "display_name": "Post above prior",
+          "metric_id": "s12_post_above_prior",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "post_ap_above_prior_count",
+            "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/evaluation/stage12b_a/summary.json",
+            "sha256": "d6b4119462a8349452dcc3e02e873262135bc5601d6c4b1e1ba8ea3b42ddf592"
+          },
+          "unit": "cases",
+          "value": 4
+        }
+      ],
+      "scientific_interpretation": "The current scalar log-impedance probability bridge is not case-specific on the five registered FullGeo cases; Flow was not authorized in Stage 12B.",
+      "selection_rule": "prospective 5x5 transfer and control gates; no case replacement",
+      "source_files": [
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/evaluation/stage12b_a/summary.json",
+          "role": "authoritative Stage-12B-A machine summary",
+          "sha256": "d6b4119462a8349452dcc3e02e873262135bc5601d6c4b1e1ba8ea3b42ddf592",
+          "size_bytes": 1317
+        },
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/reports/STAGE12B_REPORT.md",
+          "role": "formal Stage-12B report",
+          "sha256": "d1ce620d5b6c1cde8224be7d014f5a652f36d6766b5c47055e692bf5a4759e53",
+          "size_bytes": 8297
+        }
+      ],
+      "truth_visible_during_inference": false
+    },
+    {
+      "display_name": "Stage 14 probability-guided frozen Flow",
+      "evidence_type": "paired synthetic end-to-end pilot",
+      "experiment_id": "stage14_probability_guided_flow",
+      "inference_method": "Stage-12B probability volumes through the frozen Phase-1 guidance interface",
+      "machine_decision": "GANSIM_STYLE_GEO_GUIDANCE_NOT_SUPPORTED",
+      "n_cases": 5,
+      "n_pairs_or_samples": {
+        "paired_runs": 20,
+        "pairs_per_case": 4,
+        "registered_cases": 5
+      },
+      "observation_type": "synthetic post-seismic label-9 probability volume",
+      "observation_visible": true,
+      "primary_metrics": [
+        {
+          "display_name": "Overall median paired hidden-label9 IoU delta",
+          "metric_id": "s14_overall_median_hidden_iou_delta",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "overall_paired_median_hidden_label9_iou_delta",
+            "path": "project/geodata-3d-conditional/experiments/stage14_gansim_style_geo_guidance/reports/pilot_v1/summary.json",
+            "sha256": "dabcfd7afc26835d54064f063eb199ea9c6737916ceb080f0dd54ad4f21d54c7"
+          },
+          "unit": "fraction",
+          "value": -0.031507776294942384
+        },
+        {
+          "display_name": "Registered FullGeo cases",
+          "metric_id": "s14_case_count",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "n_cases",
+            "path": "project/geodata-3d-conditional/experiments/stage14_gansim_style_geo_guidance/reports/pilot_v1/summary.json",
+            "sha256": "dabcfd7afc26835d54064f063eb199ea9c6737916ceb080f0dd54ad4f21d54c7"
+          },
+          "unit": "cases",
+          "value": 5
+        },
+        {
+          "display_name": "Paired runs",
+          "metric_id": "s14_pair_count",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "n_pairs",
+            "path": "project/geodata-3d-conditional/experiments/stage14_gansim_style_geo_guidance/reports/pilot_v1/summary.json",
+            "sha256": "dabcfd7afc26835d54064f063eb199ea9c6737916ceb080f0dd54ad4f21d54c7"
+          },
+          "unit": "pairs",
+          "value": 20
+        },
+        {
+          "display_name": "Positive case medians",
+          "metric_id": "s14_positive_case_count",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "positive_case_count",
+            "path": "project/geodata-3d-conditional/experiments/stage14_gansim_style_geo_guidance/reports/pilot_v1/summary.json",
+            "sha256": "dabcfd7afc26835d54064f063eb199ea9c6737916ceb080f0dd54ad4f21d54c7"
+          },
+          "unit": "cases",
+          "value": 1
+        },
+        {
+          "display_name": "Hard-condition violations",
+          "metric_id": "s14_condition_violations",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "total_condition_violations",
+            "path": "project/geodata-3d-conditional/experiments/stage14_gansim_style_geo_guidance/reports/pilot_v1/summary.json",
+            "sha256": "dabcfd7afc26835d54064f063eb199ea9c6737916ceb080f0dd54ad4f21d54c7"
+          },
+          "unit": "voxels",
+          "value": 0
+        },
+        {
+          "display_name": "Per-case median hidden-label9 IoU delta",
+          "metric_id": "s14_per_case_hidden_iou_deltas",
+          "qualification": "",
+          "scientific_role": "primary",
+          "source": {
+            "json_key": "case_summaries.<case_id>.paired_delta_medians.hidden_label9_iou",
+            "path": "project/geodata-3d-conditional/experiments/stage14_gansim_style_geo_guidance/reports/pilot_v1/summary.json",
+            "sha256": "dabcfd7afc26835d54064f063eb199ea9c6737916ceb080f0dd54ad4f21d54c7"
+          },
+          "unit": "fraction",
+          "value": {
+            "fullgeo_case01": -0.003025032313311691,
+            "fullgeo_case02": -0.09314386533393552,
+            "fullgeo_case03": 0.0013863164540872022,
+            "fullgeo_case04": -0.16675911229162563,
+            "fullgeo_case05": -0.031507776294942384
+          }
+        }
+      ],
+      "scientific_interpretation": "The current seismic-probability guidance does not improve hidden label-9 recovery across the five registered FullGeo cases.",
+      "selection_rule": "all preregistered pairs; no sweep, tuning, or best-sample selection",
+      "source_files": [
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage14_gansim_style_geo_guidance/reports/pilot_v1/summary.json",
+          "role": "authoritative Stage-14 machine summary",
+          "sha256": "dabcfd7afc26835d54064f063eb199ea9c6737916ceb080f0dd54ad4f21d54c7",
+          "size_bytes": 9710
+        },
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage14_gansim_style_geo_guidance/reports/pilot_v1/STAGE14_REPORT.md",
+          "role": "formal Stage-14 report",
+          "sha256": "ce8450cd981c799bea8e9c0af04121f6cdc3c103acb3ba76e87e3aa80ed0c1d1",
+          "size_bytes": 1745
+        },
+        {
+          "path": "project/geodata-3d-conditional/experiments/stage14_gansim_style_geo_guidance/reports/pilot_v1/paired_deltas.csv",
+          "role": "all paired Stage-14 deltas",
+          "sha256": "02d9d8f062edb265bb7142cfb4d7b39cba56303356b9e7614531a732a56c420d",
+          "size_bytes": 4728
+        }
+      ],
+      "truth_visible_during_inference": false
+    }
+  ],
+  "figure_links": [
+    {
+      "figure_or_gallery_id": "3d_gallery",
+      "manifest_path": "project/geodata-3d-conditional/paper/manifests/3d_gallery.json",
+      "manifest_sha256": "a1d8fb80085333b33005d4c2ccb81578149add4a48c316a196ef94098d1a82da",
+      "output_paths": [
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/stage7_perspective_iso.pdf",
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/stage7_perspective_iso.svg",
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/stage7_perspective_iso.png",
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/stage7_perspective_oblique.pdf",
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/stage7_perspective_oblique.svg",
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/stage7_perspective_oblique.png",
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/stage7_top_oblique.pdf",
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/stage7_top_oblique.svg",
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/stage7_top_oblique.png",
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/full_structuralgeo_montage.pdf",
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/full_structuralgeo_montage.svg",
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/full_structuralgeo_montage.png",
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/sparse_constraints_hidden_target.pdf",
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/sparse_constraints_hidden_target.svg",
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/sparse_constraints_hidden_target.png",
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/condition_exact_cfm_ensemble.pdf",
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/condition_exact_cfm_ensemble.svg",
+        "project/geodata-3d-conditional/paper/figures/3d_gallery/condition_exact_cfm_ensemble.png"
+      ]
+    },
+    {
+      "figure_or_gallery_id": "figure01_framework",
+      "manifest_path": "project/geodata-3d-conditional/paper/manifests/figure01_framework.json",
+      "manifest_sha256": "ad2eddeebafa2b683a6dd9611746873e0999d54445aecdb6f8d4a490d3f2acfb",
+      "output_paths": [
+        "project/geodata-3d-conditional/paper/figures/figure01_framework.pdf",
+        "project/geodata-3d-conditional/paper/figures/figure01_framework.svg",
+        "project/geodata-3d-conditional/paper/figures/figure01_framework.png"
+      ]
+    },
+    {
+      "figure_or_gallery_id": "figure01_joint_framework",
+      "manifest_path": "project/geodata-3d-conditional/paper/manifests/figure01_joint_framework.json",
+      "manifest_sha256": "265e5e92447b2ca6f4520783ae774494de80c8b888ac6a7682c8abe41f0f5d30",
+      "output_paths": [
+        "project/geodata-3d-conditional/paper/figures/figure01_joint_framework.pdf",
+        "project/geodata-3d-conditional/paper/figures/figure01_joint_framework.svg",
+        "project/geodata-3d-conditional/paper/figures/figure01_joint_framework.png"
+      ]
+    },
+    {
+      "figure_or_gallery_id": "figure02_controllability",
+      "manifest_path": "project/geodata-3d-conditional/paper/manifests/figure02_controllability.json",
+      "manifest_sha256": "742548f3895497cb168c765b3df86a5c753cee1346f5d21abe01f6a3e9da09bd",
+      "output_paths": [
+        "project/geodata-3d-conditional/paper/figures/figure02_controllability.pdf",
+        "project/geodata-3d-conditional/paper/figures/figure02_controllability.svg",
+        "project/geodata-3d-conditional/paper/figures/figure02_controllability.png"
+      ]
+    },
+    {
+      "figure_or_gallery_id": "figure03_joint_inference",
+      "manifest_path": "project/geodata-3d-conditional/paper/manifests/figure03_joint_inference.json",
+      "manifest_sha256": "e237a6cacc1dab1ec26869a08ae7fb96d5c98d423267057e01ea728f1f82d04c",
+      "output_paths": [
+        "project/geodata-3d-conditional/paper/figures/figure03_joint_inference.pdf",
+        "project/geodata-3d-conditional/paper/figures/figure03_joint_inference.svg",
+        "project/geodata-3d-conditional/paper/figures/figure03_joint_inference.png"
+      ]
+    },
+    {
+      "figure_or_gallery_id": "figure03_seismic_structured",
+      "manifest_path": "project/geodata-3d-conditional/paper/manifests/figure03_seismic_structured.json",
+      "manifest_sha256": "0d00bd8265f9bde04c1c76bb173edd0fbd1c1c1d02af216de566ea6579708c9b",
+      "output_paths": [
+        "project/geodata-3d-conditional/paper/figures/figure03_seismic_structured.pdf",
+        "project/geodata-3d-conditional/paper/figures/figure03_seismic_structured.svg",
+        "project/geodata-3d-conditional/paper/figures/figure03_seismic_structured.png"
+      ]
+    },
+    {
+      "figure_or_gallery_id": "figure04_evidence_hierarchy",
+      "manifest_path": "project/geodata-3d-conditional/paper/manifests/figure04_evidence_hierarchy.json",
+      "manifest_sha256": "abbd2f10354d37710684cf520dcb3b4d2b3b56e36d5b17d22d18a0260a942f35",
+      "output_paths": [
+        "project/geodata-3d-conditional/paper/figures/figure04_evidence_hierarchy.pdf",
+        "project/geodata-3d-conditional/paper/figures/figure04_evidence_hierarchy.svg",
+        "project/geodata-3d-conditional/paper/figures/figure04_evidence_hierarchy.png"
+      ]
+    },
+    {
+      "figure_or_gallery_id": "figure04_information_hierarchy",
+      "manifest_path": "project/geodata-3d-conditional/paper/manifests/figure04_information_hierarchy.json",
+      "manifest_sha256": "6fdbe04ecdec49b2354de86e5169bd56b1457f5790d8b501220184d01ea06356",
+      "output_paths": [
+        "project/geodata-3d-conditional/paper/figures/figure04_information_hierarchy.pdf",
+        "project/geodata-3d-conditional/paper/figures/figure04_information_hierarchy.svg",
+        "project/geodata-3d-conditional/paper/figures/figure04_information_hierarchy.png"
+      ]
+    },
+    {
+      "figure_or_gallery_id": "fullgeo_3d_benchmark",
+      "manifest_path": "project/geodata-3d-conditional/paper/manifests/fullgeo_3d_benchmark.json",
+      "manifest_sha256": "8e3b44ae71e90232540af5b7e139867c6ae5ad87a398921e8ba1f6b5f6ffe1fe",
+      "output_paths": [
+        "project/geodata-3d-conditional/paper/figures/fullgeo_3d_benchmark.pdf",
+        "project/geodata-3d-conditional/paper/figures/fullgeo_3d_benchmark.svg",
+        "project/geodata-3d-conditional/paper/figures/fullgeo_3d_benchmark.png",
+        "project/geodata-3d-conditional/paper/figures/fullgeo_3d_benchmark_presentation.pdf",
+        "project/geodata-3d-conditional/paper/figures/fullgeo_3d_benchmark_presentation.svg",
+        "project/geodata-3d-conditional/paper/figures/fullgeo_3d_benchmark_presentation.png"
+      ]
+    },
+    {
+      "figure_or_gallery_id": "paper_figure_collection_manifest_v1",
+      "manifest_path": "project/geodata-3d-conditional/paper/manifests/paper_figures.json",
+      "manifest_sha256": "1e8631df0ea9f53f40f889c1fb975f0a4d9cacbc10dd3807bcbc75e80b349983",
+      "output_paths": []
+    }
+  ],
+  "headline_metrics": [
+    {
+      "display_name": "Label-9 IoU",
+      "metric_id": "p1_label9_iou",
+      "qualification": "",
+      "scientific_role": "primary",
+      "source": {
+        "json_key": "metrics.target_iou.{baseline,guided}.mean",
+        "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json",
+        "sha256": "dd25face4cf7f29d0d810b4506afb7fa0a873dd36dc8ba5a0f698b4edaaf2336"
+      },
+      "unit": "fraction",
+      "value": {
+        "baseline": 0.03144480434529132,
+        "guided": 0.8098611425842716
+      }
+    },
+    {
+      "display_name": "Label-9 IoU",
+      "metric_id": "p2_label9_iou",
+      "qualification": "",
+      "scientific_role": "primary",
+      "source": {
+        "json_key": "metrics.target_iou.{baseline,guided}.mean",
+        "path": "project/geodata-3d-conditional/experiments/stage2_property/reports/phase2a_v1_12pair/summary.json",
+        "sha256": "943573d4ed0ccf428b0201deb02182dbfd8c667777e67c2e062e6cf849ecd10d"
+      },
+      "unit": "fraction",
+      "value": {
+        "baseline": 0.03144480434529132,
+        "guided": 0.4807524758898813
+      }
+    },
+    {
+      "display_name": "Hidden label-9 IoU range",
+      "metric_id": "s7_hidden_iou_range",
+      "qualification": "",
+      "scientific_role": "primary",
+      "source": {
+        "json_key": "range(native_replicas[*].arms[optimized_by=correct].hidden_target_iou)",
+        "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json",
+        "sha256": "52e4a1d24ddde0fcfaecaf1bd2b707e10a1db04d16faabed3fc46c6b211e4a98"
+      },
+      "unit": "fraction",
+      "value": [
+        0.9141716566866267,
+        0.9874266554903605
+      ]
+    },
+    {
+      "display_name": "Correct observation ranks first",
+      "metric_id": "s7_correct_rank_first",
+      "qualification": "",
+      "scientific_role": "primary",
+      "source": {
+        "json_key": "native_replicas[*].correct_optimized_is_best_against_correct",
+        "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json",
+        "sha256": "52e4a1d24ddde0fcfaecaf1bd2b707e10a1db04d16faabed3fc46c6b211e4a98"
+      },
+      "unit": "cases",
+      "value": 3
+    },
+    {
+      "display_name": "Support pass count",
+      "metric_id": "s9_support_pass_count",
+      "qualification": "",
+      "scientific_role": "primary",
+      "source": {
+        "json_key": "support_case_pass_count",
+        "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/summary.json",
+        "sha256": "f801684109f85218742f85531887b7cd12d2cc794e4fef8069310f2e3cfb837b"
+      },
+      "unit": "cases",
+      "value": 0
+    },
+    {
+      "display_name": "Discrimination pass count",
+      "metric_id": "s9_discrimination_pass_count",
+      "qualification": "",
+      "scientific_role": "primary",
+      "source": {
+        "json_key": "discrimination_case_pass_count",
+        "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/summary.json",
+        "sha256": "f801684109f85218742f85531887b7cd12d2cc794e4fef8069310f2e3cfb837b"
+      },
+      "unit": "cases",
+      "value": 0
+    },
+    {
+      "display_name": "Diagonal mean AUPRC",
+      "metric_id": "s12_diagonal_mean_auprc",
+      "qualification": "",
+      "scientific_role": "primary",
+      "source": {
+        "json_key": "diagonal_mean_auprc",
+        "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/evaluation/stage12b_a/summary.json",
+        "sha256": "d6b4119462a8349452dcc3e02e873262135bc5601d6c4b1e1ba8ea3b42ddf592"
+      },
+      "unit": "AUPRC",
+      "value": 0.04176687121111301
+    },
+    {
+      "display_name": "Off-diagonal mean AUPRC",
+      "metric_id": "s12_off_diagonal_mean_auprc",
+      "qualification": "",
+      "scientific_role": "primary",
+      "source": {
+        "json_key": "off_diagonal_mean_auprc",
+        "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/evaluation/stage12b_a/summary.json",
+        "sha256": "d6b4119462a8349452dcc3e02e873262135bc5601d6c4b1e1ba8ea3b42ddf592"
+      },
+      "unit": "AUPRC",
+      "value": 0.04187063309937007
+    },
+    {
+      "display_name": "Overall median paired hidden-label9 IoU delta",
+      "metric_id": "s14_overall_median_hidden_iou_delta",
+      "qualification": "",
+      "scientific_role": "primary",
+      "source": {
+        "json_key": "overall_paired_median_hidden_label9_iou_delta",
+        "path": "project/geodata-3d-conditional/experiments/stage14_gansim_style_geo_guidance/reports/pilot_v1/summary.json",
+        "sha256": "dabcfd7afc26835d54064f063eb199ea9c6737916ceb080f0dd54ad4f21d54c7"
+      },
+      "unit": "fraction",
+      "value": -0.031507776294942384
+    },
+    {
+      "display_name": "Positive case medians",
+      "metric_id": "s14_positive_case_count",
+      "qualification": "",
+      "scientific_role": "primary",
+      "source": {
+        "json_key": "positive_case_count",
+        "path": "project/geodata-3d-conditional/experiments/stage14_gansim_style_geo_guidance/reports/pilot_v1/summary.json",
+        "sha256": "dabcfd7afc26835d54064f063eb199ea9c6737916ceb080f0dd54ad4f21d54c7"
+      },
+      "unit": "cases",
+      "value": 1
+    }
+  ],
+  "metadata": {
+    "generator": {
+      "path": "project/geodata-3d-conditional/scripts/paper_figures/build_paper_evidence_summary.py",
+      "role": "deterministic evidence-package generator",
+      "sha256": "4c44d111026ec385a35024326fdf90598f8f5971b340149b7b409500dcdf6736",
+      "size_bytes": 54019
+    },
+    "git_head_at_generation": "cd4b097becaad2f3b8a7cfe91ac3713f2248a1e4",
+    "metric_source_policy": "all numeric evidence is extracted from frozen JSON/CSV artifacts; reports supply interpretation only",
+    "project": "flow2 / geodata-3d-conditional",
+    "protocol_comparability": "distinct diagnostic protocols; not a shared-case leaderboard",
+    "scientific_inference_rerun": false
+  },
+  "schema": "flow2_paper_evidence_summary_v1",
+  "scientific_boundaries": {
+    "calibrated_bayesian_posterior_claim": false,
+    "cross_protocol_head_to_head_claim": false,
+    "field_validation": false,
+    "phase1_probability_is_truth_derived_oracle": true,
+    "phase2_properties_are_truth_derived_ideal_upper_bound": true,
+    "stage12_probability_bridge_is_synthetic": true,
+    "stage14_is_paired_synthetic_not_measured_field_test": true,
+    "stage6_seismic_is_inverse_crime_synthetic": true,
+    "stage7_is_structured_inference_not_cfm_posterior": true,
+    "stage7_truth_used_for_selection": false,
+    "stage9_oracle_best_is_retrospective_upper_bound": true,
+    "synthetic_data_only": true
+  },
+  "table1": {
+    "caption": "Compact quantitative evidence summary for flow2. Results summarize distinct diagnostic protocols and are not a single shared-case leaderboard.",
+    "columns": [
+      "Evidence / inference",
+      "Observation type",
+      "Truth used at inference?",
+      "Target-geology result",
+      "Physical result",
+      "Primary interpretation"
+    ],
+    "footnotes": [
+      "Results summarize distinct diagnostic protocols and are not a single shared-case leaderboard.",
+      "Oracle metrics are privileged controllability upper bounds, not measured-geophysics results.",
+      "Direct gradient guidance is summarized in text: soft seismic attainment reached 0.1909, while maximum/final hard attainment was 0.0244/-0.0080; the first reproducible soft-hard divergence occurred at reflectivity/TWT.",
+      "Stage-9 oracle-best candidates are retrospective support ceilings and are not deployable selectors.",
+      "All seismic experiments are synthetic; no field-data validation is claimed."
+    ],
+    "rows": [
+      {
+        "evidence_inference": "Sparse CFM",
+        "observation_type": "Surface + 9 boreholes",
+        "physical_result": "Not used",
+        "primary_interpretation": "Sparse conditions under-constrain target geometry.",
+        "source_metric_ids": [
+          "sparse_label9_iou"
+        ],
+        "target_geology_result": "Label-9 IoU 0.031",
+        "truth_used_at_inference": "No"
+      },
+      {
+        "evidence_inference": "Oracle probability guidance",
+        "observation_type": "Truth-derived 3-D P(label 9)",
+        "physical_result": "Not acquisition-domain",
+        "primary_interpretation": "Strong controllability upper bound.",
+        "source_metric_ids": [
+          "p1_label9_iou"
+        ],
+        "target_geology_result": "Label-9 IoU 0.031 -> 0.810",
+        "truth_used_at_inference": "Yes (oracle)"
+      },
+      {
+        "evidence_inference": "Ideal property guidance",
+        "observation_type": "Truth-derived noiseless 3-D properties",
+        "physical_result": "Hard-property loss 1.478 -> 0.519",
+        "primary_interpretation": "Ideal property controllability is demonstrated.",
+        "source_metric_ids": [
+          "p2_label9_iou",
+          "p2_hard_property_loss"
+        ],
+        "target_geology_result": "Label-9 IoU 0.031 -> 0.481",
+        "truth_used_at_inference": "Yes (upper bound)"
+      },
+      {
+        "evidence_inference": "Structured hard-seismic inference",
+        "observation_type": "Synthetic hard seismic",
+        "physical_result": "Correct ranks first 3/3",
+        "primary_interpretation": "Seismic discriminates bounded hypotheses.",
+        "source_metric_ids": [
+          "s7_hidden_iou_range",
+          "s7_correct_rank_first"
+        ],
+        "target_geology_result": "Hidden IoU 0.914-0.987",
+        "truth_used_at_inference": "No"
+      },
+      {
+        "evidence_inference": "Unrestricted frozen-Flow ranking",
+        "observation_type": "Synthetic hard seismic",
+        "physical_result": "3072 unique models ranked",
+        "primary_interpretation": "Frozen-prior support is limiting.",
+        "source_metric_ids": [
+          "s9_support_pass_count",
+          "s9_discrimination_pass_count",
+          "s9_unique_hard_models"
+        ],
+        "target_geology_result": "Support 0/3; discrimination 0/3",
+        "truth_used_at_inference": "No; oracle audit after ranking"
+      },
+      {
+        "evidence_inference": "FullGeo probability bridge",
+        "observation_type": "Synthetic seismic -> P(label 9)",
+        "physical_result": "Diagonal row maximum 1/5",
+        "primary_interpretation": "Current bridge lacks case specificity.",
+        "source_metric_ids": [
+          "s12_diagonal_mean_auprc",
+          "s12_off_diagonal_mean_auprc",
+          "s12_diagonal_row_maxima"
+        ],
+        "target_geology_result": "Diagonal/off-diagonal AP 0.0418/0.0419",
+        "truth_used_at_inference": "No"
+      },
+      {
+        "evidence_inference": "Seismic-probability-guided Flow",
+        "observation_type": "Synthetic post-seismic P(label 9)",
+        "physical_result": "0 hard-condition violations",
+        "primary_interpretation": "Current end-to-end bridge is insufficient.",
+        "source_metric_ids": [
+          "s14_overall_median_hidden_iou_delta",
+          "s14_positive_case_count",
+          "s14_condition_violations"
+        ],
+        "target_geology_result": "Median change in hidden IoU -0.0315; positive 1/5",
+        "truth_used_at_inference": "No"
+      }
+    ]
+  }
+}

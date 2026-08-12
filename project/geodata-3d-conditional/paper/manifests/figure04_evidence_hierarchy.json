@@ -1,0 +1,299 @@
+{
+  "camera": null,
+  "case_ids": [
+    "cond_generation_0",
+    "native_seed20260807",
+    "native_seed20260808",
+    "native_seed20260809",
+    "native_seed20260901",
+    "native_seed20260902",
+    "native_seed20260903",
+    "fullgeo_case01",
+    "fullgeo_case02",
+    "fullgeo_case03",
+    "fullgeo_case04",
+    "fullgeo_case05"
+  ],
+  "color_map": {
+    "-1": "#FFFFFF",
+    "0": "#7A6652",
+    "1": "#8C4E85",
+    "10": "#C94C4C",
+    "11": "#A33E63",
+    "12": "#7B4FA3",
+    "13": "#5E4B8B",
+    "2": "#3B6FB6",
+    "3": "#5A91C8",
+    "4": "#56B4B8",
+    "5": "#4DA66D",
+    "6": "#86B84A",
+    "7": "#C5C55A",
+    "8": "#E5C55C",
+    "9": "#D95F02"
+  },
+  "figure_id": "figure04_evidence_hierarchy",
+  "generation": {
+    "camera": {
+      "cut_fraction": 0.52,
+      "focal_point_fraction": [
+        0.5,
+        0.5,
+        0.46
+      ],
+      "parallel_projection": true,
+      "position_direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "view_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "zoom": 1.14
+    },
+    "git_head": "cd4b097becaad2f3b8a7cfe91ac3713f2248a1e4",
+    "matplotlib": "3.8.4",
+    "python": "3.10.12",
+    "script": {
+      "path": "project/geodata-3d-conditional/scripts/paper_figures/figure04_evidence_hierarchy.py",
+      "role": "generation script",
+      "sha256": "1a4f79a59cf7637b7cdb6df381caa0275257c7264a83c3edf5760a98f6f8c80a",
+      "size_bytes": 17291
+    },
+    "style": {
+      "base_font_size_pt": 8.0,
+      "categorical_colormap_policy": "fixed discrete raw-label palette",
+      "double_column_mm": 178.0,
+      "font_family": "STIXGeneral",
+      "label9_color": "#D95F02",
+      "label_colors": {
+        "-1": "#FFFFFF",
+        "0": "#7A6652",
+        "1": "#8C4E85",
+        "10": "#C94C4C",
+        "11": "#A33E63",
+        "12": "#7B4FA3",
+        "13": "#5E4B8B",
+        "2": "#3B6FB6",
+        "3": "#5A91C8",
+        "4": "#56B4B8",
+        "5": "#4DA66D",
+        "6": "#86B84A",
+        "7": "#C5C55A",
+        "8": "#E5C55C",
+        "9": "#D95F02"
+      },
+      "observation_color": "#168A89",
+      "seismic_colormap_policy": "zero-centered perceptually balanced diverging",
+      "single_column_mm": 85.0
+    }
+  },
+  "label_meanings": {
+    "label9": "shared pressure-test label; protocol-specific geometry and evidence"
+  },
+  "metric_extraction_keys": [
+    {
+      "json_key": "metrics.target_iou.baseline.mean; metrics.target_iou.guided.mean",
+      "metric": "Sparse Flow and oracle probability label-9 IoU",
+      "source_path": "experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json"
+    },
+    {
+      "json_key": "metrics.target_iou.guided.mean",
+      "metric": "Ideal property label-9 IoU",
+      "source_path": "experiments/stage2_property/reports/phase2a_v1_12pair/summary.json"
+    },
+    {
+      "metric": "Direct seismic qualitative boundary",
+      "reconstruction_rule": "formal decision: hard seismic residual decreases while complete hard-geology gate fails",
+      "source_path": "docs/PHASE4C_REPORT.md"
+    },
+    {
+      "json_key": "native_replicas[*].arms[optimized_by=correct].hidden_target_iou; correct_optimized_is_best_against_correct",
+      "metric": "Structured hidden IoU and correct rank-first",
+      "source_path": "experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json"
+    },
+    {
+      "json_key": "cases[*].ensemble.unique_hard_model_count; cases[*].SUPPORT_PASS; cases[*].DISCRIMINATION_PASS",
+      "metric": "Frozen Flow support/discrimination",
+      "source_path": "experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/summary.json"
+    },
+    {
+      "json_key": "diagonal_mean_auprc; off_diagonal_mean_auprc; diagonal_row_maximum_count",
+      "metric": "FullGeo bridge specificity",
+      "source_path": "experiments/stage12b_fullgeo_probability_bridge/evaluation/stage12b_a/summary.json"
+    },
+    {
+      "json_key": "overall_paired_median_hidden_label9_iou_delta; positive_case_count",
+      "metric": "Probability-to-Flow paired outcome",
+      "source_path": "experiments/stage14_gansim_style_geo_guidance/reports/pilot_v1/summary.json"
+    }
+  ],
+  "metrics": {
+    "ideal_property_label9_iou": 0.4807524758898813,
+    "oracle_probability_label9_iou": 0.8098611425842716,
+    "sparse_flow_label9_iou": 0.03144480434529132,
+    "stage12b_diagonal_mean_auprc": 0.04176687121111301,
+    "stage12b_diagonal_row_maximum_count": 1,
+    "stage12b_off_diagonal_mean_auprc": 0.04187063309937007,
+    "stage14_median_hidden_iou_delta": -0.031507776294942384,
+    "stage14_positive_case_count": 1,
+    "stage7_case_count": 3,
+    "stage7_correct_rank_first_count": 3,
+    "stage7_hidden_iou_range": [
+      0.9141716566866267,
+      0.9874266554903605
+    ],
+    "stage9a_discrimination_case_count": 0,
+    "stage9a_support_case_count": 0,
+    "stage9a_unique_hard_models": 3072
+  },
+  "model_hashes": "recorded in source experiment manifests; no model loaded by this figure",
+  "oracle_vs_inference_visible": {
+    "oracle": [
+      "Phase1 probability",
+      "Phase2a ideal properties"
+    ],
+    "truth_blind": [
+      "Phase4c seismic",
+      "Stage7 structured seismic",
+      "Stage9A frozen Flow",
+      "Stage12B bridge",
+      "Stage14 paired Flow"
+    ]
+  },
+  "outputs": [
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure04_evidence_hierarchy.pdf",
+      "role": "figure output (pdf)",
+      "sha256": "92dac7309dc28133c74ba587f529db250017fb81f21a158393c9a6cc5563e70e",
+      "size_bytes": 24242
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure04_evidence_hierarchy.svg",
+      "role": "figure output (svg)",
+      "sha256": "4df9fa5274377356c00c8ffebf42bd2d757f046483b5f14633d70faba96376cd",
+      "size_bytes": 26336
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure04_evidence_hierarchy.png",
+      "role": "figure output (png)",
+      "sha256": "fc9d058bba94d9d1bdcf3f8fa27ca92195ac4a95751b5c4760fd03cf7b0176a7",
+      "size_bytes": 759360
+    }
+  ],
+  "protocol_mixing_policy": "nodes are distinct protocol evidence, not paired cross-stage effect sizes",
+  "quality_control": {
+    "cross_protocol_bar_chart": false,
+    "limitations_visible": true,
+    "structured_exception_visible": true,
+    "vector_native": true
+  },
+  "schema_version": "paper_figure_manifest_v2",
+  "scientific_boundaries": {
+    "stage14_measured_field_test": false,
+    "stage7_structured_inference": true,
+    "stage9_unrestricted_frozen_flow": true,
+    "strict_bayesian_posterior_claim": false
+  },
+  "source_files": [
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json",
+      "role": "Phase-1 machine summary",
+      "sha256": "dd25face4cf7f29d0d810b4506afb7fa0a873dd36dc8ba5a0f698b4edaaf2336",
+      "size_bytes": 15258
+    },
+    {
+      "path": "project/geodata-3d-conditional/docs/PHASE1_REPORT.md",
+      "role": "Phase-1 report",
+      "sha256": "f2d5976800fd99e3a8782cf9b46699ad82c12650a0b03d4415c3d7759461855b",
+      "size_bytes": 6137
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage2_property/reports/phase2a_v1_12pair/summary.json",
+      "role": "Phase-2a machine summary",
+      "sha256": "943573d4ed0ccf428b0201deb02182dbfd8c667777e67c2e062e6cf849ecd10d",
+      "size_bytes": 15531
+    },
+    {
+      "path": "project/geodata-3d-conditional/docs/PHASE2A_REPORT.md",
+      "role": "Phase-2a report",
+      "sha256": "c370bbbd3b38eabb214baa4b4884b7a373e59162dc1478c82c3bef53a53e07bc",
+      "size_bytes": 6254
+    },
+    {
+      "path": "project/geodata-3d-conditional/docs/PHASE4C_REPORT.md",
+      "role": "direct acquisition-domain seismic report",
+      "sha256": "39d7d798c5aae041afc06f93a89e540c0069392ce28268c62a8e8077afac921d",
+      "size_bytes": 7391
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json",
+      "role": "Stage-7 structured-inference summary",
+      "sha256": "52e4a1d24ddde0fcfaecaf1bd2b707e10a1db04d16faabed3fc46c6b211e4a98",
+      "size_bytes": 71743
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/STAGE7_REPORT.md",
+      "role": "Stage-7 report",
+      "sha256": "e0faa4bbb1704d168d15402f31693c06e8340ea0ea213150f5fdf3bae709cd44",
+      "size_bytes": 3002
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/summary.json",
+      "role": "Stage-9A unrestricted frozen-Flow summary",
+      "sha256": "f801684109f85218742f85531887b7cd12d2cc794e4fef8069310f2e3cfb837b",
+      "size_bytes": 56115
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/STAGE9A_REPORT.md",
+      "role": "Stage-9A report",
+      "sha256": "52d40831f0cf221035fb80fd08d952e9c65afb7af1fbcd3b79e742ea457aae0c",
+      "size_bytes": 2295
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/evaluation/stage12b_a/summary.json",
+      "role": "Stage-12B bridge-only summary",
+      "sha256": "d6b4119462a8349452dcc3e02e873262135bc5601d6c4b1e1ba8ea3b42ddf592",
+      "size_bytes": 1317
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage12b_fullgeo_probability_bridge/reports/STAGE12B_REPORT.md",
+      "role": "Stage-12B report",
+      "sha256": "d1ce620d5b6c1cde8224be7d014f5a652f36d6766b5c47055e692bf5a4759e53",
+      "size_bytes": 8297
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage13_binary_label9_bridge/reports/STAGE13A_REPORT.md",
+      "role": "Stage-13 identifiability boundary report",
+      "sha256": "2d4c5c332341a4ea2e8edddaf2a2067ed58774f4ccb93bd3198b789c387b8f3e",
+      "size_bytes": 5578
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage14_gansim_style_geo_guidance/reports/pilot_v1/summary.json",
+      "role": "Stage-14 paired summary",
+      "sha256": "dabcfd7afc26835d54064f063eb199ea9c6737916ceb080f0dd54ad4f21d54c7",
+      "size_bytes": 9710
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage14_gansim_style_geo_guidance/reports/pilot_v1/STAGE14_REPORT.md",
+      "role": "Stage-14 report",
+      "sha256": "ce8450cd981c799bea8e9c0af04121f6cdc3c103acb3ba76e87e3aa80ed0c1d1",
+      "size_bytes": 1745
+    },
+    {
+      "path": "project/geodata-3d-conditional/scripts/paper_figures/style.py",
+      "role": "shared paper visual language",
+      "sha256": "736e70c30ff060fffa35b9c1f09912baeaa13e66650375de741ae7c4ce49f9f9",
+      "size_bytes": 29063
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figure_data/figure04_evidence_hierarchy.json",
+      "role": "exact evidence-map data",
+      "sha256": "abab2976cdfb74c4c3a81b1bfe561181109093c9d0f7e99e4e489293d6fdf027",
+      "size_bytes": 5769
+    }
+  ],
+  "truth_visibility": "aggregate retrospective hard-geology metrics only; no truth selected or displayed"
+}

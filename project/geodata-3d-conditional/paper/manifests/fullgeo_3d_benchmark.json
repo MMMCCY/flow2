@@ -1,0 +1,359 @@
+{
+  "camera": {
+    "identical_for_all_cases_and_rows": true,
+    "name": "perspective_iso",
+    "parameters": {
+      "cut_fraction": 0.52,
+      "focal_point_fraction": [
+        0.5,
+        0.5,
+        0.46
+      ],
+      "parallel_projection": true,
+      "position_direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "view_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "zoom": 1.14
+    }
+  },
+  "case_ids": [
+    "fullgeo_case01",
+    "fullgeo_case02",
+    "fullgeo_case03",
+    "fullgeo_case04",
+    "fullgeo_case05"
+  ],
+  "case_selection": "all five prospectively registered benchmark cases, fixed order; no replacement or visual selection",
+  "categorical_color_map": {
+    "-1": "#FFFFFF",
+    "0": "#7A6652",
+    "1": "#8C4E85",
+    "10": "#C94C4C",
+    "11": "#A33E63",
+    "12": "#7B4FA3",
+    "13": "#5E4B8B",
+    "2": "#3B6FB6",
+    "3": "#5A91C8",
+    "4": "#56B4B8",
+    "5": "#4DA66D",
+    "6": "#86B84A",
+    "7": "#C5C55A",
+    "8": "#E5C55C",
+    "9": "#D95F02"
+  },
+  "figure_id": "fullgeo_3d_benchmark",
+  "generation": {
+    "camera": {
+      "cut_fraction": 0.52,
+      "focal_point_fraction": [
+        0.5,
+        0.5,
+        0.46
+      ],
+      "parallel_projection": true,
+      "position_direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "view_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "zoom": 1.14
+    },
+    "git_head": "cd4b097becaad2f3b8a7cfe91ac3713f2248a1e4",
+    "matplotlib": "3.8.4",
+    "python": "3.10.12",
+    "script": {
+      "path": "project/geodata-3d-conditional/scripts/paper_figures/figure_fullgeo_3d_benchmark.py",
+      "role": "generation script",
+      "sha256": "0b1e8c9afeed949c9a88ecc1dd6b65c145c62c514b15be22b4189bdc9a5cd9c0",
+      "size_bytes": 12968
+    },
+    "style": {
+      "base_font_size_pt": 8.0,
+      "categorical_colormap_policy": "fixed discrete raw-label palette",
+      "double_column_mm": 178.0,
+      "font_family": "STIXGeneral",
+      "label9_color": "#D95F02",
+      "label_colors": {
+        "-1": "#FFFFFF",
+        "0": "#7A6652",
+        "1": "#8C4E85",
+        "10": "#C94C4C",
+        "11": "#A33E63",
+        "12": "#7B4FA3",
+        "13": "#5E4B8B",
+        "2": "#3B6FB6",
+        "3": "#5A91C8",
+        "4": "#56B4B8",
+        "5": "#4DA66D",
+        "6": "#86B84A",
+        "7": "#C5C55A",
+        "8": "#E5C55C",
+        "9": "#D95F02"
+      },
+      "observation_color": "#168A89",
+      "seismic_colormap_policy": "zero-centered perceptually balanced diverging",
+      "single_column_mm": 85.0
+    }
+  },
+  "metric_extraction_keys": [
+    {
+      "json_key": "raw_label_counts.9",
+      "metric": "raw label-9 voxel count",
+      "source_path": "experiments/full_structuralgeo_benchmark/cases/<case_id>/manifest.json",
+      "validation": "recounted directly from each true_model.pt"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/fullgeo_3d_benchmark.pdf",
+      "role": "figure output (pdf)",
+      "sha256": "39d483d7e5715991d8389c15098acb37b0a04fa9b6dd5d887d0aaebed26481c1",
+      "size_bytes": 2681782
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/fullgeo_3d_benchmark.svg",
+      "role": "figure output (svg)",
+      "sha256": "9d08019d94fcfb584958335f20c0fc8921ae1c2e3e239f419fd86a06816216f7",
+      "size_bytes": 3884442
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/fullgeo_3d_benchmark.png",
+      "role": "figure output (png)",
+      "sha256": "8bbbf136e4531ac73101933e59c370f497ffd0f0c610fc551ecc534feb9f5fb3",
+      "size_bytes": 3155062
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/fullgeo_3d_benchmark_presentation.pdf",
+      "role": "figure output (presentation_pdf)",
+      "sha256": "dd2e930ef73c7aeb981375ccef878d3e949ac9be8dae76cf0eda8f9a94ff228f",
+      "size_bytes": 3140305
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/fullgeo_3d_benchmark_presentation.svg",
+      "role": "figure output (presentation_svg)",
+      "sha256": "eed95db0c2875a17013b3ce7887988f980a5277d0e8372b447d9a454bcf3c4b6",
+      "size_bytes": 4575115
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/fullgeo_3d_benchmark_presentation.png",
+      "role": "figure output (presentation_png)",
+      "sha256": "7bdb500a389938e6092934b43e691949b0164910ce0e37064115785e9f724bc1",
+      "size_bytes": 3736181
+    }
+  ],
+  "quality_control": {
+    "fixed_camera": true,
+    "fixed_categorical_palette": true,
+    "label9_counts_recomputed": true,
+    "publication_and_presentation_variants": true,
+    "registered_cases_exactly_once": [
+      "fullgeo_case01",
+      "fullgeo_case02",
+      "fullgeo_case03",
+      "fullgeo_case04",
+      "fullgeo_case05"
+    ],
+    "truth_file_hashes_match_frozen_manifests": true
+  },
+  "sample_ids": [],
+  "schema_version": "paper_3d_benchmark_manifest_v1",
+  "source_files": [
+    {
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/FULL_STRUCTURALGEO_BENCHMARK_BUILD_REPORT.md",
+      "role": "authoritative benchmark construction report",
+      "sha256": "bd12c8e87de3b22ed81eb105d38f8180fa10a6a72cc74140462bc66059026337",
+      "size_bytes": 12874
+    },
+    {
+      "path": "project/geodata-3d-conditional/scripts/paper_figures/style.py",
+      "role": "shared paper visual language and 3-D renderer",
+      "sha256": "736e70c30ff060fffa35b9c1f09912baeaa13e66650375de741ae7c4ce49f9f9",
+      "size_bytes": 29063
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figure_data/fullgeo_3d_benchmark.json",
+      "role": "exact plotted case inventory and display policy",
+      "sha256": "44dc3da5067a1d356ef28d6331e55af6a2ea557995720063d4ddfe186dd8dfe8",
+      "size_bytes": 1803
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/manifest.json",
+      "role": "fullgeo_case01 frozen manifest",
+      "sha256": "7e63cc34f21a401a665bf6577f3031db8da6fce6e893c6a5fa16f79117226ee6",
+      "size_bytes": 40772
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/truth/true_model.pt",
+      "role": "fullgeo_case01 truth tensor",
+      "sha256": "bc32a2f4705f18655bddba56b67ad1ffc55e8a23444b6910573a3b8cbd44f3e9",
+      "size_bytes": 1050174
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/condition/well_xy.json",
+      "role": "fullgeo_case01 preregistered well layout",
+      "sha256": "2fe03349d486a8619d2ec2c4ab1d8d3bae306ca9c78ef484a03a6adbea190318",
+      "size_bytes": 421
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case02/manifest.json",
+      "role": "fullgeo_case02 frozen manifest",
+      "sha256": "826036d465bfcb289cc56baa4f4fb8e536f863cf63bf08e0613e9e7292ba1fca",
+      "size_bytes": 106669
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case02/truth/true_model.pt",
+      "role": "fullgeo_case02 truth tensor",
+      "sha256": "5ded009fb49b1eeb575904c725e424985e95183aacd252777227fc5f591abe3f",
+      "size_bytes": 1050174
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case02/condition/well_xy.json",
+      "role": "fullgeo_case02 preregistered well layout",
+      "sha256": "2fe03349d486a8619d2ec2c4ab1d8d3bae306ca9c78ef484a03a6adbea190318",
+      "size_bytes": 421
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case03/manifest.json",
+      "role": "fullgeo_case03 frozen manifest",
+      "sha256": "f513ed1244c56433c9eab9046550eadf41b6694921ea3b38b4456f798c7de486",
+      "size_bytes": 108317
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case03/truth/true_model.pt",
+      "role": "fullgeo_case03 truth tensor",
+      "sha256": "e79a5c8276fbaa7ae9b46c217f1df9ad041b53fbd5b4b4fedc4d59aa8b351576",
+      "size_bytes": 1050174
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case03/condition/well_xy.json",
+      "role": "fullgeo_case03 preregistered well layout",
+      "sha256": "2fe03349d486a8619d2ec2c4ab1d8d3bae306ca9c78ef484a03a6adbea190318",
+      "size_bytes": 421
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case04/manifest.json",
+      "role": "fullgeo_case04 frozen manifest",
+      "sha256": "8e0f9b273a7b3fa6544a167396285cb67cd1bee3210c7ffb8a6bd45abc5acab2",
+      "size_bytes": 36258
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case04/truth/true_model.pt",
+      "role": "fullgeo_case04 truth tensor",
+      "sha256": "2a281af180ef83c9157a810fc988277aa37f612506d6337662f921ba4e1c9cd9",
+      "size_bytes": 1050174
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case04/condition/well_xy.json",
+      "role": "fullgeo_case04 preregistered well layout",
+      "sha256": "2fe03349d486a8619d2ec2c4ab1d8d3bae306ca9c78ef484a03a6adbea190318",
+      "size_bytes": 421
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case05/manifest.json",
+      "role": "fullgeo_case05 frozen manifest",
+      "sha256": "2a4fa521b35e0c63e2f21092140f54b24b6940667b891428430890dc0247a76d",
+      "size_bytes": 67393
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case05/truth/true_model.pt",
+      "role": "fullgeo_case05 truth tensor",
+      "sha256": "093a97475d88763f398b27ee534bf7e73070f5e2d19111c0d63e010a4cf73530",
+      "size_bytes": 1050174
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case05/condition/well_xy.json",
+      "role": "fullgeo_case05 preregistered well layout",
+      "sha256": "2fe03349d486a8619d2ec2c4ab1d8d3bae306ca9c78ef484a03a6adbea190318",
+      "size_bytes": 421
+    }
+  ],
+  "source_tensor_hashes": [
+    {
+      "case_id": "fullgeo_case01",
+      "dtype": "int16",
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/truth/true_model.pt",
+      "saved_file_sha256": "bc32a2f4705f18655bddba56b67ad1ffc55e8a23444b6910573a3b8cbd44f3e9",
+      "shape": [
+        64,
+        64,
+        64
+      ],
+      "tensor_content_sha256": "d1a18ebeedc0c25a4cbc35132b39630e84b1ec362927a318fb487ceaa3f31df7",
+      "truth_visibility": "retrospective registered benchmark truth display"
+    },
+    {
+      "case_id": "fullgeo_case02",
+      "dtype": "int16",
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case02/truth/true_model.pt",
+      "saved_file_sha256": "5ded009fb49b1eeb575904c725e424985e95183aacd252777227fc5f591abe3f",
+      "shape": [
+        64,
+        64,
+        64
+      ],
+      "tensor_content_sha256": "3adfe816b346069c8ce2e4019cbcade1514c6258b303ae0cb32ff57f8088baf4",
+      "truth_visibility": "retrospective registered benchmark truth display"
+    },
+    {
+      "case_id": "fullgeo_case03",
+      "dtype": "int16",
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case03/truth/true_model.pt",
+      "saved_file_sha256": "e79a5c8276fbaa7ae9b46c217f1df9ad041b53fbd5b4b4fedc4d59aa8b351576",
+      "shape": [
+        64,
+        64,
+        64
+      ],
+      "tensor_content_sha256": "69c2c9c81e1b7acb6832b8af33d933c60246b69bf0ea70b5022864671b64cc02",
+      "truth_visibility": "retrospective registered benchmark truth display"
+    },
+    {
+      "case_id": "fullgeo_case04",
+      "dtype": "int16",
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case04/truth/true_model.pt",
+      "saved_file_sha256": "2a281af180ef83c9157a810fc988277aa37f612506d6337662f921ba4e1c9cd9",
+      "shape": [
+        64,
+        64,
+        64
+      ],
+      "tensor_content_sha256": "dae7584fdd0186b967a6272f963103e47dd0475e7329969b24dff161c457051a",
+      "truth_visibility": "retrospective registered benchmark truth display"
+    },
+    {
+      "case_id": "fullgeo_case05",
+      "dtype": "int16",
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case05/truth/true_model.pt",
+      "saved_file_sha256": "093a97475d88763f398b27ee534bf7e73070f5e2d19111c0d63e010a4cf73530",
+      "shape": [
+        64,
+        64,
+        64
+      ],
+      "tensor_content_sha256": "3c6139f958f8c0797ed6f26de4d6aab25f16a0541f22ffcfa2a2b2fe0280b791",
+      "truth_visibility": "retrospective registered benchmark truth display"
+    }
+  ],
+  "target": {
+    "color": "#D95F02",
+    "meaning": "demonstration target lithology; raw labels 10–13 are not merged",
+    "raw_label": 9
+  },
+  "truth_visibility_status": {
+    "all_models": "retrospective display of prospectively registered synthetic benchmark truths",
+    "selection_firewall": "no downstream metric, Flow output, seismic result, or visual attractiveness used for case selection",
+    "well_layout": "inference-visible, truth-independent, prospectively fixed"
+  }
+}

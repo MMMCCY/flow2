@@ -1,0 +1,50 @@
+{
+  "case_id": "native_seed20260809",
+  "display_scales": {
+    "policy": "frozen pooled 99.5th-percentile limits from figure03_seismic_structured.npz",
+    "residual_shared_symmetric_limit": 0.5605427622795105,
+    "seismic_shared_symmetric_limit": 0.005722909700125456
+  },
+  "metrics": {
+    "stage14": {
+      "n_cases": 5,
+      "overall_paired_median_hidden_label9_iou_delta": -0.031507776294942384,
+      "positive_case_count": 1
+    },
+    "stage7": {
+      "baseline_hard_seismic_rmse": 0.010582241229712963,
+      "baseline_hidden": {
+        "hidden_iou": 0.0,
+        "hidden_precision": 0.0,
+        "hidden_recall": 0.0
+      },
+      "correct_observation_rank_first": 3,
+      "n_native_cases": 3,
+      "native_hidden_iou_range": [
+        0.9141716566866267,
+        0.9874266554903605
+      ],
+      "selected_hard_seismic_rmse": 0.00431425217539072,
+      "selected_hidden": {
+        "hidden_iou": 0.9874266554903605,
+        "hidden_precision": 0.9940928270042194,
+        "hidden_recall": 0.9932546374367622
+      }
+    },
+    "stage9a": {
+      "discrimination_cases": 0,
+      "n_cases": 3,
+      "support_cases": 0,
+      "unique_hard_models": 3072
+    }
+  },
+  "schema": "figure03_joint_inference_data_v1",
+  "selection": {
+    "criterion": "minimum hard observed seismic RMSE only",
+    "truth_metrics_role": "retrospective evaluation only",
+    "truth_used_for_selection": false
+  },
+  "slice_indices": {
+    "seismic_y": 42
+  }
+}

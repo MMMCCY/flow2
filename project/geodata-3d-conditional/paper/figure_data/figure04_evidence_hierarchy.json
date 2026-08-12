@@ -1,0 +1,160 @@
+{
+  "axes": {
+    "geological_controllability": "demonstrated to limited/unknown",
+    "information_proximity_to_target_geology": "high to low",
+    "observation_realism": "low to high"
+  },
+  "conclusions": [
+    "Control is demonstrated.",
+    "Acquisition-domain observability remains limiting.",
+    "Inference parameterization matters."
+  ],
+  "cross_protocol_paired_comparison": false,
+  "facts": {
+    "ideal_property_label9_iou": 0.4807524758898813,
+    "oracle_probability_label9_iou": 0.8098611425842716,
+    "sparse_flow_label9_iou": 0.03144480434529132,
+    "stage12b_diagonal_mean_auprc": 0.04176687121111301,
+    "stage12b_diagonal_row_maximum_count": 1,
+    "stage12b_off_diagonal_mean_auprc": 0.04187063309937007,
+    "stage14_median_hidden_iou_delta": -0.031507776294942384,
+    "stage14_positive_case_count": 1,
+    "stage7_case_count": 3,
+    "stage7_correct_rank_first_count": 3,
+    "stage7_hidden_iou_range": [
+      0.9141716566866267,
+      0.9874266554903605
+    ],
+    "stage9a_discrimination_case_count": 0,
+    "stage9a_support_case_count": 0,
+    "stage9a_unique_hard_models": 3072
+  },
+  "metric_provenance": [
+    {
+      "json_key": "metrics.target_iou.baseline.mean; metrics.target_iou.guided.mean",
+      "metric": "Sparse Flow and oracle probability label-9 IoU",
+      "source_path": "experiments/stage1_probability/reports/phase1b_v4_12pair/summary.json"
+    },
+    {
+      "json_key": "metrics.target_iou.guided.mean",
+      "metric": "Ideal property label-9 IoU",
+      "source_path": "experiments/stage2_property/reports/phase2a_v1_12pair/summary.json"
+    },
+    {
+      "metric": "Direct seismic qualitative boundary",
+      "reconstruction_rule": "formal decision: hard seismic residual decreases while complete hard-geology gate fails",
+      "source_path": "docs/PHASE4C_REPORT.md"
+    },
+    {
+      "json_key": "native_replicas[*].arms[optimized_by=correct].hidden_target_iou; correct_optimized_is_best_against_correct",
+      "metric": "Structured hidden IoU and correct rank-first",
+      "source_path": "experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json"
+    },
+    {
+      "json_key": "cases[*].ensemble.unique_hard_model_count; cases[*].SUPPORT_PASS; cases[*].DISCRIMINATION_PASS",
+      "metric": "Frozen Flow support/discrimination",
+      "source_path": "experiments/stage9_flow_prior_posterior/reports/stage9a_prior_support_v1/summary.json"
+    },
+    {
+      "json_key": "diagonal_mean_auprc; off_diagonal_mean_auprc; diagonal_row_maximum_count",
+      "metric": "FullGeo bridge specificity",
+      "source_path": "experiments/stage12b_fullgeo_probability_bridge/evaluation/stage12b_a/summary.json"
+    },
+    {
+      "json_key": "overall_paired_median_hidden_label9_iou_delta; positive_case_count",
+      "metric": "Probability-to-Flow paired outcome",
+      "source_path": "experiments/stage14_gansim_style_geo_guidance/reports/pilot_v1/summary.json"
+    }
+  ],
+  "nodes": [
+    {
+      "color": "#73828A",
+      "face": "#F1F3F3",
+      "metric": "label-9 IoU\n0.031",
+      "protocol": "Phase1 alpha-zero baseline",
+      "role": "REFERENCE",
+      "role_color": "#73828A",
+      "status": "reference",
+      "status_label": "under-constrained",
+      "title": "Sparse-conditioned\nFlow"
+    },
+    {
+      "color": "#2F7D5B",
+      "face": "#EEF6F1",
+      "metric": "label-9 IoU\n0.810",
+      "protocol": "Phase1 truth-derived probability",
+      "role": "ORACLE",
+      "role_color": "#B47916",
+      "status": "pass",
+      "status_label": "control demonstrated",
+      "title": "Oracle\nprobability"
+    },
+    {
+      "color": "#2F7D5B",
+      "face": "#EEF6F1",
+      "metric": "label-9 IoU\n0.481",
+      "protocol": "Phase2a ideal/noiseless properties",
+      "role": "UPPER BOUND",
+      "role_color": "#B47916",
+      "status": "pass",
+      "status_label": "control demonstrated",
+      "title": "Ideal 3-D\nproperties"
+    },
+    {
+      "color": "#A54B42",
+      "face": "#F8EEEB",
+      "metric": "physical RMSE $\\downarrow$\nhard geology weak",
+      "protocol": "Phase4c single strict pair",
+      "role": "ACQUISITION\nDOMAIN",
+      "role_color": "#2D6E9F",
+      "status": "limit",
+      "status_label": "observability limit",
+      "title": "Direct\nseismic guidance"
+    },
+    {
+      "color": "#2F7D5B",
+      "face": "#E8F4ED",
+      "metric": "hidden IoU\n0.914–0.987\nrank-first 3/3",
+      "protocol": "Stage7 structured hard inference",
+      "role": "BOUNDED\nSPACE",
+      "role_color": "#2D6E9F",
+      "status": "pass",
+      "status_label": "structured exception",
+      "title": "Structured hard\nseismic"
+    },
+    {
+      "color": "#A54B42",
+      "face": "#F8EEEB",
+      "metric": "3072 unique\nsupport 0/3\ndiscrimination 0/3",
+      "protocol": "Stage9A frozen Flow prior",
+      "role": "TRUTH-BLIND",
+      "role_color": "#2D6E9F",
+      "status": "limit",
+      "status_label": "prior-support limit",
+      "title": "Unrestricted\nfrozen Flow"
+    },
+    {
+      "color": "#A54B42",
+      "face": "#F8EEEB",
+      "metric": "diag AP 0.0418\noff-diag 0.0419\nrow max 1/5",
+      "protocol": "Stage12B bridge-only gate",
+      "role": "BRIDGE ONLY",
+      "role_color": "#2D6E9F",
+      "status": "limit",
+      "status_label": "case specificity absent",
+      "title": "FullGeo\nprobability bridge"
+    },
+    {
+      "color": "#A54B42",
+      "face": "#F8EEEB",
+      "metric": "median $\\Delta$IoU\n-0.0315\npositive 1/5",
+      "protocol": "Stage14 paired experiment",
+      "role": "PAIRED\nSYNTHETIC",
+      "role_color": "#2D6E9F",
+      "status": "limit",
+      "status_label": "current bridge limited",
+      "title": "Probability\n$\\rightarrow$ Flow"
+    }
+  ],
+  "schema": "figure04_evidence_hierarchy_data_v1"
+}

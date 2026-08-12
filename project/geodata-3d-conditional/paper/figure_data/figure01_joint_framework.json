@@ -1,0 +1,41 @@
+{
+  "boundaries": {
+    "evaluation": "hard categorical geology + geophysical consistency",
+    "inference": "frozen conditional Flow; no checkpoint update",
+    "training": "StructuralGeo + surface/borehole conditioning"
+  },
+  "information_hierarchy": [
+    {
+      "evidence": "3-D probability evidence",
+      "level": "I",
+      "role": "truth-derived oracle upper bound"
+    },
+    {
+      "evidence": "3-D property evidence",
+      "level": "II",
+      "role": "ideal/noiseless upper bound"
+    },
+    {
+      "evidence": "acquisition-domain seismic",
+      "level": "III",
+      "role": "truth-blind observation"
+    }
+  ],
+  "main_pipeline": [
+    "StructuralGeo\nhistories",
+    "3-D categorical\ngeology",
+    "surface + 9\nboreholes",
+    "frozen conditional\nFlow",
+    "continuous embedding\n+ ODE",
+    "hard categorical\ndecode",
+    "geological\nensemble",
+    "hard geology\n+ physical\nconsistency"
+  ],
+  "reciprocal_concept": {
+    "bayesian_posterior_claim": false,
+    "geological_prior": "constrains admissible models",
+    "geophysics": "provides spatially broad evidence beyond sparse geology"
+  },
+  "research_target": "condition-exact, observation-consistent, geologically plausible ensemble",
+  "schema": "figure01_joint_framework_data_v1"
+}

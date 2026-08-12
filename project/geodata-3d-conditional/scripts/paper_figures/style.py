@@ -82,6 +82,26 @@ CAMERA = {
     "cut_fraction": 0.52,
 }
 
+CAMERA_PRESETS: dict[str, dict[str, object]] = {
+    "perspective_iso": dict(CAMERA),
+    "perspective_oblique": {
+        "position_direction": [1.48, -1.92, 1.08],
+        "focal_point_fraction": [0.50, 0.50, 0.45],
+        "view_up": [0.0, 0.0, 1.0],
+        "parallel_projection": True,
+        "zoom": 1.12,
+        "cut_fraction": 0.52,
+    },
+    "top_oblique": {
+        "position_direction": [1.08, -0.72, 2.42],
+        "focal_point_fraction": [0.50, 0.50, 0.42],
+        "view_up": [0.0, 0.0, 1.0],
+        "parallel_projection": True,
+        "zoom": 1.08,
+        "cut_fraction": 0.52,
+    },
+}
+
 
 def configure_matplotlib() -> None:
     """Apply the single paper style and stable vector-output settings."""
@@ -413,16 +433,21 @@ def cutaway_mask(shape: Sequence[int], fraction: float | None = None) -> np.ndar
     return ~((x >= shape[0] * fraction) & (y < shape[1] * fraction))
 
 
-def _set_camera(plotter, shape: Sequence[int]) -> None:
+def _set_camera(
+    plotter,
+    shape: Sequence[int],
+    camera: Mapping[str, object] | None = None,
+) -> None:
+    camera = CAMERA if camera is None else camera
     size = float(max(shape))
-    focal = np.asarray(shape, dtype=float) * np.asarray(CAMERA["focal_point_fraction"])
-    position = focal + np.asarray(CAMERA["position_direction"], dtype=float) * size
-    plotter.camera_position = [tuple(position), tuple(focal), tuple(CAMERA["view_up"])]
-    plotter.camera.parallel_projection = bool(CAMERA["parallel_projection"])
+    focal = np.asarray(shape, dtype=float) * np.asarray(camera["focal_point_fraction"])
+    position = focal + np.asarray(camera["position_direction"], dtype=float) * size
+    plotter.camera_position = [tuple(position), tuple(focal), tuple(camera["view_up"])]
+    plotter.camera.parallel_projection = bool(camera["parallel_projection"])
     # VTK's unrendered default parallel scale is 1.0.  Set it explicitly so an
     # off-screen first frame contains the complete 64^3 domain on every host.
     plotter.camera.parallel_scale = 0.70 * size
-    plotter.camera.zoom(float(CAMERA["zoom"]))
+    plotter.camera.zoom(float(camera["zoom"]))
 
 
 def _new_plotter(window_size: tuple[int, int] = (1000, 860)):
@@ -453,6 +478,232 @@ def _add_wells(plotter, well_xy: Sequence[Sequence[int]], *, top_z: float = 56.0
     for x, y in well_xy:
         line = pv.Line((float(x) + 0.5, float(y) + 0.5, 0.0), (float(x) + 0.5, float(y) + 0.5, top_z))
         _add_surface(plotter, line.tube(radius=0.26), OBSERVATION_COLOR, 0.96)
+
+
+def _add_bounding_box(plotter, shape: Sequence[int]) -> None:
+    pv = _import_pyvista()
+    box = pv.Box(bounds=(0.0, float(shape[0]), 0.0, float(shape[1]), 0.0, float(shape[2])))
+    plotter.add_mesh(
+        box,
+        color="#555B60",
+        opacity=0.42,
+        style="wireframe",
+        line_width=0.7,
+        show_edges=False,
+    )
+
+
+def render_categorical_volume_3d(
+    volume: np.ndarray,
+    *,
+    borehole_xy: Sequence[Sequence[int]] = (),
+    condition_mask: np.ndarray | None = None,
+    camera: Mapping[str, object] | None = None,
+    context_opacity: float = 0.34,
+    target_opacity: float = 0.98,
+    target_label: int = 9,
+    cutaway: bool = True,
+    bounding_box: bool = True,
+    window_size: tuple[int, int] = (1000, 860),
+) -> np.ndarray:
+    """Render categorical geology with translucent context and an opaque target."""
+    volume = np.asarray(volume)
+    validate_array("categorical volume", volume, ndim=3)
+    camera = CAMERA if camera is None else camera
+    plotter = _new_plotter(window_size)
+    keep = (
+        cutaway_mask(volume.shape, float(camera["cut_fraction"]))
+        if cutaway
+        else np.ones(volume.shape, dtype=bool)
+    )
+    labels = sorted(int(value) for value in np.unique(volume) if int(value) != -1)
+    labels = [value for value in labels if value != target_label] + (
+        [target_label] if target_label in labels else []
+    )
+    for label in labels:
+        opacity = target_opacity if label == target_label else context_opacity
+        _add_surface(
+            plotter,
+            binary_surface((volume == label) & keep),
+            LABEL_COLORS.get(label, "#777777"),
+            opacity,
+        )
+    if condition_mask is not None:
+        condition_mask = np.asarray(condition_mask, dtype=bool)
+        validate_same_shape({"categorical volume": volume, "condition mask": condition_mask})
+        visible_conditions = condition_mask.copy()
+        for x, y in borehole_xy:
+            visible_conditions[int(x), int(y), :] = False
+        for label in sorted(int(value) for value in np.unique(volume[visible_conditions]) if int(value) != -1):
+            _add_surface(
+                plotter,
+                binary_surface(visible_conditions & (volume == label)),
+                LABEL_COLORS.get(label, "#777777"),
+                0.54,
+            )
+    if borehole_xy:
+        _add_wells(plotter, borehole_xy, top_z=float(volume.shape[2]))
+    if bounding_box:
+        _add_bounding_box(plotter, volume.shape)
+    _set_camera(plotter, volume.shape, camera)
+    image = plotter.screenshot(return_img=True)
+    plotter.close()
+    return np.asarray(image)[..., :3]
+
+
+def render_label_comparison_3d(
+    truth_mask: np.ndarray,
+    selected_mask: np.ndarray,
+    *,
+    camera: Mapping[str, object] | None = None,
+    window_size: tuple[int, int] = (1000, 860),
+) -> np.ndarray:
+    """Overlay a selected target body with the retrospective truth outline."""
+    truth_mask = np.asarray(truth_mask, dtype=bool)
+    selected_mask = np.asarray(selected_mask, dtype=bool)
+    validate_same_shape({"truth target": truth_mask, "selected target": selected_mask})
+    camera = CAMERA if camera is None else camera
+    plotter = _new_plotter(window_size)
+    truth_surface = binary_surface(truth_mask)
+    selected_surface = binary_surface(selected_mask)
+    _add_surface(plotter, selected_surface, LABEL9_COLOR, 0.88)
+    if truth_surface is not None:
+        plotter.add_mesh(
+            truth_surface,
+            color=TRUTH_OUTLINE_COLOR,
+            opacity=0.72,
+            style="wireframe",
+            line_width=1.1,
+            show_edges=False,
+        )
+    _add_bounding_box(plotter, truth_mask.shape)
+    _set_camera(plotter, truth_mask.shape, camera)
+    image = plotter.screenshot(return_img=True)
+    plotter.close()
+    return np.asarray(image)[..., :3]
+
+
+def render_target_only_3d(
+    target_mask: np.ndarray,
+    *,
+    well_xy: Sequence[Sequence[int]] = (),
+    camera: Mapping[str, object] | None = None,
+    bounding_box: bool = True,
+    window_size: tuple[int, int] = (1000, 860),
+) -> np.ndarray:
+    """Render one categorical target as an opaque surface in a common domain."""
+    target_mask = np.asarray(target_mask, dtype=bool)
+    validate_array("target mask", target_mask, ndim=3)
+    camera = CAMERA if camera is None else camera
+    plotter = _new_plotter(window_size)
+    _add_surface(plotter, binary_surface(target_mask), LABEL9_COLOR, 0.98)
+    if well_xy:
+        _add_wells(plotter, well_xy, top_z=float(target_mask.shape[2]))
+    if bounding_box:
+        _add_bounding_box(plotter, target_mask.shape)
+    _set_camera(plotter, target_mask.shape, camera)
+    image = plotter.screenshot(return_img=True)
+    plotter.close()
+    return np.asarray(image)[..., :3]
+
+
+def render_sparse_constraints_3d(
+    truth: np.ndarray,
+    condition_values: np.ndarray,
+    surface_mask: np.ndarray,
+    hidden_target: np.ndarray,
+    *,
+    well_xy: Sequence[Sequence[int]],
+    camera: Mapping[str, object] | None = None,
+    target_label: int = 9,
+    window_size: tuple[int, int] = (1100, 900),
+) -> np.ndarray:
+    """Show full context, categorical surface/well observations, and hidden target."""
+    truth = np.asarray(truth)
+    condition_values = np.asarray(condition_values)
+    surface_mask = np.asarray(surface_mask, dtype=bool)
+    hidden_target = np.asarray(hidden_target, dtype=bool)
+    validate_same_shape(
+        {
+            "truth": truth,
+            "condition values": condition_values,
+            "surface mask": surface_mask,
+            "hidden target": hidden_target,
+        }
+    )
+    camera = CAMERA if camera is None else camera
+    plotter = _new_plotter(window_size)
+    keep = cutaway_mask(truth.shape, float(camera["cut_fraction"]))
+    for label in sorted(int(value) for value in np.unique(truth) if int(value) not in (-1, target_label)):
+        _add_surface(
+            plotter,
+            binary_surface((truth == label) & keep),
+            LABEL_COLORS.get(label, "#777777"),
+            0.075,
+        )
+    _add_surface(plotter, binary_surface(hidden_target), LABEL9_COLOR, 0.58)
+    observed_target = surface_mask & (condition_values == target_label)
+    _add_surface(plotter, binary_surface(observed_target), OBSERVATION_COLOR, 1.0)
+    for label in sorted(int(value) for value in np.unique(condition_values[surface_mask]) if int(value) != -1):
+        _add_surface(
+            plotter,
+            binary_surface(surface_mask & (condition_values == label)),
+            LABEL_COLORS.get(label, "#777777"),
+            0.94,
+        )
+    _add_wells(plotter, well_xy, top_z=float(truth.shape[2]))
+    _add_bounding_box(plotter, truth.shape)
+    _set_camera(plotter, truth.shape, camera)
+    image = plotter.screenshot(return_img=True)
+    plotter.close()
+    return np.asarray(image)[..., :3]
+
+
+def render_label_frequency_3d(
+    frequency: np.ndarray,
+    *,
+    camera: Mapping[str, object] | None = None,
+    minimum_frequency: float = 0.25,
+    window_size: tuple[int, int] = (1000, 860),
+) -> np.ndarray:
+    """Render the surface of nonzero ensemble label-9 occurrence frequency."""
+    frequency = np.asarray(frequency, dtype=np.float32)
+    validate_array("label frequency", frequency, ndim=3)
+    if np.min(frequency) < 0 or np.max(frequency) > 1:
+        raise ValueError("label frequency must be within [0, 1]")
+    camera = CAMERA if camera is None else camera
+    plotter = _new_plotter(window_size)
+    grid = _image_grid(frequency, "frequency")
+    selected = grid.threshold(
+        float(minimum_frequency) - 1e-8,
+        scalars="frequency",
+        preference="cell",
+    )
+    surface = selected.extract_surface(algorithm="dataset_surface")
+    plotter.add_mesh(
+        surface,
+        scalars="frequency",
+        cmap="YlOrRd",
+        clim=(float(minimum_frequency), 1.0),
+        opacity=0.92,
+        show_scalar_bar=True,
+        scalar_bar_args={
+            "title": "P(label 9)",
+            "title_font_size": 16,
+            "label_font_size": 13,
+            "color": "#333333",
+            "vertical": True,
+            "position_x": 0.84,
+            "position_y": 0.17,
+            "height": 0.58,
+            "width": 0.08,
+        },
+    )
+    _add_bounding_box(plotter, frequency.shape)
+    _set_camera(plotter, frequency.shape, camera)
+    image = plotter.screenshot(return_img=True)
+    plotter.close()
+    return np.asarray(image)[..., :3]
 
 
 def render_categorical_panel(

@@ -1,0 +1,163 @@
+{
+  "camera": null,
+  "case_ids": [],
+  "color_map": {
+    "-1": "#FFFFFF",
+    "0": "#7A6652",
+    "1": "#8C4E85",
+    "10": "#C94C4C",
+    "11": "#A33E63",
+    "12": "#7B4FA3",
+    "13": "#5E4B8B",
+    "2": "#3B6FB6",
+    "3": "#5A91C8",
+    "4": "#56B4B8",
+    "5": "#4DA66D",
+    "6": "#86B84A",
+    "7": "#C5C55A",
+    "8": "#E5C55C",
+    "9": "#D95F02"
+  },
+  "figure_id": "figure01_joint_framework",
+  "generation": {
+    "camera": {
+      "cut_fraction": 0.52,
+      "focal_point_fraction": [
+        0.5,
+        0.5,
+        0.46
+      ],
+      "parallel_projection": true,
+      "position_direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "view_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "zoom": 1.14
+    },
+    "git_head": "cd4b097becaad2f3b8a7cfe91ac3713f2248a1e4",
+    "matplotlib": "3.8.4",
+    "python": "3.10.12",
+    "script": {
+      "path": "project/geodata-3d-conditional/scripts/paper_figures/figure01_joint_framework.py",
+      "role": "generation script",
+      "sha256": "279f8d844441418a04e73fbafa3bc501cda74506c7e079b3e23effd7c77a9197",
+      "size_bytes": 11018
+    },
+    "style": {
+      "base_font_size_pt": 8.0,
+      "categorical_colormap_policy": "fixed discrete raw-label palette",
+      "double_column_mm": 178.0,
+      "font_family": "STIXGeneral",
+      "label9_color": "#D95F02",
+      "label_colors": {
+        "-1": "#FFFFFF",
+        "0": "#7A6652",
+        "1": "#8C4E85",
+        "10": "#C94C4C",
+        "11": "#A33E63",
+        "12": "#7B4FA3",
+        "13": "#5E4B8B",
+        "2": "#3B6FB6",
+        "3": "#5A91C8",
+        "4": "#56B4B8",
+        "5": "#4DA66D",
+        "6": "#86B84A",
+        "7": "#C5C55A",
+        "8": "#E5C55C",
+        "9": "#D95F02"
+      },
+      "observation_color": "#168A89",
+      "seismic_colormap_policy": "zero-centered perceptually balanced diverging",
+      "single_column_mm": 85.0
+    }
+  },
+  "label_meanings": {
+    "label9": "demonstration target lithology; not a universal dike semantic"
+  },
+  "metric_extraction_keys": [],
+  "model_hashes": [],
+  "oracle_vs_inference_visible": [
+    {
+      "evidence": "3-D probability evidence",
+      "level": "I",
+      "role": "truth-derived oracle upper bound"
+    },
+    {
+      "evidence": "3-D property evidence",
+      "level": "II",
+      "role": "ideal/noiseless upper bound"
+    },
+    {
+      "evidence": "acquisition-domain seismic",
+      "level": "III",
+      "role": "truth-blind observation"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure01_joint_framework.pdf",
+      "role": "figure output (pdf)",
+      "sha256": "ba603ab272197f52869363b32fb996c5910f7dd47c8723550de7c91b238966f9",
+      "size_bytes": 23654
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure01_joint_framework.svg",
+      "role": "figure output (svg)",
+      "sha256": "5ea53b084a1302f8bc84fb8bbbece9f5912c9fc626a81c1715e4f4845d5eb34c",
+      "size_bytes": 27026
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure01_joint_framework.png",
+      "role": "figure output (png)",
+      "sha256": "cee5d110365345572f779bbaf32f607337939c6b40739c07eb028cfcc0dc70ad",
+      "size_bytes": 797549
+    }
+  ],
+  "quality_control": {
+    "distinct_evidence_protocols_explicit": true,
+    "vector_native": true,
+    "white_background": true
+  },
+  "schema_version": "paper_figure_manifest_v2",
+  "scientific_boundaries": {
+    "checkpoint_update": false,
+    "final_bayesian_posterior_claim": false,
+    "frozen_flow_explicit": true,
+    "hard_decode_explicit": true,
+    "research_target_marked_as_goal": true
+  },
+  "source_experiment": "method and research-goal schematic; no cross-protocol metric comparison",
+  "source_files": [
+    {
+      "path": "project/geodata-3d-conditional/docs/RESEARCH_GOAL.md",
+      "role": "authoritative research goal",
+      "sha256": "ae4f6396c404d29194039413dab143e6667a1367d00285f85f4657166fc8f279",
+      "size_bytes": 13497
+    },
+    {
+      "path": "project/geodata-3d-conditional/docs/EXPERIMENT_PROTOCOL.md",
+      "role": "strict inference/evaluation protocol",
+      "sha256": "baf6dc1238c87e9817aa5130600852d30e20fd1938e28177f36070c239a6967c",
+      "size_bytes": 6099
+    },
+    {
+      "path": "project/geodata-3d-conditional/scripts/paper_figures/style.py",
+      "role": "shared paper visual language",
+      "sha256": "736e70c30ff060fffa35b9c1f09912baeaa13e66650375de741ae7c4ce49f9f9",
+      "size_bytes": 29063
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figure_data/figure01_joint_framework.json",
+      "role": "exact schematic content",
+      "sha256": "e169b48cd0e1214fc926e9cc7534a6347e32b349dc62e4f88641730fdf6684da",
+      "size_bytes": 1271
+    }
+  ],
+  "truth_visibility": "no truth tensor displayed"
+}

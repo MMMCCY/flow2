@@ -14,14 +14,16 @@ PROJECT_DIR = Path(__file__).resolve().parents[2]
 if str(PROJECT_DIR) not in sys.path:
     sys.path.insert(0, str(PROJECT_DIR))
 
-from scripts.paper_figures import figure01_framework
+from scripts.paper_figures import figure01_joint_framework
 from scripts.paper_figures import figure02_controllability
-from scripts.paper_figures import figure03_seismic_structured
-from scripts.paper_figures import figure04_information_hierarchy
+from scripts.paper_figures import figure03_joint_inference
+from scripts.paper_figures import figure04_evidence_hierarchy
+from scripts.paper_figures import figure_fullgeo_3d_benchmark
 from scripts.paper_figures.style import (
     FIGURE_DATA_DIR,
     FIGURES_DIR,
     MANIFESTS_DIR,
+    REPOSITORY_ROOT,
     ensure_output_dirs,
     git_head,
     read_json,
@@ -33,18 +35,21 @@ from scripts.paper_figures.style import (
 
 SCRIPT_PATH = Path(__file__).resolve()
 GENERATORS = (
-    ("figure01_framework", figure01_framework.generate),
+    ("figure01_joint_framework", figure01_joint_framework.generate),
     ("figure02_controllability", figure02_controllability.generate),
-    ("figure03_seismic_structured", figure03_seismic_structured.generate),
-    ("figure04_information_hierarchy", figure04_information_hierarchy.generate),
+    ("figure03_joint_inference", figure03_joint_inference.generate),
+    ("figure04_evidence_hierarchy", figure04_evidence_hierarchy.generate),
+    ("fullgeo_3d_benchmark", figure_fullgeo_3d_benchmark.generate),
 )
 
 
 def _all_deliverable_paths() -> list[Path]:
     paths: list[Path] = []
     for figure_id, _ in GENERATORS:
-        paths.extend(FIGURES_DIR / f"{figure_id}.{suffix}" for suffix in ("pdf", "svg", "png"))
-        paths.append(MANIFESTS_DIR / f"{figure_id}.json")
+        manifest_path = MANIFESTS_DIR / f"{figure_id}.json"
+        paths.append(manifest_path)
+        manifest = read_json(manifest_path)
+        paths.extend(REPOSITORY_ROOT / str(record["path"]) for record in manifest["outputs"])
         data_matches = sorted(FIGURE_DATA_DIR.glob(f"{figure_id}.*"))
         if len(data_matches) != 1:
             raise ValueError(f"expected exactly one figure-data artifact for {figure_id}: {data_matches}")
@@ -73,8 +78,22 @@ def _validate_output_set() -> dict[str, object]:
             raise ValueError(f"manifest figure id mismatch: {figure_id}")
         if manifest.get("generation", {}).get("git_head") != git_head():
             raise ValueError(f"manifest git HEAD mismatch: {figure_id}")
-        if len(manifest.get("outputs", [])) != 3:
+        if len(manifest.get("outputs", [])) < 3:
             raise ValueError(f"manifest output inventory is incomplete: {figure_id}")
+        manifest_output_checks = []
+        for record in manifest["outputs"]:
+            output_path = REPOSITORY_ROOT / str(record["path"])
+            if not output_path.is_file() or output_path.stat().st_size == 0:
+                raise FileNotFoundError(f"missing/empty manifest output: {output_path}")
+            if sha256(output_path) != record["sha256"]:
+                raise ValueError(f"manifest output hash mismatch: {output_path}")
+            if output_path.suffix == ".png":
+                with Image.open(output_path) as image:
+                    dpi = image.info.get("dpi")
+                    if dpi is None or any(abs(float(value) - 600.0) > 1.0 for value in dpi):
+                        raise ValueError(f"manifest PNG is not 600 dpi: {output_path} ({dpi})")
+                    manifest_output_checks.append({"path": record["path"], "pixel_size": list(image.size)})
+        checks[figure_id]["manifest_outputs"] = manifest_output_checks
     return checks
 
 
@@ -163,4 +182,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
