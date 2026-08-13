@@ -1,0 +1,32 @@
+{
+  "schema": "stage15_binary_flow_pcn_config_v1",
+  "id": "binary_flow_pcn_pilot_v1",
+  "status": "frozen_before_cuda_execution",
+  "sampler": "pcn_full_initial_noise_hard_seismic_v1",
+  "parameterization": "frozen_conditional_flow_initial_gaussian_noise_only",
+  "model_weights": "ema",
+  "n_euler_steps": 32,
+  "pcn_beta": 0.1,
+  "likelihood_weight": 1.0,
+  "likelihood": "binary_label9_hard_seismic_likelihood",
+  "n_chains": 4,
+  "proposals_per_chain": 32,
+  "burn_in": 8,
+  "thinning": 1,
+  "initial_seeds": [151520, 151521, 151522, 151523],
+  "proposal_seeds": [151620, 151621, 151622, 151623],
+  "positive_threshold": 0.8,
+  "negative_threshold": 0.2,
+  "device": "cuda",
+  "dtype": "float32",
+  "checkpoint": {
+    "path": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+    "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c"
+  },
+  "condition_policy": "project_clean_embedding_before_first_and_after_every_euler_step_v1",
+  "state_accounting": "post_burnin_complete_current_chain_states_including_rejection_duplicates_v1",
+  "occupancy_interpretation": "ensemble_occupancy_frequency_not_calibrated_bayesian_posterior_probability",
+  "parameter_sweep": false,
+  "training": false,
+  "truth_used_by_runner": false
+}

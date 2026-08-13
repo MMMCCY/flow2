@@ -1,0 +1,39 @@
+{
+  "created_at_utc": "2026-08-12T21:55:08.746779+00:00",
+  "flow_guidance_performed": false,
+  "git_branch": "stage15-binary-seismic-consensus",
+  "git_head": "123d4dc3a1a33b8f03ff5b98894747b921a98fcd",
+  "input_file_sha256_before_and_after": {
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/direct_attribute/calibration_n128_v1/attribute_bin_edges.pt": "e9ee5579ea16fb5417a92db0237d4064d78aa19f06c82870390f2e70e217fe78",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/direct_attribute/calibration_n128_v1/attribute_probability_lookup.pt": "90c36ea31c92f12b85bfed24c7bade21c8e73bb7562c932bd6a8998c59c6e777",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/direct_attribute/calibration_n128_v1/calibration_manifest.json": "281bc1970b90387d945b79a63ff3244b763d14a4ee186ff8a7b55331d849fb30",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/direct_attribute/cond_generation_0_v1/manifest.json": "ca96509d7012baf0045499280efffec6080004fc35b98e3563bc2b2f52e8e0bc",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/direct_attribute/cond_generation_0_v1/seismic_attribute_volume.pt": "50277645642801e27d569607cd2bfc3199912cca58137ab144b557d26d74104e",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/direct_attribute/cond_generation_0_v1/seismic_probability_volume.pt": "b83265e91b15d7c6c4b6f3a1f51af3dd67859cc6e948a17602bdb538274b6fda",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/manifest.json": "02c7b80741edaa89677a50b3cda086731ce9fc87f1ce34011c6d5e919ff02aad",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/subsurface_mask.pt": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/reports/b2_truth_evaluation_v1/summary.json": "85d4a195212cffd1bc1061f895846b37e305c2ab673b01a5567e80dd58f82265",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3"
+  },
+  "inputs_unchanged": true,
+  "report": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/reports/direct_attribute_truth_evaluation_v1/REPORT.md",
+    "sha256": "0e41760fef4e18b9eb23d7438aacd479bb71c1c81ef2049365fb9dcf72857578",
+    "size_bytes": 1697
+  },
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage15/evaluate_direct_seismic_attribute_truth.py",
+    "sha256": "584456985063854b2964d05023c2f9c583b2c40a78d7d46675f305ce653ffc46",
+    "size_bytes": 14423
+  },
+  "schema": "stage15_c_direct_attribute_truth_evaluation_run_v1",
+  "summary": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/reports/direct_attribute_truth_evaluation_v1/summary.json",
+    "sha256": "43ac1ebec1d7c28f5b481f1a0ca2d4a3d5d42c319d30af01d40a0d7d042cede8",
+    "size_bytes": 5809
+  },
+  "threshold_sweep_performed": false,
+  "truth_loaded_by_evaluator": true,
+  "truth_loaded_by_probability_runner": false
+}

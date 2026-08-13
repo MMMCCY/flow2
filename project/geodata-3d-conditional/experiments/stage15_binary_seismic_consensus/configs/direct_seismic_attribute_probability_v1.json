@@ -1,0 +1,65 @@
+{
+  "schema": "stage15_direct_seismic_attribute_probability_v1",
+  "status": "frozen_before_calibration",
+  "calibration_case_count": 128,
+  "calibration_seeds": [
+    15150000, 15150001, 15150002, 15150003, 15150004, 15150005, 15150006, 15150007,
+    15150008, 15150009, 15150010, 15150011, 15150012, 15150013, 15150014, 15150015,
+    15150016, 15150017, 15150018, 15150019, 15150020, 15150021, 15150022, 15150023,
+    15150024, 15150025, 15150026, 15150027, 15150028, 15150029, 15150030, 15150031,
+    15150032, 15150033, 15150034, 15150035, 15150036, 15150037, 15150038, 15150039,
+    15150040, 15150041, 15150042, 15150043, 15150044, 15150045, 15150046, 15150047,
+    15150048, 15150049, 15150050, 15150051, 15150052, 15150053, 15150054, 15150055,
+    15150056, 15150057, 15150058, 15150059, 15150060, 15150061, 15150062, 15150063,
+    15150064, 15150065, 15150066, 15150067, 15150068, 15150069, 15150070, 15150071,
+    15150072, 15150073, 15150074, 15150075, 15150076, 15150077, 15150078, 15150079,
+    15150080, 15150081, 15150082, 15150083, 15150084, 15150085, 15150086, 15150087,
+    15150088, 15150089, 15150090, 15150091, 15150092, 15150093, 15150094, 15150095,
+    15150096, 15150097, 15150098, 15150099, 15150100, 15150101, 15150102, 15150103,
+    15150104, 15150105, 15150106, 15150107, 15150108, 15150109, 15150110, 15150111,
+    15150112, 15150113, 15150114, 15150115, 15150116, 15150117, 15150118, 15150119,
+    15150120, 15150121, 15150122, 15150123, 15150124, 15150125, 15150126, 15150127
+  ],
+  "calibration_generator": "StructuralGeo MarkovGeostoryGenerator full raw-label recipe",
+  "calibration_subsurface_policy": "topmost_non_air_column_fill_below_v1",
+  "grid_shape": [64, 64, 64],
+  "target_label": 9,
+  "cond_generation_0_role": "held_out_only_excluded_from_calibration",
+  "held_out_inputs": {
+    "observed_seismic_tensor_sha256": "f0f86c290373d06b38ea0c3bb5cb579622448e01144d71da295d745bdfaf50e2",
+    "subsurface_mask_tensor_sha256": "07f2e4fd629e700a1b6e03fba183d411f17a5c36358177c0857a1ff0188bd47b"
+  },
+  "attribute": {
+    "name": "centered_local_seismic_energy_v1",
+    "formula": "mean(seismic(tau)^2) in a centered fixed window",
+    "window_duration_ms": 128.0,
+    "window_num_samples": 17,
+    "edge_policy": "zero_padding_fixed_denominator",
+    "lateral_filtering": false
+  },
+  "time_to_depth": {
+    "policy": "local_surface_voxel_center_constant_background_velocity_v1",
+    "background_velocity_m_s": 2500.0,
+    "vertical_cell_size_m": 50.0,
+    "truth_velocity_used": false,
+    "binary_truth_used": false,
+    "interpolation": "linear_time_sample"
+  },
+  "calibration": {
+    "binning": "pooled_subsurface_attribute_quantiles",
+    "quantile_bin_count": 64,
+    "quantile_method": "linear",
+    "lookup": "laplace_smoothed_empirical_occurrence",
+    "laplace_numerator": 1,
+    "laplace_denominator": 2,
+    "class_balancing": false
+  },
+  "diagnostic_thresholds": {
+    "positive": 0.8,
+    "negative": 0.2
+  },
+  "parameter_sweep": false,
+  "neural_network": false,
+  "geological_inversion": false,
+  "flow_guidance": false
+}

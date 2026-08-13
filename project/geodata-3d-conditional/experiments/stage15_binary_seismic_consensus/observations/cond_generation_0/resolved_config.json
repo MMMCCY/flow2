@@ -1,0 +1,80 @@
+{
+  "binary_acoustic_config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_acoustic_upper_bound_v1.json",
+    "sha256": "5272deb894d211fb67339e06840ac1212e156a200c20423f9f36d88949945248",
+    "size_bytes": 634
+  },
+  "binary_property_policy": "all_non_label9_subsurface_uses_raw_label0_reference",
+  "binary_property_values": {
+    "air_density": 1.225,
+    "air_velocity": 340.0,
+    "background_density": 2200.0,
+    "background_velocity": 2500.0,
+    "target_density": 3000.0,
+    "target_velocity": 6500.0
+  },
+  "grid_shape": [
+    64,
+    64,
+    64
+  ],
+  "phase1_case_id": "cond_generation_0",
+  "realistic_multiclass_petrophysics": false,
+  "scientific_role": "deliberately_binary_high_contrast_full_cube_noiseless_synthetic_upper_bound",
+  "seismic_config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+    "sha256": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02",
+    "size_bytes": 919
+  },
+  "seismic_parameters": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "source_acoustic_config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+    "sha256": "8980e30c59624af9f1bfa59447b7e22c85a2975f8a556fe6e98f5346f95d10ae",
+    "size_bytes": 1128
+  },
+  "target_label": 9
+}

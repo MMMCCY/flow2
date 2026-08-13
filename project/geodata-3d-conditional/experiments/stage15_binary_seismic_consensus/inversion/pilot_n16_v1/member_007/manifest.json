@@ -1,0 +1,91 @@
+{
+  "full_parameters": {
+    "device": "cuda",
+    "dtype": "float32",
+    "id": "binary_inversion_pilot_v1",
+    "initialization_mean": 0.0,
+    "initialization_scale": 1.0,
+    "initialization_smoothing": {
+      "method": "avg_pool3d_kernel3_stride1_padding1",
+      "passes": 1
+    },
+    "lambda_tv": 0.01,
+    "learning_rate": 0.1,
+    "member_seeds": [
+      151500,
+      151501,
+      151502,
+      151503,
+      151504,
+      151505,
+      151506,
+      151507,
+      151508,
+      151509,
+      151510,
+      151511,
+      151512,
+      151513,
+      151514,
+      151515
+    ],
+    "number_of_optimization_steps": 80,
+    "optimizer": "Adam",
+    "parameter_sweep": false,
+    "schema": "stage15_binary_inversion_config_v1",
+    "seismic_loss_scale": "diagonal_uncertainty_normalized_mean_squared_error",
+    "target_volume_penalty": false,
+    "tau_end": 0.25,
+    "tau_schedule": "cosine",
+    "tau_start": 1.0,
+    "trace_interval": 1,
+    "truth_morphology_prior": false,
+    "truth_tuned": false,
+    "tv_scale": "mean_absolute_first_difference_over_within_subsurface_edges"
+  },
+  "input_tensor_sha256": {
+    "binary_well_mask.pt": "5feb5bd84cb582e7af96d893f06f9c13be52e8e0ae771f547a44c435e283e556",
+    "binary_well_values.pt": "e6342fda319401577ab30f2a0ee024a4f3b8b1586f4a7cede80dbe4725cedf6e",
+    "observed_seismic.pt": "f0f86c290373d06b38ea0c3bb5cb579622448e01144d71da295d745bdfaf50e2",
+    "sample_mask.pt": "216435404c2bd0e6e6438fcf5ef116227656f429fbcdf3edcf88708a3ff73f53",
+    "subsurface_mask.pt": "07f2e4fd629e700a1b6e03fba183d411f17a5c36358177c0857a1ff0188bd47b",
+    "uncertainty.pt": "5134432e5c90b98e696635a6d80cd7fd3e54f52f99e8f0c4a52b8eff990c627f"
+  },
+  "member_index": 7,
+  "metrics": {
+    "background_voxel_count": 81221,
+    "background_voxel_fraction": 0.4111310774214776,
+    "completion_status": "completed",
+    "condition_violations": 0,
+    "final_hard_seismic_rmse": 0.06823436915874481,
+    "final_seismic_loss": 46.55929183959961,
+    "final_tv_loss": 0.2681381106376648,
+    "hard_ste_forward_max_abs": 0.0,
+    "initial_seismic_rmse": 0.12768042087554932,
+    "runtime_seconds": 1.4062122569885105,
+    "seed": 151507,
+    "target_voxel_count": 116334,
+    "target_voxel_fraction": 0.5888689225785224,
+    "unique_model_hash": "1257daf4e5be5dc3ab401052a50a0fd6d7f267640ad0fde80bfaceb142a47a4c"
+  },
+  "metrics_asset": {
+    "path": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion/pilot_n16_v1/member_007/metrics.json",
+    "sha256": "ab64e1e5ab9e78d8564f0aaf5ed4769b8b3e1e8c2ea57254b86dfa42719568e7",
+    "size_bytes": 596
+  },
+  "output_tensor_sha256": {
+    "final_logits.pt": "d4fefb0ed20daa37e3ac30bbdf90573f3f85c91eb67493ae259779fb74884bab",
+    "hard_binary.pt": "1257daf4e5be5dc3ab401052a50a0fd6d7f267640ad0fde80bfaceb142a47a4c",
+    "predicted_seismic_hard.pt": "28b68af9c76a57ac86015b8d7c645366ddfead9ce9d52731e5e355db05c5666a",
+    "soft_probability.pt": "497692f322f8ce56b3b29e43fb67b86e5361129a5dcd25056d2155bcce830b10"
+  },
+  "run_status": "completed",
+  "schema": "stage15_binary_inversion_member_v1",
+  "seed": 151507,
+  "trace_asset": {
+    "path": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion/pilot_n16_v1/member_007/trace.csv",
+    "sha256": "a8aacb1ae6aa90427a21f0c11eb28d632159b882b332424438176c93a51d3b21",
+    "size_bytes": 10189
+  },
+  "truth_loaded_by_runner": false
+}

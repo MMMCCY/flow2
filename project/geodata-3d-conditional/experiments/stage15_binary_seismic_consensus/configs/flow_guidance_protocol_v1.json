@@ -1,0 +1,30 @@
+{
+  "schema": "stage15_consensus_flow_protocol_v1",
+  "status": "frozen_before_flow_execution",
+  "arms": ["FLOW_ONLY", "FLOW_PLUS_BINARY_CONSENSUS"],
+  "model_weights": "ema",
+  "n_euler_steps": 32,
+  "integrator": "fixed_euler_midpoint_v1",
+  "alpha": 0.25,
+  "max_guidance_ratio": 0.25,
+  "tau_start": 0.5,
+  "tau_end": 0.1,
+  "tau_schedule": "cosine",
+  "guidance_start": 0.25,
+  "guidance_schedule": "windowed_sine",
+  "guidance_scaling_mode": "reference_norm_relative_v2",
+  "grad_clip_norm": 1.0,
+  "probability_loss_mode": "calibrated_soft_bce_hard_dice_v2",
+  "bce_weight": 1.0,
+  "dice_weight": 1.0,
+  "spatial_gradient_weight": 0.0,
+  "target_label": 9,
+  "condition_projection": "clean_embedding_before_first_step_and_after_every_step_v1",
+  "initial_noise_policy": "single_cpu_generator_sequential_samples_v1",
+  "default_seed": 42,
+  "default_n_samples": 4,
+  "checkpoint": {
+    "path": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+    "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c"
+  }
+}

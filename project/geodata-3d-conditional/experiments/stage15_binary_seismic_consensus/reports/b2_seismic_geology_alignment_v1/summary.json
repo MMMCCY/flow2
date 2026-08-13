@@ -1,0 +1,177 @@
+{
+  "audit_only": true,
+  "decision_policy": "manual_interpretation_without_new_numeric_gate",
+  "decision_rationale": "Frozen hard-binary seismic loss does not consistently rank better truth-label9 geometry; the relationships are weak, unrelated, or directionally conflicting.",
+  "flow_sampling_performed": false,
+  "frozen_inputs_unchanged": true,
+  "input_file_sha256_before_and_after": {
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion/b2_flow_pcn_pilot_v1/chain_trace.csv": "334a2191c8ae682cfa68e17406b619cdf92efc738efccdbc820a894b2289c82d",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion/b2_flow_pcn_pilot_v1/retained_binary_states.pt": "3e64d2ecd8ad2fcd07ef72d10b0376b5232e3d7201282753e1cbda8bc6292b57",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion/b2_flow_pcn_pilot_v1/run_manifest.json": "62d9a2e6ac77223bbe37b423456c67e73ae6977f7f2cc9acde1d8ac0e3886f10",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/reports/b2_truth_evaluation_v1/manifest.json": "2f7d205674434077d6b2d0adc904b0b5daa4c4e091360d06a082ee349c3438a7",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/reports/b2_truth_evaluation_v1/retained_truth_metrics.csv": "c9e3682c04eefebf91cb58c55af53be4429a2cfc18f6974918beb1e3968da146"
+  },
+  "likelihood_weight_modified": false,
+  "loss_quartiles": {
+    "highest_25_percent": {
+      "loss_max": 18.521928787231445,
+      "loss_min": 16.020084381103516,
+      "median_truth_metrics": {
+        "centroid_distance": 9.32138442993164,
+        "iou": 0.027546059345351332,
+        "precision": 0.07200619827444366,
+        "recall": 0.04203835860838537
+      },
+      "retained_indices": [
+        31,
+        93,
+        79,
+        29,
+        91,
+        76,
+        26,
+        24,
+        78,
+        75,
+        33,
+        80,
+        27,
+        28,
+        90,
+        88,
+        89,
+        82,
+        81,
+        83,
+        87,
+        84,
+        85,
+        86
+      ],
+      "state_count": 24
+    },
+    "lowest_25_percent": {
+      "loss_max": 13.970227241516113,
+      "loss_min": 12.587499618530273,
+      "median_truth_metrics": {
+        "centroid_distance": 12.182394981384277,
+        "iou": 0.022414037725558264,
+        "precision": 0.09038878322976973,
+        "recall": 0.02960526315789474
+      },
+      "retained_indices": [
+        49,
+        53,
+        52,
+        48,
+        51,
+        57,
+        50,
+        55,
+        54,
+        70,
+        71,
+        58,
+        56,
+        61,
+        60,
+        9,
+        69,
+        21,
+        22,
+        62,
+        19,
+        65,
+        63,
+        20
+      ],
+      "state_count": 24
+    },
+    "selection_policy": "stable_loss_order_exactly_24_states_per_quartile"
+  },
+  "machine_decision": "SEISMIC_LOSS_NOT_ALIGNED_WITH_GEOLOGY",
+  "machine_decision_allowed_values": [
+    "LOWER_SEISMIC_LOSS_ALIGNS_WITH_BETTER_GEOLOGY",
+    "SEISMIC_LOSS_NOT_ALIGNED_WITH_GEOLOGY"
+  ],
+  "maximum_iou_state": {
+    "b2_current_binary_sha256_float32": "73274af873e2731b71171fd3682cc6fca961ce306b341384b1513a7b6d678aa1",
+    "b3_binary_sha256_uint8": "739f252c655c4d18748e3bcafe48b8742578a109d24e887a5c54c15cc4160cd0",
+    "binary_hash_alignment_verified": true,
+    "centroid_distance": 17.29824447631836,
+    "chain_id": 1,
+    "current_hard_seismic_loss": 15.023236274719238,
+    "index_alignment_verified": true,
+    "iou": 0.037179992122883025,
+    "iteration": 24,
+    "precision": 0.1124077161228864,
+    "recall": 0.05263157894736842,
+    "retained_index": 39,
+    "selection_extreme": "maximum",
+    "selection_field": "iou",
+    "target_voxel_count": 4199,
+    "tie_count": 3,
+    "tied_retained_indices": [
+      39,
+      40,
+      41
+    ]
+  },
+  "minimum_seismic_loss_state": {
+    "b2_current_binary_sha256_float32": "1ba21960e3d37d88de468316f6e2aeccf39abcd6636bce5081f71b04d1ff401f",
+    "b3_binary_sha256_uint8": "52566b114a9ecd658ae73820f2ffa47a8f7aba64b6754f2219b42d98f1150472",
+    "binary_hash_alignment_verified": true,
+    "centroid_distance": 10.97017765045166,
+    "chain_id": 2,
+    "current_hard_seismic_loss": 12.587499618530273,
+    "index_alignment_verified": true,
+    "iou": 0.02324294410625346,
+    "iteration": 10,
+    "precision": 0.11853245531514581,
+    "recall": 0.028099910793933987,
+    "retained_index": 49,
+    "selection_extreme": "minimum",
+    "selection_field": "current_hard_seismic_loss",
+    "target_voxel_count": 2126,
+    "tie_count": 1,
+    "tied_retained_indices": [
+      49
+    ]
+  },
+  "parameter_sweep_performed": false,
+  "pcn_rerun_performed": false,
+  "retained_state_count": 96,
+  "schema": "stage15_b4_frozen_b2_seismic_geology_alignment_v1",
+  "seismic_inversion_performed": false,
+  "spearman": {
+    "centroid_distance": {
+      "rho": -0.12604711420412537,
+      "sample_count": 96,
+      "two_sided_p_value": 0.22106016638713039
+    },
+    "iou": {
+      "rho": 0.4342632724904869,
+      "sample_count": 96,
+      "two_sided_p_value": 9.844943894701556e-06
+    },
+    "precision": {
+      "rho": -0.4258524442273908,
+      "sample_count": 96,
+      "two_sided_p_value": 1.520871754893518e-05
+    },
+    "recall": {
+      "rho": 0.6322276500725066,
+      "sample_count": 96,
+      "two_sided_p_value": 4.894477470654871e-12
+    }
+  },
+  "state_alignment": {
+    "all_states_one_to_one": true,
+    "binary_hash_matches": 96,
+    "hash_note": "B2 trace hashes the live float32 binary tensor; B3 hashes the frozen uint8 retained tensor. Both representations were regenerated from each frozen retained state and matched their respective table.",
+    "index_matches": 96,
+    "method": "retained_index_plus_dtype_aware_binary_sha256"
+  },
+  "thresholds_modified": false,
+  "truth_loaded_by_b4": false
+}

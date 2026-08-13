@@ -1,0 +1,104 @@
+{
+  "N": 16,
+  "all_tensor_hashes": {
+    "consensus_target": "ae75b88a84e6cf799c54039f56ca23796adaf99fc200c2cd31cbfd24f9017abe",
+    "guidance_roi": "6abdea39999781d686c042dc167de75760180fe2dd21bcc4c1b3a1ed936d0333",
+    "negative_mask": "1ff9266ca8e96f5c72c1fef4d05b8984b3f03a9f03f80481521b40d75655bd04",
+    "occupancy_frequency": "578ffa6bbf7c37886d2e091a785a8c3ee3520e9a25cf46b4019a068258b1022b",
+    "positive_mask": "540fbaf2b3e4307dda77eb3d74e90d7d9b1e2ac9b03758c6c63b2e30f06f3221",
+    "unknown_mask": "ca2ba994ef925bd1ae8715b34a0094613201183b1dfc01fb4e3f64a13969daef"
+  },
+  "confidence_coverage": 0.24865480499101517,
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/consensus_v1.json",
+    "sha256": "cf650c272ebefc64b5b9d46dd7a6833565ef4884a067345c536cb816a19d4f71",
+    "size_bytes": 203
+  },
+  "created_at_utc": "2026-08-12T19:29:32.866700+00:00",
+  "full_parameters": {
+    "id": "strong_consensus_080_020_v1",
+    "negative_threshold": 0.2,
+    "positive_threshold": 0.8,
+    "preprocessing": null,
+    "schema": "stage15_binary_consensus_config_v1",
+    "threshold_sweep": false
+  },
+  "git_branch": "stage15-binary-seismic-consensus",
+  "git_head": "123d4dc3a1a33b8f03ff5b98894747b921a98fcd",
+  "guidance_roi_voxel_count": 44605,
+  "input_assets": {
+    "flow_condition_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/flow_condition_mask.pt",
+      "sha256": "c1231c7a917e4f19f671724e2473f3cc8e8def48cba5158a225868bc9a22b460",
+      "size_bytes": 263869
+    },
+    "inversion_manifest": {
+      "path": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion/pilot_n16_v1/manifest.json",
+      "sha256": "65b363c2b78aad861f328e4f2c662f8d03d7003cd4318adb666bb1f62d879e14",
+      "size_bytes": 16621
+    },
+    "observation_manifest": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/manifest.json",
+      "sha256": "02c7b80741edaa89677a50b3cda086731ce9fc87f1ce34011c6d5e919ff02aad",
+      "size_bytes": 7168
+    },
+    "subsurface_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/subsurface_mask.pt",
+      "sha256": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+      "size_bytes": 263841
+    }
+  },
+  "member_hashes": [
+    "c3add35ec8d37b101a17df30abbef94f2ade2a7f8402ac0686c6938bd6e22a0a",
+    "a29b9549a7fded7797402086d8dd2a10b0d3dc433c9bb8e038c368010f8bd186",
+    "5cdd4168dd18bfe479288fce2b074158f0faa2138bd1a46d512ed777855e0053",
+    "3f63ad8fc6fc4d9641959ff4a4d9e25cc0c50df475319b3580420e01f59406cd",
+    "43716970eae6b92c3b50108d02e92cfa49d7acf4ea04ba9a306696f47462ea6b",
+    "d144473f07a99ac2d2b9a24123a6f912c94f5f6204f81354143864663568e319",
+    "4f40de0099fa173c0a9c64194e4ae20146dca46fb68e134dbfa32f30b0287fb1",
+    "1257daf4e5be5dc3ab401052a50a0fd6d7f267640ad0fde80bfaceb142a47a4c",
+    "8aa0850ef7fa25b2caea4939dec3df1aaa47f043eddd7464276b78ed0e348419",
+    "865f44bfc3d2501a90bf472262e4af0e6dfc523ebb4e9c668876664c89a5c4e0",
+    "aa5712dadd7da9477d0580492750ae70e13ffc356bf02c351513a4efe745d77e",
+    "b53b3be745c0389f925670b453d592621a619107a362820275cbe764ed80ccfc",
+    "bf47cd8ff78845d6cc1437c20bc77c7705a676276afd9f7b5d98d4d9fa0bcc0c",
+    "6723d33f450f1f91a22a06ca8dac41074305bb523c43eb9d294a47d24d029b9b",
+    "a7e68deabe86a2f9356f9a1b8f422aeb150b6f989a2a334e45e8b5daee2d8dda",
+    "152baae7d0b428638311fd7fdb53478895f060337f137570359d0713205d36d3"
+  ],
+  "member_manifest_hashes": [
+    "53c72507f76b4540d735beef16af65d96dbb59f3a9c519e4db8748733e37a638",
+    "ea9b80972d91e9cc3ddbf6fe1e232a62c88cd6339c7e1972eb51f6cf24cc65f5",
+    "68a395c95516a00d231b4615a24fb7e702c3cefbb7ae75387edeff0487eeb2ef",
+    "9e943c69f1af28dcca8315a86127cff25c6326be9daf78e4de3483e70cfa8412",
+    "0a68c2cd19b1dc597bced4dcc0e795bb23b6680e8e1ee9df02773bc1eb69f186",
+    "313628dc6df203db4a0995bafbf71a3801950a7a95f192f3a29a1302765aa449",
+    "0f2211f8689e485e19a8c3184bb733274d0236ce7abe8d24ab30af8449946464",
+    "9ede1dbabd69c30d49f084dedbba692db1a8f24d056250ea38fc327db5444daa",
+    "3d3aee51853358f3fd099fa3b0c5ea70de14c13d274fadcf34c4fcaa67784c14",
+    "a70ed28f0e6002b6791afa38896a33c29b55122d4160cda28c28efd4249b447a",
+    "69f33327dd274bb70e950feb9a52ad4a9e4f612c076a767413dd522d0e8fcbc6",
+    "273b37ef2cfd59ed3cee6a008be911642a61f6da2d7a8ba478966652afb83679",
+    "ac78e0c9b4be897bcdf39bbe72be44f321bbd7756aa1cf5ac7eb31edf85897b6",
+    "d890bd18143c8f5d12c1f16b0d808671cb9a01eb7a644da6181adb092557a31c",
+    "5f2be779692dd82747867ea9299fe3589e77e3433f8dbf0dd20f502354ee7329",
+    "72dcdb8afdfb0586fa055104513fdb178fde41522ccfb8db8877b2f55d7ed006"
+  ],
+  "negative_voxel_count": 10292,
+  "positive_voxel_count": 38831,
+  "preprocessing": null,
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage15/build_binary_consensus.py",
+    "sha256": "c72a2ca8fb911293b84109baf133992bc406350b79f8cec08b4232db3449db53",
+    "size_bytes": 8137
+  },
+  "schema": "stage15_binary_consensus_v1",
+  "thresholds": {
+    "negative": 0.2,
+    "positive": 0.8
+  },
+  "truth_loaded_by_runner": false,
+  "unknown_is_lithology": false,
+  "unknown_voxel_count": 148432
+}

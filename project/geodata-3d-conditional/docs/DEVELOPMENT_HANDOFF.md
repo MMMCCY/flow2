@@ -6,6 +6,20 @@ Flow did not benefit from the existing Stage12B post-seismic P(label9) volume:
 the machine decision is `GANSIM_STYLE_GEO_GUIDANCE_NOT_SUPPORTED`. Historical
 Stage10, Stage12 and Stage13 machine decisions remain unchanged.
 
+Stage15-C was completed on 2026-08-13 as a newly authorized non-neural direct
+mapper. It used 128 fixed new Full StructuralGeo seeds, the unchanged Stage15
+binary acoustic/seismic forward, one 17-sample (128 ms) centered local-energy
+attribute, fixed-background-velocity time-to-depth resampling, and 64 pooled
+quantile bins with Laplace probabilities. The calibration distribution was
+strongly zero-inflated: ties left 63/64 quantile bins empty, and the held-out
+`cond_generation_0` map became the constant natural calibration prevalence
+`0.0098096961`. Retrospective AUPRC was `0.045394953`, below frozen B2
+occupancy AUPRC `0.057284505`; truth/background means and medians were equal,
+the `P9>=0.8` diagnostic mask was empty, and all 8,968 truth-label9 voxels fell
+under `P9<=0.2`. Stage15-C stops here: do not tune the window, bins, fixed
+velocity, diagnostic thresholds, add attributes/models, or run Flow guidance
+under this protocol.
+
 ## Read this first in a new conversation
 
 For a paste-ready continuation prompt and a compact statement of the terminal

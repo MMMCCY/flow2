@@ -1,0 +1,27 @@
+{
+  "schema": "stage15_binary_inversion_config_v1",
+  "id": "binary_inversion_pilot_v1",
+  "optimizer": "Adam",
+  "learning_rate": 0.1,
+  "number_of_optimization_steps": 80,
+  "tau_start": 1.0,
+  "tau_end": 0.25,
+  "tau_schedule": "cosine",
+  "lambda_tv": 0.01,
+  "tv_scale": "mean_absolute_first_difference_over_within_subsurface_edges",
+  "seismic_loss_scale": "diagonal_uncertainty_normalized_mean_squared_error",
+  "initialization_mean": 0.0,
+  "initialization_scale": 1.0,
+  "initialization_smoothing": {
+    "method": "avg_pool3d_kernel3_stride1_padding1",
+    "passes": 1
+  },
+  "member_seeds": [151500, 151501, 151502, 151503, 151504, 151505, 151506, 151507, 151508, 151509, 151510, 151511, 151512, 151513, 151514, 151515],
+  "device": "cuda",
+  "dtype": "float32",
+  "trace_interval": 1,
+  "truth_tuned": false,
+  "parameter_sweep": false,
+  "target_volume_penalty": false,
+  "truth_morphology_prior": false
+}
