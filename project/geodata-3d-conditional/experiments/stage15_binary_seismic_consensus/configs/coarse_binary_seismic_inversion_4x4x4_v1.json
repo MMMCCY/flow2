@@ -1,0 +1,33 @@
+{
+  "schema": "stage15_coarse_binary_seismic_inversion_v1",
+  "status": "frozen_before_truth_evaluation",
+  "grid_shape": [64, 64, 64],
+  "coarse_grid_shape": [4, 4, 4],
+  "fine_voxels_per_coarse_cell": [16, 16, 16],
+  "dimension_note": "A 4x4x4 parameter grid on a 64x64x64 fine grid requires repeat factor 16 per axis; the prompt's 4x4x4 fine-voxel statement is arithmetically incompatible with the fixed coarse-grid shape.",
+  "parameterization": "q=sigmoid(u); nearest repeat_interleave by 16 on each spatial axis",
+  "optimizer": "Adam",
+  "learning_rate": 0.1,
+  "number_of_iterations": 300,
+  "inversion_seeds": [151700, 151701, 151702, 151703, 151704, 151705, 151706, 151707],
+  "initialization": {
+    "distribution": "standard_normal",
+    "mean": 0.0,
+    "std": 1.0
+  },
+  "loss": "raw_mean_squared_seismic_misfit",
+  "regularization": null,
+  "trace_interval": 10,
+  "device": "cuda",
+  "dtype": "float32",
+  "observed_seismic_file_sha256": "7a8aeb4b5adc2240e67d8e246d10570fd5b7ff553ad4da78df9fa92d4d161adf",
+  "observed_seismic_tensor_sha256": "f0f86c290373d06b38ea0c3bb5cb579622448e01144d71da295d745bdfaf50e2",
+  "subsurface_mask_file_sha256": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+  "subsurface_mask_tensor_sha256": "07f2e4fd629e700a1b6e03fba183d411f17a5c36358177c0857a1ff0188bd47b",
+  "binary_acoustic_config_sha256": "5272deb894d211fb67339e06840ac1212e156a200c20423f9f36d88949945248",
+  "seismic_config_sha256": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02",
+  "truth_loaded_by_runner": false,
+  "flow_used": false,
+  "parameter_sweep": false,
+  "observation_regenerated": false
+}

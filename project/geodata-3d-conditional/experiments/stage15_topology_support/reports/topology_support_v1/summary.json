@@ -1,0 +1,73 @@
+{
+  "cases": {
+    "A_SOLID": {
+      "FLOW_ONLY": {
+        "beta1_equal_one_count": 0,
+        "median_centroid_distance": 22.621742248535156,
+        "median_hard_seismic_rmse": 0.027528589591383934,
+        "median_iou": 0.0,
+        "median_precision": 0.0,
+        "median_recall": 0.0,
+        "median_target_crop_beta1": 0.0
+      },
+      "ORACLE_GUIDED": {
+        "beta1_equal_one_count": 0,
+        "median_centroid_distance": 0.020154248923063278,
+        "median_hard_seismic_rmse": 0.0037852011155337095,
+        "median_iou": 0.993747557639703,
+        "median_precision": 0.993747557639703,
+        "median_recall": 1.0,
+        "median_target_crop_beta1": 0.0
+      },
+      "SEISMIC_GUIDED": {
+        "beta1_equal_one_count": 0,
+        "median_centroid_distance": 7.489900588989258,
+        "median_hard_seismic_rmse": 0.032911259680986404,
+        "median_iou": 0.31452483801295894,
+        "median_precision": 0.3238359972202919,
+        "median_recall": 0.92410538733779,
+        "median_target_crop_beta1": 2.0
+      }
+    },
+    "B_RING": {
+      "FLOW_ONLY": {
+        "beta1_equal_one_count": 0,
+        "median_azimuthal_ring_coverage": 0.08333333333333333,
+        "median_central_hole_preservation": 1.0,
+        "median_centroid_distance": 22.621742248535156,
+        "median_hard_seismic_rmse": 0.028313875198364258,
+        "median_iou": 0.00018601190476190475,
+        "median_precision": 0.0003505082369435682,
+        "median_recall": 0.0003961965134706815,
+        "median_target_crop_beta1": 0.0
+      },
+      "ORACLE_GUIDED": {
+        "beta1_equal_one_count": 2,
+        "median_azimuthal_ring_coverage": 1.0,
+        "median_central_hole_preservation": 1.0,
+        "median_centroid_distance": 0.03292053937911987,
+        "median_hard_seismic_rmse": 0.0037954479921609163,
+        "median_iou": 0.9937007874015747,
+        "median_precision": 0.9937007874015747,
+        "median_recall": 1.0,
+        "median_target_crop_beta1": 1.0
+      },
+      "SEISMIC_GUIDED": {
+        "beta1_equal_one_count": 2,
+        "median_azimuthal_ring_coverage": 1.0,
+        "median_central_hole_preservation": 0.7117117047309875,
+        "median_centroid_distance": 6.8414506912231445,
+        "median_hard_seismic_rmse": 0.03429989144206047,
+        "median_iou": 0.3091703056768559,
+        "median_precision": 0.3109549504329276,
+        "median_recall": 0.9817749603803486,
+        "median_target_crop_beta1": 1.0
+      }
+    }
+  },
+  "machine_decision": "FROZEN_PRIOR_RING_SUPPORT_NOT_DEMONSTRATED",
+  "prior_support_gate": false,
+  "run_status": "completed",
+  "schema": "stage15_topology_support_summary_v1",
+  "seismic_correction_gate": false
+}

@@ -1,0 +1,122 @@
+{
+  "binary_target": "raw label9 versus every other subsurface voxel",
+  "calibration": {
+    "final_training_bce": 0.05039011314511299,
+    "positive_validation_cases": {
+      "auprc_above_own_prevalence_case_count": 4,
+      "case_count": 5,
+      "cases": [
+        {
+          "auprc": 0.1316497346817645,
+          "prevalence": 0.13668186962604523,
+          "root_seed": 15180097,
+          "truth_minus_background_probability": -0.011565972119569778
+        },
+        {
+          "auprc": 0.007579753387924959,
+          "prevalence": 0.0007634238572791219,
+          "root_seed": 15180101,
+          "truth_minus_background_probability": 0.11593903601169586
+        },
+        {
+          "auprc": 0.13901303184598324,
+          "prevalence": 0.06714248657226562,
+          "root_seed": 15180114,
+          "truth_minus_background_probability": 0.03441343270242214
+        },
+        {
+          "auprc": 0.08016843234791475,
+          "prevalence": 0.013084031641483307,
+          "root_seed": 15180115,
+          "truth_minus_background_probability": 0.007096515037119389
+        },
+        {
+          "auprc": 0.09616663783452531,
+          "prevalence": 0.04299961030483246,
+          "root_seed": 15180122,
+          "truth_minus_background_probability": 0.11902129650115967
+        }
+      ],
+      "median_auprc": 0.09616663783452531,
+      "median_truth_minus_background_probability": 0.03441343270242214,
+      "positive_truth_background_separation_case_count": 4
+    },
+    "training_case_count": 96,
+    "validation": {
+      "auprc": 0.09351041222584726,
+      "background_mean_probability": 0.011856851167976856,
+      "brier": 0.00909673236310482,
+      "case_count": 32,
+      "label9_positive_case_count": 5,
+      "label9_voxels": 57685,
+      "prevalence": 0.008041409775614738,
+      "truth_mean_probability": 0.08746179193258286,
+      "voxel_count": 7173493
+    },
+    "validation_case_count": 32
+  },
+  "flow_used": false,
+  "heldout": {
+    "auprc": 0.09158166756272983,
+    "background_mean_probability": 0.038600627332925797,
+    "background_median_probability": 0.018136095255613327,
+    "brier": 0.04398087293632073,
+    "positive_count": 8968,
+    "positive_metrics_at_0p8": {
+      "false_negative_voxels": 8968,
+      "false_positive_voxels": 0,
+      "iou": 0.0,
+      "positive_voxels": 0,
+      "precision": null,
+      "recall": 0.0,
+      "true_positive_voxels": 0
+    },
+    "prevalence": 0.04539495330414315,
+    "probability_maximum": 0.3642651438713074,
+    "probability_mean": 0.04061541068047327,
+    "probability_minimum": 0.002195823471993208,
+    "roc_auc": 0.6106102979031908,
+    "subsurface_probability_range": [
+      0.002195823471993208,
+      0.3642651438713074
+    ],
+    "truth_mean_probability": 0.08298414200544357,
+    "truth_median_probability": 0.019993040710687637,
+    "truth_partition_at_0p8_0p2": {
+      "counts": {
+        "negative": 7350,
+        "positive": 0,
+        "unknown": 1618
+      },
+      "exactly_partitions_truth": true,
+      "fractions": {
+        "negative": 0.8195807314897413,
+        "positive": 0.0,
+        "unknown": 0.1804192685102587
+      },
+      "truth_label9_voxels": 8968
+    },
+    "voxel_count": 197555
+  },
+  "historical_auprc": {
+    "stage15_b2": 0.057284505,
+    "stage15_c": 0.045394953,
+    "stage15_f_global_histogram": 0.08987236785890922
+  },
+  "input_file_sha256": {
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/binary_logistic/calibration_n128_8x8x8_v2/binary_logistic_checkpoint.pt": "21bb4ce1858527e00a311e24d9f53dc0f572966322944114305af10029b23d4c",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/binary_logistic/calibration_n128_8x8x8_v2/manifest.json": "396ca6fb88bafb364e9a45280ba4f75fa1283e6aaa4e2c5bb8e27f4e3be73196",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/binary_logistic/calibration_n128_8x8x8_v2/validation_metrics.csv": "4240fd4d0ca21ecb7550cec2efee378a29829576223f4f3e63f98739eef8d444",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/binary_logistic/calibration_n128_8x8x8_v2/validation_summary.json": "24d5d8f43275054d22d12174763e4740becf56cad7ed974a4ae7f6cd4075a397",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/binary_logistic/cond_generation_0_8x8x8_v2/coarse_label9_probability.pt": "0d89435a21779521a306c1a7b4f139ed46955f4defc6bb1c210ace34b298af68",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/binary_logistic/cond_generation_0_8x8x8_v2/label9_probability_volume.pt": "ca66bdbb8d865c52100e9f764ff96a70f8898e00a1ff63b5907f8f8c9c1c92f5",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/binary_logistic/cond_generation_0_8x8x8_v2/manifest.json": "1fe382f2b6c96f528a58383ef508c19033591add064c51e2226964bceb954491",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/manifest.json": "02c7b80741edaa89677a50b3cda086731ce9fc87f1ce34011c6d5e919ff02aad",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/subsurface_mask.pt": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3"
+  },
+  "parameter_sweep_performed": false,
+  "run_status": "completed",
+  "schema": "stage15_g_binary_inversion_logistic_truth_evaluation_v1",
+  "truth_loaded_only_by_evaluator": true
+}

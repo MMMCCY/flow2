@@ -1,0 +1,172 @@
+{
+  "schema": "paired_prior_error_correction_v1",
+  "definition": {
+    "omission": "truth label9 and baseline non-label9",
+    "commission": "truth non-label9 and baseline label9",
+    "fn_recovery_rate": "recovered baseline omission / baseline omission",
+    "fp_removal_rate": "removed baseline commission / baseline commission"
+  },
+  "seed42_strict_comparison": [
+    {
+      "method": "Phase1",
+      "seed": 42,
+      "sample_id": 0,
+      "truth_target_voxels": 8968,
+      "baseline_target_voxels": 6283,
+      "guided_target_voxels": 10466,
+      "baseline_tp": 424,
+      "baseline_fn": 8544,
+      "baseline_fp": 5859,
+      "recovered_fn": 8290,
+      "residual_fn": 254,
+      "preserved_tp": 424,
+      "lost_tp": 0,
+      "removed_fp": 4288,
+      "retained_fp": 1571,
+      "new_fp": 181,
+      "fn_recovery_rate": 0.9702715355805244,
+      "fp_removal_rate": 0.7318655060590544,
+      "tp_preservation_rate": 1.0,
+      "new_fp_per_recovered_fn": 0.0218335343787696,
+      "baseline_iou": 0.02859647939569704,
+      "guided_iou": 0.8128731343283582,
+      "baseline_precision": 0.0674836861371956,
+      "guided_precision": 0.8326008025988917,
+      "baseline_recall": 0.04727921498661909,
+      "guided_recall": 0.9716770740410348,
+      "truth_components": 7,
+      "baseline_components": 37,
+      "guided_components": 68
+    },
+    {
+      "method": "Phase2",
+      "seed": 42,
+      "sample_id": 0,
+      "truth_target_voxels": 8968,
+      "baseline_target_voxels": 6283,
+      "guided_target_voxels": 5066,
+      "baseline_tp": 424,
+      "baseline_fn": 8544,
+      "baseline_fp": 5859,
+      "recovered_fn": 4138,
+      "residual_fn": 4406,
+      "preserved_tp": 424,
+      "lost_tp": 0,
+      "removed_fp": 5398,
+      "retained_fp": 461,
+      "new_fp": 43,
+      "fn_recovery_rate": 0.48431647940074907,
+      "fp_removal_rate": 0.9213176309950504,
+      "tp_preservation_rate": 1.0,
+      "new_fp_per_recovered_fn": 0.010391493475108747,
+      "baseline_iou": 0.02859647939569704,
+      "guided_iou": 0.48163006756756754,
+      "baseline_precision": 0.0674836861371956,
+      "guided_precision": 0.9005132254243979,
+      "baseline_recall": 0.04727921498661909,
+      "guided_recall": 0.5086975914362176,
+      "truth_components": 7,
+      "baseline_components": 37,
+      "guided_components": 203
+    },
+    {
+      "method": "Stage15-H",
+      "seed": 42,
+      "sample_id": 0,
+      "truth_target_voxels": 8968,
+      "baseline_target_voxels": 6283,
+      "guided_target_voxels": 12551,
+      "baseline_tp": 424,
+      "baseline_fn": 8544,
+      "baseline_fp": 5859,
+      "recovered_fn": 3621,
+      "residual_fn": 4923,
+      "preserved_tp": 424,
+      "lost_tp": 0,
+      "removed_fp": 65,
+      "retained_fp": 5794,
+      "new_fp": 2712,
+      "fn_recovery_rate": 0.4238061797752809,
+      "fp_removal_rate": 0.011094043352107869,
+      "tp_preservation_rate": 1.0,
+      "new_fp_per_recovered_fn": 0.7489643744821872,
+      "baseline_iou": 0.02859647939569704,
+      "guided_iou": 0.2314867803593911,
+      "baseline_precision": 0.0674836861371956,
+      "guided_precision": 0.32228507688630387,
+      "baseline_recall": 0.04727921498661909,
+      "guided_recall": 0.4510481712756467,
+      "truth_components": 7,
+      "baseline_components": 37,
+      "guided_components": 93
+    }
+  ],
+  "stage15_three_seed_mean": {
+    "fn_recovery_rate": 0.43196577120133345,
+    "fp_removal_rate": 0.012416807715771966,
+    "tp_preservation_rate": 1.0,
+    "new_fp_per_recovered_fn": 0.7030249526760718,
+    "baseline_iou": 0.0382387552243574,
+    "guided_iou": 0.2671246017771022,
+    "baseline_components": 44.0,
+    "guided_components": 107.66666666666667
+  },
+  "input_files": [
+    {
+      "role": "truth",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt",
+      "sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3"
+    },
+    {
+      "role": "Phase1 seed42 baseline",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage1_probability/runs/cond_generation_0/label9/all/phase1b_v4/calibrated_reference_windowed/seed42_n4_s32/baseline/sample_0.pt",
+      "sha256": "b25189fe11ef229c7b4a6fb7a620be355503177d6f78634e1cb39d14a96f283a"
+    },
+    {
+      "role": "Phase1 seed42 guided",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage1_probability/runs/cond_generation_0/label9/all/phase1b_v4/calibrated_reference_windowed/seed42_n4_s32/alpha025/sample_0.pt",
+      "sha256": "0541ea1b278bf0f1b522cf4643029b286761eedd3614c23c3d9626ace1fd40b3"
+    },
+    {
+      "role": "Phase2 seed42 baseline",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/sample_0.pt",
+      "sha256": "b25189fe11ef229c7b4a6fb7a620be355503177d6f78634e1cb39d14a96f283a"
+    },
+    {
+      "role": "Phase2 seed42 guided",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/alpha025/sample_0.pt",
+      "sha256": "54167988c9a0639a1a21fc0799bccf165cfcc8596d0d66723595ef0b91384b4f"
+    },
+    {
+      "role": "Stage15-H seed42 baseline",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/trace_boundary/flow_property_seed42_v4/baseline/sample_0.pt",
+      "sha256": "b25189fe11ef229c7b4a6fb7a620be355503177d6f78634e1cb39d14a96f283a"
+    },
+    {
+      "role": "Stage15-H seed42 guided",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/trace_boundary/flow_property_seed42_v4/guided/sample_0.pt",
+      "sha256": "0fd68ab0c3cc602922c0bbe5c893a4f80e04269b19797aff507fc0670d78aaf7"
+    },
+    {
+      "role": "Stage15-H seed142 baseline",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/trace_boundary/flow_property_seed142_v4/baseline/sample_0.pt",
+      "sha256": "bccc12e560588fdcaa12bf77858f7372c0b2a433819b6ad1301316a8d18bd053"
+    },
+    {
+      "role": "Stage15-H seed142 guided",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/trace_boundary/flow_property_seed142_v4/guided/sample_0.pt",
+      "sha256": "dcc77cf7aa5ea2f037154972efc9135cfe37f50edaf27b5b7a1ed03f48f41803"
+    },
+    {
+      "role": "Stage15-H seed242 baseline",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/trace_boundary/flow_property_seed242_v4/baseline/sample_0.pt",
+      "sha256": "a3fbab0ba78b05d0e8c3366b0c0f42d17ec9955fe74461a19838d4119e19eb4b"
+    },
+    {
+      "role": "Stage15-H seed242 guided",
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/trace_boundary/flow_property_seed242_v4/guided/sample_0.pt",
+      "sha256": "e71ccf5c3c75c2f21cc6b2f124b8ac41cc9325d27eb629fdec0b125d93afe86d"
+    }
+  ],
+  "inference_rerun": false
+}

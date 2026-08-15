@@ -25,9 +25,11 @@ SOFT_DIAGNOSTIC_VERSION = "final_target_probability_and_cosine_margin_v1"
 SOFT_BOUNDARY_SIMILARITY_THRESHOLDS = (0.01, 0.05)
 LEGACY_PROBABILITY_LOSS_MODE = "balanced_soft_bce_soft_dice_v1"
 CALIBRATED_PROBABILITY_LOSS_MODE = "calibrated_soft_bce_hard_dice_v2"
+COARSE_OCCUPANCY_LOSS_MODE = "binary_coarse_occupancy_bce_v1"
 PROBABILITY_LOSS_MODES = (
     LEGACY_PROBABILITY_LOSS_MODE,
     CALIBRATED_PROBABILITY_LOSS_MODE,
+    COARSE_OCCUPANCY_LOSS_MODE,
 )
 
 
@@ -415,6 +417,61 @@ def probability_volume_loss(
     predicted = probs[:, category_index : category_index + 1]
     target = target_probability.to(device=x.device, dtype=x.dtype)
     roi = roi_mask.to(device=x.device).bool()
+    if loss_mode == COARSE_OCCUPANCY_LOSS_MODE:
+        if target.ndim != 5 or tuple(target.shape[1:]) != (1, 8, 8, 8):
+            raise ValueError("coarse occupancy target must have shape [B,1,8,8,8]")
+        if tuple(predicted.shape[2:]) != (64, 64, 64):
+            raise ValueError("coarse occupancy loss requires a 64^3 Flow probability")
+        if target.shape[0] == 1 and predicted.shape[0] > 1:
+            target = target.expand(predicted.shape[0], -1, -1, -1, -1)
+            roi = roi.expand(predicted.shape[0], -1, -1, -1, -1)
+        if target.shape[0] != predicted.shape[0] or roi.shape != predicted.shape:
+            raise ValueError("coarse target batch and fine ROI must match prediction")
+        if bool(((target < 0) | (target > 1)).any()):
+            raise ValueError("coarse occupancy target must lie in [0,1]")
+        roi_float = roi.to(predicted.dtype)
+        support = F.avg_pool3d(roi_float, kernel_size=8, stride=8) * (8**3)
+        predicted_mass = F.avg_pool3d(
+            predicted * roi_float, kernel_size=8, stride=8
+        ) * (8**3)
+        predicted_coarse = predicted_mass / support.clamp_min(1.0)
+        domain = support > 0
+        clipped = predicted_coarse.clamp(eps, 1.0 - eps)
+        bce_cells = -(target * torch.log(clipped) + (1.0 - target) * torch.log1p(-clipped))
+        bce = (bce_cells * support).sum() / support.sum().clamp_min(1.0)
+        base_loss = float(bce_weight) * bce
+        calibration_mae = ((predicted_coarse - target).abs() * support).sum() / support.sum().clamp_min(1.0)
+        positive = (target > target.mean(dim=(2, 3, 4), keepdim=True)) & domain
+        negative = (~positive) & domain
+        positive_count = positive.sum().clamp_min(1)
+        negative_count = negative.sum().clamp_min(1)
+        zero = bce.new_zeros(())
+        one = bce.new_ones(())
+        support_sum = support.sum().clamp_min(1.0)
+        coarse_entropy = -(
+            clipped * torch.log(clipped) + (1.0 - clipped) * torch.log1p(-clipped)
+        )
+        diagnostics = {
+            "probability_base_loss": base_loss,
+            "probability_bce": bce,
+            "probability_dice_loss": zero,
+            "probability_dice_score": one,
+            "probability_spatial_gradient_loss": zero,
+            "probability_soft_calibration_mae": calibration_mae,
+            "loss_positive_scale": one,
+            "loss_negative_scale": one,
+            "roi_hard_core_probability_mean": predicted_coarse[positive].sum() / positive_count,
+            "roi_background_probability_mean": predicted_coarse[negative].sum() / negative_count,
+            "roi_soft_halo_probability_mean": zero,
+            "roi_soft_halo_target_mean": zero,
+            "roi_spatial_gradient_error_mean": zero,
+            "roi_predicted_gradient_mean": zero,
+            "roi_target_gradient_mean": zero,
+            "roi_target_probability_mean": (predicted_coarse * support).sum() / support_sum,
+            "roi_soft_margin_mean": zero,
+            "roi_entropy_mean": (coarse_entropy * support).sum() / support_sum,
+        }
+        return base_loss, diagnostics
     core = (
         target >= 0.5
         if target_mask is None

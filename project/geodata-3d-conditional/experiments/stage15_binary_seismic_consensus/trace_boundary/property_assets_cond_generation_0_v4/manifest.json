@@ -1,0 +1,65 @@
+{
+  "binary_target": "raw_label9_vs_identical_background",
+  "confidence_policy": "continuous_positive_binary_impedance_score_no_threshold_v1",
+  "generated_tensors": {
+    "condition_mask.pt": {
+      "sha256": "e7b1f22e1e71b58ae64ad2b2925eb779b1f7cc1c223a3e30552e6a15c9284ea1",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "tensor_sha256": "0d4da18816deaa7720ab3b4def3cdb03f0f651b7313dc6af7da515351d56e0aa"
+    },
+    "property_confidence.pt": {
+      "sha256": "eac8744e897cbba80b0c4ff9c9a0826c7b2e93aa426544596ee0636914e43c0c",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "tensor_sha256": "fb9fc11d6a99768ec1e15c3b09d171e00b4a0b7cedbd25792066ca6b9b5003ed"
+    },
+    "property_table.pt": {
+      "sha256": "b13714e86217698d2491f728d3e5e4c31eb7d658a33851bccd27e18004c573f1",
+      "shape": [
+        1,
+        15
+      ],
+      "tensor_sha256": "5fe78122fd4cf2e02f294713530fbed73ff753036dfbf46495a473d778d67325"
+    },
+    "target_properties.pt": {
+      "sha256": "9056250ececc7b831b6c680204a46a2866d3ff015c71ecdf833edbad0c100bb7",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ],
+      "tensor_sha256": "f28c078603c5f8bb0c9ea250dd90c83977a7571f14078535a17606d447225022"
+    }
+  },
+  "property_config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_trace_property_indicator_v1.json",
+    "sha256": "362b5f33a1376d00209ee4376754e456614f6549419d90025c2c0851045d7864",
+    "size_bytes": 542
+  },
+  "schema": "stage15_binary_trace_property_assets_v1",
+  "score_transform": "known_binary_log_impedance_endpoint_anomaly_strength_no_empirical_rescaling",
+  "source_inversion_manifest": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/trace_boundary/cond_generation_0_v1/manifest.json",
+    "sha256": "4c1ad567286ed9d9809d5b34f3e59c7a7e1fc9f9fe6f16778a425fbe80a1284e",
+    "size_bytes": 6104
+  },
+  "status": "complete",
+  "target_property_policy": "label9_binary_endpoint_where_continuous_confidence_is_nonzero_v1",
+  "trace_boundary_evaluation_used_as_stop_gate": true,
+  "truth_acoustic_loaded": false,
+  "truth_geology_loaded": false,
+  "truth_metrics_used_for_construction": false
+}

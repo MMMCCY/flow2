@@ -1,0 +1,41 @@
+{
+  "schema": "stage15_topology_support_protocol_v1",
+  "status": "frozen_before_execution",
+  "scientific_scope": "frozen-checkpoint support stress test; not a certified historical train-test split",
+  "cases": {
+    "A_SOLID": {"family": "solid_oblate_ellipsoid", "center": [20, 35, 25], "axes": [10.5, 10.5, 5.5]},
+    "B_RING": {"family": "z_axis_torus", "center": [20, 35, 25], "major_radius": 8.5, "tube_radius": 4.0}
+  },
+  "background_policy": "cond_generation_0_with_all_raw_label9_replaced_by_raw_label4",
+  "target_label": 9,
+  "background_replacement_label": 4,
+  "source_seeds": [42, 142, 242],
+  "arms": ["FLOW_ONLY", "SEISMIC_GUIDED", "ORACLE_GUIDED"],
+  "flow": {"n_euler_steps": 32, "integrator": "fixed_euler_midpoint_v1", "model_weights": "ema"},
+  "guidance": {
+    "alpha": 0.25,
+    "max_guidance_ratio": 0.25,
+    "tau_start": 0.5,
+    "tau_end": 0.1,
+    "tau_schedule": "cosine",
+    "guidance_start": 0.25,
+    "guidance_schedule": "windowed_sine",
+    "guidance_scaling_mode": "reference_norm_relative_v2",
+    "grad_clip_norm": 1.0,
+    "probability_loss_mode": "calibrated_soft_bce_hard_dice_v2",
+    "bce_weight": 1.0,
+    "dice_weight": 1.0,
+    "spatial_gradient_weight": 0.0,
+    "property_sigmas": [0.0, 1.5, 3.0],
+    "property_scale_weights": [0.5, 0.3, 0.2]
+  },
+  "checkpoint": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "base_case": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0",
+  "binary_acoustic_config": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_acoustic_upper_bound_v1.json",
+  "seismic_config": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+  "property_config": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_trace_property_indicator_v1.json",
+  "trace_inversion_config": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_trace_boundary_inversion_v1.json",
+  "training_performed": false,
+  "parameter_sweep": false,
+  "seed_selection": false
+}

@@ -1,0 +1,426 @@
+{
+  "bodies": [
+    {
+      "id": "drilled_0",
+      "role": "drilled",
+      "start": [
+        6,
+        20,
+        12
+      ],
+      "stop": [
+        14,
+        28,
+        22
+      ],
+      "well_xy": [
+        10,
+        24
+      ]
+    },
+    {
+      "id": "drilled_1",
+      "role": "drilled",
+      "start": [
+        31,
+        22,
+        30
+      ],
+      "stop": [
+        39,
+        30,
+        40
+      ],
+      "well_xy": [
+        35,
+        26
+      ]
+    },
+    {
+      "id": "drilled_2",
+      "role": "drilled",
+      "start": [
+        53,
+        28,
+        20
+      ],
+      "stop": [
+        61,
+        36,
+        30
+      ],
+      "well_xy": [
+        57,
+        32
+      ]
+    },
+    {
+      "id": "hidden_0",
+      "role": "hidden",
+      "start": [
+        6,
+        38,
+        16
+      ],
+      "stop": [
+        14,
+        46,
+        26
+      ]
+    },
+    {
+      "id": "hidden_1",
+      "role": "hidden",
+      "start": [
+        38,
+        38,
+        34
+      ],
+      "stop": [
+        46,
+        46,
+        44
+      ]
+    }
+  ],
+  "conditioning_report": {
+    "borehole_columns_hitting_target": 3,
+    "borehole_label_counts": {
+      "-1": 257626,
+      "1": 91,
+      "2": 4137,
+      "3": 34,
+      "4": 166,
+      "5": 51,
+      "6": 9,
+      "9": 30
+    },
+    "dtype": "torch.int64",
+    "effective_condition_fraction": 0.2636222839355469,
+    "effective_condition_voxels": 69107,
+    "full_borehole_count": 9,
+    "full_borehole_xy": [
+      [
+        8,
+        46
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        10,
+        24
+      ],
+      [
+        27,
+        17
+      ],
+      [
+        35,
+        26
+      ],
+      [
+        39,
+        59
+      ],
+      [
+        44,
+        60
+      ],
+      [
+        48,
+        6
+      ],
+      [
+        57,
+        32
+      ]
+    ],
+    "nonair_borehole_truth_mismatches": 0,
+    "nonair_observed_fraction": 0.01723480224609375,
+    "nonair_observed_voxels": 4518,
+    "shape": [
+      1,
+      1,
+      64,
+      64,
+      64
+    ],
+    "target_conditioned_fraction": 0.009375,
+    "target_conditioned_voxels": 30,
+    "target_fraction": 0.01220703125,
+    "target_hits_in_full_boreholes": 30,
+    "target_label": 9,
+    "target_voxels": 3200,
+    "truth_air_voxels": 64589,
+    "truth_label_counts": {
+      "-1": 64589,
+      "1": 45055,
+      "13": 12,
+      "2": 24518,
+      "3": 14502,
+      "4": 80087,
+      "5": 18702,
+      "6": 11479,
+      "9": 3200
+    },
+    "unconstrained_subsurface_voxels": 193037,
+    "valid_label_range": [
+      -1,
+      13
+    ]
+  },
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_five_body_flow/configs/frozen_protocol_v1.json",
+    "sha256": "d1124c4446007ff0a2a14858d4ab1b65b2e66a45e193cc57ebf50b83d4d55c80",
+    "size_bytes": 2521
+  },
+  "created_at_utc": "2026-08-13T20:47:20.288732+00:00",
+  "full_parameters": {
+    "arms": [
+      "FLOW_ONLY",
+      "SEISMIC_GUIDED",
+      "ORACLE_GUIDED"
+    ],
+    "background_policy": "cond_generation_0_with_all_raw_label9_replaced_by_raw_label4",
+    "background_replacement_label": 4,
+    "base_case": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0",
+    "binary_acoustic_config": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_acoustic_upper_bound_v1.json",
+    "bodies": [
+      {
+        "id": "drilled_0",
+        "role": "drilled",
+        "start": [
+          6,
+          20,
+          12
+        ],
+        "stop": [
+          14,
+          28,
+          22
+        ],
+        "well_xy": [
+          10,
+          24
+        ]
+      },
+      {
+        "id": "drilled_1",
+        "role": "drilled",
+        "start": [
+          31,
+          22,
+          30
+        ],
+        "stop": [
+          39,
+          30,
+          40
+        ],
+        "well_xy": [
+          35,
+          26
+        ]
+      },
+      {
+        "id": "drilled_2",
+        "role": "drilled",
+        "start": [
+          53,
+          28,
+          20
+        ],
+        "stop": [
+          61,
+          36,
+          30
+        ],
+        "well_xy": [
+          57,
+          32
+        ]
+      },
+      {
+        "id": "hidden_0",
+        "role": "hidden",
+        "start": [
+          6,
+          38,
+          16
+        ],
+        "stop": [
+          14,
+          46,
+          26
+        ]
+      },
+      {
+        "id": "hidden_1",
+        "role": "hidden",
+        "start": [
+          38,
+          38,
+          34
+        ],
+        "stop": [
+          46,
+          46,
+          44
+        ]
+      }
+    ],
+    "cases": {
+      "FIVE_BODY": {
+        "family": "five_equal_disjoint_cuboids"
+      }
+    },
+    "checkpoint": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+    "flow": {
+      "integrator": "fixed_euler_midpoint_v1",
+      "model_weights": "ema",
+      "n_euler_steps": 32
+    },
+    "guidance": {
+      "alpha": 0.25,
+      "bce_weight": 1.0,
+      "dice_weight": 1.0,
+      "grad_clip_norm": 1.0,
+      "guidance_scaling_mode": "reference_norm_relative_v2",
+      "guidance_schedule": "windowed_sine",
+      "guidance_start": 0.25,
+      "max_guidance_ratio": 0.25,
+      "probability_loss_mode": "calibrated_soft_bce_hard_dice_v2",
+      "property_scale_weights": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "property_sigmas": [
+        0.0,
+        1.5,
+        3.0
+      ],
+      "spatial_gradient_weight": 0.0,
+      "tau_end": 0.1,
+      "tau_schedule": "cosine",
+      "tau_start": 0.5
+    },
+    "parameter_sweep": false,
+    "property_config": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_trace_property_indicator_v1.json",
+    "schema": "stage15_five_body_flow_protocol_v1",
+    "scientific_scope": "Stage7-style five-body geometry embedded in the checkpoint-compatible cond_generation_0 background",
+    "seed_selection": false,
+    "seismic_config": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+    "source_seeds": [
+      42,
+      142,
+      242
+    ],
+    "status": "frozen_before_execution",
+    "target_label": 9,
+    "trace_inversion_config": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_trace_boundary_inversion_v1.json",
+    "training_performed": false
+  },
+  "git_branch": "stage15-binary-seismic-consensus",
+  "git_head": "cb998cea783fd4167fab65f30114433fb4001815",
+  "inference_tensor_sha256": {
+    "condition_mask.pt": "0d4da18816deaa7720ab3b4def3cdb03f0f651b7313dc6af7da515351d56e0aa",
+    "condition_values.pt": "76a4daaeb317bc1cdd4adb2af686b76d93dd717b372fed81b017cf95b6a0207b",
+    "observed_seismic.pt": "2ad047b23ae14d3013e43b33e7ae1afadc8b7f757a1bd74b9f34ef00c7b95766",
+    "subsurface_mask.pt": "07f2e4fd629e700a1b6e03fba183d411f17a5c36358177c0857a1ff0188bd47b"
+  },
+  "observation_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "boundary": "zero_padding_same_length_no_wraparound",
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "exclude_air_rock_interface": true,
+    "forward_mode": "normal_incidence_twt_ricker_v1",
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "inverse_crime": true,
+    "lateral_mixing": false,
+    "local_surface_datum": true,
+    "loss_mode": "diagonal_uncertainty_normalized_mse_v1",
+    "measured_geophysics": false,
+    "noise_model": "none",
+    "noise_seed": 4205,
+    "noise_sha256": "881162049a8d41cfb41aaf8850e3cb4f5cc81f21b51aff8c260c035eeb0e75d0",
+    "noise_std_amplitude": 0.0,
+    "noiseless_sha256": "2ad047b23ae14d3013e43b33e7ae1afadc8b7f757a1bd74b9f34ef00c7b95766",
+    "num_time_samples": 320,
+    "output_unit": "unscaled_convolutional_amplitude",
+    "prediction_recording_window_policy": "crop_arrivals_outside_fixed_window",
+    "protocol_version": 1,
+    "recording_end_ms": 2552.0,
+    "sample_interval_ms": 8.0,
+    "sample_mask_sha256": "216435404c2bd0e6e6438fcf5ef116227656f429fbcdf3edcf88708a3ff73f53",
+    "subsurface_mask_report": {
+      "all_columns_nonempty": true,
+      "contiguous_below_surface": true,
+      "maximum_subsurface_cells": 52,
+      "minimum_subsurface_cells": 45
+    },
+    "subsurface_mask_sha256": "07f2e4fd629e700a1b6e03fba183d411f17a5c36358177c0857a1ff0188bd47b",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_sha256": "5134432e5c90b98e696635a6d80cd7fd3e54f52f99e8f0c4a52b8eff990c627f",
+    "values_sha256": "2ad047b23ae14d3013e43b33e7ae1afadc8b7f757a1bd74b9f34ef00c7b95766",
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "num_samples": 17,
+      "peak_frequency_hz": 25.0,
+      "sha256": "92fed10fd03eed89aba8c731834db63b306b39ead1cb535be22533dc4fc1c833",
+      "type": "ricker_zero_phase"
+    }
+  },
+  "risk_gate": {
+    "all_five_targets_raw_label9": true,
+    "body_count": 5,
+    "checkpoint_compatible_background": true,
+    "condition_mismatches": 0,
+    "disjoint": true,
+    "drilled_body_ids": [
+      "drilled_0",
+      "drilled_1",
+      "drilled_2"
+    ],
+    "equal_body_voxels": 640,
+    "grid_shape_64_cubed": true,
+    "hidden_body_ids": [
+      "hidden_0",
+      "hidden_1"
+    ],
+    "hidden_well_intersection_voxels": 0,
+    "same_stage15_binary_physics": true
+  },
+  "risk_gate_passed": true,
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage15/build_five_body_flow_case.py",
+    "sha256": "80d726364c318b40de05d059f38ced129638af3f632bbae764604bd54d668f7b",
+    "size_bytes": 6895
+  },
+  "schema": "stage15_five_body_flow_case_v1",
+  "truth_role": "observation_generation_and_retrospective_evaluation_only",
+  "truth_tensor_sha256": {
+    "binary_truth.pt": "ac07873b8a42e9333e12ddd6b94d8ee338a38d6f4b3c312a1c8a5736bc985866",
+    "body_masks.pt": "d71a67dafa2d6cdc1188da49b9357d57e7f2fd267b64557668ba993071eb394f",
+    "hidden_binary_truth.pt": "ca377a36a3d1d03bf46bb21d8e4b873015455d6daa2dd29d408bb1796b76249d",
+    "true_model.pt": "05a662057bf9464aa55444769c65c1eb069e84e2c2bc6f2550b5edd5e8cdeadd"
+  }
+}

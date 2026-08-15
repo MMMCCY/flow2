@@ -1,0 +1,154 @@
+{
+  "coarse_guidance_target_range": [
+    0.0,
+    0.3642651438713074
+  ],
+  "coarse_guidance_target_shape": [
+    1,
+    1,
+    8,
+    8,
+    8
+  ],
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/flow_demo_coarse_occupancy_v1.json",
+    "sha256": "17af7f75b918e62c011f3489171cc36e55f9496c94c3bf9f5d1824f98e6b86a4",
+    "size_bytes": 1609
+  },
+  "created_at_utc": "2026-08-13T10:00:40.760109+00:00",
+  "fine_voxel_repeat_used_in_loss": false,
+  "full_parameters": {
+    "alpha": 0.25,
+    "arms": [
+      "FLOW_ONLY",
+      "GEO_EVIDENCE_GUIDED"
+    ],
+    "bce_weight": 1.0,
+    "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+    "condition_mask_sha256": "c1231c7a917e4f19f671724e2473f3cc8e8def48cba5158a225868bc9a22b460",
+    "condition_values_sha256": "dd35b7567a5e099e58a9d9f6cede667839cdbd8915dc96fd0fc6fa2b194c8247",
+    "dice_weight": 0.0,
+    "fine_voxel_repeat_used_in_loss": false,
+    "grad_clip_norm": 1.0,
+    "guidance_scaling_mode": "reference_norm_relative_v2",
+    "guidance_schedule": "windowed_sine",
+    "guidance_start": 0.25,
+    "guidance_target": "frozen_8x8x8_binary_label9_probability",
+    "hard_dice_core_used": false,
+    "internal_dice_core_threshold": 0.8,
+    "max_guidance_ratio": 0.25,
+    "n_euler_steps": 32,
+    "parameter_sweep": false,
+    "probability_loss_mode": "binary_coarse_occupancy_bce_v1",
+    "raw_probability_sha256": "0d89435a21779521a306c1a7b4f139ed46955f4defc6bb1c210ace34b298af68",
+    "sample_selection": "retrospective_max_delta_label9_iou_for_visualization_only_all_pairs_reported",
+    "schema": "stage15_flow_demo_coarse_occupancy_v1",
+    "scientific_role": "exploratory_binary_coarse_location_guidance_with_flow_resolving_within_cell_morphology",
+    "source_seeds": [
+      42,
+      142,
+      242,
+      342,
+      442,
+      542,
+      642,
+      742
+    ],
+    "spatial_gradient_weight": 0.0,
+    "status": "frozen_before_flow_demo",
+    "subsurface_mask_sha256": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+    "target_label": 9,
+    "tau_end": 0.1,
+    "tau_schedule": "cosine",
+    "tau_start": 0.5,
+    "training_performed": false,
+    "truth_loaded_by_flow_runner": false
+  },
+  "git_branch": "stage15-binary-seismic-consensus",
+  "git_head": "cb998cea783fd4167fab65f30114433fb4001815",
+  "guidance_evidence": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/flow_demo/coarse_occupancy_seed_screen_n8_v2/guidance_evidence.pt",
+    "sha256": "82e569337bb99b45bd1569b547e646ada8459c75901d68950720dec38ffd2a8b",
+    "size_bytes": 1050287
+  },
+  "guidance_evidence_range_subsurface": [
+    0.0026147090829908848,
+    0.354833722114563
+  ],
+  "guidance_evidence_tensor_sha256": "9d34240e65f7ec02a8566705f0599ba03c260cbd9cafbb6dd650773b8d759182",
+  "hard_dice_core_used": false,
+  "input_assets": {
+    "checkpoint": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "condition_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/flow_condition_mask.pt",
+      "sha256": "c1231c7a917e4f19f671724e2473f3cc8e8def48cba5158a225868bc9a22b460",
+      "size_bytes": 263869
+    },
+    "condition_values": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/flow_condition_values.pt",
+      "sha256": "dd35b7567a5e099e58a9d9f6cede667839cdbd8915dc96fd0fc6fa2b194c8247",
+      "size_bytes": 2098891
+    },
+    "raw_probability": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/binary_logistic/cond_generation_0_8x8x8_v2/coarse_label9_probability.pt",
+      "sha256": "0d89435a21779521a306c1a7b4f139ed46955f4defc6bb1c210ace34b298af68",
+      "size_bytes": 3879
+    },
+    "subsurface_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/subsurface_mask.pt",
+      "sha256": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+      "size_bytes": 263841
+    }
+  },
+  "internal_dice_core_voxels": 0,
+  "model_load_report": {
+    "checkpoint": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "checkpoint_epoch": 1651,
+    "checkpoint_global_step": 8376,
+    "ema_applied": true,
+    "ema_entry_count": 411,
+    "ema_excluded_frozen_parameters": [
+      "embedding.weight"
+    ],
+    "ema_missing_trainable": [],
+    "ema_shape_mismatches": [],
+    "ema_unexpected": [],
+    "frozen_parameters": [
+      "embedding.weight"
+    ],
+    "model_parameter_count": 412,
+    "trainable_parameter_count": 411,
+    "weight_source": "ema"
+  },
+  "pair_count": 8,
+  "parameter_sweep_performed": false,
+  "raw_probability_tensor_sha256": "02623677e6a131fd5e802efd5b205444029b5e2fb294cde7b48f3a3e0b41900b",
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage15/run_flow_demo.py",
+    "sha256": "c191b8c02e0b5640dccfa645544e4081ba9ca2fbc683afa0fcefa3246b858f7f",
+    "size_bytes": 9077
+  },
+  "sample_selection_performed_by_flow_runner": false,
+  "schema": "stage15_flow_demo_truth_blind_v1",
+  "source_seeds": [
+    42,
+    142,
+    242,
+    342,
+    442,
+    542,
+    642,
+    742
+  ],
+  "training_performed": false,
+  "truth_loaded_by_flow_runner": false
+}

@@ -1,0 +1,26 @@
+{
+  "case_index": 31,
+  "coarse_inversion_score_tensor_sha256": "6d22a50e9f270fb176662973077ef28b6734438f8912d7f7b7f1ac9d6fb0bc68",
+  "coarse_truth_occupancy_tensor_sha256": "4a765b5256a420af88bc0c9a9df3ec439279e66b646931f4c9660ab0de40ff83",
+  "final_gradient_norm": 0.0,
+  "final_seismic_mse": 0.0,
+  "geology_tensor_sha256": "4a5a88bc411fc6ff11481baab59a80c6881a67dd3090755194a8778075117753",
+  "initial_seismic_mse": 0.0,
+  "label9_voxels": 0,
+  "loss_reduction_fraction": 0.0,
+  "markov_sequence": [
+    "BaseStrata",
+    "Fold",
+    "Fold",
+    "Fold",
+    "OreDeposit",
+    "Sediment",
+    "End"
+  ],
+  "root_seed": 15180031,
+  "runtime_seconds": 2.7250473799649626,
+  "split": "train",
+  "subsurface_tensor_sha256": "c0f119d45ff19603151fbecf23d9a3de38d85f461406d4962261a5a77bb0103c",
+  "synthetic_seismic_tensor_sha256": "881162049a8d41cfb41aaf8850e3cb4f5cc81f21b51aff8c260c035eeb0e75d0",
+  "target_containing_coarse_cells": 0
+}

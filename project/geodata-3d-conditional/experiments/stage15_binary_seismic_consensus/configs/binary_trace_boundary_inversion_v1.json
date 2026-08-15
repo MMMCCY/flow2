@@ -1,0 +1,14 @@
+{
+  "schema": "stage15_binary_trace_boundary_inversion_v1",
+  "status": "frozen_before_truth_evaluation",
+  "method": "complete_trace_two_pass_linearized_log_impedance_with_binary_endpoint_projection_v1",
+  "refinement_passes": 2,
+  "prior_relative_weight": 0.001,
+  "vertical_smoothness_relative_weight": 0.01,
+  "xy_patch_role": "batching_only_no_independent_subcube_inversion",
+  "full_vertical_trace_used": true,
+  "lateral_filter_used": false,
+  "truth_used_by_runner": false,
+  "parameter_sweep": false,
+  "threshold_sweep": false
+}
