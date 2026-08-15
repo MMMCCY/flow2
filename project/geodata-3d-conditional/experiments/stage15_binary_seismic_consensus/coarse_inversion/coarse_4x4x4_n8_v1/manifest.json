@@ -1,0 +1,257 @@
+{
+  "binary_acoustic_source_config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+    "sha256": "8980e30c59624af9f1bfa59447b7e22c85a2975f8a556fe6e98f5346f95d10ae",
+    "size_bytes": 1128
+  },
+  "checkpoint_loaded": false,
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/coarse_binary_seismic_inversion_4x4x4_v1.json",
+    "sha256": "d257214d04eeef18a7b7051893719f765257a936d6c4e2ef364e34ea01b4b0b7",
+    "size_bytes": 1650
+  },
+  "created_at_utc": "2026-08-13T08:08:24.549009+00:00",
+  "flow_used": false,
+  "full_parameters": {
+    "binary_acoustic_config_sha256": "5272deb894d211fb67339e06840ac1212e156a200c20423f9f36d88949945248",
+    "coarse_grid_shape": [
+      4,
+      4,
+      4
+    ],
+    "device": "cuda",
+    "dimension_note": "A 4x4x4 parameter grid on a 64x64x64 fine grid requires repeat factor 16 per axis; the prompt's 4x4x4 fine-voxel statement is arithmetically incompatible with the fixed coarse-grid shape.",
+    "dtype": "float32",
+    "fine_voxels_per_coarse_cell": [
+      16,
+      16,
+      16
+    ],
+    "flow_used": false,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "initialization": {
+      "distribution": "standard_normal",
+      "mean": 0.0,
+      "std": 1.0
+    },
+    "inversion_seeds": [
+      151700,
+      151701,
+      151702,
+      151703,
+      151704,
+      151705,
+      151706,
+      151707
+    ],
+    "learning_rate": 0.1,
+    "loss": "raw_mean_squared_seismic_misfit",
+    "number_of_iterations": 300,
+    "observation_regenerated": false,
+    "observed_seismic_file_sha256": "7a8aeb4b5adc2240e67d8e246d10570fd5b7ff553ad4da78df9fa92d4d161adf",
+    "observed_seismic_tensor_sha256": "f0f86c290373d06b38ea0c3bb5cb579622448e01144d71da295d745bdfaf50e2",
+    "optimizer": "Adam",
+    "parameter_sweep": false,
+    "parameterization": "q=sigmoid(u); nearest repeat_interleave by 16 on each spatial axis",
+    "regularization": null,
+    "schema": "stage15_coarse_binary_seismic_inversion_v1",
+    "seismic_config_sha256": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02",
+    "status": "frozen_before_truth_evaluation",
+    "subsurface_mask_file_sha256": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+    "subsurface_mask_tensor_sha256": "07f2e4fd629e700a1b6e03fba183d411f17a5c36358177c0857a1ff0188bd47b",
+    "trace_interval": 10,
+    "truth_loaded_by_runner": false
+  },
+  "git_branch": "stage15-binary-seismic-consensus",
+  "git_head": "cb998cea783fd4167fab65f30114433fb4001815",
+  "input_file_sha256_before_and_after": {
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_acoustic_upper_bound_v1.json": "5272deb894d211fb67339e06840ac1212e156a200c20423f9f36d88949945248",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/observed_seismic.pt": "7a8aeb4b5adc2240e67d8e246d10570fd5b7ff553ad4da78df9fa92d4d161adf",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/subsurface_mask.pt": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02"
+  },
+  "inputs_unchanged": true,
+  "mean_coarse_occupancy": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/coarse_inversion/coarse_4x4x4_n8_v1/mean_coarse_occupancy.pt",
+    "sha256": "9cb8a48d0c87374a2894982839ded53d6e0b572b15678847c6aa33a2df7b66ef",
+    "size_bytes": 1931
+  },
+  "mean_coarse_occupancy_tensor_sha256": "6981cab0777858f0e92b831ffa6fecff0843487e17532fe5d49e5b114673fec0",
+  "observation_manifest_opened_by_runner": false,
+  "observation_regenerated": false,
+  "parameter_sweep_performed": false,
+  "regularization_used": false,
+  "run_count": 8,
+  "run_status": "completed",
+  "run_summaries": [
+    {
+      "coarse_occupancy_tensor_sha256": "3c0ef79bc691a38e33cdea6bc963d6b756efeeacb8c552d1246b426d759aa5a0",
+      "final_q_max": 0.9378423690795898,
+      "final_q_mean": 0.5545685291290283,
+      "final_q_min": 0.14497129619121552,
+      "final_seismic_mse": 0.0007050923886708915,
+      "final_seismic_rmse": 0.02655357581703247,
+      "initial_seismic_mse": 0.0009456343832425773,
+      "initial_seismic_rmse": 0.03075116881099932,
+      "loss_reduction_fraction": 0.25437103264674876,
+      "run_index": 0,
+      "runtime_seconds": 2.984948816942051,
+      "seed": 151700
+    },
+    {
+      "coarse_occupancy_tensor_sha256": "7cbde0398361abfa4a5192c1baf290860bb9ad8b988791c33de8fb37ff1be77e",
+      "final_q_max": 0.8071348071098328,
+      "final_q_mean": 0.45952922105789185,
+      "final_q_min": 0.1743469089269638,
+      "final_seismic_mse": 0.0007050076383166015,
+      "final_seismic_rmse": 0.026551979932136916,
+      "initial_seismic_mse": 0.0008542230352759361,
+      "initial_seismic_rmse": 0.029227094198293748,
+      "loss_reduction_fraction": 0.17467966888897368,
+      "run_index": 1,
+      "runtime_seconds": 2.7807506741955876,
+      "seed": 151701
+    },
+    {
+      "coarse_occupancy_tensor_sha256": "e6fc26e530516cc124b34f89538a703eb57db2c079bd932b33629e4142ce970f",
+      "final_q_max": 0.8682494163513184,
+      "final_q_mean": 0.5332818627357483,
+      "final_q_min": 0.20287160575389862,
+      "final_seismic_mse": 0.0007049764390103519,
+      "final_seismic_rmse": 0.02655139241189343,
+      "initial_seismic_mse": 0.0009134454885497689,
+      "initial_seismic_rmse": 0.03022326072001115,
+      "loss_reduction_fraction": 0.22822275894141505,
+      "run_index": 2,
+      "runtime_seconds": 2.7697623940184712,
+      "seed": 151702
+    },
+    {
+      "coarse_occupancy_tensor_sha256": "4b1002136d5fb5449c807a67e8f917e7b07854bbd348a30f3d772fefe6e5316a",
+      "final_q_max": 0.7701625823974609,
+      "final_q_mean": 0.4462674558162689,
+      "final_q_min": 0.14938344061374664,
+      "final_seismic_mse": 0.0007050119456835091,
+      "final_seismic_rmse": 0.026552061043985064,
+      "initial_seismic_mse": 0.0009199375635944307,
+      "initial_seismic_rmse": 0.03033047252507667,
+      "loss_reduction_fraction": 0.23363065757544715,
+      "run_index": 3,
+      "runtime_seconds": 2.7701874510385096,
+      "seed": 151703
+    },
+    {
+      "coarse_occupancy_tensor_sha256": "52c1ac1c638cd6c039b77070cf83fe025d599458676f5b06efe96dc51e63cb15",
+      "final_q_max": 0.9584218263626099,
+      "final_q_mean": 0.6029275059700012,
+      "final_q_min": 0.15946844220161438,
+      "final_seismic_mse": 0.0007049376145005226,
+      "final_seismic_rmse": 0.02655066128179339,
+      "initial_seismic_mse": 0.000861811451613903,
+      "initial_seismic_rmse": 0.029356625344441466,
+      "loss_reduction_fraction": 0.18202802575854016,
+      "run_index": 4,
+      "runtime_seconds": 2.7711337280925363,
+      "seed": 151704
+    },
+    {
+      "coarse_occupancy_tensor_sha256": "322875623c9690862bcf9001c44407555782f8bed066bac8c7efb9446cf83bd5",
+      "final_q_max": 0.815523624420166,
+      "final_q_mean": 0.5050092339515686,
+      "final_q_min": 0.16504719853401184,
+      "final_seismic_mse": 0.0007049159030430019,
+      "final_seismic_rmse": 0.026550252410156138,
+      "initial_seismic_mse": 0.0008815953624434769,
+      "initial_seismic_rmse": 0.02969167160069431,
+      "loss_reduction_fraction": 0.20040878948226404,
+      "run_index": 5,
+      "runtime_seconds": 2.7592175561003387,
+      "seed": 151705
+    },
+    {
+      "coarse_occupancy_tensor_sha256": "dc756a4a422eb97c4204d79d23549f51a4c16f7717ea1c46b78052a14b0268f7",
+      "final_q_max": 0.894764244556427,
+      "final_q_mean": 0.5659648180007935,
+      "final_q_min": 0.2010536938905716,
+      "final_seismic_mse": 0.0007048845291137695,
+      "final_seismic_rmse": 0.02654966156307401,
+      "initial_seismic_mse": 0.0009120152681134641,
+      "initial_seismic_rmse": 0.030199590528903933,
+      "loss_reduction_fraction": 0.22711323619411752,
+      "run_index": 6,
+      "runtime_seconds": 2.758897945052013,
+      "seed": 151706
+    },
+    {
+      "coarse_occupancy_tensor_sha256": "f59e870305687340868b571dd53091819b91c7e9a9e20b1735225934f17ce2c0",
+      "final_q_max": 0.8203464150428772,
+      "final_q_mean": 0.48027604818344116,
+      "final_q_min": 0.19109009206295013,
+      "final_seismic_mse": 0.0007047647377476096,
+      "final_seismic_rmse": 0.026547405480528783,
+      "initial_seismic_mse": 0.001013430766761303,
+      "initial_seismic_rmse": 0.03183442738233724,
+      "loss_reduction_fraction": 0.3045753485461277,
+      "run_index": 7,
+      "runtime_seconds": 2.7508762390352786,
+      "seed": 151707
+    }
+  ],
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage15/run_coarse_binary_seismic_inversion.py",
+    "sha256": "72cb335a8631b5ffb3cc0227d1f23cc3af72dafad179bc988fe7388b58ac7843",
+    "size_bytes": 12009
+  },
+  "runtime_seconds": 23.043843569932505,
+  "schema": "stage15_e_coarse_binary_seismic_inversion_run_v1",
+  "seismic_parameters": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "truth_loaded_by_runner": false
+}

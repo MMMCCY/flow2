@@ -1,0 +1,16 @@
+{
+  "schema": "stage15_binary_acoustic_upper_bound_v1",
+  "id": "stage15_label9_vs_raw0_binary_upper_bound_v1",
+  "mapping_policy": "air_raw_minus1_background_raw0_target_raw9_v1",
+  "selected_raw_labels": {
+    "air": -1,
+    "background": 0,
+    "target": 9
+  },
+  "source_acoustic_config": {
+    "path": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+    "sha256": "8980e30c59624af9f1bfa59447b7e22c85a2975f8a556fe6e98f5346f95d10ae"
+  },
+  "scientific_role": "deliberately_binary_high_contrast_synthetic_upper_bound",
+  "realistic_multiclass_petrophysics": false
+}

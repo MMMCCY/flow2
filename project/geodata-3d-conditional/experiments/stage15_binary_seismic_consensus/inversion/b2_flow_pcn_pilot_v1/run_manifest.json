@@ -1,0 +1,508 @@
+{
+  "binary_acoustic_config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_acoustic_upper_bound_v1.json",
+    "sha256": "5272deb894d211fb67339e06840ac1212e156a200c20423f9f36d88949945248",
+    "size_bytes": 634
+  },
+  "binary_inversion_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/binary_seismic_inversion.py",
+    "sha256": "b7ad4657f54aa48920e4afd0f8652a44c98d87aecf575977863d6f8c95f05aac",
+    "size_bytes": 9386
+  },
+  "chains": [
+    {
+      "acceptance_rate": 0.9375,
+      "accepted_proposals": 30,
+      "chain_id": 0,
+      "condition_violations": 0,
+      "final_binary_sha256": "441b924c1976f49ffa7117b8ad7a3a7c2bd0ffc492aa2dfe91f28e3e76041219",
+      "final_hard_seismic_loss": 14.077672958374023,
+      "final_sample_sha256": "ec74edeb2d1219eab2029d2e8f9654b06f0af0526a2e8d819706a11f741942bb",
+      "initial_binary_sha256": "00f665ad15754eb8cd2b1e6fc42ef239683308bafa57882355d0af22d0da0096",
+      "initial_hard_seismic_loss": 16.727596282958984,
+      "initial_noise_sha256": "5bbcf6749a8f7927b51a179637753b7d3128d1e4266d64a5af7f9ad3d56bb650",
+      "initial_sample_sha256": "1dc91d6deece284da55e64ffa5e12848bfed37932c676d84e7bbae69cb2ae3ae",
+      "initial_seed": 151520,
+      "initial_target_fraction": 0.02269241477057022,
+      "initial_target_voxel_count": 4483,
+      "proposal_seed": 151620,
+      "retained_state_count": 24,
+      "run_status": "completed"
+    },
+    {
+      "acceptance_rate": 0.84375,
+      "accepted_proposals": 27,
+      "chain_id": 1,
+      "condition_violations": 0,
+      "final_binary_sha256": "d561a4b7267fcbee9064dbf50654c1045b375c8212d3a32a3c939bdc9fbba51c",
+      "final_hard_seismic_loss": 14.670865058898926,
+      "final_sample_sha256": "a585a8550328b3514a236c26d946d079cc6e0010c06de5087c784f3ecb6abc13",
+      "initial_binary_sha256": "2a224cc6970e81cd84dd60716b5ea26f68e849619e497dc2777e595e1ea093c2",
+      "initial_hard_seismic_loss": 18.697872161865234,
+      "initial_noise_sha256": "63c31e0cba8689979c2d345f70e580523779ed785bb1e6b3ffac4186d3a417bd",
+      "initial_sample_sha256": "c98a6f575a0c7626108cec8255de18565a9e5ab67404043f233f33db3d90e0ea",
+      "initial_seed": 151521,
+      "initial_target_fraction": 0.029723368175951,
+      "initial_target_voxel_count": 5872,
+      "proposal_seed": 151621,
+      "retained_state_count": 24,
+      "run_status": "completed"
+    },
+    {
+      "acceptance_rate": 0.96875,
+      "accepted_proposals": 31,
+      "chain_id": 2,
+      "condition_violations": 0,
+      "final_binary_sha256": "ba5a6c72886bc33de7c26c5826de8c0d88fcb428ad74b89bfa51746a51437d37",
+      "final_hard_seismic_loss": 13.385568618774414,
+      "final_sample_sha256": "5bab0f277ba6606189aae017f60865b12b7d0cb9b3191146d2c810e0463c8faa",
+      "initial_binary_sha256": "23a434e137d20aa83f631bfbe33d07a868f363ba1fd48fda791de1ee9a26c6db",
+      "initial_hard_seismic_loss": 14.489023208618164,
+      "initial_noise_sha256": "fba4f2a05d599861e9b0fbac6eed6cdbb26a6b8a5279148979bb226fb539cf27",
+      "initial_sample_sha256": "b74d24176a7f2162e3688ad96ec14042e61e481cfdc20bfaf09d4f5289df2a19",
+      "initial_seed": 151522,
+      "initial_target_fraction": 0.014269443952317076,
+      "initial_target_voxel_count": 2819,
+      "proposal_seed": 151622,
+      "retained_state_count": 24,
+      "run_status": "completed"
+    },
+    {
+      "acceptance_rate": 0.9375,
+      "accepted_proposals": 30,
+      "chain_id": 3,
+      "condition_violations": 0,
+      "final_binary_sha256": "dc4b339d1b589f4d4e3c64dfd2ad06c5e050115520465f293820a1e0e1acaa4e",
+      "final_hard_seismic_loss": 14.600726127624512,
+      "final_sample_sha256": "623ae4e40f583e50468d75fd78723b0334d3677cff153eaa0199aa1789f2d49c",
+      "initial_binary_sha256": "c52776f7b3d5b18bbe24a02200d1793498fa9ea28de4852f3c7fcb6594f05a38",
+      "initial_hard_seismic_loss": 16.67155647277832,
+      "initial_noise_sha256": "cc305ab3becc9a92c4dcade641dbc09461ad7153528fad157a928a6d49f35729",
+      "initial_sample_sha256": "545814d0c3259bb739cbf2f9d398de18980d30d857c52290e0bb1ae10cb9bfdc",
+      "initial_seed": 151523,
+      "initial_target_fraction": 0.02799726658398927,
+      "initial_target_voxel_count": 5531,
+      "proposal_seed": 151623,
+      "retained_state_count": 24,
+      "run_status": "completed"
+    }
+  ],
+  "checkpoint": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+    "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+    "size_bytes": 849415038
+  },
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_flow_pcn_pilot_v1.json",
+    "sha256": "2211bbd9bf59b55cbb17d429e91618c084dbff50c4e5208f7e18f342efaa66a8",
+    "size_bytes": 1272
+  },
+  "created_at_utc": "2026-08-12T20:24:31.032909+00:00",
+  "cuda_device_name": "NVIDIA GeForce RTX 4090 D",
+  "device": "cuda",
+  "full_parameters": {
+    "burn_in": 8,
+    "checkpoint": {
+      "path": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c"
+    },
+    "condition_policy": "project_clean_embedding_before_first_and_after_every_euler_step_v1",
+    "device": "cuda",
+    "dtype": "float32",
+    "id": "binary_flow_pcn_pilot_v1",
+    "initial_seeds": [
+      151520,
+      151521,
+      151522,
+      151523
+    ],
+    "likelihood": "binary_label9_hard_seismic_likelihood",
+    "likelihood_weight": 1.0,
+    "model_weights": "ema",
+    "n_chains": 4,
+    "n_euler_steps": 32,
+    "negative_threshold": 0.2,
+    "occupancy_interpretation": "ensemble_occupancy_frequency_not_calibrated_bayesian_posterior_probability",
+    "parameter_sweep": false,
+    "parameterization": "frozen_conditional_flow_initial_gaussian_noise_only",
+    "pcn_beta": 0.1,
+    "positive_threshold": 0.8,
+    "proposal_seeds": [
+      151620,
+      151621,
+      151622,
+      151623
+    ],
+    "proposals_per_chain": 32,
+    "sampler": "pcn_full_initial_noise_hard_seismic_v1",
+    "schema": "stage15_binary_flow_pcn_config_v1",
+    "state_accounting": "post_burnin_complete_current_chain_states_including_rejection_duplicates_v1",
+    "status": "frozen_before_cuda_execution",
+    "thinning": 1,
+    "training": false,
+    "truth_used_by_runner": false
+  },
+  "generator_posterior_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/generator_posterior.py",
+    "sha256": "9faf5d1a27146992e30678e7f83bc0d6e4bbf6181406546f6dc981dca798fc28",
+    "size_bytes": 6845
+  },
+  "git_branch": "stage15-binary-seismic-consensus",
+  "git_head": "123d4dc3a1a33b8f03ff5b98894747b921a98fcd",
+  "input_assets": {
+    "flow_condition_mask.pt": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/flow_condition_mask.pt",
+      "sha256": "c1231c7a917e4f19f671724e2473f3cc8e8def48cba5158a225868bc9a22b460",
+      "size_bytes": 263869
+    },
+    "flow_condition_values.pt": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/flow_condition_values.pt",
+      "sha256": "dd35b7567a5e099e58a9d9f6cede667839cdbd8915dc96fd0fc6fa2b194c8247",
+      "size_bytes": 2098891
+    },
+    "observed_seismic.pt": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/observed_seismic.pt",
+      "sha256": "7a8aeb4b5adc2240e67d8e246d10570fd5b7ff553ad4da78df9fa92d4d161adf",
+      "size_bytes": 5244584
+    },
+    "sample_mask.pt": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/sample_mask.pt",
+      "sha256": "66b05f86e06345c82b163437b7a613831cbefddb10483c98842f91e3dd8a9444",
+      "size_bytes": 5244549
+    },
+    "subsurface_mask.pt": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/subsurface_mask.pt",
+      "sha256": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+      "size_bytes": 263841
+    },
+    "uncertainty.pt": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/uncertainty.pt",
+      "sha256": "21ea56fd32884ff52e268cfd2c71c67e6ad3d283d57aa5e4c641bc2a47df0b31",
+      "size_bytes": 5244549
+    }
+  },
+  "input_tensor_sha256": {
+    "flow_condition_mask.pt": "0d4da18816deaa7720ab3b4def3cdb03f0f651b7313dc6af7da515351d56e0aa",
+    "flow_condition_values.pt": "25e96e4dc508a53612f0b008ab8a43aadf4f147df2ec9aff44742af66c9cf30a",
+    "observed_seismic.pt": "f0f86c290373d06b38ea0c3bb5cb579622448e01144d71da295d745bdfaf50e2",
+    "sample_mask.pt": "216435404c2bd0e6e6438fcf5ef116227656f429fbcdf3edcf88708a3ff73f53",
+    "subsurface_mask.pt": "07f2e4fd629e700a1b6e03fba183d411f17a5c36358177c0857a1ff0188bd47b",
+    "uncertainty.pt": "5134432e5c90b98e696635a6d80cd7fd3e54f52f99e8f0c4a52b8eff990c627f"
+  },
+  "model_load_report": {
+    "checkpoint": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "checkpoint_epoch": 1651,
+    "checkpoint_global_step": 8376,
+    "ema_applied": true,
+    "ema_entry_count": 411,
+    "ema_excluded_frozen_parameters": [
+      "embedding.weight"
+    ],
+    "ema_missing_trainable": [],
+    "ema_shape_mismatches": [],
+    "ema_unexpected": [],
+    "frozen_parameters": [
+      "embedding.weight"
+    ],
+    "model_parameter_count": 412,
+    "trainable_parameter_count": 411,
+    "weight_source": "ema"
+  },
+  "observation_manifest": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/manifest.json",
+    "sha256": "02c7b80741edaa89677a50b3cda086731ce9fc87f1ce34011c6d5e919ff02aad",
+    "size_bytes": 7168
+  },
+  "output_tensor_sha256": {
+    "consensus_target.pt": "a5da15cb8bf379c36355be0402e9572036ddfa5178810aea37d44b82b2eef650",
+    "guidance_roi.pt": "d8b92591136033f2f12552abfa1ed216f81a41962afee8e152c53f7e2077afbd",
+    "initial_binary_models.pt": "b5c515a4a5c4e56be7f5eebcbee9976b04090e963b4e0e9f2c3ff5efbdda7947",
+    "negative_mask.pt": "3449b60bec72ab8fc94949b70adca29b2df4e0a77dd4bd4df7abcda9be8d80bd",
+    "occupancy_frequency.pt": "eeb4945ddeb32c310de552add172738c7ebbbf33fc86ff666f273aac955f81c8",
+    "positive_mask.pt": "659db6f36522ae50fad3ed548cce1a0af12cbab82c019f8a4ea7c5210d7fbd94",
+    "prior_frequency.pt": "fe9f605db521771b293c9012cf915f155e6ffbdb38eb05c0392e3296aef109e3",
+    "retained_binary_states.pt": "118f8c7a381a1774a2a92c47870986c17c9b856e05db49a3e5daa98da84d04cf",
+    "retained_categorical_states.pt": "2a74c55c92bc07f4e277b8317d568e023c6210c02a33e8d06c3792c0ba4378e6",
+    "unknown_mask.pt": "4a3b0cb7f6255670627c8c8fc7f57f36a25b4a20582ece531832ec4462aae290"
+  },
+  "parameter_sweep_performed": false,
+  "pilot_summary": {
+    "path": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion/b2_flow_pcn_pilot_v1/pilot_summary.json",
+    "sha256": "3a8f1876409c912732e0d3753a698bdc7585726fd4c2ad685148557e7ba6681b",
+    "size_bytes": 4897
+  },
+  "resolved_protocol": {
+    "burn_in": 8,
+    "expected_retained_states": 96,
+    "initial_seeds": [
+      151520,
+      151521,
+      151522,
+      151523
+    ],
+    "n_chains": 4,
+    "proposal_seeds": [
+      151620,
+      151621,
+      151622,
+      151623
+    ],
+    "proposals_per_chain": 32,
+    "thinning": 1
+  },
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage15/run_binary_flow_pcn.py",
+    "sha256": "201ceb21ef707b0fc3f4c7c3388a5098325a67f57086e44f4253c236f4d8df1d",
+    "size_bytes": 34293
+  },
+  "runner_source_after_manifest_status_annotation": {
+    "change": "added run_status=completed to future per-chain manifests only; sampler, likelihood, states, and metrics unchanged",
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage15/run_binary_flow_pcn.py",
+    "sha256": "18432b8787b0362ac7f0fc72514be4f46591b3009904d393bd2e9bd27f5f981e",
+    "size_bytes": 34336
+  },
+  "runtime_seconds": 555.7673586271703,
+  "schema": "stage15_binary_flow_pcn_run_v1",
+  "seismic_config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+    "sha256": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02",
+    "size_bytes": 919
+  },
+  "seismic_parameters": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "source_acoustic_config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+    "sha256": "8980e30c59624af9f1bfa59447b7e22c85a2975f8a556fe6e98f5346f95d10ae",
+    "size_bytes": 1128
+  },
+  "stage15_b1_results_modified": false,
+  "summary": {
+    "geology": {
+      "initial_target_fraction_per_chain": [
+        0.02269241477057022,
+        0.029723368175951,
+        0.014269443952317076,
+        0.02799726658398927
+      ],
+      "initial_target_voxel_count_per_chain": [
+        4483,
+        5872,
+        2819,
+        5531
+      ],
+      "maximum_condition_violations": 0,
+      "post_burnin_target_fraction_max": 0.028650248423218727,
+      "post_burnin_target_fraction_median": 0.02125484123826027,
+      "post_burnin_target_fraction_min": 0.010761559940874577,
+      "post_burnin_target_voxel_count_max": 5660,
+      "post_burnin_target_voxel_count_median": 4199.0,
+      "post_burnin_target_voxel_count_min": 2126
+    },
+    "occupancy": {
+      "confidence_coverage": 0.9561185492647617,
+      "guidance_roi_voxels": 184368,
+      "negative_voxels": 188772,
+      "p9_max": 1.0,
+      "p9_mean_subsurface": 0.02082821913063526,
+      "p9_min": 0.0,
+      "positive_voxels": 114,
+      "prior_frequency_mean_subsurface_four_sample_diagnostic": 0.0236706230789423,
+      "unknown_voxels": 8669
+    },
+    "occupancy_interpretation": "ensemble_occupancy_frequency_not_calibrated_bayesian_posterior_probability",
+    "positive_geometry": {
+      "bounding_box_max": [
+        46,
+        63,
+        25
+      ],
+      "bounding_box_min": [
+        36,
+        56,
+        2
+      ],
+      "components_at_least_20_voxels": 2,
+      "largest_component_fraction": 0.5526315789473685,
+      "largest_component_size": 63,
+      "six_connected_component_count": 2
+    },
+    "sampler": {
+      "acceptance_rate_per_chain": [
+        0.9375,
+        0.84375,
+        0.96875,
+        0.9375
+      ],
+      "overall_acceptance_rate": 0.921875,
+      "repeated_retained_binary_states": 7,
+      "repeated_retained_categorical_states": 7,
+      "retained_state_count": 96,
+      "unique_binary_models": 89,
+      "unique_hard_models": 89
+    },
+    "scientific_distinction": {
+      "phase5c": "15-class petrophysical hard seismic likelihood",
+      "stage15_b2": "target-specific binary label9-vs-all-non-label9-subsurface hard seismic likelihood"
+    },
+    "seismic": {
+      "initial_hard_seismic_loss_per_chain": [
+        16.727596282958984,
+        18.697872161865234,
+        14.489023208618164,
+        16.67155647277832
+      ],
+      "maximum_post_burnin_hard_seismic_loss": 18.521928787231445,
+      "median_post_burnin_hard_seismic_loss": 14.635795593261719,
+      "minimum_post_burnin_hard_seismic_loss": 12.587499618530273,
+      "post_burnin_loss_per_state": [
+        14.403404235839844,
+        14.502174377441406,
+        15.466120719909668,
+        15.858888626098633,
+        14.9550199508667,
+        14.480363845825195,
+        14.068984985351562,
+        13.975323677062988,
+        14.101483345031738,
+        13.697871208190918,
+        14.140542984008789,
+        14.283395767211914,
+        14.296073913574219,
+        14.31498908996582,
+        14.560403823852539,
+        14.273752212524414,
+        14.026037216186523,
+        14.393564224243164,
+        14.4266939163208,
+        13.844869613647461,
+        13.970227241516113,
+        13.754362106323242,
+        13.769381523132324,
+        14.077672958374023,
+        16.349916458129883,
+        15.95677375793457,
+        16.342510223388672,
+        16.558645248413086,
+        16.558645248413086,
+        16.254718780517578,
+        15.670135498046875,
+        16.020084381103516,
+        15.867422103881836,
+        16.43642807006836,
+        15.346219062805176,
+        15.727323532104492,
+        15.690130233764648,
+        15.690130233764648,
+        15.73291301727295,
+        15.023236274719238,
+        15.023236274719238,
+        15.023236274719238,
+        14.699444770812988,
+        14.967733383178711,
+        14.775158882141113,
+        14.311973571777344,
+        14.115923881530762,
+        14.670865058898926,
+        12.886152267456055,
+        12.587499618530273,
+        13.027841567993164,
+        12.901107788085938,
+        12.777819633483887,
+        12.724926948547363,
+        13.161550521850586,
+        13.16094970703125,
+        13.442105293273926,
+        13.00579833984375,
+        13.420001029968262,
+        14.037778854370117,
+        13.590710639953613,
+        13.564714431762695,
+        13.8378267288208,
+        13.909375190734863,
+        14.086934089660645,
+        13.89684772491455,
+        14.139452934265137,
+        13.98222541809082,
+        14.00355052947998,
+        13.747007369995117,
+        13.385568618774414,
+        13.385568618774414,
+        15.891439437866211,
+        15.891439437866211,
+        15.891439437866211,
+        16.380327224731445,
+        16.324077606201172,
+        15.728045463562012,
+        16.350406646728516,
+        16.175573348999023,
+        16.526363372802734,
+        17.443523406982422,
+        17.40741729736328,
+        17.59895896911621,
+        18.031347274780273,
+        18.15005874633789,
+        18.521928787231445,
+        18.011106491088867,
+        16.9671630859375,
+        17.133726119995117,
+        16.61549949645996,
+        16.316173553466797,
+        15.87286376953125,
+        16.06068229675293,
+        15.366086959838867,
+        14.600726127624512
+      ]
+    },
+    "truth_loaded_by_runner": false
+  },
+  "training_performed": false,
+  "truth_loaded_by_runner": false
+}

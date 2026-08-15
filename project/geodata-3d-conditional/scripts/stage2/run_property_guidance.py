@@ -61,6 +61,10 @@ PHASE2_EXPERIMENT_STAGES = {
         "log-impedance and spread-derived confidence; synthetic inverse-crime, "
         "not measured geophysics."
     ),
+    "stage15_binary_trace_property_bridge_v1": (
+        "Truth-blind full-trace binary seismic inversion property bridge; "
+        "synthetic inverse-crime and not measured geophysics."
+    ),
 }
 PHASE2_PAIR_FIELDS = (
     "protocol_version",
@@ -205,9 +209,10 @@ def validate_args(args: argparse.Namespace) -> None:
         raise ValueError("guidance_start must satisfy 0 <= start < 1")
     if args.target_roi_radius < 0:
         raise ValueError("target ROI radius must be non-negative")
-    is_bridge = getattr(args, "experiment_stage", "phase2a_ideal_3d_property") == (
-        "phase5b_inversion_property_bridge_v1"
-    )
+    is_bridge = getattr(args, "experiment_stage", "phase2a_ideal_3d_property") in {
+        "phase5b_inversion_property_bridge_v1",
+        "stage15_binary_trace_property_bridge_v1",
+    }
     external_property_dir = getattr(args, "external_property_dir", None)
     confidence_mode = getattr(args, "confidence_mode", "unconditioned_nonair_v1")
     if is_bridge and external_property_dir is None:
@@ -295,16 +300,24 @@ def _load_external_property_assets(
     """Load and validate the completed truth-blind Phase-5b bridge assets."""
     manifest_path = directory / "manifest.json"
     manifest = _read_json(manifest_path)
-    if manifest.get("schema") != "phase5b_inversion_property_assets_v1":
+    schema = manifest.get("schema")
+    if schema not in {
+        "phase5b_inversion_property_assets_v1",
+        "stage15_binary_trace_property_assets_v1",
+    }:
         raise ValueError("external property manifest has the wrong schema")
     if manifest.get("status") != "complete":
         raise ValueError("external property manifest is not complete")
-    for field, expected in {
+    required_flags = {
         "truth_geology_loaded": False,
         "truth_acoustic_loaded": False,
         "truth_metrics_used_for_construction": False,
-        "phase5a_pass_bit_used_as_stop_gate": True,
-    }.items():
+    }
+    if schema == "phase5b_inversion_property_assets_v1":
+        required_flags["phase5a_pass_bit_used_as_stop_gate"] = True
+    else:
+        required_flags["trace_boundary_evaluation_used_as_stop_gate"] = True
+    for field, expected in required_flags.items():
         if manifest.get(field) is not expected:
             raise ValueError(f"external property manifest {field} must be {expected}")
     records = manifest.get("generated_tensors")
@@ -531,7 +544,10 @@ def main() -> None:
     )
     condition_mask_cpu = (boreholes_cpu != -1) | (truth_cpu == -1)
     external_property_manifest: dict[str, object] | None = None
-    if args.experiment_stage == "phase5b_inversion_property_bridge_v1":
+    if args.experiment_stage in {
+        "phase5b_inversion_property_bridge_v1",
+        "stage15_binary_trace_property_bridge_v1",
+    }:
         target_properties, confidence_cpu, external_property_manifest = (
             _load_external_property_assets(
                 args.external_property_dir,
@@ -614,9 +630,14 @@ def main() -> None:
             "target_metadata": target_metadata,
             "target_roi_radius": args.target_roi_radius,
             "target_roi_voxels": int(target_roi.sum().item()),
-            "truth_derived": args.experiment_stage != "phase5b_inversion_property_bridge_v1",
-            "inversion_posterior_derived": args.experiment_stage
-            == "phase5b_inversion_property_bridge_v1",
+            "truth_derived": args.experiment_stage not in {
+                "phase5b_inversion_property_bridge_v1",
+                "stage15_binary_trace_property_bridge_v1",
+            },
+            "inversion_posterior_derived": args.experiment_stage in {
+                "phase5b_inversion_property_bridge_v1",
+                "stage15_binary_trace_property_bridge_v1",
+            },
             "external_property_manifest": (
                 str(args.external_property_dir / "manifest.json")
                 if args.external_property_dir is not None

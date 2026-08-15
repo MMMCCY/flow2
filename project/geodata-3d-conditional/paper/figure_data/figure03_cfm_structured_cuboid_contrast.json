@@ -1,0 +1,126 @@
+{
+  "benchmark_semantics": {
+    "description": "Two-material analytic five-body benchmark; three drilled fixed bodies and two hidden bodies selected from a frozen twelve-body dictionary.",
+    "fixed_body_count": 3,
+    "fixed_target_voxels": 1920,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "hidden_body_count": 2,
+    "hidden_candidate_indices": [
+      4,
+      6
+    ],
+    "hidden_target_voxels": 1280,
+    "target_label": 9
+  },
+  "case_id": "five_body_cuboid_v1",
+  "d4_protocol_attainment": {
+    "definition_note": "D4 per-step paired attainment; not the Stage7 fixed-BASE-endpoint column",
+    "final": 0.11524064334027935,
+    "maximum": 0.30643379548394667
+  },
+  "figure_id": "figure03_cfm_structured_cuboid_contrast",
+  "metrics": {
+    "baseline": {
+      "hard_attainment_relative_to_base_flow_endpoint": 0.0,
+      "hard_correct_observation_rmse": 0.044147104024887085,
+      "hidden_target_iou": 0.0,
+      "hidden_target_precision": 0.0,
+      "hidden_target_recall": 0.0,
+      "method": "BASE_frozen_flow_sample"
+    },
+    "guided": {
+      "hard_attainment_relative_to_base_flow_endpoint": 0.05938350375439383,
+      "hard_correct_observation_rmse": 0.04152549430727959,
+      "hidden_target_iou": 0.023597273203985317,
+      "hidden_target_precision": 0.06696428571428571,
+      "hidden_target_recall": 0.03515625,
+      "method": "continuous_BASE_PLUS_PHYSICS_best_hard_state"
+    },
+    "structured": {
+      "hard_attainment_relative_to_base_flow_endpoint": 1.0,
+      "hard_correct_observation_rmse": 0.0,
+      "hidden_target_iou": 1.0,
+      "hidden_target_precision": 1.0,
+      "hidden_target_recall": 1.0,
+      "method": "structured_hard_geophysics"
+    }
+  },
+  "rendering": {
+    "camera": {
+      "cut_fraction": 0.52,
+      "focal_point_fraction": [
+        0.5,
+        0.5,
+        0.45
+      ],
+      "parallel_projection": true,
+      "position_direction": [
+        1.48,
+        -1.92,
+        1.08
+      ],
+      "view_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "zoom": 1.12
+    },
+    "camera_name": "perspective_oblique",
+    "context_opacity": 0.075,
+    "coordinate_bounds": {
+      "x": [
+        0,
+        64
+      ],
+      "y": [
+        0,
+        64
+      ],
+      "z": [
+        0,
+        64
+      ]
+    },
+    "observed_reference_color": "#168A89",
+    "palette": {
+      "-1": "#FFFFFF",
+      "0": "#7A6652",
+      "1": "#8C4E85",
+      "10": "#C94C4C",
+      "11": "#A33E63",
+      "12": "#7B4FA3",
+      "13": "#5E4B8B",
+      "2": "#3B6FB6",
+      "3": "#5A91C8",
+      "4": "#56B4B8",
+      "5": "#4DA66D",
+      "6": "#86B84A",
+      "7": "#C5C55A",
+      "8": "#E5C55C",
+      "9": "#D95F02"
+    },
+    "reference_outline_opacity": 0.78,
+    "target_opacity": 0.82,
+    "truth_outline_color": "#2B2B2B"
+  },
+  "reproducibility": {
+    "hyperparameter_search": false,
+    "new_training": false,
+    "sample_reselection": false,
+    "saved_3d_tensor_missing": false,
+    "truth_based_reranking": false,
+    "unreproducible_panels": []
+  },
+  "schema": "figure03_cfm_structured_cuboid_contrast_data_v1",
+  "selection": {
+    "criterion": "minimum hard observed seismic RMSE only",
+    "structured_is_cfm": false,
+    "truth_role": "retrospective display and evaluation only",
+    "truth_used_for_selection": false
+  }
+}

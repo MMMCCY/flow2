@@ -1,0 +1,29 @@
+{
+  "case_index": 127,
+  "coarse_inversion_score_tensor_sha256": "6d22a50e9f270fb176662973077ef28b6734438f8912d7f7b7f1ac9d6fb0bc68",
+  "coarse_truth_occupancy_tensor_sha256": "4a765b5256a420af88bc0c9a9df3ec439279e66b646931f4c9660ab0de40ff83",
+  "final_gradient_norm": 0.0,
+  "final_seismic_mse": 0.0,
+  "geology_tensor_sha256": "4b9f05f6e684f005c298a22872a848fa2dd11454507ca5fad4c615919a65a4bb",
+  "initial_seismic_mse": 0.0,
+  "label9_voxels": 0,
+  "loss_reduction_fraction": 0.0,
+  "markov_sequence": [
+    "BaseStrata",
+    "Erosion",
+    "Sediment",
+    "Erosion",
+    "Erosion",
+    "Sediment",
+    "Erosion",
+    "Fault",
+    "Fold",
+    "End"
+  ],
+  "root_seed": 15180127,
+  "runtime_seconds": 2.6457994158845395,
+  "split": "validation",
+  "subsurface_tensor_sha256": "1b64582d28da0cf4fbe376950c1cafee145904873b43b5732c958a5eb45b3ac9",
+  "synthetic_seismic_tensor_sha256": "881162049a8d41cfb41aaf8850e3cb4f5cc81f21b51aff8c260c035eeb0e75d0",
+  "target_containing_coarse_cells": 0
+}

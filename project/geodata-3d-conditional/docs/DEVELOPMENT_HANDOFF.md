@@ -1,10 +1,71 @@
 # Development handoff
 
+## Stage15 topology-support stress test (2026-08-14)
+
+A new controlled A/B experiment freezes the existing checkpoint and compares a
+volume-matched solid oblate label-9 body (2543 voxels, beta1=0) with a toroidal
+label-9 body (2524 voxels, beta1=1).  Both use the same cond_generation_0
+background after replacing its original label 9 by raw label 4, the same
+surface/nine boreholes, the same concealed center, and the frozen Stage15
+binary acoustic convolutional forward.  The registered target intersects no
+borehole.  Source seeds 42/142/242 are fixed and unselected.
+
+All 18 Flow outputs completed on the RTX 4090 D with zero condition violations:
+Flow-only, Stage15-H trace-inversion property guidance, and truth-derived
+oracle probability guidance for both cases.  On the ring case, median label-9
+IoU is 0.00019 / 0.30917 / 0.99370; median recall is
+0.00040 / 0.98177 / 1.00000.  Oracle guidance produces target-crop beta1=1 in
+2/3 samples and median azimuthal ring coverage 1.0, demonstrating useful
+expressive support for the code-defined ring under direct inference guidance.
+The Stage15-H bridge also produces beta1=1 in 2/3 and ring coverage 1.0, but
+fills part of the center (median hole preservation 0.7117), has low precision
+0.3110, and worsens median hard seismic RMSE from 0.02831 to 0.03430.  Its
+geometric gain therefore cannot be called an observation-consistent correction.
+
+The v1 retrospective gate is preserved as a metric-design failure: it required
+central-hole preservation to exceed Flow-only, but an empty Flow prediction has
+the degenerate score 1.0.  Evaluation v2 replaces only that clause with
+azimuthal ring coverage and reruns no Flow or inversion.  Its decision is
+`PRIOR_SUPPORTS_RING_BUT_SEISMIC_BRIDGE_INSUFFICIENT`.  This is a frozen-prior
+stress test, not proof that the topology was absent from every historical
+streaming training sample.  Authoritative artifacts are under
+`experiments/stage15_topology_support/{cases_v1_fix1,runs_v1_fix1,reports/topology_support_v2}`.
+
 Updated: 2026-08-11 after the new end-to-end exploratory Stage 14 pilot tested
 whether the previous bridge-only stop rule was overly conservative. The frozen
 Flow did not benefit from the existing Stage12B post-seismic P(label9) volume:
 the machine decision is `GANSIM_STYLE_GEO_GUIDANCE_NOT_SUPPORTED`. Historical
 Stage10, Stage12 and Stage13 machine decisions remain unchanged.
+
+Stage15-C was completed on 2026-08-13 as a newly authorized non-neural direct
+mapper. It used 128 fixed new Full StructuralGeo seeds, the unchanged Stage15
+binary acoustic/seismic forward, one 17-sample (128 ms) centered local-energy
+attribute, fixed-background-velocity time-to-depth resampling, and 64 pooled
+quantile bins with Laplace probabilities. The calibration distribution was
+strongly zero-inflated: ties left 63/64 quantile bins empty, and the held-out
+`cond_generation_0` map became the constant natural calibration prevalence
+`0.0098096961`. Retrospective AUPRC was `0.045394953`, below frozen B2
+occupancy AUPRC `0.057284505`; truth/background means and medians were equal,
+the `P9>=0.8` diagnostic mask was empty, and all 8,968 truth-label9 voxels fell
+under `P9<=0.2`. Stage15-C stops here: do not tune the window, bins, fixed
+velocity, diagnostic thresholds, add attributes/models, or run Flow guidance
+under this protocol.
+
+Stage15-D was explicitly stopped before implementation because Stage15-C did
+not persist its per-case trace/column tensors and deterministic replay was not
+authorized. Stage15-E then completed a Flow-free 4x4x4 coarse binary seismic
+identifiability test. Since 64/4=16, each of the 64 coarse parameters was
+nearest-repeated over a 16x16x16 fine block; this arithmetic clarification is
+frozen in the config. Eight fixed Adam inversions used only raw seismic MSE for
+300 iterations. Final MSEs clustered at `0.000704765–0.000705092`, but truth
+localization failed: per-run median Pearson/Spearman were `-0.05205/0.00290`,
+median target-minus-background q was only `0.000986`, and the eight-run mean
+had Pearson/Spearman `-0.11286/-0.10096`, target/background q
+`0.517821/0.517536`, top-k overlap `19/33`, and centroid distance `0.93652`
+coarse cells. The machine decision is `COARSE_LABEL9_LOCALIZATION_FAILS`.
+Do not reinterpret seismic-loss reduction as localization success or change
+coarse size, add regularization, sweep parameters, or enter Flow guidance
+under this protocol.
 
 ## Read this first in a new conversation
 
@@ -1004,6 +1065,169 @@ Do not promote the discarded `stage7_v1`, `fix1`–`fix5`, or partial
 Training is still unnecessary for this bounded structured family; no adapter,
 LoRA, U-Net fine-tuning or generator retraining was started.
 
+## Stage-15F minimal inversion-score calibration
+
+Stage15-F freezes the simplest population-level bridge requested after the
+negative Stage15-E 4-cubed test. It uses 128 new StructuralGeo seeds
+15180000--15180127, split by complete model into 96 train and 32 validation
+cases. Every case receives the same deterministic all-zero initialization,
+8-cubed sigmoid parameterization, 300-step Adam inversion and raw seismic MSE.
+No Flow, regularization, class balancing, network, feature engineering or
+parameter sweep is used. The 128 Stage15-C cases were not replayed because
+their per-case geology/seismic tensors were not persisted.
+
+The single calibration variable is the upsampled coarse inversion score. A
+64-quantile, Laplace-smoothed empirical lookup maps that score to P(label9).
+Only 18/96 training and 5/32 validation models naturally contain label9. The
+pooled validation prevalence/AUPRC is `0.0080414/0.0677404`, and truth versus
+background mean P9 is `0.0718413/0.0101997`. Across the five positive
+validation models, however, only 3/5 have AUPRC above their own prevalence and
+3/5 have positive truth/background separation; 58/64 bins are empty because
+the deterministic inversion scores contain many ties. The signal is therefore
+real in the pooled diagnostic but not uniformly model-stable.
+
+The truth-blind cond_generation_0 probability volume reaches AUPRC `0.0898724`
+versus Stage15-B2 `0.0572845` and Stage15-C `0.0453950`. Truth/background mean
+P9 is `0.0846406/0.0388203`; raw coarse score Pearson/Spearman is
+`0.167968/0.202518`, top-k is `80/129`, and centroid distance is `1.43386`
+coarse cells. The calibrated range is only `0.0047967..0.116416`, so the
+historical 0.8 diagnostic has zero positives and all truth voxels fall in the
+<=0.2 partition. Do not interpret that historical threshold failure as absent
+ranking information, and do not pass this map to Flow yet: cross-model
+stability is not established. Authoritative artifacts are under
+`experiments/stage15_binary_seismic_consensus/{inversion_probability,reports/inversion_score_probability_truth_evaluation_8x8x8_v2}`.
+
+## Stage-15G binary case-relative linear mapper
+
+Stage15-G reuses all frozen Stage15-F 8-cubed inversion scores. It reruns no
+seismic forward or inversion and uses no Flow. Deterministic StructuralGeo
+replay reconstructs only the subsurface support and the strictly binary target
+`raw label9=1 / every other subsurface voxel=0`; tensor hashes must reproduce
+the Stage15-F records. The mapper is one `nn.Linear(4,1)` over raw inversion
+score, within-case percentile, vertical contrast and normalized depth. Its
+soft coarse occupancy target weighted by subsurface voxel count is exactly
+equivalent to natural-prevalence fine-voxel binary BCE. There is no class
+balancing, hidden layer or parameter sweep.
+
+The first `calibration_n128_8x8x8_v1` attempt completed replay/training but
+stopped before held-out application because provenance hashing did not accept
+the scalar bias tensor. The only fix stores bias as shape `[1]`; the complete
+immutable run is `v2`. It reaches final train BCE `0.0503901`. On the same
+frozen 32-model validation split, pooled AUPRC improves from Stage15-F
+`0.0677404` to `0.0935104`; truth/background mean P9 is
+`0.0874618/0.0118569`. Four of five label9-positive validation models have
+AUPRC above their own prevalence and positive truth/background separation,
+versus three of five under the global histogram.
+
+On retrospectively exposed cond_generation_0, AUPRC is `0.0915817`, only a
+small increase over Stage15-F `0.0898724` but above Stage15-B2 `0.0572845` and
+Stage15-C `0.0453950`. Truth/background mean P9 is `0.0829841/0.0386006`; the
+range is `0.00219582..0.364265`. The historical 0.8 diagnostic still has no
+positive voxels; 1618/8968 truth voxels lie in 0.2--0.8 and 7350/8968 at or
+below 0.2. This is improved binary ranking evidence, not yet a high-confidence
+Flow-ready probability volume. The learned standardized coefficients are
+raw-q `+0.198`, within-case percentile `-0.690`, vertical contrast `+0.127`,
+depth `+0.749`; depth contribution means the result must not be attributed to
+geophysics alone without a later matched control. Authoritative outputs are
+under `experiments/stage15_binary_seismic_consensus/{binary_logistic,reports/binary_inversion_logistic_truth_evaluation_v2}`.
+
+For near-term reporting, an explicitly post-hoc illustrative artifact was
+built without new training, forward modeling or inversion. Among the five
+label9-positive frozen validation cases, the fixed rule selects the largest
+absolute `AUPRC - own prevalence`, yielding seed 15180114. It contains 17,601
+label9 voxels; prevalence is `0.0671425`, Stage15-F AUPRC is `0.0965277`, and
+Stage15-G AUPRC is `0.1390130`. Truth/background mean P9 separation is
+`+0.0344134`. The three-projection figure shows coarse deep-region overlap but
+also blocky spatial spread. It is stored under
+`reports/binary_logistic_showcase_seed15180114_v1/` and must always be labeled
+as a favorable post-hoc validation example, not held-out evidence, robust
+generalization, or a Phase1-equivalent success.
+
+## Stage-15 exploratory geophysical-evidence Flow demonstration
+
+For a near-term presentation, Stage15 runs one explicitly post-hoc exploratory
+Flow demonstration on the already exposed cond_generation_0 case. Historical
+0.8/0.2 diagnostics are not changed. The frozen Stage15-G binary P9 volume is
+divided by its subsurface maximum and clipped to `[0,1]`; this is disclosed as
+`guidance evidence`, not calibrated probability. The truth-blind runner uses
+the Phase1 protocol-v4 controller unchanged at alpha/cap 0.25 for eight fixed
+strict pairs with seeds 42/142/242/342/442/542/642/742. It reads no truth and
+does not select a sample. The independent retrospective evaluator reports all
+eight pairs, then selects maximum label9-IoU improvement for visualization.
+
+All 8/8 pairs improve label9 IoU and recall. Median changes are
+IoU `+0.03336`, precision `+0.09134`, recall `+0.03841`; all hard-condition
+violations are zero. Global mIoU decreases in all eight pairs, median
+`-0.01584`, so this remains target-specific exploratory evidence rather than a
+complete geology success. The post-hoc selected seed 142 changes label9
+IoU `0.01896 -> 0.06711`, precision `0.07301 -> 0.17071`, recall
+`0.02498 -> 0.09958`, and centroid distance `22.13 -> 18.05` fine voxels;
+global mIoU changes `0.17453 -> 0.16335`. Full categorical models, all pair
+metrics, the selected target comparison and fixed-camera 3-D presentation
+figures are in
+`experiments/stage15_binary_seismic_consensus/reports/flow_demo_posthoc_seed_screen_n8_v2/`.
+Do not cite the selected seed alone as held-out or generalized evidence; cite
+the 8/8 target result together with the global-geology tradeoff and post-hoc
+selection disclosure.
+
+A follow-up morphology correction removes the nearest-repeated fine target and
+the voxelwise hard-Dice term.  The new loss averages the Flow soft label-9
+probability within each frozen 8x8x8 cell and matches that coarse occupancy by
+binary BCE, leaving within-cell morphology to the frozen generator.  This
+eliminates the visibly cuboid target bodies, and again improves label-9 IoU and
+recall in 8/8 fixed pairs.  Median deltas are IoU `+0.01996`, precision
+`+0.06155`, recall `+0.02503`; median global mIoU delta is `-0.01311`.
+
+It is not Phase1-equivalent.  The selected seed 142 changes IoU
+`0.01896 -> 0.05389`, precision `0.07301 -> 0.13979`, recall
+`0.02498 -> 0.08062`, and centroid distance `22.13 -> 12.45`, but its hard
+label-9 connected-component count changes `45 -> 890` and largest-component
+fraction `0.7298 -> 0.1883`.  Thus the block artifact is replaced by excessive
+fragmentation: the geophysical map supplies useful coarse localization but not
+the fine geometry available to the Phase1 truth-derived oracle.  The
+Phase1-style fixed-camera six-panel figure and all metrics are under
+`experiments/stage15_binary_seismic_consensus/reports/flow_demo_coarse_occupancy_seed_screen_n8_v3/`;
+the truth-blind paired tensors are under sibling
+`flow_demo/coarse_occupancy_seed_screen_n8_v2/`.  The earlier `v1` run stopped
+before its first pair due to a missing trace-diagnostic compatibility field and
+must not be interpreted as scientific output.
+
+## Stage-15H full-trace binary boundary/property result
+
+Stage15-H replaces coarse 3-D occupancy inversion with complete independent
+320-sample trace inversion.  It never truncates the vertical forward model:
+all 4096 XY traces are solved together using the frozen 25-Hz convolutional
+operator, a background binary prior, two fixed linearized log-impedance
+refinements and known background/label9 acoustic endpoints.  The inversion
+runner is truth-blind and uses no Flow, training, threshold sweep, or lateral
+filter.  The continuous score has held-out voxel AUPRC `0.5123866`, versus
+Stage15-G `0.0915817`; truth/background means are `0.137269/0.002102`.
+Vertical boundary AUPRC is `0.5805124` and XY footprint AUPRC is `1.0`.  The
+fixed 0.5 display core has precision/recall/IoU
+`0.949953/0.112177/0.111518`.
+
+The successful Flow bridge uses the Phase2 matched multiscale property loss
+with a strictly binary normalized codebook: label9 endpoint 1, all other
+categories endpoint 0.  The inversion score is used as continuous positive
+confidence, not as calibrated occupancy and without thresholding.  Seeds
+42/142/242 all improve label9 IoU, precision, recall, global mIoU and global
+accuracy with zero condition violations.  Guided IoUs are
+`0.23149/0.27563/0.29426`; the figure-selected seed 242 changes IoU
+`0.06716 -> 0.29426`, precision `0.18306 -> 0.41375`, recall
+`0.09590 -> 0.50468`, centroid distance `9.06 -> 4.27`, and global mIoU
+`0.17301 -> 0.19126`.  This is strong synthetic binary inverse-crime evidence,
+not a field-generalization result or Phase2a truth-property equivalence.
+
+Authoritative report, all three pairs, Phase1-style fixed-camera figure and
+geophysical diagnostics are under
+`experiments/stage15_binary_seismic_consensus/reports/binary_trace_property_flow_v2/`.
+The first evaluation-output directory stopped during rendering because generic
+Phase2 samples were 3-D rather than `[1,1,64,64,64]`; it contains no completed
+report.  Property bridge attempts v1/v2 suppressed target because unresolved
+background dominated confidence; v3 used unnormalized physical values and was
+inert after non-finite gradient protection.  They are retained as negative
+engineering evidence.  The successful normalized binary bridge is v4.
+
 ## Validation state at handoff
 
 - Phase-1 report regeneration succeeded locally with `.venv/bin/python`.
@@ -1130,3 +1354,33 @@ protocol. Authoritative artifacts are under
 `experiments/stage14_gansim_style_geo_guidance/`, including the frozen
 protocol, truth-blind run manifests/traces, per-arm metrics, paired deltas,
 human report and machine decision.
+
+## Stage15 five-body prior/geophysics support experiment
+
+The Stage7-style topology question was rerun through the current frozen Flow
+and Stage15 binary-seismic guidance path after closing the case-definition
+risks. One current-checkpoint-compatible 64-cubed background contains five
+equal, disjoint 640-voxel bodies, all encoded as raw label9. Three bodies are
+intersected by hard-conditioned wells; two bodies have exactly zero hard-
+condition overlap. The current checkpoint, full hard conditions, Stage15
+binary acoustic endpoints and convolutional seismic operator are unchanged.
+The case manifest records a passed risk gate. Seeds 42, 142 and 242 were run
+for `FLOW_ONLY`, `SEISMIC_GUIDED` and the diagnostic `ORACLE_GUIDED` arm; no
+seed selection or parameter sweep was used.
+
+Across the three seeds, Flow-only has median full/hidden IoU
+`0.1146/0.0106` and aggregate hidden recall `0.1375`. Stage15 seismic guidance
+raises these to `0.1608/0.0679` and hidden recall `0.9016`, but predicts a
+median 18,675 label9 voxels for a 3,200-voxel target and merges all ten pairs
+among the five truth bodies into the same connected system. Its hard-seismic
+RMSE (`0.048009`) is also not lower than Flow-only (`0.044608`). Oracle spatial
+guidance reaches full IoU `0.9459`, hidden recall `1.0`, and zero merged truth-
+body pairs.
+
+The experiment therefore separates spatial support from topology fidelity.
+Current seismic guidance can reveal hidden label9 locations, but the indirect
+bridge plus learned prior converts that evidence into an overconnected,
+overpredicted morphology. The oracle arm proves that the frozen generator has
+representational support for the separated five-body target, so this is not
+evidence of an absolute inability to generate the topology. Authoritative
+artifacts are under `experiments/stage15_five_body_flow/`.

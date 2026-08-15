@@ -1,0 +1,546 @@
+{
+  "benchmark_semantics": {
+    "description": "Two-material analytic five-body benchmark; three drilled fixed bodies and two hidden bodies selected from a frozen twelve-body dictionary.",
+    "fixed_body_count": 3,
+    "fixed_target_voxels": 1920,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "hidden_body_count": 2,
+    "hidden_candidate_indices": [
+      4,
+      6
+    ],
+    "hidden_target_voxels": 1280,
+    "target_label": 9
+  },
+  "camera_and_rendering": {
+    "camera": {
+      "cut_fraction": 0.52,
+      "focal_point_fraction": [
+        0.5,
+        0.5,
+        0.45
+      ],
+      "parallel_projection": true,
+      "position_direction": [
+        1.48,
+        -1.92,
+        1.08
+      ],
+      "view_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "zoom": 1.12
+    },
+    "camera_name": "perspective_oblique",
+    "context_opacity": 0.075,
+    "coordinate_bounds": {
+      "x": [
+        0,
+        64
+      ],
+      "y": [
+        0,
+        64
+      ],
+      "z": [
+        0,
+        64
+      ]
+    },
+    "observed_reference_color": "#168A89",
+    "palette": {
+      "-1": "#FFFFFF",
+      "0": "#7A6652",
+      "1": "#8C4E85",
+      "10": "#C94C4C",
+      "11": "#A33E63",
+      "12": "#7B4FA3",
+      "13": "#5E4B8B",
+      "2": "#3B6FB6",
+      "3": "#5A91C8",
+      "4": "#56B4B8",
+      "5": "#4DA66D",
+      "6": "#86B84A",
+      "7": "#C5C55A",
+      "8": "#E5C55C",
+      "9": "#D95F02"
+    },
+    "reference_outline_opacity": 0.78,
+    "target_opacity": 0.82,
+    "truth_outline_color": "#2B2B2B"
+  },
+  "d4_protocol_attainment": {
+    "definition_note": "D4 per-step paired attainment; not the Stage7 fixed-BASE-endpoint column",
+    "final": 0.11524064334027935,
+    "maximum": 0.30643379548394667
+  },
+  "figure_id": "figure03_cfm_structured_cuboid_contrast",
+  "generation": {
+    "camera": {
+      "cut_fraction": 0.52,
+      "focal_point_fraction": [
+        0.5,
+        0.5,
+        0.46
+      ],
+      "parallel_projection": true,
+      "position_direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "view_up": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "zoom": 1.14
+    },
+    "generated_at_utc": "2026-08-12T05:37:54.739674+00:00",
+    "git_head": "123d4dc3a1a33b8f03ff5b98894747b921a98fcd",
+    "matplotlib": "3.8.4",
+    "python": "3.10.12",
+    "script": {
+      "path": "project/geodata-3d-conditional/scripts/paper_figures/figure03_cfm_structured_cuboid_contrast.py",
+      "role": "generation script",
+      "sha256": "25ae379dd201bf3b2456b49b8ba22b3df8ffa3dc19f89b542183ce6afe008126",
+      "size_bytes": 38896
+    },
+    "style": {
+      "base_font_size_pt": 8.0,
+      "categorical_colormap_policy": "fixed discrete raw-label palette",
+      "double_column_mm": 178.0,
+      "font_family": "STIXGeneral",
+      "label9_color": "#D95F02",
+      "label_colors": {
+        "-1": "#FFFFFF",
+        "0": "#7A6652",
+        "1": "#8C4E85",
+        "10": "#C94C4C",
+        "11": "#A33E63",
+        "12": "#7B4FA3",
+        "13": "#5E4B8B",
+        "2": "#3B6FB6",
+        "3": "#5A91C8",
+        "4": "#56B4B8",
+        "5": "#4DA66D",
+        "6": "#86B84A",
+        "7": "#C5C55A",
+        "8": "#E5C55C",
+        "9": "#D95F02"
+      },
+      "observation_color": "#168A89",
+      "seismic_colormap_policy": "zero-centered perceptually balanced diverging",
+      "single_column_mm": 85.0
+    }
+  },
+  "generation_timestamp_utc": "2026-08-12T05:37:54.739674+00:00",
+  "git_head": "123d4dc3a1a33b8f03ff5b98894747b921a98fcd",
+  "metrics": {
+    "baseline": {
+      "hard_attainment_relative_to_base_flow_endpoint": 0.0,
+      "hard_correct_observation_rmse": 0.044147104024887085,
+      "hidden_target_iou": 0.0,
+      "hidden_target_precision": 0.0,
+      "hidden_target_recall": 0.0,
+      "method": "BASE_frozen_flow_sample"
+    },
+    "guided": {
+      "hard_attainment_relative_to_base_flow_endpoint": 0.05938350375439383,
+      "hard_correct_observation_rmse": 0.04152549430727959,
+      "hidden_target_iou": 0.023597273203985317,
+      "hidden_target_precision": 0.06696428571428571,
+      "hidden_target_recall": 0.03515625,
+      "method": "continuous_BASE_PLUS_PHYSICS_best_hard_state"
+    },
+    "structured": {
+      "hard_attainment_relative_to_base_flow_endpoint": 1.0,
+      "hard_correct_observation_rmse": 0.0,
+      "hidden_target_iou": 1.0,
+      "hidden_target_precision": 1.0,
+      "hidden_target_recall": 1.0,
+      "method": "structured_hard_geophysics"
+    }
+  },
+  "metrics_source_paths": [
+    {
+      "cross_check": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json",
+      "metrics": "baseline/guided/structured hard RMSE, hidden IoU, hidden recall",
+      "source_path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/paired_comparison.csv"
+    },
+    {
+      "cross_check": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/traces/correct/BASE_PLUS_PHYSICS.csv",
+      "json_selector": "runs[control=correct,mode=BASE_PLUS_PHYSICS]",
+      "metrics": "D4 own-definition maximum/final hard attainment",
+      "source_path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/summary.json"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure03_cfm_structured_cuboid_contrast.pdf",
+      "role": "figure output (pdf)",
+      "sha256": "7d8aa6c88df781acfd9e305d4404fae7773c30bd642111e91316e0a4a7d8cf4d",
+      "size_bytes": 1279017
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure03_cfm_structured_cuboid_contrast.svg",
+      "role": "figure output (svg)",
+      "sha256": "71f3607dd5e999e49ac542d75f3c67cd1a8629366d6dbea108746394ec34d529",
+      "size_bytes": 1829234
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figures/figure03_cfm_structured_cuboid_contrast.png",
+      "role": "figure output (png)",
+      "sha256": "42093de865158f4b92c597ceeb1fd63f1ac1d98190d3a594c838c3ad73391001",
+      "size_bytes": 2078994
+    }
+  ],
+  "panel_reproducibility": {
+    "all_panels_directly_reproducible_from_frozen_files": true,
+    "missing_required_saved_3d_tensors": [],
+    "note": "Panels B/C decode saved continuous CFM states with the frozen checkpoint embedding; no sampler or forward model is executed.",
+    "unreproducible_panels": []
+  },
+  "panel_sources": {
+    "A": [
+      "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/q0_q1_full_v2/tensors/truth_labels.pt",
+      "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/q0_q1_full_v2/tensors/fixed_target_mask.pt",
+      "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/q0_q1_full_v2/tensors/candidate_masks.pt",
+      "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/q0_q1_full_v2/config_resolved.json"
+    ],
+    "B": [
+      "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/states/correct/BASE/final_state.pt",
+      "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/paired_comparison.csv"
+    ],
+    "C": [
+      "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/states/correct/BASE_PLUS_PHYSICS/best_hard_state.pt",
+      "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/paired_comparison.csv",
+      "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/summary.json",
+      "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/traces/correct/BASE_PLUS_PHYSICS.csv"
+    ],
+    "D": [
+      "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/states/cuboid_seed42/correct/best_labels.pt",
+      "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/states/cuboid_seed42/correct/selected_event_history.json",
+      "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json",
+      "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/paired_comparison.csv"
+    ],
+    "E": [
+      "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/paired_comparison.csv",
+      "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/summary.json"
+    ]
+  },
+  "quality_control": {
+    "computed_hidden_metrics_match_paired_csv": true,
+    "condition_violations": {
+      "baseline": 0,
+      "guided": 0,
+      "structured": 0
+    },
+    "d4_summary_matches_trace": true,
+    "paired_csv_matches_stage7_summary": true,
+    "pdf_header_valid": true,
+    "png": {
+      "dpi": [
+        599.9988,
+        599.9988
+      ],
+      "pixel_size": [
+        4204,
+        3236
+      ]
+    },
+    "reports_cross_checked": true,
+    "shared_camera": true,
+    "shared_categorical_palette": true,
+    "shared_coordinate_bounds": true,
+    "shared_opacity_policy": true,
+    "svg_header_valid": true
+  },
+  "schema_version": "paper_figure_manifest_v2",
+  "scientific_boundaries": {
+    "best_sample_reselected": false,
+    "hyperparameter_search_run": false,
+    "rendering_only_from_saved_states": true,
+    "structured_result_is_cfm": false,
+    "structured_result_is_cfm_posterior": false,
+    "training_run": false,
+    "truth_based_reranking": false
+  },
+  "selection_and_truth_firewall": {
+    "criterion": "minimum hard observed seismic RMSE only",
+    "structured_is_cfm": false,
+    "truth_role": "retrospective display and evaluation only",
+    "truth_used_for_selection": false
+  },
+  "source_files": [
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/q0_q1_full_v2/config_resolved.json",
+      "role": "authoritative Q0/Q1 resolved benchmark configuration",
+      "sha256": "223f4c4aff47623bca23a2f38187bd86e2074c2290394df3b44835db0898299b",
+      "size_bytes": 4948
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/q0_q1_full_v2/summary.json",
+      "role": "authoritative Q0/Q1 machine summary",
+      "sha256": "bee7a7329a584fd1fa374955e5a9f99203d4fea60f3a7380afa4b193198ae350",
+      "size_bytes": 23647
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/q0_q1_full_v2/REPORT.md",
+      "role": "authoritative Q0/Q1 report",
+      "sha256": "3435ce3d417434d9f505a358df22b81ae4f376d062f263dfa6555a2cad306830",
+      "size_bytes": 1875
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/q0_q1_full_v2/tensors/truth_labels.pt",
+      "role": "saved analytic five-body truth labels",
+      "sha256": "3fb3969e94f01b43887ffb1bcea5d03e0336371baa4d7c6427e385cb74b25af6",
+      "size_bytes": 2098764
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/q0_q1_full_v2/tensors/baseline_labels.pt",
+      "role": "saved analytic three-fixed-body baseline labels",
+      "sha256": "0faf7270a61320e6a262d2a0581aeec7c3933f002279a08797a4469638d31dd4",
+      "size_bytes": 2098849
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/q0_q1_full_v2/tensors/candidate_masks.pt",
+      "role": "saved frozen twelve-body candidate masks",
+      "sha256": "0ce361285c7e6a208500bd1571d01522467ab2b229b13de83bfa951a07244ca5",
+      "size_bytes": 3147361
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/q0_q1_full_v2/tensors/fixed_target_mask.pt",
+      "role": "saved fixed-target-body mask",
+      "sha256": "492c6c346dc5997bc149f3247594e5b7c6eed9927bc2d56fbd7472c24a8b46dd",
+      "size_bytes": 263855
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/q0_q1_full_v2/tensors/condition_mask.pt",
+      "role": "saved hard-condition mask",
+      "sha256": "6e6707d1325a97186010d92dc4694a11807f2db6049c5179d19a5f52bcb3e032",
+      "size_bytes": 263834
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/config_resolved.json",
+      "role": "authoritative D4 resolved configuration",
+      "sha256": "0cfce87a44fd40455b6a1a971151bb80d410dba0dfcaa911905d29758fddd78e",
+      "size_bytes": 1720
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/summary.json",
+      "role": "authoritative D4 machine summary",
+      "sha256": "df439ef6980e18d283c6df3030187dce73e912eef626e8d23e8842b2d3c521d1",
+      "size_bytes": 13867
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/REPORT.md",
+      "role": "authoritative D4 report",
+      "sha256": "bea693401e41f03e9030de160b72175ce3aeac0166dfb158caf41f8c669f7966",
+      "size_bytes": 1070
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/traces/correct/BASE_PLUS_PHYSICS.csv",
+      "role": "authoritative D4 correct BASE_PLUS_PHYSICS trace",
+      "sha256": "675a7927dec77f1982a315599bc870fa587c6b637ae10343543343634f36c7c2",
+      "size_bytes": 17099
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/states/correct/BASE/final_state.pt",
+      "role": "saved frozen-CFM BASE endpoint state",
+      "sha256": "45f9ee5829b31d00eda636a9f20c17cd8ba7ff680277fb750c6d244babca1ef9",
+      "size_bytes": 15730245
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/states/correct/BASE_PLUS_PHYSICS/best_hard_state.pt",
+      "role": "saved D4 BASE_PLUS_PHYSICS best-hard checkpoint state",
+      "sha256": "f501366d58b919a983a62d72c5b36fe0ccb8fd479e9631087d76b80f38bf4e9d",
+      "size_bytes": 15730337
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/states/correct/BASE_PLUS_PHYSICS/final_state.pt",
+      "role": "saved D4 BASE_PLUS_PHYSICS final state",
+      "sha256": "8fc9252ec3f9ed17fcc878c224a6ad32217aae2857a0cd8cec39942d3ac39cd6",
+      "size_bytes": 15730245
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d7_observation_specificity_v1/D7_OBSERVATION_SPECIFICITY_REPORT.md",
+      "role": "authoritative D7 observation-specificity report",
+      "sha256": "99173b1757a540c290a8bff82905a5483bb7de9a565b3f505137c281d16f500a",
+      "size_bytes": 4401
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d7_observation_specificity_v1/d7_observation_specificity_verdict.json",
+      "role": "authoritative D7 mechanism verdict",
+      "sha256": "052506e758def45ffca4b422472d44efb8a402796637a66e1e165eceed7dc8c1",
+      "size_bytes": 1010
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/config_input.json",
+      "role": "authoritative Stage7 structured-inference configuration",
+      "sha256": "798b7c0885e5eb4c7f6bc83f1b392fcd590a1dc5b6296ccf9bb1e5bb6bb96e03",
+      "size_bytes": 2363
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/stage7_summary.json",
+      "role": "authoritative Stage7 machine summary",
+      "sha256": "52e4a1d24ddde0fcfaecaf1bd2b707e10a1db04d16faabed3fc46c6b211e4a98",
+      "size_bytes": 71743
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/STAGE7_REPORT.md",
+      "role": "authoritative Stage7 report",
+      "sha256": "e0faa4bbb1704d168d15402f31693c06e8340ea0ea213150f5fdf3bae709cd44",
+      "size_bytes": 3002
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/paired_comparison.csv",
+      "role": "authoritative Stage7 paired comparison",
+      "sha256": "68bf3a09b8fec8a985661162d2c73807b945426d4fc1de551a1222091a7856a9",
+      "size_bytes": 967
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/states/cuboid_seed42/correct/best_labels.pt",
+      "role": "saved Stage7 cuboid correct-arm selected hard labels",
+      "sha256": "c765b8ebe95098ae2957857873df2a5eb12ee01d0c57ef93a6a1315e39d89ff7",
+      "size_bytes": 2098757
+    },
+    {
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/states/cuboid_seed42/correct/selected_event_history.json",
+      "role": "saved Stage7 cuboid selected-event history",
+      "sha256": "c9f1f9d371796db02564fcb538f8e648e65ff22f64a772b264a95be0e7b0035c",
+      "size_bytes": 1276
+    },
+    {
+      "path": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "role": "frozen CFM checkpoint used only for categorical state decoding",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    {
+      "path": "project/geodata-3d-conditional/scripts/paper_figures/style.py",
+      "role": "shared paper style and deterministic export helpers",
+      "sha256": "736e70c30ff060fffa35b9c1f09912baeaa13e66650375de741ae7c4ce49f9f9",
+      "size_bytes": 29063
+    },
+    {
+      "path": "project/geodata-3d-conditional/paper/figure_data/figure03_cfm_structured_cuboid_contrast.json",
+      "role": "exact plotted values and rendering policy",
+      "sha256": "13c3922961402dc806fd102806fb28fa4319f4cb29e0651a190dbac3fb364efc",
+      "size_bytes": 3318
+    }
+  ],
+  "source_tensor_hashes": {
+    "analytic_baseline": {
+      "dtype": "int16",
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/q0_q1_full_v2/tensors/baseline_labels.pt",
+      "role": "analytic fixed-body baseline",
+      "sha256": "0faf7270a61320e6a262d2a0581aeec7c3933f002279a08797a4469638d31dd4",
+      "shape": [
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 2098849,
+      "tensor_content_sha256": "1994d1d60e1037ae353ad565b08c43332f8297a3add810615a9a5c1346be2389"
+    },
+    "candidate_masks": {
+      "dtype": "bool",
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/q0_q1_full_v2/tensors/candidate_masks.pt",
+      "role": "frozen candidate dictionary",
+      "sha256": "0ce361285c7e6a208500bd1571d01522467ab2b229b13de83bfa951a07244ca5",
+      "shape": [
+        12,
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 3147361,
+      "tensor_content_sha256": "273e13df8904c223f9b6d70a2c51337052b97625ac40d5f4636704d9a25ec8fb"
+    },
+    "cfm_baseline_decoded": {
+      "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "decode_rule": "cosine-normalized checkpoint embedding argmax minus one",
+      "dtype": "int16",
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/states/correct/BASE/final_state.pt",
+      "role": "decoded frozen-CFM BASE endpoint",
+      "sha256": "45f9ee5829b31d00eda636a9f20c17cd8ba7ff680277fb750c6d244babca1ef9",
+      "shape": [
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 15730245,
+      "tensor_content_sha256": "b63783ed3a390106a5d7c96d933f24cf0d38b9f53fb81627584fac189ffb5d05"
+    },
+    "cfm_guided_decoded": {
+      "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "decode_rule": "cosine-normalized checkpoint embedding argmax minus one",
+      "dtype": "int16",
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/d4_frozen_flow_trajectory_v1/states/correct/BASE_PLUS_PHYSICS/best_hard_state.pt",
+      "role": "decoded D4 BASE_PLUS_PHYSICS best-hard checkpoint",
+      "sha256": "f501366d58b919a983a62d72c5b36fe0ccb8fd479e9631087d76b80f38bf4e9d",
+      "shape": [
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 15730337,
+      "tensor_content_sha256": "28b72bff649ad05da9127793ccfa4c21b4279462ecb65f81a067480c8afafb61"
+    },
+    "fixed_target_mask": {
+      "dtype": "uint8",
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/q0_q1_full_v2/tensors/fixed_target_mask.pt",
+      "role": "fixed-body mask",
+      "sha256": "492c6c346dc5997bc149f3247594e5b7c6eed9927bc2d56fbd7472c24a8b46dd",
+      "shape": [
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 263855,
+      "tensor_content_sha256": "76d0b40be1f8998a14b4d1493ebc7a57d54c5012209c9fffb3c4492a7e7b83c1"
+    },
+    "hidden_truth_mask": {
+      "derivation": "candidate_masks[[4,6]].any(axis=0), from frozen config truth_candidate_indices",
+      "tensor_content_sha256": "867cd74559829687ec277905ee8f57e1d29fd466817872070723f497231182fc",
+      "truth_visibility": "retrospective display and evaluation only"
+    },
+    "structured_hard_labels": {
+      "dtype": "int16",
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/reports/stage7_v1_final_v2/states/cuboid_seed42/correct/best_labels.pt",
+      "role": "Stage7 structured correct-arm hard labels",
+      "selection": "minimum hard observed seismic RMSE only",
+      "sha256": "c765b8ebe95098ae2957857873df2a5eb12ee01d0c57ef93a6a1315e39d89ff7",
+      "shape": [
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 2098757,
+      "tensor_content_sha256": "76328a3fc682c2239671052338430f98e681f8605c6915e05e7bc4b1f3670d5c"
+    },
+    "truth": {
+      "dtype": "int16",
+      "path": "project/geodata-3d-conditional/experiments/stage6_inference_causality/runs/five_body_cuboid_v1/q0_q1_full_v2/tensors/truth_labels.pt",
+      "role": "analytic truth labels",
+      "sha256": "3fb3969e94f01b43887ffb1bcea5d03e0336371baa4d7c6427e385cb74b25af6",
+      "shape": [
+        64,
+        64,
+        64
+      ],
+      "size_bytes": 2098764,
+      "tensor_content_sha256": "76328a3fc682c2239671052338430f98e681f8605c6915e05e7bc4b1f3670d5c"
+    }
+  },
+  "title_zh": "简单隐藏体基准中的冻结CFM地震制导与结构化硬推理对照"
+}

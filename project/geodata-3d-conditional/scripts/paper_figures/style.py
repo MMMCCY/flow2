@@ -784,6 +784,86 @@ def render_target_panel(
     return np.asarray(image)[..., :3]
 
 
+def render_target_constraints_panel(
+    target_mask: np.ndarray,
+    truth_mask: np.ndarray,
+    condition_values: np.ndarray,
+    *,
+    well_xy: Sequence[Sequence[int]] = (),
+    target_label: int = 9,
+    window_size: tuple[int, int] = (1000, 860),
+) -> np.ndarray:
+    """Render target prediction, truth ghost, and sparse categorical conditions."""
+    target_mask = np.asarray(target_mask, dtype=bool)
+    truth_mask = np.asarray(truth_mask, dtype=bool)
+    condition_values = np.asarray(condition_values)
+    validate_same_shape(
+        {
+            "target": target_mask,
+            "truth": truth_mask,
+            "condition values": condition_values,
+        }
+    )
+    plotter = _new_plotter(window_size)
+    observed = condition_values != -1
+    visible_conditions = observed.copy()
+    for x, y in well_xy:
+        visible_conditions[int(x), int(y), :] = False
+    for label in sorted(int(value) for value in np.unique(condition_values[visible_conditions])):
+        _add_surface(
+            plotter,
+            binary_surface(visible_conditions & (condition_values == label)),
+            LABEL_COLORS.get(label, "#777777"),
+            0.20,
+        )
+    _add_surface(plotter, binary_surface(truth_mask), TRUTH_OUTLINE_COLOR, 0.12)
+    _add_surface(plotter, binary_surface(target_mask), LABEL9_COLOR, 0.94)
+    if well_xy:
+        _add_wells(plotter, well_xy, top_z=float(target_mask.shape[2]))
+    _add_bounding_box(plotter, target_mask.shape)
+    _set_camera(plotter, target_mask.shape)
+    image = plotter.screenshot(return_img=True)
+    plotter.close()
+    return np.asarray(image)[..., :3]
+
+
+def render_target_error_panel(
+    truth_mask: np.ndarray,
+    baseline_mask: np.ndarray,
+    guided_mask: np.ndarray,
+    *,
+    well_xy: Sequence[Sequence[int]] = (),
+    mode: str,
+    window_size: tuple[int, int] = (1000, 860),
+) -> np.ndarray:
+    """Render corrected and residual baseline target errors in one 3-D panel."""
+    truth_mask = np.asarray(truth_mask, dtype=bool)
+    baseline_mask = np.asarray(baseline_mask, dtype=bool)
+    guided_mask = np.asarray(guided_mask, dtype=bool)
+    validate_same_shape({"truth": truth_mask, "baseline": baseline_mask, "guided": guided_mask})
+    if mode == "omission":
+        original = truth_mask & ~baseline_mask
+        corrected = original & guided_mask
+        residual = original & ~guided_mask
+    elif mode == "commission":
+        original = ~truth_mask & baseline_mask
+        corrected = original & ~guided_mask
+        residual = original & guided_mask
+    else:
+        raise ValueError(f"unsupported target-error mode: {mode}")
+    plotter = _new_plotter(window_size)
+    _add_surface(plotter, binary_surface(truth_mask), TRUTH_OUTLINE_COLOR, 0.08)
+    _add_surface(plotter, binary_surface(corrected), "#2F9E67", 0.96)
+    _add_surface(plotter, binary_surface(residual), "#C85A3A", 0.92)
+    if well_xy:
+        _add_wells(plotter, well_xy, top_z=float(truth_mask.shape[2]))
+    _add_bounding_box(plotter, truth_mask.shape)
+    _set_camera(plotter, truth_mask.shape)
+    image = plotter.screenshot(return_img=True)
+    plotter.close()
+    return np.asarray(image)[..., :3]
+
+
 def render_acquisition_panel(
     hidden_truth: np.ndarray,
     *,

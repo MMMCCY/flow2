@@ -62,6 +62,8 @@ PROJECT_DIR = Path(__file__).resolve().parents[1]
 FRAMEWORK_DATA = PROJECT_DIR / "paper/figure_data/figure01_joint_framework.json"
 FRAMEWORK_MANIFEST = PROJECT_DIR / "paper/manifests/figure01_joint_framework.json"
 JOINT_MANIFEST = PROJECT_DIR / "paper/manifests/figure03_joint_inference.json"
+CFM_STRUCTURED_DATA = PROJECT_DIR / "paper/figure_data/figure03_cfm_structured_cuboid_contrast.json"
+CFM_STRUCTURED_MANIFEST = PROJECT_DIR / "paper/manifests/figure03_cfm_structured_cuboid_contrast.json"
 EVIDENCE_DATA = PROJECT_DIR / "paper/figure_data/figure04_evidence_hierarchy.json"
 EVIDENCE_MANIFEST = PROJECT_DIR / "paper/manifests/figure04_evidence_hierarchy.json"
 FULLGEO_DATA = PROJECT_DIR / "paper/figure_data/fullgeo_3d_benchmark.json"
@@ -213,6 +215,40 @@ def test_joint_figure_frozen_metrics_and_truth_firewall() -> None:
     assert manifest["scientific_boundaries"]["stage9a_truth_oracle_candidate_displayed"] is False
     assert manifest["scientific_boundaries"]["stage14_is_measured_geophysics"] is False
     assert "hard observed seismic RMSE only" in manifest["selection_criterion"]
+
+
+def test_cfm_structured_cuboid_contrast_uses_frozen_paired_metrics() -> None:
+    data = _read_manifest(CFM_STRUCTURED_DATA)
+    manifest = _read_manifest(CFM_STRUCTURED_MANIFEST)
+    assert data["benchmark_semantics"]["fixed_body_count"] == 3
+    assert data["benchmark_semantics"]["hidden_body_count"] == 2
+    assert data["benchmark_semantics"]["hidden_candidate_indices"] == [4, 6]
+    metrics = data["metrics"]
+    assert metrics["baseline"]["hard_correct_observation_rmse"] == 0.044147104024887085
+    assert metrics["baseline"]["hidden_target_iou"] == 0.0
+    assert metrics["baseline"]["hidden_target_recall"] == 0.0
+    assert metrics["guided"]["hard_correct_observation_rmse"] == 0.04152549430727959
+    assert metrics["guided"]["hidden_target_iou"] == 0.023597273203985317
+    assert metrics["guided"]["hidden_target_recall"] == 0.03515625
+    assert metrics["structured"]["hard_correct_observation_rmse"] == 0.0
+    assert metrics["structured"]["hidden_target_iou"] == 1.0
+    assert metrics["structured"]["hidden_target_recall"] == 1.0
+    assert data["d4_protocol_attainment"]["maximum"] == 0.30643379548394667
+    assert data["d4_protocol_attainment"]["final"] == 0.11524064334027935
+    assert manifest["scientific_boundaries"]["training_run"] is False
+    assert manifest["scientific_boundaries"]["hyperparameter_search_run"] is False
+    assert manifest["scientific_boundaries"]["best_sample_reselected"] is False
+    assert manifest["scientific_boundaries"]["truth_based_reranking"] is False
+    assert manifest["scientific_boundaries"]["structured_result_is_cfm"] is False
+    assert manifest["selection_and_truth_firewall"]["truth_used_for_selection"] is False
+    assert manifest["panel_reproducibility"]["unreproducible_panels"] == []
+    assert manifest["panel_reproducibility"]["missing_required_saved_3d_tensors"] == []
+    _assert_output_records_valid(manifest["outputs"])
+    png = next(row for row in manifest["outputs"] if Path(row["path"]).suffix == ".png")
+    with Image.open(PROJECT_DIR.parent.parent / str(png["path"])) as image:
+        assert image.width >= 4000
+        assert image.height >= 3000
+        assert all(abs(float(value) - 600.0) <= 1.0 for value in image.info["dpi"])
 
 
 def test_gallery_registered_cases_samples_and_camera_consistency() -> None:

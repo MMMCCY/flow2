@@ -1,0 +1,70 @@
+{
+  "arms": {
+    "FLOW_ONLY": {
+      "median_body_0_recall": 0.801562488079071,
+      "median_body_1_recall": 0.668749988079071,
+      "median_body_2_recall": 0.948437511920929,
+      "median_body_3_recall": 0.02187499962747097,
+      "median_body_4_recall": 0.01406249962747097,
+      "median_full_iou": 0.11457987379608103,
+      "median_full_precision": 0.12702503681885124,
+      "median_full_recall": 0.5390625,
+      "median_hard_seismic_rmse": 0.0446082167327404,
+      "median_hidden_iou": 0.010619041872812839,
+      "median_hidden_precision": 0.011376858435681965,
+      "median_hidden_recall": 0.1375,
+      "median_predicted_label9_voxels": 13580.0,
+      "median_truth_body_merged_pair_count": 4.0
+    },
+    "ORACLE_GUIDED": {
+      "median_body_0_recall": 1.0,
+      "median_body_1_recall": 1.0,
+      "median_body_2_recall": 1.0,
+      "median_body_3_recall": 1.0,
+      "median_body_4_recall": 1.0,
+      "median_full_iou": 0.9459060005911912,
+      "median_full_precision": 0.9459060005911912,
+      "median_full_recall": 1.0,
+      "median_hard_seismic_rmse": 0.012146067805588245,
+      "median_hidden_iou": 0.8749145591250854,
+      "median_hidden_precision": 0.8749145591250854,
+      "median_hidden_recall": 1.0,
+      "median_predicted_label9_voxels": 3383.0,
+      "median_truth_body_merged_pair_count": 0.0
+    },
+    "SEISMIC_GUIDED": {
+      "median_body_0_recall": 0.9921875,
+      "median_body_1_recall": 0.9781249761581421,
+      "median_body_2_recall": 0.9906250238418579,
+      "median_body_3_recall": 0.918749988079071,
+      "median_body_4_recall": 0.8843749761581421,
+      "median_full_iou": 0.1607853542053595,
+      "median_full_precision": 0.16224899598393575,
+      "median_full_recall": 0.946875,
+      "median_hard_seismic_rmse": 0.04800916090607643,
+      "median_hidden_iou": 0.06788774002954209,
+      "median_hidden_precision": 0.0684172918899607,
+      "median_hidden_recall": 0.9015625,
+      "median_predicted_label9_voxels": 18675.0,
+      "median_truth_body_merged_pair_count": 10.0
+    }
+  },
+  "case_design": {
+    "body_count": 5,
+    "drilled_body_count": 3,
+    "hidden_body_condition_voxels": 0,
+    "hidden_body_count": 2,
+    "target_raw_label": 9
+  },
+  "case_risk_gate_passed": true,
+  "findings": {
+    "interpretation": "Stage15 seismic guidance restores hidden label9 support but does not preserve the five-body topology; oracle spatial guidance shows that the frozen Flow can express the separated target geometry.",
+    "oracle_hidden_improves": true,
+    "oracle_retains_separated_five_body_geometry": true,
+    "seismic_fit_improves": false,
+    "seismic_hidden_improves": true,
+    "seismic_retains_separated_five_body_geometry": false
+  },
+  "run_status": "completed",
+  "schema": "stage15_five_body_flow_summary_v2"
+}

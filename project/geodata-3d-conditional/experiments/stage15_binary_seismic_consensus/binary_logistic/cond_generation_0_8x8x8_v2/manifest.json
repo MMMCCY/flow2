@@ -1,0 +1,94 @@
+{
+  "binary_target_only": true,
+  "case_id": "cond_generation_0",
+  "checkpoint": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/binary_logistic/calibration_n128_8x8x8_v2/binary_logistic_checkpoint.pt",
+    "sha256": "21bb4ce1858527e00a311e24d9f53dc0f572966322944114305af10029b23d4c",
+    "size_bytes": 2715
+  },
+  "coarse_inversion_score": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion_probability/cond_generation_0_8x8x8_v1/coarse_inversion_score.pt",
+    "sha256": "1824754a13afec0e2b4e3cdf2a5ec40d54a465ef58edb9d5e82b8d86799bc1c0",
+    "size_bytes": 3858
+  },
+  "coarse_probability": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/binary_logistic/cond_generation_0_8x8x8_v2/coarse_label9_probability.pt",
+    "sha256": "0d89435a21779521a306c1a7b4f139ed46955f4defc6bb1c210ace34b298af68",
+    "size_bytes": 3879
+  },
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_inversion_logistic_8x8x8_v1.json",
+    "sha256": "2a066f83a7e8e9a6d18313f3430593dd2304afc276da88b18cbda1d6c09ea606",
+    "size_bytes": 1149
+  },
+  "created_at_utc": "2026-08-13T09:21:04.057525+00:00",
+  "flow_used": false,
+  "full_parameters": {
+    "class_balancing": false,
+    "coarse_grid_shape": [
+      8,
+      8,
+      8
+    ],
+    "feature_names": [
+      "raw_q",
+      "within_case_percentile",
+      "vertical_contrast",
+      "depth"
+    ],
+    "flow_used": false,
+    "heldout_coarse_score_sha256": "1824754a13afec0e2b4e3cdf2a5ec40d54a465ef58edb9d5e82b8d86799bc1c0",
+    "heldout_subsurface_mask_sha256": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+    "heldout_truth_loaded_by_runner": false,
+    "learning_rate": 0.05,
+    "loss": "natural_prevalence_subsurface_voxel_weighted_BCEWithLogits",
+    "model": "single_linear_layer_4_to_1",
+    "optimizer": "Adam",
+    "parameter_sweep": false,
+    "random_seed": 15190000,
+    "schema": "stage15_binary_inversion_logistic_8x8x8_v1",
+    "seismic_forward_rerun": false,
+    "seismic_inversion_rerun": false,
+    "source_calibration_case_count": 128,
+    "source_calibration_manifest_sha256": "994f43f0ec4a0b9fbd76d40cbccbd6778a583c303d13d3c080c5d6fa4d5d6b42",
+    "source_stage": "Stage15-F",
+    "status": "frozen_before_training",
+    "target": "binary_raw_label9_vs_every_other_subsurface_voxel",
+    "training_case_indices": [
+      0,
+      95
+    ],
+    "training_steps": 1000,
+    "validation_case_indices": [
+      96,
+      127
+    ]
+  },
+  "git_branch": "stage15-binary-seismic-consensus",
+  "git_head": "cb998cea783fd4167fab65f30114433fb4001815",
+  "probability_volume": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/binary_logistic/cond_generation_0_8x8x8_v2/label9_probability_volume.pt",
+    "sha256": "ca66bdbb8d865c52100e9f764ff96a70f8898e00a1ff63b5907f8f8c9c1c92f5",
+    "size_bytes": 1050407
+  },
+  "probability_volume_tensor_sha256": "af2e7357f8b6348e4afa19a3d73e4f6bec69a290ccc5399214a7f50ba961a2f4",
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage15/run_binary_inversion_logistic.py",
+    "sha256": "cc4e172b5adea64109611f8c29789a91d2c6d2bb513acb598ff4f38c97abdecb",
+    "size_bytes": 16565
+  },
+  "schema": "stage15_g_binary_inversion_logistic_heldout_v1",
+  "seismic_forward_rerun": false,
+  "seismic_inversion_rerun": false,
+  "subsurface_mask": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/subsurface_mask.pt",
+    "sha256": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+    "size_bytes": 263841
+  },
+  "subsurface_probability_range": [
+    0.002195823471993208,
+    0.3642651438713074
+  ],
+  "truth_loaded_by_runner": false
+}

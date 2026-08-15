@@ -1,0 +1,24 @@
+{
+  "case_role": "post_hoc_illustrative_validation_case_not_generalization_evidence",
+  "created_at_utc": "2026-08-13T09:29:09.535536+00:00",
+  "figure": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/reports/binary_logistic_showcase_seed15180114_v1/binary_logistic_showcase.png",
+    "sha256": "a0720a03b252afe2ef247c42917e6725bfc6971d22a08d3d778a8a5b9b8f5b72",
+    "size_bytes": 134834
+  },
+  "git_branch": "stage15-binary-seismic-consensus",
+  "git_head": "cb998cea783fd4167fab65f30114433fb4001815",
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage15/build_binary_logistic_showcase.py",
+    "sha256": "aeace04e460349c27be2f396fbbc595fcdcd11afc0c2470856e4c2b0d07b0378",
+    "size_bytes": 9165
+  },
+  "schema": "stage15_g_posthoc_showcase_run_v1",
+  "selection_rule": "among label9-positive frozen validation cases, maximize Stage15-G AUPRC minus own prevalence",
+  "summary": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/reports/binary_logistic_showcase_seed15180114_v1/summary.json",
+    "sha256": "a1d8600fcff72c1b10312f394f33ccda13bc2b3d7ffd981f8a5603a7ee435161",
+    "size_bytes": 2429
+  }
+}

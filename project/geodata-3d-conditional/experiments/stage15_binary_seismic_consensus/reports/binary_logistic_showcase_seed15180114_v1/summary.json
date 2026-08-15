@@ -1,0 +1,46 @@
+{
+  "case_index": 114,
+  "case_role": "post_hoc_illustrative_validation_case_not_generalization_evidence",
+  "flow_used": false,
+  "inputs": {
+    "checkpoint": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/binary_logistic/calibration_n128_8x8x8_v2/binary_logistic_checkpoint.pt",
+      "sha256": "21bb4ce1858527e00a311e24d9f53dc0f572966322944114305af10029b23d4c",
+      "size_bytes": 2715
+    },
+    "coarse_inversion_score": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion_probability/calibration_n128_8x8x8_v1/cases/case_114/coarse_inversion_score.pt",
+      "sha256": "33e884e72557c8360963a4f57b8b8a3142b8a4934e55e69b3f2f08c5999ad653",
+      "size_bytes": 3858
+    }
+  },
+  "label9_voxels": 17601,
+  "new_training_or_inversion_performed": false,
+  "outputs": {
+    "figure": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/reports/binary_logistic_showcase_seed15180114_v1/binary_logistic_showcase.png",
+      "sha256": "a0720a03b252afe2ef247c42917e6725bfc6971d22a08d3d778a8a5b9b8f5b72",
+      "size_bytes": 134834
+    },
+    "probability_volume": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/reports/binary_logistic_showcase_seed15180114_v1/label9_probability_volume.pt",
+      "sha256": "faad6491dcc9b7e370eb759db4025bfa97d7c22f8ba86d1b94f91965453a53eb",
+      "size_bytes": 1050407
+    }
+  },
+  "prevalence": 0.06714248657226562,
+  "probability_range_subsurface": [
+    0.0013071370776742697,
+    0.2783886790275574
+  ],
+  "root_seed": 15180114,
+  "schema": "stage15_g_posthoc_illustrative_case_v1",
+  "selection_rule": "among label9-positive frozen validation cases, maximize Stage15-G AUPRC minus own prevalence",
+  "stage15_f_auprc": 0.09652769110131093,
+  "stage15_g_auprc": 0.13901303184598324,
+  "stage15_g_auprc_minus_prevalence": 0.07187054527371761,
+  "stage15_g_background_mean_probability": 0.0306429211050272,
+  "stage15_g_truth_mean_probability": 0.06505635380744934,
+  "stage15_g_truth_minus_background_probability": 0.03441343270242214,
+  "truth_used_for_case_selection_and_visual_overlay": true
+}

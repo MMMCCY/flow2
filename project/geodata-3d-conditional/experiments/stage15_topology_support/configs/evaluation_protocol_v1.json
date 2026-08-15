@@ -1,0 +1,15 @@
+{
+  "schema": "stage15_topology_support_evaluation_v1",
+  "status": "frozen_before_retrospective_evaluation",
+  "figure_seed": 142,
+  "decision_order": [
+    "PRIOR_SUPPORTS_RING_AND_SEISMIC_CORRECTS",
+    "PRIOR_SUPPORTS_RING_BUT_SEISMIC_BRIDGE_INSUFFICIENT",
+    "FROZEN_PRIOR_RING_SUPPORT_NOT_DEMONSTRATED"
+  ],
+  "prior_support_rule": "B_RING oracle median IoU and median central-hole preservation must both exceed paired FLOW_ONLY medians, and at least one oracle sample must have beta1=1 in the registered target crop",
+  "seismic_correction_rule": "conditional on prior support, B_RING seismic median IoU and median central-hole preservation must both exceed paired FLOW_ONLY medians and median hard seismic RMSE must decrease",
+  "truth_metrics_used_for_selection": false,
+  "seed_selection": false,
+  "threshold_sweep": false
+}

@@ -1,0 +1,198 @@
+{
+  "arm": "ORACLE_GUIDED",
+  "config": {
+    "path": "project/geodata-3d-conditional/experiments/stage15_five_body_flow/configs/frozen_protocol_v1.json",
+    "sha256": "d1124c4446007ff0a2a14858d4ab1b65b2e66a45e193cc57ebf50b83d4d55c80",
+    "size_bytes": 2521
+  },
+  "created_at_utc": "2026-08-13T20:49:15.993738+00:00",
+  "full_parameters": {
+    "arms": [
+      "FLOW_ONLY",
+      "SEISMIC_GUIDED",
+      "ORACLE_GUIDED"
+    ],
+    "background_policy": "cond_generation_0_with_all_raw_label9_replaced_by_raw_label4",
+    "background_replacement_label": 4,
+    "base_case": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0",
+    "binary_acoustic_config": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_acoustic_upper_bound_v1.json",
+    "bodies": [
+      {
+        "id": "drilled_0",
+        "role": "drilled",
+        "start": [
+          6,
+          20,
+          12
+        ],
+        "stop": [
+          14,
+          28,
+          22
+        ],
+        "well_xy": [
+          10,
+          24
+        ]
+      },
+      {
+        "id": "drilled_1",
+        "role": "drilled",
+        "start": [
+          31,
+          22,
+          30
+        ],
+        "stop": [
+          39,
+          30,
+          40
+        ],
+        "well_xy": [
+          35,
+          26
+        ]
+      },
+      {
+        "id": "drilled_2",
+        "role": "drilled",
+        "start": [
+          53,
+          28,
+          20
+        ],
+        "stop": [
+          61,
+          36,
+          30
+        ],
+        "well_xy": [
+          57,
+          32
+        ]
+      },
+      {
+        "id": "hidden_0",
+        "role": "hidden",
+        "start": [
+          6,
+          38,
+          16
+        ],
+        "stop": [
+          14,
+          46,
+          26
+        ]
+      },
+      {
+        "id": "hidden_1",
+        "role": "hidden",
+        "start": [
+          38,
+          38,
+          34
+        ],
+        "stop": [
+          46,
+          46,
+          44
+        ]
+      }
+    ],
+    "cases": {
+      "FIVE_BODY": {
+        "family": "five_equal_disjoint_cuboids"
+      }
+    },
+    "checkpoint": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+    "flow": {
+      "integrator": "fixed_euler_midpoint_v1",
+      "model_weights": "ema",
+      "n_euler_steps": 32
+    },
+    "guidance": {
+      "alpha": 0.25,
+      "bce_weight": 1.0,
+      "dice_weight": 1.0,
+      "grad_clip_norm": 1.0,
+      "guidance_scaling_mode": "reference_norm_relative_v2",
+      "guidance_schedule": "windowed_sine",
+      "guidance_start": 0.25,
+      "max_guidance_ratio": 0.25,
+      "probability_loss_mode": "calibrated_soft_bce_hard_dice_v2",
+      "property_scale_weights": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "property_sigmas": [
+        0.0,
+        1.5,
+        3.0
+      ],
+      "spatial_gradient_weight": 0.0,
+      "tau_end": 0.1,
+      "tau_schedule": "cosine",
+      "tau_start": 0.5
+    },
+    "parameter_sweep": false,
+    "property_config": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_trace_property_indicator_v1.json",
+    "schema": "stage15_five_body_flow_protocol_v1",
+    "scientific_scope": "Stage7-style five-body geometry embedded in the checkpoint-compatible cond_generation_0 background",
+    "seed_selection": false,
+    "seismic_config": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+    "source_seeds": [
+      42,
+      142,
+      242
+    ],
+    "status": "frozen_before_execution",
+    "target_label": 9,
+    "trace_inversion_config": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_trace_boundary_inversion_v1.json",
+    "training_performed": false
+  },
+  "git_branch": "stage15-binary-seismic-consensus",
+  "git_head": "cb998cea783fd4167fab65f30114433fb4001815",
+  "model_load_report": {
+    "checkpoint": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "checkpoint_epoch": 1651,
+    "checkpoint_global_step": 8376,
+    "ema_applied": true,
+    "ema_entry_count": 411,
+    "ema_excluded_frozen_parameters": [
+      "embedding.weight"
+    ],
+    "ema_missing_trainable": [],
+    "ema_shape_mismatches": [],
+    "ema_unexpected": [],
+    "frozen_parameters": [
+      "embedding.weight"
+    ],
+    "model_parameter_count": 412,
+    "trainable_parameter_count": 411,
+    "weight_source": "ema"
+  },
+  "observed_seismic_loaded_by_runner": false,
+  "parameter_sweep": false,
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage15/run_topology_support_flow.py",
+    "sha256": "28974be3b506102aa2fcb7937a2447dd75f8cad7256f4a09026c5ca6aafba33d",
+    "size_bytes": 10077
+  },
+  "sample_count": 3,
+  "sample_selection_performed": false,
+  "schema": "stage15_topology_support_flow_run_v1",
+  "source_seeds": [
+    42,
+    142,
+    242
+  ],
+  "training_performed": false,
+  "truth_loaded_by_runner": true
+}

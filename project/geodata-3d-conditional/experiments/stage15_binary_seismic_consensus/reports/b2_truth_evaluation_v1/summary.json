@@ -1,0 +1,274 @@
+{
+  "b2_rerun_performed": false,
+  "decision_policy": "manual_metric_interpretation_without_new_numeric_gate",
+  "ensemble": {
+    "improvement_interpretation": "No overall improvement: retained medians have lower IoU, precision, and recall and a larger centroid distance than the four initial models; the best retained IoU is higher, but that is not an ensemble-wide shift.",
+    "initial": {
+      "best_by_iou": {
+        "binary_sha256": "3348123440a5feaddb011dcb0cf855e1bdf0b7c250e811442e2eef72b0a23c61",
+        "centroid_distance": 16.421405792236328,
+        "false_negative_voxels": 8498,
+        "false_positive_voxels": 5402,
+        "iou": 0.032707028531663185,
+        "precision": 0.0800408719346049,
+        "predicted_voxels": 5872,
+        "recall": 0.0524085637823372,
+        "sample_group": "initial",
+        "sample_index": 1,
+        "target_voxel_count": 5872,
+        "true_positive_voxels": 470
+      },
+      "centroid_distance": {
+        "max": 16.421405792236328,
+        "median": 11.236161708831787,
+        "min": 8.382183074951172
+      },
+      "iou": {
+        "max": 0.032707028531663185,
+        "median": 0.02970335719568981,
+        "min": 0.025697727619338112
+      },
+      "precision": {
+        "max": 0.1131606952820149,
+        "median": 0.08015784330774722,
+        "min": 0.07517287530671425
+      },
+      "recall": {
+        "max": 0.0524085637823372,
+        "median": 0.04354371097234612,
+        "min": 0.03557091882247993
+      },
+      "sample_count": 4
+    },
+    "overall_truth_alignment_improved": false,
+    "post_burnin": {
+      "best_by_iou": {
+        "binary_sha256": "739f252c655c4d18748e3bcafe48b8742578a109d24e887a5c54c15cc4160cd0",
+        "centroid_distance": 17.29824447631836,
+        "false_negative_voxels": 8496,
+        "false_positive_voxels": 3727,
+        "iou": 0.037179992122883025,
+        "precision": 0.1124077161228864,
+        "predicted_voxels": 4199,
+        "recall": 0.05263157894736842,
+        "sample_group": "retained",
+        "sample_index": 39,
+        "target_voxel_count": 4199,
+        "true_positive_voxels": 472
+      },
+      "centroid_distance": {
+        "max": 17.674779891967773,
+        "median": 12.98356580734253,
+        "min": 6.780130863189697
+      },
+      "iou": {
+        "max": 0.037179992122883025,
+        "median": 0.025446498359996794,
+        "min": 0.018483158939891546
+      },
+      "precision": {
+        "max": 0.11887290871734664,
+        "median": 0.07925909410595311,
+        "min": 0.05472636815920398
+      },
+      "recall": {
+        "max": 0.05419268510258698,
+        "median": 0.03612845673505798,
+        "min": 0.02297056199821588
+      },
+      "sample_count": 96
+    },
+    "post_minus_initial_median": {
+      "centroid_distance": 1.7474040985107422,
+      "iou": -0.004256858835693017,
+      "precision": -0.0008987492017941134,
+      "recall": -0.007415254237288137
+    }
+  },
+  "evaluation_only": true,
+  "input_file_sha256": {
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion/b2_flow_pcn_pilot_v1/initial_binary_models.pt": "cb8e9cc67127793a0da8b52c5efc4d1f5d309e2f69e7021219b6f3b214dc2d55",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion/b2_flow_pcn_pilot_v1/negative_mask.pt": "6f85ea73dcd31843ef19b5b15091d7e6621c9dafda034f779e3f4ffdd3db0c85",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion/b2_flow_pcn_pilot_v1/occupancy_frequency.pt": "ab1789a28ab919faa05812034ce7395966020056f66230b4b77cc8657adfb0a8",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion/b2_flow_pcn_pilot_v1/pilot_summary.json": "3a8f1876409c912732e0d3753a698bdc7585726fd4c2ad685148557e7ba6681b",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion/b2_flow_pcn_pilot_v1/positive_mask.pt": "32c36530194988b54fd9bacf56a773d52c076872894cf3d6ab3a1d0826cd68fd",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion/b2_flow_pcn_pilot_v1/retained_binary_states.pt": "3e64d2ecd8ad2fcd07ef72d10b0376b5232e3d7201282753e1cbda8bc6292b57",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion/b2_flow_pcn_pilot_v1/retained_categorical_states.pt": "4524cbfd5646c970c4c15c861d70ab2a445534632cf192baf2e05186e866851c",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion/b2_flow_pcn_pilot_v1/run_manifest.json": "62d9a2e6ac77223bbe37b423456c67e73ae6977f7f2cc9acde1d8ac0e3886f10",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/inversion/b2_flow_pcn_pilot_v1/unknown_mask.pt": "e8f5deb943fb9461e981b53c95d7fda01910005f23b4f0982e059041cb619b1b",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/manifest.json": "02c7b80741edaa89677a50b3cda086731ce9fc87f1ce34011c6d5e919ff02aad",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/subsurface_mask.pt": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3"
+  },
+  "machine_decision": "POSITIVE_CORE_NOT_VALID",
+  "machine_decision_allowed_values": [
+    "POSITIVE_CORE_VALID_NEGATIVE_VALID",
+    "POSITIVE_CORE_VALID_NEGATIVE_UNSAFE",
+    "POSITIVE_CORE_NOT_VALID"
+  ],
+  "machine_decision_rationale": "Only 56 of 114 frozen positive-core voxels are true label9; the observed precision does not support interpreting this mask as a high-precision core.",
+  "negative_mask": {
+    "fraction_of_truth_label9_marked_negative": 0.9334299732381802,
+    "negative_intersection_truth_label9_voxels": 8371,
+    "negative_voxels": 188772
+  },
+  "occupancy": {
+    "background_mean_p9": 0.020043855533003807,
+    "background_median_p9": 0.0,
+    "evaluation_domain": "all_subsurface_voxels",
+    "truth_label9_mean_p9": 0.0373225174844265,
+    "truth_label9_median_p9": 0.0,
+    "voxelwise_auprc": 0.05728450496230514
+  },
+  "positive_core": {
+    "false_negative_voxels": 8912,
+    "false_positive_voxels": 58,
+    "iou": 0.006204298692665633,
+    "positive_centroid": [
+      41.54385964912281,
+      59.89473684210526,
+      13.596491228070175
+    ],
+    "positive_centroid_nearest_truth_component_distance": 13.074257556851236,
+    "positive_centroid_nearest_truth_component_id": 3,
+    "positive_component_count_6": 2,
+    "positive_components": [
+      {
+        "centroid": [
+          38.23529411764706,
+          59.94117647058823,
+          23.098039215686274
+        ],
+        "nearest_truth_component_centroid_distance": 17.211441171049227,
+        "nearest_truth_component_id": 3,
+        "positive_component_id": 1,
+        "precision": 0.4117647058823529,
+        "true_positive_voxels": 21,
+        "truth_component_overlaps": [
+          {
+            "overlap_voxels": 21,
+            "truth_component_id": 3
+          }
+        ],
+        "voxel_count": 51
+      },
+      {
+        "centroid": [
+          44.22222222222222,
+          59.857142857142854,
+          5.904761904761905
+        ],
+        "nearest_truth_component_centroid_distance": 14.757684863577126,
+        "nearest_truth_component_id": 3,
+        "positive_component_id": 2,
+        "precision": 0.5555555555555556,
+        "true_positive_voxels": 35,
+        "truth_component_overlaps": [
+          {
+            "overlap_voxels": 35,
+            "truth_component_id": 3
+          }
+        ],
+        "voxel_count": 63
+      }
+    ],
+    "positive_voxels": 114,
+    "precision": 0.49122807017543857,
+    "recall": 0.006244424620874219,
+    "true_positive_voxels": 56,
+    "truth_component_count_6": 7,
+    "truth_components": [
+      {
+        "centroid": [
+          27.71610688894337,
+          35.75337092424614,
+          17.070115224319686
+        ],
+        "positive_overlap_voxels": 0,
+        "truth_component_id": 1,
+        "voxel_count": 4079
+      },
+      {
+        "centroid": [
+          39.00159489633174,
+          4.735247208931419,
+          26.464114832535884
+        ],
+        "positive_overlap_voxels": 0,
+        "truth_component_id": 2,
+        "voxel_count": 627
+      },
+      {
+        "centroid": [
+          45.723445912873224,
+          47.50905531081742,
+          13.845814977973568
+        ],
+        "positive_overlap_voxels": 56,
+        "truth_component_id": 3,
+        "voxel_count": 2043
+      },
+      {
+        "centroid": [
+          40.77272727272727,
+          0.7272727272727273,
+          37.59090909090909
+        ],
+        "positive_overlap_voxels": 0,
+        "truth_component_id": 4,
+        "voxel_count": 22
+      },
+      {
+        "centroid": [
+          56.3353102189781,
+          15.19388686131387,
+          18.713047445255473
+        ],
+        "positive_overlap_voxels": 0,
+        "truth_component_id": 5,
+        "voxel_count": 2192
+      },
+      {
+        "centroid": [
+          55.0,
+          20.5,
+          2.0
+        ],
+        "positive_overlap_voxels": 0,
+        "truth_component_id": 6,
+        "voxel_count": 4
+      },
+      {
+        "centroid": [
+          55.0,
+          22.0,
+          4.0
+        ],
+        "positive_overlap_voxels": 0,
+        "truth_component_id": 7,
+        "voxel_count": 1
+      }
+    ]
+  },
+  "schema": "stage15_b2_retrospective_truth_evaluation_v1",
+  "threshold_sweep_performed": false,
+  "thresholds": {
+    "negative": 0.2,
+    "positive": 0.8
+  },
+  "truth_partition": {
+    "counts": {
+      "negative": 8371,
+      "positive": 56,
+      "unknown": 541
+    },
+    "fractions": {
+      "negative": 0.9334299732381802,
+      "positive": 0.006244424620874219,
+      "unknown": 0.06032560214094559
+    },
+    "subsurface_partition_exact": true,
+    "truth_label9_voxels": 8968
+  },
+  "truth_used_only_by_this_retrospective_evaluator": true
+}

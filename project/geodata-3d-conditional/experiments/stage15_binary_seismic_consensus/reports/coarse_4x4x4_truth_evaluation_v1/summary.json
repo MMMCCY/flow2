@@ -1,0 +1,197 @@
+{
+  "decision_rationale": "The frozen inversions do not consistently concentrate high coarse occupancy at true label9 coarse locations; seismic-loss reduction alone is insufficient.",
+  "flow_used": false,
+  "grid_accounting": {
+    "background_only_coarse_cells": 28,
+    "coarse_grid_shape": [
+      4,
+      4,
+      4
+    ],
+    "evaluated_coarse_cells": 61,
+    "fine_grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "fine_voxels_per_coarse_cell": [
+      16,
+      16,
+      16
+    ],
+    "target_containing_coarse_cells": 33
+  },
+  "input_file_sha256": {
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/coarse_inversion/coarse_4x4x4_n8_v1/manifest.json": "0be1f6dfb056832d7f1407fea9cc0543dc4750a02dbb3dd116a59011e639e967",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/coarse_inversion/coarse_4x4x4_n8_v1/mean_coarse_occupancy.pt": "9cb8a48d0c87374a2894982839ded53d6e0b572b15678847c6aa33a2df7b66ef",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/coarse_inversion/coarse_4x4x4_n8_v1/run_00/coarse_occupancy.pt": "aba8965b84c9c6ca225ea6815b60bed75782a471972cd720c3b285914e3807d8",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/coarse_inversion/coarse_4x4x4_n8_v1/run_01/coarse_occupancy.pt": "1d695bb1c7d9064633f6ddcf8f3aaed6a2afaaad44b07f49cfe08e635998688a",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/coarse_inversion/coarse_4x4x4_n8_v1/run_02/coarse_occupancy.pt": "2c13fac6e0fc2fd7214d7211af3df39e484f9fc8da4760f825561786d3961105",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/coarse_inversion/coarse_4x4x4_n8_v1/run_03/coarse_occupancy.pt": "9c1ffc557b77a07013090a88b09174c5dad1aa3c2e11bb169c594a11275dcf42",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/coarse_inversion/coarse_4x4x4_n8_v1/run_04/coarse_occupancy.pt": "486c745d8de713e69809a9fdc971cb07d5d891186f7f8e0d8776eaa8afe04f72",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/coarse_inversion/coarse_4x4x4_n8_v1/run_05/coarse_occupancy.pt": "78fcfa5d88563b9ad1802ec68acc7689aef75e7179f72406dfbc6484046bb346",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/coarse_inversion/coarse_4x4x4_n8_v1/run_06/coarse_occupancy.pt": "8d480dd1f8234981f875569ec90d198785c9d964a22b1092e2af2ca8dbf56421",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/coarse_inversion/coarse_4x4x4_n8_v1/run_07/coarse_occupancy.pt": "aad54d6e56439322af0700eba441dc6634c64ebefd81c704683af8e19afe5b34",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/manifest.json": "02c7b80741edaa89677a50b3cda086731ce9fc87f1ce34011c6d5e919ff02aad",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/subsurface_mask.pt": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+    "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3"
+  },
+  "machine_decision": "COARSE_LABEL9_LOCALIZATION_FAILS",
+  "machine_decision_allowed_values": [
+    "COARSE_LABEL9_LOCALIZATION_WORKS",
+    "COARSE_LABEL9_LOCALIZATION_FAILS"
+  ],
+  "machine_decision_policy": "manual_alignment_interpretation_without_new_numeric_gate",
+  "mean_coarse_occupancy_metrics": {
+    "background_only_cell_count": 28,
+    "centroid_distance_coarse_cells": 0.9365202574131638,
+    "coarse_presence_auprc": 0.5893821523802666,
+    "mean_q_pred_background_only_cells": 0.5175359483276095,
+    "mean_q_pred_target_containing_cells": 0.5178206039197517,
+    "pearson_correlation": -0.11286013978477223,
+    "pearson_two_sided_p_value": 0.3864891992201487,
+    "predicted_weighted_centroid_xyz": [
+      1.4753254652023315,
+      1.4984996318817139,
+      1.4224002361297607
+    ],
+    "spearman_correlation": -0.10096197732134024,
+    "spearman_two_sided_p_value": 0.43880875151652965,
+    "target_containing_cell_count": 33,
+    "target_minus_background_mean_q": 0.00028465559214219116,
+    "top_k": {
+      "k": 33,
+      "overlap_count": 19,
+      "overlap_fraction": 0.5757575757575758,
+      "selected_flat_indices": [
+        42,
+        43,
+        41,
+        40,
+        12,
+        13,
+        23,
+        14,
+        22,
+        20,
+        21,
+        16,
+        17,
+        18,
+        19,
+        8,
+        9,
+        10,
+        11,
+        50,
+        48,
+        49,
+        38,
+        39,
+        37,
+        36,
+        29,
+        28,
+        30,
+        31,
+        53,
+        54,
+        2
+      ],
+      "truth_target_flat_indices": [
+        12,
+        13,
+        14,
+        20,
+        21,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30,
+        32,
+        33,
+        34,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        52,
+        53,
+        54,
+        56,
+        57,
+        58,
+        60
+      ]
+    },
+    "truth_weighted_centroid_xyz": [
+      2.0176148414611816,
+      1.4756975173950195,
+      0.6592013835906982
+    ]
+  },
+  "per_run_summary": {
+    "centroid_distance_coarse_cells": {
+      "max": 1.011967848264082,
+      "median": 0.944545994135376,
+      "min": 0.8763973280942445
+    },
+    "coarse_presence_auprc": {
+      "max": 0.6788237597924325,
+      "median": 0.5951626000305205,
+      "min": 0.5052709140798903
+    },
+    "mean_q_pred_background_only_cells": {
+      "max": 0.5924155062862805,
+      "median": 0.5246275588870049,
+      "min": 0.4298642235142844
+    },
+    "mean_q_pred_target_containing_cells": {
+      "max": 0.6165768188057523,
+      "median": 0.5097910637656847,
+      "min": 0.4361071424050765
+    },
+    "pearson_correlation": {
+      "max": 0.06962834904513523,
+      "median": -0.05204850330405579,
+      "min": -0.16141913138517408
+    },
+    "run_count": 8,
+    "spearman_correlation": {
+      "max": 0.08995680354110414,
+      "median": 0.0029004617724207333,
+      "min": -0.1534620089869175
+    },
+    "target_minus_background_mean_q": {
+      "max": 0.03956576523842753,
+      "median": 0.0009856758824674516,
+      "min": -0.059187024138319555
+    },
+    "top_k_overlap_fraction": {
+      "max": 0.6363636363636364,
+      "median": 0.5454545454545454,
+      "min": 0.5151515151515151
+    }
+  },
+  "probability_threshold_applied": false,
+  "q_true": {
+    "definition": "mean raw-label9 occupancy within subsurface voxels of each 16x16x16 block; not thresholded",
+    "max": 0.15087890625,
+    "mean": 0.035951532423496246,
+    "min": 0.0,
+    "tensor_sha256": "c2301a4452c9156baf5113ec95669e676e04229f59341a028fcb46524bacb7e1"
+  },
+  "run_status": "completed",
+  "schema": "stage15_e_coarse_binary_seismic_truth_evaluation_v1",
+  "truth_loaded_only_by_evaluator": true
+}

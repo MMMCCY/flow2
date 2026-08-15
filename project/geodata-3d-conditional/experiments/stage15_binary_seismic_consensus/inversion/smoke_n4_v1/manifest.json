@@ -1,0 +1,62 @@
+{
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_inversion_pilot_v1.json",
+    "sha256": "cf8c5fb8366324ad39c3c6ac0f75dd5e75bf6911ba73a9a77f8e53bd7f287aa6",
+    "size_bytes": 919
+  },
+  "created_at_utc": "2026-08-12T19:27:30.010227+00:00",
+  "error": "RuntimeError: hard/STE forward mismatch: 1.4826655387878418e-05",
+  "full_parameters": {
+    "device": "cuda",
+    "dtype": "float32",
+    "id": "binary_inversion_pilot_v1",
+    "initialization_mean": 0.0,
+    "initialization_scale": 1.0,
+    "initialization_smoothing": {
+      "method": "avg_pool3d_kernel3_stride1_padding1",
+      "passes": 1
+    },
+    "lambda_tv": 0.01,
+    "learning_rate": 0.1,
+    "member_seeds": [
+      151500,
+      151501,
+      151502,
+      151503,
+      151504,
+      151505,
+      151506,
+      151507,
+      151508,
+      151509,
+      151510,
+      151511,
+      151512,
+      151513,
+      151514,
+      151515
+    ],
+    "number_of_optimization_steps": 80,
+    "optimizer": "Adam",
+    "parameter_sweep": false,
+    "schema": "stage15_binary_inversion_config_v1",
+    "seismic_loss_scale": "diagonal_uncertainty_normalized_mean_squared_error",
+    "target_volume_penalty": false,
+    "tau_end": 0.25,
+    "tau_schedule": "cosine",
+    "tau_start": 1.0,
+    "trace_interval": 1,
+    "truth_morphology_prior": false,
+    "truth_tuned": false,
+    "tv_scale": "mean_absolute_first_difference_over_within_subsurface_edges"
+  },
+  "git_branch": "stage15-binary-seismic-consensus",
+  "git_head": "123d4dc3a1a33b8f03ff5b98894747b921a98fcd",
+  "run_status": "failed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage15/run_binary_inversion_ensemble.py",
+    "sha256": "06f8963319d1720d0d52522e989d783bdecdd65a2ac66e445ec77dfb0ab00378",
+    "size_bytes": 15142
+  },
+  "schema": "stage15_binary_inversion_ensemble_v1"
+}

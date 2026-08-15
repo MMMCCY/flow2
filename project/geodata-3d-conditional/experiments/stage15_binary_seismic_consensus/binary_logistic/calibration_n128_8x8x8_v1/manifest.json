@@ -1,0 +1,59 @@
+{
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_inversion_logistic_8x8x8_v1.json",
+    "sha256": "2a066f83a7e8e9a6d18313f3430593dd2304afc276da88b18cbda1d6c09ea606",
+    "size_bytes": 1149
+  },
+  "created_at_utc": "2026-08-13T09:16:32.821087+00:00",
+  "error": "RuntimeError: self.dim() cannot be 0 to view Float as Byte (different element sizes)",
+  "full_parameters": {
+    "class_balancing": false,
+    "coarse_grid_shape": [
+      8,
+      8,
+      8
+    ],
+    "feature_names": [
+      "raw_q",
+      "within_case_percentile",
+      "vertical_contrast",
+      "depth"
+    ],
+    "flow_used": false,
+    "heldout_coarse_score_sha256": "1824754a13afec0e2b4e3cdf2a5ec40d54a465ef58edb9d5e82b8d86799bc1c0",
+    "heldout_subsurface_mask_sha256": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+    "heldout_truth_loaded_by_runner": false,
+    "learning_rate": 0.05,
+    "loss": "natural_prevalence_subsurface_voxel_weighted_BCEWithLogits",
+    "model": "single_linear_layer_4_to_1",
+    "optimizer": "Adam",
+    "parameter_sweep": false,
+    "random_seed": 15190000,
+    "schema": "stage15_binary_inversion_logistic_8x8x8_v1",
+    "seismic_forward_rerun": false,
+    "seismic_inversion_rerun": false,
+    "source_calibration_case_count": 128,
+    "source_calibration_manifest_sha256": "994f43f0ec4a0b9fbd76d40cbccbd6778a583c303d13d3c080c5d6fa4d5d6b42",
+    "source_stage": "Stage15-F",
+    "status": "frozen_before_training",
+    "target": "binary_raw_label9_vs_every_other_subsurface_voxel",
+    "training_case_indices": [
+      0,
+      95
+    ],
+    "training_steps": 1000,
+    "validation_case_indices": [
+      96,
+      127
+    ]
+  },
+  "git_branch": "stage15-binary-seismic-consensus",
+  "git_head": "cb998cea783fd4167fab65f30114433fb4001815",
+  "run_status": "failed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage15/run_binary_inversion_logistic.py",
+    "sha256": "0200c43f6555b6771f9647d549db2c5b88b9b046ce86d0ddedefb64cf0ce82cc",
+    "size_bytes": 16566
+  },
+  "schema": "stage15_g_binary_inversion_logistic_calibration_v1"
+}

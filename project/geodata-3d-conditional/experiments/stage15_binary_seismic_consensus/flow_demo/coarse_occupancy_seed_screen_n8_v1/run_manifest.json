@@ -1,0 +1,65 @@
+{
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/flow_demo_coarse_occupancy_v1.json",
+    "sha256": "17af7f75b918e62c011f3489171cc36e55f9496c94c3bf9f5d1824f98e6b86a4",
+    "size_bytes": 1609
+  },
+  "created_at_utc": "2026-08-13T09:58:03.439731+00:00",
+  "error": "KeyError: 'probability_spatial_gradient_loss'",
+  "full_parameters": {
+    "alpha": 0.25,
+    "arms": [
+      "FLOW_ONLY",
+      "GEO_EVIDENCE_GUIDED"
+    ],
+    "bce_weight": 1.0,
+    "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+    "condition_mask_sha256": "c1231c7a917e4f19f671724e2473f3cc8e8def48cba5158a225868bc9a22b460",
+    "condition_values_sha256": "dd35b7567a5e099e58a9d9f6cede667839cdbd8915dc96fd0fc6fa2b194c8247",
+    "dice_weight": 0.0,
+    "fine_voxel_repeat_used_in_loss": false,
+    "grad_clip_norm": 1.0,
+    "guidance_scaling_mode": "reference_norm_relative_v2",
+    "guidance_schedule": "windowed_sine",
+    "guidance_start": 0.25,
+    "guidance_target": "frozen_8x8x8_binary_label9_probability",
+    "hard_dice_core_used": false,
+    "internal_dice_core_threshold": 0.8,
+    "max_guidance_ratio": 0.25,
+    "n_euler_steps": 32,
+    "parameter_sweep": false,
+    "probability_loss_mode": "binary_coarse_occupancy_bce_v1",
+    "raw_probability_sha256": "0d89435a21779521a306c1a7b4f139ed46955f4defc6bb1c210ace34b298af68",
+    "sample_selection": "retrospective_max_delta_label9_iou_for_visualization_only_all_pairs_reported",
+    "schema": "stage15_flow_demo_coarse_occupancy_v1",
+    "scientific_role": "exploratory_binary_coarse_location_guidance_with_flow_resolving_within_cell_morphology",
+    "source_seeds": [
+      42,
+      142,
+      242,
+      342,
+      442,
+      542,
+      642,
+      742
+    ],
+    "spatial_gradient_weight": 0.0,
+    "status": "frozen_before_flow_demo",
+    "subsurface_mask_sha256": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+    "target_label": 9,
+    "tau_end": 0.1,
+    "tau_schedule": "cosine",
+    "tau_start": 0.5,
+    "training_performed": false,
+    "truth_loaded_by_flow_runner": false
+  },
+  "git_branch": "stage15-binary-seismic-consensus",
+  "git_head": "cb998cea783fd4167fab65f30114433fb4001815",
+  "run_status": "failed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage15/run_flow_demo.py",
+    "sha256": "95eea446a2300ba041cfab5605a439e51e972e2de92964648c2f384df68a5406",
+    "size_bytes": 9077
+  },
+  "schema": "stage15_flow_demo_truth_blind_v1"
+}

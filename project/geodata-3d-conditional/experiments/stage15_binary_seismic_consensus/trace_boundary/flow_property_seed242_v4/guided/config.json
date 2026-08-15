@@ -1,0 +1,325 @@
+{
+  "alpha": 0.25,
+  "asset_records": {
+    "boreholes": {
+      "path": "samples/jupyter-demo/cond_generation_0/boreholes.pt",
+      "sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41",
+      "size_bytes": 1050167
+    },
+    "checkpoint": {
+      "path": "demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "controller_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/probability_sampling.py",
+      "sha256": "2aa6119fa8517176eb0d1b8f6892ebdd14cc3051a43dd8e030099150f69bec9f",
+      "size_bytes": 22403
+    },
+    "external_property_manifest": {
+      "path": "experiments/stage15_binary_seismic_consensus/trace_boundary/property_assets_cond_generation_0_v4/manifest.json",
+      "sha256": "5a63616e1a80f4136c3e9c7b630d07bb65c6cb398ff81b8e585cc3dee4c0fb6e",
+      "size_bytes": 2418
+    },
+    "property_config": {
+      "path": "experiments/stage15_binary_seismic_consensus/configs/binary_trace_property_indicator_v1.json",
+      "sha256": "362b5f33a1376d00209ee4376754e456614f6549419d90025c2c0851045d7864",
+      "size_bytes": 542
+    },
+    "property_evaluation_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/property_evaluation.py",
+      "sha256": "feb1c32d13c55fac28cc03d146fc15d73c027a7f101a403526601fbfea5f32cb",
+      "size_bytes": 14613
+    },
+    "property_sampling_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/property_sampling.py",
+      "sha256": "ba2560c0052774de82cd4fadc3afab6d759e30c5223f57848b518f940bee566d",
+      "size_bytes": 12060
+    },
+    "property_volume_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/property_volume.py",
+      "sha256": "9fd3ebebf3ca944102216bec2ed6cc1aa179bd82cc70aa8a6cb2b20cac52125d",
+      "size_bytes": 19260
+    },
+    "runner_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage2/run_property_guidance.py",
+      "sha256": "f97854357547dc50bc29219709e3b99123a951a37ff9092448b8c803218abf08",
+      "size_bytes": 38332
+    },
+    "runtime_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/inference_runtime.py",
+      "sha256": "246ba9cc8b8e80ce86d7e9d059010d7b030b87e793d911cef8e8d3478786e838",
+      "size_bytes": 12552
+    },
+    "truth_model": {
+      "path": "samples/jupyter-demo/cond_generation_0/true_model.pt",
+      "sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3",
+      "size_bytes": 1050238
+    }
+  },
+  "baseline_dir": "experiments/stage15_binary_seismic_consensus/trace_boundary/flow_property_seed242_v4/baseline",
+  "boreholes": "samples/jupyter-demo/cond_generation_0/boreholes.pt",
+  "boreholes_sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "ckpt_path": "demo_model/conditional-weights.ckpt",
+  "condition_projection": "clean_embedding_before_first_step_and_after_every_step_v1",
+  "conditioning_report": {
+    "borehole_columns_hitting_target": 2,
+    "borehole_label_counts": {
+      "-1": 257626,
+      "1": 94,
+      "2": 4137,
+      "3": 34,
+      "4": 179,
+      "5": 52,
+      "6": 9,
+      "9": 13
+    },
+    "dtype": "torch.int64",
+    "effective_condition_fraction": 0.2636222839355469,
+    "effective_condition_voxels": 69107,
+    "full_borehole_count": 9,
+    "full_borehole_xy": [
+      [
+        8,
+        46
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        10,
+        24
+      ],
+      [
+        27,
+        17
+      ],
+      [
+        35,
+        26
+      ],
+      [
+        39,
+        59
+      ],
+      [
+        44,
+        60
+      ],
+      [
+        48,
+        6
+      ],
+      [
+        57,
+        32
+      ]
+    ],
+    "nonair_borehole_truth_mismatches": 0,
+    "nonair_observed_fraction": 0.01723480224609375,
+    "nonair_observed_voxels": 4518,
+    "shape": [
+      1,
+      1,
+      64,
+      64,
+      64
+    ],
+    "target_conditioned_fraction": 0.0014495985727029437,
+    "target_conditioned_voxels": 13,
+    "target_fraction": 0.034210205078125,
+    "target_hits_in_full_boreholes": 13,
+    "target_label": 9,
+    "target_voxels": 8968,
+    "truth_air_voxels": 64589,
+    "truth_label_counts": {
+      "-1": 64589,
+      "1": 45273,
+      "13": 15,
+      "2": 24520,
+      "3": 14533,
+      "4": 73801,
+      "5": 18902,
+      "6": 11543,
+      "9": 8968
+    },
+    "unconstrained_subsurface_voxels": 193037,
+    "valid_label_range": [
+      -1,
+      13
+    ]
+  },
+  "confidence_mode": "external_posterior_spread_v1",
+  "controller_source_sha256": "2aa6119fa8517176eb0d1b8f6892ebdd14cc3051a43dd8e030099150f69bec9f",
+  "description": "Truth-blind full-trace binary seismic inversion property bridge; synthetic inverse-crime and not measured geophysics.",
+  "device": "cuda",
+  "ema_applied": true,
+  "external_property_dir": "experiments/stage15_binary_seismic_consensus/trace_boundary/property_assets_cond_generation_0_v4",
+  "external_property_manifest_schema": "stage15_binary_trace_property_assets_v1",
+  "external_property_manifest_sha256": "5a63616e1a80f4136c3e9c7b630d07bb65c6cb398ff81b8e585cc3dee4c0fb6e",
+  "final_expected_properties_sha256": "f966496eb37329acdf0a6893c6d40d18c0d63c939fc26d419274c1c7af1da930",
+  "grad_clip_norm": 1.0,
+  "guidance_gradient_reference_policy": "first_nonzero_active_used_gradient_norm_per_sample_v1",
+  "guidance_scaling_mode": "reference_norm_relative_v2",
+  "guidance_schedule": "windowed_sine",
+  "guidance_start": 0.25,
+  "initial_noise_policy": "single_cpu_generator_sequential_samples_v1",
+  "initial_noise_sha256": [
+    "e6f10761b6eee07b0a77a58fc4f2170c9a107a156a7d8db89b83ebc4b1ac2c49"
+  ],
+  "integrator": "fixed_euler_midpoint_v1",
+  "max_guidance_ratio": 0.25,
+  "max_post_projection_condition_violations": 0,
+  "model_load_report": {
+    "checkpoint": {
+      "path": "demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "checkpoint_epoch": 1651,
+    "checkpoint_global_step": 8376,
+    "ema_applied": true,
+    "ema_entry_count": 411,
+    "ema_excluded_frozen_parameters": [
+      "embedding.weight"
+    ],
+    "ema_missing_trainable": [],
+    "ema_shape_mismatches": [],
+    "ema_unexpected": [],
+    "frozen_parameters": [
+      "embedding.weight"
+    ],
+    "model_parameter_count": 412,
+    "trainable_parameter_count": 411,
+    "weight_source": "ema"
+  },
+  "model_weight_source": "ema",
+  "n_samples": 1,
+  "n_steps": 32,
+  "output_dir": "experiments/stage15_binary_seismic_consensus/trace_boundary/flow_property_seed242_v4/guided",
+  "pairing_validation": {
+    "baseline_config": "experiments/stage15_binary_seismic_consensus/trace_boundary/flow_property_seed242_v4/baseline/config.json",
+    "paired": true,
+    "reason": "strict Phase-2 property assets, noise, and sampler settings match"
+  },
+  "phase2_protocol_version": 1,
+  "property_channel_names": [
+    "normalized_binary_impedance"
+  ],
+  "property_channel_units": [
+    "binary_endpoint_unit"
+  ],
+  "property_channel_weights": [
+    1.0
+  ],
+  "property_codebook_diagnostics": {
+    "distance_definition": "channel_range_normalized_weighted_euclidean_v1",
+    "duplicate_property_groups": [
+      [
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13
+      ]
+    ],
+    "target_exact_property_group": [
+      9
+    ],
+    "target_nearest_range_normalized_distance": 1.0,
+    "target_nearest_raw_labels": [
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13
+    ],
+    "target_property_values": [
+      1.0
+    ],
+    "target_raw_label": 9,
+    "unique_property_vectors": 2
+  },
+  "property_confidence_sha256": "fb9fc11d6a99768ec1e15c3b09d171e00b4a0b7cedbd25792066ca6b9b5003ed",
+  "property_config": "experiments/stage15_binary_seismic_consensus/configs/binary_trace_property_indicator_v1.json",
+  "property_config_schema": "full_lithology_property_channels_v1",
+  "property_config_sha256": "362b5f33a1376d00209ee4376754e456614f6549419d90025c2c0851045d7864",
+  "property_evaluation_source_sha256": "feb1c32d13c55fac28cc03d146fc15d73c027a7f101a403526601fbfea5f32cb",
+  "property_loss_mode": "matched_multiscale_normalized_mse_v1",
+  "property_metadata": {
+    "channel_names": [
+      "normalized_binary_impedance"
+    ],
+    "channel_units": [
+      "binary_endpoint_unit"
+    ],
+    "channel_weights": [
+      1.0
+    ],
+    "description": "Normalized binary acoustic endpoint: label9 is 1, every other category including air is 0.",
+    "is_measured_geophysics": false,
+    "num_categories": 15,
+    "property_table_sha256": "5fe78122fd4cf2e02f294713530fbed73ff753036dfbf46495a473d778d67325",
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "schema": "full_lithology_property_channels_v1",
+    "truth_derived": true
+  },
+  "property_sampler_version": "projected_fixed_euler_property_v1",
+  "property_sampling_source_sha256": "ba2560c0052774de82cd4fadc3afab6d759e30c5223f57848b518f940bee566d",
+  "property_scale_weights": [
+    0.5,
+    0.3,
+    0.2
+  ],
+  "property_sigmas": [
+    0.0,
+    1.5,
+    3.0
+  ],
+  "property_table_sha256": "5fe78122fd4cf2e02f294713530fbed73ff753036dfbf46495a473d778d67325",
+  "property_volume_source_sha256": "9fd3ebebf3ca944102216bec2ed6cc1aa179bd82cc70aa8a6cb2b20cac52125d",
+  "protocol_version": 1,
+  "run_status": "completed",
+  "runner_source_sha256": "f97854357547dc50bc29219709e3b99123a951a37ff9092448b8c803218abf08",
+  "runtime_source_sha256": "246ba9cc8b8e80ce86d7e9d059010d7b030b87e793d911cef8e8d3478786e838",
+  "sample_sha256": [
+    "2dfdfbeadbd3bedb390098b16e61d2ded8c57cd4bdc30d3bb973782529908cf1"
+  ],
+  "samples_dir": "samples/jupyter-demo/cond_generation_0",
+  "samples_written": 1,
+  "seed": 242,
+  "stage": "stage15_binary_trace_property_bridge_v1",
+  "target_label": 9,
+  "target_mask_sha256": "b26b14b6b8f5e33069f77df32dc74a2fbc77c6a816f571969a7e017bc59f9594",
+  "target_properties_sha256": "f28c078603c5f8bb0c9ea250dd90c83977a7571f14078535a17606d447225022",
+  "target_roi_mask_sha256": "8f8d811d2c090fd4b6fcf80dad800e4684b9f9184749058c6b4b7253d57e4945",
+  "target_roi_radius": 6,
+  "tau_end": 0.1,
+  "tau_schedule": "cosine",
+  "tau_start": 0.5,
+  "truth_model": "samples/jupyter-demo/cond_generation_0/true_model.pt",
+  "truth_model_sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3"
+}
