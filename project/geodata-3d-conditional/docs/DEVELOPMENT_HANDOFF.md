@@ -1,5 +1,29 @@
 # Development handoff
 
+## Stage16 D-Flow source optimization (2026-08-24)
+
+Stage16 adds an inference-only, source-point D-Flow engine: the EMA CFM is
+frozen and the only optimized tensor is the Gaussian source state.  The
+authoritative projected 32-step fixed-Euler map is differentiated end to end,
+with non-reentrant per-step model-net checkpointing and exact condition
+projection at initialization and after every step.  Oracle Phase1 probability,
+Phase2A property and direct Stage15 binary-seismic objectives share the same
+engine and strict FLOW_ONLY/DFLOW source pairing.  The seismic runner's asset
+API contains no truth; truth is loaded only by a separate evaluator after a
+completed run.
+
+CPU tests pass 9/9 and relevant Phase/Stage regressions pass 74/74.  One-seed
+CUDA smoke runs (seed 42, frozen Adam 0.01, 20 iterations, no shell penalty)
+completed for all three objectives with nonzero source gradients, nonzero
+updates, zero condition violations and byte-identical model state before/after.
+Endpoint losses decreased: oracle 2.05651 -> 1.78493, property 1.54070 ->
+0.83186, seismic soft raw MSE 0.0016833 -> 0.0011523; hard seismic MSE also
+decreased 0.0017588 -> 0.0011911.  Retrospective hard-geology changes were
+mixed or negative, especially seismic mIoU -0.07879 and accuracy -0.15602.
+This is retained negative mechanism evidence; no tuning was performed.  Formal
+multi-seed experiments have not been run.  See
+`experiments/stage16_dflow_source_optimization/reports/DEVELOPMENT_REPORT.md`.
+
 ## Stage15 topology-support stress test (2026-08-14)
 
 A new controlled A/B experiment freezes the existing checkpoint and compares a

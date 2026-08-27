@@ -1,0 +1,618 @@
+{
+  "arm_summaries": {
+    "DFLOW": {
+      "metrics": {
+        "condition_violation_count": {
+          "count": 1,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "std": 0.0
+        },
+        "global_mean_iou": {
+          "count": 1,
+          "max": 0.11411702632904053,
+          "mean": 0.11411702632904053,
+          "min": 0.11411702632904053,
+          "std": 0.0
+        },
+        "global_voxel_accuracy": {
+          "count": 1,
+          "max": 0.4313482344150543,
+          "mean": 0.4313482344150543,
+          "min": 0.4313482344150543,
+          "std": 0.0
+        },
+        "hidden_predicted_target_volume": {
+          "count": 1,
+          "max": 4803.0,
+          "mean": 4803.0,
+          "min": 4803.0,
+          "std": 0.0
+        },
+        "hidden_target_iou": {
+          "count": 1,
+          "max": 0.02495716307829844,
+          "mean": 0.02495716307829844,
+          "min": 0.02495716307829844,
+          "std": 0.0
+        },
+        "hidden_target_precision": {
+          "count": 1,
+          "max": 0.06974807412034145,
+          "mean": 0.06974807412034145,
+          "min": 0.06974807412034145,
+          "std": 0.0
+        },
+        "hidden_target_recall": {
+          "count": 1,
+          "max": 0.03740926856504746,
+          "mean": 0.03740926856504746,
+          "min": 0.03740926856504746,
+          "std": 0.0
+        },
+        "hidden_truth_target_volume": {
+          "count": 1,
+          "max": 8955.0,
+          "mean": 8955.0,
+          "min": 8955.0,
+          "std": 0.0
+        },
+        "inside_roi_voxel_accuracy": {
+          "count": 1,
+          "max": 0.37166922037770744,
+          "mean": 0.37166922037770744,
+          "min": 0.37166922037770744,
+          "std": 0.0
+        },
+        "largest_component_fraction": {
+          "count": 1,
+          "max": 0.7981727574750831,
+          "mean": 0.7981727574750831,
+          "min": 0.7981727574750831,
+          "std": 0.0
+        },
+        "outside_roi_target_iou": {
+          "count": 1,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "std": 0.0
+        },
+        "outside_roi_target_precision": {
+          "count": 1,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "std": 0.0
+        },
+        "outside_roi_target_recall": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "outside_roi_voxel_accuracy": {
+          "count": 1,
+          "max": 0.5067844782140319,
+          "mean": 0.5067844782140319,
+          "min": 0.5067844782140319,
+          "std": 0.0
+        },
+        "paired_hard_change_count": {
+          "count": 1,
+          "max": 75312.0,
+          "mean": 75312.0,
+          "min": 75312.0,
+          "std": 0.0
+        },
+        "paired_hard_change_fraction": {
+          "count": 1,
+          "max": 0.28729248046875,
+          "mean": 0.28729248046875,
+          "min": 0.28729248046875,
+          "std": 0.0
+        },
+        "paired_hard_change_inside_roi": {
+          "count": 1,
+          "max": 45064.0,
+          "mean": 45064.0,
+          "min": 45064.0,
+          "std": 0.0
+        },
+        "paired_hard_change_outside_roi": {
+          "count": 1,
+          "max": 30248.0,
+          "mean": 30248.0,
+          "min": 30248.0,
+          "std": 0.0
+        },
+        "paired_other_to_target_count": {
+          "count": 1,
+          "max": 2666.0,
+          "mean": 2666.0,
+          "min": 2666.0,
+          "std": 0.0
+        },
+        "paired_target_to_other_count": {
+          "count": 1,
+          "max": 4133.0,
+          "mean": 4133.0,
+          "min": 4133.0,
+          "std": 0.0
+        },
+        "predicted_target_volume": {
+          "count": 1,
+          "max": 4816.0,
+          "mean": 4816.0,
+          "min": 4816.0,
+          "std": 0.0
+        },
+        "predicted_target_volume_inside_roi": {
+          "count": 1,
+          "max": 3603.0,
+          "mean": 3603.0,
+          "min": 3603.0,
+          "std": 0.0
+        },
+        "selected_absolute_volume_error": {
+          "count": 1,
+          "max": 5365.0,
+          "mean": 5365.0,
+          "min": 5365.0,
+          "std": 0.0
+        },
+        "selected_absolute_volume_error_fraction": {
+          "count": 1,
+          "max": 0.5982381801962533,
+          "mean": 0.5982381801962533,
+          "min": 0.5982381801962533,
+          "std": 0.0
+        },
+        "selected_centroid_distance": {
+          "count": 1,
+          "max": 26.829076766967773,
+          "mean": 26.829076766967773,
+          "min": 26.829076766967773,
+          "std": 0.0
+        },
+        "selected_roi_connected_components": {
+          "count": 1,
+          "max": 7.0,
+          "mean": 7.0,
+          "min": 7.0,
+          "std": 0.0
+        },
+        "selected_roi_iou": {
+          "count": 1,
+          "max": 0.02847091548719627,
+          "mean": 0.02847091548719627,
+          "min": 0.02847091548719627,
+          "std": 0.0
+        },
+        "selected_roi_largest_component_fraction": {
+          "count": 1,
+          "max": 0.9811268387454899,
+          "mean": 0.9811268387454899,
+          "min": 0.9811268387454899,
+          "std": 0.0
+        },
+        "selected_roi_precision": {
+          "count": 1,
+          "max": 0.09658617818484597,
+          "mean": 0.09658617818484597,
+          "min": 0.09658617818484597,
+          "std": 0.0
+        },
+        "selected_roi_recall": {
+          "count": 1,
+          "max": 0.038804638715432646,
+          "mean": 0.038804638715432646,
+          "min": 0.038804638715432646,
+          "std": 0.0
+        },
+        "selected_target_volume": {
+          "count": 1,
+          "max": 8968.0,
+          "mean": 8968.0,
+          "min": 8968.0,
+          "std": 0.0
+        },
+        "selected_volume_error": {
+          "count": 1,
+          "max": -5365.0,
+          "mean": -5365.0,
+          "min": -5365.0,
+          "std": 0.0
+        },
+        "selected_volume_error_fraction": {
+          "count": 1,
+          "max": -0.5982381801962533,
+          "mean": -0.5982381801962533,
+          "min": -0.5982381801962533,
+          "std": 0.0
+        },
+        "source_seed": {
+          "count": 1,
+          "max": 42.0,
+          "mean": 42.0,
+          "min": 42.0,
+          "std": 0.0
+        },
+        "target_absolute_volume_error": {
+          "count": 1,
+          "max": 4152.0,
+          "mean": 4152.0,
+          "min": 4152.0,
+          "std": 0.0
+        },
+        "target_absolute_volume_error_fraction": {
+          "count": 1,
+          "max": 0.46297948260481714,
+          "mean": 0.46297948260481714,
+          "min": 0.46297948260481714,
+          "std": 0.0
+        },
+        "target_centroid_distance": {
+          "count": 1,
+          "max": 25.555391311645508,
+          "mean": 25.555391311645508,
+          "min": 25.555391311645508,
+          "std": 0.0
+        },
+        "target_connected_components": {
+          "count": 1,
+          "max": 8.0,
+          "mean": 8.0,
+          "min": 8.0,
+          "std": 0.0
+        },
+        "target_iou": {
+          "count": 1,
+          "max": 0.025900565644537063,
+          "mean": 0.025900565644537063,
+          "min": 0.025900565644537063,
+          "std": 0.0
+        },
+        "target_precision": {
+          "count": 1,
+          "max": 0.07225913621262459,
+          "mean": 0.07225913621262459,
+          "min": 0.07225913621262459,
+          "std": 0.0
+        },
+        "target_recall": {
+          "count": 1,
+          "max": 0.038804638715432646,
+          "mean": 0.038804638715432646,
+          "min": 0.038804638715432646,
+          "std": 0.0
+        },
+        "target_volume": {
+          "count": 1,
+          "max": 8968.0,
+          "mean": 8968.0,
+          "min": 8968.0,
+          "std": 0.0
+        },
+        "target_volume_error": {
+          "count": 1,
+          "max": -4152.0,
+          "mean": -4152.0,
+          "min": -4152.0,
+          "std": 0.0
+        },
+        "target_volume_error_fraction": {
+          "count": 1,
+          "max": -0.46297948260481714,
+          "mean": -0.46297948260481714,
+          "min": -0.46297948260481714,
+          "std": 0.0
+        }
+      },
+      "n_samples": 1
+    },
+    "FLOW_ONLY": {
+      "metrics": {
+        "condition_violation_count": {
+          "count": 1,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "std": 0.0
+        },
+        "global_mean_iou": {
+          "count": 1,
+          "max": 0.19290867447853088,
+          "mean": 0.19290867447853088,
+          "min": 0.19290867447853088,
+          "std": 0.0
+        },
+        "global_voxel_accuracy": {
+          "count": 1,
+          "max": 0.5873655676841736,
+          "mean": 0.5873655676841736,
+          "min": 0.5873655676841736,
+          "std": 0.0
+        },
+        "hidden_predicted_target_volume": {
+          "count": 1,
+          "max": 6270.0,
+          "mean": 6270.0,
+          "min": 6270.0,
+          "std": 0.0
+        },
+        "hidden_target_iou": {
+          "count": 1,
+          "max": 0.027744025921425677,
+          "mean": 0.027744025921425677,
+          "min": 0.027744025921425677,
+          "std": 0.0
+        },
+        "hidden_target_precision": {
+          "count": 1,
+          "max": 0.06555023923444976,
+          "mean": 0.06555023923444976,
+          "min": 0.06555023923444976,
+          "std": 0.0
+        },
+        "hidden_target_recall": {
+          "count": 1,
+          "max": 0.04589614740368509,
+          "mean": 0.04589614740368509,
+          "min": 0.04589614740368509,
+          "std": 0.0
+        },
+        "hidden_truth_target_volume": {
+          "count": 1,
+          "max": 8955.0,
+          "mean": 8955.0,
+          "min": 8955.0,
+          "std": 0.0
+        },
+        "inside_roi_voxel_accuracy": {
+          "count": 1,
+          "max": 0.5610397381615094,
+          "mean": 0.5610397381615094,
+          "min": 0.5610397381615094,
+          "std": 0.0
+        },
+        "largest_component_fraction": {
+          "count": 1,
+          "max": 0.7243355085150406,
+          "mean": 0.7243355085150406,
+          "min": 0.7243355085150406,
+          "std": 0.0
+        },
+        "outside_roi_target_iou": {
+          "count": 1,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "std": 0.0
+        },
+        "outside_roi_target_precision": {
+          "count": 1,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "std": 0.0
+        },
+        "outside_roi_target_recall": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null,
+          "std": null
+        },
+        "outside_roi_voxel_accuracy": {
+          "count": 1,
+          "max": 0.6206422333768824,
+          "mean": 0.6206422333768824,
+          "min": 0.6206422333768824,
+          "std": 0.0
+        },
+        "predicted_target_volume": {
+          "count": 1,
+          "max": 6283.0,
+          "mean": 6283.0,
+          "min": 6283.0,
+          "std": 0.0
+        },
+        "predicted_target_volume_inside_roi": {
+          "count": 1,
+          "max": 4825.0,
+          "mean": 4825.0,
+          "min": 4825.0,
+          "std": 0.0
+        },
+        "selected_absolute_volume_error": {
+          "count": 1,
+          "max": 4143.0,
+          "mean": 4143.0,
+          "min": 4143.0,
+          "std": 0.0
+        },
+        "selected_absolute_volume_error_fraction": {
+          "count": 1,
+          "max": 0.4619759143621766,
+          "mean": 0.4619759143621766,
+          "min": 0.4619759143621766,
+          "std": 0.0
+        },
+        "selected_centroid_distance": {
+          "count": 1,
+          "max": 23.993736267089844,
+          "mean": 23.993736267089844,
+          "min": 23.993736267089844,
+          "std": 0.0
+        },
+        "selected_roi_connected_components": {
+          "count": 1,
+          "max": 33.0,
+          "mean": 33.0,
+          "min": 33.0,
+          "std": 0.0
+        },
+        "selected_roi_iou": {
+          "count": 1,
+          "max": 0.03171516194180567,
+          "mean": 0.03171516194180567,
+          "min": 0.03171516194180567,
+          "std": 0.0
+        },
+        "selected_roi_largest_component_fraction": {
+          "count": 1,
+          "max": 0.7231088082901554,
+          "mean": 0.7231088082901554,
+          "min": 0.7231088082901554,
+          "std": 0.0
+        },
+        "selected_roi_precision": {
+          "count": 1,
+          "max": 0.08787564766839379,
+          "mean": 0.08787564766839379,
+          "min": 0.08787564766839379,
+          "std": 0.0
+        },
+        "selected_roi_recall": {
+          "count": 1,
+          "max": 0.04727921498661909,
+          "mean": 0.04727921498661909,
+          "min": 0.04727921498661909,
+          "std": 0.0
+        },
+        "selected_target_volume": {
+          "count": 1,
+          "max": 8968.0,
+          "mean": 8968.0,
+          "min": 8968.0,
+          "std": 0.0
+        },
+        "selected_volume_error": {
+          "count": 1,
+          "max": -4143.0,
+          "mean": -4143.0,
+          "min": -4143.0,
+          "std": 0.0
+        },
+        "selected_volume_error_fraction": {
+          "count": 1,
+          "max": -0.4619759143621766,
+          "mean": -0.4619759143621766,
+          "min": -0.4619759143621766,
+          "std": 0.0
+        },
+        "source_seed": {
+          "count": 1,
+          "max": 42.0,
+          "mean": 42.0,
+          "min": 42.0,
+          "std": 0.0
+        },
+        "target_absolute_volume_error": {
+          "count": 1,
+          "max": 2685.0,
+          "mean": 2685.0,
+          "min": 2685.0,
+          "std": 0.0
+        },
+        "target_absolute_volume_error_fraction": {
+          "count": 1,
+          "max": 0.2993978590544157,
+          "mean": 0.2993978590544157,
+          "min": 0.2993978590544157,
+          "std": 0.0
+        },
+        "target_centroid_distance": {
+          "count": 1,
+          "max": 24.002561569213867,
+          "mean": 24.002561569213867,
+          "min": 24.002561569213867,
+          "std": 0.0
+        },
+        "target_connected_components": {
+          "count": 1,
+          "max": 37.0,
+          "mean": 37.0,
+          "min": 37.0,
+          "std": 0.0
+        },
+        "target_iou": {
+          "count": 1,
+          "max": 0.02859647939569704,
+          "mean": 0.02859647939569704,
+          "min": 0.02859647939569704,
+          "std": 0.0
+        },
+        "target_precision": {
+          "count": 1,
+          "max": 0.0674836861371956,
+          "mean": 0.0674836861371956,
+          "min": 0.0674836861371956,
+          "std": 0.0
+        },
+        "target_recall": {
+          "count": 1,
+          "max": 0.04727921498661909,
+          "mean": 0.04727921498661909,
+          "min": 0.04727921498661909,
+          "std": 0.0
+        },
+        "target_volume": {
+          "count": 1,
+          "max": 8968.0,
+          "mean": 8968.0,
+          "min": 8968.0,
+          "std": 0.0
+        },
+        "target_volume_error": {
+          "count": 1,
+          "max": -2685.0,
+          "mean": -2685.0,
+          "min": -2685.0,
+          "std": 0.0
+        },
+        "target_volume_error_fraction": {
+          "count": 1,
+          "max": -0.2993978590544157,
+          "mean": -0.2993978590544157,
+          "min": -0.2993978590544157,
+          "std": 0.0
+        }
+      },
+      "n_samples": 1
+    }
+  },
+  "objective": "seismic",
+  "pair_count": 1,
+  "paired_delta_means": {
+    "delta_global_mean_iou": -0.07879164814949036,
+    "delta_global_voxel_accuracy": -0.15601733326911926,
+    "delta_hidden_predicted_target_volume": -1467.0,
+    "delta_hidden_target_iou": -0.0027868628431272358,
+    "delta_hidden_target_precision": 0.004197834885891691,
+    "delta_hidden_target_recall": -0.008486878838637628,
+    "delta_inside_roi_voxel_accuracy": -0.18937051778380198,
+    "delta_largest_component_fraction": 0.07383724896004251,
+    "delta_outside_roi_target_iou": 0.0,
+    "delta_outside_roi_voxel_accuracy": -0.11385775516285046,
+    "delta_selected_absolute_volume_error_fraction": 0.1362622658340767,
+    "delta_selected_centroid_distance": 2.8353404998779297,
+    "delta_selected_roi_iou": -0.003244246454609398,
+    "delta_selected_roi_precision": 0.00871053051645218,
+    "delta_selected_roi_recall": -0.008474576271186446,
+    "delta_target_absolute_volume_error_fraction": 0.16358162355040146,
+    "delta_target_centroid_distance": 1.5528297424316406,
+    "delta_target_connected_components": -29.0,
+    "delta_target_iou": -0.0026959137511599757,
+    "delta_target_precision": 0.004775450075428983,
+    "delta_target_recall": -0.008474576271186446,
+    "delta_target_volume_error_fraction": -0.16358162355040146
+  },
+  "schema": "stage16_dflow_retrospective_evaluation_v1",
+  "truth_loaded_after_inference": true,
+  "truth_role": "retrospective_evaluation_only",
+  "truth_used_for_sampling_or_optimization": false
+}

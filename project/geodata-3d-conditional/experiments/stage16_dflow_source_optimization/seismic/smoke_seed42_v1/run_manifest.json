@@ -1,0 +1,264 @@
+{
+  "conditioning_report": {
+    "condition_voxels": 69107,
+    "source": "stage15_binary_seismic_condition_assets",
+    "truth_loaded": false
+  },
+  "config": {
+    "path": "project/geodata-3d-conditional/experiments/stage16_dflow_source_optimization/configs/seismic_v1.json",
+    "sha256": "4a71e0b3ec8309ae0e363a9c9912a09e3b770947d5429cc4029a3bb91820b86c",
+    "size_bytes": 3570
+  },
+  "created_at_utc": "2026-08-23T18:28:13.994506+00:00",
+  "engine_version": "dflow_source_optimization_v1",
+  "executed_source_seeds": [
+    42
+  ],
+  "full_parameters": {
+    "arms": [
+      "FLOW_ONLY",
+      "DFLOW"
+    ],
+    "assets": {
+      "binary_acoustic_config": {
+        "path": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_acoustic_upper_bound_v1.json",
+        "sha256": "5272deb894d211fb67339e06840ac1212e156a200c20423f9f36d88949945248"
+      },
+      "binary_well_mask": {
+        "path": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/binary_well_mask.pt",
+        "sha256": "873ea1afeffa6995b0496fe10222080ae659c48222c6988c16b24d0fbf39599b"
+      },
+      "binary_well_values": {
+        "path": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/binary_well_values.pt",
+        "sha256": "177d2f52b3e95d417a6c4a7512d22fbe49786ba7b35b3ad1d1da069cf95e17d9"
+      },
+      "checkpoint": {
+        "path": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+        "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c"
+      },
+      "condition_mask": {
+        "path": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/flow_condition_mask.pt",
+        "sha256": "c1231c7a917e4f19f671724e2473f3cc8e8def48cba5158a225868bc9a22b460"
+      },
+      "condition_values": {
+        "path": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/flow_condition_values.pt",
+        "sha256": "dd35b7567a5e099e58a9d9f6cede667839cdbd8915dc96fd0fc6fa2b194c8247"
+      },
+      "observed_seismic": {
+        "path": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/observed_seismic.pt",
+        "sha256": "7a8aeb4b5adc2240e67d8e246d10570fd5b7ff553ad4da78df9fa92d4d161adf"
+      },
+      "seismic_config": {
+        "path": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+        "sha256": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02"
+      },
+      "subsurface_mask": {
+        "path": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/subsurface_mask.pt",
+        "sha256": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d"
+      }
+    },
+    "condition_projection": "clean_embedding_before_first_step_and_after_every_step_v1",
+    "device": "cuda",
+    "endpoint_tau": 0.1,
+    "endpoint_tau_source": "phase1_phase2_authoritative_endpoint_tau",
+    "evaluation_roi_radius": 6,
+    "gradient_checkpoint_policy": "model_net_per_euler_step_nonreentrant_v1",
+    "initialization": "standard_normal_cpu_generator_v1",
+    "lbfgs_max_iter": 5,
+    "learning_rate": 0.01,
+    "n_steps": 32,
+    "objective": "seismic",
+    "optimization_iterations": 20,
+    "optimizer": "adam",
+    "optimizer_selection_note": "single_pre_registered_adam_setting_no_sweep",
+    "parameter_sweep": false,
+    "schema": "stage16_dflow_source_optimization_v1",
+    "scientific_role": "truth_blind_end_to_end_stage15_binary_seismic_dflow_mechanism_test",
+    "seismic_loss": "raw_mean_squared_seismic_misfit",
+    "soft_acoustic_mapping": "continuous_label9_probability_stage15_binary_acoustic_v1",
+    "solver": "fixed_euler",
+    "source_regularization_weight": 0.0,
+    "source_seeds": [
+      42,
+      142,
+      242,
+      342,
+      442,
+      542,
+      642,
+      742
+    ],
+    "status": "frozen_before_run",
+    "straight_through_used": false,
+    "target_label": 9,
+    "time_grid": "fixed_euler_midpoint_v1",
+    "training_performed": false,
+    "truth_loaded_by_runner": false,
+    "use_gradient_checkpointing": true
+  },
+  "git_branch": "stage15-binary-seismic-consensus",
+  "git_head": "357796884b86f4f7de97cabc2b85077b6313a6a1",
+  "input_assets": {
+    "binary_acoustic_config": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_acoustic_upper_bound_v1.json",
+      "sha256": "5272deb894d211fb67339e06840ac1212e156a200c20423f9f36d88949945248",
+      "size_bytes": 634
+    },
+    "binary_well_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/binary_well_mask.pt",
+      "sha256": "873ea1afeffa6995b0496fe10222080ae659c48222c6988c16b24d0fbf39599b",
+      "size_bytes": 263848
+    },
+    "binary_well_values": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/binary_well_values.pt",
+      "sha256": "177d2f52b3e95d417a6c4a7512d22fbe49786ba7b35b3ad1d1da069cf95e17d9",
+      "size_bytes": 1050294
+    },
+    "checkpoint": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "condition_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/flow_condition_mask.pt",
+      "sha256": "c1231c7a917e4f19f671724e2473f3cc8e8def48cba5158a225868bc9a22b460",
+      "size_bytes": 263869
+    },
+    "condition_values": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/flow_condition_values.pt",
+      "sha256": "dd35b7567a5e099e58a9d9f6cede667839cdbd8915dc96fd0fc6fa2b194c8247",
+      "size_bytes": 2098891
+    },
+    "observed_seismic": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/observed_seismic.pt",
+      "sha256": "7a8aeb4b5adc2240e67d8e246d10570fd5b7ff553ad4da78df9fa92d4d161adf",
+      "size_bytes": 5244584
+    },
+    "seismic_config": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+      "sha256": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02",
+      "size_bytes": 919
+    },
+    "subsurface_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/observations/cond_generation_0/subsurface_mask.pt",
+      "sha256": "bee222718b241e39e43449a1109f52ec402e825d978ef2b721423acaf5cbad3d",
+      "size_bytes": 263841
+    }
+  },
+  "model_load_report": {
+    "all_model_parameters_require_grad_false": true,
+    "checkpoint": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "checkpoint_epoch": 1651,
+    "checkpoint_global_step": 8376,
+    "ema_applied": true,
+    "ema_entry_count": 411,
+    "ema_excluded_frozen_parameters": [
+      "embedding.weight"
+    ],
+    "ema_missing_trainable": [],
+    "ema_shape_mismatches": [],
+    "ema_unexpected": [],
+    "frozen_parameters": [
+      "embedding.weight"
+    ],
+    "model_parameter_count": 412,
+    "trainable_model_parameter_count_after_dflow_freeze": 0,
+    "trainable_parameter_count": 411,
+    "weight_source": "ema"
+  },
+  "model_state_dict_sha256_after": "10d2181fe3eeeb406afc3da5e78ded64e9f92abfb2b3c352ee57e60e06da9b68",
+  "model_state_dict_sha256_before": "10d2181fe3eeeb406afc3da5e78ded64e9f92abfb2b3c352ee57e60e06da9b68",
+  "model_state_dict_unchanged": true,
+  "objective": "seismic",
+  "objective_report": {
+    "binary_well_mask_tensor_sha256": "5feb5bd84cb582e7af96d893f06f9c13be52e8e0ae771f547a44c435e283e556",
+    "binary_well_values_tensor_sha256": "e6342fda319401577ab30f2a0ee024a4f3b8b1586f4a7cede80dbe4725cedf6e",
+    "observed_seismic_tensor_sha256": "f0f86c290373d06b38ea0c3bb5cb579622448e01144d71da295d745bdfaf50e2",
+    "seismic_loss": "raw_mean_squared_seismic_misfit",
+    "seismic_operator": {
+      "axis_order": [
+        "x",
+        "y",
+        "z"
+      ],
+      "cell_size_m": [
+        100.0,
+        100.0,
+        50.0
+      ],
+      "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+      "exclude_air_rock_interface": true,
+      "grid_shape": [
+        64,
+        64,
+        64
+      ],
+      "id": "full_cube_noiseless_inverse_crime_v1",
+      "inverse_crime": true,
+      "local_surface_datum": true,
+      "measured_geophysics": false,
+      "noise": {
+        "seed": 4205,
+        "std_amplitude": 0.0,
+        "type": "none"
+      },
+      "sample_mask": "all",
+      "schema": "phase4_seismic_observation_v1",
+      "time_sampling": {
+        "num_samples": 320,
+        "sample_interval_ms": 8.0
+      },
+      "trace_grid": "all_xy_columns",
+      "trace_order": "local_surface_to_depth",
+      "truth_derived": true,
+      "uncertainty_amplitude": 0.01,
+      "vertical_axis": "final spatial axis; larger index upward",
+      "wavelet": {
+        "duration_ms": 128.0,
+        "normalization": "peak_one",
+        "peak_frequency_hz": 25.0,
+        "type": "ricker_zero_phase"
+      }
+    },
+    "soft_mapping": "soft_categorical_label9_probability_to_stage15_binary_acoustic_v1",
+    "source_acoustic_config": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+      "sha256": "8980e30c59624af9f1bfa59447b7e22c85a2975f8a556fe6e98f5346f95d10ae",
+      "size_bytes": 1128
+    },
+    "straight_through_used": false,
+    "subsurface_mask_tensor_sha256": "07f2e4fd629e700a1b6e03fba183d411f17a5c36358177c0857a1ff0188bd47b",
+    "truth_loaded_by_runner": false
+  },
+  "optimization_trace": {
+    "path": "project/geodata-3d-conditional/experiments/stage16_dflow_source_optimization/seismic/smoke_seed42_v1/optimization_trace.csv",
+    "sha256": "f56d442cfbe0bcdd34889d777cceee5fb693bad36827c914f7bb94073d0c0e14",
+    "size_bytes": 6845
+  },
+  "optimizer_parameter_scope": "source_state_only",
+  "pair_count": 1,
+  "paired_manifest": {
+    "path": "project/geodata-3d-conditional/experiments/stage16_dflow_source_optimization/seismic/smoke_seed42_v1/paired_manifest.csv",
+    "sha256": "9322a88404147b0519270d42b5a9588c65971c9fb1864140c7e0f6874e287f07",
+    "size_bytes": 1790
+  },
+  "parameter_sweep_performed": false,
+  "results_selected_or_ranked": false,
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage16/run_dflow.py",
+    "sha256": "4c8917bb0b5be32a9e3860493827e3692fa7547a7cd72baf8461c513ee4e2314",
+    "size_bytes": 25944
+  },
+  "schema": "stage16_dflow_source_optimization_run_v1",
+  "scientific_failure_is_preserved": true,
+  "seismic_truth_loaded_by_runner": false,
+  "smoke_subset": true,
+  "trainable_model_parameter_count": 0,
+  "training_performed": false,
+  "truth_loaded_by_runner": false
+}
