@@ -1,0 +1,262 @@
+{
+  "conditioning_report": {
+    "borehole_columns_hitting_target": 2,
+    "borehole_label_counts": {
+      "-1": 257626,
+      "1": 94,
+      "2": 4137,
+      "3": 34,
+      "4": 179,
+      "5": 52,
+      "6": 9,
+      "9": 13
+    },
+    "dtype": "torch.int64",
+    "effective_condition_fraction": 0.2636222839355469,
+    "effective_condition_voxels": 69107,
+    "full_borehole_count": 9,
+    "full_borehole_xy": [
+      [
+        8,
+        46
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        10,
+        24
+      ],
+      [
+        27,
+        17
+      ],
+      [
+        35,
+        26
+      ],
+      [
+        39,
+        59
+      ],
+      [
+        44,
+        60
+      ],
+      [
+        48,
+        6
+      ],
+      [
+        57,
+        32
+      ]
+    ],
+    "nonair_borehole_truth_mismatches": 0,
+    "nonair_observed_fraction": 0.01723480224609375,
+    "nonair_observed_voxels": 4518,
+    "shape": [
+      1,
+      1,
+      64,
+      64,
+      64
+    ],
+    "source": "phase1_phase2_authoritative_condition_semantics",
+    "target_conditioned_fraction": 0.0014495985727029437,
+    "target_conditioned_voxels": 13,
+    "target_fraction": 0.034210205078125,
+    "target_hits_in_full_boreholes": 13,
+    "target_label": 9,
+    "target_voxels": 8968,
+    "truth_air_voxels": 64589,
+    "truth_label_counts": {
+      "-1": 64589,
+      "1": 45273,
+      "13": 15,
+      "2": 24520,
+      "3": 14533,
+      "4": 73801,
+      "5": 18902,
+      "6": 11543,
+      "9": 8968
+    },
+    "truth_loaded": true,
+    "unconstrained_subsurface_voxels": 193037,
+    "valid_label_range": [
+      -1,
+      13
+    ]
+  },
+  "config": {
+    "path": "project/geodata-3d-conditional/experiments/stage16_dflow_source_optimization/configs/oracle_probability_v1.json",
+    "sha256": "666560af398b141a316c544c37714a66d49955fb7e0b28e4c0313289333e2012",
+    "size_bytes": 2720
+  },
+  "created_at_utc": "2026-08-23T18:13:36.230464+00:00",
+  "engine_version": "dflow_source_optimization_v1",
+  "executed_source_seeds": [
+    42
+  ],
+  "full_parameters": {
+    "arms": [
+      "FLOW_ONLY",
+      "DFLOW"
+    ],
+    "assets": {
+      "boreholes": {
+        "path": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/boreholes.pt",
+        "sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41"
+      },
+      "checkpoint": {
+        "path": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+        "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c"
+      },
+      "target_mask": {
+        "path": "project/geodata-3d-conditional/experiments/stage1_probability/runs/cond_generation_0/label9/all/phase1b_v4/calibrated_reference_windowed/seed42_n4_s32/baseline/target_mask.pt",
+        "sha256": "0028dc1fdb18611ffe4654b9d278f7be83ebda5656027cbdb87557fa72f1e481"
+      },
+      "target_probability": {
+        "path": "project/geodata-3d-conditional/experiments/stage1_probability/runs/cond_generation_0/label9/all/phase1b_v4/calibrated_reference_windowed/seed42_n4_s32/baseline/target_probability.pt",
+        "sha256": "b713880d4069de9e64143cb8c303022814716ae61ed996883e8b64e43cf77a75"
+      },
+      "target_roi_mask": {
+        "path": "project/geodata-3d-conditional/experiments/stage1_probability/runs/cond_generation_0/label9/all/phase1b_v4/calibrated_reference_windowed/seed42_n4_s32/baseline/target_roi_mask.pt",
+        "sha256": "15d3ff989d119075edc760e0ec49fd0474ec895ce94a4019e5214ca176ffb129"
+      },
+      "truth_model": {
+        "path": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt",
+        "sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3"
+      }
+    },
+    "bce_weight": 1.0,
+    "condition_projection": "clean_embedding_before_first_step_and_after_every_step_v1",
+    "device": "cuda",
+    "dice_weight": 1.0,
+    "endpoint_tau": 0.1,
+    "endpoint_tau_source": "phase1_authoritative_tau_end",
+    "evaluation_roi_radius": 6,
+    "gradient_checkpoint_policy": "model_net_per_euler_step_nonreentrant_v1",
+    "initialization": "standard_normal_cpu_generator_v1",
+    "lbfgs_max_iter": 5,
+    "learning_rate": 0.01,
+    "n_steps": 32,
+    "objective": "oracle_probability",
+    "optimization_iterations": 20,
+    "optimizer": "adam",
+    "optimizer_selection_note": "single_pre_registered_adam_setting_no_sweep",
+    "parameter_sweep": false,
+    "probability_loss_mode": "calibrated_soft_bce_hard_dice_v2",
+    "schema": "stage16_dflow_source_optimization_v1",
+    "scientific_role": "dflow_source_optimization_oracle_probability_mechanism_test",
+    "solver": "fixed_euler",
+    "source_regularization_weight": 0.0,
+    "source_seeds": [
+      42,
+      142,
+      242
+    ],
+    "status": "frozen_before_run",
+    "target_label": 9,
+    "time_grid": "fixed_euler_midpoint_v1",
+    "training_performed": false,
+    "use_gradient_checkpointing": true
+  },
+  "git_branch": "stage15-binary-seismic-consensus",
+  "git_head": "357796884b86f4f7de97cabc2b85077b6313a6a1",
+  "input_assets": {
+    "boreholes": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/boreholes.pt",
+      "sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41",
+      "size_bytes": 1050167
+    },
+    "checkpoint": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "target_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage1_probability/runs/cond_generation_0/label9/all/phase1b_v4/calibrated_reference_windowed/seed42_n4_s32/baseline/target_mask.pt",
+      "sha256": "0028dc1fdb18611ffe4654b9d278f7be83ebda5656027cbdb87557fa72f1e481",
+      "size_bytes": 263749
+    },
+    "target_probability": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage1_probability/runs/cond_generation_0/label9/all/phase1b_v4/calibrated_reference_windowed/seed42_n4_s32/baseline/target_probability.pt",
+      "sha256": "b713880d4069de9e64143cb8c303022814716ae61ed996883e8b64e43cf77a75",
+      "size_bytes": 1050294
+    },
+    "target_roi_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage1_probability/runs/cond_generation_0/label9/all/phase1b_v4/calibrated_reference_windowed/seed42_n4_s32/baseline/target_roi_mask.pt",
+      "sha256": "15d3ff989d119075edc760e0ec49fd0474ec895ce94a4019e5214ca176ffb129",
+      "size_bytes": 263841
+    },
+    "truth_model": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt",
+      "sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3",
+      "size_bytes": 1050238
+    }
+  },
+  "model_load_report": {
+    "all_model_parameters_require_grad_false": true,
+    "checkpoint": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "checkpoint_epoch": 1651,
+    "checkpoint_global_step": 8376,
+    "ema_applied": true,
+    "ema_entry_count": 411,
+    "ema_excluded_frozen_parameters": [
+      "embedding.weight"
+    ],
+    "ema_missing_trainable": [],
+    "ema_shape_mismatches": [],
+    "ema_unexpected": [],
+    "frozen_parameters": [
+      "embedding.weight"
+    ],
+    "model_parameter_count": 412,
+    "trainable_model_parameter_count_after_dflow_freeze": 0,
+    "trainable_parameter_count": 411,
+    "weight_source": "ema"
+  },
+  "model_state_dict_sha256_after": "10d2181fe3eeeb406afc3da5e78ded64e9f92abfb2b3c352ee57e60e06da9b68",
+  "model_state_dict_sha256_before": "10d2181fe3eeeb406afc3da5e78ded64e9f92abfb2b3c352ee57e60e06da9b68",
+  "model_state_dict_unchanged": true,
+  "objective": "oracle_probability",
+  "objective_report": {
+    "endpoint_tau": 0.1,
+    "target_mask_tensor_sha256": "b26b14b6b8f5e33069f77df32dc74a2fbc77c6a816f571969a7e017bc59f9594",
+    "target_probability_tensor_sha256": "429827bb5ee2760d7826f19861ce3af21267dbf187978e9e19ece06c880551c9",
+    "target_roi_mask_tensor_sha256": "8f8d811d2c090fd4b6fcf80dad800e4684b9f9184749058c6b4b7253d57e4945"
+  },
+  "optimization_trace": {
+    "path": "project/geodata-3d-conditional/experiments/stage16_dflow_source_optimization/oracle_probability/smoke_seed42_v1/optimization_trace.csv",
+    "sha256": "85ebebd504514fa5bf96489f78b1a1c32fc9f3743199f6ca76339cf79d1f7a47",
+    "size_bytes": 11611
+  },
+  "optimizer_parameter_scope": "source_state_only",
+  "pair_count": 1,
+  "paired_manifest": {
+    "path": "project/geodata-3d-conditional/experiments/stage16_dflow_source_optimization/oracle_probability/smoke_seed42_v1/paired_manifest.csv",
+    "sha256": "f56d4a4290c6f4e10dce4c2771009f0dd2d7e664ad3af6161f0a69a16ca80b07",
+    "size_bytes": 2573
+  },
+  "parameter_sweep_performed": false,
+  "results_selected_or_ranked": false,
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage16/run_dflow.py",
+    "sha256": "4c8917bb0b5be32a9e3860493827e3692fa7547a7cd72baf8461c513ee4e2314",
+    "size_bytes": 25944
+  },
+  "schema": "stage16_dflow_source_optimization_run_v1",
+  "scientific_failure_is_preserved": true,
+  "seismic_truth_loaded_by_runner": false,
+  "smoke_subset": true,
+  "trainable_model_parameter_count": 0,
+  "training_performed": false,
+  "truth_loaded_by_runner": true
+}

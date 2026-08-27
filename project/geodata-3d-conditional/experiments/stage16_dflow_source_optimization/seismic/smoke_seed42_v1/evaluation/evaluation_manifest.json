@@ -1,0 +1,50 @@
+{
+  "body_masks": null,
+  "created_at_utc": "2026-08-23T18:35:15.911249+00:00",
+  "git_branch": "stage15-binary-seismic-consensus",
+  "git_head": "357796884b86f4f7de97cabc2b85077b6313a6a1",
+  "paired_metric_deltas": {
+    "path": "project/geodata-3d-conditional/experiments/stage16_dflow_source_optimization/seismic/smoke_seed42_v1/evaluation/paired_metric_deltas.csv",
+    "sha256": "7e0d227bdd45b05304ceb45d60ad833573d196160146d0714a22dd1841db72bc",
+    "size_bytes": 1101
+  },
+  "per_class_metrics": {
+    "path": "project/geodata-3d-conditional/experiments/stage16_dflow_source_optimization/seismic/smoke_seed42_v1/evaluation/per_class_metrics.csv",
+    "sha256": "a3d51c9ec50ebca13f89b5537081c60c006bf08b9bad920af9acc5caf27438aa",
+    "size_bytes": 1868
+  },
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage16/evaluate_dflow.py",
+    "sha256": "67f99244e8be774562e564beda9597048c58c864546ec8e9d2da97873efdb340",
+    "size_bytes": 11920
+  },
+  "sample_metrics": {
+    "path": "project/geodata-3d-conditional/experiments/stage16_dflow_source_optimization/seismic/smoke_seed42_v1/evaluation/sample_metrics.csv",
+    "sha256": "9464cdc6b9927c6fdec8457348e11bb655d9729a164ad8e3667cdb687a33566f",
+    "size_bytes": 2334
+  },
+  "schema": "stage16_dflow_retrospective_evaluation_v1",
+  "source_paired_manifest": {
+    "path": "project/geodata-3d-conditional/experiments/stage16_dflow_source_optimization/seismic/smoke_seed42_v1/paired_manifest.csv",
+    "sha256": "9322a88404147b0519270d42b5a9588c65971c9fb1864140c7e0f6874e287f07",
+    "size_bytes": 1790
+  },
+  "source_run_manifest": {
+    "path": "project/geodata-3d-conditional/experiments/stage16_dflow_source_optimization/seismic/smoke_seed42_v1/run_manifest.json",
+    "sha256": "052cb798dc1c1af2654039c6d51d7bd916efa66b8b78fc31d15c52d2bbfb0e08",
+    "size_bytes": 12086
+  },
+  "truth_component_recovery": {
+    "path": "project/geodata-3d-conditional/experiments/stage16_dflow_source_optimization/seismic/smoke_seed42_v1/evaluation/truth_component_recovery.csv",
+    "sha256": "5236dfc8615dd9e333d5d67ae582738b0b09bbf12303268c1e030b73fec37bdb",
+    "size_bytes": 544
+  },
+  "truth_model": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt",
+    "sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3",
+    "size_bytes": 1050238
+  },
+  "truth_role": "retrospective_evaluation_only",
+  "truth_tensor_sha256": "a8c1bfd0d259f43dc85e091bf48390c4eaa57efd7e6bd523c86e96a87dfd0def"
+}

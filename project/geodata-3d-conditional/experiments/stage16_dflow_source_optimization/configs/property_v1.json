@@ -1,0 +1,66 @@
+{
+  "schema": "stage16_dflow_source_optimization_v1",
+  "status": "frozen_before_run",
+  "objective": "property",
+  "scientific_role": "dflow_source_optimization_phase2a_property_mechanism_test",
+  "arms": ["FLOW_ONLY", "DFLOW"],
+  "source_seeds": [42, 142, 242],
+  "initialization": "standard_normal_cpu_generator_v1",
+  "solver": "fixed_euler",
+  "n_steps": 32,
+  "time_grid": "fixed_euler_midpoint_v1",
+  "condition_projection": "clean_embedding_before_first_step_and_after_every_step_v1",
+  "use_gradient_checkpointing": true,
+  "gradient_checkpoint_policy": "model_net_per_euler_step_nonreentrant_v1",
+  "optimizer": "adam",
+  "learning_rate": 0.01,
+  "optimization_iterations": 20,
+  "lbfgs_max_iter": 5,
+  "optimizer_selection_note": "single_pre_registered_adam_setting_no_sweep",
+  "source_regularization_weight": 0.0,
+  "target_label": 9,
+  "endpoint_tau": 0.1,
+  "endpoint_tau_source": "phase2a_authoritative_tau_end",
+  "property_loss_mode": "matched_multiscale_normalized_mse_v1",
+  "property_sigmas": [0.0, 1.5, 3.0],
+  "property_scale_weights": [0.5, 0.3, 0.2],
+  "property_channel_weights": [0.5, 0.5],
+  "evaluation_roi_radius": 6,
+  "device": "cuda",
+  "parameter_sweep": false,
+  "training_performed": false,
+  "assets": {
+    "checkpoint": {
+      "path": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c"
+    },
+    "truth_model": {
+      "path": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt",
+      "sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3"
+    },
+    "boreholes": {
+      "path": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/boreholes.pt",
+      "sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41"
+    },
+    "property_table": {
+      "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/property_table.pt",
+      "sha256": "d2a2cf792994651e085fd551e296f5f69e521aed85d139c7df792084c966de93"
+    },
+    "target_properties": {
+      "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/target_properties.pt",
+      "sha256": "046c675c0462447a474158c2b58a3af71b4a4da521a8a8223c3218e3e3b7d4d2"
+    },
+    "property_confidence": {
+      "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/property_confidence.pt",
+      "sha256": "dc4ae88b459c43e71d3fdf877464cdfc3d00b467799b46daacbdf6202975c8a9"
+    },
+    "target_mask": {
+      "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/target_mask.pt",
+      "sha256": "0028dc1fdb18611ffe4654b9d278f7be83ebda5656027cbdb87557fa72f1e481"
+    },
+    "target_roi_mask": {
+      "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/baseline/target_roi_mask.pt",
+      "sha256": "15d3ff989d119075edc760e0ec49fd0474ec895ce94a4019e5214ca176ffb129"
+    }
+  }
+}
