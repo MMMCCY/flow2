@@ -1,0 +1,17 @@
+{
+  "ap_skill_definition": "(AUPRC-prevalence)/(1-prevalence)",
+  "case_count": 5,
+  "group_median_delta_ap_skill": 0.5583351344716245,
+  "machine_decision": "EVIDENCE_CASE_SPECIFIC",
+  "positive_delta_case_count": 5,
+  "primary_comparison_mask": "intersection_of_all_case_unconditioned_subsurface_masks",
+  "primary_comparison_voxels": 124350,
+  "primary_specificity_metric": "prevalence_corrected_average_precision_skill_v1",
+  "raw_auprc_matrix_role": "mandatory_auxiliary",
+  "run_class": "formal_evidence_confirmation",
+  "run_status": "completed",
+  "schema": "stage17_multicase_evidence_evaluation_v1",
+  "stage17c_trajectory_authorized": true,
+  "truth_role": "retrospective_evaluation_only_after_completed_hash_validation",
+  "within_case_auprc_above_prevalence_count": 5
+}

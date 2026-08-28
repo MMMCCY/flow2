@@ -1,0 +1,5 @@
+task,optimizer_arm,material_seed_count,source_seed_count,median_target_iou_recovery_fraction,median_target_recall_recovery_fraction,median_target_centroid_recovery_fraction,median_target_volume_error_recovery_fraction,mechanism_active_all_seeds,endpoint_solves,runtime_seconds,task_progression_gate_passed
+oracle_probability,DFLOW_LEGACY_ADAM,2,3,0.15486815269693396,0.15483134669033727,-0.2702990761621422,-0.24615384615384625,True,123,1047.4672591169365,False
+oracle_probability,DFLOW_PAPER_ALIGNED_LBFGS,3,3,0.26751910858386424,0.2793558204412883,0.3727533630157816,-0.08131868131868142,True,109,1265.9912853131536,True
+property,DFLOW_LEGACY_ADAM,1,3,-0.01370773778181569,-0.053407443209279856,-0.35943294635014095,-3.3387777802804406,True,123,1046.687104178127,False
+property,DFLOW_PAPER_ALIGNED_LBFGS,2,3,0.21515557457884896,0.21002506265664161,-0.29971816674091456,-1.4754510424264897,True,108,1252.0128487320617,False

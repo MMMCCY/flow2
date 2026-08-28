@@ -1,0 +1,131 @@
+{
+  "case_id": "fullgeo_case01",
+  "condition_mismatches": 0,
+  "condition_voxels": 111380,
+  "conditioned_target_voxels": 2,
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/configs/observation_generation_v1.json",
+    "sha256": "f4caed62daad49060a00bc616e9dce5da32ef5f5705f89129f4643aa87b34f88",
+    "size_bytes": 1152
+  },
+  "created_at_utc": "2026-08-27T12:30:09.742825+00:00",
+  "forward_closure_max_abs": 0.0,
+  "full_parameters": {
+    "binary_acoustic_config": {
+      "path": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_acoustic_upper_bound_v1.json",
+      "sha256": "5272deb894d211fb67339e06840ac1212e156a200c20423f9f36d88949945248"
+    },
+    "case_registry": {
+      "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/configs/case_registry_v1.json",
+      "sha256": "6800061a6a35d046ab85246d4489bb9f7b2ae115071ccaffecee778f060096e6"
+    },
+    "full_trace_samples": 320,
+    "parameter_sweep": false,
+    "schema": "stage17_observation_generation_v1",
+    "scientific_role": "binary_high_contrast_noiseless_synthetic_observation_generation_only",
+    "seismic_config": {
+      "path": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+      "sha256": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02"
+    },
+    "status": "frozen_before_asset_generation",
+    "target_label": 9,
+    "training_performed": false,
+    "truth_loaded_by_inversion_runner": false,
+    "truth_role": "synthetic_observation_generation_and_later_retrospective_evaluation_only"
+  },
+  "git_branch": "main",
+  "git_head": "ace75ae850d34d456a43e61607be72bf3bfce5ac",
+  "hidden_target_voxels": 118,
+  "input_assets": {
+    "condition_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/condition/condition_mask.pt",
+      "sha256": "6486ac303357d36ab38c7d82149c44ca0aeb675a0853ccc3df6deed769097b98",
+      "size_bytes": 263834
+    },
+    "condition_values": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/condition/condition_values.pt",
+      "sha256": "610dd5bb0b9b5f1b0e789eaad1e093d0a5b51a3d4116e956eeb6cab151d4b9ea",
+      "size_bytes": 1050280
+    },
+    "truth_model": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/truth/true_model.pt",
+      "sha256": "bc32a2f4705f18655bddba56b67ad1ffc55e8a23444b6910573a3b8cbd44f3e9",
+      "size_bytes": 1050174
+    }
+  },
+  "operator_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "output_tensor_sha256": {
+    "binary_fixed_mask.pt": "3356e0f67eecc9a61e122f2839f717b6cb224924c4dcf85ac2da4c64f062f8dc",
+    "binary_fixed_values.pt": "7d7d0bbabf96c616273f6d998fb455ba0244e3d70b64408f9b553393fe0dd6ae",
+    "condition_mask.pt": "50592bcdda16884c3103b60f2a9345a0dcf6c3d0a099c00be3f29148997628a9",
+    "condition_values.pt": "bdd5a612df4f9dc317ef2c1a8a1089710ebc42d2f82999be20338987a7d13b3f",
+    "observed_seismic.pt": "1c4171b4e72404c0c112a278cec292743cd55eb6c00c0915c9c17c8ce6885506",
+    "sample_mask.pt": "216435404c2bd0e6e6438fcf5ef116227656f429fbcdf3edcf88708a3ff73f53",
+    "subsurface_mask.pt": "f16d7506d076028aad976d9a24369e17b0b8f3c376eec0af706aa9c0e7ef40ec",
+    "uncertainty.pt": "5134432e5c90b98e696635a6d80cd7fd3e54f52f99e8f0c4a52b8eff990c627f"
+  },
+  "root_seed": 120260003,
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage17/build_or_register_cases.py",
+    "sha256": "dba71a944d370470349cd2760308f7ba67542d1baf8f11350145d3956e48b299",
+    "size_bytes": 9576
+  },
+  "schema": "stage17_synthetic_observation_case_v1",
+  "source_case_manifest": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/manifest.json",
+    "sha256": "7e63cc34f21a401a665bf6577f3031db8da6fce6e893c6a5fa16f79117226ee6",
+    "size_bytes": 40772
+  },
+  "target_voxels": 120,
+  "truth_loaded_by_inversion_runner": false,
+  "truth_loaded_by_observation_builder": true,
+  "truth_role": "synthetic_observation_generation_and_retrospective_evaluation_only",
+  "truth_tensor_sha256": {
+    "truth_restricted/binary_truth.pt": "0eac789ca2e4157d712d87ef67af9fa6a3c0a080e08f041070545199aa648c1c"
+  }
+}

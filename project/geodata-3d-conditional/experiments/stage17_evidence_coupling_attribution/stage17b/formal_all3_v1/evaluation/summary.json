@@ -1,0 +1,86 @@
+{
+  "decision": "DFLOW_ENGINE_ACTIVE_BUT_WEAK_HARD_CONTROL",
+  "optimizer_summaries": [
+    {
+      "both_task_gates_passed": false,
+      "endpoint_solves": 246,
+      "minimum_task_median_iou_recovery_fraction": -0.01370773778181569,
+      "optimizer_arm": "DFLOW_LEGACY_ADAM",
+      "oracle_gate_passed": false,
+      "property_gate_passed": false,
+      "runtime_seconds": 2094.1543632950634
+    },
+    {
+      "both_task_gates_passed": false,
+      "endpoint_solves": 217,
+      "minimum_task_median_iou_recovery_fraction": 0.21515557457884896,
+      "optimizer_arm": "DFLOW_PAPER_ALIGNED_LBFGS",
+      "oracle_gate_passed": true,
+      "property_gate_passed": false,
+      "runtime_seconds": 2518.0041340452153
+    }
+  ],
+  "pooled_compensation_permitted": false,
+  "schema": "stage17_optimizer_calibration_evaluation_v1",
+  "selected_optimizer_arm": null,
+  "stage17c_dflow_authorized": false,
+  "task_separated_gate": true,
+  "task_summaries": [
+    {
+      "endpoint_solves": 123,
+      "material_seed_count": 2,
+      "mechanism_active_all_seeds": true,
+      "median_target_centroid_recovery_fraction": -0.2702990761621422,
+      "median_target_iou_recovery_fraction": 0.15486815269693396,
+      "median_target_recall_recovery_fraction": 0.15483134669033727,
+      "median_target_volume_error_recovery_fraction": -0.24615384615384625,
+      "optimizer_arm": "DFLOW_LEGACY_ADAM",
+      "runtime_seconds": 1047.4672591169365,
+      "source_seed_count": 3,
+      "task": "oracle_probability",
+      "task_progression_gate_passed": false
+    },
+    {
+      "endpoint_solves": 109,
+      "material_seed_count": 3,
+      "mechanism_active_all_seeds": true,
+      "median_target_centroid_recovery_fraction": 0.3727533630157816,
+      "median_target_iou_recovery_fraction": 0.26751910858386424,
+      "median_target_recall_recovery_fraction": 0.2793558204412883,
+      "median_target_volume_error_recovery_fraction": -0.08131868131868142,
+      "optimizer_arm": "DFLOW_PAPER_ALIGNED_LBFGS",
+      "runtime_seconds": 1265.9912853131536,
+      "source_seed_count": 3,
+      "task": "oracle_probability",
+      "task_progression_gate_passed": true
+    },
+    {
+      "endpoint_solves": 123,
+      "material_seed_count": 1,
+      "mechanism_active_all_seeds": true,
+      "median_target_centroid_recovery_fraction": -0.35943294635014095,
+      "median_target_iou_recovery_fraction": -0.01370773778181569,
+      "median_target_recall_recovery_fraction": -0.053407443209279856,
+      "median_target_volume_error_recovery_fraction": -3.3387777802804406,
+      "optimizer_arm": "DFLOW_LEGACY_ADAM",
+      "runtime_seconds": 1046.687104178127,
+      "source_seed_count": 3,
+      "task": "property",
+      "task_progression_gate_passed": false
+    },
+    {
+      "endpoint_solves": 108,
+      "material_seed_count": 2,
+      "mechanism_active_all_seeds": true,
+      "median_target_centroid_recovery_fraction": -0.29971816674091456,
+      "median_target_iou_recovery_fraction": 0.21515557457884896,
+      "median_target_recall_recovery_fraction": 0.21002506265664161,
+      "median_target_volume_error_recovery_fraction": -1.4754510424264897,
+      "optimizer_arm": "DFLOW_PAPER_ALIGNED_LBFGS",
+      "runtime_seconds": 1252.0128487320617,
+      "source_seed_count": 3,
+      "task": "property",
+      "task_progression_gate_passed": false
+    }
+  ]
+}

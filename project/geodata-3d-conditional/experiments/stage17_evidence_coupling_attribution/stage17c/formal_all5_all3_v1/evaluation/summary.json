@@ -1,0 +1,15 @@
+{
+  "case_count": 5,
+  "decision": "TRAJECTORY_COUPLING_POSITIVE",
+  "dflow_geophysical_arm_executed": false,
+  "dflow_stop_reason": "Stage17B property task failed the independent progression gate",
+  "group_median_case_median_delta_target_iou": 0.1250511297603033,
+  "pooled_15_pair_role": "auxiliary_only",
+  "pooled_median_delta_target_iou_auxiliary": 0.1250511297603033,
+  "pooled_pair_count": 15,
+  "positive_case_count_target_iou": 5,
+  "primary_statistical_unit": "independent_geology_case",
+  "schema": "stage17_same_evidence_coupling_evaluation_v1",
+  "source_seeds_per_case": 3,
+  "truth_role": "retrospective_evaluation_only_after_complete_run"
+}

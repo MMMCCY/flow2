@@ -1,0 +1,23 @@
+{
+  "schema": "stage17_observation_generation_v1",
+  "status": "frozen_before_asset_generation",
+  "case_registry": {
+    "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/configs/case_registry_v1.json",
+    "sha256": "6800061a6a35d046ab85246d4489bb9f7b2ae115071ccaffecee778f060096e6"
+  },
+  "binary_acoustic_config": {
+    "path": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_acoustic_upper_bound_v1.json",
+    "sha256": "5272deb894d211fb67339e06840ac1212e156a200c20423f9f36d88949945248"
+  },
+  "seismic_config": {
+    "path": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+    "sha256": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02"
+  },
+  "target_label": 9,
+  "scientific_role": "binary_high_contrast_noiseless_synthetic_observation_generation_only",
+  "truth_role": "synthetic_observation_generation_and_later_retrospective_evaluation_only",
+  "truth_loaded_by_inversion_runner": false,
+  "full_trace_samples": 320,
+  "parameter_sweep": false,
+  "training_performed": false
+}

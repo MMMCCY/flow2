@@ -1,0 +1,138 @@
+{
+  "case_id": "fullgeo_case04",
+  "condition_mismatches": 0,
+  "condition_voxels": 94592,
+  "conditioned_target_voxels": 364,
+  "config": {
+    "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/configs/observation_generation_v2.json",
+    "sha256": "a44497fe9937bdaa9d8ecbb471308a4a63f8427b85c693653c966518bf8c3112",
+    "size_bytes": 1369
+  },
+  "created_at_utc": "2026-08-27T12:33:38.315830+00:00",
+  "enclosed_air_acoustic_policy": "binary_background_endpoint",
+  "filled_enclosed_air_voxels": 37,
+  "forward_closure_max_abs": 0.0,
+  "full_parameters": {
+    "binary_acoustic_config": {
+      "path": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_acoustic_upper_bound_v1.json",
+      "sha256": "5272deb894d211fb67339e06840ac1212e156a200c20423f9f36d88949945248"
+    },
+    "case_registry": {
+      "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/configs/case_registry_v1.json",
+      "sha256": "6800061a6a35d046ab85246d4489bb9f7b2ae115071ccaffecee778f060096e6"
+    },
+    "enclosed_air_acoustic_policy": "binary_background_endpoint",
+    "full_trace_samples": 320,
+    "parameter_sweep": false,
+    "schema": "stage17_observation_generation_v2",
+    "scientific_role": "binary_high_contrast_noiseless_synthetic_observation_generation_only",
+    "seismic_config": {
+      "path": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+      "sha256": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02"
+    },
+    "status": "frozen_before_asset_generation",
+    "subsurface_support_policy": "columnwise_fill_below_highest_nonair_v1",
+    "target_label": 9,
+    "training_performed": false,
+    "truth_evaluation_support_policy": "original_nonair_and_unconditioned_only",
+    "truth_loaded_by_inversion_runner": false,
+    "truth_role": "synthetic_observation_generation_and_later_retrospective_evaluation_only"
+  },
+  "git_branch": "main",
+  "git_head": "ace75ae850d34d456a43e61607be72bf3bfce5ac",
+  "hidden_target_voxels": 12929,
+  "input_assets": {
+    "condition_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case04/condition/condition_mask.pt",
+      "sha256": "4837c19fb1a5525a823042982df853c9f1fa7dcf8d5d2d297f22edaad12c3183",
+      "size_bytes": 263834
+    },
+    "condition_values": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case04/condition/condition_values.pt",
+      "sha256": "843df4e13d0ef4f06a7a4ff568d274f7fc8173b2240fbe0f758e8d65f1a4917a",
+      "size_bytes": 1050280
+    },
+    "truth_model": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case04/truth/true_model.pt",
+      "sha256": "2a281af180ef83c9157a810fc988277aa37f612506d6337662f921ba4e1c9cd9",
+      "size_bytes": 1050174
+    }
+  },
+  "operator_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "output_tensor_sha256": {
+    "binary_fixed_mask.pt": "12b48f38b9402d730258684886709092716c6aca8d69dcbe64b9b011a55c325c",
+    "binary_fixed_values.pt": "091bdde8de7e0e2186944dbcdae81d32013cacb951679962e699c49642cb48af",
+    "condition_mask.pt": "8a4fba369eb284abd0bdc95b2fa8550ee182ba38f4c6e2fb1dad5a0183d55d2e",
+    "condition_values.pt": "bb0465bae49e5ddcf72bd4e74a71d916f7e4a4c179e6ba040c2a57afb5f921d5",
+    "observed_seismic.pt": "3ed14dc81f96cc2156b369780507584c77aafdfa11a8b525c74e813df4ab3255",
+    "sample_mask.pt": "216435404c2bd0e6e6438fcf5ef116227656f429fbcdf3edcf88708a3ff73f53",
+    "subsurface_mask.pt": "ec785aee8f2e36240b654424b203d205362a2e44dbc1608fc217b44ae8e93f45",
+    "uncertainty.pt": "5134432e5c90b98e696635a6d80cd7fd3e54f52f99e8f0c4a52b8eff990c627f"
+  },
+  "root_seed": 120260011,
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage17/build_or_register_cases.py",
+    "sha256": "a4c857c792a338c42ca01af2dbfaa62443a40ae3b4184a282e2daa391a1d187e",
+    "size_bytes": 10889
+  },
+  "schema": "stage17_synthetic_observation_case_v1",
+  "seismic_support_voxels": 172067,
+  "source_case_manifest": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case04/manifest.json",
+    "sha256": "8e0f9b273a7b3fa6544a167396285cb67cd1bee3210c7ffb8a6bd45abc5acab2",
+    "size_bytes": 36258
+  },
+  "subsurface_support_policy": "columnwise_fill_below_highest_nonair_v1",
+  "target_voxels": 13293,
+  "truth_loaded_by_inversion_runner": false,
+  "truth_loaded_by_observation_builder": true,
+  "truth_role": "synthetic_observation_generation_and_retrospective_evaluation_only",
+  "truth_tensor_sha256": {
+    "truth_restricted/binary_truth.pt": "1d69704c74f82672e2d7589ddfd302efd33304f8e1578232a88219bd203a44a1"
+  }
+}

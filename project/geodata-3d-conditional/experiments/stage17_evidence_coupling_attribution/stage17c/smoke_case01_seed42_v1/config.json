@@ -1,0 +1,335 @@
+{
+  "authoritative_stage15h_reference_config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/trace_boundary/flow_property_seed42_v4/guided/config.json",
+    "sha256": "2e46a30139eb3bad496adfb6297eb2beda2a6bd140d5ae473f0d13d6535959b1",
+    "size_bytes": 10922
+  },
+  "authorized_arms": [
+    "FLOW_ONLY",
+    "TRAJECTORY_EVIDENCE"
+  ],
+  "cases": [
+    {
+      "case_id": "fullgeo_case01",
+      "evidence": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17a/formal_all5_v1/fullgeo_case01/binary_impedance_score.pt",
+        "sha256": "badeb04c1900ecfe93879cb0b42ac6065ae5f9e0636ddeca1a539f36d4b0a6fa",
+        "size_bytes": 1050386
+      },
+      "evidence_case_manifest": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17a/formal_all5_v1/fullgeo_case01/manifest.json",
+        "sha256": "b2092292db8ed517618d4fe04b0e5246d8efbb899cccf9fb376d69aa38bb07d2",
+        "size_bytes": 20272
+      },
+      "observation_assets": {
+        "binary_fixed_mask": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case01/binary_fixed_mask.pt",
+          "sha256": "0e03b9456381192fa18075e2d805067cd748c2c09abd07d94aaa793b1b45db76",
+          "size_bytes": 263855
+        },
+        "binary_fixed_values": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case01/binary_fixed_values.pt",
+          "sha256": "dc6d8d7449c123f1fed87969abf6a94f56dcb14c6c6f5f634f0cc2a404ef00cf",
+          "size_bytes": 1050301
+        },
+        "condition_mask": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case01/condition_mask.pt",
+          "sha256": "6486ac303357d36ab38c7d82149c44ca0aeb675a0853ccc3df6deed769097b98",
+          "size_bytes": 263834
+        },
+        "condition_values": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case01/condition_values.pt",
+          "sha256": "e76ad7014d1dc0cbef6f067d67995da9a3235cfb966e45c2d5ef9da5acb38d19",
+          "size_bytes": 2098856
+        },
+        "observation_manifest": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case01/manifest.json",
+          "sha256": "bf310af1b9095fe9934895203943c47fbeed686c32d80784f073d37cafe98f17",
+          "size_bytes": 6219
+        },
+        "observed_seismic": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case01/observed_seismic.pt",
+          "sha256": "7c9962fb8195f11034f1435b6c25d1605038d750b2aecdd720cb653bfd3f8c3c",
+          "size_bytes": 5244584
+        },
+        "subsurface_mask": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case01/subsurface_mask.pt",
+          "sha256": "3edc15d859bb4e9c76dd15dddb48dd095d4f6ba5f79dbb2502b7d0b75ee68cc2",
+          "size_bytes": 263841
+        }
+      },
+      "root_seed": 120260003
+    },
+    {
+      "case_id": "fullgeo_case02",
+      "evidence": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17a/formal_all5_v1/fullgeo_case02/binary_impedance_score.pt",
+        "sha256": "976e3b9b8b82a17df0d8ec2693ad00f7bc284432e5d9cb045c4f027799de5c6d",
+        "size_bytes": 1050386
+      },
+      "evidence_case_manifest": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17a/formal_all5_v1/fullgeo_case02/manifest.json",
+        "sha256": "7a752cbbe6a57c8ee858b9ade0eaf5afb5038be19cb7134c811bda124d3e02d5",
+        "size_bytes": 20264
+      },
+      "observation_assets": {
+        "binary_fixed_mask": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case02/binary_fixed_mask.pt",
+          "sha256": "f48497fc11bbb241351260f7d73591ad8afd90f173960c3bfce7d6164cc38652",
+          "size_bytes": 263855
+        },
+        "binary_fixed_values": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case02/binary_fixed_values.pt",
+          "sha256": "79d120326caf129e929e100045f896d2f1b552bc70dd50e7ba5b077f8d368af1",
+          "size_bytes": 1050301
+        },
+        "condition_mask": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case02/condition_mask.pt",
+          "sha256": "f2460e7dc136f9defc5f1859d9d6d84b9f3d2b08b0ed64fb3a7b61241b06383f",
+          "size_bytes": 263834
+        },
+        "condition_values": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case02/condition_values.pt",
+          "sha256": "048c98440d9f7b6f09350ca503846995b4565e94a9fcb7a39b6480e4bc5f18dc",
+          "size_bytes": 2098856
+        },
+        "observation_manifest": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case02/manifest.json",
+          "sha256": "fbf8e473255616a984ad4174d3b65b899984e8f7e52f2d1be33fe92b00ae4ec6",
+          "size_bytes": 6224
+        },
+        "observed_seismic": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case02/observed_seismic.pt",
+          "sha256": "ec037c19a763d0ef027e54271bca3c36defcdfb0d11bdf355b3d89fbf8007972",
+          "size_bytes": 5244584
+        },
+        "subsurface_mask": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case02/subsurface_mask.pt",
+          "sha256": "2eb11fa022498cb46b81e3796b96f57171bda39337604eceaf7175f5a2f13e2b",
+          "size_bytes": 263841
+        }
+      },
+      "root_seed": 120260004
+    },
+    {
+      "case_id": "fullgeo_case03",
+      "evidence": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17a/formal_all5_v1/fullgeo_case03/binary_impedance_score.pt",
+        "sha256": "e53ad7845704cfd207fdc589e33fe200f3aaa18247b91bb17e43730f827b0fd7",
+        "size_bytes": 1050386
+      },
+      "evidence_case_manifest": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17a/formal_all5_v1/fullgeo_case03/manifest.json",
+        "sha256": "6f481063b156ab19331ddb607f40bc20e5d4ce32582ef1a4254eea5703fa0b72",
+        "size_bytes": 20270
+      },
+      "observation_assets": {
+        "binary_fixed_mask": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case03/binary_fixed_mask.pt",
+          "sha256": "6991812d087ab2861fd651d97e0228d1bdf81f8a9c0f2e90b766e8aca3708dd6",
+          "size_bytes": 263855
+        },
+        "binary_fixed_values": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case03/binary_fixed_values.pt",
+          "sha256": "0c1438f72a91813ddf2efd604bf45c48b3fdfcbc6fdaea24fb9a76f2b6eca202",
+          "size_bytes": 1050301
+        },
+        "condition_mask": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case03/condition_mask.pt",
+          "sha256": "a4c1579e85219122904c9b1b707b0e58c7da2f7a4034a3a8351b7151e8126efb",
+          "size_bytes": 263834
+        },
+        "condition_values": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case03/condition_values.pt",
+          "sha256": "01a7c87a3dfe7bc6661d253f6a4feb74b8ef7884f5bc0323db65bb4738cf5110",
+          "size_bytes": 2098856
+        },
+        "observation_manifest": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case03/manifest.json",
+          "sha256": "5443db62c5348076ce2868f80923a6f24733f2efa97ba72701fb679f1847b0e8",
+          "size_bytes": 6222
+        },
+        "observed_seismic": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case03/observed_seismic.pt",
+          "sha256": "ce404e3dfb3952c0a8f697aa6c693ee867cd547a4d1557a21a9ef6aa8de20e0c",
+          "size_bytes": 5244584
+        },
+        "subsurface_mask": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case03/subsurface_mask.pt",
+          "sha256": "0064453159c2616e67cbf00b2e0388f92bb836d94f48af1a366f3e799ab146af",
+          "size_bytes": 263841
+        }
+      },
+      "root_seed": 120260008
+    },
+    {
+      "case_id": "fullgeo_case04",
+      "evidence": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17a/formal_all5_v1/fullgeo_case04/binary_impedance_score.pt",
+        "sha256": "518e6c61bc46f6721b3949ce61cc2241aefc355fad383571592fcb8cf995054d",
+        "size_bytes": 1050386
+      },
+      "evidence_case_manifest": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17a/formal_all5_v1/fullgeo_case04/manifest.json",
+        "sha256": "eb6e0a002a1e784e10d7d0094bb81478c9cb8ea77187be311aff2f1304a61c5b",
+        "size_bytes": 20267
+      },
+      "observation_assets": {
+        "binary_fixed_mask": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case04/binary_fixed_mask.pt",
+          "sha256": "c818e8502d17efd36e32b372c18d40a0bd93d41352302a0c8d1b585076c5244a",
+          "size_bytes": 263855
+        },
+        "binary_fixed_values": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case04/binary_fixed_values.pt",
+          "sha256": "7265f7d3666bd9809da99bb1a98e0607db39db1999493ecef38c28ecdadca014",
+          "size_bytes": 1050301
+        },
+        "condition_mask": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case04/condition_mask.pt",
+          "sha256": "4837c19fb1a5525a823042982df853c9f1fa7dcf8d5d2d297f22edaad12c3183",
+          "size_bytes": 263834
+        },
+        "condition_values": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case04/condition_values.pt",
+          "sha256": "8aedfe33338bc0a0f57159c75a828ca6cf4c4f626af838c797571f1b76f6bf4d",
+          "size_bytes": 2098856
+        },
+        "observation_manifest": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case04/manifest.json",
+          "sha256": "e727d3256424ca1b7e861bea99752f6c593678a09df548bdab45eae4f57be14b",
+          "size_bytes": 6225
+        },
+        "observed_seismic": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case04/observed_seismic.pt",
+          "sha256": "5526d98281294d7b28c85c50660edaf459c98e247022df6a6ffef0efb2276462",
+          "size_bytes": 5244584
+        },
+        "subsurface_mask": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case04/subsurface_mask.pt",
+          "sha256": "87f5dbb7644755c1ca5b8ea103a3423c16c64d0b83c5bfeb38d7774426ee15b7",
+          "size_bytes": 263841
+        }
+      },
+      "root_seed": 120260011
+    },
+    {
+      "case_id": "fullgeo_case05",
+      "evidence": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17a/formal_all5_v1/fullgeo_case05/binary_impedance_score.pt",
+        "sha256": "f4bb64ccf61335f88c10d7e74f0cdc6bbef5fcd4dd97c6d02e6f8066d57d0b7b",
+        "size_bytes": 1050386
+      },
+      "evidence_case_manifest": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17a/formal_all5_v1/fullgeo_case05/manifest.json",
+        "sha256": "c81f9aa93639d1b32f5a08a08b4aed0341c6cf0fbcd9c7b38bbd1d3cb126a50c",
+        "size_bytes": 20267
+      },
+      "observation_assets": {
+        "binary_fixed_mask": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case05/binary_fixed_mask.pt",
+          "sha256": "ba9464c33da58d3f9e55d69aa3c4a4b7f8c70764e77f2d71b4a841f2461722d8",
+          "size_bytes": 263855
+        },
+        "binary_fixed_values": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case05/binary_fixed_values.pt",
+          "sha256": "9cd78cc95fde181c0d14e828a79d6a6f4cb441703a4e155d13e44039e9e51ad0",
+          "size_bytes": 1050301
+        },
+        "condition_mask": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case05/condition_mask.pt",
+          "sha256": "cbf70df8873c6c695b6cc91fab2f5c306dd83917301aad943c4f67aae1bca146",
+          "size_bytes": 263834
+        },
+        "condition_values": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case05/condition_values.pt",
+          "sha256": "d5086e8ea14f26a9a2c8d68c7617516bc18a53f809850193eed4d55b527fdf7c",
+          "size_bytes": 2098856
+        },
+        "observation_manifest": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case05/manifest.json",
+          "sha256": "dd657193893f9e9b80e98373eb80b4156e156b57d11ca464d102cc224a835250",
+          "size_bytes": 6220
+        },
+        "observed_seismic": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case05/observed_seismic.pt",
+          "sha256": "84bdcee96b881e894009b8414a3704ce4bab339552729016cf13ac405759f8a6",
+          "size_bytes": 5244584
+        },
+        "subsurface_mask": {
+          "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/cases/observations_v2/fullgeo_case05/subsurface_mask.pt",
+          "sha256": "0e74d6d9a40883a5e6d000fb05157bb28a67d1b07ff5e72606062ed10dbf8ebf",
+          "size_bytes": 263841
+        }
+      },
+      "root_seed": 120260012
+    }
+  ],
+  "checkpoint": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+    "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+    "size_bytes": 849415038
+  },
+  "decision_rule": {
+    "group_median_delta_target_iou_required_gt": 0.0,
+    "positive_case_count_required": 3,
+    "positive_case_metric": "case_median_delta_target_iou_gt_zero"
+  },
+  "device": "cuda",
+  "dflow_arm_authorized": false,
+  "dflow_stop_reason": "Stage17B property task failed the independent progression gate",
+  "guidance": {
+    "alpha": 0.25,
+    "grad_clip_norm": 1.0,
+    "guidance_scaling_mode": "reference_norm_relative_v2",
+    "guidance_schedule": "windowed_sine",
+    "guidance_start": 0.25,
+    "max_guidance_ratio": 0.25,
+    "property_loss_mode": "matched_multiscale_normalized_mse_v1",
+    "property_scale_weights": [
+      0.5,
+      0.3,
+      0.2
+    ],
+    "property_sigmas": [
+      0.0,
+      1.5,
+      3.0
+    ],
+    "tau_end": 0.1,
+    "tau_schedule": "cosine",
+    "tau_start": 0.5
+  },
+  "n_steps": 32,
+  "parameter_sweep": false,
+  "pooled_15_pair_role": "auxiliary_only",
+  "primary_statistical_unit": "independent_geology_case",
+  "property_config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_trace_property_indicator_v1.json",
+    "sha256": "362b5f33a1376d00209ee4376754e456614f6549419d90025c2c0851045d7864",
+    "size_bytes": 542
+  },
+  "sample_selection_performed": false,
+  "schema": "stage17_same_evidence_coupling_v1",
+  "solver": "fixed_euler",
+  "source_seed_role": "within_case_stochastic_replicate",
+  "source_seeds": [
+    42,
+    142,
+    242
+  ],
+  "stage17a_gate": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17a/formal_all5_v1/evaluation/summary.json",
+    "sha256": "0d90df96b000a6673f17aa00e95f185f573bda9a420f110a1e75e6145847a882",
+    "size_bytes": 782
+  },
+  "stage17b_gate": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17b/formal_all3_v1/evaluation/summary.json",
+    "sha256": "cb26981943c7b8a4ef1081c46da660b740ae632dba2512f7bd08be8f67fd5882",
+    "size_bytes": 3345
+  },
+  "status": "frozen_before_run",
+  "target_label": 9,
+  "training_performed": false,
+  "truth_loaded_by_runner": false
+}

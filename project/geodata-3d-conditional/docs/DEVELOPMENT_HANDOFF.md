@@ -1408,3 +1408,39 @@ overpredicted morphology. The oracle arm proves that the frozen generator has
 representational support for the separated five-body target, so this is not
 evidence of an absolute inability to generate the topology. Authoritative
 artifacts are under `experiments/stage15_five_body_flow/`.
+
+## Stage17 evidence generalization and coupling attribution
+
+Stage17 is complete under `docs/STAGE17_SPEC.md`. All five preregistered Full
+StructuralGeo cases were used. Observation config v2 was frozen first, then
+five observations were generated and hashed, then evidence config v1 was
+frozen. Observation v1 is retained as a failed engineering run: case04 has 23
+enclosed air-coded cells that violate the seismic operator's contiguous-column
+support requirement. V2 freezes a deterministic support fill; it does not
+change original-nonair retrospective scoring.
+
+Stage17A concludes `EVIDENCE_CASE_SPECIFIC`: 5/5 prevalence-corrected AP-skill
+diagonal advantages are positive and the group median is 0.558335. Raw AUPRC
+is auxiliary. The runner was truth-blind and did not run Flow.
+
+Stage17B concludes `DFLOW_ENGINE_ACTIVE_BUT_WEAK_HARD_CONTROL`. Formal
+three-seed calibration is separate from smoke. LBFGS passes oracle but fails
+property (median target-IoU recovery 0.215156 versus the frozen 0.25 gate);
+Adam fails both. Model hashes remain unchanged, source updates/objective
+reductions are active and condition violations are zero. Since oracle and
+property cannot compensate one another, no optimizer is selected and no
+Stage17C D-Flow geophysical arm is authorized. This is a negative result for
+the frozen Adam/LBFGS protocols, not the entire D-Flow family.
+
+Stage17C therefore runs only `FLOW_ONLY` versus `TRAJECTORY_EVIDENCE`, sharing
+the exact Stage17A evidence and source tensor for every pair. Independent
+geology case is the primary unit; three seeds are within-case replicates and
+the pooled 15 pairs are auxiliary. All 5/5 cases have positive case-median
+target-IoU deltas, with cross-case median +0.125051, yielding
+`TRAJECTORY_COUPLING_POSITIVE`. Recall and localization improve, but absolute
+volume-error worsens in every case, so this is not final-goal success; volume
+calibration and topology remain unresolved. See
+`experiments/stage17_evidence_coupling_attribution/reports/DEVELOPMENT_REPORT.md`.
+
+Stop after Stage17. Do not automatically begin PGDM/PnP/SGLD, new topology
+methods, multiclass inversion or training.

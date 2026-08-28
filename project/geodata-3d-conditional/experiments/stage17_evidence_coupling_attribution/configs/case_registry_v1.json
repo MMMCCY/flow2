@@ -1,0 +1,15 @@
+{
+  "schema": "stage17_case_registry_v1",
+  "status": "frozen_before_asset_generation",
+  "cohort": "full_complexity_targeted_v1",
+  "case_selection_uses_downstream_performance": false,
+  "cases": [
+    {"case_id": "fullgeo_case01", "root_seed": 120260003, "manifest_path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/manifest.json", "manifest_sha256": "7e63cc34f21a401a665bf6577f3031db8da6fce6e893c6a5fa16f79117226ee6"},
+    {"case_id": "fullgeo_case02", "root_seed": 120260004, "manifest_path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case02/manifest.json", "manifest_sha256": "826036d465bfcb289cc56baa4f4fb8e536f863cf63bf08e0613e9e7292ba1fca"},
+    {"case_id": "fullgeo_case03", "root_seed": 120260008, "manifest_path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case03/manifest.json", "manifest_sha256": "f513ed1244c56433c9eab9046550eadf41b6694921ea3b38b4456f798c7de486"},
+    {"case_id": "fullgeo_case04", "root_seed": 120260011, "manifest_path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case04/manifest.json", "manifest_sha256": "8e0f9b273a7b3fa6544a167396285cb67cd1bee3210c7ffb8a6bd45abc5acab2"},
+    {"case_id": "fullgeo_case05", "root_seed": 120260012, "manifest_path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case05/manifest.json", "manifest_sha256": "2a4fa521b35e0c63e2f21092140f54b24b6940667b891428430890dc0247a76d"}
+  ],
+  "parameter_sweep": false,
+  "training_performed": false
+}

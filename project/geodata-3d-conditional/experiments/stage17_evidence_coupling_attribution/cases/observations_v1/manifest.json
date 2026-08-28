@@ -1,0 +1,51 @@
+{
+  "case_order": [
+    "fullgeo_case01",
+    "fullgeo_case02",
+    "fullgeo_case03",
+    "fullgeo_case04",
+    "fullgeo_case05"
+  ],
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/configs/observation_generation_v1.json",
+    "sha256": "f4caed62daad49060a00bc616e9dce5da32ef5f5705f89129f4643aa87b34f88",
+    "size_bytes": 1152
+  },
+  "created_at_utc": "2026-08-27T12:30:09.618344+00:00",
+  "error": "ValueError: subsurface mask must be contiguous below the local surface",
+  "full_parameters": {
+    "binary_acoustic_config": {
+      "path": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_acoustic_upper_bound_v1.json",
+      "sha256": "5272deb894d211fb67339e06840ac1212e156a200c20423f9f36d88949945248"
+    },
+    "case_registry": {
+      "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/configs/case_registry_v1.json",
+      "sha256": "6800061a6a35d046ab85246d4489bb9f7b2ae115071ccaffecee778f060096e6"
+    },
+    "full_trace_samples": 320,
+    "parameter_sweep": false,
+    "schema": "stage17_observation_generation_v1",
+    "scientific_role": "binary_high_contrast_noiseless_synthetic_observation_generation_only",
+    "seismic_config": {
+      "path": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+      "sha256": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02"
+    },
+    "status": "frozen_before_asset_generation",
+    "target_label": 9,
+    "training_performed": false,
+    "truth_loaded_by_inversion_runner": false,
+    "truth_role": "synthetic_observation_generation_and_later_retrospective_evaluation_only"
+  },
+  "git_branch": "main",
+  "git_head": "ace75ae850d34d456a43e61607be72bf3bfce5ac",
+  "run_status": "failed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage17/build_or_register_cases.py",
+    "sha256": "dba71a944d370470349cd2760308f7ba67542d1baf8f11350145d3956e48b299",
+    "size_bytes": 9576
+  },
+  "schema": "stage17_observation_generation_run_v1",
+  "truth_loaded_by_inversion_runner": false,
+  "truth_loaded_by_observation_builder": true,
+  "truth_role": "synthetic_observation_generation_and_retrospective_evaluation_only"
+}

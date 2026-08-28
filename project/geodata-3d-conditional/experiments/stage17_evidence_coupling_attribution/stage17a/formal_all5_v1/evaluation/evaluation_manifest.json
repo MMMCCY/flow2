@@ -1,0 +1,25 @@
+{
+  "common_specificity_mask_sha256": "3a6b765a8d46714aad1530a0ec0b8930facf1d29c41fca7d8f7461fd67e43b1a",
+  "created_at_utc": "2026-08-27T12:35:30.867542+00:00",
+  "git_branch": "main",
+  "git_head": "ace75ae850d34d456a43e61607be72bf3bfce5ac",
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage17/evaluate_multicase_evidence.py",
+    "sha256": "736f1a8bf8ae27074b529feb607ed42b2c91e8715cc07362c845e6c17af8bb54",
+    "size_bytes": 11753
+  },
+  "schema": "stage17_multicase_evidence_evaluation_v1",
+  "source_run_manifest": {
+    "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17a/formal_all5_v1/run_manifest.json",
+    "sha256": "8935ce28b2cfc1b09db32366c98ffd80d97c677bd0a1a7c2c329387c36bea72a",
+    "size_bytes": 18314
+  },
+  "summary": {
+    "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17a/formal_all5_v1/evaluation/summary.json",
+    "sha256": "0d90df96b000a6673f17aa00e95f185f573bda9a420f110a1e75e6145847a882",
+    "size_bytes": 782
+  },
+  "truth_loaded_after_run_completion": true,
+  "truth_used_by_inversion_runner": false
+}

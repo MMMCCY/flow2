@@ -1,0 +1,82 @@
+{
+  "schema": "stage17_optimizer_calibration_v1",
+  "status": "frozen_before_run",
+  "run_classes": ["engineering_smoke", "optimizer_calibration_confirmation"],
+  "scientific_run_class": "optimizer_calibration_confirmation",
+  "arms": [
+    "FLOW_ONLY",
+    "REFERENCE_TRAJECTORY_GUIDANCE",
+    "DFLOW_LEGACY_ADAM",
+    "DFLOW_PAPER_ALIGNED_LBFGS"
+  ],
+  "source_seeds": [42, 142, 242],
+  "initialization": "standard_normal_cpu_generator_v1",
+  "solver": "fixed_euler",
+  "n_steps": 32,
+  "time_grid": "fixed_euler_midpoint_v1",
+  "condition_projection": "clean_embedding_before_first_step_and_after_every_step_v1",
+  "use_gradient_checkpointing": true,
+  "source_regularization_weight": 0.0,
+  "target_label": 9,
+  "device": "cuda",
+  "training_performed": false,
+  "parameter_sweep": false,
+  "smoke_may_tune_scientific_parameters": false,
+  "optimizers": {
+    "DFLOW_LEGACY_ADAM": {
+      "optimizer": "adam",
+      "learning_rate": 0.01,
+      "optimization_iterations": 20,
+      "lbfgs_max_iter": 5,
+      "line_search_fn": null
+    },
+    "DFLOW_PAPER_ALIGNED_LBFGS": {
+      "optimizer": "lbfgs",
+      "learning_rate": 1.0,
+      "optimization_iterations": 5,
+      "lbfgs_max_iter": 5,
+      "line_search_fn": "strong_wolfe"
+    }
+  },
+  "tasks": {
+    "oracle_probability": {
+      "stage16_source_config": {
+        "path": "project/geodata-3d-conditional/experiments/stage16_dflow_source_optimization/configs/oracle_probability_v1.json",
+        "sha256": "666560af398b141a316c544c37714a66d49955fb7e0b28e4c0313289333e2012"
+      },
+      "authoritative_reference_config": {
+        "path": "project/geodata-3d-conditional/experiments/stage1_probability/runs/cond_generation_0/label9/all/phase1b_v4/calibrated_reference_windowed/seed42_n4_s32/alpha025/config.json",
+        "sha256": "9ee33a40b433d74bf96ae62b098858e04f330c2155777439f30fd6b88c72a9da"
+      }
+    },
+    "property": {
+      "stage16_source_config": {
+        "path": "project/geodata-3d-conditional/experiments/stage16_dflow_source_optimization/configs/property_v1.json",
+        "sha256": "e44952cfee6c85061e3efb9584cf08bb2d2bff3da0cc6dd4d19dd19be630b937"
+      },
+      "authoritative_reference_config": {
+        "path": "project/geodata-3d-conditional/experiments/stage2_property/runs/cond_generation_0/ideal_density_susceptibility_label9_contrast_v1/phase2a_v1/seed42_n4_s32_a025_c025/alpha025/config.json",
+        "sha256": "f391346af6e53d662ad07b61f517ea6a72763d42868f92f2cd3f96051491e3b7"
+      }
+    }
+  },
+  "progression_gate": {
+    "task_aggregation": "separate_no_pooled_compensation",
+    "material_seed_count_required_per_task": 2,
+    "source_seed_count_per_task": 3,
+    "target_iou_improvement": 0.01,
+    "secondary_any": {
+      "target_recall_improvement": 0.02,
+      "target_centroid_distance_reduction_voxels": 0.5,
+      "target_absolute_volume_error_fraction_reduction": 0.02
+    },
+    "non_micro_reference_gain": {
+      "target_iou": 0.01,
+      "target_recall": 0.01,
+      "target_absolute_volume_error_fraction_reduction": 0.01,
+      "target_centroid_distance_reduction_voxels": 0.5
+    },
+    "minimum_median_target_iou_recovery_fraction_per_task": 0.25,
+    "optimizer_selection": "maximize_minimum_task_specific_median_iou_recovery_then_fewer_endpoint_solves_then_lower_runtime"
+  }
+}
