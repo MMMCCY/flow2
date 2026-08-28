@@ -1,0 +1,38 @@
+{
+  "all_pairs_valid": true,
+  "case_count": 5,
+  "decision": "VOLUME_REPAIR_WITH_LOCALIZATION_RETAINED",
+  "localization_retained_vs_flow_case_count": 4,
+  "mass_mask_policy": "subsurface_and_not_condition_mask",
+  "model_load_report": {
+    "checkpoint": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "checkpoint_epoch": 1651,
+    "checkpoint_global_step": 8376,
+    "ema_applied": true,
+    "ema_entry_count": 411,
+    "ema_excluded_frozen_parameters": [
+      "embedding.weight"
+    ],
+    "ema_missing_trainable": [],
+    "ema_shape_mismatches": [],
+    "ema_unexpected": [],
+    "frozen_parameters": [
+      "embedding.weight"
+    ],
+    "model_parameter_count": 412,
+    "trainable_parameter_count": 411,
+    "weight_source": "ema"
+  },
+  "new_pair_count": 15,
+  "primary_statistical_unit": "independent_geology_case",
+  "schema": "stage18_continuous_property_target_evaluation_v1",
+  "stage18a_decision": "SURROGATE_OVERSHOOT_SIGNAL",
+  "stage18a_truth_observation_closure_max_rmse": 4.4479741242132286e-07,
+  "stop_after_stage18": true,
+  "threshold_arm_run": false,
+  "volume_repair_case_count": 5
+}

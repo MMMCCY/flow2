@@ -1,5 +1,50 @@
 # Development handoff
 
+## Stage18 evidence target semantics (2026-08-29)
+
+Stage18 is complete.  It first audited all 30 immutable Stage17C hard
+geologies with the frozen Stage17 binary acoustic/seismic observation model,
+without running Flow.  The decision is `SURROGATE_OVERSHOOT_SIGNAL`: all 5/5
+independent cases improve case-median target IoU while worsening hard-seismic
+RMSE under positive-only trajectory guidance, and all five remain volume
+overpredicted.  Truth-to-observation CUDA replay closes with maximum RMSE
+`4.448e-7`.
+
+The sole Stage18B intervention changed
+`target_properties: 1 -> binary_impedance_score` while retaining Stage17C's
+`confidence = binary_impedance_score * free_subsurface`.  Thus spatial
+confidence weighting, evidence, source noise, checkpoint/EMA, conditions,
+32-step fixed Euler, controller, schedules, decoder and every guidance
+parameter remained fixed.  No threshold or score rescaling was used.  Formal
+CUDA produced exactly 15 new `CONTINUOUS_PROPERTY_TARGET` outputs; all 15
+pairs and model/condition hashes pass.
+
+The decision is `VOLUME_REPAIR_WITH_LOCALIZATION_RETAINED`: case-median
+absolute volume error improves versus positive-only in 5/5 cases and target
+IoU remains above Flow-only in 4/5.  New hard-seismic RMSE is below both
+positive-only and Flow-only in 5/5.  Across case medians, Flow / positive / new
+target IoU is `0.02999 / 0.24451 / 0.09284`, absolute volume-error fraction is
+`0.59467 / 2.31987 / 0.45016`, and hard-seismic RMSE is
+`0.03961 / 0.04758 / 0.03797`.
+
+This supports positive-only target semantics as a principal causal contributor
+to Stage17C overprediction, but not as the only limitation.  New-arm topology
+is substantially fragmented: cross-case median connected components rise to
+`328`, largest-component fraction falls to `0.3770`, and top-8 mass falls to
+`0.8531`.  Case04 also loses the Flow-only target-IoU advantage.  Fixed
+truth-present mIoU is slightly lower (`0.19664`) than both references.
+
+Soft and hard label-9 masses use the identical free-subsurface mask.  The
+case-median `M_hard-M_soft` is `-12.46`, with all five case medians negative,
+so hard decode does not systematically amplify the volume; the remaining
+behavior is already present in the final soft state.
+
+Focused remote regressions pass `61 passed, 13 warnings`.  Full details,
+commands, hashes and tables are in
+`experiments/stage18_evidence_semantics/reports/DEVELOPMENT_REPORT.md`.
+Stage18 is stopped.  Do not automatically run a threshold arm, test 0.6,
+retune guidance, add hard correction, change the decoder or start a new method.
+
 ## Stage16 D-Flow source optimization (2026-08-24)
 
 Stage16 adds an inference-only, source-point D-Flow engine: the EMA CFM is

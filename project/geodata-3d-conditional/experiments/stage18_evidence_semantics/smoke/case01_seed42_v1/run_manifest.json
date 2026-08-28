@@ -1,0 +1,136 @@
+{
+  "all_condition_violations_zero": true,
+  "authorized_arm": "CONTINUOUS_PROPERTY_TARGET",
+  "confidence_policy": "binary_impedance_score_times_free_subsurface_fixed_from_stage17c",
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage18_evidence_semantics/configs/continuous_property_target_v1.json",
+    "sha256": "3676193093f89f5bf87ec8dd72a0a7885c5c62f90d44efd3bff787c4ab05b04b",
+    "size_bytes": 2554
+  },
+  "created_at_utc": "2026-08-28T16:58:10.270564+00:00",
+  "executed_case_count": 1,
+  "executed_source_seed_count_per_case": 1,
+  "full_parameters": {
+    "authorized_arm": "CONTINUOUS_PROPERTY_TARGET",
+    "case_specific_normalization": false,
+    "component_connectivity": 6,
+    "confidence_policy": "binary_impedance_score_times_free_subsurface_fixed_from_stage17c",
+    "controlled_variable": "property_target_semantics_only",
+    "mass_mask_policy": "subsurface_and_not_condition_mask",
+    "parameter_sweep": false,
+    "primary_statistical_unit": "independent_geology_case",
+    "schema": "stage18_continuous_property_target_v1",
+    "score_rescaling": false,
+    "source_seed_role": "within_case_stochastic_replicate",
+    "spatial_confidence_weighting_held_fixed": true,
+    "stage17c_config": {
+      "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/configs/coupling_v1.json",
+      "sha256": "32c53745f74083b8a1bfecf07f6034a85e38234e6ecdc4daba89f0fd7fc704d1",
+      "size_bytes": 18404
+    },
+    "stage17c_evaluation_summary": {
+      "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17c/formal_all5_all3_v1/evaluation/summary.json",
+      "sha256": "fc2596118dbf176370e64f693f94041ea6c360845e8b1f6d1cb9886172c4cbc6",
+      "size_bytes": 657
+    },
+    "stage17c_run_manifest": {
+      "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17c/formal_all5_all3_v1/run_manifest.json",
+      "sha256": "0c59c70d122db89fc204956801111ac555a88b1f6eae2adddb937db3e522b173",
+      "size_bytes": 22000
+    },
+    "stage17c_sample_manifest": {
+      "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17c/formal_all5_all3_v1/sample_manifest.csv",
+      "sha256": "cb0280790e42027032009796e1161fe48648e592a63d9751fe762124c7af25b5",
+      "size_bytes": 8876
+    },
+    "stage17c_sample_metrics": {
+      "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17c/formal_all5_all3_v1/evaluation/sample_metrics.csv",
+      "sha256": "2995bb7e5f071c835f71dcc098bd11893292bb9470ec7637048970e45f8cbf3f",
+      "size_bytes": 19251
+    },
+    "status": "frozen_before_run",
+    "stop_after_stage18": true,
+    "target_properties_policy": "binary_impedance_score_no_threshold",
+    "target_semantics": "continuous_normalized_binary_property_target_v1",
+    "thresholding": false,
+    "top_k_component_mass": [
+      4,
+      8
+    ],
+    "training_performed": false,
+    "truth_loaded_by_runner": false,
+    "volume_result_rule": {
+      "localization_metric": "case_median_target_iou_vs_flow_only",
+      "required_case_count": 3,
+      "volume_metric": "case_median_target_absolute_volume_error_fraction"
+    }
+  },
+  "git_branch": "main",
+  "git_head": "551e77bcc4e504a5af956f89b0c8477600887e03",
+  "model_load_report": {
+    "checkpoint": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "checkpoint_epoch": 1651,
+    "checkpoint_global_step": 8376,
+    "ema_applied": true,
+    "ema_entry_count": 411,
+    "ema_excluded_frozen_parameters": [
+      "embedding.weight"
+    ],
+    "ema_missing_trainable": [],
+    "ema_shape_mismatches": [],
+    "ema_unexpected": [],
+    "frozen_parameters": [
+      "embedding.weight"
+    ],
+    "model_parameter_count": 412,
+    "trainable_parameter_count": 411,
+    "weight_source": "ema"
+  },
+  "model_state_dict_sha256_after": "10d2181fe3eeeb406afc3da5e78ded64e9f92abfb2b3c352ee57e60e06da9b68",
+  "model_state_dict_sha256_before": "10d2181fe3eeeb406afc3da5e78ded64e9f92abfb2b3c352ee57e60e06da9b68",
+  "model_state_dict_unchanged": true,
+  "parameter_sweep_performed": false,
+  "property_metadata": {
+    "channel_names": [
+      "normalized_binary_impedance"
+    ],
+    "channel_units": [
+      "binary_endpoint_unit"
+    ],
+    "channel_weights": [
+      1.0
+    ],
+    "description": "Normalized binary acoustic endpoint: label9 is 1, every other category including air is 0.",
+    "is_measured_geophysics": false,
+    "num_categories": 15,
+    "property_table_sha256": "5fe78122fd4cf2e02f294713530fbed73ff753036dfbf46495a473d778d67325",
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "schema": "full_lithology_property_channels_v1",
+    "truth_derived": true
+  },
+  "run_class": "engineering_smoke",
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage18/run_continuous_property_target.py",
+    "sha256": "84daaf29a935e7b20d68657e7ee9eec440ed48f4daaa4507c6421f09aaf31886",
+    "size_bytes": 13409
+  },
+  "same_evidence_as_stage17c": true,
+  "same_initial_noise_as_stage17c": true,
+  "sample_arm_count": 1,
+  "schema": "stage18_continuous_property_target_run_v1",
+  "scientific_conclusion_allowed": false,
+  "smoke_subset": true,
+  "spatial_confidence_weighting_held_fixed": true,
+  "target_semantics": "continuous_normalized_binary_property_target_v1",
+  "thresholding_performed": false,
+  "training_performed": false,
+  "truth_loaded_by_runner": false
+}
