@@ -1,5 +1,37 @@
 # Development handoff
 
+## Stage19 learned evidence adapter — stopped at cohort gate (2026-09-02)
+
+Stage19 was authorized from clean `main` at
+`3134684cb9715a8cc58e3758d8770fde075cdd5d` (apart from the user's untracked
+Stage19 instruction file).  The implementation adds separate cohort,
+observation, evidence, VAL-audit, frozen-adapter training, five-arm truth-blind
+inference and retrospective case-first evaluation programs.  It directly
+reuses the Stage17A inversion and the Phase6 residual adapter; it does not
+modify the base Flow, checkpoint, EMA policy, Stage1--18 outputs or the old
+five-case benchmark.  Focused CPU regressions pass `65 passed`.
+
+The first formal step triggered the protocol's mandatory cohort availability
+stop.  In the fixed TRAIN candidate range `220260001..220260256`, only 33 of
+256 candidates met the unchanged Full StructuralGeo eligibility, versus the
+required first 64.  The run stopped with
+`RuntimeError: STOP: insufficient eligible train cases`.  The frozen cohort
+config SHA-256 is
+`f0acfd6be07b870b58cf3a75451516d4f6b762c2de957375b653ae066608368c`;
+the failed cohort manifest SHA-256 is
+`ae47b6666b1b4c4ea0402548a3e8154a67aeba3de97c38d82c00d4137b607d38`.
+The 33 accepted partial TRAIN cases are preserved under
+`experiments/stage19_learned_evidence_adapter/cohort/cases/` and must not be
+promoted to a smaller post-hoc training cohort.
+
+Per the frozen Stage19 rule, do not expand the 256-candidate budget, weaken
+eligibility, replace rejected cases, generate observations, train the adapter,
+or run test inference under this protocol.  No evidence reuse gate, CUDA
+smoke, formal training, adapter checkpoint, 180-output inference matrix or
+scientific Stage19 classification exists.  A future attempt requires an
+explicitly authorized new cohort protocol; it must not overwrite this failed
+run.
+
 ## Stage18 evidence target semantics (2026-08-29)
 
 Stage18 is complete.  It first audited all 30 immutable Stage17C hard

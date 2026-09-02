@@ -1,0 +1,127 @@
+{
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/configs/cohort_v1.json",
+    "sha256": "f0acfd6be07b870b58cf3a75451516d4f6b762c2de957375b653ae066608368c",
+    "size_bytes": 1386
+  },
+  "created_at_utc": "2026-09-02T11:29:24.080108+00:00",
+  "error": "RuntimeError: STOP: insufficient eligible train cases",
+  "full_parameters": {
+    "eligibility": {
+      "base_strata_history_required": true,
+      "fold_or_fault_event_required": true,
+      "hidden_label9_voxels_positive": true,
+      "label9_producing_intrusion_event_required": true,
+      "raw_label9_voxels_positive": true
+    },
+    "fixed_well_xy": [
+      [
+        8,
+        46
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        10,
+        24
+      ],
+      [
+        27,
+        17
+      ],
+      [
+        35,
+        26
+      ],
+      [
+        39,
+        59
+      ],
+      [
+        44,
+        60
+      ],
+      [
+        48,
+        6
+      ],
+      [
+        57,
+        32
+      ]
+    ],
+    "historical_case_ids_excluded": [
+      "fullgeo_case01",
+      "fullgeo_case02",
+      "fullgeo_case03",
+      "fullgeo_case04",
+      "fullgeo_case05"
+    ],
+    "parameter_sweep": false,
+    "recipe": {
+      "bounds": [
+        [
+          -1920,
+          1920
+        ],
+        [
+          -1920,
+          1920
+        ],
+        [
+          -1920,
+          1920
+        ]
+      ],
+      "fill_nans": true,
+      "height_tracking": true,
+      "markov_matrix": "packaged_default",
+      "normalize": true,
+      "raw_label_range": [
+        -1,
+        13
+      ],
+      "resolution": [
+        64,
+        64,
+        64
+      ]
+    },
+    "schema": "stage19_cohort_v1",
+    "selection_uses_seismic_evidence_flow_or_downstream_metrics": false,
+    "splits": {
+      "test": {
+        "accepted": 12,
+        "max_candidates": 128,
+        "start": 220280001,
+        "step": 1
+      },
+      "train": {
+        "accepted": 64,
+        "max_candidates": 256,
+        "start": 220260001,
+        "step": 1
+      },
+      "val": {
+        "accepted": 8,
+        "max_candidates": 128,
+        "start": 220270001,
+        "step": 1
+      }
+    },
+    "status": "frozen_before_asset_generation",
+    "training_overlap_wording": "independently generated and prospectively registered; historical sample-level overlap with streaming CFM pretraining cannot be certified because no seed/sample manifest was retained"
+  },
+  "git_branch": "main",
+  "git_head": "3134684cb9715a8cc58e3758d8770fde075cdd5d",
+  "run_status": "failed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage19/build_cohort.py",
+    "sha256": "cf05650cee43c74d797962b512e7af20b7d23c9826a3e3c73f171b735add100d",
+    "size_bytes": 7243
+  },
+  "schema": "stage19_cohort_manifest_v1",
+  "selection_uses_seismic_evidence_flow_or_downstream_metrics": false
+}

@@ -1,0 +1,97 @@
+{
+  "assets": {
+    "condition_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort/cases/stage19_train_case014/condition/condition_mask.pt",
+      "sha256": "dff4a19ce2c8077feb464163d86faf37f149f79e4203d2e8ece2fe63734d97c0",
+      "size_bytes": 263834
+    },
+    "condition_values": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort/cases/stage19_train_case014/condition/condition_values.pt",
+      "sha256": "8b3cac2ec87f27378340f718b5549d2ca00add3dfa7839133f34d382c0361688",
+      "size_bytes": 1050280
+    },
+    "history": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort/cases/stage19_train_case014/truth/history.json",
+      "sha256": "0c630297930335ec5762775ea7b0cb4f45e6c4a328851c4282a20b09038e1b66",
+      "size_bytes": 9356
+    },
+    "truth": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort/cases/stage19_train_case014/truth/true_model.pt",
+      "sha256": "002236f7cf71c97f9813ef1b66da23649485eeb3a8634e27a49c03e149204397",
+      "size_bytes": 1050174
+    }
+  },
+  "case_id": "stage19_train_case014",
+  "condition_mask_tensor_sha256": "86ae8a91d8217bb5a9995253e3642eb3dd2873748e49ad36837806f79e5140c7",
+  "condition_values_tensor_sha256": "d34a891fe9eaa36347b8d1f93dcc6395144b4c1e60a4fe9f3e27c47ae8dd29df",
+  "event_subtypes": [
+    "Sediment: Uniform",
+    "SillSystem",
+    "BlobCluster",
+    "TiltCutFill",
+    "Tilted",
+    "StrikeSlip",
+    "Termination of Sequence"
+  ],
+  "hidden_target_voxel_count": 5307,
+  "history_sha256": "ada184a7d8e69db15fbdfd399744918a4c3f5026d081784539f7765f84017545",
+  "markov_sequence": [
+    "BaseStrata",
+    "Sills",
+    "OreDeposit",
+    "Erosion",
+    "Erosion",
+    "Fault",
+    "End"
+  ],
+  "root_seed": 220260137,
+  "run_status": "completed",
+  "schema": "stage19_structuralgeo_case_v1",
+  "selection_firewall": {
+    "downstream_metrics": false,
+    "evidence": false,
+    "flow": false,
+    "seismic": false
+  },
+  "split": "train",
+  "target_voxel_count": 5321,
+  "truth_tensor_sha256": "001b5d7361bb00280d8d694d10f3c4117e8102b81c87fa6f83e55662f86881b1",
+  "well_xy": [
+    [
+      8,
+      46
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      10,
+      24
+    ],
+    [
+      27,
+      17
+    ],
+    [
+      35,
+      26
+    ],
+    [
+      39,
+      59
+    ],
+    [
+      44,
+      60
+    ],
+    [
+      48,
+      6
+    ],
+    [
+      57,
+      32
+    ]
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "stage19_inference_v1",
+  "status": "frozen_before_run",
+  "parameter_sweep": false,
+  "truth_loaded_by_runner": false,
+  "target_label": 9,
+  "source_seeds": [42,142,242],
+  "n_steps": 32,
+  "integrator": "fixed_euler_midpoint",
+  "arms": ["FLOW_ONLY", "STAGE18_CONTINUOUS_TARGET", "ADAPTER_CORRECT", "ADAPTER_ZERO", "ADAPTER_WRONG_CASE"],
+  "adapter_scale": 1.0,
+  "max_residual_ratio": 0.25,
+  "wrong_case_mapping": "next_test_case_cyclic",
+  "stage18": {"alpha": 0.25, "max_guidance_ratio": 0.25, "tau_start": 0.5, "tau_end": 0.1, "tau_schedule": "cosine", "guidance_start": 0.25, "guidance_schedule": "windowed_sine", "grad_clip_norm": 1.0, "guidance_scaling_mode": "reference_norm_relative_v2", "property_sigmas": [0.0,1.5,3.0], "property_scale_weights": [0.5,0.3,0.2], "property_loss_mode": "matched_multiscale_normalized_mse_v1", "target_properties": "score", "confidence": "score_times_free_subsurface"}
+}

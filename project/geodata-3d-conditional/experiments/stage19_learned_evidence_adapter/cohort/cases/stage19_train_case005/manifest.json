@@ -1,0 +1,99 @@
+{
+  "assets": {
+    "condition_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort/cases/stage19_train_case005/condition/condition_mask.pt",
+      "sha256": "8c718474f8880574ad6e05f9437a67947bd02c8d4f407e24f997560f0624718d",
+      "size_bytes": 263834
+    },
+    "condition_values": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort/cases/stage19_train_case005/condition/condition_values.pt",
+      "sha256": "d8bdf2077b4dd9a037fd5b91a19a92b73d17ae1660b7c57f8d86020d0b6ade37",
+      "size_bytes": 1050280
+    },
+    "history": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort/cases/stage19_train_case005/truth/history.json",
+      "sha256": "bc60ca67aac778341e44c106cb7c1944c44415d3391350c6cdb6b8a82dd7fbf2",
+      "size_bytes": 9692
+    },
+    "truth": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort/cases/stage19_train_case005/truth/true_model.pt",
+      "sha256": "ad5bab42dee4865ff348e08196824ed1ae1c764d318b0639b85c4869c2a5236d",
+      "size_bytes": 1050174
+    }
+  },
+  "case_id": "stage19_train_case005",
+  "condition_mask_tensor_sha256": "b773f4e25b33a45d2621ba40780d492fb18c6f208fdb6e841ae3686fb9b58dc1",
+  "condition_values_tensor_sha256": "16b361fe526f2c7aad4627474437a73d57c6439bbad45469322ba23209c479a5",
+  "event_subtypes": [
+    "Sediment: Tilted Markov",
+    "SillSystem",
+    "Laccolith",
+    "Shaped",
+    "Shaped",
+    "WarpedDike",
+    "Laccolith",
+    "Termination of Sequence"
+  ],
+  "hidden_target_voxel_count": 3873,
+  "history_sha256": "14f3c4281fe1342672b9563cfdefdf09f04bce7bf2b83a82d3ab0be2f7972ba9",
+  "markov_sequence": [
+    "BaseStrata",
+    "Sills",
+    "Pluton",
+    "Fold",
+    "Fold",
+    "Dike",
+    "Pluton",
+    "End"
+  ],
+  "root_seed": 220260044,
+  "run_status": "completed",
+  "schema": "stage19_structuralgeo_case_v1",
+  "selection_firewall": {
+    "downstream_metrics": false,
+    "evidence": false,
+    "flow": false,
+    "seismic": false
+  },
+  "split": "train",
+  "target_voxel_count": 3880,
+  "truth_tensor_sha256": "47a0b7c0bc14c76d1d72adf056ae553470c3d83bde750d9436a74d0c2ac8a5ed",
+  "well_xy": [
+    [
+      8,
+      46
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      10,
+      24
+    ],
+    [
+      27,
+      17
+    ],
+    [
+      35,
+      26
+    ],
+    [
+      39,
+      59
+    ],
+    [
+      44,
+      60
+    ],
+    [
+      48,
+      6
+    ],
+    [
+      57,
+      32
+    ]
+  ]
+}

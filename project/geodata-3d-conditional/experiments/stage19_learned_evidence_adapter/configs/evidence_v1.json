@@ -1,0 +1,28 @@
+{
+  "schema": "stage19_evidence_v1",
+  "status": "frozen_before_asset_generation",
+  "parameter_sweep": false,
+  "target_label": 9,
+  "observation": {
+    "support_policy": "columnwise_fill_below_highest_nonair_v1",
+    "enclosed_air_acoustic_policy": "binary_background_endpoint",
+    "trace_samples": 320,
+    "noise": "none",
+    "forward_closure_max_abs": 1e-7,
+    "binary_acoustic_config": "experiments/stage15_binary_seismic_consensus/configs/binary_acoustic_upper_bound_v1.json",
+    "seismic_config": "experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json"
+  },
+  "inversion": {
+    "method": "complete_trace_two_pass_linearized_log_impedance_with_binary_endpoint_projection_v1",
+    "inversion_config": "experiments/stage15_binary_seismic_consensus/configs/binary_trace_boundary_inversion_v1.json",
+    "refinement_passes": 2,
+    "prior_relative_weight": 0.001,
+    "vertical_smoothness_relative_weight": 0.01,
+    "full_vertical_trace_used": true,
+    "lateral_filter_used": false,
+    "thresholding": false
+  },
+  "adapter_input": "binary_impedance_score_times_subsurface_mask",
+  "geophysics_channels": 1,
+  "reuse_gate": {"minimum_positive_ap_skill_cases": 6, "minimum_median_ap_skill": 0.30, "minimum_specificity_cases": 6}
+}
