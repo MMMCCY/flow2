@@ -1,0 +1,125 @@
+{
+  "assets": {
+    "binary_fixed_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/observations_v2/stage19_train_case004/binary_fixed_mask.pt",
+      "sha256": "4c86ec8fb0ff928f320c8c114adf3214584bceade70483dce5b35e29542eb76c",
+      "size_bytes": 263855
+    },
+    "binary_fixed_values": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/observations_v2/stage19_train_case004/binary_fixed_values.pt",
+      "sha256": "36dc86c2a422f6c03f2d522253efded72197962770232da0951f038cb0b860da",
+      "size_bytes": 1050301
+    },
+    "condition_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/observations_v2/stage19_train_case004/condition_mask.pt",
+      "sha256": "a953b9e08d4378c9c24656ef160eee0d2575a82cb2b6f333f57e81fd1ecb3d99",
+      "size_bytes": 263834
+    },
+    "condition_values": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/observations_v2/stage19_train_case004/condition_values.pt",
+      "sha256": "b2f0ddfb94277935e8bd7afeceb5481e85508b22afa822c391e57e3acd58b46a",
+      "size_bytes": 2098856
+    },
+    "observed_seismic": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/observations_v2/stage19_train_case004/observed_seismic.pt",
+      "sha256": "f7df9b577ea4d2d5b418dc7919316d84fc5c95747630c6758110ba9f4afde0f2",
+      "size_bytes": 5244584
+    },
+    "sample_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/observations_v2/stage19_train_case004/sample_mask.pt",
+      "sha256": "66b05f86e06345c82b163437b7a613831cbefddb10483c98842f91e3dd8a9444",
+      "size_bytes": 5244549
+    },
+    "subsurface_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/observations_v2/stage19_train_case004/subsurface_mask.pt",
+      "sha256": "80cce9876b84374095b949cc854be0a92227352825ee586d56ea4c4b75210330",
+      "size_bytes": 263841
+    },
+    "uncertainty": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/observations_v2/stage19_train_case004/uncertainty.pt",
+      "sha256": "21ea56fd32884ff52e268cfd2c71c67e6ad3d283d57aa5e4c641bc2a47df0b31",
+      "size_bytes": 5244549
+    }
+  },
+  "case_id": "stage19_train_case004",
+  "enclosed_air_acoustic_policy": "binary_background_endpoint",
+  "forward_closure_max_abs": 0.0,
+  "input_case_manifest": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_train_case004/manifest.json",
+    "sha256": "e2fcae0b2ec44afeb8c946f0d6848f4e4077ec199b35f574d62bed0ec06717b2",
+    "size_bytes": 3134
+  },
+  "operator_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "root_seed": 220260042,
+  "run_status": "completed",
+  "schema": "stage19r_observation_case_v2",
+  "split": "train",
+  "support_policy": "columnwise_fill_below_highest_nonair_v1",
+  "tensor_content_hashes": {
+    "binary_fixed_mask.pt": "5bfc56bb2e48f35d8433145d2f9756ef0b63e2cc96cd1d64f0aea32805d4b099",
+    "binary_fixed_values.pt": "d489f28372fe516591baa50d21744a01f426ecded25ada648b04e46f2eb9e810",
+    "condition_mask.pt": "1612e8e00aa2a1cb05228ce2520be31b8a77b8ade53b34bd6b94b8e1120360b7",
+    "condition_values.pt": "377fd19f9ac0cdc3c463be4b456791cc736f5a931e0e6a626162105a0a28710d",
+    "observed_seismic.pt": "6ab86fb5cddd86cb3ace51f13c01698cb069f925e11de458eb54995043458276",
+    "sample_mask.pt": "5a5da2304ba1f5b2e014ba47d006898932be6e6f5f381d639e3a9f433aa0ce5d",
+    "subsurface_mask.pt": "ec5d70076d4ee5b220b639480ba88ffe524ff85e71d58ab55709baffa2e5f514",
+    "uncertainty.pt": "39c70e5f45e533e41d6c3e4af74faefab45818bb65e005793443b05b7a0ffe97"
+  },
+  "truth_assets": {
+    "binary_truth": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/observations_v2/stage19_train_case004/truth_restricted/binary_truth.pt",
+      "sha256": "190913c544dc38e199ac6f4b3ee3c7a67d8b33be840c38cbc99b6ff906da8a3d",
+      "size_bytes": 1050188
+    },
+    "truth": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_train_case004/truth/true_model.pt",
+      "sha256": "d494e2234b87a40491ec3594378676bf5e26ff2c402809ae3fb1f94680435c9c",
+      "size_bytes": 1050174
+    }
+  },
+  "truth_role": "synthetic_observation_generation_and_retrospective_evaluation_only"
+}

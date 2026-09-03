@@ -1,5 +1,56 @@
 # Development handoff
 
+## Stage19R cohort repair — learned evidence adapter validated (2026-09-04)
+
+Stage19R was authorized from `main @
+f97c8ca1713421fe31ff250a62671e0cbe06fb41`. The immutable Stage19 v1 cohort
+stop below remains authoritative for v1 and was not edited or overwritten.
+Stage19R changes only the frozen candidate search budgets (TRAIN 256 -> 1024,
+VAL/TEST 128 -> 256) plus generator/asset provenance, TEST truth-firewall, and
+formal-checkpoint guards. Eligibility, accepted counts, seed starts, generator
+recipe, observation/inversion science, adapter, training, inference, metrics,
+and gates are unchanged.
+
+All 12 generator-critical source/default-matrix hashes match the authoritative
+Full StructuralGeo benchmark. Root seed `120260003` exactly replays the
+historical event sequence and truth/condition hashes, yielding
+`GENERATOR_REUSE_VALIDATED`. Cohort v2 then completed 64/8/12 accepted cases
+after examining 431/60/63 TRAIN/VAL/TEST candidates. Candidate-level traces
+and non-exclusive rejection counts are retained. This repairs the cohort
+availability engineering prerequisite; it is not by itself a scientific
+result.
+
+All 84 observations pass forward closure, and the unchanged Stage17A evidence
+pipeline completed after exact source-asset hash validation. The VAL-only gate
+passes with 8/8 positive AP-skill cases, median AP skill `0.549253`, and 8/8
+positive specificity cases. CUDA smoke passes condition exactness, independent
+scale-zero Flow equivalence, base immutability, truth blindness, and the formal
+checkpoint guard. Exactly one frozen formal adapter training completed 4
+epochs/1024 updates. The 54,003-parameter epoch-4 checkpoint SHA-256 is
+`cdb740bfeccc08f7010048c69deb8e44a13917fe53e3b2f4b46910bf536f20bb`;
+base tensor hashes are identical before/after and base gradients are absent.
+
+Truth-blind formal inference completed 12 cases x 3 seeds x 5 arms = 180
+outputs with zero condition violations. The stripped TEST registry has no
+truth pointer. Retrospective case-first evaluation concludes
+`LEARNED_EVIDENCE_ADAPTER_VALIDATED`: learned target IoU, correct-over-zero,
+correct-over-wrong, and hard-seismic improvement each pass 12/12 cases. Median
+correct-minus-Flow target-IoU delta is `+0.236709`, hard-seismic RMSE delta is
+`-0.008943`, and truth-present mean-IoU delta is `+0.039260`; every frozen
+engineering, reuse, coupling, specificity, physics, volume, structure, and
+global-geology gate passes.
+
+This result supports learned case-specific evidence-to-velocity coupling only
+within the binary high-contrast noiseless inverse-crime upper bound. It does
+not prove field generalization, and historical sample-level overlap with
+streaming CFM pretraining cannot be excluded because no old seed/sample
+manifest exists. Authoritative Stage19R artifacts are under
+`experiments/stage19_learned_evidence_adapter/{generator_reuse_audit,cohort_v2,observations_v2,evidence_v2,evidence_audit_v2,checkpoints/formal_v2,formal/inference_v2,reports/formal_v2}`;
+the full report is
+`experiments/stage19_learned_evidence_adapter/reports/STAGE19R_DEVELOPMENT_REPORT.md`.
+Focused validation passes 77 tests. Stop after Stage19R and wait for research
+discussion; do not tune or launch a new method automatically.
+
 ## Stage19 learned evidence adapter — stopped at cohort gate (2026-09-02)
 
 Stage19 was authorized from clean `main` at

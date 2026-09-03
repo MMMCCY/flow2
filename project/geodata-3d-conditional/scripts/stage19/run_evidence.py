@@ -21,11 +21,35 @@ from guidance.binary_trace_boundary import refine_binary_trace_volume, vertical_
 from guidance.seismic import seismic_operator_from_config
 from guidance.seismic_inversion import ModelBasedInversionConfig
 from scripts.stage15.common import base_manifest, normalize_volume, read_json, refuse_nonempty, write_csv, write_json
-from scripts.stage19.common import CONFIG_DIR, ROOT, asset, canonical_tensor_sha256, require_config, resolve_project_path, validate_asset
+from scripts.stage19.common import CONFIG_DIR, ROOT, asset, canonical_tensor_sha256, require_config, validate_asset, validate_stage17a_reuse
 
-DEFAULT_CONFIG = CONFIG_DIR / "evidence_v1.json"
-DEFAULT_OBSERVATIONS = ROOT / "observations"
-DEFAULT_OUTPUT = ROOT / "evidence"
+DEFAULT_CONFIG = CONFIG_DIR / "evidence_v2.json"
+DEFAULT_OBSERVATIONS = ROOT / "observations_v2"
+DEFAULT_OUTPUT = ROOT / "evidence_v2"
+
+
+def build_test_inference_registry(records: list[dict[str, object]]) -> dict[str, object]:
+    """Return the only registry contract visible to TEST inference."""
+    test_records = []
+    for case in records:
+        if case["split"] != "test":
+            continue
+        test_records.append({
+            "case_id": case["case_id"],
+            "split": case["split"],
+            "root_seed": case["root_seed"],
+            "condition_values": case["observation_assets"]["condition_values"],
+            "condition_mask": case["observation_assets"]["condition_mask"],
+            "subsurface_mask": case["observation_assets"]["subsurface_mask"],
+            "observed_seismic": case["observation_assets"]["observed_seismic"],
+            "binary_impedance_score": case["evidence"],
+            "observation_manifest": case["observation_manifest"],
+        })
+    inference_registry = {"schema": "stage19r_test_inference_registry_v1", "run_status": "completed", "case_count": len(test_records), "cases": test_records}
+    serialized = __import__("json").dumps(inference_registry, sort_keys=True).lower()
+    if any(forbidden in serialized for forbidden in ("truth", "true_model", "binary_truth")):
+        raise RuntimeError("TEST inference registry contains a forbidden pointer")
+    return inference_registry
 
 
 def parse_args() -> argparse.Namespace:
@@ -40,7 +64,8 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     refuse_nonempty(args.output_dir)
-    config = require_config(args.config, "stage19_evidence_v1")
+    config = require_config(args.config, "stage19_evidence_v2")
+    reused = validate_stage17a_reuse(config)
     inv = config["inversion"]
     if inv["thresholding"] is not False or inv["lateral_filter_used"] is not False or inv["full_vertical_trace_used"] is not True:
         raise ValueError("Stage19 evidence semantics changed")
@@ -48,9 +73,9 @@ def main() -> None:
     observation_registry = read_json(observation_registry_path)
     if observation_registry.get("run_status") != "completed" or observation_registry.get("case_count") != 84:
         raise ValueError("Stage19 observations are incomplete")
-    binary_path = resolve_project_path(config["observation"]["binary_acoustic_config"])
-    seismic_path = resolve_project_path(config["observation"]["seismic_config"])
-    inversion_path = resolve_project_path(inv["inversion_config"])
+    binary_path = reused["binary_acoustic_config"]
+    seismic_path = reused["seismic_config"]
+    inversion_path = reused["inversion_config"]
     frozen_inversion = read_json(inversion_path)
     for key in ("refinement_passes", "prior_relative_weight", "vertical_smoothness_relative_weight"):
         if float(inv[key]) != float(frozen_inversion[key]):
@@ -64,7 +89,7 @@ def main() -> None:
         raise RuntimeError("CUDA unavailable")
 
     args.output_dir.mkdir(parents=True)
-    manifest = base_manifest("stage19_evidence_run_v1", Path(__file__), args.config)
+    manifest = base_manifest("stage19r_evidence_run_v2", Path(__file__), args.config)
     manifest.update({"run_status": "running", "truth_loaded_by_runner": False, "thresholding_performed": False})
     write_json(args.output_dir / "run_manifest.json", manifest)
     records = []
@@ -88,13 +113,15 @@ def main() -> None:
             for name, tensor in outputs.items():
                 torch.save(tensor, case_dir / name)
             write_csv(case_dir / "refinement_trace.csv", trace)
-            case_manifest = {"schema": "stage19_evidence_case_v1", "run_status": "completed", "case_id": case_id, "split": case["split"], "truth_loaded_by_runner": False, "thresholding_performed": False, "full_vertical_trace_used": True, "trace_samples": 320, "input_observation_manifest": case["manifest"], "assets": {name.removesuffix(".pt"): asset(case_dir / name) for name in outputs}, "tensor_content_hashes": {name: canonical_tensor_sha256(tensor) for name, tensor in outputs.items()}, "operator_metadata": metadata}
+            case_manifest = {"schema": "stage19r_evidence_case_v2", "run_status": "completed", "case_id": case_id, "split": case["split"], "truth_loaded_by_runner": False, "thresholding_performed": False, "full_vertical_trace_used": True, "trace_samples": 320, "input_observation_manifest": case["manifest"], "assets": {name.removesuffix(".pt"): asset(case_dir / name) for name in outputs}, "tensor_content_hashes": {name: canonical_tensor_sha256(tensor) for name, tensor in outputs.items()}, "operator_metadata": metadata}
             write_json(case_dir / "manifest.json", case_manifest)
             records.append({"case_id": case_id, "split": case["split"], "root_seed": case["root_seed"], "manifest": asset(case_dir / "manifest.json"), "evidence": case_manifest["assets"]["binary_impedance_score"], "observation_manifest": case["manifest"], "observation_assets": case["assets"], "truth_assets": case["truth_assets"]})
             print(f"Stage19 evidence {case_id} completed", flush=True)
-        registry = {"schema": "stage19_evidence_registry_v1", "run_status": "completed", "case_count": len(records), "cases": records, "thresholding_performed": False}
+        registry = {"schema": "stage19r_evidence_registry_v2", "run_status": "completed", "case_count": len(records), "cases": records, "thresholding_performed": False}
         write_json(args.output_dir / "evidence_registry.json", registry)
-        manifest.update({"run_status": "completed", "case_count": len(records), "evidence_registry": asset(args.output_dir / "evidence_registry.json"), "truth_loaded_by_runner": False})
+        inference_registry = build_test_inference_registry(records)
+        write_json(args.output_dir / "test_inference_registry.json", inference_registry)
+        manifest.update({"run_status": "completed", "case_count": len(records), "evidence_registry": asset(args.output_dir / "evidence_registry.json"), "test_inference_registry": asset(args.output_dir / "test_inference_registry.json"), "truth_loaded_by_runner": False})
         write_json(args.output_dir / "run_manifest.json", manifest)
     except Exception as exc:
         manifest.update({"run_status": "failed", "error": f"{type(exc).__name__}: {exc}"})

@@ -29,9 +29,9 @@ from scripts.stage15.common import base_manifest, normalize_volume, read_json, r
 from scripts.stage19.common import CONFIG_DIR, ROOT, asset, freeze_base_model, require_config, resolve_project_path, validate_asset
 
 DEFAULT_CONFIG = CONFIG_DIR / "training_v1.json"
-DEFAULT_EVIDENCE = ROOT / "evidence"
-DEFAULT_GATE = ROOT / "evidence_audit/summary.json"
-DEFAULT_OUTPUT = ROOT / "checkpoints/formal_v1"
+DEFAULT_EVIDENCE = ROOT / "evidence_v2"
+DEFAULT_GATE = ROOT / "evidence_audit_v2/summary.json"
+DEFAULT_OUTPUT = ROOT / "checkpoints/formal_v2"
 
 
 def parse_args() -> argparse.Namespace:
@@ -171,7 +171,7 @@ def main() -> None:
                         raise RuntimeError("adapter gradient is zero or non-finite")
                     optimizer.step()
                     update_count += 1
-                    trace.append({"epoch": epoch + 1, "update": update_count, "case_id": case["case_id"], "time": time_value, "initial_noise_sha256": noise_sha, "total_loss": float(loss.detach()), "flow_loss": float(diagnostics["flow_loss"]), "cross_entropy_loss": float(diagnostics["cross_entropy_loss"]), "dice_loss": float(diagnostics["dice_loss"]), "residual_regularizer": float(diagnostics["residual_regularizer"]), "endpoint_accuracy": float(diagnostics["endpoint_accuracy"]), "used_residual_ratio": float(used_ratio.mean()), "gradient_norm": float(grad_norm)})
+                    trace.append({"epoch": epoch + 1, "update": update_count, "case_id": case["case_id"], "time": time_value, "initial_noise_sha256": noise_sha, "total_loss": float(loss.detach()), "flow_loss": float(diagnostics["flow_loss"].detach()), "cross_entropy_loss": float(diagnostics["cross_entropy_loss"].detach()), "dice_loss": float(diagnostics["dice_loss"].detach()), "residual_regularizer": float(diagnostics["residual_regularizer"].detach()), "endpoint_accuracy": float(diagnostics["endpoint_accuracy"].detach()), "used_residual_ratio": float(used_ratio.detach().mean()), "gradient_norm": float(grad_norm)})
                     state_rows.append({"epoch": epoch + 1, "case_id": case["case_id"], "time": time_value, "initial_noise_sha256": noise_sha})
                     if max_updates is not None and update_count >= max_updates:
                         stop = True

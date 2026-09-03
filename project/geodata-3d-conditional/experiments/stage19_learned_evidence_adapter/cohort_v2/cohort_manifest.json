@@ -1,0 +1,232 @@
+{
+  "candidate_summary": {
+    "test": {
+      "accepted_count": 12,
+      "examined_count": 63,
+      "rejected_count": 51,
+      "rejection_reason_counts": {
+        "final_raw_label9_absent": 2,
+        "missing_fold_or_fault_event": 10,
+        "missing_label9_producing_intrusion_event": 47,
+        "no_hidden_raw_label9_under_fixed_condition": 2
+      },
+      "run_status": "completed",
+      "schema": "stage19r_candidate_trace_v1",
+      "seed_rule": {
+        "accepted": 12,
+        "max_candidates": 256,
+        "start": 220280001,
+        "step": 1
+      },
+      "split": "test"
+    },
+    "train": {
+      "accepted_count": 64,
+      "examined_count": 431,
+      "rejected_count": 367,
+      "rejection_reason_counts": {
+        "final_raw_label9_absent": 11,
+        "missing_fold_or_fault_event": 55,
+        "missing_label9_producing_intrusion_event": 349,
+        "no_hidden_raw_label9_under_fixed_condition": 11
+      },
+      "run_status": "completed",
+      "schema": "stage19r_candidate_trace_v1",
+      "seed_rule": {
+        "accepted": 64,
+        "max_candidates": 1024,
+        "start": 220260001,
+        "step": 1
+      },
+      "split": "train"
+    },
+    "val": {
+      "accepted_count": 8,
+      "examined_count": 60,
+      "rejected_count": 52,
+      "rejection_reason_counts": {
+        "final_raw_label9_absent": 3,
+        "missing_fold_or_fault_event": 12,
+        "missing_label9_producing_intrusion_event": 48,
+        "no_hidden_raw_label9_under_fixed_condition": 3
+      },
+      "run_status": "completed",
+      "schema": "stage19r_candidate_trace_v1",
+      "seed_rule": {
+        "accepted": 8,
+        "max_candidates": 256,
+        "start": 220270001,
+        "step": 1
+      },
+      "split": "val"
+    }
+  },
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/configs/cohort_v2.json",
+    "sha256": "301d381628d25f5c49e13ccac39f14c090682cfbaabdaae54e62788d74dab903",
+    "size_bytes": 2253
+  },
+  "created_at_utc": "2026-09-03T16:10:14.648102+00:00",
+  "full_parameters": {
+    "authoritative_reuse": {
+      "benchmark_config": {
+        "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/configs/full_complexity_targeted_v1.json",
+        "sha256": "39bb41e8b7f0d6b1597c8ba81d5762603616a9484c1e3b855c8c43fd570f50b0"
+      },
+      "benchmark_manifest": {
+        "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/benchmark_manifest.json",
+        "sha256": "16f8e36b94b1e89ae9798615d0d466c1d8631501c73830fc54c117285f610968"
+      },
+      "historical_case01_manifest": {
+        "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/manifest.json",
+        "sha256": "7e63cc34f21a401a665bf6577f3031db8da6fce6e893c6a5fa16f79117226ee6"
+      },
+      "replay_root_seed": 120260003
+    },
+    "eligibility": {
+      "base_strata_history_required": true,
+      "fold_or_fault_event_required": true,
+      "hidden_label9_voxels_positive": true,
+      "label9_producing_intrusion_event_required": true,
+      "raw_label9_voxels_positive": true
+    },
+    "fixed_well_xy": [
+      [
+        8,
+        46
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        10,
+        24
+      ],
+      [
+        27,
+        17
+      ],
+      [
+        35,
+        26
+      ],
+      [
+        39,
+        59
+      ],
+      [
+        44,
+        60
+      ],
+      [
+        48,
+        6
+      ],
+      [
+        57,
+        32
+      ]
+    ],
+    "historical_case_ids_excluded": [
+      "fullgeo_case01",
+      "fullgeo_case02",
+      "fullgeo_case03",
+      "fullgeo_case04",
+      "fullgeo_case05"
+    ],
+    "parameter_sweep": false,
+    "recipe": {
+      "bounds": [
+        [
+          -1920,
+          1920
+        ],
+        [
+          -1920,
+          1920
+        ],
+        [
+          -1920,
+          1920
+        ]
+      ],
+      "fill_nans": true,
+      "height_tracking": true,
+      "markov_matrix": "packaged_default",
+      "normalize": true,
+      "raw_label_range": [
+        -1,
+        13
+      ],
+      "resolution": [
+        64,
+        64,
+        64
+      ]
+    },
+    "revision_of": "stage19_cohort_v1",
+    "revision_reason": "repair_candidate_search_envelope_only_after_v1_availability_stop",
+    "schema": "stage19_cohort_v2",
+    "selection_uses_seismic_evidence_flow_or_downstream_metrics": false,
+    "splits": {
+      "test": {
+        "accepted": 12,
+        "max_candidates": 256,
+        "start": 220280001,
+        "step": 1
+      },
+      "train": {
+        "accepted": 64,
+        "max_candidates": 1024,
+        "start": 220260001,
+        "step": 1
+      },
+      "val": {
+        "accepted": 8,
+        "max_candidates": 256,
+        "start": 220270001,
+        "step": 1
+      }
+    },
+    "status": "frozen_before_asset_generation",
+    "training_overlap_wording": "independently generated and prospectively registered; historical sample-level overlap with streaming CFM pretraining cannot be certified because no seed/sample manifest was retained"
+  },
+  "generator_reuse_audit": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/generator_reuse_audit/v1/summary.json",
+    "sha256": "b90abf0bbd7ffdaed63a10100d55f23cd9f25f6a0409c960b4a6d8ed10e4e0d1",
+    "size_bytes": 6197
+  },
+  "git_branch": "main",
+  "git_head": "f97c8ca1713421fe31ff250a62671e0cbe06fb41",
+  "historical_cases_excluded": true,
+  "machine_decision": "COHORT_V2_AVAILABLE",
+  "registries": {
+    "test": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/test_registry.json",
+      "sha256": "2aa3aa43546d639e718a2ae68971593dfdc06463b5a12a5e4c395ecd6d12e7da",
+      "size_bytes": 47474
+    },
+    "train": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/train_registry.json",
+      "sha256": "5bd37dc03dcad6fdd3fbf4580e3db5ee909cc642d1fae5db49d7a8f0182406e7",
+      "size_bytes": 249690
+    },
+    "val": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/val_registry.json",
+      "sha256": "800632cef00e6f1fec96dc4c0f2ae3e4908d67785622acd0c713270954774464",
+      "size_bytes": 31077
+    }
+  },
+  "revision_of": "stage19_cohort_v1",
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage19/build_cohort_v2.py",
+    "sha256": "32f3c4d2d8a681411e43e6c7c0544e18228c2b4e943ac1b8fdfeca97cecc3e05",
+    "size_bytes": 7218
+  },
+  "schema": "stage19r_cohort_manifest_v2",
+  "selection_uses_seismic_evidence_flow_or_downstream_metrics": false,
+  "total_accepted": 84,
+  "training_overlap_wording": "independently generated and prospectively registered; historical sample-level overlap with streaming CFM pretraining cannot be certified because no seed/sample manifest was retained"
+}

@@ -1,0 +1,88 @@
+{
+  "assets": {
+    "binary_acoustic_volume": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/evidence_v2/stage19_test_case003/binary_acoustic_volume.pt",
+      "sha256": "c0ca7325086e14f3897c565b356bae36a800f68a2a9cab6f31c3693698d00b39",
+      "size_bytes": 2098962
+    },
+    "binary_impedance_score": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/evidence_v2/stage19_test_case003/binary_impedance_score.pt",
+      "sha256": "468247cf765b8382c00c0932aef535b135032e6c4d380626f4ccf2a006e576a3",
+      "size_bytes": 1050386
+    },
+    "predicted_seismic": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/evidence_v2/stage19_test_case003/predicted_seismic.pt",
+      "sha256": "f412c555465d50756e3c3383c7140d5099aac7dbd624bf281e8148292ab8e1fd",
+      "size_bytes": 5244591
+    },
+    "vertical_boundary_strength": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/evidence_v2/stage19_test_case003/vertical_boundary_strength.pt",
+      "sha256": "3a58c1e5cc48cf383ec6201653c4829577feeedb4a4d6e0dddecc13ab9b6f9fd",
+      "size_bytes": 1050414
+    }
+  },
+  "case_id": "stage19_test_case003",
+  "full_vertical_trace_used": true,
+  "input_observation_manifest": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/observations_v2/stage19_test_case003/manifest.json",
+    "sha256": "6efd204584f6e5e83adfd7acc72e91ab803411ef881cfdf31853ebdfade04ea0",
+    "size_bytes": 6168
+  },
+  "operator_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "run_status": "completed",
+  "schema": "stage19r_evidence_case_v2",
+  "split": "test",
+  "tensor_content_hashes": {
+    "binary_acoustic_volume.pt": "53fca7b183b4841f2b0202d8875f80ce6b1b152dfd0c09d0da531724c8b021db",
+    "binary_impedance_score.pt": "3cc22de141190e0667113907673d836c32831bc851e04af5be1cc5a019715cf9",
+    "predicted_seismic.pt": "93e2b6121d2a4395c29f8aa35543898a18adad9b04b9538af6228801ac81b7a9",
+    "vertical_boundary_strength.pt": "43ff3d3ec18e9424520b322a3cdd6b913c169dbbe01dce1d649421fb58901e23"
+  },
+  "thresholding_performed": false,
+  "trace_samples": 320,
+  "truth_loaded_by_runner": false
+}

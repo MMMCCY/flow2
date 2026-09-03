@@ -19,11 +19,11 @@ import inference_runtime as runtime
 from guidance.binary_seismic_inversion import binary_acoustic_properties_from_configs, binary_occupancy_to_acoustic
 from guidance.seismic import build_seismic_observation, seismic_operator_from_config
 from scripts.stage15.common import base_manifest, normalize_volume, read_json, refuse_nonempty, write_json
-from scripts.stage19.common import CONFIG_DIR, ROOT, asset, canonical_tensor_sha256, registry_cases, require_config, resolve_project_path, validate_asset
+from scripts.stage19.common import CONFIG_DIR, ROOT, asset, canonical_tensor_sha256, registry_cases, require_config, validate_asset, validate_stage17a_reuse
 
-DEFAULT_CONFIG = CONFIG_DIR / "evidence_v1.json"
-DEFAULT_COHORT = ROOT / "cohort"
-DEFAULT_OUTPUT = ROOT / "observations"
+DEFAULT_CONFIG = CONFIG_DIR / "evidence_v2.json"
+DEFAULT_COHORT = ROOT / "cohort_v2"
+DEFAULT_OUTPUT = ROOT / "observations_v2"
 
 
 def parse_args() -> argparse.Namespace:
@@ -47,10 +47,11 @@ def columnwise_support(truth: torch.Tensor) -> torch.Tensor:
 def main() -> None:
     args = parse_args()
     refuse_nonempty(args.output_dir)
-    config = require_config(args.config, "stage19_evidence_v1")
+    config = require_config(args.config, "stage19_evidence_v2")
+    reused = validate_stage17a_reuse(config)
     obs_cfg = config["observation"]
-    binary_path = resolve_project_path(obs_cfg["binary_acoustic_config"])
-    seismic_path = resolve_project_path(obs_cfg["seismic_config"])
+    binary_path = reused["binary_acoustic_config"]
+    seismic_path = reused["seismic_config"]
     binary_config = read_json(binary_path)
     source_path = validate_asset(binary_config["source_acoustic_config"], "source acoustic config")
     properties = binary_acoustic_properties_from_configs(binary_config, read_json(source_path))
@@ -63,7 +64,7 @@ def main() -> None:
         raise ValueError("Stage19 observation build requires 84 cases")
 
     args.output_dir.mkdir(parents=True)
-    manifest = base_manifest("stage19_observation_run_v1", Path(__file__), args.config)
+    manifest = base_manifest("stage19r_observation_run_v2", Path(__file__), args.config)
     manifest.update({"run_status": "running", "truth_loaded_for_synthetic_observation_only": True})
     write_json(args.output_dir / "run_manifest.json", manifest)
     records = []
@@ -105,7 +106,7 @@ def main() -> None:
                 torch.save(tensor, case_dir / name)
             torch.save(binary_truth.cpu(), restricted / "binary_truth.pt")
             case_manifest = {
-                "schema": "stage19_observation_case_v1", "run_status": "completed", "case_id": case_id,
+                "schema": "stage19r_observation_case_v2", "run_status": "completed", "case_id": case_id,
                 "split": case["split"], "root_seed": int(case["root_seed"]),
                 "truth_role": "synthetic_observation_generation_and_retrospective_evaluation_only",
                 "forward_closure_max_abs": closure_error,
@@ -119,7 +120,7 @@ def main() -> None:
             write_json(case_dir / "manifest.json", case_manifest)
             records.append({"case_id": case_id, "split": case["split"], "root_seed": case["root_seed"], "manifest": asset(case_dir / "manifest.json"), "assets": case_manifest["assets"], "truth_assets": case_manifest["truth_assets"]})
             print(f"Stage19 observation {case_id} completed", flush=True)
-        registry = {"schema": "stage19_observation_registry_v1", "run_status": "completed", "case_count": len(records), "cases": records}
+        registry = {"schema": "stage19r_observation_registry_v2", "run_status": "completed", "case_count": len(records), "cases": records}
         write_json(args.output_dir / "observation_registry.json", registry)
         manifest.update({"run_status": "completed", "case_count": len(records), "observation_registry": asset(args.output_dir / "observation_registry.json"), "binary_acoustic_config": asset(binary_path), "source_acoustic_config": asset(source_path), "seismic_config": asset(seismic_path)})
         write_json(args.output_dir / "run_manifest.json", manifest)

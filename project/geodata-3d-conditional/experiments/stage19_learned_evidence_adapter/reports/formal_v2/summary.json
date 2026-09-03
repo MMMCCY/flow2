@@ -1,0 +1,32 @@
+{
+  "case_count": 12,
+  "field_generalization_proven": false,
+  "formal_output_count": 180,
+  "gate_diagnostics": {
+    "correct_gt_wrong_cases": 12,
+    "correct_gt_zero_cases": 12,
+    "hard_rmse_improved_cases": 12,
+    "learned_iou_positive_cases": 12,
+    "median_delta_hard_seismic_rmse": -0.008943029293807025,
+    "median_delta_target_iou_correct_minus_flow": 0.2367092344192604,
+    "median_delta_truth_present_mean_iou": 0.039259761571884155
+  },
+  "gates": {
+    "engineering": true,
+    "evidence_reuse": true,
+    "global_geology_preservation": true,
+    "hard_physics": true,
+    "learned_coupling": true,
+    "specificity": true,
+    "structure": true,
+    "volume": true
+  },
+  "historical_pretraining_sample_overlap_excluded": false,
+  "machine_decision": "LEARNED_EVIDENCE_ADAPTER_VALIDATED",
+  "mechanism_boundary": "binary_high_contrast_noiseless_inverse_crime_upper_bound",
+  "primary_statistical_unit": "independent_geology_case",
+  "run_status": "completed",
+  "schema": "stage19_evaluation_v1",
+  "source_seeds_per_case": 3,
+  "stop_after_stage19": true
+}

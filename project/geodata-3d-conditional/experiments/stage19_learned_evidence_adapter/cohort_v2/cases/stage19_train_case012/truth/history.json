@@ -1,0 +1,466 @@
+{
+  "event_subtypes": [
+    "Basement",
+    "Lopolith",
+    "SillSystem",
+    "Shaped",
+    "Coarse",
+    "HorstGraben",
+    "Dike",
+    "BlobCluster",
+    "Flat",
+    "Wave",
+    "Normal",
+    "Dike",
+    "Fine",
+    "WarpedDike",
+    "BlobCluster",
+    "FullyRandom",
+    "Coarse",
+    "TiltCutFill",
+    "Simple",
+    "Wave",
+    "Normal"
+  ],
+  "events": [
+    {
+      "atomic_processes": [
+        "Bedrock",
+        "Sedimentation"
+      ],
+      "deposition_values": [
+        0,
+        5
+      ],
+      "event_index": 0,
+      "state": "BaseStrata",
+      "subtype": "Basement"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "PushHemisphere",
+        "DikeHemisphere",
+        "DikeColumn",
+        "Fold"
+      ],
+      "deposition_values": [
+        11,
+        11
+      ],
+      "event_index": 1,
+      "state": "Pluton",
+      "subtype": "Lopolith"
+    },
+    {
+      "atomic_processes": [
+        "Sedimentation",
+        "DikePlane",
+        "DikePlane",
+        "DikePlane",
+        "DikePlane",
+        "DikeColumn",
+        "DikeColumn",
+        "DikeColumn",
+        "DikeColumn"
+      ],
+      "deposition_values": [
+        1,
+        4,
+        1,
+        4,
+        2,
+        5,
+        1,
+        4,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "event_index": 2,
+      "state": "Sills",
+      "subtype": "SillSystem"
+    },
+    {
+      "atomic_processes": [
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 3,
+      "state": "Fold",
+      "subtype": "Shaped"
+    },
+    {
+      "atomic_processes": [
+        "Sedimentation"
+      ],
+      "deposition_values": [
+        5,
+        2,
+        4
+      ],
+      "event_index": 4,
+      "state": "Sediment",
+      "subtype": "Coarse"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fault",
+        "Fold",
+        "Fault",
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 5,
+      "state": "Fault",
+      "subtype": "HorstGraben"
+    },
+    {
+      "atomic_processes": [
+        "DikePlane"
+      ],
+      "deposition_values": [
+        8
+      ],
+      "event_index": 6,
+      "state": "Dike",
+      "subtype": "Dike"
+    },
+    {
+      "atomic_processes": [
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall"
+      ],
+      "deposition_values": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "event_index": 7,
+      "state": "OreDeposit",
+      "subtype": "BlobCluster"
+    },
+    {
+      "atomic_processes": [
+        "UnconformityDepth"
+      ],
+      "deposition_values": [
+        null
+      ],
+      "event_index": 8,
+      "state": "Erosion",
+      "subtype": "Flat"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fold",
+        "UnconformityDepth",
+        "Fold",
+        "Fold"
+      ],
+      "deposition_values": [
+        null
+      ],
+      "event_index": 9,
+      "state": "Erosion",
+      "subtype": "Wave"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fault",
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 10,
+      "state": "Fault",
+      "subtype": "Normal"
+    },
+    {
+      "atomic_processes": [
+        "DikePlane"
+      ],
+      "deposition_values": [
+        6
+      ],
+      "event_index": 11,
+      "state": "Dike",
+      "subtype": "Dike"
+    },
+    {
+      "atomic_processes": [
+        "Sedimentation"
+      ],
+      "deposition_values": [
+        3,
+        1
+      ],
+      "event_index": 12,
+      "state": "Sediment",
+      "subtype": "Fine"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "DikePlane",
+        "Fold"
+      ],
+      "deposition_values": [
+        7
+      ],
+      "event_index": 13,
+      "state": "Dike",
+      "subtype": "WarpedDike"
+    },
+    {
+      "atomic_processes": [
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall",
+        "MetaBall"
+      ],
+      "deposition_values": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "event_index": 14,
+      "state": "OreDeposit",
+      "subtype": "BlobCluster"
+    },
+    {
+      "atomic_processes": [
+        "Fault"
+      ],
+      "deposition_values": [],
+      "event_index": 15,
+      "state": "Fault",
+      "subtype": "FullyRandom"
+    },
+    {
+      "atomic_processes": [
+        "Sedimentation"
+      ],
+      "deposition_values": [
+        4,
+        3
+      ],
+      "event_index": 16,
+      "state": "Sediment",
+      "subtype": "Coarse"
+    },
+    {
+      "atomic_processes": [
+        "Tilt",
+        "Fold",
+        "Fold",
+        "UnconformityDepth",
+        "Sedimentation",
+        "Fold",
+        "Fold"
+      ],
+      "deposition_values": [
+        null,
+        2
+      ],
+      "event_index": 17,
+      "state": "Erosion",
+      "subtype": "TiltCutFill"
+    },
+    {
+      "atomic_processes": [
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 18,
+      "state": "Fold",
+      "subtype": "Simple"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fold",
+        "UnconformityDepth",
+        "Fold",
+        "Fold"
+      ],
+      "deposition_values": [
+        null
+      ],
+      "event_index": 19,
+      "state": "Erosion",
+      "subtype": "Wave"
+    },
+    {
+      "atomic_processes": [
+        "Fold",
+        "Fault",
+        "Fold"
+      ],
+      "deposition_values": [],
+      "event_index": 20,
+      "state": "Fault",
+      "subtype": "Normal"
+    }
+  ],
+  "markov_sequence": [
+    "BaseStrata",
+    "Pluton",
+    "Sills",
+    "Fold",
+    "Sediment",
+    "Fault",
+    "Dike",
+    "OreDeposit",
+    "Erosion",
+    "Erosion",
+    "Fault",
+    "Dike",
+    "Sediment",
+    "Dike",
+    "OreDeposit",
+    "Fault",
+    "Sediment",
+    "Erosion",
+    "Fold",
+    "Erosion",
+    "Fault"
+  ],
+  "packed_history": [
+    "CompoundProcess (BaseStrata: Basement) with 2 sub-processes:\n    1. Bedrock: with z <= 0.0 and value 0.0\n    2. Sedimentation: rock type values [5], and thicknesses 463.983, with base = nan",
+    "CompoundProcess (Pluton: Lopolith) with 4 sub-processes:\n    1. Fold: strike 83.4\u00b0, dip 76.1\u00b0, rake 88.5\u00b0, period 15105.7,amplitude 185.4, origin ((0.00,0.00,0.00)).\n    2. DikeHemispherePushed: origin ((-2675.4822572394596, -837.6049140522873, -2020.7973607160766))), diam 27653.6, height 389.2, minor_axis_scale 1.2, rotation 195.8, value 11.0.\n    3. DikeColumn: origin ((-2675.4822572394596, -837.6049140522873, -2020.7973607160766)), diam 2577.6, depth inf, minor_axis_scale 0.50, rotation 182.0, value 11.0.\n    4. Fold: strike 83.4\u00b0, dip 76.1\u00b0, rake 88.5\u00b0, period 15105.7,amplitude -185.4, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Sills: SillSystem) with 9 sub-processes:\n    1. Sedimentation: rock type values [1, 4, 1...], and thicknesses 348.232, 252.048, 282.455..., with base = nan\n    2. Dike: strike 47.4\u00b0, dip -0.8\u00b0, width 78.8, origin ((-2089.7454099340403, 2302.431098941271, boundary 6)), value 9.0.\n    3. Dike: strike 14.7\u00b0, dip 0.6\u00b0, width 95.9, origin ((-531.5611036720547, 2366.4003623671797, boundary 5)), value 9.0.\n    4. Dike: strike 118.5\u00b0, dip -1.6\u00b0, width 102.2, origin ((1844.9463284197245, -1407.7246974345849, boundary 3)), value 9.0.\n    5. Dike: strike 156.5\u00b0, dip 0.4\u00b0, width 122.7, origin ((-2847.6770320668975, 309.5320529985438, boundary 1)), value 9.0.\n    6. DikeColumn: origin ((-2089.7454099340403, 2302.431098941271, boundary 6)), diam 394.7, depth inf, minor_axis_scale 0.24, rotation 314.5, value 9.0.\n    7. DikeColumn: origin ((-531.5611036720547, 2366.4003623671797, boundary 5)), diam 599.9, depth inf, minor_axis_scale 0.22, rotation 236.6, value 9.0.\n    8. DikeColumn: origin ((1844.9463284197245, -1407.7246974345849, boundary 3)), diam 557.2, depth inf, minor_axis_scale 0.32, rotation 85.0, value 9.0.\n    9. DikeColumn: origin ((-2847.6770320668975, 309.5320529985438, boundary 1)), diam 614.6, depth inf, minor_axis_scale 0.30, rotation 343.5, value 9.0.",
+    "CompoundProcess (Fold: Shaped) with 1 sub-processes:\n    1. Fold: strike 300.5\u00b0, dip 65.6\u00b0, rake 30.9\u00b0, period 4745.7,amplitude 337.2, origin ((-928.951410107142, 591.9375661713053, 655.9872554978441)).",
+    "CompoundProcess (Sediment: Coarse) with 1 sub-processes:\n    1. Sedimentation: rock type values [5, 2, 4], and thicknesses 433.486, 409.429, 370.800, with base = nan",
+    "CompoundProcess (Fault: HorstGraben) with 5 sub-processes:\n    1. Fold: strike 340.0\u00b0, dip 90.0\u00b0, rake 93.8\u00b0, period 6892.5,amplitude 13.1, origin ((0.00,0.00,0.00)).\n    2. Fault with strike 250.0\u00b0, dip 102.6\u00b0, rake 86.0\u00b0, amplitude -126.2, origin ((56.82839459089473, -3820.1436152761944, -688.4699577210247)).\n    3. Fold: strike 340.0\u00b0, dip 90.0\u00b0, rake 93.8\u00b0, period 6892.5,amplitude -13.2, origin ((0.00,0.00,0.00)).\n    4. Fault with strike 248.3\u00b0, dip 74.0\u00b0, rake 88.6\u00b0, amplitude 134.3, origin ((-447.7336664968137, -2239.046271131667, -688.4699577210247)).\n    5. Fold: strike 340.0\u00b0, dip 90.0\u00b0, rake 93.8\u00b0, period 6892.5,amplitude 26.3, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Dike: Dike) with 1 sub-processes:\n    1. Dike: strike 272.8\u00b0, dip 79.0\u00b0, width 162.0, origin ((-1351.0382284475918, -581.3649297669294, 84.44655847293355)), value 8.0.",
+    "CompoundProcess (OreDeposit: BlobCluster) with 4 sub-processes:\n    1. CompoundProcess (BlobWord) with 3 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 34 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 34 balls.\n    3. Metaball: threshold 1.0, value 12.0, with 34 balls.\n    2. CompoundProcess (BlobWord) with 3 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 21 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 21 balls.\n    3. Metaball: threshold 1.0, value 12.0, with 21 balls.\n    3. CompoundProcess (BlobWord) with 2 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 34 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 34 balls.\n    4. CompoundProcess (BlobWord) with 3 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 27 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 27 balls.\n    3. Metaball: threshold 1.0, value 12.0, with 27 balls.",
+    "CompoundProcess (Erosion: Flat) with 1 sub-processes:\n    1. UnconformityDepth: depth 360.0, value nan",
+    "CompoundProcess (Erosion: Wave) with 5 sub-processes:\n    1. Fold: strike 253.5\u00b0, dip 90.0\u00b0, rake -9.6\u00b0, period 8231.7,amplitude 202.8, origin ((0.00,0.00,0.00)).\n    2. Fold: strike 343.5\u00b0, dip 90.0\u00b0, rake -7.9\u00b0, period 14516.4,amplitude 197.4, origin ((0.00,0.00,0.00)).\n    3. UnconformityDepth: depth 398.0, value nan\n    4. Fold: strike 343.5\u00b0, dip 90.0\u00b0, rake -7.9\u00b0, period 14516.4,amplitude -140.9, origin ((0.00,0.00,0.00)).\n    5. Fold: strike 253.5\u00b0, dip 90.0\u00b0, rake -9.6\u00b0, period 8231.7,amplitude -134.6, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Fault: Normal) with 3 sub-processes:\n    1. Fold: strike 320.0\u00b0, dip 90.0\u00b0, rake 85.7\u00b0, period 10334.0,amplitude 13.4, origin ((0.00,0.00,0.00)).\n    2. Fault with strike 230.0\u00b0, dip 72.1\u00b0, rake 89.4\u00b0, amplitude 415.6, origin ((-2399.524930446257, -1851.2516179755316, 1906.7406591573053)).\n    3. Fold: strike 320.0\u00b0, dip 90.0\u00b0, rake 85.7\u00b0, period 10334.0,amplitude -13.4, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Dike: Dike) with 1 sub-processes:\n    1. Dike: strike 128.0\u00b0, dip 90.8\u00b0, width 84.1, origin ((-222.13973188608497, 327.7066325622864, -1660.3794560288084)), value 6.0.",
+    "CompoundProcess (Sediment: Fine) with 1 sub-processes:\n    1. Sedimentation: rock type values [3, 1], and thicknesses 292.585, 355.103, with base = nan",
+    "CompoundProcess (Dike: WarpedDike) with 3 sub-processes:\n    1. Fold: strike 310.5\u00b0, dip 93.3\u00b0, rake 94.3\u00b0, period 7028.6,amplitude 67.4, origin ((0.00,0.00,0.00)).\n    2. Dike: strike 220.5\u00b0, dip 99.9\u00b0, width 139.4, origin ((1730.567941643924, 1585.3083225512573, 638.9189373267441)), value 7.0.\n    3. Fold: strike 310.5\u00b0, dip 93.3\u00b0, rake 94.3\u00b0, period 7028.6,amplitude -67.4, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (OreDeposit: BlobCluster) with 3 sub-processes:\n    1. CompoundProcess (BlobWord) with 3 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 34 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 34 balls.\n    3. Metaball: threshold 1.0, value 12.0, with 34 balls.\n    2. CompoundProcess (BlobWord) with 3 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 20 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 20 balls.\n    3. Metaball: threshold 1.0, value 12.0, with 20 balls.\n    3. CompoundProcess (BlobWord) with 2 sub-processes:\n    1. Metaball: threshold 1.0, value 12.0, with 40 balls.\n    2. Metaball: threshold 1.0, value 12.0, with 40 balls.",
+    "CompoundProcess (Fault: FullyRandom) with 1 sub-processes:\n    1. Fault with strike 270.4\u00b0, dip 31.1\u00b0, rake 225.0\u00b0, amplitude 272.1, origin ((1717.9963185641182, 776.2022938442351, -1505.5259826836782)).",
+    "CompoundProcess (Sediment: Coarse) with 1 sub-processes:\n    1. Sedimentation: rock type values [4, 3], and thicknesses 375.942, 328.613, with base = nan",
+    "CompoundProcess (Erosion: TiltCutFill) with 7 sub-processes:\n    1. Tilt: strike 270.1\u00b0, dip 6.3\u00b0,origin ((0, 0, 0))\n    2. Fold: strike 157.7\u00b0, dip 85.3\u00b0, rake -3.1\u00b0, period 6427.5,amplitude 86.7, origin ((0.00,0.00,0.00)).\n    3. Fold: strike 247.7\u00b0, dip 89.9\u00b0, rake 13.9\u00b0, period 13570.0,amplitude 114.2, origin ((0.00,0.00,0.00)).\n    4. UnconformityDepth: depth 386.2, value nan\n    5. Sedimentation: rock type values [2], and thicknesses 828.281, with base = nan\n    6. Fold: strike 247.7\u00b0, dip 89.9\u00b0, rake 13.9\u00b0, period 13570.0,amplitude -113.8, origin ((0.00,0.00,0.00)).\n    7. Fold: strike 157.7\u00b0, dip 85.3\u00b0, rake -3.1\u00b0, period 6427.5,amplitude -85.2, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Fold: Simple) with 1 sub-processes:\n    1. Fold: strike 262.8\u00b0, dip 104.9\u00b0, rake 234.3\u00b0, period 7127.5,amplitude 401.3, origin ((-40.958191829593154, 1627.0932245184615, -471.0078726947716)).",
+    "CompoundProcess (Erosion: Wave) with 5 sub-processes:\n    1. Fold: strike 207.7\u00b0, dip 90.0\u00b0, rake 6.3\u00b0, period 6238.0,amplitude 106.1, origin ((0.00,0.00,0.00)).\n    2. Fold: strike 297.7\u00b0, dip 90.0\u00b0, rake 7.6\u00b0, period 7496.3,amplitude 55.3, origin ((0.00,0.00,0.00)).\n    3. UnconformityDepth: depth 334.8, value nan\n    4. Fold: strike 297.7\u00b0, dip 90.0\u00b0, rake 7.6\u00b0, period 7496.3,amplitude -40.1, origin ((0.00,0.00,0.00)).\n    5. Fold: strike 207.7\u00b0, dip 90.0\u00b0, rake 6.3\u00b0, period 6238.0,amplitude -73.7, origin ((0.00,0.00,0.00)).",
+    "CompoundProcess (Fault: Normal) with 3 sub-processes:\n    1. Fold: strike 302.2\u00b0, dip 90.0\u00b0, rake 94.9\u00b0, period 10859.8,amplitude 191.6, origin ((0.00,0.00,0.00)).\n    2. Fault with strike 212.2\u00b0, dip 55.7\u00b0, rake 80.9\u00b0, amplitude 282.4, origin ((1439.919787996906, 2154.9986603144916, 1772.903475153315)).\n    3. Fold: strike 302.2\u00b0, dip 90.0\u00b0, rake 94.9\u00b0, period 10859.8,amplitude -191.6, origin ((0.00,0.00,0.00)).",
+    "Shift: vector [    0.             0.         -3510.07096116]"
+  ],
+  "root_seed": 220260106,
+  "schema": "stage19_structuralgeo_history_v1",
+  "unpacked_history": [
+    "Bedrock: with z <= 0.0 and value 0.0",
+    "Sedimentation: rock type values [5], and thicknesses 463.983, with base = nan",
+    "Fold: strike 83.4\u00b0, dip 76.1\u00b0, rake 88.5\u00b0, period 15105.7,amplitude 185.4, origin ((0.00,0.00,0.00)).",
+    "PushHemisphere: origin ((-2603.86,-680.59,1025.79)), diam 27653.6, height 389.2, minor_axis_scale 1.2, rotation 195.8.",
+    "DikeHemisphere: origin ((-2603.86,-680.59,1025.79)), diam 27653.6, height 389.2, minor_axis_scale 1.2, rotation 195.8, value 11.0.",
+    "DikeColumn: origin ((-2603.86,-680.59,1025.79)), diam 2577.6, depth inf, minor_axis_scale 0.50, rotation 182.0, value 11.0.",
+    "Fold: strike 83.4\u00b0, dip 76.1\u00b0, rake 88.5\u00b0, period 15105.7,amplitude -185.4, origin ((0.00,0.00,0.00)).",
+    "Sedimentation: rock type values [1, 4, 1...], and thicknesses 348.232, 252.048, 282.455..., with base = nan",
+    "Dike: strike 47.4\u00b0, dip -0.8\u00b0, width 78.8, origin ((-2089.75,2302.43,1972.01)), value 9.0.",
+    "Dike: strike 14.7\u00b0, dip 0.6\u00b0, width 95.9, origin ((-531.56,2366.40,1758.68)), value 9.0.",
+    "Dike: strike 118.5\u00b0, dip -1.6\u00b0, width 102.2, origin ((1844.95,-1407.72,1211.60)), value 9.0.",
+    "Dike: strike 156.5\u00b0, dip 0.4\u00b0, width 122.7, origin ((-2847.68,309.53,677.10)), value 9.0.",
+    "DikeColumn: origin ((-2089.75,2302.43,1972.01)), diam 394.7, depth 1574.0, minor_axis_scale 0.24, rotation 314.5, value 9.0.",
+    "DikeColumn: origin ((-531.56,2366.40,1758.68)), diam 599.9, depth 4493.5, minor_axis_scale 0.22, rotation 236.6, value 9.0.",
+    "DikeColumn: origin ((1844.95,-1407.72,1211.60)), diam 557.2, depth 5025.5, minor_axis_scale 0.32, rotation 85.0, value 9.0.",
+    "DikeColumn: origin ((-2847.68,309.53,677.10)), diam 614.6, depth 10959.6, minor_axis_scale 0.30, rotation 343.5, value 9.0.",
+    "Fold: strike 300.5\u00b0, dip 65.6\u00b0, rake 30.9\u00b0, period 4745.7,amplitude 337.2, origin ((-729.98,468.15,4436.21)).",
+    "Sedimentation: rock type values [5, 2, 4], and thicknesses 433.486, 409.429, 370.800, with base = nan",
+    "Fold: strike 340.0\u00b0, dip 90.0\u00b0, rake 93.8\u00b0, period 6892.5,amplitude 13.1, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 250.0\u00b0, dip 102.6\u00b0, rake 86.0\u00b0, amplitude -126.2, origin ((-227.97,-3712.57,2093.94)).",
+    "Fold: strike 340.0\u00b0, dip 90.0\u00b0, rake 93.8\u00b0, period 6892.5,amplitude -13.2, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 248.3\u00b0, dip 74.0\u00b0, rake 88.6\u00b0, amplitude 134.3, origin ((-302.35,-2144.63,2143.08)).",
+    "Fold: strike 340.0\u00b0, dip 90.0\u00b0, rake 93.8\u00b0, period 6892.5,amplitude 26.3, origin ((0.00,0.00,0.00)).",
+    "Dike: strike 272.8\u00b0, dip 79.0\u00b0, width 162.0, origin ((-1257.94,-442.36,3003.97)), value 8.0.",
+    "Metaball: threshold 1.0, value 12.0, with 34 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 34 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 34 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 21 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 21 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 21 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 34 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 34 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 27 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 27 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 27 balls.",
+    "UnconformityDepth: depth 360.0, value nan",
+    "Fold: strike 253.5\u00b0, dip 90.0\u00b0, rake -9.6\u00b0, period 8231.7,amplitude 202.8, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 343.5\u00b0, dip 90.0\u00b0, rake -7.9\u00b0, period 14516.4,amplitude 197.4, origin ((0.00,0.00,0.00)).",
+    "UnconformityDepth: depth 398.0, value nan",
+    "Fold: strike 343.5\u00b0, dip 90.0\u00b0, rake -7.9\u00b0, period 14516.4,amplitude -140.9, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 253.5\u00b0, dip 90.0\u00b0, rake -9.6\u00b0, period 8231.7,amplitude -134.6, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 320.0\u00b0, dip 90.0\u00b0, rake 85.7\u00b0, period 10334.0,amplitude 13.4, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 230.0\u00b0, dip 72.1\u00b0, rake 89.4\u00b0, amplitude 415.6, origin ((-2275.20,-2036.26,5182.64)).",
+    "Fold: strike 320.0\u00b0, dip 90.0\u00b0, rake 85.7\u00b0, period 10334.0,amplitude -13.4, origin ((0.00,0.00,0.00)).",
+    "Dike: strike 128.0\u00b0, dip 90.8\u00b0, width 84.1, origin ((-143.48,424.78,1812.58)), value 6.0.",
+    "Sedimentation: rock type values [3, 1], and thicknesses 292.585, 355.103, with base = nan",
+    "Fold: strike 310.5\u00b0, dip 93.3\u00b0, rake 94.3\u00b0, period 7028.6,amplitude 67.4, origin ((0.00,0.00,0.00)).",
+    "Dike: strike 220.5\u00b0, dip 99.9\u00b0, width 139.4, origin ((1433.67,1654.92,4188.45)), value 7.0.",
+    "Fold: strike 310.5\u00b0, dip 93.3\u00b0, rake 94.3\u00b0, period 7028.6,amplitude -67.4, origin ((0.00,0.00,0.00)).",
+    "Metaball: threshold 1.0, value 12.0, with 34 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 34 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 34 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 20 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 20 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 20 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 40 balls.",
+    "Metaball: threshold 1.0, value 12.0, with 40 balls.",
+    "Fault with strike 270.4\u00b0, dip 31.1\u00b0, rake 225.0\u00b0, amplitude 272.1, origin ((1653.28,942.06,1974.15)).",
+    "Sedimentation: rock type values [4, 3], and thicknesses 375.942, 328.613, with base = nan",
+    "Tilt: strike 270.1\u00b0, dip 6.3\u00b0,origin ((172.29,6.93,3238.17))",
+    "Fold: strike 157.7\u00b0, dip 85.3\u00b0, rake -3.1\u00b0, period 6427.5,amplitude 86.7, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 247.7\u00b0, dip 89.9\u00b0, rake 13.9\u00b0, period 13570.0,amplitude 114.2, origin ((0.00,0.00,0.00)).",
+    "UnconformityDepth: depth 386.2, value nan",
+    "Sedimentation: rock type values [2], and thicknesses 828.281, with base = nan",
+    "Fold: strike 247.7\u00b0, dip 89.9\u00b0, rake 13.9\u00b0, period 13570.0,amplitude -113.8, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 157.7\u00b0, dip 85.3\u00b0, rake -3.1\u00b0, period 6427.5,amplitude -85.2, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 262.8\u00b0, dip 104.9\u00b0, rake 234.3\u00b0, period 7127.5,amplitude 401.3, origin ((-120.69,1646.88,2955.81)).",
+    "Fold: strike 207.7\u00b0, dip 90.0\u00b0, rake 6.3\u00b0, period 6238.0,amplitude 106.1, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 297.7\u00b0, dip 90.0\u00b0, rake 7.6\u00b0, period 7496.3,amplitude 55.3, origin ((0.00,0.00,0.00)).",
+    "UnconformityDepth: depth 334.8, value nan",
+    "Fold: strike 297.7\u00b0, dip 90.0\u00b0, rake 7.6\u00b0, period 7496.3,amplitude -40.1, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 207.7\u00b0, dip 90.0\u00b0, rake 6.3\u00b0, period 6238.0,amplitude -73.7, origin ((0.00,0.00,0.00)).",
+    "Fold: strike 302.2\u00b0, dip 90.0\u00b0, rake 94.9\u00b0, period 10859.8,amplitude 191.6, origin ((0.00,0.00,0.00)).",
+    "Fault with strike 212.2\u00b0, dip 55.7\u00b0, rake 80.9\u00b0, amplitude 282.4, origin ((1361.12,2204.59,5274.95)).",
+    "Fold: strike 302.2\u00b0, dip 90.0\u00b0, rake 94.9\u00b0, period 10859.8,amplitude -191.6, origin ((0.00,0.00,0.00)).",
+    "Shift: vector [    0.             0.         -3510.07096116]"
+  ]
+}

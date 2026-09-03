@@ -1,0 +1,77 @@
+{
+  "case_count": 84,
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/configs/evidence_v2.json",
+    "sha256": "dcc3b342222cf94b66d36a57dce5abc9a63a3efb864f4625ac57b1d0de31c44e",
+    "size_bytes": 1980
+  },
+  "created_at_utc": "2026-09-03T16:13:04.947916+00:00",
+  "evidence_registry": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/evidence_v2/evidence_registry.json",
+    "sha256": "312d1c2a71e4f9f468f790a709cfd8106ee5ba717d6d643ef5442c943547861a",
+    "size_bytes": 411580
+  },
+  "full_parameters": {
+    "adapter_input": "binary_impedance_score_times_subsurface_mask",
+    "authoritative_stage17a_config": {
+      "path": "project/geodata-3d-conditional/experiments/stage17_evidence_coupling_attribution/stage17a/formal_all5_v1/config.json",
+      "sha256": "2e6cfd2e1ea7999f587454db3ed68564b39599592f375a43fdae6a150b9058b0"
+    },
+    "geophysics_channels": 1,
+    "inversion": {
+      "full_vertical_trace_used": true,
+      "inversion_config": {
+        "path": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_trace_boundary_inversion_v1.json",
+        "sha256": "14436585fef003448f0f078b76667edcf7202d28566ffba166aa4795a9d2e002"
+      },
+      "lateral_filter_used": false,
+      "method": "complete_trace_two_pass_linearized_log_impedance_with_binary_endpoint_projection_v1",
+      "prior_relative_weight": 0.001,
+      "refinement_passes": 2,
+      "thresholding": false,
+      "vertical_smoothness_relative_weight": 0.01
+    },
+    "observation": {
+      "binary_acoustic_config": {
+        "path": "project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_acoustic_upper_bound_v1.json",
+        "sha256": "5272deb894d211fb67339e06840ac1212e156a200c20423f9f36d88949945248"
+      },
+      "enclosed_air_acoustic_policy": "binary_background_endpoint",
+      "forward_closure_max_abs": 1e-07,
+      "noise": "none",
+      "seismic_config": {
+        "path": "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+        "sha256": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02"
+      },
+      "support_policy": "columnwise_fill_below_highest_nonair_v1",
+      "trace_samples": 320
+    },
+    "parameter_sweep": false,
+    "reuse_gate": {
+      "minimum_median_ap_skill": 0.3,
+      "minimum_positive_ap_skill_cases": 6,
+      "minimum_specificity_cases": 6
+    },
+    "revision_of": "stage19_evidence_v1",
+    "revision_reason": "authoritative_stage17a_asset_hash_enforcement_only",
+    "schema": "stage19_evidence_v2",
+    "status": "frozen_before_asset_generation",
+    "target_label": 9
+  },
+  "git_branch": "main",
+  "git_head": "f97c8ca1713421fe31ff250a62671e0cbe06fb41",
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage19/run_evidence.py",
+    "sha256": "b0d0900d804f006b20ee5f5bb69d36c9c3a05cdd372873d4ad534edf8b9b5c87",
+    "size_bytes": 8629
+  },
+  "schema": "stage19r_evidence_run_v2",
+  "test_inference_registry": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/evidence_v2/test_inference_registry.json",
+    "sha256": "72f11e12d6397c635e23841c088f8c6bff707632541017eb86bbd8fb7cd169b6",
+    "size_bytes": 27179
+  },
+  "thresholding_performed": false,
+  "truth_loaded_by_runner": false
+}

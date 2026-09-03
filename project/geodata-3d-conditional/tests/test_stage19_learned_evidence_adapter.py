@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import inspect
 import json
+import copy
 from pathlib import Path
 
 import pytest
@@ -10,13 +11,13 @@ from torch import nn
 
 from guidance.residual_velocity_adapter import ResidualVelocityAdapter, cap_residual_velocity, fixed_euler_adapter_sample
 from scripts.stage15.common import refuse_nonempty
-from scripts.stage19 import audit_evidence, build_observations, evaluate, run_inference
-from scripts.stage19.common import CONFIG_DIR, freeze_base_model, load_all_configs
+from scripts.stage19 import audit_evidence, audit_generator_reuse, build_cohort_v2, build_observations, evaluate, run_evidence, run_inference
+from scripts.stage19.common import CONFIG_DIR, asset, freeze_base_model, load_all_configs, validate_stage17a_reuse, validate_stage19_cohort_contract
 
 
 def test_all_stage19_configs_are_frozen_and_schema_valid():
     configs = load_all_configs()
-    assert set(configs) == {"cohort_v1.json", "evidence_v1.json", "training_v1.json", "inference_v1.json"}
+    assert set(configs) == {"cohort_v1.json", "cohort_v2.json", "evidence_v1.json", "evidence_v2.json", "training_v1.json", "inference_v1.json"}
 
 
 def test_split_seed_ranges_do_not_overlap():
@@ -155,3 +156,124 @@ def test_evidence_gate_is_val_only_and_fixed():
     assert 'case["split"] == "val"' in source
     gate = load_all_configs()["evidence_v1.json"]["reuse_gate"]
     assert gate == {"minimum_positive_ap_skill_cases": 6, "minimum_median_ap_skill": 0.30, "minimum_specificity_cases": 6}
+
+
+def test_historical_seed_exact_generator_replay_hash_passes():
+    result = audit_generator_reuse.run_audit(CONFIG_DIR / "cohort_v2.json")
+    assert result["machine_decision"] == "GENERATOR_REUSE_VALIDATED"
+    assert result["historical_replay"] == result["historical_replay_expected"]
+
+
+def test_generator_critical_source_hash_mismatch_stops(monkeypatch):
+    original = audit_generator_reuse.runtime.file_sha256
+    target = "model_generators.py"
+    monkeypatch.setattr(audit_generator_reuse.runtime, "file_sha256", lambda path: "bad" if str(path).endswith(target) else original(path))
+    with pytest.raises(RuntimeError, match="STOP_GENERATOR_REUSE_MISMATCH"):
+        audit_generator_reuse.run_audit(CONFIG_DIR / "cohort_v2.json")
+
+
+def test_default_markov_matrix_hash_mismatch_stops(monkeypatch):
+    original = audit_generator_reuse.runtime.file_sha256
+    target = "default_markov_matrix.csv"
+    monkeypatch.setattr(audit_generator_reuse.runtime, "file_sha256", lambda path: "bad" if str(path).endswith(target) else original(path))
+    with pytest.raises(RuntimeError, match="STOP_GENERATOR_REUSE_MISMATCH"):
+        audit_generator_reuse.run_audit(CONFIG_DIR / "cohort_v2.json")
+
+
+def test_cohort_v2_only_changes_candidate_search_budget():
+    configs = load_all_configs()
+    v1, v2 = configs["cohort_v1.json"], configs["cohort_v2.json"]
+    for field in ("recipe", "eligibility", "fixed_well_xy", "historical_case_ids_excluded"):
+        assert v2[field] == v1[field]
+    for split in ("train", "val", "test"):
+        for field in ("accepted", "start", "step"):
+            assert v2["splits"][split][field] == v1["splits"][split][field]
+    assert [v2["splits"][name]["max_candidates"] for name in ("train", "val", "test")] == [1024, 256, 256]
+
+
+def test_cohort_failure_trace_preserves_rejection_counts():
+    trace = [
+        {"root_seed": 1, "eligible": False, "rejection_reasons": ["missing_fold_or_fault_event"]},
+        {"root_seed": 2, "eligible": True, "rejection_reasons": []},
+        {"root_seed": 3, "eligible": False, "rejection_reasons": ["final_raw_label9_absent", "no_hidden_raw_label9_under_fixed_condition"]},
+    ]
+    payload = build_cohort_v2._trace_payload("train", {"accepted": 64}, trace, 1, "failed")
+    assert payload["examined_count"] == 3
+    assert payload["accepted_count"] == 1
+    assert payload["rejection_reason_counts"] == {"final_raw_label9_absent": 1, "missing_fold_or_fault_event": 1, "no_hidden_raw_label9_under_fixed_condition": 1}
+
+
+def test_eligibility_contract_mismatch_stops():
+    configs = load_all_configs()
+    changed = copy.deepcopy(configs["cohort_v2.json"])
+    changed["eligibility"]["fold_or_fault_event_required"] = False
+    reference = json.loads((CONFIG_DIR.parent.parent / "full_structuralgeo_benchmark/configs/full_complexity_targeted_v1.json").read_text())
+    with pytest.raises(RuntimeError, match="STOP_GENERATOR_REUSE_MISMATCH"):
+        validate_stage19_cohort_contract(changed, reference)
+
+
+def test_stage17a_source_asset_hash_mismatch_stops():
+    changed = copy.deepcopy(load_all_configs()["evidence_v2.json"])
+    changed["observation"]["seismic_config"]["sha256"] = "0" * 64
+    with pytest.raises(RuntimeError, match="STOP_STAGE17A_REUSE_MISMATCH"):
+        validate_stage17a_reuse(changed)
+
+
+def test_stripped_test_registry_contains_no_truth_pointer():
+    record = {
+        "case_id": "stage19_test_case001", "split": "test", "root_seed": 1,
+        "observation_assets": {name: {"path": name, "sha256": "x"} for name in ("condition_values", "condition_mask", "subsurface_mask", "observed_seismic")},
+        "evidence": {"path": "score", "sha256": "x"},
+        "observation_manifest": {"path": "observation", "sha256": "x"},
+        "truth_assets": {"truth": {"path": "forbidden", "sha256": "x"}},
+    }
+    registry = run_evidence.build_test_inference_registry([record])
+    serialized = json.dumps(registry).lower()
+    assert all(word not in serialized for word in ("truth", "true_model", "binary_truth"))
+
+
+def _formal_checkpoint_fixture(tmp_path: Path, *, epoch=4, run_class="formal_training", config_sha_override=None):
+    training_config_path = tmp_path / "training.json"
+    training_config = copy.deepcopy(load_all_configs()["training_v1.json"])
+    training_config_path.write_text(json.dumps(training_config))
+    checkpoint_path = tmp_path / "adapter.pt"
+    import inference_runtime as runtime
+    payload = {
+        "schema": "stage19_adapter_checkpoint_v1", "epoch": epoch,
+        "adapter_state_dict": {}, "adapter_parameter_count": 10,
+        "base_checkpoint_sha256": training_config["base_model"]["checkpoint_sha256"],
+        "training_config_sha256": config_sha_override or runtime.file_sha256(training_config_path),
+    }
+    torch.save(payload, checkpoint_path)
+    manifest = {
+        "run_status": "completed", "run_class": run_class, "smoke_subset": False,
+        "optimizer_updates": 1024, "epochs": 4, "base_model_unchanged": True,
+        "base_gradients_absent": True, "adapter_checkpoint": asset(checkpoint_path),
+    }
+    manifest_path = tmp_path / "training_manifest.json"
+    manifest_path.write_text(json.dumps(manifest))
+    return manifest_path, checkpoint_path, training_config_path, training_config
+
+
+def test_formal_checkpoint_guard_accepts_exact_epoch4(tmp_path: Path):
+    values = _formal_checkpoint_fixture(tmp_path)
+    payload = run_inference.load_validated_adapter_checkpoint(*values, require_formal=True)
+    assert payload["epoch"] == 4
+
+
+def test_formal_checkpoint_guard_rejects_epoch1(tmp_path: Path):
+    values = _formal_checkpoint_fixture(tmp_path, epoch=1)
+    with pytest.raises(RuntimeError, match="STOP_INVALID_FORMAL_ADAPTER_CHECKPOINT"):
+        run_inference.load_validated_adapter_checkpoint(*values, require_formal=True)
+
+
+def test_formal_checkpoint_guard_rejects_training_config_sha(tmp_path: Path):
+    values = _formal_checkpoint_fixture(tmp_path, config_sha_override="bad")
+    with pytest.raises(RuntimeError, match="STOP_INVALID_FORMAL_ADAPTER_CHECKPOINT"):
+        run_inference.load_validated_adapter_checkpoint(*values, require_formal=True)
+
+
+def test_formal_checkpoint_guard_rejects_nonformal_manifest(tmp_path: Path):
+    values = _formal_checkpoint_fixture(tmp_path, run_class="engineering_smoke")
+    with pytest.raises(RuntimeError, match="STOP_INVALID_FORMAL_ADAPTER_CHECKPOINT"):
+        run_inference.load_validated_adapter_checkpoint(*values, require_formal=True)

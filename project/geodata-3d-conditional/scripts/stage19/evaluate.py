@@ -31,11 +31,12 @@ from scripts.stage19.run_inference import ARMS
 
 DEFAULT_CONFIG = CONFIG_DIR / "inference_v1.json"
 DEFAULT_TRAINING_CONFIG = CONFIG_DIR / "training_v1.json"
-DEFAULT_EVIDENCE_CONFIG = CONFIG_DIR / "evidence_v1.json"
-DEFAULT_RUN = ROOT / "formal/inference_v1"
-DEFAULT_TRAINING = ROOT / "checkpoints/formal_v1"
-DEFAULT_GATE = ROOT / "evidence_audit/summary.json"
-DEFAULT_OUTPUT = ROOT / "reports/formal_v1"
+DEFAULT_EVIDENCE_CONFIG = CONFIG_DIR / "evidence_v2.json"
+DEFAULT_EVALUATION_REGISTRY = ROOT / "evidence_v2/evidence_registry.json"
+DEFAULT_RUN = ROOT / "formal/inference_v2"
+DEFAULT_TRAINING = ROOT / "checkpoints/formal_v2"
+DEFAULT_GATE = ROOT / "evidence_audit_v2/summary.json"
+DEFAULT_OUTPUT = ROOT / "reports/formal_v2"
 
 METRICS = ("target_iou", "target_precision", "target_recall", "target_absolute_volume_error_fraction", "target_centroid_distance", "global_voxel_accuracy", "truth_present_mean_iou", "target_connected_components", "largest_component_fraction", "target_top4_component_mass_fraction", "target_top8_component_mass_fraction", "target_tiny_component_mass_fraction_le_5", "hard_seismic_mse", "hard_seismic_rmse")
 
@@ -46,6 +47,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--training-config", type=Path, default=DEFAULT_TRAINING_CONFIG)
     parser.add_argument("--evidence-config", type=Path, default=DEFAULT_EVIDENCE_CONFIG)
     parser.add_argument("--run-dir", type=Path, default=DEFAULT_RUN)
+    parser.add_argument("--evaluation-registry", type=Path, default=DEFAULT_EVALUATION_REGISTRY)
     parser.add_argument("--training-dir", type=Path, default=DEFAULT_TRAINING)
     parser.add_argument("--evidence-gate", type=Path, default=DEFAULT_GATE)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
@@ -62,7 +64,7 @@ def main() -> None:
     args = parse_args(); refuse_nonempty(args.output_dir)
     cfg = require_config(args.config, "stage19_inference_v1")
     training_cfg = require_config(args.training_config, "stage19_learned_evidence_adapter_training_v1")
-    evidence_cfg = require_config(args.evidence_config, "stage19_evidence_v1")
+    evidence_cfg = require_config(args.evidence_config, "stage19_evidence_v2")
     run_manifest = read_json(args.run_dir / "run_manifest.json")
     training_manifest = read_json(args.training_dir / "training_manifest.json")
     evidence_gate = read_json(args.evidence_gate)
@@ -71,13 +73,15 @@ def main() -> None:
         raise ValueError("Stage19 formal inference is incomplete")
     if run_manifest.get("truth_loaded_by_runner") is not False:
         raise ValueError("Stage19 inference truth firewall failed")
-    registry = read_json(validate_asset(run_manifest["evidence_registry"], "evidence registry"))
+    registry = read_json(args.evaluation_registry)
+    if registry.get("schema") != "stage19r_evidence_registry_v2" or registry.get("run_status") != "completed":
+        raise ValueError("invalid full evaluation registry")
     cases = [case for case in registry["cases"] if case["split"] == "test"]
     case_index = {str(case["case_id"]): case for case in cases}
     if len(cases) != 12:
         raise ValueError("Stage19 evaluator requires 12 TEST cases")
-    binary_path = resolve_project_path(evidence_cfg["observation"]["binary_acoustic_config"])
-    seismic_path = resolve_project_path(evidence_cfg["observation"]["seismic_config"])
+    binary_path = validate_asset(evidence_cfg["observation"]["binary_acoustic_config"], "binary acoustic config")
+    seismic_path = validate_asset(evidence_cfg["observation"]["seismic_config"], "seismic config")
     binary_cfg = read_json(binary_path)
     source_path = validate_asset(binary_cfg["source_acoustic_config"], "source acoustic config")
     properties = binary_acoustic_properties_from_configs(binary_cfg, read_json(source_path))

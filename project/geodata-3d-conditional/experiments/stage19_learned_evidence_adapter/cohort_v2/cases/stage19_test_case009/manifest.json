@@ -1,0 +1,95 @@
+{
+  "assets": {
+    "condition_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_test_case009/condition/condition_mask.pt",
+      "sha256": "89fe547a02dc0fc617dc80e404603b37a74b738773055ea95210d4c5c2f568f4",
+      "size_bytes": 263834
+    },
+    "condition_values": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_test_case009/condition/condition_values.pt",
+      "sha256": "fb2dfd31b7d8af1333bd493ddaa9fd1750d85ec09104a090f26bcdd9f8750223",
+      "size_bytes": 1050280
+    },
+    "history": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_test_case009/truth/history.json",
+      "sha256": "e0d79115dd2e699c7307e79958c4f2cc14aaabc5579dad096dbda1fb6ec2d4ba",
+      "size_bytes": 5737
+    },
+    "truth": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_test_case009/truth/true_model.pt",
+      "sha256": "2b4a091b2785ed46d6324a8fdefd86ced134eecda7d64e33338b4cabc56149d5",
+      "size_bytes": 1050174
+    }
+  },
+  "case_id": "stage19_test_case009",
+  "condition_mask_tensor_sha256": "0cf02c06528592098dd4fba744e145d983e871260637c40e92d7c921a1fc06d1",
+  "condition_values_tensor_sha256": "9427408dcb5551377f4a22510f31c2a55159e337abe2a156c6e99f7ed4aee6b3",
+  "event_subtypes": [
+    "Basement",
+    "SillSystem",
+    "StrikeSlip",
+    "Fine",
+    "Sequence",
+    "Termination of Sequence"
+  ],
+  "hidden_target_voxel_count": 7441,
+  "history_sha256": "745e5f5411cf08ef7d6ab96477abd48c5ce78e6da8f109bd94106542902c6a61",
+  "markov_sequence": [
+    "BaseStrata",
+    "Sills",
+    "Fault",
+    "Sediment",
+    "Fault",
+    "End"
+  ],
+  "root_seed": 220280048,
+  "run_status": "completed",
+  "schema": "stage19_structuralgeo_case_v1",
+  "selection_firewall": {
+    "downstream_metrics": false,
+    "evidence": false,
+    "flow": false,
+    "seismic": false
+  },
+  "split": "test",
+  "target_voxel_count": 7458,
+  "truth_tensor_sha256": "ce8a1ab1052252ace380b5c9c92d3d3cb80d61cf2d76d94a6d110acc81201ef8",
+  "well_xy": [
+    [
+      8,
+      46
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      10,
+      24
+    ],
+    [
+      27,
+      17
+    ],
+    [
+      35,
+      26
+    ],
+    [
+      39,
+      59
+    ],
+    [
+      44,
+      60
+    ],
+    [
+      48,
+      6
+    ],
+    [
+      57,
+      32
+    ]
+  ]
+}

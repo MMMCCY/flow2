@@ -21,9 +21,9 @@ from scripts.stage15.common import normalize_volume, read_json, refuse_nonempty,
 from scripts.stage17.common import ap_skill, average_precision
 from scripts.stage19.common import CONFIG_DIR, ROOT, require_config, validate_asset
 
-DEFAULT_CONFIG = CONFIG_DIR / "evidence_v1.json"
-DEFAULT_EVIDENCE = ROOT / "evidence"
-DEFAULT_OUTPUT = ROOT / "evidence_audit"
+DEFAULT_CONFIG = CONFIG_DIR / "evidence_v2.json"
+DEFAULT_EVIDENCE = ROOT / "evidence_v2"
+DEFAULT_OUTPUT = ROOT / "evidence_audit_v2"
 
 
 def parse_args() -> argparse.Namespace:
@@ -37,7 +37,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     refuse_nonempty(args.output_dir)
-    config = require_config(args.config, "stage19_evidence_v1")
+    config = require_config(args.config, "stage19_evidence_v2")
     registry = read_json(args.evidence_dir / "evidence_registry.json")
     val = [case for case in registry["cases"] if case["split"] == "val"]
     if len(val) != 8:

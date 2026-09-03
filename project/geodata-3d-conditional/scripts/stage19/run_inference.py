@@ -27,9 +27,10 @@ from scripts.stage19.common import CONFIG_DIR, ROOT, asset, freeze_base_model, r
 ARMS = ("FLOW_ONLY", "STAGE18_CONTINUOUS_TARGET", "ADAPTER_CORRECT", "ADAPTER_ZERO", "ADAPTER_WRONG_CASE")
 DEFAULT_CONFIG = CONFIG_DIR / "inference_v1.json"
 DEFAULT_TRAINING_CONFIG = CONFIG_DIR / "training_v1.json"
-DEFAULT_EVIDENCE = ROOT / "evidence"
-DEFAULT_CHECKPOINT = ROOT / "checkpoints/formal_v1/adapter_checkpoint.pt"
-DEFAULT_OUTPUT = ROOT / "formal/inference_v1"
+DEFAULT_INFERENCE_REGISTRY = ROOT / "evidence_v2/test_inference_registry.json"
+DEFAULT_TRAINING_MANIFEST = ROOT / "checkpoints/formal_v2/training_manifest.json"
+DEFAULT_CHECKPOINT = ROOT / "checkpoints/formal_v2/adapter_checkpoint.pt"
+DEFAULT_OUTPUT = ROOT / "formal/inference_v2"
 PROPERTY_CONFIG = PROJECT_DIR / "experiments/stage15_binary_seismic_consensus/configs/binary_trace_property_indicator_v1.json"
 
 
@@ -37,7 +38,8 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     parser.add_argument("--training-config", type=Path, default=DEFAULT_TRAINING_CONFIG)
-    parser.add_argument("--evidence-dir", type=Path, default=DEFAULT_EVIDENCE)
+    parser.add_argument("--inference-registry", type=Path, default=DEFAULT_INFERENCE_REGISTRY)
+    parser.add_argument("--training-manifest", type=Path, default=DEFAULT_TRAINING_MANIFEST)
     parser.add_argument("--adapter-checkpoint", type=Path, default=DEFAULT_CHECKPOINT)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--device", default="cuda")
@@ -54,13 +56,58 @@ def _parameter_hash(model) -> str:
 
 def _case_inputs(case: dict[str, object]) -> dict[str, torch.Tensor]:
     case_id = str(case["case_id"])
-    obs = case["observation_assets"]
     return {
-        "condition_values": normalize_volume(runtime.load_tensor(validate_asset(obs["condition_values"], f"{case_id}/condition values")), "condition values").long(),
-        "condition_mask": normalize_volume(runtime.load_tensor(validate_asset(obs["condition_mask"], f"{case_id}/condition mask")), "condition mask").bool(),
-        "subsurface": normalize_volume(runtime.load_tensor(validate_asset(obs["subsurface_mask"], f"{case_id}/subsurface")), "subsurface").bool(),
-        "score": normalize_volume(runtime.load_tensor(validate_asset(case["evidence"], f"{case_id}/evidence")), "evidence", torch.float32),
+        "condition_values": normalize_volume(runtime.load_tensor(validate_asset(case["condition_values"], f"{case_id}/condition values")), "condition values").long(),
+        "condition_mask": normalize_volume(runtime.load_tensor(validate_asset(case["condition_mask"], f"{case_id}/condition mask")), "condition mask").bool(),
+        "subsurface": normalize_volume(runtime.load_tensor(validate_asset(case["subsurface_mask"], f"{case_id}/subsurface")), "subsurface").bool(),
+        "score": normalize_volume(runtime.load_tensor(validate_asset(case["binary_impedance_score"], f"{case_id}/evidence")), "evidence", torch.float32),
     }
+
+
+def load_validated_adapter_checkpoint(
+    training_manifest_path: Path,
+    checkpoint_path: Path,
+    training_config_path: Path,
+    training_config: dict[str, object],
+    *,
+    require_formal: bool,
+    map_location: torch.device | str = "cpu",
+) -> dict[str, object]:
+    """Reject non-formal, stale or mismatched adapter checkpoints."""
+    try:
+        manifest = read_json(training_manifest_path)
+        if manifest.get("run_status") != "completed":
+            raise ValueError("training manifest is incomplete")
+        if require_formal:
+            expected = {
+                "run_class": "formal_training",
+                "smoke_subset": False,
+                "optimizer_updates": 1024,
+                "epochs": 4,
+                "base_model_unchanged": True,
+                "base_gradients_absent": True,
+            }
+            for field, value in expected.items():
+                if manifest.get(field) != value:
+                    raise ValueError(f"invalid formal training field: {field}")
+        checkpoint_record = manifest.get("adapter_checkpoint")
+        recorded_path = validate_asset(checkpoint_record, "formal adapter checkpoint")
+        if recorded_path.resolve() != checkpoint_path.resolve():
+            raise ValueError("checkpoint path differs from training manifest")
+        payload = torch.load(checkpoint_path, map_location=map_location, weights_only=False)
+        if payload.get("schema") != "stage19_adapter_checkpoint_v1":
+            raise ValueError("adapter checkpoint schema mismatch")
+        if require_formal and int(payload.get("epoch", -1)) != 4:
+            raise ValueError("formal adapter checkpoint is not epoch 4")
+        if payload.get("training_config_sha256") != runtime.file_sha256(training_config_path):
+            raise ValueError("adapter training-config SHA mismatch")
+        if payload.get("base_checkpoint_sha256") != training_config["base_model"]["checkpoint_sha256"]:
+            raise ValueError("adapter base-checkpoint SHA mismatch")
+        if int(payload.get("adapter_parameter_count", 10**9)) >= int(training_config["adapter"]["max_parameters"]):
+            raise ValueError("adapter parameter budget exceeded")
+        return payload
+    except (KeyError, TypeError, ValueError, FileNotFoundError) as exc:
+        raise RuntimeError(f"STOP_INVALID_FORMAL_ADAPTER_CHECKPOINT: {exc}") from exc
 
 
 def main() -> None:
@@ -70,9 +117,14 @@ def main() -> None:
     training_cfg = require_config(args.training_config, "stage19_learned_evidence_adapter_training_v1")
     if cfg.get("truth_loaded_by_runner") is not False or tuple(cfg["arms"]) != ARMS:
         raise ValueError("Stage19 inference truth firewall or arm order changed")
-    registry_path = args.evidence_dir / "evidence_registry.json"
+    registry_path = args.inference_registry
     registry = read_json(registry_path)
-    cases = [case for case in registry["cases"] if case["split"] == "test"]
+    serialized_registry = registry_path.read_text(encoding="utf-8").lower()
+    if any(forbidden in serialized_registry for forbidden in ("truth", "true_model", "binary_truth")):
+        raise RuntimeError("Stage19 inference registry contains a forbidden pointer")
+    if registry.get("schema") != "stage19r_test_inference_registry_v1" or registry.get("run_status") != "completed":
+        raise ValueError("invalid stripped TEST inference registry")
+    cases = list(registry["cases"])
     if len(cases) != 12:
         raise ValueError("Stage19 inference requires exactly 12 TEST cases")
     wrong = {str(case["case_id"]): str(cases[(index + 1) % len(cases)]["case_id"]) for index, case in enumerate(cases)}
@@ -88,9 +140,7 @@ def main() -> None:
     model, model_report = runtime.load_model_with_weight_policy(model_class=Geo3DStochInterp, checkpoint_path=checkpoint, map_location=device, weight_source="ema")
     model = model.to(device).eval(); freeze_base_model(model)
     base_hash_before = _parameter_hash(model)
-    payload = torch.load(args.adapter_checkpoint, map_location=device, weights_only=False)
-    if payload.get("schema") != "stage19_adapter_checkpoint_v1" or payload.get("base_checkpoint_sha256") != training_cfg["base_model"]["checkpoint_sha256"]:
-        raise ValueError("invalid Stage19 adapter checkpoint")
+    payload = load_validated_adapter_checkpoint(args.training_manifest, args.adapter_checkpoint, args.training_config, training_cfg, require_formal=not args.smoke, map_location=device)
     adapter = ResidualVelocityAdapter(model.embedding_dim, geophysics_channels=1, base_width=int(training_cfg["adapter"]["base_width"]), dilations=training_cfg["adapter"]["dilations"]).to(device)
     adapter.load_state_dict(payload["adapter_state_dict"]); adapter.eval()
     for parameter in adapter.parameters():
@@ -156,7 +206,7 @@ def main() -> None:
             raise RuntimeError("base model changed during inference")
         write_csv(args.output_dir / "sample_manifest.csv", rows)
         write_csv(args.output_dir / "sampling_trace.csv", traces)
-        manifest.update({"run_status": "completed", "output_count": len(rows), "executed_case_count": len(executed_cases), "source_seed_count": len(seeds), "all_condition_violations_zero": True, "base_model_unchanged": True, "base_model_hash_before": base_hash_before, "base_model_hash_after": base_hash_after, "model_load_report": model_report, "evidence_registry": asset(registry_path), "adapter_checkpoint": asset(args.adapter_checkpoint), "truth_loaded_by_runner": False, "scale_zero_flow_equivalence_checked": bool(args.smoke)})
+        manifest.update({"run_status": "completed", "output_count": len(rows), "executed_case_count": len(executed_cases), "source_seed_count": len(seeds), "all_condition_violations_zero": True, "base_model_unchanged": True, "base_model_hash_before": base_hash_before, "base_model_hash_after": base_hash_after, "model_load_report": model_report, "test_inference_registry": asset(registry_path), "training_manifest": asset(args.training_manifest), "adapter_checkpoint": asset(args.adapter_checkpoint), "truth_loaded_by_runner": False, "scale_zero_flow_equivalence_checked": bool(args.smoke)})
         write_json(args.output_dir / "run_manifest.json", manifest)
     except Exception as exc:
         manifest.update({"run_status": "failed", "error": f"{type(exc).__name__}: {exc}"})

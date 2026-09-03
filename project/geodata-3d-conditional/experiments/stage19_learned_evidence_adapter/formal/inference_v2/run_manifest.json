@@ -1,0 +1,128 @@
+{
+  "adapter_checkpoint": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/checkpoints/formal_v2/adapter_checkpoint.pt",
+    "sha256": "cdb740bfeccc08f7010048c69deb8e44a13917fe53e3b2f4b46910bf536f20bb",
+    "size_bytes": 232757
+  },
+  "all_condition_violations_zero": true,
+  "base_model_hash_after": "e623079c4e3fa95a64195e2e3470ca0f8ab93f6b743c634bce8d42fb1b30f244",
+  "base_model_hash_before": "e623079c4e3fa95a64195e2e3470ca0f8ab93f6b743c634bce8d42fb1b30f244",
+  "base_model_unchanged": true,
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/configs/inference_v1.json",
+    "sha256": "42092177caa132bf63741626df115f237978ad77d7096093f500fb0da91c5801",
+    "size_bytes": 929
+  },
+  "created_at_utc": "2026-09-03T16:23:16.155503+00:00",
+  "executed_case_count": 12,
+  "full_parameters": {
+    "adapter_scale": 1.0,
+    "arms": [
+      "FLOW_ONLY",
+      "STAGE18_CONTINUOUS_TARGET",
+      "ADAPTER_CORRECT",
+      "ADAPTER_ZERO",
+      "ADAPTER_WRONG_CASE"
+    ],
+    "integrator": "fixed_euler_midpoint",
+    "max_residual_ratio": 0.25,
+    "n_steps": 32,
+    "parameter_sweep": false,
+    "schema": "stage19_inference_v1",
+    "source_seeds": [
+      42,
+      142,
+      242
+    ],
+    "stage18": {
+      "alpha": 0.25,
+      "confidence": "score_times_free_subsurface",
+      "grad_clip_norm": 1.0,
+      "guidance_scaling_mode": "reference_norm_relative_v2",
+      "guidance_schedule": "windowed_sine",
+      "guidance_start": 0.25,
+      "max_guidance_ratio": 0.25,
+      "property_loss_mode": "matched_multiscale_normalized_mse_v1",
+      "property_scale_weights": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "property_sigmas": [
+        0.0,
+        1.5,
+        3.0
+      ],
+      "target_properties": "score",
+      "tau_end": 0.1,
+      "tau_schedule": "cosine",
+      "tau_start": 0.5
+    },
+    "status": "frozen_before_run",
+    "target_label": 9,
+    "truth_loaded_by_runner": false,
+    "wrong_case_mapping": "next_test_case_cyclic"
+  },
+  "git_branch": "main",
+  "git_head": "f97c8ca1713421fe31ff250a62671e0cbe06fb41",
+  "model_load_report": {
+    "checkpoint": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+      "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "size_bytes": 849415038
+    },
+    "checkpoint_epoch": 1651,
+    "checkpoint_global_step": 8376,
+    "ema_applied": true,
+    "ema_entry_count": 411,
+    "ema_excluded_frozen_parameters": [
+      "embedding.weight"
+    ],
+    "ema_missing_trainable": [],
+    "ema_shape_mismatches": [],
+    "ema_unexpected": [],
+    "frozen_parameters": [
+      "embedding.weight"
+    ],
+    "model_parameter_count": 412,
+    "trainable_parameter_count": 411,
+    "weight_source": "ema"
+  },
+  "output_count": 180,
+  "run_class": "formal_test_inference",
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage19/run_inference.py",
+    "sha256": "fdef4c7dbbef3721f2fe853d79f11bdd4f325b379bd16930744794f68b393a10",
+    "size_bytes": 16151
+  },
+  "scale_zero_flow_equivalence_checked": false,
+  "schema": "stage19_inference_run_v1",
+  "smoke_subset": false,
+  "source_seed_count": 3,
+  "test_inference_registry": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/evidence_v2/test_inference_registry.json",
+    "sha256": "72f11e12d6397c635e23841c088f8c6bff707632541017eb86bbd8fb7cd169b6",
+    "size_bytes": 27179
+  },
+  "training_manifest": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/checkpoints/formal_v2/training_manifest.json",
+    "sha256": "7bec70dd7b3c1c423a16eea11dd60add0fa07f7e41d92bbc29cb7dcb4cea9672",
+    "size_bytes": 4552
+  },
+  "truth_loaded_by_runner": false,
+  "wrong_case_mapping": {
+    "stage19_test_case001": "stage19_test_case002",
+    "stage19_test_case002": "stage19_test_case003",
+    "stage19_test_case003": "stage19_test_case004",
+    "stage19_test_case004": "stage19_test_case005",
+    "stage19_test_case005": "stage19_test_case006",
+    "stage19_test_case006": "stage19_test_case007",
+    "stage19_test_case007": "stage19_test_case008",
+    "stage19_test_case008": "stage19_test_case009",
+    "stage19_test_case009": "stage19_test_case010",
+    "stage19_test_case010": "stage19_test_case011",
+    "stage19_test_case011": "stage19_test_case012",
+    "stage19_test_case012": "stage19_test_case001"
+  }
+}
