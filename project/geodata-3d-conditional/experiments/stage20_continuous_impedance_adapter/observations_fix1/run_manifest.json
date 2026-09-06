@@ -1,0 +1,58 @@
+{
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/configs/evidence_v1.json",
+    "sha256": "8104b7e711d5e0af684651b1243eacaa24ca188ba7427b4eb29939a60854327f",
+    "size_bytes": 1234
+  },
+  "created_at_utc": "2026-09-06T08:40:37.049002+00:00",
+  "error": "RuntimeError: inversion-only registry contains forbidden truth material",
+  "full_parameters": {
+    "gate": {
+      "min_logz_improved_cases": 6,
+      "min_seismic_improved_cases": 6,
+      "require_negative_median_logz_delta": true,
+      "require_negative_median_seismic_delta": true,
+      "val_cases": 8
+    },
+    "low_frequency_prior": {
+      "distance_space": "xy_grid_index",
+      "empty_valid_well_depth_policy": "stop",
+      "exact_well_override": true,
+      "method": "well_xy_depthwise_idw_logz_slowness_v1",
+      "power": 2.0,
+      "vertical_mixing": false
+    },
+    "normalization": {
+      "clamp": [
+        -1.0,
+        1.0
+      ],
+      "per_case": false,
+      "runtime_mask": "current_free_subsurface",
+      "type": "global_nonair_codebook_logz_minus1_plus1"
+    },
+    "parameter_sweep": false,
+    "phase4c": {
+      "acoustic_config": "experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+      "forward_closure_max_abs": 1e-07,
+      "seismic_config": "experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json"
+    },
+    "phase5a": {
+      "inversion_config": "experiments/stage5_acoustic_inversion/configs/model_based_log_impedance_v1.json",
+      "reuse_scope": "solver_only_no_fixed12_posterior"
+    },
+    "schema": "stage20_continuous_impedance_evidence_v1",
+    "status": "frozen_before_asset_generation",
+    "target_label": 9
+  },
+  "git_branch": "main",
+  "git_head": "2284d7235cd62295d741c3982eb5063fe6577ac6",
+  "run_status": "failed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage20/build_observations.py",
+    "sha256": "e5bf25c8a70d4b3ba75d483f4fb45683df85b37e59add34f639d19a9c057f826",
+    "size_bytes": 8102
+  },
+  "schema": "stage20_observation_run_v1",
+  "truth_loaded_for_synthetic_observation_only": true
+}

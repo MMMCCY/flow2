@@ -1,0 +1,127 @@
+{
+  "assets": {
+    "delta_logz_depth": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/evidence_fix1/stage19_train_case013/delta_logz_depth.pt",
+      "sha256": "96b389e4af989154bde01ab1e68a6b5e5a5e574eba156846151b479a666e8c54",
+      "size_bytes": 1050280
+    },
+    "inverted_acoustic": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/evidence_fix1/stage19_train_case013/inverted_acoustic.pt",
+      "sha256": "b5b3f8cd6cdbba012174adccf2b0ded80e3d8f7d028381b6d71e8d05b8a84fd8",
+      "size_bytes": 2098863
+    },
+    "inverted_logz": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/evidence_fix1/stage19_train_case013/inverted_logz.pt",
+      "sha256": "65d233798aafed6a486baf347016b8e885d27e7f83a0fbf887c9eebf8184e9b5",
+      "size_bytes": 1050259
+    },
+    "low_frequency_acoustic": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/evidence_fix1/stage19_train_case013/low_frequency_acoustic.pt",
+      "sha256": "eaaaf1e9b2b35baa358b918f91e4b2ca9b9102e94c6cc75a791bf5a036b0d4c1",
+      "size_bytes": 2098962
+    },
+    "low_frequency_logz": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/evidence_fix1/stage19_train_case013/low_frequency_logz.pt",
+      "sha256": "5a040f477a001dd4b4e6884eb3ff3168e6483274f7d9fea057b8a8033a3be997",
+      "size_bytes": 1050294
+    },
+    "normalized_inverted_logz": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/evidence_fix1/stage19_train_case013/normalized_inverted_logz.pt",
+      "sha256": "fe8a0c3fa2726f9127c8c64de7f5d5ecc9912e667dc553247587831ae2ce169f",
+      "size_bytes": 1050400
+    },
+    "normalized_low_frequency_logz": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/evidence_fix1/stage19_train_case013/normalized_low_frequency_logz.pt",
+      "sha256": "51300eea736aa44310e5ab134ac9c4a75ffb12719a509ff2a25a2c0c44b9d7e8",
+      "size_bytes": 1050435
+    },
+    "seismic_fields_prior_post": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/evidence_fix1/stage19_train_case013/seismic_fields_prior_post.pt",
+      "sha256": "91b28f47c7ffc71fe6e595355bb864a0c5077321b81ac3d7843ab2c6dd970145",
+      "size_bytes": 10487591
+    }
+  },
+  "case_id": "stage19_train_case013",
+  "diagnostics": {
+    "correction_abs_max_depth": 0.7359389066696167,
+    "correction_abs_max_time": 0.7678408026695251,
+    "correction_rms_depth_subsurface": 0.03271818906068802,
+    "correction_rms_time": 0.027742786332964897,
+    "normal_diagonal_mean": 0.5866422057151794,
+    "prior_lambda": 0.0005866422434337437,
+    "smoothness_lambda": 0.005866421852260828
+  },
+  "low_frequency_fallback": {
+    "fallback_depth_count": 0,
+    "fallback_map": [],
+    "tie_policy": "nearest_then_smaller_z_index_deeper",
+    "valid_well_depth_count": 57,
+    "whole_case_without_valid_well_depth": false
+  },
+  "normalization": {
+    "L_max": 16.785924911499023,
+    "L_min": 15.520258903503418,
+    "source_codebook_sha256": "8980e30c59624af9f1bfa59447b7e22c85a2975f8a556fe6e98f5346f95d10ae"
+  },
+  "operator_metadata": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_cube_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "std_amplitude": 0.0,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 320,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  },
+  "posterior_member_count": 1,
+  "root_seed": 220260120,
+  "run_status": "completed",
+  "schema": "stage20_continuous_evidence_case_v1",
+  "split": "train",
+  "tensor_content_hashes": {
+    "delta_logz_depth": "a992eb67ba0c6acb56b0a4a9e7d51b9c36f1fdab0846cd941154ac82436b720b",
+    "inverted_acoustic": "d471cf3df88523a6bd40ca787166d8fdfe64fe9ec925e68af275c58092d6d7a8",
+    "inverted_logz": "8d269085f5749b6465449104a2a45ab5136dca2b7e52ced1c1d5876ab8f1603f",
+    "low_frequency_acoustic": "ecb6a6e64487bcb81319563e5588b6d15d01899aa3452fc92e1f573e30637b13",
+    "low_frequency_logz": "f0152789116600a80bc3a5e580fc6ba7c69f86d3a757ce4206d110c2dea8b980",
+    "normalized_inverted_logz": "8f78db609270b382ee2450e77dc9e897700028d9f8966eddd31ea0a676648e51",
+    "normalized_low_frequency_logz": "d25984bba52f652ba7d69df9569cbfb22e920243303ba9f536402a2a30b0c463",
+    "seismic_fields_prior_post": "11aab6e49bbb51e72bbdea9c55adcda272cbc6851b64c751e4afab741623a61b"
+  },
+  "truth_loaded_by_runner": false
+}

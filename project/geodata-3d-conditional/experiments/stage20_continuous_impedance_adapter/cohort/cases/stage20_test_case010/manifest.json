@@ -1,0 +1,124 @@
+{
+  "assets": {
+    "condition_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/cohort/cases/stage20_test_case010/condition/condition_mask.pt",
+      "sha256": "c55890b08b2f6211fbabd0d9d4ae32c7b88d4e26afc8f58a175b8859b97af0b9",
+      "size_bytes": 263834
+    },
+    "condition_values": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/cohort/cases/stage20_test_case010/condition/condition_values.pt",
+      "sha256": "1a4a7bd995b702fc4a598f87720d1ab09405b54edbd561eed7a1308735433a05",
+      "size_bytes": 1050280
+    },
+    "history": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/cohort/cases/stage20_test_case010/truth/history.json",
+      "sha256": "9b0553961df8c1a08fe1551a47a97dec7b727983aab53f992a15a6d6e67fe53a",
+      "size_bytes": 19898
+    },
+    "truth": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/cohort/cases/stage20_test_case010/truth/true_model.pt",
+      "sha256": "bea6f283e48fed0402bc1fa91f77bffdeb10128073011f20cc08177d08419a3c",
+      "size_bytes": 1050174
+    }
+  },
+  "case_id": "stage20_test_case010",
+  "condition_mask_tensor_sha256": "1dc186f294a837332ad6a1a76a530832e9acc241ffe0221181788828b36e98b7",
+  "condition_values_tensor_sha256": "f12ee68bbd81c1d710eb3357af81ec6bfc1f8321791e4f5daec1af151790dae2",
+  "event_subtypes": [
+    "Basement",
+    "SillSystem",
+    "Dike",
+    "Dike",
+    "Fourier",
+    "BlobCluster",
+    "StrikeSlip",
+    "FullyRandom",
+    "Single",
+    "StrikeSlip",
+    "HorstGraben",
+    "Fourier",
+    "Wave",
+    "Flat",
+    "Fine",
+    "Wave",
+    "DikeGroup",
+    "Fine",
+    "Wave",
+    "Normal",
+    "Fourier"
+  ],
+  "history_sha256": "e529f7f4704a0206255661071b459ca9b57c38a89aaecf39c2635ccc403dc8c6",
+  "markov_sequence": [
+    "BaseStrata",
+    "Sills",
+    "Dike",
+    "Dike",
+    "Fold",
+    "OreDeposit",
+    "Fault",
+    "Fault",
+    "Sediment",
+    "Fault",
+    "Fault",
+    "Fold",
+    "Erosion",
+    "Erosion",
+    "Sediment",
+    "Erosion",
+    "Dike",
+    "Sediment",
+    "Erosion",
+    "Fault",
+    "Fold"
+  ],
+  "reused_from_stage19r": false,
+  "root_seed": 220290074,
+  "run_status": "completed",
+  "schema": "stage20_structuralgeo_case_v1",
+  "selection_firewall": {
+    "downstream_metrics": false,
+    "evidence": false,
+    "flow": false,
+    "seismic": false
+  },
+  "split": "test",
+  "truth_tensor_sha256": "6cebc78e0e0b4a510549ceff4615f7ac4f5a07849edf759d1c3ff5d28e0034a7",
+  "well_xy": [
+    [
+      8,
+      46
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      10,
+      24
+    ],
+    [
+      27,
+      17
+    ],
+    [
+      35,
+      26
+    ],
+    [
+      39,
+      59
+    ],
+    [
+      44,
+      60
+    ],
+    [
+      48,
+      6
+    ],
+    [
+      57,
+      32
+    ]
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "acoustic_codebook": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+    "sha256": "8980e30c59624af9f1bfa59447b7e22c85a2975f8a556fe6e98f5346f95d10ae",
+    "size_bytes": 1128
+  },
+  "acoustic_config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+    "sha256": "8980e30c59624af9f1bfa59447b7e22c85a2975f8a556fe6e98f5346f95d10ae",
+    "size_bytes": 1128
+  },
+  "case_count": 84,
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/configs/evidence_v1.json",
+    "sha256": "b96fbbd7cbd04e9557b3e37805cd07ac59d566a442050ec1086dd53eae05ec7b",
+    "size_bytes": 1617
+  },
+  "created_at_utc": "2026-09-06T09:28:00.297092+00:00",
+  "evidence_registry": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/evidence_fix2/evidence_registry.json",
+    "sha256": "94cb0cd2e595be1a9d1ae90bfec0fd7fcdeff69bdbd7b00e3e9642cff41deb28",
+    "size_bytes": 486332
+  },
+  "full_parameters": {
+    "acoustic_semantics": {
+      "mapper": "stage20_labels_to_acoustic",
+      "outside_subsurface_raw_air": "frozen_phase4c_real_air",
+      "subsurface_raw_air": "neutral_rock_category(property_table)"
+    },
+    "gate": {
+      "min_logz_improved_cases": 6,
+      "min_seismic_improved_cases": 6,
+      "require_negative_median_logz_delta": true,
+      "require_negative_median_seismic_delta": true,
+      "val_cases": 8
+    },
+    "low_frequency_prior": {
+      "distance_space": "xy_grid_index",
+      "empty_valid_well_depth_policy": "nearest_valid_depth_zero_order_copy_deeper_tie_v1",
+      "exact_well_override": true,
+      "method": "well_xy_depthwise_idw_logz_slowness_v1",
+      "power": 2.0,
+      "vertical_mixing": false,
+      "whole_case_without_valid_well_depth_policy": "stop"
+    },
+    "normalization": {
+      "clamp": [
+        -1.0,
+        1.0
+      ],
+      "per_case": false,
+      "runtime_mask": "current_free_subsurface",
+      "type": "global_nonair_codebook_logz_minus1_plus1"
+    },
+    "parameter_sweep": false,
+    "phase4c": {
+      "acoustic_config": "experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+      "forward_closure_max_abs": 1e-07,
+      "seismic_config": "experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json"
+    },
+    "phase5a": {
+      "inversion_config": "experiments/stage5_acoustic_inversion/configs/model_based_log_impedance_v1.json",
+      "reuse_scope": "solver_only_no_fixed12_posterior"
+    },
+    "revision_reason": "unified_stage20_subsurface_raw_air_acoustic_semantics",
+    "schema": "stage20_continuous_impedance_evidence_v1",
+    "status": "frozen_before_asset_generation",
+    "target_label": 9
+  },
+  "git_branch": "main",
+  "git_head": "2284d7235cd62295d741c3982eb5063fe6577ac6",
+  "input_registry": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/inversion_input_registry_fix2/registry.json",
+    "sha256": "a1e72def5f44a9e5f055e6d8de0c4028d8d4687f15ea5b402bd9ff637e03284b",
+    "size_bytes": 292047
+  },
+  "inversion_config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/configs/model_based_log_impedance_v1.json",
+    "sha256": "6b690aec3978b48bc6922e7387fc9fca55566e2b54d5f1e2dcb2669143f79088",
+    "size_bytes": 1018
+  },
+  "inversion_input_registry_fix2": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/inversion_input_registry_fix2/registry.json",
+    "sha256": "a1e72def5f44a9e5f055e6d8de0c4028d8d4687f15ea5b402bd9ff637e03284b",
+    "size_bytes": 292047
+  },
+  "low_frequency_prior_parameters_unchanged": {
+    "empty_valid_well_depth_policy": "nearest_valid_depth_zero_order_copy_deeper_tie_v1",
+    "method": "well_xy_depthwise_idw_logz_slowness_v1",
+    "power": 2.0
+  },
+  "mapper_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage20/acoustic_semantics.py",
+    "sha256": "cd7d6ff8860ede78d52c56cc070f6766b71df7d09eb9775761d7f14b6abb1506",
+    "size_bytes": 2768
+  },
+  "observations_fix2": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/observations_fix2/run_manifest.json",
+    "sha256": "0bcc74d508bdc167f8947bc402e77ed2ba9542ca36848501e445a691542e0c24",
+    "size_bytes": 4956
+  },
+  "parameter_sweep": false,
+  "phase5a_inversion_parameters_unchanged": {
+    "prior_relative_weight": 0.001,
+    "vertical_smoothness_relative_weight": 0.01
+  },
+  "posterior_ensemble_constructed": false,
+  "previous_failed_evidence": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/evidence_fix1/run_manifest.json",
+    "sha256": "ff4cf92bd22635b3d26424f66db3558a768ce6d2c007dcfb744691c64a2d6665",
+    "size_bytes": 4531
+  },
+  "previous_failed_evidence_audit": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/evidence_audit/summary.json",
+    "sha256": "9165d25b54790b69add60a92c7dd7b0584a8d57bf60d693cc487bf9ae1c22f74",
+    "size_bytes": 451
+  },
+  "revision_reason": "unified_stage20_subsurface_raw_air_acoustic_semantics",
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage20/build_continuous_evidence.py",
+    "sha256": "551a614ff48397bbab38b80f5454f7e54a2c5461079e218f5de7e6ebfcbf2827",
+    "size_bytes": 11467
+  },
+  "schema": "stage20_continuous_evidence_run_v1",
+  "seismic_config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+    "sha256": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02",
+    "size_bytes": 919
+  },
+  "semantic_preflight": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/acoustic_semantic_preflight/summary.json",
+    "sha256": "16d036fa5ac0033ec16b3a7515ac7bcdeaa3d2aee54550f8caaa6ef4c36d33dd",
+    "size_bytes": 63904
+  },
+  "stage20_spec": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/FLOW2_STAGE20_CONTINUOUS_IMPEDANCE_ADAPTER_CODEX_SPEC.md",
+    "sha256": "bb4ed2c005fb6155680480eb0cea9de77988d3cfd4cab3faf3164848d40e60dd",
+    "size_bytes": 48380
+  },
+  "test_inference_registry": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/evidence_fix2/test_inference_registry.json",
+    "sha256": "11c201720328eab972ecebed11b0c31b2348733bd2cce86d280a6e7f2649cba3",
+    "size_bytes": 27982
+  },
+  "truth_loaded_by_evidence_builder": false,
+  "truth_loaded_by_runner": false
+}

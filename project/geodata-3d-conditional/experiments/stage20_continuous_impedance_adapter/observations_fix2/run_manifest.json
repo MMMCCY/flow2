@@ -1,0 +1,105 @@
+{
+  "acoustic_config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+    "sha256": "8980e30c59624af9f1bfa59447b7e22c85a2975f8a556fe6e98f5346f95d10ae",
+    "size_bytes": 1128
+  },
+  "acoustic_metadata": {
+    "density_table_sha256": "346f91e28a53677a534fdc295eb14cf62ce469f553f28f477ba816f297f2ce99",
+    "density_unit": "kg m^-3",
+    "description": "Synthetic complete absolute density and P-wave velocity codebook for the first Phase-4c inverse-crime upper bound. Label 9 has deliberately distinctive impedance; values are not site-calibrated petrophysics.",
+    "id": "acoustic_distinct_label9_upper_bound_v1",
+    "impedance_table_sha256": "bd0f62b3d692d8b10105b56266504e6360511191a48eb0ac11acd3b9705c9f8a",
+    "impedance_unit": "kg m^-2 s^-1",
+    "num_categories": 15,
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "scenario": "synthetic_distinct_label9_acoustic_upper_bound",
+    "schema": "phase4_acoustic_codebook_v1",
+    "site_calibrated_petrophysics": false,
+    "slowness_table_sha256": "36342444bc8042852fdb55682247fa42046cfa5ad30963d444406cac7022f37b",
+    "slowness_unit": "s m^-1",
+    "truth_derived": true,
+    "velocity_table_sha256": "f4835d84b5451bb6ec088d543e7a74b9e5e27e289432fa7b545040eaef9171fc",
+    "velocity_unit": "m s^-1"
+  },
+  "acoustic_property_table": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/observations_fix2/acoustic_property_table.pt",
+    "sha256": "cdfa35f8027b8c9bc523100d0342345ce3cbc67fca16f796d594b04226acb254",
+    "size_bytes": 1881
+  },
+  "all_forward_closures_passed": true,
+  "case_count": 84,
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/configs/evidence_v1.json",
+    "sha256": "8104b7e711d5e0af684651b1243eacaa24ca188ba7427b4eb29939a60854327f",
+    "size_bytes": 1234
+  },
+  "created_at_utc": "2026-09-06T08:42:01.961816+00:00",
+  "full_parameters": {
+    "gate": {
+      "min_logz_improved_cases": 6,
+      "min_seismic_improved_cases": 6,
+      "require_negative_median_logz_delta": true,
+      "require_negative_median_seismic_delta": true,
+      "val_cases": 8
+    },
+    "low_frequency_prior": {
+      "distance_space": "xy_grid_index",
+      "empty_valid_well_depth_policy": "stop",
+      "exact_well_override": true,
+      "method": "well_xy_depthwise_idw_logz_slowness_v1",
+      "power": 2.0,
+      "vertical_mixing": false
+    },
+    "normalization": {
+      "clamp": [
+        -1.0,
+        1.0
+      ],
+      "per_case": false,
+      "runtime_mask": "current_free_subsurface",
+      "type": "global_nonair_codebook_logz_minus1_plus1"
+    },
+    "parameter_sweep": false,
+    "phase4c": {
+      "acoustic_config": "experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+      "forward_closure_max_abs": 1e-07,
+      "seismic_config": "experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json"
+    },
+    "phase5a": {
+      "inversion_config": "experiments/stage5_acoustic_inversion/configs/model_based_log_impedance_v1.json",
+      "reuse_scope": "solver_only_no_fixed12_posterior"
+    },
+    "schema": "stage20_continuous_impedance_evidence_v1",
+    "status": "frozen_before_asset_generation",
+    "target_label": 9
+  },
+  "full_registry": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/observations_fix2/observation_registry_full.json",
+    "sha256": "de5c22327d305d58f387c77cb3c8385402d97a891bf2cc4dba29b3581f6eaec9",
+    "size_bytes": 491683
+  },
+  "git_branch": "main",
+  "git_head": "2284d7235cd62295d741c3982eb5063fe6577ac6",
+  "inversion_input_registry": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/inversion_input_registry_fix2/registry.json",
+    "sha256": "a1e72def5f44a9e5f055e6d8de0c4028d8d4687f15ea5b402bd9ff637e03284b",
+    "size_bytes": 292047
+  },
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage20/build_observations.py",
+    "sha256": "7e25d7cceaee48cdbe7b6aa7da5c256a975b2ac46340ea6d359a9bcf52171b45",
+    "size_bytes": 8083
+  },
+  "schema": "stage20_observation_run_v1",
+  "seismic_config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+    "sha256": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02",
+    "size_bytes": 919
+  },
+  "truth_loaded_for_synthetic_observation_only": true
+}

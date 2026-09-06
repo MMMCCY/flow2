@@ -1,0 +1,87 @@
+{
+  "case_ids": [
+    "stage19_val_case001",
+    "stage19_val_case005"
+  ],
+  "machine_decision": "STOP_MATERIAL_IMPEDANCE_BOUND_VIOLATION",
+  "material_violation": true,
+  "rows": [
+    {
+      "case_id": "stage19_val_case001",
+      "inverted": {
+        "above_count": 0,
+        "below_count": 15,
+        "condition_out_of_bounds_count": 15,
+        "dtype": "torch.float32",
+        "free_subsurface_out_of_bounds_count": 0,
+        "maximum_condition_out_of_bounds_magnitude": 5499583.5,
+        "maximum_free_subsurface_out_of_bounds_magnitude": 0.0,
+        "maximum_out_of_bounds_magnitude": 5499583.5,
+        "numerical_boundary_reconstruction_only": false,
+        "out_of_bounds_count": 15,
+        "subsurface_max": 19500000.0,
+        "subsurface_min": 416.5,
+        "tolerance": 18.596649169921875,
+        "zmax": 19500000.0,
+        "zmin": 5500000.0
+      },
+      "low_frequency_prior": {
+        "above_count": 0,
+        "below_count": 15,
+        "condition_out_of_bounds_count": 15,
+        "dtype": "torch.float32",
+        "free_subsurface_out_of_bounds_count": 0,
+        "maximum_condition_out_of_bounds_magnitude": 5499583.5,
+        "maximum_free_subsurface_out_of_bounds_magnitude": 0.0,
+        "maximum_out_of_bounds_magnitude": 5499583.5,
+        "numerical_boundary_reconstruction_only": false,
+        "out_of_bounds_count": 15,
+        "subsurface_max": 19500000.0,
+        "subsurface_min": 416.5,
+        "tolerance": 18.596649169921875,
+        "zmax": 19500000.0,
+        "zmin": 5500000.0
+      }
+    },
+    {
+      "case_id": "stage19_val_case005",
+      "inverted": {
+        "above_count": 0,
+        "below_count": 58,
+        "condition_out_of_bounds_count": 58,
+        "dtype": "torch.float32",
+        "free_subsurface_out_of_bounds_count": 0,
+        "maximum_condition_out_of_bounds_magnitude": 5499583.5,
+        "maximum_free_subsurface_out_of_bounds_magnitude": 0.0,
+        "maximum_out_of_bounds_magnitude": 5499583.5,
+        "numerical_boundary_reconstruction_only": false,
+        "out_of_bounds_count": 58,
+        "subsurface_max": 19500000.0,
+        "subsurface_min": 416.5,
+        "tolerance": 18.596649169921875,
+        "zmax": 19500000.0,
+        "zmin": 5500000.0
+      },
+      "low_frequency_prior": {
+        "above_count": 0,
+        "below_count": 58,
+        "condition_out_of_bounds_count": 58,
+        "dtype": "torch.float32",
+        "free_subsurface_out_of_bounds_count": 0,
+        "maximum_condition_out_of_bounds_magnitude": 5499583.5,
+        "maximum_free_subsurface_out_of_bounds_magnitude": 0.0,
+        "maximum_out_of_bounds_magnitude": 5499583.5,
+        "numerical_boundary_reconstruction_only": false,
+        "out_of_bounds_count": 58,
+        "subsurface_max": 19500000.0,
+        "subsurface_min": 416.5,
+        "tolerance": 18.596649169921875,
+        "zmax": 19500000.0,
+        "zmin": 5500000.0
+      }
+    }
+  ],
+  "run_status": "completed",
+  "schema": "stage20_truth_blind_impedance_bound_diagnostic_v1",
+  "truth_loaded": false
+}

@@ -1,0 +1,115 @@
+{
+  "adapter_checkpoint": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/checkpoints/formal_v1/adapter_checkpoint.pt",
+    "sha256": "f8b71d0889ec8f76f033583be3b94f3041da888c0b910e92c8f686e24a093213",
+    "size_bytes": 233205
+  },
+  "adapter_parameter_count": 54003,
+  "base_model_hash_after": "e623079c4e3fa95a64195e2e3470ca0f8ab93f6b743c634bce8d42fb1b30f244",
+  "base_model_hash_before": "e623079c4e3fa95a64195e2e3470ca0f8ab93f6b743c634bce8d42fb1b30f244",
+  "base_state_dict_hash_after": "10d2181fe3eeeb406afc3da5e78ded64e9f92abfb2b3c352ee57e60e06da9b68",
+  "base_state_dict_hash_before": "10d2181fe3eeeb406afc3da5e78ded64e9f92abfb2b3c352ee57e60e06da9b68",
+  "checkpoint_epoch": 4,
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/configs/training_v1.json",
+    "sha256": "297083b9b14d935d5fae6f7833c357c569aa69b3d16fb8103bbe3e70227177d8",
+    "size_bytes": 1384
+  },
+  "created_at_utc": "2026-09-06T16:53:49.376273+00:00",
+  "formal_checkpoint_valid": true,
+  "full_parameters": {
+    "adapter": {
+      "base_width": 12,
+      "dilations": [
+        1,
+        2,
+        4,
+        1
+      ],
+      "expected_parameters": 54003,
+      "final_layer_zero_initialized": true,
+      "geophysics_channels": 1,
+      "max_parameters": 100000,
+      "max_residual_ratio": 0.25
+    },
+    "base_finetuning": false,
+    "base_model": {
+      "checkpoint": "demo_model/conditional-weights.ckpt",
+      "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "freeze_all_parameters": true,
+      "weight_source": "ema"
+    },
+    "evidence": {
+      "channels": 1,
+      "input_policy": "fixed_codebook_normalized_logz_times_current_free_subsurface",
+      "type": "phase5a_inverted_multiclass_log_impedance"
+    },
+    "parameter_sweep": false,
+    "physics_training_loss": false,
+    "sampling": {
+      "adapter_scale": 1.0,
+      "n_steps": 32,
+      "source_seeds": [
+        42,
+        142,
+        242
+      ]
+    },
+    "schema": "stage20_continuous_impedance_adapter_training_v1",
+    "status": "frozen_before_cuda_training",
+    "target_label": 9,
+    "topology_loss": false,
+    "training": {
+      "adapter_seed": 6200,
+      "batch_size": 1,
+      "checkpoint_selection": "epoch4_final",
+      "cross_entropy_weight": 0.25,
+      "dice_weight": 0.25,
+      "early_stopping": false,
+      "epochs": 4,
+      "flow_weight": 1.0,
+      "gradient_clip_norm": 1.0,
+      "learning_rate": 0.002,
+      "logit_temperature": 0.1,
+      "optimizer": "AdamW",
+      "residual_regularizer_weight": 0.0001,
+      "scheduler": null,
+      "shuffle_seed_base": 6201,
+      "state_generator_seed": 6100,
+      "times": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "weight_decay": 0.0001
+    }
+  },
+  "git_branch": "main",
+  "git_head": "ae5e206b4bc463c0b5271e7da9b09d72ccb4499c",
+  "machine_decision": "STAGE20_FORMAL_ADAPTER_TRAINING_VALIDATED",
+  "no_formal_test_inference_executed": true,
+  "optimizer_updates": 1024,
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage20/audit_formal_checkpoint.py",
+    "sha256": "d8df2fb5681848ab286c78af560eafb95b3cf12760610966645935b68e876e8b",
+    "size_bytes": 4242
+  },
+  "schema": "stage20_formal_adapter_checkpoint_audit_v1",
+  "training_manifest": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/checkpoints/formal_v1/training_manifest.json",
+    "sha256": "0add2f3ce80b1ea370e9dbf9f3c3a3ce8f9b383ff9ffd3dce4978aaeebc9665a",
+    "size_bytes": 7944
+  },
+  "training_trace": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/checkpoints/formal_v1/training_trace.csv",
+    "sha256": "23be076152fbbe43bfaf6ff6a698ba1f2baa64fa8bee7d7158d910df309f32e9",
+    "size_bytes": 274214
+  },
+  "validation_trace": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/checkpoints/formal_v1/validation_trace.csv",
+    "sha256": "c5af358cdbe5f24c89dd3ec499681fe93904958aeed82ca46056116ebee6e978",
+    "size_bytes": 27174
+  }
+}

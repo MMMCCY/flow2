@@ -1,0 +1,14 @@
+{
+  "schema": "stage20_continuous_impedance_adapter_training_v1",
+  "status": "frozen_before_cuda_training",
+  "parameter_sweep": false,
+  "target_label": 9,
+  "base_model": {"checkpoint": "demo_model/conditional-weights.ckpt", "weight_source": "ema", "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c", "freeze_all_parameters": true},
+  "evidence": {"type": "phase5a_inverted_multiclass_log_impedance", "channels": 1, "input_policy": "fixed_codebook_normalized_logz_times_current_free_subsurface"},
+  "adapter": {"base_width": 12, "dilations": [1,2,4,1], "geophysics_channels": 1, "expected_parameters": 54003, "max_parameters": 100000, "max_residual_ratio": 0.25, "final_layer_zero_initialized": true},
+  "training": {"adapter_seed": 6200, "state_generator_seed": 6100, "epochs": 4, "times": [0.2,0.4,0.6,0.8], "batch_size": 1, "optimizer": "AdamW", "learning_rate": 0.002, "weight_decay": 0.0001, "gradient_clip_norm": 1.0, "scheduler": null, "flow_weight": 1.0, "cross_entropy_weight": 0.25, "dice_weight": 0.25, "residual_regularizer_weight": 0.0001, "logit_temperature": 0.1, "early_stopping": false, "checkpoint_selection": "epoch4_final", "shuffle_seed_base": 6201},
+  "sampling": {"n_steps": 32, "adapter_scale": 1.0, "source_seeds": [42,142,242]},
+  "topology_loss": false,
+  "physics_training_loss": false,
+  "base_finetuning": false
+}

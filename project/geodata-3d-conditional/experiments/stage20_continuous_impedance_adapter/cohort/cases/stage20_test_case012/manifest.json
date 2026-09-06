@@ -1,0 +1,98 @@
+{
+  "assets": {
+    "condition_mask": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/cohort/cases/stage20_test_case012/condition/condition_mask.pt",
+      "sha256": "a2b0d4c71471791b23c7893a1d59e5ec518fd816a1d1ef5ab1f125d2e75360c3",
+      "size_bytes": 263834
+    },
+    "condition_values": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/cohort/cases/stage20_test_case012/condition/condition_values.pt",
+      "sha256": "9eda66c547c47c9dc8c72b59ae0409addd1fb099a891073b9c94ebb9aefabe27",
+      "size_bytes": 1050280
+    },
+    "history": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/cohort/cases/stage20_test_case012/truth/history.json",
+      "sha256": "eec4feadee25b00b5921ce3be8aee450856f84b8af022bdf4af9e904b10f5179",
+      "size_bytes": 7674
+    },
+    "truth": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/cohort/cases/stage20_test_case012/truth/true_model.pt",
+      "sha256": "e3c7035585eb0816e6db458217fa497d75d037509ed25a7d5729f670fdc860eb",
+      "size_bytes": 1050174
+    }
+  },
+  "case_id": "stage20_test_case012",
+  "condition_mask_tensor_sha256": "651a3b2d17d6ae8ca8b5f8a81be70c8ac20b8d13ae38856465bce11b579d9d30",
+  "condition_values_tensor_sha256": "da1189e23795d82f66a8954540c6d93fdbc9703c51e108665ec6ee4fb4af5b8d",
+  "event_subtypes": [
+    "Basement",
+    "SillSystem",
+    "BlobCluster",
+    "TiltCutFill",
+    "Fourier",
+    "Shaped",
+    "Shaped",
+    "Termination of Sequence"
+  ],
+  "history_sha256": "43e41e9c27de2c665a16d15c287858f0e4595695c80211b02c68f958c3c55407",
+  "markov_sequence": [
+    "BaseStrata",
+    "Sills",
+    "OreDeposit",
+    "Erosion",
+    "Fold",
+    "Fold",
+    "Fold",
+    "End"
+  ],
+  "reused_from_stage19r": false,
+  "root_seed": 220290084,
+  "run_status": "completed",
+  "schema": "stage20_structuralgeo_case_v1",
+  "selection_firewall": {
+    "downstream_metrics": false,
+    "evidence": false,
+    "flow": false,
+    "seismic": false
+  },
+  "split": "test",
+  "truth_tensor_sha256": "ae0163c7ce624a363ee0e6b0191249f9309d3d5172730163f92344b2cba3dc4c",
+  "well_xy": [
+    [
+      8,
+      46
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      10,
+      24
+    ],
+    [
+      27,
+      17
+    ],
+    [
+      35,
+      26
+    ],
+    [
+      39,
+      59
+    ],
+    [
+      44,
+      60
+    ],
+    [
+      48,
+      6
+    ],
+    [
+      57,
+      32
+    ]
+  ]
+}

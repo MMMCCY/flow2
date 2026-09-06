@@ -1,0 +1,610 @@
+{
+  "expected_nonzero_counts": {
+    "stage19_val_case001": 15,
+    "stage19_val_case005": 58
+  },
+  "machine_decision": "STAGE20_ACOUSTIC_CONDITION_DIAGNOSIS_VALIDATED",
+  "rock_impedance_bounds": [
+    5500000.0,
+    19500000.0
+  ],
+  "rows": [
+    {
+      "bad_count": 15,
+      "bad_equals_inverted_out_of_bounds": true,
+      "bad_equals_prior_out_of_bounds": true,
+      "case_id": "stage19_val_case001",
+      "coordinates": [
+        [
+          0,
+          0,
+          14,
+          5,
+          49
+        ],
+        [
+          0,
+          0,
+          14,
+          5,
+          50
+        ],
+        [
+          0,
+          0,
+          14,
+          5,
+          51
+        ],
+        [
+          0,
+          0,
+          14,
+          5,
+          52
+        ],
+        [
+          0,
+          0,
+          14,
+          5,
+          53
+        ],
+        [
+          0,
+          0,
+          15,
+          1,
+          49
+        ],
+        [
+          0,
+          0,
+          15,
+          1,
+          50
+        ],
+        [
+          0,
+          0,
+          15,
+          1,
+          51
+        ],
+        [
+          0,
+          0,
+          28,
+          4,
+          40
+        ],
+        [
+          0,
+          0,
+          30,
+          1,
+          40
+        ],
+        [
+          0,
+          0,
+          30,
+          1,
+          41
+        ],
+        [
+          0,
+          0,
+          30,
+          1,
+          42
+        ],
+        [
+          0,
+          0,
+          30,
+          1,
+          43
+        ],
+        [
+          0,
+          0,
+          31,
+          0,
+          40
+        ],
+        [
+          0,
+          0,
+          31,
+          0,
+          41
+        ]
+      ],
+      "coordinates_sha256": "0188df163310a1feeb1e9f12cbb3d633a8436e489c068d833a8ff721b86ed48c",
+      "inverted_out_of_bounds_count": 15,
+      "prior_out_of_bounds_count": 15
+    },
+    {
+      "bad_count": 0,
+      "bad_equals_inverted_out_of_bounds": true,
+      "bad_equals_prior_out_of_bounds": true,
+      "case_id": "stage19_val_case002",
+      "coordinates": [],
+      "coordinates_sha256": "732ca0ded9e52e27bb110d16d457a5218771fc99c749d182022870d80c4a3c54",
+      "inverted_out_of_bounds_count": 0,
+      "prior_out_of_bounds_count": 0
+    },
+    {
+      "bad_count": 0,
+      "bad_equals_inverted_out_of_bounds": true,
+      "bad_equals_prior_out_of_bounds": true,
+      "case_id": "stage19_val_case003",
+      "coordinates": [],
+      "coordinates_sha256": "732ca0ded9e52e27bb110d16d457a5218771fc99c749d182022870d80c4a3c54",
+      "inverted_out_of_bounds_count": 0,
+      "prior_out_of_bounds_count": 0
+    },
+    {
+      "bad_count": 0,
+      "bad_equals_inverted_out_of_bounds": true,
+      "bad_equals_prior_out_of_bounds": true,
+      "case_id": "stage19_val_case004",
+      "coordinates": [],
+      "coordinates_sha256": "732ca0ded9e52e27bb110d16d457a5218771fc99c749d182022870d80c4a3c54",
+      "inverted_out_of_bounds_count": 0,
+      "prior_out_of_bounds_count": 0
+    },
+    {
+      "bad_count": 58,
+      "bad_equals_inverted_out_of_bounds": true,
+      "bad_equals_prior_out_of_bounds": true,
+      "case_id": "stage19_val_case005",
+      "coordinates": [
+        [
+          0,
+          0,
+          37,
+          8,
+          51
+        ],
+        [
+          0,
+          0,
+          37,
+          8,
+          52
+        ],
+        [
+          0,
+          0,
+          40,
+          6,
+          50
+        ],
+        [
+          0,
+          0,
+          41,
+          5,
+          50
+        ],
+        [
+          0,
+          0,
+          41,
+          5,
+          51
+        ],
+        [
+          0,
+          0,
+          41,
+          5,
+          52
+        ],
+        [
+          0,
+          0,
+          41,
+          5,
+          53
+        ],
+        [
+          0,
+          0,
+          42,
+          4,
+          49
+        ],
+        [
+          0,
+          0,
+          42,
+          4,
+          50
+        ],
+        [
+          0,
+          0,
+          42,
+          4,
+          51
+        ],
+        [
+          0,
+          0,
+          42,
+          4,
+          52
+        ],
+        [
+          0,
+          0,
+          42,
+          4,
+          53
+        ],
+        [
+          0,
+          0,
+          42,
+          4,
+          54
+        ],
+        [
+          0,
+          0,
+          42,
+          4,
+          55
+        ],
+        [
+          0,
+          0,
+          42,
+          4,
+          56
+        ],
+        [
+          0,
+          0,
+          42,
+          4,
+          57
+        ],
+        [
+          0,
+          0,
+          44,
+          3,
+          49
+        ],
+        [
+          0,
+          0,
+          44,
+          3,
+          50
+        ],
+        [
+          0,
+          0,
+          44,
+          3,
+          51
+        ],
+        [
+          0,
+          0,
+          44,
+          3,
+          52
+        ],
+        [
+          0,
+          0,
+          45,
+          2,
+          48
+        ],
+        [
+          0,
+          0,
+          45,
+          2,
+          49
+        ],
+        [
+          0,
+          0,
+          45,
+          2,
+          50
+        ],
+        [
+          0,
+          0,
+          45,
+          2,
+          51
+        ],
+        [
+          0,
+          0,
+          45,
+          2,
+          52
+        ],
+        [
+          0,
+          0,
+          45,
+          2,
+          53
+        ],
+        [
+          0,
+          0,
+          45,
+          2,
+          54
+        ],
+        [
+          0,
+          0,
+          46,
+          2,
+          48
+        ],
+        [
+          0,
+          0,
+          46,
+          2,
+          49
+        ],
+        [
+          0,
+          0,
+          47,
+          1,
+          48
+        ],
+        [
+          0,
+          0,
+          47,
+          1,
+          49
+        ],
+        [
+          0,
+          0,
+          47,
+          1,
+          50
+        ],
+        [
+          0,
+          0,
+          47,
+          1,
+          51
+        ],
+        [
+          0,
+          0,
+          48,
+          0,
+          47
+        ],
+        [
+          0,
+          0,
+          48,
+          0,
+          48
+        ],
+        [
+          0,
+          0,
+          48,
+          0,
+          49
+        ],
+        [
+          0,
+          0,
+          48,
+          0,
+          50
+        ],
+        [
+          0,
+          0,
+          48,
+          0,
+          51
+        ],
+        [
+          0,
+          0,
+          48,
+          0,
+          52
+        ],
+        [
+          0,
+          0,
+          48,
+          0,
+          53
+        ],
+        [
+          0,
+          0,
+          49,
+          0,
+          47
+        ],
+        [
+          0,
+          0,
+          49,
+          0,
+          48
+        ],
+        [
+          0,
+          0,
+          55,
+          56,
+          38
+        ],
+        [
+          0,
+          0,
+          56,
+          55,
+          38
+        ],
+        [
+          0,
+          0,
+          56,
+          55,
+          39
+        ],
+        [
+          0,
+          0,
+          56,
+          55,
+          40
+        ],
+        [
+          0,
+          0,
+          56,
+          55,
+          41
+        ],
+        [
+          0,
+          0,
+          60,
+          50,
+          39
+        ],
+        [
+          0,
+          0,
+          60,
+          50,
+          40
+        ],
+        [
+          0,
+          0,
+          61,
+          49,
+          39
+        ],
+        [
+          0,
+          0,
+          61,
+          49,
+          40
+        ],
+        [
+          0,
+          0,
+          61,
+          49,
+          41
+        ],
+        [
+          0,
+          0,
+          62,
+          48,
+          40
+        ],
+        [
+          0,
+          0,
+          62,
+          48,
+          41
+        ],
+        [
+          0,
+          0,
+          62,
+          48,
+          42
+        ],
+        [
+          0,
+          0,
+          62,
+          48,
+          43
+        ],
+        [
+          0,
+          0,
+          63,
+          46,
+          40
+        ],
+        [
+          0,
+          0,
+          63,
+          46,
+          41
+        ]
+      ],
+      "coordinates_sha256": "c81cce4d8bd0e544ee908a3e342c978c3a8bd1fee3c0aa93fdf5f4f81bab4c9d",
+      "inverted_out_of_bounds_count": 58,
+      "prior_out_of_bounds_count": 58
+    },
+    {
+      "bad_count": 0,
+      "bad_equals_inverted_out_of_bounds": true,
+      "bad_equals_prior_out_of_bounds": true,
+      "case_id": "stage19_val_case006",
+      "coordinates": [],
+      "coordinates_sha256": "732ca0ded9e52e27bb110d16d457a5218771fc99c749d182022870d80c4a3c54",
+      "inverted_out_of_bounds_count": 0,
+      "prior_out_of_bounds_count": 0
+    },
+    {
+      "bad_count": 0,
+      "bad_equals_inverted_out_of_bounds": true,
+      "bad_equals_prior_out_of_bounds": true,
+      "case_id": "stage19_val_case007",
+      "coordinates": [],
+      "coordinates_sha256": "732ca0ded9e52e27bb110d16d457a5218771fc99c749d182022870d80c4a3c54",
+      "inverted_out_of_bounds_count": 0,
+      "prior_out_of_bounds_count": 0
+    },
+    {
+      "bad_count": 0,
+      "bad_equals_inverted_out_of_bounds": true,
+      "bad_equals_prior_out_of_bounds": true,
+      "case_id": "stage19_val_case008",
+      "coordinates": [],
+      "coordinates_sha256": "732ca0ded9e52e27bb110d16d457a5218771fc99c749d182022870d80c4a3c54",
+      "inverted_out_of_bounds_count": 0,
+      "prior_out_of_bounds_count": 0
+    }
+  ],
+  "run_status": "completed",
+  "schema": "stage20_acoustic_condition_diagnostic_v1",
+  "target_metrics_used": false,
+  "truth_loaded": false
+}

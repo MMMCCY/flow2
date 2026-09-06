@@ -1,0 +1,60 @@
+{
+  "config": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/configs/cohort_v1.json",
+    "sha256": "fe779d2668d19698666f4768a4a328cfd643a5dca55a0d1480e7d6be9bcc6efd",
+    "size_bytes": 667
+  },
+  "created_at_utc": "2026-09-06T08:31:02.625329+00:00",
+  "full_parameters": {
+    "generator_reuse_required": "GENERATOR_REUSE_VALIDATED",
+    "parameter_sweep": false,
+    "schema": "stage20_cohort_v1",
+    "selection_uses_seismic_evidence_flow_or_downstream_metrics": false,
+    "status": "frozen_before_asset_generation",
+    "test": {
+      "accepted": 12,
+      "eligibility": "exact_full_structuralgeo_stage19r",
+      "max_candidates": 512,
+      "start": 220290001,
+      "step": 1
+    },
+    "train": {
+      "accepted": 64,
+      "reuse_registry": "experiments/stage19_learned_evidence_adapter/cohort_v2/train_registry.json"
+    },
+    "val": {
+      "accepted": 8,
+      "reuse_registry": "experiments/stage19_learned_evidence_adapter/cohort_v2/val_registry.json"
+    }
+  },
+  "git_branch": "main",
+  "git_head": "2284d7235cd62295d741c3982eb5063fe6577ac6",
+  "registries": {
+    "test": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/cohort/test_registry.json",
+      "sha256": "66dcdf32fd6d3edbbafa814824dbf03aacadcb00f1d057859879785e296c8882",
+      "size_bytes": 57656
+    },
+    "train": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/cohort/train_registry.json",
+      "sha256": "5637535d9eda8c73af06cae1961fc9658fcae00cbf90db48e92119cc024fb179",
+      "size_bytes": 272778
+    },
+    "val": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage20_continuous_impedance_adapter/cohort/val_registry.json",
+      "sha256": "707ab9d18d5ff4d0e6c8eaede4f2d6050306b1f644c3454138e93b2048c6050c",
+      "size_bytes": 33651
+    }
+  },
+  "run_status": "completed",
+  "runner_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage20/build_test_cohort.py",
+    "sha256": "71c8d3eefbfa646e51ef7a1867668e1c9b07d137db22b09b26c6bcb8ca59ab0a",
+    "size_bytes": 6889
+  },
+  "schema": "stage20_cohort_manifest_v1",
+  "selection_uses_seismic_evidence_flow_or_downstream_metrics": false,
+  "test_reused_from_stage19r": false,
+  "total_accepted": 84,
+  "train_val_exact_stage19r_reuse": true
+}
