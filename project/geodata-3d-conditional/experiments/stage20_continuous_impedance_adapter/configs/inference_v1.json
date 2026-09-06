@@ -1,0 +1,16 @@
+{
+  "schema": "stage20_inference_v1",
+  "status": "frozen_before_run",
+  "parameter_sweep": false,
+  "truth_loaded_by_runner": false,
+  "target_label": 9,
+  "source_seeds": [42,142,242],
+  "n_steps": 32,
+  "integrator": "fixed_euler_midpoint",
+  "arms": ["FLOW_ONLY", "ADAPTER_PRIOR_ONLY", "ADAPTER_CORRECT", "ADAPTER_WRONG_CASE"],
+  "adapter_scale": 1.0,
+  "max_residual_ratio": 0.25,
+  "wrong_case_mapping": "next_test_case_cyclic",
+  "wrong_case_mask_policy": "always_use_current_case_free_subsurface",
+  "expected_outputs": 144
+}

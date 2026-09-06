@@ -1,0 +1,43 @@
+{
+  "schema": "stage20_continuous_impedance_evidence_v1",
+  "status": "frozen_before_asset_generation",
+  "parameter_sweep": false,
+  "revision_reason": "unified_stage20_subsurface_raw_air_acoustic_semantics",
+  "acoustic_semantics": {
+    "mapper": "stage20_labels_to_acoustic",
+    "subsurface_raw_air": "neutral_rock_category(property_table)",
+    "outside_subsurface_raw_air": "frozen_phase4c_real_air"
+  },
+  "target_label": 9,
+  "phase4c": {
+    "acoustic_config": "experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+    "seismic_config": "experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+    "forward_closure_max_abs": 1e-7
+  },
+  "phase5a": {
+    "inversion_config": "experiments/stage5_acoustic_inversion/configs/model_based_log_impedance_v1.json",
+    "reuse_scope": "solver_only_no_fixed12_posterior"
+  },
+  "low_frequency_prior": {
+    "method": "well_xy_depthwise_idw_logz_slowness_v1",
+    "power": 2.0,
+    "distance_space": "xy_grid_index",
+    "vertical_mixing": false,
+    "exact_well_override": true,
+    "empty_valid_well_depth_policy": "nearest_valid_depth_zero_order_copy_deeper_tie_v1",
+    "whole_case_without_valid_well_depth_policy": "stop"
+  },
+  "normalization": {
+    "type": "global_nonair_codebook_logz_minus1_plus1",
+    "per_case": false,
+    "clamp": [-1.0, 1.0],
+    "runtime_mask": "current_free_subsurface"
+  },
+  "gate": {
+    "val_cases": 8,
+    "min_seismic_improved_cases": 6,
+    "require_negative_median_seismic_delta": true,
+    "min_logz_improved_cases": 6,
+    "require_negative_median_logz_delta": true
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "stage20_cohort_v1",
+  "status": "frozen_before_asset_generation",
+  "parameter_sweep": false,
+  "train": {
+    "reuse_registry": "experiments/stage19_learned_evidence_adapter/cohort_v2/train_registry.json",
+    "accepted": 64
+  },
+  "val": {
+    "reuse_registry": "experiments/stage19_learned_evidence_adapter/cohort_v2/val_registry.json",
+    "accepted": 8
+  },
+  "test": {
+    "accepted": 12,
+    "start": 220290001,
+    "step": 1,
+    "max_candidates": 512,
+    "eligibility": "exact_full_structuralgeo_stage19r"
+  },
+  "generator_reuse_required": "GENERATOR_REUSE_VALIDATED",
+  "selection_uses_seismic_evidence_flow_or_downstream_metrics": false
+}
