@@ -9,9 +9,9 @@ import torch
 
 import inference_runtime as runtime
 from guidance.residual_velocity_adapter import ResidualVelocityAdapter
-from guidance.seismic import hard_labels_to_acoustic
-from scripts.stage15.common import read_json
-from scripts.stage20 import audit_reuse, build_continuous_evidence, build_observations, common, diagnose_acoustic_conditions, evaluate, preflight_acoustic_semantics, run_inference, train_adapter
+from guidance.seismic import hard_labels_to_acoustic, tensor_sha256
+from scripts.stage15.common import read_json, write_json
+from scripts.stage20 import audit_reuse, build_continuous_evidence, build_observations, common, diagnose_acoustic_conditions, evaluate, formal_inference_provenance, preflight_acoustic_semantics, run_inference, train_adapter
 from scripts.stage20.acoustic_semantics import stage20_labels_to_acoustic
 
 
@@ -328,3 +328,186 @@ def test_nearest_logz_tie_uses_first_label_and_conditions_override():
 
 def test_case_first_median():
     assert evaluate.med([1, 100, 2]) == 2
+
+
+FORMAL_ARMS = ("FLOW_ONLY", "ADAPTER_PRIOR_ONLY", "ADAPTER_CORRECT", "ADAPTER_WRONG_CASE")
+
+
+def _fake_formal_inventory(tmp_path: Path):
+    case_ids = [f"case{index:03d}" for index in range(1, 13)]
+    seeds = [42, 142, 242]
+    records = []
+    for case_index, case_id in enumerate(case_ids):
+        wrong_id = case_ids[(case_index + 1) % len(case_ids)]
+        for seed in seeds:
+            for arm_index, arm in enumerate(FORMAL_ARMS):
+                output = tmp_path / case_id / str(seed) / arm / "decoded.pt"
+                output.parent.mkdir(parents=True, exist_ok=True)
+                tensor = torch.tensor([case_index, seed, arm_index], dtype=torch.int64)
+                torch.save(tensor, output)
+                source_id = wrong_id if arm == "ADAPTER_WRONG_CASE" else case_id
+                records.append({
+                    "case_id": case_id, "current_case_id": case_id, "source_seed": seed, "arm": arm,
+                    "initial_noise_sha256": f"noise-{case_id}-{seed}", "base_checkpoint_sha256": "base",
+                    "adapter_checkpoint_sha256": "adapter", "inference_config_sha256": "config",
+                    "runner_source_sha256": "runner", "condition_asset_sha256": f"condition-{case_id}",
+                    "evidence_asset_sha256": f"{'prior' if arm == 'ADAPTER_PRIOR_ONLY' else 'inverted'}-{source_id}",
+                    "evidence_source_case_id": source_id, "mask_source_case_id": case_id,
+                    "n_steps": 32, "adapter_scale": 0.0 if arm == "FLOW_ONLY" else 1.0,
+                    "residual_cap": 0.25, "hard_condition_violation_count": 0,
+                    "output_tensor_sha256": tensor_sha256(tensor), "output_file_sha256": runtime.file_sha256(output),
+                    "output_path": str(output.relative_to(tmp_path)),
+                })
+    validation = {
+        "expected_base_checkpoint_sha256": "base", "expected_adapter_checkpoint_sha256": "adapter",
+        "expected_inference_config_sha256": "config", "expected_runner_source_sha256": "runner",
+        "n_steps": 32, "residual_cap": 0.25,
+    }
+    return case_ids, seeds, records, validation
+
+
+def test_formal_output_inventory_exact_144_and_deterministic(tmp_path: Path):
+    case_ids, seeds, records, validation = _fake_formal_inventory(tmp_path)
+    index_asset = formal_inference_provenance.freeze_formal_output_index(
+        list(reversed(records)), run_dir=tmp_path, case_ids=case_ids, seeds=seeds,
+        arms=FORMAL_ARMS, validation=validation,
+    )
+    index = read_json(Path(index_asset["path"]))
+    assert index["formal_output_count"] == 144
+    assert [(row["case_id"], row["source_seed"], row["arm"]) for row in index["records"]] == [
+        (case_id, seed, arm) for case_id in case_ids for seed in seeds for arm in FORMAL_ARMS
+    ]
+    first = index["records"][0]
+    assert first["adapter_scale"] == 0.0 and first["n_steps"] == 32 and first["residual_cap"] == 0.25
+    assert first["output_file_sha256"] == runtime.file_sha256(tmp_path / first["output_path"])
+    assert first["output_tensor_sha256"] == tensor_sha256(runtime.load_tensor(tmp_path / first["output_path"]))
+
+
+@pytest.mark.parametrize("mutation", ["missing", "duplicate"])
+def test_formal_output_inventory_rejects_missing_and_duplicate(tmp_path: Path, mutation: str):
+    case_ids, seeds, records, validation = _fake_formal_inventory(tmp_path)
+    bad = records[:-1] if mutation == "missing" else records + [dict(records[0])]
+    with pytest.raises(RuntimeError, match=mutation):
+        formal_inference_provenance.validate_formal_output_records(
+            bad, run_dir=tmp_path, case_ids=case_ids, seeds=seeds, arms=FORMAL_ARMS, **validation
+        )
+
+
+def test_formal_output_inventory_rejects_altered_file_before_truth(tmp_path: Path):
+    case_ids, seeds, records, validation = _fake_formal_inventory(tmp_path)
+    torch.save(torch.tensor([999]), tmp_path / records[0]["output_path"])
+    with pytest.raises(RuntimeError, match="file SHA256 mismatch"):
+        formal_inference_provenance.validate_formal_output_records(
+            records, run_dir=tmp_path, case_ids=case_ids, seeds=seeds, arms=FORMAL_ARMS, **validation
+        )
+
+
+def test_hard_condition_violation_prevents_formal_freeze(tmp_path: Path):
+    case_ids, seeds, records, validation = _fake_formal_inventory(tmp_path)
+    records[0]["hard_condition_violation_count"] = 1
+    with pytest.raises(RuntimeError, match="STOP_STAGE20_HARD_CONDITION_VIOLATION"):
+        formal_inference_provenance.freeze_formal_output_index(
+            records, run_dir=tmp_path, case_ids=case_ids, seeds=seeds,
+            arms=FORMAL_ARMS, validation=validation,
+        )
+
+
+def test_runner_marks_complete_only_after_master_index_freeze():
+    source = inspect.getsource(run_inference.main)
+    assert source.index("index_asset = freeze_formal_output_index(") < source.index('"formal_inference_complete": not args.smoke')
+
+
+def _fake_frozen_formal_run(tmp_path: Path):
+    run_dir = tmp_path / "run"; run_dir.mkdir()
+    case_ids, seeds, records, _ = _fake_formal_inventory(run_dir)
+    asset_paths = {}
+    for name in ("base", "adapter", "config", "runner"):
+        path = tmp_path / name; path.write_text(name)
+        asset_paths[name] = path
+    hashes = {name: runtime.file_sha256(path) for name, path in asset_paths.items()}
+    for record in records:
+        record["base_checkpoint_sha256"] = hashes["base"]
+        record["adapter_checkpoint_sha256"] = hashes["adapter"]
+        record["inference_config_sha256"] = hashes["config"]
+        record["runner_source_sha256"] = hashes["runner"]
+    validation = {
+        "expected_base_checkpoint_sha256": hashes["base"],
+        "expected_adapter_checkpoint_sha256": hashes["adapter"],
+        "expected_inference_config_sha256": hashes["config"],
+        "expected_runner_source_sha256": hashes["runner"], "n_steps": 32, "residual_cap": 0.25,
+    }
+    index_asset = formal_inference_provenance.freeze_formal_output_index(
+        records, run_dir=run_dir, case_ids=case_ids, seeds=seeds, arms=FORMAL_ARMS, validation=validation
+    )
+    registry = {"schema": "stage20_test_inference_registry_v1", "run_status": "completed", "case_count": 12, "cases": []}
+    for case_id in case_ids:
+        registry["cases"].append({
+            "case_id": case_id, "condition_values": {"sha256": f"condition-{case_id}"},
+            "normalized_low_frequency_logz": {"sha256": f"prior-{case_id}"},
+            "normalized_inverted_logz": {"sha256": f"inverted-{case_id}"},
+        })
+    registry_path = tmp_path / "registry.json"; write_json(registry_path, registry)
+    manifest = {
+        "run_status": "completed", "formal_inference_complete": True, "formal_output_count": 144,
+        "truth_loaded_by_runner": False, "formal_output_index": index_asset,
+        "formal_output_index_sha256": index_asset["sha256"],
+        "base_checkpoint": runtime.asset_record(asset_paths["base"]),
+        "adapter_checkpoint": runtime.asset_record(asset_paths["adapter"]),
+        "inference_config": runtime.asset_record(asset_paths["config"]),
+        "runner_source": runtime.asset_record(asset_paths["runner"]),
+    }
+    write_json(run_dir / "run_manifest.json", manifest)
+    return run_dir, registry_path, validation
+
+
+def test_master_index_hash_mismatch_rejected_before_truth(tmp_path: Path):
+    run_dir, registry_path, validation = _fake_frozen_formal_run(tmp_path)
+    formal_inference_provenance.audit_frozen_formal_inference(
+        run_dir=run_dir, test_registry_path=registry_path,
+        expected_test_registry_sha256=runtime.file_sha256(registry_path), validation=validation,
+    )
+    index_path = run_dir / formal_inference_provenance.FORMAL_OUTPUT_INDEX_NAME
+    index_path.write_text(index_path.read_text() + "\n")
+    with pytest.raises(RuntimeError, match="STOP_STAGE20_RETROSPECTIVE_EVALUATION_FIREWALL"):
+        formal_inference_provenance.audit_frozen_formal_inference(
+            run_dir=run_dir, test_registry_path=registry_path,
+            expected_test_registry_sha256=runtime.file_sha256(registry_path), validation=validation,
+        )
+
+
+def test_formal_wrong_case_sources_scales_and_mask_contract(tmp_path: Path):
+    case_ids, seeds, records, validation = _fake_formal_inventory(tmp_path)
+    ordered = formal_inference_provenance.validate_formal_output_records(
+        records, run_dir=tmp_path, case_ids=case_ids, seeds=seeds, arms=FORMAL_ARMS, **validation
+    )
+    for row in ordered:
+        assert row["mask_source_case_id"] == row["current_case_id"]
+        assert row["adapter_scale"] == (0.0 if row["arm"] == "FLOW_ONLY" else 1.0)
+        assert (row["evidence_source_case_id"] != row["case_id"]) == (row["arm"] == "ADAPTER_WRONG_CASE")
+
+
+def test_evaluator_freeze_audit_precedes_any_truth_dereference():
+    source = inspect.getsource(evaluate.main)
+    assert source.index("audit_frozen_formal_inference(") < source.index('["truth_assets"]["truth"]')
+
+
+def test_scientific_decision_table_is_total_and_gate_g_has_priority():
+    keys = ("A_learned_continuous_evidence_coupling", "B_seismic_increment_beyond_boreholes", "C_case_specificity", "hard_physics", "volume", "global_geology_preservation", "hard_conditions")
+    gates = {key: True for key in keys}
+    assert evaluate.stage20_scientific_decision(gates) == "CONTINUOUS_IMPEDANCE_ADAPTER_VALIDATED"
+    expected = [
+        ("hard_conditions", "HARD_CONDITION_INTEGRITY_FAILED"),
+        ("A_learned_continuous_evidence_coupling", "CONTINUOUS_EVIDENCE_COUPLING_NOT_VALIDATED"),
+        ("B_seismic_increment_beyond_boreholes", "WELL_PRIOR_DOMINATED_NO_SEISMIC_INCREMENT"),
+        ("C_case_specificity", "CONTINUOUS_EVIDENCE_NOT_CASE_SPECIFIC"),
+        ("hard_physics", "GEOLOGY_IMPROVES_WITHOUT_HARD_SEISMIC_SUPPORT"),
+        ("volume", "CONTINUOUS_IMPEDANCE_ADAPTER_NOT_VALIDATED"),
+        ("global_geology_preservation", "CONTINUOUS_IMPEDANCE_ADAPTER_NOT_VALIDATED"),
+    ]
+    for key, decision in expected:
+        current = dict(gates); current[key] = False
+        assert evaluate.stage20_scientific_decision(current) == decision
+    all_bad = {key: False for key in keys}
+    assert evaluate.stage20_scientific_decision(all_bad) == "HARD_CONDITION_INTEGRITY_FAILED"
+    source = inspect.getsource(evaluate.stage20_scientific_decision)
+    assert "ENGINEERING_FAIL" not in source and "STAGE20_PARTIAL_OR_NEGATIVE" not in source

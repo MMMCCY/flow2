@@ -22,6 +22,7 @@ from guidance.residual_velocity_adapter import ResidualVelocityAdapter, fixed_eu
 from guidance.seismic import tensor_sha256
 from scripts.stage15.common import base_manifest, git_value, normalize_volume, read_json, refuse_nonempty, write_csv, write_json
 from scripts.stage20.common import CONFIG_DIR, ROOT, asset, freeze_base_model, require_config, resolve_project_path, validate_asset, runtime_evidence, wrong_case_evidence
+from scripts.stage20.formal_inference_provenance import freeze_formal_output_index
 from scripts.stage20.train_adapter import EXPECTED_EVIDENCE_GATE_SHA256, EXPECTED_EVIDENCE_REGISTRY_SHA256, EXPECTED_TRAINING_CONFIG_SHA256
 
 ARMS = ("FLOW_ONLY", "ADAPTER_PRIOR_ONLY", "ADAPTER_CORRECT", "ADAPTER_WRONG_CASE")
@@ -31,6 +32,7 @@ DEFAULT_INFERENCE_REGISTRY = ROOT / "evidence_fix2/test_inference_registry.json"
 DEFAULT_TRAINING_MANIFEST = ROOT / "checkpoints/formal_v1/training_manifest.json"
 DEFAULT_CHECKPOINT = ROOT / "checkpoints/formal_v1/adapter_checkpoint.pt"
 DEFAULT_OUTPUT = ROOT / "formal/inference_v1"
+PREVIOUS_RUNNER_SHA256 = "11e9f12c467ff27caae0bf1cdd17fe6805debbb73cb3722eca32773e9c9f28a6"
 
 
 def parse_args() -> argparse.Namespace:
@@ -195,10 +197,15 @@ def main() -> None:
     for parameter in adapter.parameters():
         parameter.requires_grad_(False)
     inputs = {str(case["case_id"]): _case_inputs(case) for case in cases}
+    case_records = {str(case["case_id"]): case for case in cases}
+    base_checkpoint_sha256 = runtime.file_sha256(checkpoint)
+    adapter_checkpoint_sha256 = runtime.file_sha256(args.adapter_checkpoint)
+    inference_config_sha256 = runtime.file_sha256(args.config)
+    runner_source_sha256 = runtime.file_sha256(Path(__file__))
 
     args.output_dir.mkdir(parents=True)
     manifest = base_manifest("stage20_inference_run_v1", Path(__file__), args.config)
-    manifest.update({"run_status": "running", "run_class": "engineering_smoke" if args.smoke else "formal_test_inference", "smoke_subset": args.smoke, "truth_loaded_by_runner": False, "wrong_case_mapping": wrong, "git_status_at_start": git_status_at_start, "inference_sources": {"runner": asset(Path(__file__)), "stage20_common": asset(Path(__file__).with_name("common.py")), "residual_velocity_adapter": asset(PROJECT_DIR / "guidance/residual_velocity_adapter.py")}, "training_config": asset(args.training_config), "inference_config": asset(args.config)})
+    manifest.update({"run_status": "running", "run_class": "engineering_smoke" if args.smoke else "formal_test_inference", "smoke_subset": args.smoke, "formal_inference_complete": False, "formal_output_count": 0, "truth_loaded_by_runner": False, "wrong_case_mapping": wrong, "git_status_at_start": git_status_at_start, "previous_runner_sha256": PREVIOUS_RUNNER_SHA256, "inference_sources": {"runner": asset(Path(__file__)), "stage20_common": asset(Path(__file__).with_name("common.py")), "residual_velocity_adapter": asset(PROJECT_DIR / "guidance/residual_velocity_adapter.py")}, "training_config": asset(args.training_config), "inference_config": asset(args.config)})
     write_json(args.output_dir / "run_manifest.json", manifest)
     rows, traces = [], []
     try:
@@ -230,11 +237,16 @@ def main() -> None:
                         raise RuntimeError(f"hard condition violation: {case_id}/{seed}/{arm}")
                     out = args.output_dir / case_id / f"seed_{seed}" / arm
                     out.mkdir(parents=True)
-                    torch.save(decoded, out / "decoded_geology.pt")
+                    output_path = out / "decoded_geology.pt"
+                    torch.save(decoded, output_path)
                     for item in trace:
                         traces.append({"case_id": case_id, "source_seed": int(seed), "arm": arm, **item})
                     input_q = q_wrong if arm == "ADAPTER_WRONG_CASE" else q_prior if arm == "ADAPTER_PRIOR_ONLY" else q_correct
-                    rows.append({"case_id": case_id, "source_seed": int(seed), "arm": arm, "initial_noise_sha256": initial_sha, "input_evidence_case_id": wrong_id if arm == "ADAPTER_WRONG_CASE" else case_id, "input_mask_case_id": case_id, "input_evidence_sha256": tensor_sha256(input_q.cpu()), "decoded_geology_sha256": tensor_sha256(decoded), "condition_violation_count": violations, "decoded_path": str((out / "decoded_geology.pt").relative_to(args.output_dir))})
+                    evidence_source_case_id = wrong_id if arm == "ADAPTER_WRONG_CASE" else case_id
+                    evidence_asset_record = case_records[evidence_source_case_id]["normalized_low_frequency_logz" if arm == "ADAPTER_PRIOR_ONLY" else "normalized_inverted_logz"]
+                    output_relative = str(output_path.relative_to(args.output_dir))
+                    output_tensor_sha256 = tensor_sha256(decoded)
+                    rows.append({"case_id": case_id, "current_case_id": case_id, "source_seed": int(seed), "arm": arm, "initial_noise_sha256": initial_sha, "base_checkpoint_sha256": base_checkpoint_sha256, "adapter_checkpoint_sha256": adapter_checkpoint_sha256, "inference_config_sha256": inference_config_sha256, "runner_source_sha256": runner_source_sha256, "condition_asset_sha256": case_records[case_id]["condition_values"]["sha256"], "condition_mask_asset_sha256": case_records[case_id]["condition_mask"]["sha256"], "subsurface_mask_asset_sha256": case_records[case_id]["subsurface_mask"]["sha256"], "evidence_asset_sha256": evidence_asset_record["sha256"], "evidence_source_case_id": evidence_source_case_id, "mask_source_case_id": case_id, "n_steps": int(cfg["n_steps"]), "adapter_scale": 0.0 if arm == "FLOW_ONLY" else float(cfg["adapter_scale"]), "residual_cap": float(cfg["max_residual_ratio"]), "hard_condition_violation_count": violations, "output_tensor_sha256": output_tensor_sha256, "output_file_sha256": runtime.file_sha256(output_path), "output_path": output_relative, "input_evidence_case_id": evidence_source_case_id, "input_mask_case_id": case_id, "input_evidence_sha256": tensor_sha256(input_q.cpu()), "decoded_geology_sha256": output_tensor_sha256, "condition_violation_count": violations, "decoded_path": output_relative})
                     print(f"Stage20 inference {case_id} seed={seed} arm={arm}", flush=True)
                 if args.smoke:
                     # Independent alpha-zero property path must match FLOW_ONLY exactly.
@@ -251,10 +263,17 @@ def main() -> None:
             raise RuntimeError("base model changed during inference")
         write_csv(args.output_dir / "sample_manifest.csv", rows)
         write_csv(args.output_dir / "sampling_trace.csv", traces)
-        manifest.update({"run_status": "completed", "output_count": len(rows), "executed_case_count": len(executed_cases), "source_seed_count": len(seeds), "all_condition_violations_zero": True, "base_model_unchanged": True, "base_model_hash_before": base_hash_before, "base_model_hash_after": base_hash_after, "model_load_report": model_report, "test_inference_registry": asset(registry_path), "training_manifest": asset(args.training_manifest), "adapter_checkpoint": asset(args.adapter_checkpoint), "truth_loaded_by_runner": False, "scale_zero_flow_equivalence_checked": bool(args.smoke), "wrong_case_value_source_validated": True, "current_case_mask_validated": True})
+        index_asset = None
+        if not args.smoke:
+            index_asset = freeze_formal_output_index(
+                rows, run_dir=args.output_dir,
+                case_ids=[str(case["case_id"]) for case in cases], seeds=[int(seed) for seed in seeds], arms=ARMS,
+                validation={"expected_base_checkpoint_sha256": base_checkpoint_sha256, "expected_adapter_checkpoint_sha256": adapter_checkpoint_sha256, "expected_inference_config_sha256": inference_config_sha256, "expected_runner_source_sha256": runner_source_sha256, "n_steps": int(cfg["n_steps"]), "residual_cap": float(cfg["max_residual_ratio"])},
+            )
+        manifest.update({"run_status": "completed", "output_count": len(rows), "formal_inference_complete": not args.smoke, "formal_output_count": len(rows) if not args.smoke else 0, "formal_output_index": index_asset, "formal_output_index_sha256": index_asset["sha256"] if index_asset else None, "executed_case_count": len(executed_cases), "source_seed_count": len(seeds), "all_condition_violations_zero": True, "base_model_unchanged": True, "base_model_hash_before": base_hash_before, "base_model_hash_after": base_hash_after, "model_load_report": model_report, "test_inference_registry": asset(registry_path), "training_manifest": asset(args.training_manifest), "base_checkpoint": asset(checkpoint), "adapter_checkpoint": asset(args.adapter_checkpoint), "truth_loaded_by_runner": False, "scale_zero_flow_equivalence_checked": bool(args.smoke), "wrong_case_value_source_validated": True, "current_case_mask_validated": True})
         write_json(args.output_dir / "run_manifest.json", manifest)
     except Exception as exc:
-        manifest.update({"run_status": "failed", "error": f"{type(exc).__name__}: {exc}"})
+        manifest.update({"run_status": "failed", "formal_inference_complete": False, "formal_output_count": 0, "error": f"{type(exc).__name__}: {exc}"})
         write_json(args.output_dir / "run_manifest.json", manifest)
         raise
 

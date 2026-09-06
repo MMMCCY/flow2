@@ -23,9 +23,9 @@ from guidance.probability_evaluation import sample_hard_metrics
 from guidance.probability_volume import build_target_mask, dilate_mask
 from guidance.seismic import seismic_operator_from_config, tensor_sha256
 from scripts.stage15.common import normalize_volume, read_json, refuse_nonempty, write_csv, write_json
-from scripts.stage17.common import read_csv
 from scripts.stage20.acoustic_semantics import stage20_labels_to_acoustic
 from scripts.stage20.common import CONFIG_DIR, ROOT, load_codebook, require_config, resolve_project_path, validate_asset
+from scripts.stage20.formal_inference_provenance import audit_frozen_formal_inference
 from scripts.stage20.run_inference import ARMS
 
 DEFAULT_CONFIG = CONFIG_DIR / "inference_v1.json"
@@ -36,6 +36,9 @@ DEFAULT_RUN = ROOT / "formal/inference_v1"
 DEFAULT_TRAINING = ROOT / "checkpoints/formal_v1"
 DEFAULT_GATE = ROOT / "evidence_audit_fix2/summary.json"
 DEFAULT_OUTPUT = ROOT / "reports/formal_v1"
+DEFAULT_TEST_INFERENCE_REGISTRY = ROOT / "evidence_fix2/test_inference_registry.json"
+FROZEN_TEST_INFERENCE_REGISTRY_SHA256 = "11c201720328eab972ecebed11b0c31b2348733bd2cce86d280a6e7f2649cba3"
+FROZEN_ADAPTER_CHECKPOINT_SHA256 = "f8b71d0889ec8f76f033583be3b94f3041da888c0b910e92c8f686e24a093213"
 
 METRICS = ("target_iou", "target_precision", "target_recall", "predicted_target_volume", "target_absolute_volume_error_fraction", "target_centroid_distance", "global_voxel_accuracy", "truth_present_mean_iou", "target_connected_components", "largest_component_fraction", "target_top4_component_mass_fraction", "target_top8_component_mass_fraction", "hard_seismic_mse", "hard_seismic_rmse", "hard_seismic_mae")
 
@@ -63,6 +66,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--evidence-config", type=Path, default=DEFAULT_EVIDENCE_CONFIG)
     parser.add_argument("--run-dir", type=Path, default=DEFAULT_RUN)
     parser.add_argument("--evaluation-registry", type=Path, default=DEFAULT_EVALUATION_REGISTRY)
+    parser.add_argument("--test-inference-registry", type=Path, default=DEFAULT_TEST_INFERENCE_REGISTRY)
     parser.add_argument("--training-dir", type=Path, default=DEFAULT_TRAINING)
     parser.add_argument("--evidence-gate", type=Path, default=DEFAULT_GATE)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
@@ -75,6 +79,23 @@ def med(values) -> float:
     return float(statistics.median(finite)) if finite else float("nan")
 
 
+def stage20_scientific_decision(gates: dict[str, bool]) -> str:
+    """Frozen pre-unblinding A-G decision order."""
+    if not gates["hard_conditions"]:
+        return "HARD_CONDITION_INTEGRITY_FAILED"
+    if not gates["A_learned_continuous_evidence_coupling"]:
+        return "CONTINUOUS_EVIDENCE_COUPLING_NOT_VALIDATED"
+    if not gates["B_seismic_increment_beyond_boreholes"]:
+        return "WELL_PRIOR_DOMINATED_NO_SEISMIC_INCREMENT"
+    if not gates["C_case_specificity"]:
+        return "CONTINUOUS_EVIDENCE_NOT_CASE_SPECIFIC"
+    if not gates["hard_physics"]:
+        return "GEOLOGY_IMPROVES_WITHOUT_HARD_SEISMIC_SUPPORT"
+    if not gates["volume"] or not gates["global_geology_preservation"]:
+        return "CONTINUOUS_IMPEDANCE_ADAPTER_NOT_VALIDATED"
+    return "CONTINUOUS_IMPEDANCE_ADAPTER_VALIDATED"
+
+
 def main() -> None:
     args = parse_args(); refuse_nonempty(args.output_dir)
     cfg = require_config(args.config, "stage20_inference_v1")
@@ -83,11 +104,23 @@ def main() -> None:
     run_manifest = read_json(args.run_dir / "run_manifest.json")
     training_manifest = read_json(args.training_dir / "training_manifest.json")
     evidence_gate = read_json(args.evidence_gate)
-    records = read_csv(args.run_dir / "sample_manifest.csv")
-    if run_manifest.get("run_status") != "completed" or run_manifest.get("smoke_subset") is not False or len(records) != 144:
-        raise ValueError("Stage20 formal inference is incomplete")
-    if run_manifest.get("truth_loaded_by_runner") is not False:
-        raise ValueError("Stage19 inference truth firewall failed")
+    if not training_manifest.get("base_model_unchanged") or not training_manifest.get("base_gradients_absent") or training_manifest.get("adapter_parameter_count") != 54003 or evidence_gate.get("adapter_training_authorized") is not True:
+        raise RuntimeError("STOP_STAGE20_RETROSPECTIVE_EVALUATION_FIREWALL: upstream engineering/evidence guard")
+    runner_path = Path(__file__).with_name("run_inference.py")
+    run_manifest, records = audit_frozen_formal_inference(
+        run_dir=args.run_dir,
+        test_registry_path=args.test_inference_registry,
+        expected_test_registry_sha256=FROZEN_TEST_INFERENCE_REGISTRY_SHA256,
+        validation={
+            "expected_base_checkpoint_sha256": training_cfg["base_model"]["checkpoint_sha256"],
+            "expected_adapter_checkpoint_sha256": FROZEN_ADAPTER_CHECKPOINT_SHA256,
+            "expected_inference_config_sha256": runtime.file_sha256(args.config),
+            "expected_runner_source_sha256": runtime.file_sha256(runner_path),
+            "n_steps": int(cfg["n_steps"]),
+            "residual_cap": float(cfg["max_residual_ratio"]),
+        },
+    )
+    # TEST truth may be dereferenced only below this completed freeze audit.
     registry = read_json(args.evaluation_registry)
     if registry.get("schema") != "stage20_evidence_registry_v1" or registry.get("run_status") != "completed":
         raise ValueError("invalid full evaluation registry")
@@ -106,8 +139,8 @@ def main() -> None:
     for record in records:
         case_id, seed, arm = record["case_id"], int(record["source_seed"]), record["arm"]
         case = case_index[case_id]; obs = case["observation_assets"]
-        decoded = normalize_volume(runtime.load_tensor(args.run_dir / record["decoded_path"]), "decoded").long()
-        if tensor_sha256(decoded) != record["decoded_geology_sha256"]:
+        decoded = normalize_volume(runtime.load_tensor(args.run_dir / record["output_path"]), "decoded").long()
+        if tensor_sha256(decoded) != record["output_tensor_sha256"]:
             raise ValueError(f"decoded hash mismatch: {case_id}/{seed}/{arm}")
         truth = normalize_volume(runtime.load_tensor(validate_asset(full_index[case_id]["truth_assets"]["truth"], f"{case_id}/truth")), "truth").long()
         support = normalize_volume(runtime.load_tensor(validate_asset(obs["subsurface_mask"], f"{case_id}/support")), "support").bool()
@@ -124,7 +157,8 @@ def main() -> None:
         rows.append(metrics)
         class_rows.extend({"case_id": case_id, "source_seed": seed, "arm": arm, **item} for item in per_class_hard_metrics(decoded, truth, 0))
         print(f"Stage20 evaluation {case_id} seed={seed} arm={arm}", flush=True)
-    # Deterministic property-only nearest-logZ diagnostic, once per TEST case.
+    formal_rows = list(rows)
+    # Deterministic property-only nearest-logZ diagnostic, once per TEST case, after freeze authorization.
     property_rows = []
     for case in cases:
         case_id = str(case["case_id"]); obs = case["observation_assets"]
@@ -181,22 +215,9 @@ def main() -> None:
         "hard_physics": physics_count >= 8 and physics_delta < 0,
         "volume": cross("ADAPTER_CORRECT", "target_absolute_volume_error_fraction") < cross("FLOW_ONLY", "target_absolute_volume_error_fraction"),
         "global_geology_preservation": global_delta >= -0.01,
-        "hard_conditions": all(int(row["condition_violation_count"]) == 0 for row in rows),
+        "hard_conditions": all(int(row["condition_violation_count"]) == 0 for row in formal_rows),
     }
-    if not gates["engineering"]:
-        decision = "ENGINEERING_FAIL"
-    elif not gates["A_learned_continuous_evidence_coupling"]:
-        decision = "CONTINUOUS_EVIDENCE_COUPLING_NOT_VALIDATED"
-    elif not gates["B_seismic_increment_beyond_boreholes"]:
-        decision = "WELL_PRIOR_DOMINATED_NO_SEISMIC_INCREMENT"
-    elif not gates["C_case_specificity"]:
-        decision = "CONTINUOUS_EVIDENCE_NOT_CASE_SPECIFIC"
-    elif all(gates.values()):
-        decision = "CONTINUOUS_IMPEDANCE_ADAPTER_VALIDATED"
-    elif not gates["hard_physics"]:
-        decision = "GEOLOGY_IMPROVES_WITHOUT_HARD_SEISMIC_SUPPORT"
-    else:
-        decision = "STAGE20_PARTIAL_OR_NEGATIVE"
+    decision = stage20_scientific_decision(gates)
     cross_rows = [{"arm": arm, **{metric: cross(arm, metric) for metric in METRICS}} for arm in ARMS]
     cross_rows.append({"arm": "PROPERTY_ONLY_NEAREST_LOGZ", **{metric: med(row[metric] for row in property_rows) for metric in METRICS}})
     summary = {"schema": "stage20_evaluation_v1", "run_status": "completed", "primary_statistical_unit": "independent_geology_case", "case_count": 12, "source_seeds_per_case": 3, "formal_output_count": 144, "gates": gates, "gate_diagnostics": {"learned_iou_positive_cases": learned_count, "median_delta_target_iou_correct_minus_flow": learned_delta, "correct_gt_prior_only_cases": correct_prior_count, "median_delta_target_iou_correct_minus_prior_only": correct_prior_delta, "correct_gt_wrong_cases": correct_wrong_count, "median_delta_target_iou_correct_minus_wrong": correct_wrong_delta, "hard_rmse_improved_cases": physics_count, "median_delta_hard_seismic_rmse": physics_delta, "median_delta_truth_present_mean_iou": global_delta}, "machine_decision": decision, "mechanism_boundary": "noiseless_inverse_crime_multiclass_acoustic_upper_bound", "field_generalization_proven": False, "exact_posterior_claimed": False, "stop_after_stage20": True}
