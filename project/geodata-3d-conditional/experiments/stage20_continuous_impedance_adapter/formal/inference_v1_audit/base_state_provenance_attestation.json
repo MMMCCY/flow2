@@ -1,0 +1,82 @@
+{
+  "schema": "stage20_formal_inference_base_state_provenance_attestation_v1",
+  "created_at_utc": "2026-09-07T02:44:04Z",
+  "machine_decision": "STAGE20_FORMAL_INFERENCE_FROZEN",
+  "acceptance_basis": "pre-unblinding post-run provenance attestation",
+  "original_formal_inference": {
+    "run_manifest_path": "experiments/stage20_continuous_impedance_adapter/formal/inference_v1/run_manifest.json",
+    "run_manifest_sha256": "12bbde73d548de8ff5bf46a58a47bdb63bfcb9c9651b3138981347faa3eb401d",
+    "formal_output_index_path": "experiments/stage20_continuous_impedance_adapter/formal/inference_v1/formal_output_index.json",
+    "formal_output_index_sha256": "0f1f6534423a0fc600a23fd4d84fba4bd10ecbecc60f2fe33cdf6ebf408d6c7e",
+    "formal_output_count": 144,
+    "git_head": "24abcd29224976c44cfebe72f7fa7f66dbcc32b0",
+    "runner_sha256": "1bebc207108e6850a97784ca01f26c33ff64413b2c555ab4b3b6c48eae15fe3d",
+    "base_model_hash_before": "e623079c4e3fa95a64195e2e3470ca0f8ab93f6b743c634bce8d42fb1b30f244",
+    "base_model_hash_after": "e623079c4e3fa95a64195e2e3470ca0f8ab93f6b743c634bce8d42fb1b30f244",
+    "base_model_unchanged": true,
+    "truth_loaded_by_runner": false,
+    "all_condition_violations_zero": true
+  },
+  "frozen_assets": {
+    "base_checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+    "adapter_checkpoint_sha256": "f8b71d0889ec8f76f033583be3b94f3041da888c0b910e92c8f686e24a093213",
+    "inference_config_sha256": "41c38912b1d49335e3e4ac85a39d86d6ee1d5e0064adbd924a9862d8ae0b88d8",
+    "test_inference_registry_sha256": "11c201720328eab972ecebed11b0c31b2348733bd2cce86d280a6e7f2649cba3"
+  },
+  "historical_formal_training_provenance": {
+    "training_manifest_sha256": "0add2f3ce80b1ea370e9dbf9f3c3a3ce8f9b383ff9ffd3dce4978aaeebc9665a",
+    "checkpoint_audit_sha256": "92920f04b5f0e6e954e0dad725a4e47e46b7d933176f27aa9be93e2c37d853f2",
+    "base_parameter_hash": "e623079c4e3fa95a64195e2e3470ca0f8ab93f6b743c634bce8d42fb1b30f244",
+    "base_state_dict_hash": "10d2181fe3eeeb406afc3da5e78ded64e9f92abfb2b3c352ee57e60e06da9b68",
+    "state_dict_tensor_count": 412,
+    "model_parameter_tensor_count": 412
+  },
+  "independent_reconstruction": {
+    "model_architecture": "model_train_sh_inference_cond.Geo3DStochInterp",
+    "weight_source": "ema",
+    "ema_applied": true,
+    "eval_mode": true,
+    "sampling_executed": false,
+    "test_evidence_loaded": false,
+    "test_condition_loaded": false,
+    "test_truth_loaded": false,
+    "loaded_base_model_hash": "e623079c4e3fa95a64195e2e3470ca0f8ab93f6b743c634bce8d42fb1b30f244",
+    "loaded_base_state_dict_hash": "10d2181fe3eeeb406afc3da5e78ded64e9f92abfb2b3c352ee57e60e06da9b68",
+    "parameter_tensor_count": 412,
+    "state_dict_tensor_count": 412,
+    "persistent_nonparameter_state_keys": [],
+    "parameter_keys_missing_from_state_dict": [],
+    "parameter_state_dict_exact_key_equivalence": true
+  },
+  "original_output_reaudit": {
+    "truth_blind_provenance_helper_used": true,
+    "formal_output_count": 144,
+    "unique_inventory_count": 144,
+    "output_inventory_and_hashes_valid": true,
+    "output_file_hashes_valid": true,
+    "output_tensor_hashes_valid": true,
+    "hard_condition_violations_total": 0,
+    "paired_noise_group_count": 36,
+    "paired_noise_valid": true,
+    "wrong_case_mapping_valid": true,
+    "current_case_mask_valid": true,
+    "truth_firewall_valid": true
+  },
+  "logical_attestation": {
+    "original_runtime_state_dict_hash_fields_present": false,
+    "missing_runtime_fields_fabricated": false,
+    "parameter_hash_covers_all_persistent_state": true,
+    "classification": "redundant logging omission",
+    "unverified_model_mutation": false
+  },
+  "declarations": {
+    "original_outputs_modified": false,
+    "formal_inference_rerun": false,
+    "original_run_manifest_modified": false,
+    "formal_output_index_modified": false,
+    "retrospective_evaluator_run": false,
+    "test_truth_loaded": false,
+    "test_scientific_metrics_inspected": false,
+    "test_tuning_performed": false
+  }
+}

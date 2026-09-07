@@ -1,0 +1,35 @@
+{
+  "case_count": 12,
+  "exact_posterior_claimed": false,
+  "field_generalization_proven": false,
+  "formal_output_count": 144,
+  "gate_diagnostics": {
+    "correct_gt_prior_only_cases": 9,
+    "correct_gt_wrong_cases": 6,
+    "hard_rmse_improved_cases": 0,
+    "learned_iou_positive_cases": 2,
+    "median_delta_hard_seismic_rmse": 0.017482895495604698,
+    "median_delta_target_iou_correct_minus_flow": -0.0424967799857388,
+    "median_delta_target_iou_correct_minus_prior_only": 3.039135659498038e-05,
+    "median_delta_target_iou_correct_minus_wrong": 0.0008557386627490037,
+    "median_delta_truth_present_mean_iou": -0.058004602789878845
+  },
+  "gates": {
+    "A_learned_continuous_evidence_coupling": false,
+    "B_seismic_increment_beyond_boreholes": false,
+    "C_case_specificity": false,
+    "engineering": true,
+    "evidence": true,
+    "global_geology_preservation": false,
+    "hard_conditions": true,
+    "hard_physics": false,
+    "volume": false
+  },
+  "machine_decision": "CONTINUOUS_EVIDENCE_COUPLING_NOT_VALIDATED",
+  "mechanism_boundary": "noiseless_inverse_crime_multiclass_acoustic_upper_bound",
+  "primary_statistical_unit": "independent_geology_case",
+  "run_status": "completed",
+  "schema": "stage20_evaluation_v1",
+  "source_seeds_per_case": 3,
+  "stop_after_stage20": true
+}
