@@ -1,0 +1,101 @@
+{
+  "decision_text": "SCREEN CLOSED: no nonzero Gaussian blur passed the complete n=1 gate",
+  "is_measured_geophysics": false,
+  "levels": [
+    {
+      "delta_global_mean_iou": -0.0027327686548233032,
+      "delta_global_voxel_accuracy": 0.041310012340545654,
+      "delta_hard_observation_loss": -1.0173290967941284,
+      "delta_truth_present_mean_iou": 0.0675584077835083,
+      "final_churn_fraction": 0.008838653564453125,
+      "improved_truth_present_classes": 6,
+      "level": "identity_anchor_v1",
+      "major_component_mean_recall": 0.4984224052720768,
+      "major_component_min_recall": 0.3748006379585327,
+      "order": 0,
+      "passed": true,
+      "report": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage3_spatial_property/reports/identity_anchor_v1/seed42_n1_s32_a025_c025_fix1/summary.json",
+      "role": "implementation_anchor",
+      "target_iou": 0.4881115925182289,
+      "target_precision": 0.9032068830660931,
+      "target_recall": 0.5150535236396075
+    },
+    {
+      "delta_global_mean_iou": -0.015157759189605713,
+      "delta_global_voxel_accuracy": 0.031241893768310547,
+      "delta_hard_observation_loss": -1.086697518825531,
+      "delta_truth_present_mean_iou": 0.04581466317176819,
+      "final_churn_fraction": 0.012889862060546875,
+      "improved_truth_present_classes": 5,
+      "level": "gaussian_sigma1_v1",
+      "major_component_mean_recall": 0.3981041795005967,
+      "major_component_min_recall": 0.31738437001594894,
+      "order": 1,
+      "passed": false,
+      "report": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage3_spatial_property/reports/gaussian_sigma1_v1/seed42_n1_s32_a025_c025/summary.json",
+      "role": "primary_screen",
+      "target_iou": 0.33567218635980917,
+      "target_precision": 0.6758334902994915,
+      "target_recall": 0.4000892060660125
+    },
+    {
+      "delta_global_mean_iou": -0.025769591331481934,
+      "delta_global_voxel_accuracy": 0.021700263023376465,
+      "delta_hard_observation_loss": -1.0466454029083252,
+      "delta_truth_present_mean_iou": 0.027243971824645996,
+      "final_churn_fraction": 0.012298583984375,
+      "improved_truth_present_classes": 5,
+      "level": "gaussian_sigma2_v1",
+      "major_component_mean_recall": 0.25841106363999505,
+      "major_component_min_recall": 0.17065390749601275,
+      "order": 2,
+      "passed": false,
+      "report": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage3_spatial_property/reports/gaussian_sigma2_v1/seed42_n1_s32_a025_c025/summary.json",
+      "role": "primary_screen",
+      "target_iou": 0.2064329027155286,
+      "target_precision": 0.4934873949579832,
+      "target_recall": 0.26193131132917036
+    },
+    {
+      "delta_global_mean_iou": -0.0346376895904541,
+      "delta_global_voxel_accuracy": 0.012766063213348389,
+      "delta_hard_observation_loss": -0.9979638457298279,
+      "delta_truth_present_mean_iou": 0.011724799871444702,
+      "final_churn_fraction": 0.01080322265625,
+      "improved_truth_present_classes": 4,
+      "level": "gaussian_sigma4_v1",
+      "major_component_mean_recall": 0.13046233248107833,
+      "major_component_min_recall": 0.05901116427432217,
+      "order": 3,
+      "passed": false,
+      "report": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage3_spatial_property/reports/gaussian_sigma4_v1/seed42_n1_s32_a025_c025/summary.json",
+      "role": "primary_screen",
+      "target_iou": 0.10257714479484571,
+      "target_precision": 0.2996532937097573,
+      "target_recall": 0.13492417484388938
+    }
+  ],
+  "limitations": [
+    "the screen contains one sample per level",
+    "identity is the only passing level and is not spatial degradation",
+    "the distinct Phase-2a codebook remains truth-derived and label-9 distinctive",
+    "continuous observation loss is insufficient for promotion"
+  ],
+  "manifest": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage3_spatial_property/configs/gaussian_sweep_manifest_v1.json",
+  "manifest_sha256": "253520108511f3daf21c843df359c2ce44a963dd597e8ad2e48c3256a1b3f53f",
+  "monotonic": {
+    "major_component_mean_recall": true,
+    "target_iou": true,
+    "target_precision": true,
+    "target_recall": true
+  },
+  "promotion": {
+    "bracket_levels": [
+      "identity_anchor_v1",
+      "gaussian_sigma1_v1"
+    ],
+    "selected_level": "identity_anchor_v1",
+    "status": "no_nonzero_blur_passed"
+  },
+  "scope": "truth-derived Phase-3 Gaussian spatial-resolution n=1 screen"
+}

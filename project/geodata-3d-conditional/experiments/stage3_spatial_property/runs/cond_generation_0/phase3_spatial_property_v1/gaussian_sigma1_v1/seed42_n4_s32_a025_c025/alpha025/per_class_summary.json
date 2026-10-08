@@ -1,0 +1,494 @@
+{
+  "classes": {
+    "0": {
+      "metrics": {
+        "absolute_volume_error_fraction": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null
+        },
+        "iou": {
+          "count": 4,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0
+        },
+        "precision": {
+          "count": 4,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0
+        },
+        "predicted_volume": {
+          "count": 4,
+          "max": 671.0,
+          "mean": 475.0,
+          "min": 259.0
+        },
+        "recall": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null
+        }
+      },
+      "truth_present": false
+    },
+    "1": {
+      "metrics": {
+        "absolute_volume_error_fraction": {
+          "count": 4,
+          "max": 0.2201532922492435,
+          "mean": 0.18654054292845626,
+          "min": 0.15501513043094117
+        },
+        "iou": {
+          "count": 4,
+          "max": 0.5027192508553935,
+          "mean": 0.46674467105615325,
+          "min": 0.43896210578949246
+        },
+        "precision": {
+          "count": 4,
+          "max": 0.7313022293243916,
+          "mean": 0.709191490818129,
+          "min": 0.6955169258920403
+        },
+        "predicted_volume": {
+          "count": 4,
+          "max": 38255.0,
+          "mean": 36827.75,
+          "min": 35306.0
+        },
+        "recall": {
+          "count": 4,
+          "max": 0.6166147593488392,
+          "mean": 0.5770326684779008,
+          "min": 0.5429505444746316
+        }
+      },
+      "truth_present": true
+    },
+    "10": {
+      "metrics": {
+        "absolute_volume_error_fraction": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null
+        },
+        "iou": {
+          "count": 4,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0
+        },
+        "precision": {
+          "count": 4,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0
+        },
+        "predicted_volume": {
+          "count": 4,
+          "max": 124.0,
+          "mean": 90.75,
+          "min": 75.0
+        },
+        "recall": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null
+        }
+      },
+      "truth_present": false
+    },
+    "11": {
+      "metrics": {
+        "absolute_volume_error_fraction": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null
+        },
+        "iou": {
+          "count": 4,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0
+        },
+        "precision": {
+          "count": 4,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0
+        },
+        "predicted_volume": {
+          "count": 4,
+          "max": 75.0,
+          "mean": 49.75,
+          "min": 37.0
+        },
+        "recall": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null
+        }
+      },
+      "truth_present": false
+    },
+    "12": {
+      "metrics": {
+        "absolute_volume_error_fraction": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null
+        },
+        "iou": {
+          "count": 4,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0
+        },
+        "precision": {
+          "count": 4,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0
+        },
+        "predicted_volume": {
+          "count": 4,
+          "max": 12.0,
+          "mean": 10.5,
+          "min": 8.0
+        },
+        "recall": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null
+        }
+      },
+      "truth_present": false
+    },
+    "13": {
+      "metrics": {
+        "absolute_volume_error_fraction": {
+          "count": 4,
+          "max": 0.4,
+          "mean": 0.3666666666666667,
+          "min": 0.3333333333333333
+        },
+        "iou": {
+          "count": 4,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0
+        },
+        "precision": {
+          "count": 4,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0
+        },
+        "predicted_volume": {
+          "count": 4,
+          "max": 21.0,
+          "mean": 12.5,
+          "min": 9.0
+        },
+        "recall": {
+          "count": 4,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0
+        }
+      },
+      "truth_present": true
+    },
+    "2": {
+      "metrics": {
+        "absolute_volume_error_fraction": {
+          "count": 4,
+          "max": 0.09755301794453507,
+          "mean": 0.058024061990212074,
+          "min": 0.028221859706362155
+        },
+        "iou": {
+          "count": 4,
+          "max": 0.7082173721986231,
+          "mean": 0.6927442398263078,
+          "min": 0.6739650924737153
+        },
+        "precision": {
+          "count": 4,
+          "max": 0.8740057845263919,
+          "mean": 0.844138973810721,
+          "min": 0.8187758199140038
+        },
+        "predicted_volume": {
+          "count": 4,
+          "max": 23828.0,
+          "mean": 23097.25,
+          "min": 22128.0
+        },
+        "recall": {
+          "count": 4,
+          "max": 0.8097879282218597,
+          "mean": 0.7945962479608484,
+          "min": 0.7877243066884176
+        }
+      },
+      "truth_present": true
+    },
+    "3": {
+      "metrics": {
+        "absolute_volume_error_fraction": {
+          "count": 4,
+          "max": 0.6021468382302346,
+          "mean": 0.47901328012110367,
+          "min": 0.2627124475332003
+        },
+        "iou": {
+          "count": 4,
+          "max": 0.23016955759111285,
+          "mean": 0.19747983320830956,
+          "min": 0.16158728343530218
+        },
+        "precision": {
+          "count": 4,
+          "max": 0.5219997275575534,
+          "mean": 0.4903514222550959,
+          "min": 0.44087727484834344
+        },
+        "predicted_volume": {
+          "count": 4,
+          "max": 10715.0,
+          "mean": 7571.5,
+          "min": 5782.0
+        },
+        "recall": {
+          "count": 4,
+          "max": 0.3250533269111677,
+          "mean": 0.2523395031996147,
+          "min": 0.19445400123856052
+        }
+      },
+      "truth_present": true
+    },
+    "4": {
+      "metrics": {
+        "absolute_volume_error_fraction": {
+          "count": 4,
+          "max": 0.2991558379967751,
+          "mean": 0.2617342583433829,
+          "min": 0.24297773742903211
+        },
+        "iou": {
+          "count": 4,
+          "max": 0.5843137254901961,
+          "mean": 0.5547866630593252,
+          "min": 0.5349964966626102
+        },
+        "precision": {
+          "count": 4,
+          "max": 0.6526976710228517,
+          "mean": 0.6394727800464894,
+          "min": 0.6260181019881981
+        },
+        "predicted_volume": {
+          "count": 4,
+          "max": 95879.0,
+          "mean": 93117.25,
+          "min": 91733.0
+        },
+        "recall": {
+          "count": 4,
+          "max": 0.8479559897562363,
+          "mean": 0.8069877101936288,
+          "min": 0.7863037086218344
+        }
+      },
+      "truth_present": true
+    },
+    "5": {
+      "metrics": {
+        "absolute_volume_error_fraction": {
+          "count": 4,
+          "max": 0.7355835361337425,
+          "mean": 0.6276584488413925,
+          "min": 0.3852502380700455
+        },
+        "iou": {
+          "count": 4,
+          "max": 0.29900887403480464,
+          "mean": 0.2788431983748721,
+          "min": 0.26459438968915844
+        },
+        "precision": {
+          "count": 4,
+          "max": 0.39634891536816375,
+          "mean": 0.35337702969888124,
+          "min": 0.32978723404255317
+        },
+        "predicted_volume": {
+          "count": 4,
+          "max": 32806.0,
+          "mean": 30766.0,
+          "min": 26184.0
+        },
+        "recall": {
+          "count": 4,
+          "max": 0.606496667019363,
+          "mean": 0.5717252142630409,
+          "min": 0.5490424293725532
+        }
+      },
+      "truth_present": true
+    },
+    "6": {
+      "metrics": {
+        "absolute_volume_error_fraction": {
+          "count": 4,
+          "max": 0.9970544918998527,
+          "mean": 0.9901888590487742,
+          "min": 0.9796413410725114
+        },
+        "iou": {
+          "count": 4,
+          "max": 0.013858999741757768,
+          "mean": 0.006575999084756945,
+          "min": 0.002598077422707197
+        },
+        "precision": {
+          "count": 4,
+          "max": 0.8823529411764706,
+          "mean": 0.7177934994332202,
+          "min": 0.4954954954954955
+        },
+        "predicted_volume": {
+          "count": 4,
+          "max": 235.0,
+          "mean": 113.25,
+          "min": 34.0
+        },
+        "recall": {
+          "count": 4,
+          "max": 0.013947847180109158,
+          "mean": 0.006605735077536169,
+          "min": 0.0025989777354240664
+        }
+      },
+      "truth_present": true
+    },
+    "7": {
+      "metrics": {
+        "absolute_volume_error_fraction": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null
+        },
+        "iou": {
+          "count": 4,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0
+        },
+        "precision": {
+          "count": 4,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0
+        },
+        "predicted_volume": {
+          "count": 4,
+          "max": 6.0,
+          "mean": 4.0,
+          "min": 1.0
+        },
+        "recall": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null
+        }
+      },
+      "truth_present": false
+    },
+    "8": {
+      "metrics": {
+        "absolute_volume_error_fraction": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null
+        },
+        "iou": {
+          "count": 4,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0
+        },
+        "precision": {
+          "count": 4,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0
+        },
+        "predicted_volume": {
+          "count": 4,
+          "max": 9.0,
+          "mean": 6.0,
+          "min": 3.0
+        },
+        "recall": {
+          "count": 0,
+          "max": null,
+          "mean": null,
+          "min": null
+        }
+      },
+      "truth_present": false
+    },
+    "9": {
+      "metrics": {
+        "absolute_volume_error_fraction": {
+          "count": 4,
+          "max": 0.44424620874219445,
+          "mean": 0.4053021855486173,
+          "min": 0.33820249776984834
+        },
+        "iou": {
+          "count": 4,
+          "max": 0.36637022095901717,
+          "mean": 0.3481871749213042,
+          "min": 0.33576574048086816
+        },
+        "precision": {
+          "count": 4,
+          "max": 0.7197030497592295,
+          "mean": 0.6938490772735273,
+          "min": 0.6732940185341196
+        },
+        "predicted_volume": {
+          "count": 4,
+          "max": 5935.0,
+          "mean": 5333.25,
+          "min": 4984.0
+        },
+        "recall": {
+          "count": 4,
+          "max": 0.4455842997323818,
+          "mean": 0.4119647636039251,
+          "min": 0.3999776984834969
+        }
+      },
+      "truth_present": true
+    }
+  }
+}

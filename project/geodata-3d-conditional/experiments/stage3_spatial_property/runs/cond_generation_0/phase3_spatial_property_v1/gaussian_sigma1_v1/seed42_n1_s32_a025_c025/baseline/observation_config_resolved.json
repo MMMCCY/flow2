@@ -1,0 +1,15 @@
+{
+  "confidence": {
+    "type": "base"
+  },
+  "description": "Phase-3 isotropic three-dimensional Gaussian resolution sigma 1 voxel. Truth-derived and not measured geophysics.",
+  "id": "gaussian_sigma1_v1",
+  "noise": {
+    "type": "none"
+  },
+  "operator": {
+    "sigma_voxels": 1.0,
+    "type": "gaussian_blur"
+  },
+  "schema": "spatial_property_observation_v1"
+}

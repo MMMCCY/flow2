@@ -1,0 +1,216 @@
+{
+  "density": {
+    "density_table_sha256": "fbb6059adf615c456880b5adc95486a6c1eac0db7326e4dfc4c4a9d9c817f526",
+    "description": "Synthetic, non-site-calibrated density contrasts for the first Phase-4a inverse-crime upper bound. Label 9 has deliberately strong density observability; values are not field petrophysics.",
+    "id": "density_distinct_label9_upper_bound_v1",
+    "num_categories": 15,
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "scenario": "synthetic_distinct_label9_density_upper_bound",
+    "schema": "phase4_density_contrast_v1",
+    "site_calibrated_petrophysics": false,
+    "truth_derived": true,
+    "unit": "kg m^-3"
+  },
+  "description": "Noiseless regular-grid synthetic inverse-crime gravity upper bound; not measured geophysics.",
+  "device": "cpu",
+  "dtype": "torch.float64",
+  "field_statistics_mgal": {
+    "all_finite": true,
+    "maximum": 1.5259644085041568,
+    "mean": 0.02635439641775899,
+    "minimum": -1.0706365395898878,
+    "standard_deviation": 0.762093204476507
+  },
+  "generated_tensors": {
+    "density_table_kg_m3.pt": {
+      "dtype": "torch.float32",
+      "sha256": "fbb6059adf615c456880b5adc95486a6c1eac0db7326e4dfc4c4a9d9c817f526",
+      "shape": [
+        15
+      ]
+    },
+    "gravity_noise_mgal.pt": {
+      "dtype": "torch.float64",
+      "sha256": "4847b4e8e6b2d8b287f336912bbfeb8ed8a0d51b0422e2571f501de4b5ecd4c5",
+      "shape": [
+        1,
+        1,
+        64,
+        64
+      ]
+    },
+    "noiseless_gravity_mgal.pt": {
+      "dtype": "torch.float64",
+      "sha256": "bd025643f04e2727cae6a476a7bbdf4d9b6a6499696418140a43e57b3f72126c",
+      "shape": [
+        1,
+        1,
+        64,
+        64
+      ]
+    },
+    "observed_gravity_mgal.pt": {
+      "dtype": "torch.float64",
+      "sha256": "bd025643f04e2727cae6a476a7bbdf4d9b6a6499696418140a43e57b3f72126c",
+      "shape": [
+        1,
+        1,
+        64,
+        64
+      ]
+    },
+    "survey_mask.pt": {
+      "dtype": "torch.float64",
+      "sha256": "6cab6005f5d9e18e11be60d43286d0858f0a219b2c431305efe7a2223bb4ec68",
+      "shape": [
+        1,
+        1,
+        64,
+        64
+      ]
+    },
+    "truth_density_kg_m3.pt": {
+      "dtype": "torch.float64",
+      "sha256": "15677102eabcacc2ae24024419fd05426a54acd12ea9ef6017b000714ef3aabb",
+      "shape": [
+        1,
+        1,
+        64,
+        64,
+        64
+      ]
+    },
+    "uncertainty_mgal.pt": {
+      "dtype": "torch.float64",
+      "sha256": "dc9dc506bf2d3a57509479851815f0e03763e327829a09ae5a4db7be15d0671a",
+      "shape": [
+        1,
+        1,
+        64,
+        64
+      ]
+    }
+  },
+  "inverse_crime": true,
+  "measured_geophysics": false,
+  "observation": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "circular_wraparound": false,
+    "fft_shape": [
+      256,
+      256
+    ],
+    "forward_mode": "full_support_rectangular_prism_fft_v1",
+    "full_support": true,
+    "gravitational_constant_si": 6.6743e-11,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "inverse_crime": true,
+    "loss_mode": "diagonal_uncertainty_normalized_mse_v1",
+    "measured_geophysics": false,
+    "noise_model": "none",
+    "noise_seed": 4204,
+    "noise_sha256": "4847b4e8e6b2d8b287f336912bbfeb8ed8a0d51b0422e2571f501de4b5ecd4c5",
+    "noise_std_mgal": 0.0,
+    "noiseless_sha256": "bd025643f04e2727cae6a476a7bbdf4d9b6a6499696418140a43e57b3f72126c",
+    "observation_height_above_top_m": 50.0,
+    "origin_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "output_unit": "mGal",
+    "protocol_version": 1,
+    "station_grid": "x/y cell-centre aligned full surface grid",
+    "station_height_m": 3250.0,
+    "survey_mask_sha256": "6cab6005f5d9e18e11be60d43286d0858f0a219b2c431305efe7a2223bb4ec68",
+    "truth_derived": true,
+    "uncertainty_sha256": "dc9dc506bf2d3a57509479851815f0e03763e327829a09ae5a4db7be15d0671a",
+    "values_sha256": "bd025643f04e2727cae6a476a7bbdf4d9b6a6499696418140a43e57b3f72126c",
+    "vertical_axis": "final spatial axis; larger index upward"
+  },
+  "observation_config_resolved": {
+    "axis_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "cell_size_m": [
+      100.0,
+      100.0,
+      50.0
+    ],
+    "description": "First Phase-4a full-support regular-grid noiseless synthetic inverse-crime observation. Coordinates are synthetic and use SI units.",
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "full_grid_noiseless_inverse_crime_v1",
+    "inverse_crime": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4204,
+      "std_mgal": 0.0,
+      "type": "none"
+    },
+    "observation_height_above_top_m": 50.0,
+    "origin_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "schema": "phase4_gravity_observation_v1",
+    "station_grid": "cell_center_aligned_full",
+    "survey_mask": "all",
+    "truth_derived": true,
+    "uncertainty_mgal": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward"
+  },
+  "protocol_version": 1,
+  "source_assets": {
+    "builder_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage4/build_gravity_observation.py",
+      "sha256": "bae25da5e9d8e1a689559ddede51c3958567adc5328c6d646c69dd361c112c10",
+      "size_bytes": 6264
+    },
+    "density_config": {
+      "path": "project/geodata-3d-conditional/experiments/stage4_gravity/configs/density_distinct_label9_upper_bound_v1.json",
+      "sha256": "091ef526c2378fe88107a890522cc0d9b284876ab02401f50afca494da114261",
+      "size_bytes": 652
+    },
+    "gravity_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/gravity.py",
+      "sha256": "9b4e01f61809018b69f42906c727121f9041502e0d429cee208f305fcfea86e4",
+      "size_bytes": 29725
+    },
+    "observation_config": {
+      "path": "project/geodata-3d-conditional/experiments/stage4_gravity/configs/full_grid_noiseless_inverse_crime_v1.json",
+      "sha256": "1f96c82b33dfa69025c219256ea5308810828febcdfa4f4564f51da573cf0be8",
+      "size_bytes": 625
+    },
+    "truth_model": {
+      "path": "project/geodata-3d-conditional/samples/jupyter-demo/cond_generation_0/true_model.pt",
+      "sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3",
+      "size_bytes": 1050238
+    }
+  },
+  "stage": "phase4a_gravity_observation_builder_v1",
+  "status": "complete",
+  "truth_derived": true
+}

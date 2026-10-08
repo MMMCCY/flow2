@@ -1,0 +1,145 @@
+{
+  "metrics": {
+    "delta_global_mean_iou": {
+      "count": 1,
+      "max": -0.0346376895904541,
+      "mean": -0.0346376895904541,
+      "min": -0.0346376895904541,
+      "std": 0.0
+    },
+    "delta_global_voxel_accuracy": {
+      "count": 1,
+      "max": 0.012766063213348389,
+      "mean": 0.012766063213348389,
+      "min": 0.012766063213348389,
+      "std": 0.0
+    },
+    "delta_hard_observation_loss": {
+      "count": 1,
+      "max": -0.9979638457298279,
+      "mean": -0.9979638457298279,
+      "min": -0.9979638457298279,
+      "std": 0.0
+    },
+    "delta_hard_observation_mae": {
+      "count": 1,
+      "max": -0.0037522781640291214,
+      "mean": -0.0037522781640291214,
+      "min": -0.0037522781640291214,
+      "std": 0.0
+    },
+    "delta_hard_property_loss": {
+      "count": 1,
+      "max": -0.6127004623413086,
+      "mean": -0.6127004623413086,
+      "min": -0.6127004623413086,
+      "std": 0.0
+    },
+    "delta_hard_property_mae": {
+      "count": 1,
+      "max": -0.0028798524290323257,
+      "mean": -0.0028798524290323257,
+      "min": -0.0028798524290323257,
+      "std": 0.0
+    },
+    "delta_inside_roi_voxel_accuracy": {
+      "count": 1,
+      "max": 0.016310507085414816,
+      "mean": 0.016310507085414816,
+      "min": 0.016310507085414816,
+      "std": 0.0
+    },
+    "delta_largest_component_fraction": {
+      "count": 1,
+      "max": -0.5551923683466404,
+      "mean": -0.5551923683466404,
+      "min": -0.5551923683466404,
+      "std": 0.0
+    },
+    "delta_outside_roi_voxel_accuracy": {
+      "count": 1,
+      "max": 0.008285773224231519,
+      "mean": 0.008285773224231519,
+      "min": 0.008285773224231519,
+      "std": 0.0
+    },
+    "delta_target_absolute_volume_error_fraction": {
+      "count": 1,
+      "max": 0.2503345227475468,
+      "mean": 0.2503345227475468,
+      "min": 0.2503345227475468,
+      "std": 0.0
+    },
+    "delta_target_centroid_distance": {
+      "count": 1,
+      "max": -15.243486404418945,
+      "mean": -15.243486404418945,
+      "min": -15.243486404418945,
+      "std": 0.0
+    },
+    "delta_target_components_ge_100": {
+      "count": 1,
+      "max": 2.0,
+      "mean": 2.0,
+      "min": 2.0,
+      "std": 0.0
+    },
+    "delta_target_components_ge_20": {
+      "count": 1,
+      "max": 11.0,
+      "mean": 11.0,
+      "min": 11.0,
+      "std": 0.0
+    },
+    "delta_target_connected_components": {
+      "count": 1,
+      "max": 278.0,
+      "mean": 278.0,
+      "min": 278.0,
+      "std": 0.0
+    },
+    "delta_target_iou": {
+      "count": 1,
+      "max": 0.07398066539914867,
+      "mean": 0.07398066539914867,
+      "min": 0.07398066539914867,
+      "std": 0.0
+    },
+    "delta_target_precision": {
+      "count": 1,
+      "max": 0.2321696075725617,
+      "mean": 0.2321696075725617,
+      "min": 0.2321696075725617,
+      "std": 0.0
+    },
+    "delta_target_recall": {
+      "count": 1,
+      "max": 0.08764495985727029,
+      "mean": 0.08764495985727029,
+      "min": 0.08764495985727029,
+      "std": 0.0
+    },
+    "delta_target_tiny_component_mass_fraction_le_5": {
+      "count": 1,
+      "max": 0.09959104881155681,
+      "mean": 0.09959104881155681,
+      "min": 0.09959104881155681,
+      "std": 0.0
+    },
+    "delta_target_top4_component_mass_fraction": {
+      "count": 1,
+      "max": -0.43013609292021837,
+      "mean": -0.43013609292021837,
+      "min": -0.43013609292021837,
+      "std": 0.0
+    },
+    "delta_truth_present_mean_iou": {
+      "count": 1,
+      "max": 0.011724799871444702,
+      "mean": 0.011724799871444702,
+      "min": 0.011724799871444702,
+      "std": 0.0
+    }
+  },
+  "n_samples": 1
+}
