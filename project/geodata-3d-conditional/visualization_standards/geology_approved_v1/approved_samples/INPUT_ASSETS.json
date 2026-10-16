@@ -1,0 +1,125 @@
+{
+  "layout_sha256": "bbd75234860bb437aa2bfe4f14ac4ca4be2f4340e35f0484e1625e5b6820a50b",
+  "metadata_file_sha256": {
+    "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/evaluation_registry.json": "a15fe9fcb723c31b65f2f21e975e81f093ca1f91d393f07fe32f5c4ff4a8b573",
+    "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/predictions/fullgeo_case03/seed42/A_9/completion_receipt.json": "575562737830a9305cfe7d0c6e300051b86a83b31ea3536c662116e5b12b5318",
+    "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/predictions/fullgeo_case03/seed42/A_9/receipt.json": "3e4f8b6f270bd6590920c9e26d8e5ea9c2b03a9f84dabad55eff251c0617f2c6",
+    "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/predictions/fullgeo_case03/seed42/B_512/completion_receipt.json": "6ee4062e3ac6ae35725cbac30d95fa7e0238f9225e7b0e0027b9a95a7b6b3a96",
+    "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/predictions/fullgeo_case03/seed42/B_512/receipt.json": "d0a91e866c3f2ae1e703fa09f26950875d4f8eb36de12ec8981d3cd433f38c59",
+    "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/predictions/fullgeo_case03/seed42/C_512/completion_receipt.json": "d30f9e7c863f32f33fd0328c8a2b1a1cc7f029736763e094d8fe651bdabfc5f0",
+    "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/predictions/fullgeo_case03/seed42/C_512/receipt.json": "4c0b3052a708e152dcf30679612e3d47720db68b322e2bc3cbe83d3a02a2b9e8",
+    "project/geodata-3d-conditional/experiments/stage22_blur_aware_bridge/run_20261016_v1/predictions/seed42/completion_receipt.json": "5f859b1cb393a50cd0aab0a3fd2fbe29e67c9171140c20c517a73d6677cd70ed",
+    "project/geodata-3d-conditional/experiments/stage22_blur_aware_bridge/run_20261016_v1/predictions/seed42/receipt.json": "f763053ef9f7ed9892fa4fbe2fa92182483da3f5afaa1ce920ef85395c25c58c",
+    "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/EVALUATION_INPUTS.json": "76c640e4de6e9a9cf36e668ec92019f39efca1b05c812a83e34957fe6ed3ca5f",
+    "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/EXECUTION.json": "bc08f601216acfdd7805b8980a16180c4821276d276d0ffbb38a3108f86ee50c",
+    "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/PROTOCOL.json": "51b63b22acddb23d88aec5369015abb3eb5feadb9c6c229bd973a079f5c1947a",
+    "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/comparison.csv": "668d893313bb6257c9d42ffcb61c1c32001be01227bc86909b0df52d725bfb91",
+    "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/condition_quality.csv": "7309ca2162be5dba08ed35227bc3615aefbef3ea4e1f31dbbefab3406a389f63",
+    "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/inference_registry.json": "a4d4b75d0c813dea8b2474a64cede2e636655e46f84539f1c2dc6d35cf229e34",
+    "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/object1_common_outside.csv": "ea8aadb73ce3a9bbc6edae31be5dd7f096566462003fc9006ef46e6cdcd6dad2",
+    "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/object_metrics.csv": "aacb55caa4a82c98c736baa3123ae83f807f9c89f6a49a0cc4704d458e509b3d",
+    "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/predictions/seed42/completion_receipt.json": "c7590b453ace50a093b3a5879e53f98cd20fc11ae7a0fbe9d8874cbd65a1df98",
+    "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/predictions/seed42/receipt.json": "c2cf7ca8d928696a68aebb7f17bb793e9f5428dd74c522bdd2c241ae3333c710"
+  },
+  "original_wells": [
+    [
+      8,
+      46
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      10,
+      24
+    ],
+    [
+      27,
+      17
+    ],
+    [
+      35,
+      26
+    ],
+    [
+      39,
+      59
+    ],
+    [
+      44,
+      60
+    ],
+    [
+      48,
+      6
+    ],
+    [
+      57,
+      32
+    ]
+  ],
+  "specification_sha256": "a60914bb001398cc9847cbb6aca090534e5c94ec901d5dd2bb2b08871e125f37",
+  "tensors": {
+    "A_9": {
+      "file_sha256": "9af5bae3b2e60c7c7bd79dc68c4b5f9ec909ade935fc048ca50fab324d066d53",
+      "path": "project/geodata-3d-conditional/experiments/stage21_virtual_borehole_conditioning/run_20261014_v2/formal/fullgeo_case03/seed42/n9/decoded_geology.pt",
+      "tensor_sha256": "457a0f88ef6159923729be3a8bf345f7ee6e190a7e5b6c091c0b6f03982089f4"
+    },
+    "B_512": {
+      "file_sha256": "7582424e7a0422da25b6a14fa9336b1a4e18a34638f38118f81975ea066005eb",
+      "path": "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/predictions/fullgeo_case03/seed42/B_512/decoded_geology.pt",
+      "tensor_sha256": "dd96867ae29575236277c220c5f05a91a0218ad5b96300a995106142fad68d46"
+    },
+    "COPY_ONLY_STAGE23": {
+      "file_sha256": "388c0ce1abbd8d9cfdd909cf928acd7d27264adf05b7bcba69618774873e0f55",
+      "path": "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/offline/copy_only.pt",
+      "tensor_sha256": "0ffc08525e82802cae3561b8b17241f9478791a63b2fb033f29e5f2aa6c64b78"
+    },
+    "C_512": {
+      "file_sha256": "df67a16387e3a9029170815710749a183a54e0acb9d849e101638ff73c5d1b60",
+      "path": "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/predictions/fullgeo_case03/seed42/C_512/decoded_geology.pt",
+      "tensor_sha256": "6fec8a5b1db9ccd73c1b449a43f0224a56e5a8df98b4bd7caa9f873203a58e10"
+    },
+    "FLOW_STAGE22": {
+      "file_sha256": "917f0c49dd19d57741d8c70ea3e77b89033f16c5bc39766768f2f782ff70fd54",
+      "path": "project/geodata-3d-conditional/experiments/stage22_blur_aware_bridge/run_20261016_v1/predictions/seed42/decoded_geology.pt",
+      "tensor_sha256": "75c3d238b3b1aa993cabf7283dcc8cdce288118ba89ee34e6a25f3a9abdde937"
+    },
+    "FLOW_STAGE23": {
+      "file_sha256": "b7d184f6aa28a9e949678266e3bc27122582ca26734bbd527822007138351061",
+      "path": "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/predictions/seed42/decoded_geology.pt",
+      "tensor_sha256": "570233386f9a888c9d704f31aed4966db9849ba114869fa211339cee5ea6eeb2"
+    },
+    "RESTORED_CLASSIFICATION": {
+      "file_sha256": "481dbdcc6567b8ef7b241afc3ea88dfb4a43b0637df5b31be212aacf945438be",
+      "path": "project/geodata-3d-conditional/experiments/stage22_blur_aware_bridge/run_20261016_v1/offline/restored_direct.pt",
+      "tensor_sha256": "ed85dcd7c745b6fd39fd6a564516bd390a3c7b75a8e692049b331ef3befb79cd"
+    },
+    "condition_mask": {
+      "file_sha256": "f408b30303e7eb2aaf60666ad9e5edcb254c91d3a94a201f99b2967e0a51e946",
+      "path": "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/conditions/mask.pt",
+      "tensor_sha256": "cd5fcb9f70e069df1b68e88ee8281b3883598a9374f0d9d8e72e8120e77c905e"
+    },
+    "condition_original_mask": {
+      "file_sha256": "0c69a52d6e7a485b0cb0151cc0b6f2adfe84c791fe0aff54981446a6676d75d3",
+      "path": "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/conditions/original_mask.pt",
+      "tensor_sha256": "e0b1d7a94dde538d4d286a72d07229b6f3f425d7f329d4ca13819432dba89555"
+    },
+    "condition_original_values": {
+      "file_sha256": "24b6e4d647fe8dfcb8fa26acb9ead4a3cc1d1d4b7c2a8420f6f912757d81da82",
+      "path": "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/conditions/original_values.pt",
+      "tensor_sha256": "7152222f4a2353b958e38d6740958e09d5d31a9898762eb189f6b94bcadf29c8"
+    },
+    "condition_values": {
+      "file_sha256": "e2a02c8cf1bb3b0d46d6520ea8c8f4de0907b4684a7282dd165a69bba5e88b56",
+      "path": "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/conditions/values.pt",
+      "tensor_sha256": "f812409c344a83ce2b2226943c352171e94fe3817d321d86b25f710c6fd448f5"
+    },
+    "truth": {
+      "file_sha256": "e79a5c8276fbaa7ae9b46c217f1df9ad041b53fbd5b4b4fedc4d59aa8b351576",
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case03/truth/true_model.pt",
+      "tensor_sha256": "69c2c9c81e1b7acb6832b8af33d933c60246b69bf0ea70b5022864671b64cc02"
+    }
+  }
+}

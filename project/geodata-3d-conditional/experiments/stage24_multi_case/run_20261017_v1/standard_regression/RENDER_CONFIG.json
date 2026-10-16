@@ -1,0 +1,302 @@
+{
+  "cameras": {
+    "geology": {
+      "direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "focal_point": [
+        32.0,
+        32.0,
+        26.5
+      ],
+      "parallel_projection": true,
+      "parallel_scale": 51.8,
+      "position": [
+        142.07999999999998,
+        -54.400000000000006,
+        114.82
+      ],
+      "right": [
+        0.6174175052143831,
+        0.7866356362731398,
+        -0.0
+      ],
+      "up": [
+        -0.4198481588061972,
+        0.32953198510951526,
+        0.8456572558293513
+      ],
+      "view_up": [
+        0,
+        0,
+        1
+      ],
+      "zoom": 1.0
+    },
+    "target": {
+      "direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "focal_point": [
+        32.0,
+        32.0,
+        29.44
+      ],
+      "parallel_projection": true,
+      "parallel_scale": 54.5,
+      "position": [
+        142.07999999999998,
+        -54.400000000000006,
+        117.75999999999999
+      ],
+      "right": [
+        0.6174175052143831,
+        0.7866356362731398,
+        -0.0
+      ],
+      "up": [
+        -0.4198481588061972,
+        0.32953198510951526,
+        0.8456572558293513
+      ],
+      "view_up": [
+        0,
+        0,
+        1
+      ],
+      "zoom": 1.0
+    }
+  },
+  "case": "fullgeo_case03",
+  "inputs": {
+    "A_9": {
+      "file_sha256": "9af5bae3b2e60c7c7bd79dc68c4b5f9ec909ade935fc048ca50fab324d066d53",
+      "path": "project/geodata-3d-conditional/experiments/stage21_virtual_borehole_conditioning/run_20261014_v2/formal/fullgeo_case03/seed42/n9/decoded_geology.pt",
+      "tensor_sha256": "457a0f88ef6159923729be3a8bf345f7ee6e190a7e5b6c091c0b6f03982089f4"
+    },
+    "B_512": {
+      "file_sha256": "7582424e7a0422da25b6a14fa9336b1a4e18a34638f38118f81975ea066005eb",
+      "path": "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/predictions/fullgeo_case03/seed42/B_512/decoded_geology.pt",
+      "tensor_sha256": "dd96867ae29575236277c220c5f05a91a0218ad5b96300a995106142fad68d46"
+    },
+    "COPY_ONLY_STAGE23": {
+      "file_sha256": "388c0ce1abbd8d9cfdd909cf928acd7d27264adf05b7bcba69618774873e0f55",
+      "path": "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/offline/copy_only.pt",
+      "tensor_sha256": "0ffc08525e82802cae3561b8b17241f9478791a63b2fb033f29e5f2aa6c64b78"
+    },
+    "C_512": {
+      "file_sha256": "df67a16387e3a9029170815710749a183a54e0acb9d849e101638ff73c5d1b60",
+      "path": "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/predictions/fullgeo_case03/seed42/C_512/decoded_geology.pt",
+      "tensor_sha256": "6fec8a5b1db9ccd73c1b449a43f0224a56e5a8df98b4bd7caa9f873203a58e10"
+    },
+    "FLOW_STAGE22": {
+      "file_sha256": "917f0c49dd19d57741d8c70ea3e77b89033f16c5bc39766768f2f782ff70fd54",
+      "path": "project/geodata-3d-conditional/experiments/stage22_blur_aware_bridge/run_20261016_v1/predictions/seed42/decoded_geology.pt",
+      "tensor_sha256": "75c3d238b3b1aa993cabf7283dcc8cdce288118ba89ee34e6a25f3a9abdde937"
+    },
+    "FLOW_STAGE23": {
+      "file_sha256": "b7d184f6aa28a9e949678266e3bc27122582ca26734bbd527822007138351061",
+      "path": "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/predictions/seed42/decoded_geology.pt",
+      "tensor_sha256": "570233386f9a888c9d704f31aed4966db9849ba114869fa211339cee5ea6eeb2"
+    },
+    "RESTORED_CLASSIFICATION": {
+      "file_sha256": "481dbdcc6567b8ef7b241afc3ea88dfb4a43b0637df5b31be212aacf945438be",
+      "path": "project/geodata-3d-conditional/experiments/stage22_blur_aware_bridge/run_20261016_v1/offline/restored_direct.pt",
+      "tensor_sha256": "ed85dcd7c745b6fd39fd6a564516bd390a3c7b75a8e692049b331ef3befb79cd"
+    },
+    "condition_mask": {
+      "file_sha256": "f408b30303e7eb2aaf60666ad9e5edcb254c91d3a94a201f99b2967e0a51e946",
+      "path": "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/conditions/mask.pt",
+      "tensor_sha256": "cd5fcb9f70e069df1b68e88ee8281b3883598a9374f0d9d8e72e8120e77c905e"
+    },
+    "condition_original_mask": {
+      "file_sha256": "0c69a52d6e7a485b0cb0151cc0b6f2adfe84c791fe0aff54981446a6676d75d3",
+      "path": "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/conditions/original_mask.pt",
+      "tensor_sha256": "e0b1d7a94dde538d4d286a72d07229b6f3f425d7f329d4ca13819432dba89555"
+    },
+    "condition_original_values": {
+      "file_sha256": "24b6e4d647fe8dfcb8fa26acb9ead4a3cc1d1d4b7c2a8420f6f912757d81da82",
+      "path": "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/conditions/original_values.pt",
+      "tensor_sha256": "7152222f4a2353b958e38d6740958e09d5d31a9898762eb189f6b94bcadf29c8"
+    },
+    "condition_values": {
+      "file_sha256": "e2a02c8cf1bb3b0d46d6520ea8c8f4de0907b4684a7282dd165a69bba5e88b56",
+      "path": "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/conditions/values.pt",
+      "tensor_sha256": "f812409c344a83ce2b2226943c352171e94fe3817d321d86b25f710c6fd448f5"
+    },
+    "truth": {
+      "file_sha256": "e79a5c8276fbaa7ae9b46c217f1df9ad041b53fbd5b4b4fedc4d59aa8b351576",
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case03/truth/true_model.pt",
+      "tensor_sha256": "69c2c9c81e1b7acb6832b8af33d933c60246b69bf0ea70b5022864671b64cc02"
+    }
+  },
+  "panel_checks": [
+    {
+      "all_faces_inside_viewport": true,
+      "col": 0,
+      "full_target_voxels": 1736,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "1": 30007,
+        "13": 3,
+        "2": 18614,
+        "3": 42731,
+        "4": 3985,
+        "5": 53489,
+        "7": 124,
+        "8": 4126,
+        "9": 1736
+      },
+      "row": 0,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 1,
+      "full_target_voxels": 4578,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 202,
+        "1": 6208,
+        "10": 30,
+        "11": 5,
+        "13": 1,
+        "2": 6262,
+        "3": 17438,
+        "4": 16252,
+        "5": 103174,
+        "6": 3,
+        "8": 661,
+        "9": 4578
+      },
+      "row": 0,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 2,
+      "full_target_voxels": 3297,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 6,
+        "1": 27788,
+        "10": 175,
+        "11": 1035,
+        "13": 1,
+        "2": 13548,
+        "3": 44141,
+        "4": 5376,
+        "5": 52992,
+        "6": 424,
+        "7": 317,
+        "8": 5711,
+        "9": 3297
+      },
+      "row": 0,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 0,
+      "full_target_voxels": 1736,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "1": 23292,
+        "13": 0,
+        "2": 13598,
+        "3": 31134,
+        "4": 3240,
+        "5": 37307,
+        "7": 124,
+        "8": 4126,
+        "9": 1736
+      },
+      "row": 1,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 1,
+      "full_target_voxels": 4578,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 114,
+        "1": 4903,
+        "10": 30,
+        "11": 5,
+        "13": 0,
+        "2": 5321,
+        "3": 14421,
+        "4": 13205,
+        "5": 71341,
+        "6": 3,
+        "8": 661,
+        "9": 4552
+      },
+      "row": 1,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 2,
+      "full_target_voxels": 3297,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 6,
+        "1": 21048,
+        "10": 173,
+        "11": 1035,
+        "13": 0,
+        "2": 10468,
+        "3": 31488,
+        "4": 4198,
+        "5": 36395,
+        "6": 424,
+        "7": 316,
+        "8": 5705,
+        "9": 3297
+      },
+      "row": 1,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 0,
+      "full_target_voxels": 1736,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 1736
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 1,
+      "full_target_voxels": 4578,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 4578
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 2,
+      "full_target_voxels": 3297,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 3297
+      },
+      "target_only": true
+    }
+  ],
+  "scientific_compute": 0,
+  "seed": 42,
+  "standard": "geology_approved_v1",
+  "standard_manifest_sha256": "f35dd0fb7e9c9664b7d723b856229c73771f86c388c17e023c2500599c86231c",
+  "visual_inspection": "pending"
+}

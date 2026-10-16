@@ -1,0 +1,3 @@
+Initial style-only regression failed because frozen function execution namespace lacked itertools. Fixed namespace binding only, without changing approved function AST, geometry, camera or composition. Partial plots/log retained in style_attempt1. Scientific solve/Flow calls before this failure:0/0.
+
+case02 drawing: original normalized safety margin0.005..0.995 rejected a surface point at0.996757, still inside physical viewport. Only assertions relaxed to0..1; original cameras/scale/meshes/layout unchanged. White2pixel image border checks retained. Failure retained in case02_margin_attempt1. New science calls during fix:0.

@@ -1,0 +1,77 @@
+{
+  "case": "fullgeo_case01",
+  "condition_sealed_at_utc": "2026-10-16T18:50:47.110592+00:00",
+  "domains": {
+    "E_holdout": {
+      "class_counts": {
+        "1": 653,
+        "10": 394,
+        "11": 38,
+        "12": 5,
+        "2": 1906,
+        "3": 398,
+        "4": 4158,
+        "5": 1708,
+        "8": 171,
+        "9": 11
+      },
+      "classes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tensor": {
+        "file_sha256": "a489e0b3f5d97985b7d8bc11973b16a4a3b19fa1d0dcabb01f813c050d9e683a",
+        "path": "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/evaluation/fullgeo_case01/E_holdout.pt",
+        "tensor_sha256": "b24e3cedd450a6441291fb4dcc33dc39fc1a3c80b39a7edb7b677b1c9459a4ce"
+      },
+      "voxels": 9442
+    },
+    "E_original_free": {
+      "class_counts": {
+        "1": 10191,
+        "10": 6230,
+        "11": 1008,
+        "12": 96,
+        "2": 30708,
+        "3": 6176,
+        "4": 65827,
+        "5": 27350,
+        "8": 3060,
+        "9": 118
+      },
+      "classes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tensor": {
+        "file_sha256": "b0c29321c88896ed100c76417b93e8584287819c916f2343a053cb91a77c768f",
+        "path": "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/evaluation/fullgeo_case01/E_original_free.pt",
+        "tensor_sha256": "2dacfed8ce1c4f8348f09733e394bab87176749a298fc01c9e5f7dd599aab48e"
+      },
+      "voxels": 150764
+    }
+  },
+  "evaluation_started_at_utc": "2026-10-16T18:54:18.626236+00:00",
+  "role": "retrospective only",
+  "truth": {
+    "file_sha256": "bc32a2f4705f18655bddba56b67ad1ffc55e8a23444b6910573a3b8cbd44f3e9",
+    "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/truth/true_model.pt",
+    "tensor_sha256": "d1a18ebeedc0c25a4cbc35132b39630e84b1ec362927a318fb487ceaa3f31df7"
+  }
+}

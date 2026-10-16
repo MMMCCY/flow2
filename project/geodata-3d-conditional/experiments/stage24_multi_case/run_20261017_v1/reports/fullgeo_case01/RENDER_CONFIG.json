@@ -1,0 +1,257 @@
+{
+  "cameras": {
+    "geology": {
+      "direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "focal_point": [
+        32.0,
+        32.0,
+        26.5
+      ],
+      "parallel_projection": true,
+      "parallel_scale": 51.8,
+      "position": [
+        142.07999999999998,
+        -54.400000000000006,
+        114.82
+      ],
+      "right": [
+        0.6174175052143831,
+        0.7866356362731398,
+        -0.0
+      ],
+      "up": [
+        -0.4198481588061972,
+        0.32953198510951526,
+        0.8456572558293513
+      ],
+      "view_up": [
+        0,
+        0,
+        1
+      ],
+      "zoom": 1.0
+    },
+    "target": {
+      "direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "focal_point": [
+        32.0,
+        32.0,
+        29.44
+      ],
+      "parallel_projection": true,
+      "parallel_scale": 54.5,
+      "position": [
+        142.07999999999998,
+        -54.400000000000006,
+        117.75999999999999
+      ],
+      "right": [
+        0.6174175052143831,
+        0.7866356362731398,
+        -0.0
+      ],
+      "up": [
+        -0.4198481588061972,
+        0.32953198510951526,
+        0.8456572558293513
+      ],
+      "view_up": [
+        0,
+        0,
+        1
+      ],
+      "zoom": 1.0
+    }
+  },
+  "case": "fullgeo_case01",
+  "inputs": {
+    "A": {
+      "file_sha256": "dc63f1a65eb9f41d095544b543405684322ecb4c5af60d0f90f5001cd7cada90",
+      "path": "project/geodata-3d-conditional/experiments/stage21_virtual_borehole_conditioning/run_20261014_v2/formal/fullgeo_case01/seed42/n9/decoded_geology.pt",
+      "tensor_sha256": "3b35ab19e74b5026e623dd2dc6cb8c3eecd32dca8e43bde09ebf8ffd43537518"
+    },
+    "Ours": {
+      "file_sha256": "4677c97efb0acb36dea7b934728ba555bb1c4f2b091caa5d999bd595443eca57",
+      "path": "project/geodata-3d-conditional/experiments/stage24_multi_case/run_20261017_v1/cases/fullgeo_case01/predictions/seed42/decoded_geology.pt",
+      "tensor_sha256": "e1458e6e43a219639aab14662a8e86bc4e987030b86bcecc2a06d184fbabdc80"
+    },
+    "truth": {
+      "file_sha256": "bc32a2f4705f18655bddba56b67ad1ffc55e8a23444b6910573a3b8cbd44f3e9",
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/truth/true_model.pt",
+      "tensor_sha256": "d1a18ebeedc0c25a4cbc35132b39630e84b1ec362927a318fb487ceaa3f31df7"
+    }
+  },
+  "panel_checks": [
+    {
+      "all_faces_inside_viewport": true,
+      "col": 0,
+      "full_target_voxels": 120,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "1": 10625,
+        "10": 6242,
+        "11": 1013,
+        "12": 96,
+        "2": 33672,
+        "3": 6869,
+        "4": 65980,
+        "5": 27398,
+        "8": 3178,
+        "9": 120
+      },
+      "row": 0,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 1,
+      "full_target_voxels": 9842,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 14,
+        "1": 2255,
+        "10": 507,
+        "11": 193,
+        "2": 27909,
+        "3": 4518,
+        "4": 72558,
+        "5": 36988,
+        "6": 3,
+        "8": 405,
+        "9": 9842
+      },
+      "row": 0,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 2,
+      "full_target_voxels": 523,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 4,
+        "1": 8204,
+        "10": 9964,
+        "11": 1693,
+        "12": 2,
+        "2": 34764,
+        "3": 6823,
+        "4": 64307,
+        "5": 25323,
+        "6": 249,
+        "7": 250,
+        "8": 3076,
+        "9": 523
+      },
+      "row": 0,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 0,
+      "full_target_voxels": 120,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "1": 8331,
+        "10": 6242,
+        "11": 1013,
+        "12": 96,
+        "2": 24213,
+        "3": 6581,
+        "4": 46190,
+        "5": 17883,
+        "8": 3128,
+        "9": 120
+      },
+      "row": 1,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 1,
+      "full_target_voxels": 9842,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 14,
+        "1": 1740,
+        "10": 495,
+        "11": 193,
+        "2": 19666,
+        "3": 4495,
+        "4": 52620,
+        "5": 25646,
+        "6": 3,
+        "8": 383,
+        "9": 8541
+      },
+      "row": 1,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 2,
+      "full_target_voxels": 523,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 4,
+        "1": 6189,
+        "10": 9964,
+        "11": 1679,
+        "12": 2,
+        "2": 25102,
+        "3": 6543,
+        "4": 43586,
+        "5": 16644,
+        "6": 249,
+        "7": 248,
+        "8": 3053,
+        "9": 523
+      },
+      "row": 1,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 0,
+      "full_target_voxels": 120,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 120
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 1,
+      "full_target_voxels": 9842,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 9842
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 2,
+      "full_target_voxels": 523,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 523
+      },
+      "target_only": true
+    }
+  ],
+  "scientific_compute": 0,
+  "seed": 42,
+  "standard": "geology_approved_v1",
+  "standard_manifest_sha256": "f35dd0fb7e9c9664b7d723b856229c73771f86c388c17e023c2500599c86231c",
+  "visual_inspection": "Final main plates opened; matched approved contact-sheet reference; all shapes/FP retained. Camera unchanged, physical edge validation only."
+}

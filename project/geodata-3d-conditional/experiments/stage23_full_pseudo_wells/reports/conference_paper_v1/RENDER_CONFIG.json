@@ -1,0 +1,152 @@
+{
+  "PDF": "raster3D with vector text/legend",
+  "air_hidden": -1,
+  "array_order": "XYZ; cell_data=array.ravel(order=F); dimensions=array.shape+1",
+  "cameras": [
+    {
+      "focal_point": [
+        32.0,
+        32.0,
+        32.0
+      ],
+      "parallel_projection": true,
+      "parallel_scale": 58.69737631061834,
+      "position": [
+        142.07999999999998,
+        -54.400000000000006,
+        120.32
+      ],
+      "scene_bounds": [
+        0,
+        64,
+        0,
+        64,
+        0,
+        64
+      ],
+      "screen_right": [
+        0.6174175052143831,
+        0.7866356362731398,
+        -0.0
+      ],
+      "screen_up": [
+        -0.4198481588061972,
+        0.32953198510951526,
+        0.8456572558293513
+      ],
+      "view_up": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "focal_point": [
+        32.0,
+        32.0,
+        32.0
+      ],
+      "parallel_projection": true,
+      "parallel_scale": 36.8,
+      "position": [
+        32.0,
+        198.4,
+        32.0
+      ],
+      "scene_bounds": [
+        0,
+        64,
+        0,
+        64,
+        0,
+        64
+      ],
+      "screen_right": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "screen_up": [
+        0.0,
+        -0.0,
+        1.0
+      ],
+      "view_up": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "case": "fullgeo_case03",
+  "condition_generation": 0,
+  "deconvolution": 0,
+  "dpi": 600,
+  "evidence_size_mm": [
+    180,
+    89
+  ],
+  "figure_size_mm": [
+    180,
+    138
+  ],
+  "full_geology_opacity": 1.0,
+  "git": {
+    "branch": "main",
+    "head": "90ca753f0413f48aa57e989ba41f327ae98573b7",
+    "status_short": "D project/geodata-3d-conditional/geophysics-results/best_gravity.png\n D project/geodata-3d-conditional/geophysics-results/best_slice.png\n D project/geodata-3d-conditional/geophysics-results/geo_misfit_vs_mean_iou.png\n D project/geodata-3d-conditional/geophysics-results/geo_misfit_vs_voxel_accuracy.png\n D project/geodata-3d-conditional/geophysics-results/metrics.csv\n D project/geodata-3d-conditional/geophysics-results/true_gravity.png\n D project/geodata-3d-conditional/geophysics-results/true_slice.png\n D project/geodata-3d-conditional/geophysics-results/worst_gravity.png\n D project/geodata-3d-conditional/geophysics-results/worst_slice.png\n?? STAGE23_VISUALIZATION_PROMPT_2026-10-17.md\n?? project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/reports/\n?? project/geodata-3d-conditional/scripts/reports/build_stage23_conference_figures.py"
+  },
+  "independent_image_trim": false,
+  "label_colors": {
+    "-1": "#FFFFFF",
+    "0": "#7A6652",
+    "1": "#8C4E85",
+    "10": "#C94C4C",
+    "11": "#A33E63",
+    "12": "#7B4FA3",
+    "13": "#5E4B8B",
+    "2": "#3B6FB6",
+    "3": "#5A91C8",
+    "4": "#56B4B8",
+    "5": "#4DA66D",
+    "6": "#86B84A",
+    "7": "#C5C55A",
+    "8": "#E5C55C",
+    "9": "#D95F02"
+  },
+  "matplotlib": "3.8.4",
+  "minimum_font_pt": 8,
+  "new_model_forwards": 0,
+  "panel_size_pixels": [
+    1500,
+    1360
+  ],
+  "pyvista": "0.48.4",
+  "reference_commit": "90ca753f0413f48aa57e989ba41f327ae98573b7",
+  "removed_quadrant": "display only, geology lower row: X>=32 AND Y<32",
+  "scene_bounds": [
+    0,
+    64,
+    0,
+    64,
+    0,
+    64
+  ],
+  "script_sha256": "8f38324389a79d516a358db16bf5746fdb9ccce500afd40224f8772d1b0a7690",
+  "seed": 42,
+  "surface": "exact binary voxel cell faces; no contour interpolation/smoothing/repair",
+  "target_background_opacity": 0.0,
+  "target_cutaway": false,
+  "target_opacity": 1.0,
+  "training": 0,
+  "truth_ghost": false,
+  "units": "voxel index",
+  "voxel_centers": "0.5..63.5; cell boundaries0..64",
+  "voxel_spacing": [
+    1,
+    1,
+    1
+  ],
+  "vtk": "9.6.2",
+  "wells_rendered": false
+}

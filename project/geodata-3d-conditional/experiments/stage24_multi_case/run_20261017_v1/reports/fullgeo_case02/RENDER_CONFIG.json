@@ -1,0 +1,256 @@
+{
+  "cameras": {
+    "geology": {
+      "direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "focal_point": [
+        32.0,
+        32.0,
+        26.5
+      ],
+      "parallel_projection": true,
+      "parallel_scale": 51.8,
+      "position": [
+        142.07999999999998,
+        -54.400000000000006,
+        114.82
+      ],
+      "right": [
+        0.6174175052143831,
+        0.7866356362731398,
+        -0.0
+      ],
+      "up": [
+        -0.4198481588061972,
+        0.32953198510951526,
+        0.8456572558293513
+      ],
+      "view_up": [
+        0,
+        0,
+        1
+      ],
+      "zoom": 1.0
+    },
+    "target": {
+      "direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "focal_point": [
+        32.0,
+        32.0,
+        29.44
+      ],
+      "parallel_projection": true,
+      "parallel_scale": 54.5,
+      "position": [
+        142.07999999999998,
+        -54.400000000000006,
+        117.75999999999999
+      ],
+      "right": [
+        0.6174175052143831,
+        0.7866356362731398,
+        -0.0
+      ],
+      "up": [
+        -0.4198481588061972,
+        0.32953198510951526,
+        0.8456572558293513
+      ],
+      "view_up": [
+        0,
+        0,
+        1
+      ],
+      "zoom": 1.0
+    }
+  },
+  "case": "fullgeo_case02",
+  "inputs": {
+    "A": {
+      "file_sha256": "6afb2ccf7d31741e9d126f5ad8b479f9583d3cd0bc2ff9b977d42d0d33be878d",
+      "path": "project/geodata-3d-conditional/experiments/stage21_virtual_borehole_conditioning/run_20261014_v2/formal/fullgeo_case02/seed42/n9/decoded_geology.pt",
+      "tensor_sha256": "aa31efa4ff9afbdb7f2c5966f7d415dd9f1819b7e2dd6908c7852ed8f05064b1"
+    },
+    "Ours": {
+      "file_sha256": "05b1538ecf740d0a4f67c32ab46344bee2189ea84d60e03e9acba3dfaffb3da9",
+      "path": "project/geodata-3d-conditional/experiments/stage24_multi_case/run_20261017_v1/cases/fullgeo_case02/predictions/seed42/decoded_geology.pt",
+      "tensor_sha256": "b53d5abb4ba2c5a6949645210fa2f58730e564b74b364fee44e021d2e7d15093"
+    },
+    "truth": {
+      "file_sha256": "5ded009fb49b1eeb575904c725e424985e95183aacd252777227fc5f591abe3f",
+      "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case02/truth/true_model.pt",
+      "tensor_sha256": "3adfe816b346069c8ce2e4019cbcade1514c6258b303ae0cb32ff57f8088baf4"
+    }
+  },
+  "panel_checks": [
+    {
+      "all_faces_inside_viewport": true,
+      "col": 0,
+      "full_target_voxels": 16083,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "1": 45522,
+        "12": 54,
+        "2": 12406,
+        "3": 1863,
+        "4": 61405,
+        "5": 52502,
+        "6": 21902,
+        "9": 16083
+      },
+      "row": 0,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 1,
+      "full_target_voxels": 19284,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 149,
+        "1": 33199,
+        "10": 998,
+        "11": 296,
+        "2": 12687,
+        "3": 4811,
+        "4": 73674,
+        "5": 62897,
+        "6": 3719,
+        "7": 1,
+        "8": 16,
+        "9": 19284
+      },
+      "row": 0,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 2,
+      "full_target_voxels": 25841,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 17,
+        "1": 39272,
+        "10": 769,
+        "11": 6993,
+        "12": 2,
+        "2": 9672,
+        "3": 3205,
+        "4": 60943,
+        "5": 42955,
+        "6": 21126,
+        "7": 711,
+        "8": 192,
+        "9": 25841
+      },
+      "row": 0,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 0,
+      "full_target_voxels": 16083,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "1": 35989,
+        "12": 44,
+        "2": 10077,
+        "3": 1343,
+        "4": 47816,
+        "5": 35390,
+        "6": 15360,
+        "9": 11952
+      },
+      "row": 1,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 1,
+      "full_target_voxels": 19284,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 24,
+        "1": 26946,
+        "10": 382,
+        "11": 199,
+        "2": 10298,
+        "3": 4635,
+        "4": 57032,
+        "5": 47074,
+        "6": 2291,
+        "7": 0,
+        "8": 9,
+        "9": 9079
+      },
+      "row": 1,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 2,
+      "full_target_voxels": 25841,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 11,
+        "1": 31330,
+        "10": 604,
+        "11": 6409,
+        "12": 2,
+        "2": 8356,
+        "3": 2335,
+        "4": 47623,
+        "5": 27024,
+        "6": 14348,
+        "7": 542,
+        "8": 142,
+        "9": 19214
+      },
+      "row": 1,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 0,
+      "full_target_voxels": 16083,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 16083
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 1,
+      "full_target_voxels": 19284,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 19284
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 2,
+      "full_target_voxels": 25841,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 25841
+      },
+      "target_only": true
+    }
+  ],
+  "scientific_compute": 0,
+  "seed": 42,
+  "standard": "geology_approved_v1",
+  "standard_manifest_sha256": "f35dd0fb7e9c9664b7d723b856229c73771f86c388c17e023c2500599c86231c",
+  "viewport_validation": "actual normalized0..1 plus white2-pixel image borders; original0.5percent safety margin relaxed, rendering operations unchanged",
+  "visual_inspection": "Final main plates opened; matched approved contact-sheet reference; all shapes/FP retained. Camera unchanged, physical edge validation only."
+}

@@ -1,0 +1,43 @@
+{
+  "all_registered_objects_retained": true,
+  "all_tables_arithmetic": true,
+  "all_target_components_preserved": true,
+  "approved_regression_before_and_after_validator": "all4 PNGs pixel-exact",
+  "case03_original_main_bytes_reused": true,
+  "cases": {
+    "fullgeo_case01": {
+      "added_voxels": 18520,
+      "flow_seconds": 23.288407406012993,
+      "iterations": 617,
+      "scientific_retries": 0,
+      "solve_seconds": 40.46754114300711,
+      "velocity_calls": 32
+    },
+    "fullgeo_case02": {
+      "added_voxels": 25476,
+      "flow_seconds": 22.887095981976017,
+      "iterations": 601,
+      "scientific_retries": 0,
+      "solve_seconds": 43.742543898988515,
+      "velocity_calls": 32
+    }
+  },
+  "clean_figures": 6,
+  "copy_holdout_equal_A": true,
+  "final_CPU_tests": 4,
+  "independent_panels": 27,
+  "main_figures": 6,
+  "new_predictions": 2,
+  "new_scans": 0,
+  "new_seeds": 0,
+  "new_solves": 2,
+  "new_training": 0,
+  "old_source_and_assets_unchanged": true,
+  "original_and_added_condition_violations": 0,
+  "scientific_retries": 0,
+  "source_noise_and_model_identity": true,
+  "status": "passed",
+  "velocity_evaluations": 64,
+  "visual_code_diff": "VISUAL_VALIDATOR_FIX.diff",
+  "visualization_technical_retries": 2
+}

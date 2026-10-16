@@ -1,0 +1,37 @@
+{
+  "name": "geology_approved_v1",
+  "sealed_at_utc": "2026-10-16T18:44:59.164916+00:00",
+  "approval_source": "STAGE24_MULTI_CASE_EXECUTION_PROMPT_2026-10-17.md identifies just-approved Stage23 conference_paper_v2",
+  "original_output": "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/reports/conference_paper_v2",
+  "entry": "scripts/reports/build_stage23_reference_figures.py",
+  "source_sha256": {
+    "scripts/reports/build_stage23_reference_figures.py": "73980a8f2523f572e44dbdfdceb55698e39562805df743196a868988fc5db505",
+    "scripts/reports/build_stage23_conference_figures.py": "8f38324389a79d516a358db16bf5746fdb9ccce500afd40224f8772d1b0a7690",
+    "scripts/paper_figures/style.py": "a4a877b96365f78306348cedd3b63bac7579d174c1f32c6bed434d6fd9e8990e",
+    "scripts/stage21/common.py": "2c954bd90fcacccae975b2aab1f0053f272c82e40861514d03cfd15c90933aac"
+  },
+  "approved_files": {
+    "CAPTIONS.md": "177b3618fc7dbd35c941c000a0bef63f2633961a933266d815d72f43f8022ccc",
+    "fig01_full_geology_comparison_clean.png": "f0dc6fd980292582de1bf966527381c1ec62311f8f9eab53cd003c0d05833052",
+    "fig01_full_geology_comparison_clean.pdf": "5e889a58920bf6c9788f1eb623f552ee05da6dab2d8cc5f06db97e115cac8108",
+    "fig01_full_geology_comparison.png": "0a1a102ad0ea8835219ff0234e080fd224a22cffa5b152d1865cd97d71ec0c65",
+    "INPUT_ASSETS.json": "a63f5ed89e8e9ad9e5ae35c9b87afeec589659ed959b2625be6b1a532b38e1a6",
+    "fig02_target_body_comparison_clean.png": "7f2ee46a3444d517fd3c52acca464a6b7b64dbb3e9888b71732d3be484f68695",
+    "fig02_target_body_comparison.pdf": "a6855249c0fc2ae9f312046bfa77eb5e8f616973f12e948fc5db7661b895fafc",
+    "fig01_full_geology_comparison.pdf": "514b0f0a9828ef23fd0ccd9df0a98eb1c84743fd2686f771ef884b7bea562cbe",
+    "fig02_target_body_comparison.png": "80e10dd8def605c2aa606b31bd6cb050813010189d2032cf4456c5d4aee3978a",
+    "RENDER_CONFIG.json": "8f09706105679b21559acf155150a43a6da97b1435b922875cf2c47de7ecc07b",
+    "fig02_target_body_comparison_clean.pdf": "bf276d4e05f1a9d6eb1b8e9216c9be06ea6c9baee9d57cfc298594d21ebef17a",
+    "README.md": "6c21b34ad458f1a117a7cfafa31e50c8fd4d9a5f26b338d0d2d1aa2e3b014c30"
+  },
+  "configuration": "approved_samples/RENDER_CONFIG.json",
+  "input_identities": "approved_samples/INPUT_ASSETS.json",
+  "frozen_runtime_functions": [
+    "camera",
+    "project",
+    "render",
+    "compose"
+  ],
+  "policy": "Exact AST function bodies and frozen style snapshot; only volumes/case/output parameterized",
+  "renderer_sha256": "15b50d5422c9be77f3c1fbcedde9e2a05a6ca2d47cf150b314826043c4d01dba"
+}

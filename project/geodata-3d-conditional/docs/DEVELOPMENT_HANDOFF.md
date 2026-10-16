@@ -1999,3 +1999,156 @@ volume bias, missed geometry and splitting remain substantial. Stop here after
 one case/seed/output; user/MCYR decide any new protocol. Known-kernel/no-extra-
 noise/artificial-proxy/reused-case evidence does not establish real geophysical
 inversion, cross-model generalization, or publication novelty. No commit/push.
+
+
+## Stage23 read-only scientific visualization (2026-10-17)
+
+User authorized STAGE23_VISUALIZATION_PROMPT_2026-10-17.md. Current HEAD
+90ca753f0413f48aa57e989ba41f327ae98573b7 matches its reference. Existing
+unrelated geophysics-results deletions were preserved. New standalone script
+scripts/reports/build_stage23_conference_figures.py reads sealed v2 tensors
+through EXECUTION/registries/receipts, checking file/canonical tensor hashes,
+case03/seed42/64cube and CSV-to-EXECUTION metrics. No sealed stage21v2/22/23
+source or output was modified. All59 Stage23 sealed artifacts retain their hashes.
+
+Delivery: experiments/stage23_full_pseudo_wells/reports/conference_paper_v1/.
+fig01_full_geology_comparison and fig02_target_body_comparison are180x138mm,
+2x3 GT/A/Stage23 grids; figS01_bridge_evidence is180x89mm. Each has600dpi PNG
+and PDF with embedded TrueType/vector titles, labels, metrics and legend, plus
+raster3D (not wholly vector geometry). Twelve1500x1360 original panel PNGs,
+Chinese/English CAPTIONS, figure_metrics/condition/outside-object CSVs, rendering
+config, input identities, redraw command, code snapshot and QC are retained.
+Actual Stage15 reference PNGs and local Synthetic Geology PDF pp12-13/Figs7-8
+were viewed. Reuse only pure exact voxel-face/palette helpers; no old ghost,
+well layout, per-panel auto-bbox or white-margin trimming.
+
+XYZ is array-axis order, VTK ImageData shape+1 and Fortran-order cell data; unit
+spacing and fixed0..64 cube boundaries. All models share camera/focal/parallel
+scale/lighting and raw0..13 colours; air hidden. Geology upper row is full,
+lower row removes the same X>=32/Y<32 quadrant for display only. Target rows
+retain ALL raw9 components without cutaway/ghost/ROI/filter/smoothing/repair;
+shared isometric and orthographic along-Y views. Original wells/surface remain
+in model conditioning but wells are omitted visually. Every fixed cube corner
+projects inside camera, raw image borders are white and target represented
+voxel counts equal full input counts, including FP fragments.
+
+Figures retain positive conversion92.44% versus60.99%, holdout mIoU0.5039
+versus A0.1481, and shared off-condition hidden-object144/510 versus0/510.
+Explicitly label that as object-subset coverage, not IoU. Supplement preserves
+true-well B and direct full-field IoU0.9677/mIoU0.6627; full-field direct and
+sampled pseudo-well evidence are not equal information budgets. Missing target
+segments, fragmentation and FP remain visible. One case/seed ideal surrogate
+with known kernel is not field inversion, robustness or generalization proof.
+All three PNGs opened and inspected; common vector axis annotations adjusted
+into empty frame margin. PDF embedded fonts and extractable text checked.
+New model forwards0, training0, deconvolution0, condition generation0. Only
+CPU tensor reads/plots and off-screen graphics rendering were performed.
+No commit/push, new scientific sample or follow-up experiment.
+
+
+## Stage23 visualization revision: image-led reference plates (2026-10-17)
+
+User replaced prior visualization layout through
+STAGE23_VISUALIZATION_REVISION_PROMPT_2026-10-17.md. New independent script
+scripts/reports/build_stage23_reference_figures.py; output
+experiments/stage23_full_pseudo_wells/reports/conference_paper_v2/.
+Preserve v1, old shared style, scientific source/output and unrelated changes.
+
+Only two main plates: full opaque geology2x3 (whole volume above, common
+cutaway_mask fraction0.52 below) and complete orange raw9 target1x3. Each
+has600dpi PNG/PDF and a clean variant containing only panel letters. Normal
+versions have only Ground truth/Frozen Flow/Ours, panel letters and one shared
+discrete raw-label legend for geology. No metrics, conclusions, long titles,
+annotations/arrows, target side-view row, evidence supplement, or diagram.
+External bilingual CAPTIONS retains method, saved metrics and limitations.
+
+Reuses Stage15 exact cell threshold/extract_surface, LABEL_COLORS, flat
+lighting ambient0.34/diffuse0.66/specular0 and SSAA. Shared direction
+[1.72,-1.35,1.38]. Per-plate cameras equal across ALL columns/rows:
+geology focal[32,32,26.5], scale51.8; target focal[32,32,29.44], scale54.5;
+parallel projection,1600x1440 raw render. Geology framing lowered uniformly
+to reduce empty air, with every full-model nonair surface vertex verified
+inside viewport. Target retains full0..64 box, all predicted components and
+the same9 original wells as thin teal radius0.12 tubes. No ghost, ROI, target
+cutaway, component filtering, smoothing, repairs, per-method auto-fit or
+independent crop. Full target counts retained: GT1736/A4578/Stage23 3297.
+
+Actual two Stage15 PNGs and local Synthetic Geology PDF pp12-13 were opened.
+All four final variants opened; final plates were also inspected alongside
+Stage15 three-panel and paper Fig7 references in a temporary QA contact
+sheet. Final PDFs checked for embedded/extractable TrueType text and absence
+of scientific metric text; clean variants lack column titles/legend.
+v1 manifest and all59 sealed Stage23 artifacts unchanged; inputs verified
+by file/canonical tensor hashes and registries. Config records camera,
+colours, light, geometry validation and visual QC. No model/checkpoint load,
+forward, training, deconvolution, new conditions or scientific changes.
+
+
+## Stage24: approved visualization standard and two additional cases (2026-10-17)
+
+User authorized STAGE24_MULTI_CASE_EXECUTION_PROMPT_2026-10-17.md. HEAD
+90ca753f0413f48aa57e989ba41f327ae98573b7; previous handoff edits, plotting
+outputs and unrelated geophysics-results deletions preserved. New scripts/stage24
+and independent reports/build_stage24_approved_figures.py; no old stage21v2/22/23
+source edits, no commit/push.
+
+Actual accepted Stage23 conference_paper_v2 entry,4 local dependency sources,
+original PNG/PDF/config/input identities/commands are frozen under
+visualization_standards/geology_approved_v1 (MANIFEST, source_snapshot,
+approved_samples, renderer.py, SEAL). Exact original function ASTs use frozen
+style helpers; no new visual design. Four case03 PNG normal/clean variants
+are pixel-exact in both initial and final regressions. Final case03 main
+figures are original-byte copies;9 panels come from necessary style regression.
+
+Delivery experiments/stage24_multi_case/run_20261017_v1 has two new cases,
+three-case CSVs/PPT_COMPARISON, Chinese REPORT/REVIEWED_FINDINGS, external
+bilingual CAPTIONS, PPT_ASSET_INDEX, commands, source snapshots/receipts and
+FINAL_CHECKS. reports/<case03,case02,case01> has6 normal main plates,6 clean
+variants, all600dpi PNG/PDF and27 independent panels; all main new plates
+opened and checked next to approved case03 reference. Camera/scale, raw
+colours, light, opaque voxel faces, complete target components, original9
+well lines and full boxes unchanged; no ghost/ROI/filter/smoothing/repair.
+
+Exactly2 CPU restoration solves using unchanged Stage22 solver and original
+registered sigma1 properties: case01 converged617 iterations/40.4675s,
+case02 601/43.7425s; same kernel/TV/scales/bounds/original lookup constraints.
+No truth in preparation; fields and complete512 pseudo-wells sealed before
+Flow/evaluation. Added18520/25476 voxels, masks equal old B512/C512, holdout
+additions0, original hard priority and unknown placeholders preserved.
+Two serial seed42 native Flow outputs only,32 calls each /64 total,23.29s/
+22.89s, actual oldA saved CPU noise, EMA411/raw frozen embedding, FP32/no
+TF32/autocast/deterministic, frozen model identity and hard conditions exact.
+No scientific retries, extra seed/case/training/scans. Stop at budget.
+
+case01 added accuracy C0.800918->0.968251, target FN5->0/FP0. Holdout
+IoU0.014286->0.160000, recall0.090909->0.727273, mIoU0.367135->0.519594.
+Primary TP53/FP468/FN65, IoU0.090444/P0.101727/R0.449153, volume ratio
+4.415254. Only major object4 full110 has2 original condition/well voxels;
+matched IoU0.177700, any coverage53/108 original-free. Zero-condition
+objects1/2/3 (1/6/3 voxels) all remain0TP outside new conditions. Not a
+second zero-well major-body success. B holdout IoU0.176471/mIoU0.554534
+remains better; direct full classification primary IoU1/mIoU0.799359.
+
+case02 added accuracy C0.634283->0.930209, target FN687->2/FP1->0.
+Holdout IoU0.396172->0.464922, recall0.699079->0.854657, mIoU0.333983->
+0.482250. Primary TP13607/FP12197/FN2439, P0.527321/R0.848000/IoU0.481783.
+FP rises from C10774 and volume ratio1.328805->1.608127: scope control does
+not improve over C. All16 truth IDs/11 zero-hard-condition objects retained.
+Four zero-condition major IDs3/11/14/16 full32/926/129/41: common off-new-mask
+TP9/28,606/824,85/105,18/31 versus A/COPY0,88,75,3. Matching IoU0.189655,
+0.002160,0.007519,0 despite any coverage13/32,708/926,109/129,28/41. Largest
+prediction full25470/primary25433 with11891FP overlaps8 truth objects:
+localization improves but severe merging remains. B primary/holdout IoU
+0.496289/0.484266 and holdout mIoU0.520625 remain better. Direct full-field
+classification primary IoU0.998069/mIoU0.735885 remains far better and has
+a different information budget. Original-free truth target volume16046.
+
+Two visualization-only retries retained: initial AST wrapper missed itertools;
+case02's valid projected y0.996757 triggered conservative0.995 margin.
+Only validation assertions relaxed to actual0..1 bounds;2pixel white-border
+checks retained, no camera/geometry change. New stage24 plot-only source diff
+is explicit; scientific executed snapshots remain intact. Final approved PNG
+regression still pixel-exact. All necessary input/hash/condition/noise/model/
+32-call/COPY/metric/object/figure checks pass;4 focused CPU tests passed.
+Known-kernel/no-extra-noise/artificial-proxy/reused-case single seeds are
+showcase diagnostics, not independent geological TEST or proven generalization.

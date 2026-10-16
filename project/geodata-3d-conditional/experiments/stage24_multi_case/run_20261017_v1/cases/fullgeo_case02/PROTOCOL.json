@@ -1,0 +1,18 @@
+{
+  "TV": 0.0001,
+  "case": "fullgeo_case02",
+  "classification": "original raw0..13 first argmin, fixed weights/nonair ranges",
+  "condition": "Stage23 dense_conditions, old total512 columns, original hard priority",
+  "dtype": "CPU float64; original float32 kernel coefficients",
+  "max_iterations": 2000,
+  "max_new_predictions": 1,
+  "max_new_solves": 1,
+  "max_velocity_evaluations": 32,
+  "radius": 3,
+  "restoration": "EXACT unchanged scripts/stage22/solver.py solve defaults",
+  "scientific_gate": false,
+  "seed": 42,
+  "sigma": 1.0,
+  "specification_sha256": "ae59e4cc7adb27708e9133848c0cc92e4f1edeb36636fab8ca67962bbf5d07b9",
+  "stop": "50 consecutive relative changes<1e-6; final accepted iterate"
+}

@@ -1,0 +1,300 @@
+{
+  "PDF_checks": "Four PDFs: embedded TrueType text; clean versions contain panel letters only; no scientific metric or long method text.",
+  "asset_loader_sha256": "8f38324389a79d516a358db16bf5746fdb9ccce500afd40224f8772d1b0a7690",
+  "axis_order": "XYZ; Fortran cell ravel; cell coordinates0..64",
+  "cameras": {
+    "geology": {
+      "direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "focal_point": [
+        32.0,
+        32.0,
+        26.5
+      ],
+      "parallel_projection": true,
+      "parallel_scale": 51.8,
+      "position": [
+        142.07999999999998,
+        -54.400000000000006,
+        114.82
+      ],
+      "right": [
+        0.6174175052143831,
+        0.7866356362731398,
+        -0.0
+      ],
+      "up": [
+        -0.4198481588061972,
+        0.32953198510951526,
+        0.8456572558293513
+      ],
+      "view_up": [
+        0,
+        0,
+        1
+      ],
+      "zoom": 1.0
+    },
+    "target": {
+      "direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "focal_point": [
+        32.0,
+        32.0,
+        29.44
+      ],
+      "parallel_projection": true,
+      "parallel_scale": 54.5,
+      "position": [
+        142.07999999999998,
+        -54.400000000000006,
+        117.75999999999999
+      ],
+      "right": [
+        0.6174175052143831,
+        0.7866356362731398,
+        -0.0
+      ],
+      "up": [
+        -0.4198481588061972,
+        0.32953198510951526,
+        0.8456572558293513
+      ],
+      "view_up": [
+        0,
+        0,
+        1
+      ],
+      "zoom": 1.0
+    }
+  },
+  "condition_generation": 0,
+  "cut_fraction": 0.52,
+  "deconvolution": 0,
+  "dpi": 600,
+  "geology_opacity": 1.0,
+  "git": {
+    "branch": "main",
+    "head": "90ca753f0413f48aa57e989ba41f327ae98573b7",
+    "status_short": "M project/geodata-3d-conditional/docs/DEVELOPMENT_HANDOFF.md\n D project/geodata-3d-conditional/geophysics-results/best_gravity.png\n D project/geodata-3d-conditional/geophysics-results/best_slice.png\n D project/geodata-3d-conditional/geophysics-results/geo_misfit_vs_mean_iou.png\n D project/geodata-3d-conditional/geophysics-results/geo_misfit_vs_voxel_accuracy.png\n D project/geodata-3d-conditional/geophysics-results/metrics.csv\n D project/geodata-3d-conditional/geophysics-results/true_gravity.png\n D project/geodata-3d-conditional/geophysics-results/true_slice.png\n D project/geodata-3d-conditional/geophysics-results/worst_gravity.png\n D project/geodata-3d-conditional/geophysics-results/worst_slice.png\n?? STAGE23_VISUALIZATION_PROMPT_2026-10-17.md\n?? STAGE23_VISUALIZATION_REVISION_PROMPT_2026-10-17.md\n?? project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/reports/\n?? project/geodata-3d-conditional/scripts/reports/build_stage23_conference_figures.py\n?? project/geodata-3d-conditional/scripts/reports/build_stage23_reference_figures.py"
+  },
+  "historical_checks": "All conference_paper_v1 manifest outputs and 59 sealed Stage23 v2 artifacts retain their hashes; shared style unchanged.",
+  "independent_crop": false,
+  "label_colors": {
+    "-1": "#FFFFFF",
+    "0": "#7A6652",
+    "1": "#8C4E85",
+    "10": "#C94C4C",
+    "11": "#A33E63",
+    "12": "#7B4FA3",
+    "13": "#5E4B8B",
+    "2": "#3B6FB6",
+    "3": "#5A91C8",
+    "4": "#56B4B8",
+    "5": "#4DA66D",
+    "6": "#86B84A",
+    "7": "#C5C55A",
+    "8": "#E5C55C",
+    "9": "#D95F02"
+  },
+  "light": {
+    "ambient": 0.34,
+    "diffuse": 0.66,
+    "show_edges": false,
+    "smooth_shading": false,
+    "specular": 0
+  },
+  "new_model_forwards": 0,
+  "original_well_color": "#168A89",
+  "original_well_count": 9,
+  "original_well_radius": 0.12,
+  "panel_pixels": [
+    1600,
+    1440
+  ],
+  "panels": [
+    {
+      "all_faces_inside_viewport": true,
+      "col": 0,
+      "full_target_voxels": 1736,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "1": 30007,
+        "13": 3,
+        "2": 18614,
+        "3": 42731,
+        "4": 3985,
+        "5": 53489,
+        "7": 124,
+        "8": 4126,
+        "9": 1736
+      },
+      "row": 0,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 1,
+      "full_target_voxels": 4578,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 202,
+        "1": 6208,
+        "10": 30,
+        "11": 5,
+        "13": 1,
+        "2": 6262,
+        "3": 17438,
+        "4": 16252,
+        "5": 103174,
+        "6": 3,
+        "8": 661,
+        "9": 4578
+      },
+      "row": 0,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 2,
+      "full_target_voxels": 3297,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 6,
+        "1": 27788,
+        "10": 175,
+        "11": 1035,
+        "13": 1,
+        "2": 13548,
+        "3": 44141,
+        "4": 5376,
+        "5": 52992,
+        "6": 424,
+        "7": 317,
+        "8": 5711,
+        "9": 3297
+      },
+      "row": 0,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 0,
+      "full_target_voxels": 1736,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "1": 23292,
+        "13": 0,
+        "2": 13598,
+        "3": 31134,
+        "4": 3240,
+        "5": 37307,
+        "7": 124,
+        "8": 4126,
+        "9": 1736
+      },
+      "row": 1,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 1,
+      "full_target_voxels": 4578,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 114,
+        "1": 4903,
+        "10": 30,
+        "11": 5,
+        "13": 0,
+        "2": 5321,
+        "3": 14421,
+        "4": 13205,
+        "5": 71341,
+        "6": 3,
+        "8": 661,
+        "9": 4552
+      },
+      "row": 1,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 2,
+      "full_target_voxels": 3297,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 6,
+        "1": 21048,
+        "10": 173,
+        "11": 1035,
+        "13": 0,
+        "2": 10468,
+        "3": 31488,
+        "4": 4198,
+        "5": 36395,
+        "6": 424,
+        "7": 316,
+        "8": 5705,
+        "9": 3297
+      },
+      "row": 1,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 0,
+      "full_target_voxels": 1736,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 1736
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 1,
+      "full_target_voxels": 4578,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 4578
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "col": 2,
+      "full_target_voxels": 3297,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 3297
+      },
+      "target_only": true
+    }
+  ],
+  "pyvista": "0.48.4",
+  "reference_images": [
+    "experiments/stage15_binary_seismic_consensus/reports/conference_paper_v1/figure2_complete_label9_flow_results.png",
+    "experiments/stage15_binary_seismic_consensus/reports/conference_paper_v1/figure2_five_body_geophysical_guidance.png"
+  ],
+  "script_sha256": "73980a8f2523f572e44dbdfdceb55698e39562805df743196a868988fc5db505",
+  "shared_style_sha256": "a4a877b96365f78306348cedd3b63bac7579d174c1f32c6bed434d6fd9e8990e",
+  "spacing": [
+    1,
+    1,
+    1
+  ],
+  "target_box": "existing pale gray wireframe; complete0..64",
+  "target_cutaway": false,
+  "target_opacity": 1.0,
+  "training": 0,
+  "truth_ghost": false,
+  "visual_inspection": "Passed: all four final PNG variants opened; actual Stage15 three-panel reference and Synthetic Geology Fig7 viewed side-by-side with final plates; Fig8 and complete-label9 reference also inspected. Tight common framing, opaque stepped surfaces, no metrics/ghost; all components retained.",
+  "vtk": "9.6.2"
+}

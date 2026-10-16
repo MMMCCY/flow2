@@ -1,0 +1,9 @@
+2026-10-17 02:55:54.163 (   0.327s) [    7950B31151C0]vtkXOpenGLRenderWindow.:1460  WARN| bad X server connection. DISPLAY=
+Traceback (most recent call last):
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/reports/build_stage24_approved_figures.py", line 11, in <module>
+    plot(p.parse_args().case)
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage24/plot.py", line 49, in plot
+    image,check=approved.render(volume,cut if i else keep,cams['geology'])
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/visualization_standards/geology_approved_v1/source_snapshot/scripts/reports/build_stage23_reference_figures.py", line 64, in render
+    assert (projected>.005).all() and (projected<.995).all(), 'Nonair voxel face would be clipped'
+AssertionError: Nonair voxel face would be clipped

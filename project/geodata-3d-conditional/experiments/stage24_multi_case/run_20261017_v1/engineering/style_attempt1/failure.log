@@ -1,0 +1,9 @@
+2026-10-17 02:47:20.427 (   0.810s) [    74476CF0F1C0]vtkXOpenGLRenderWindow.:1460  WARN| bad X server connection. DISPLAY=
+Traceback (most recent call last):
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/reports/build_stage24_approved_figures.py", line 11, in <module>
+    plot(p.parse_args().case)
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage24/plot.py", line 55, in plot
+    image,check=approved.render(volume,keep,cams['target'],wells)
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/visualization_standards/geology_approved_v1/source_snapshot/scripts/reports/build_stage23_reference_figures.py", line 71, in render
+    box_corners=np.array(list(itertools.product([0.,64.],repeat=3)))
+NameError: name 'itertools' is not defined
