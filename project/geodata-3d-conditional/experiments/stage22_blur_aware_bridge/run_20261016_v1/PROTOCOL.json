@@ -1,0 +1,58 @@
+{
+  "Gaussian": "original radius3 sigma1 separable kernel, replicate padding; autograd exact transpose",
+  "TV": "mean over channels and voxels sqrt(sum_xyz(forward_difference**2)+1e-8); exterior differences zero",
+  "TV_weight": 0.0001,
+  "acceptance": {
+    "argmin": 9,
+    "max_d9": 0.01,
+    "min_margin9": 0.05
+  },
+  "added_labels": [
+    9
+  ],
+  "backtrack_factor": 2.0,
+  "bounds": "full codebook including air min/max divided by scale",
+  "case": "fullgeo_case03",
+  "classification": "FP32 old nonair raw0..13 argmin and fixed normalized weights/ranges",
+  "confirmation": "only if seed42 passes; same conditions seeds142/242; all 3 pass every criterion",
+  "evaluation_domains": [
+    "E_original_free",
+    "E_holdout"
+  ],
+  "initial_L": 4.0,
+  "initialization": "clipped y (observed properties/scale), then original hard projection",
+  "iterate_choice": "final solver iterate only; no truth-visible snapshots",
+  "layout": "old total512 columns; exclude original hard mask; subset depths only; never holdout",
+  "max_iterations": 2000,
+  "max_new_Flow_outputs": 3,
+  "no_adapter": true,
+  "no_physics": true,
+  "no_scans": true,
+  "no_training": true,
+  "noise": "load and hash-verify actual paired A source tensor; verify CPU initial_noise generation as well",
+  "object_rules": {
+    "detection_min_coverage": 0.1,
+    "detection_min_iou": 0.1,
+    "edge_min_intersection": 5,
+    "edge_min_truth_coverage": 0.05
+  },
+  "offline_gate": "added precision>=0.95 AND correct added voxels in object1>=5; no additions => NA/fail",
+  "original_constraints": "unblurred lookup properties fixed in z at original hard mask",
+  "outside_added_object_evaluation": "object1 intersect original_free minus added condition mask; common denominator A/new",
+  "reference_commit": "9b46d1af2d08c32ce256ad18afab716b91c92ada",
+  "sampler": "original sample_native; 32 midpoint-time fixed Euler steps; FP32 no autocast/TF32; deterministic CUBLAS :4096:8",
+  "scale": "fixed nonair codebook max-min; no centering",
+  "schema": "stage22_blur_aware_bridge_v1",
+  "seed42_gate": "original_free recall>A and precision>=A; object1 one-to-one IoU>=0.10 and coverage>=0.10; holdout mIoU>=A-0.01",
+  "sigma": 1.0,
+  "solver": "projected accelerated gradient with majorization backtracking and objective-monotonic restart",
+  "solver_dtype": "CPU float64; frozen float32 Gaussian coefficients promoted to float64",
+  "source_seeds": [
+    42,
+    142,
+    242
+  ],
+  "specification_sha256": "c5dbe817c9301129e0de14e1b0a65a872128d852d87349297624c1e5be86f2fc",
+  "stop": "50 consecutive accepted-iterate objective relative changes <1e-6; denominator max(abs(previous),1e-30)",
+  "weights": "411 trainable EMA then freeze; raw checkpoint frozen embedding"
+}

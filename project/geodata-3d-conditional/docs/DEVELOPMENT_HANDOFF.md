@@ -1851,3 +1851,91 @@ conditions and retaining accurate-well/direct-classification comparisons.
 This diagnosis does not implement that interface, select a new threshold,
 prove soft conditioning works, prove field inversion validity, show every
 hidden object's information survives, or justify retraining Flow. Stop here.
+
+
+## Stage22 blur-aware TV restoration and sparse target hard bridge (2026-10-16)
+
+User authorized the single case03 finite protocol in
+`STAGE22_BLUR_AWARE_BRIDGE_PROMPT_2026-10-16.md`, with at most3 new Flow
+outputs and no training, adapter, real physics, SDF or parameter scan. Initial
+HEAD/main matches reference `9b46d1af2d08c32ce256ad18afab716b91c92ada`;
+initial worktree contained only the untracked user prompt. All computations
+used SSH labrs-codex and repository `.venv`. Old runs, Stage21v2 scripts and
+original tests remain unchanged; no commit/push was performed.
+
+New namespace `scripts/stage22/` contains common/solver/prepare/run/workflow/
+report and focused test_stage22.py. Delivery:
+`experiments/stage22_blur_aware_bridge/run_20261016_v1/` (REPORT.md,
+PROTOCOL/METHOD_FREEZE/PREPROCESSING_RECEIPT/OFFLINE_GATE/EXECUTION,
+solver_history, sample/object/predicted-object tables, two figures,
+COMMANDS/TEST_RESULTS/FINAL_CHECKS, prediction receipts and artifact hashes).
+Frozen source-map digest: `f7f55a2b1f820be4d7840c6fcc5e6e8cdc2ed645b9a49c04f7420dcbf28b6820`. Legacy source check verified all36
+files in the old Stage21v2 registered source map; old sampler/model behavior
+was not modified.
+
+Preprocessing was blind to full truth, object IDs and q9. Its file-open guard
+rejected truth/object/diagnostic tensors and checkpoints. It used saved two-
+channel observations, fixed full codebook, scales and original conditions only.
+Single CPU float64 projected accelerated-gradient solve used original sigma1
+radius3 separable/replicate float32 kernel coefficients, exact autograd transpose,
+isotropic forward-difference TVmean with exterior differences0 and sqrt epsilon
+1e-8, fixed coefficient1e-4, full-codebook bounds including air and exact
+unblurred original-condition property projection. Method/source freeze was at
+12:53:28 UTC, final field/conditions sealed12:54:08 UTC, first full truth
+read for evaluation12:56:12 UTC. No iterate selected by truth.
+
+Converged after550 accepted iterations /39.52s: objective0.000166326000 ->
+0.00000365432481, dataMSE1.13648481e-7, TVmean0.0354067633; final50 relative
+changes<1e-6, hard and bound errors0. Final fixed classifier argmin9/d9<=.01/
+margin>=.05 accepted79 target voxels in36 columns of the old512 layout outside
+original conditions; these are partial target depths, not512 complete wells.
+Offline gate:79TP,0FP, precision1;36 correct additions inside original-M9-
+unhit572-voxel object1. Candidate conditions were sealed before evaluation and
+never modified after truth was read. No non-target labels were added.
+
+Exactly one new seed42 Flow /32 forward calls ran,23.77s including initialization.
+Actual oldA CPU noise file/tensor was verified and loaded (canonical noise
+SHA2566c4f6450e0e2eb2103d190b9747a1af6bc8e806c00a973a54511ea7bdd1ae81d).
+EMA411/raw frozen embedding, FP32/noTF32/deterministic CUBLAS,32 midpoint-time
+Euler and original sample_native are unchanged; model hash before/after equals
+oldA. Original/additional decoded condition violations0.
+
+The accurate sparse conditions elicited off-condition response, but NOT a
+passing hidden-object restoration. On object1's common536-voxel subset outside
+the36 new conditions, target TP rises A0 -> new392 (coverage0.731343); COPY_ONLY
+stays0. Any prediction covers428/572 of object1 (0.748251). However, prediction
+component2 has27758 original-free voxels,26581FP and significant overlaps with
+both truth objects. One-to-one matching assigns it to object2, leaving object1
+unmatched (matched IoU/coverage0); this is not absence of target localization.
+Object2 matched IoU is only0.026589. Overall original-free newFlow:
+TP1177/FP30711/FN556, precision0.036910, recall0.679169, IoU0.036278,
+fixed-classmIoU0.106147, predicted target31888 versus truth1733.
+
+Direct deconvolved full classification with original conditions restored is
+much better: original-free TP1679/FP2/FN54, precision0.998810, recall0.968840,
+IoU0.967723, mIoU0.662712; object1 matched IoU0.991289 and off-added TP533/536.
+The newFlow is worse than direct preprocessing; do not report only gains over
+A (A original-free IoU0.006382, precision0.008743, recall0.023081).
+
+Seed42 passes original-free recall/precision comparison to A, but fails the
+object1 matching gate and holdout mIoU guard: A0.148135 -> new0.131576, drop
+0.016559 exceeds allowed0.01. Stop reason is
+`seed42_research_gate_failed_no_confirmation`. Seeds142/242 were NOT run; do
+not imply confirmation success/failure from unexecuted samples. OldA/B512/C512
+are reference pointers only; B is not a matched-information-budget upper bound.
+New and oldC masks/label contents differ, so these controls do not isolate the
+causal effect of deconvolution versus condition count or positive-only evidence.
+
+Validation:6 necessary new/basic sampler tests passed (1.86s), frozen method/
+source identity, original conditions, target-only/noholdout additions, noise/
+model identity, COPY_ONLY holdout equality, actual32-call budget and stop rule
+were rechecked. Old assets/sources were preserved. No GPU preprocessing,
+additional smoke, new seed/case, parameter change or retry occurred.
+
+Decision: stop the current native sparse-target-hard-projection configuration;
+retain the positive ideal-proxy restoration result and place any separately
+registered next study at the condition-interface question, not more wrong/
+unbalanced hard conditions or TV/sigma tuning. No new interface is implemented
+here; success of soft conditioning, field validity or a need to retrain Flow
+has not been demonstrated. This is a known-kernel/no-extra-noise/artificial-
+strong-contrast reused-case result, not PGI replication or a novelty claim.
