@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "tests": 5,
+  "result": "Ran 5 tests in 0.004s; OK",
+  "command": "CUDA_VISIBLE_DEVICES=\"\" PYTHONDONTWRITEBYTECODE=1 .venv/bin/python project/geodata-3d-conditional/scripts/stage21v2_diagnostics/test_metrics.py",
+  "checks": [
+    "constant AP=prevalence",
+    "complete tied positive group",
+    "documented sklearn example",
+    "15 exhaustive nonempty binary tie fixtures",
+    "top5 includes all boundary ties without truth"
+  ]
+}

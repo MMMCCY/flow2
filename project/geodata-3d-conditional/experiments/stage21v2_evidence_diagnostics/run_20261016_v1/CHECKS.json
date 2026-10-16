@@ -1,0 +1,69 @@
+{
+  "CPU_only": true,
+  "Gaussian_boundary": "replicate",
+  "Gaussian_sigma": 1.0,
+  "cases": [
+    {
+      "argmin_mismatches": 0,
+      "case_id": "fullgeo_case03",
+      "domain": "E_original_free",
+      "domain_sha256": "b085bcceaaff436cfc3a486a8d31e42d440c5b8a71f6131759918cbb54b303c9",
+      "positives": 1733,
+      "properties_reconstructed": false,
+      "voxels": 150364
+    },
+    {
+      "argmin_mismatches": 0,
+      "case_id": "fullgeo_case03",
+      "domain": "E_holdout",
+      "domain_sha256": "1af81e0aeec308031534b81ec9b6fd39868bfdf7592d1e001356ce027ef576c0",
+      "positives": 103,
+      "properties_reconstructed": false,
+      "voxels": 9414
+    },
+    {
+      "argmin_mismatches": 0,
+      "case_id": "fullgeo_case01",
+      "domain": "E_original_free",
+      "domain_sha256": "2dacfed8ce1c4f8348f09733e394bab87176749a298fc01c9e5f7dd599aab48e",
+      "positives": 118,
+      "properties_reconstructed": false,
+      "voxels": 150764
+    },
+    {
+      "argmin_mismatches": 0,
+      "case_id": "fullgeo_case01",
+      "domain": "E_holdout",
+      "domain_sha256": "b24e3cedd450a6441291fb4dcc33dc39fc1a3c80b39a7edb7b677b1c9459a4ce",
+      "positives": 11,
+      "properties_reconstructed": false,
+      "voxels": 9442
+    },
+    {
+      "argmin_mismatches": 0,
+      "case_id": "fullgeo_case02",
+      "domain": "E_original_free",
+      "domain_sha256": "cd05f6b09f69bcbc9238e827787924de1f669b020c350c3f06dd99442f2f02e7",
+      "positives": 16046,
+      "properties_reconstructed": false,
+      "voxels": 207193
+    },
+    {
+      "argmin_mismatches": 0,
+      "case_id": "fullgeo_case02",
+      "domain": "E_holdout",
+      "domain_sha256": "4427410f44d26379d35224b78d705130b0b19b669c9b5fe58e987769c190e14b",
+      "positives": 977,
+      "properties_reconstructed": false,
+      "voxels": 12975
+    }
+  ],
+  "checkpoint_open_guard": true,
+  "full_argmin_matches_pseudo_raw": true,
+  "known_counts_match": true,
+  "new_Flow_runs": 0,
+  "old_run_write_guard": true,
+  "original_object_ids_match": true,
+  "status": "passed",
+  "training_runs": 0
+}

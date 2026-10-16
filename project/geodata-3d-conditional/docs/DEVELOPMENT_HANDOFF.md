@@ -1781,3 +1781,73 @@ Stop here. Prioritize pseudo-well target loss and erroneous hard-conditioning
 costs before a separately authorized real-physics bridge. Do not automatically
 run higher densities, change sigma/codebook/layout/seeds, train, or extend the
 case set. Reused cases/seeds are diagnostics, not independent geological TEST.
+
+
+## Stage21v2 continuous-evidence offline diagnosis (2026-10-16)
+
+The user authorized only the offline mechanism diagnosis described in
+`STAGE21V2_OFFLINE_DIAGNOSTIC_CODEX_PROMPT_2026-10-16.md`. Current main HEAD
+matches its review baseline `fbafbcb5893a1c262a247f53e0fee5dd7072b822`.
+All analysis executed through SSH labrs-codex using repository `.venv`, CPU
+loads and CUDA_VISIBLE_DEVICES="". No Flow checkpoint was opened; zero new
+Flow, training, adapter or physical forward/inverse runs; no sigma/weight/
+threshold/budget scan. The sealed old Stage21v2 run, old scripts/stage21v2
+namespace and original tests were not modified.
+
+New independent implementation: `scripts/stage21v2_diagnostics/`;
+new delivery: `experiments/stage21v2_evidence_diagnostics/run_20261016_v1/`.
+See REPORT.md, three figures in figures/, score_summary.csv,
+margin_distributions.csv, true9_assignments.csv, object_diagnostics.csv,
+CONFIG.json, INPUT_ASSETS.json, REPO_STATE.json, COMMAND.txt and completion/
+source/artifact hashes. Original smoothed properties were available and used
+without reconstruction. Registered asset file/content hashes, primary/auxiliary
+target counts (case03 1733/103, case01 118/11, case02 16046/977), full argmin
+versus pseudo_raw, and full26-connected object IDs/sizes all matched. No old
+runner was imported. Input hashes remained unchanged after analysis.
+
+Server sklearn is unavailable. The diagnostic implements the strictly equivalent
+binary unweighted non-interpolated AP, accumulating complete equal-score groups
+and summing recall increments times group precision. Five necessary small tests
+passed: constant AP=prevalence, a tied-positive example, documented sklearn
+example, all15 positive-bearing binary labelings of a four-point tied fixture,
+and including all boundary ties in the fixed5% set. No dependency installation
+or historical test suite was needed. Fixedtop5% is retrospective coverage,
+not a chosen classifier threshold or proposed pseudo-well rule.
+
+This extends the prior interpretation: the continuous proxy itself retains
+strong readable localization in the two hard-classification failure cases.
+Case03 E_original_free prevalence0.0115254; margin/susceptibility AP
+0.810281/0.836303, AP_skill0.808069/0.834394. Both fixedtop5% sets select7519
+voxels, precision0.230483 and recall1 over1733 true9 voxels. The original
+well- and M9-zero-hit572-voxel object1 is covered572/572 by both scores, and
+its holdout25/25 voxels also are covered. Yet object margin median -0.231197,
+max -0.067478: allnegative, not a tie. Its full q9 median/p90/max are
+0.306791/0.395538/0.475070, while susceptibility median/max0.032507/0.048630
+remain below the pure target codebook0.1 but above typical background.
+Continuous relative localization survives local mixture dilution; the pure
+nearest-codebook hard interface selects no9 in either registered domain.
+
+Case01 E_original_free prevalence0.000782680; margin/susceptibility AP
+0.889537/0.875028, AP_skill0.889450/0.874931. Both fixedtop5% sets cover118/118,
+but precision is only0.015652 because the fixed5% budget is broad for this
+rare target. It has no zero-well-hit major object under fullsize>=20: the
+three zero-hit components have1/6/3 voxels and all are fully covered in the
+primary domain. Their holdout domain counts are0, so coverage is NA there;
+its holdout11 positives do not validate those components. The110-voxel major
+object4 has2 original well hits. Do not claim hidden-major restoration from
+case01 or treat tiny objects as a strong generalization result.
+
+Case02 global primary AP is margin0.967673/susceptibility0.967411, but its
+original-zero-well32- and41-voxel components have0% top5% coverage for both
+scores. The926-voxel object has69.44%/70.09%, and129-voxel object40.31%/38.76%.
+Thus global ranking can coexist with missed hidden small components. Full
+q9 is truth-derived explanation only, not inference input or a probability;
+q9=0.5 is not a universal codebook decision boundary.
+
+Research decision: a separately preregistered, strictly paired comparison of
+hard pseudo-well labels versus conditions retaining continuous/uncertain
+attributes is now informative, using identical evidence and original hard
+conditions and retaining accurate-well/direct-classification comparisons.
+This diagnosis does not implement that interface, select a new threshold,
+prove soft conditioning works, prove field inversion validity, show every
+hidden object's information survives, or justify retraining Flow. Stop here.

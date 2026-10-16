@@ -1,0 +1,33 @@
+{
+  "AP": "non-interpolated sum of recall increments * precision at complete tied groups; sklearn-equivalent binary unweighted",
+  "AP_backend": "local exact grouped implementation (server sklearn unavailable)",
+  "AP_reference": "https://scikit-learn.org/stable/modules/generated/sklearn.metrics.average_precision_score.html",
+  "CPU_only": true,
+  "Flow_runs": 0,
+  "auxiliary_domain": "E_holdout",
+  "cases": [
+    "fullgeo_case03",
+    "fullgeo_case01",
+    "fullgeo_case02"
+  ],
+  "checkpoint_loaded": false,
+  "command": "CUDA_VISIBLE_DEVICES=\"\" PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src .venv/bin/python project/geodata-3d-conditional/scripts/stage21v2_diagnostics/analyze.py --source project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1 --out project/geodata-3d-conditional/experiments/stage21v2_evidence_diagnostics/run_20261016_v1",
+  "direction": "higher is more target-supportive, fixed a priori",
+  "distances": "FP32 frozen codebook weights and NONAIR max-min scales; all raw0..13 candidates",
+  "fixed_scores": [
+    "margin9",
+    "susceptibility"
+  ],
+  "margin": "min_{k in raw0..13,k!=9} d_k - d_9; signed, no clipping/softmax",
+  "objects": "26-neighbor labels on full truth before masking; original IDs; major full size>=20",
+  "primary_domain": "E_original_free",
+  "q9": "truth-derived explanatory G_sigma1(1[truth==9]); full volume replicate Gaussian then mask; NOT inference input/probability",
+  "reference_commit": "fbafbcb5893a1c262a247f53e0fee5dd7072b822",
+  "scans": false,
+  "schema": "stage21v2_offline_evidence_diagnostics_v1",
+  "source_run": "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1",
+  "source_seeds": "none: each case analyzed once",
+  "tie_rule": "ceil(0.05*n) rank; include all ties, no truth tie breaking",
+  "top_fraction": 0.05,
+  "training_runs": 0
+}
