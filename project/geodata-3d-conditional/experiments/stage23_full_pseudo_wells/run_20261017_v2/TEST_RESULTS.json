@@ -1,0 +1,25 @@
+{
+  "focused_CPU_tests": 4,
+  "passed": 4,
+  "elapsed_seconds": 15.167,
+  "command": "PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' .venv/bin/python project/geodata-3d-conditional/scripts/stage23/test_stage23.py",
+  "GPU_smoke_calls": 0,
+  "test_names": [
+    "full_multilithology_columns_and_original_priority",
+    "classifier_fixed_nonair_and_first_tie",
+    "confusion_retains_air_and_target_arithmetic",
+    "firewall_allows_dependencies_and_blocks_experiment_geometry"
+  ],
+  "prepare_checks": "classification identity/recompute; same B/C masks; all depths; original conditions; no holdout additions; placeholders; actual saved noise identity; old source hashes",
+  "earlier_v1_tests": {
+    "passed": 3,
+    "seconds": 0.008
+  },
+  "final_delivery_tests": {
+    "passed": 5,
+    "seconds": 14.989,
+    "log": "final_cpu_tests.log",
+    "new_test": "run_resolves_relative_cli_paths_before_io",
+    "additional_velocity_calls": 0
+  }
+}

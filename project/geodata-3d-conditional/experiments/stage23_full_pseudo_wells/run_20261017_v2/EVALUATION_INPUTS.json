@@ -1,0 +1,76 @@
+{
+  "common_object1_subset": {
+    "file_sha256": "4b0926be980b52c20b8f66d0e215033f8d0371b548d64d1eebec0f59c8e3bb3b",
+    "path": "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/offline/object1_common_outside.pt",
+    "tensor_sha256": "c0065f93cd7a123b8593678dc0d9232773c643cbf18418f0b62b122104a27d85"
+  },
+  "domains": {
+    "E_holdout": {
+      "class_counts": {
+        "1": 1881,
+        "2": 1167,
+        "3": 2686,
+        "4": 191,
+        "5": 3163,
+        "7": 9,
+        "8": 214,
+        "9": 103
+      },
+      "classes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "tensor": {
+        "file_sha256": "ad94df02b00b082ffb71d637d43128e46a88c78e1d270574218779f170801658",
+        "path": "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/evaluation/fullgeo_case03/E_holdout.pt",
+        "tensor_sha256": "1af81e0aeec308031534b81ec9b6fd39868bfdf7592d1e001356ce027ef576c0"
+      },
+      "voxels": 9414
+    },
+    "E_original_free": {
+      "class_counts": {
+        "1": 29954,
+        "13": 2,
+        "2": 18582,
+        "3": 42642,
+        "4": 3241,
+        "5": 50045,
+        "7": 124,
+        "8": 4041,
+        "9": 1733
+      },
+      "classes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        13
+      ],
+      "tensor": {
+        "file_sha256": "8ec89b811fdafea15cfc6a00a8e40607fb72a84589349a4f476de84deeb507cd",
+        "path": "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/evaluation/fullgeo_case03/E_original_free.pt",
+        "tensor_sha256": "b085bcceaaff436cfc3a486a8d31e42d440c5b8a71f6131759918cbb54b303c9"
+      },
+      "voxels": 150364
+    }
+  },
+  "evaluation_registry_sha256": "a15fe9fcb723c31b65f2f21e975e81f093ca1f91d393f07fe32f5c4ff4a8b573",
+  "prediction_completion_sha256": "c7590b453ace50a093b3a5879e53f98cd20fc11ae7a0fbe9d8874cbd65a1df98",
+  "started_at_utc": "2026-10-16T16:34:20.703400+00:00",
+  "truth": {
+    "file_sha256": "e79a5c8276fbaa7ae9b46c217f1df9ad041b53fbd5b4b4fedc4d59aa8b351576",
+    "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case03/truth/true_model.pt",
+    "tensor_sha256": "69c2c9c81e1b7acb6832b8af33d933c60246b69bf0ea70b5022864671b64cc02"
+  },
+  "truth_role": "retrospective only"
+}

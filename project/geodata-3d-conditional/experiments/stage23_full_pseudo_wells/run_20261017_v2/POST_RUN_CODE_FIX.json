@@ -1,0 +1,21 @@
+{
+  "changes": {
+    "project/geodata-3d-conditional/scripts/stage23/report.py": {
+      "executed_snapshot_sha256": "e431cbae902aca4603b5cf3914f7170cdf51722dc24e655d78b1a2e647f9e280",
+      "delivery_sha256": "e4807bd4dd4d95b95d60a501e4a63e1fbe73887cd08ccff2d97fe17837d4fd53"
+    },
+    "project/geodata-3d-conditional/scripts/stage23/run.py": {
+      "executed_snapshot_sha256": "abedc17aaef63e7ac008799cc7686846523ec5f6b93950ee2ca6052c34e9a05e",
+      "delivery_sha256": "540360afeedad745d54e7754e8f253ed1687abb186b5127ccecaaf2d0845d9fe"
+    },
+    "project/geodata-3d-conditional/scripts/stage23/test_stage23.py": {
+      "executed_snapshot_sha256": "3ad136386b6735c4e2893245088f5dabc1694e1b05210e734fec48908699372f",
+      "delivery_sha256": "76004e18d5205ff58ca15a194e11305926821bff2e9d037f5b9fed36c15e4146"
+    }
+  },
+  "reason": "Resolve relative CLI paths; CPU regression; report transparently describes receipt recovery",
+  "additional_velocity_calls": 0,
+  "scientific_method_changed": false,
+  "executed_source": "source_snapshot",
+  "executed_sources_verified_before_evaluation": true
+}

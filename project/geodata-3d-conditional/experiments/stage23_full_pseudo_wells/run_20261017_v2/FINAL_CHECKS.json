@@ -1,0 +1,35 @@
+{
+  "actual_noise_verified": true,
+  "checked_at_utc": "2026-10-16T16:37:29.433527+00:00",
+  "checkpoint_hash_verified": true,
+  "classification_assets_verified": true,
+  "common_object1_denominator": 510,
+  "condition_mask_equal_B_C": true,
+  "copy_holdout_equal_A": true,
+  "current_source_diff_explicitly_recorded": [
+    "project/geodata-3d-conditional/scripts/stage23/report.py",
+    "project/geodata-3d-conditional/scripts/stage23/run.py",
+    "project/geodata-3d-conditional/scripts/stage23/test_stage23.py"
+  ],
+  "executed_source_snapshot_verified": true,
+  "final_CPU_tests": 5,
+  "frozen_inputs_unchanged": true,
+  "historical_sources_unchanged": 43,
+  "holdout_additions": 0,
+  "initial_dependency_failure_calls": 0,
+  "metric_arithmetic": true,
+  "midpoint_trace_verified": 32,
+  "model_after_identity_evidence": "Recovered from successful runtime before==after and entry-by-entry equality check before save_tensor failure; exact frozen source and traceback retained, not a fresh model measurement",
+  "new_Flow_outputs": 1,
+  "new_deconvolution": 0,
+  "new_training": 0,
+  "original_and_added_violations": 0,
+  "same_v1_v2_condition_tensors": true,
+  "saved_output_recovery_calls": 0,
+  "source_cases": 1,
+  "source_seeds": [
+    42
+  ],
+  "status": "passed",
+  "total_velocity_evaluations": 32
+}

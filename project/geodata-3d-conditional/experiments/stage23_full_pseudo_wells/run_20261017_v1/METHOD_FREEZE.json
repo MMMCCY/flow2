@@ -1,0 +1,117 @@
+{
+  "frozen_at_utc": "2026-10-16T16:30:45.560718+00:00",
+  "git": {
+    "branch": "main",
+    "head": "8ac499a2b5fc0cacf205066f92b382625c314da4",
+    "status_short": "?? STAGE23_FULL_PSEUDO_WELLS_PROMPT_2026-10-17.md\n?? project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/\n?? project/geodata-3d-conditional/scripts/stage23/"
+  },
+  "historical_source_sha256": {
+    "project/geodata-3d-conditional/boreholes.py": "b0656303987fef04241a70a1df1a6ca4c2897d6c1e4de6470f492487fc038630",
+    "project/geodata-3d-conditional/callbacks.py": "2fda1d0e3ea701664b509e1b0347561155364fc31e9c046b980a4287e7227ffa",
+    "project/geodata-3d-conditional/guidance/dflow.py": "62f97242c9209417c6bd7dec239bfa15614edd2a4c2194f012bd7b9a62673440",
+    "project/geodata-3d-conditional/guidance/generator_posterior.py": "9faf5d1a27146992e30678e7f83bc0d6e4bbf6181406546f6dc981dca798fc28",
+    "project/geodata-3d-conditional/guidance/probability_sampling.py": "2aa6119fa8517176eb0d1b8f6892ebdd14cc3051a43dd8e030099150f69bec9f",
+    "project/geodata-3d-conditional/guidance/probability_volume.py": "01b70740d84994877996eb6c0e15ddd7d962731d984c096781371f0bea4269a3",
+    "project/geodata-3d-conditional/guidance/property_volume.py": "9fd3ebebf3ca944102216bec2ed6cc1aa179bd82cc70aa8a6cb2b20cac52125d",
+    "project/geodata-3d-conditional/inference_runtime.py": "246ba9cc8b8e80ce86d7e9d059010d7b030b87e793d911cef8e8d3478786e838",
+    "project/geodata-3d-conditional/model_train_sh_inference_cond.py": "36d0dc613d8860677f137a2f1d681ebcc50829a6d90f5547c6eac3fd12a977c2",
+    "project/geodata-3d-conditional/scripts/stage21/common.py": "2c954bd90fcacccae975b2aab1f0053f272c82e40861514d03cfd15c90933aac",
+    "project/geodata-3d-conditional/scripts/stage21/evaluate.py": "6ba94d9065827062ce0a1ca747d6540ca4bd666d4218d755e8c4606d3f0f07e5",
+    "project/geodata-3d-conditional/scripts/stage21/run.py": "7203c2de9963e7d8bf93faa78414fd630fc6a973c7d0b1236ee5cf2133032f12",
+    "project/geodata-3d-conditional/scripts/stage21v2/audit.py": "f7f70b1d630af013e4f08ca8546c02b3cf03feac05dc9ae33285e8f7689b522a",
+    "project/geodata-3d-conditional/scripts/stage21v2/common.py": "07438ade8b08d6d4d213f60b87e783ba7dec6595215cad0a6a99c09418da7842",
+    "project/geodata-3d-conditional/scripts/stage21v2/prepare.py": "fa7bef9a13d9594a9d3f9cc988a34fb5a6c5c8ee21d58c2439b987a8700d07d6",
+    "project/geodata-3d-conditional/scripts/stage21v2/report.py": "17b797a11491991d153e06de83010e1a77928a93f93cf43a51bbf55f89772e16",
+    "project/geodata-3d-conditional/scripts/stage21v2/run.py": "46410583f55b3644bad8d37363d629b7bcabd37b7b9737d27f0c47ed2324859e",
+    "project/geodata-3d-conditional/scripts/stage21v2/workflow.py": "b5981a6682c8ad315d090dde029cb7919f71bfcc1f1272c327e4afa38c9363e0",
+    "project/geodata-3d-conditional/scripts/stage22/common.py": "58dcac314e8d76b67025c02918125d7e88e62b98970f2d4ce398e4e02afd819b",
+    "project/geodata-3d-conditional/scripts/stage22/prepare.py": "cfa7ffcf952773926e2803da61317a9617849c9d19d29fbf4ee74521b128f529",
+    "project/geodata-3d-conditional/scripts/stage22/report.py": "a5ffc09296fdcfa75ede1c404e4de0ce5966c431f739ffa680f50ae8211c3b17",
+    "project/geodata-3d-conditional/scripts/stage22/run.py": "25465563002cc3d1d8b2a939a18e5d3fa560105404a837297399130c50f92853",
+    "project/geodata-3d-conditional/scripts/stage22/solver.py": "12a2090bd89a2b3c694c862a9d677c094e147100e7362e6077f5b43bc46c44f0",
+    "project/geodata-3d-conditional/scripts/stage22/test_stage22.py": "a971436f9480468788c5bdc931dbb9cc3d520577b6fbff111d7a94a176dd2289",
+    "project/geodata-3d-conditional/scripts/stage22/workflow.py": "0ab7e32389f1830c85f41a3d75cec0e7731704d8044cca1481a5d9a264408a00",
+    "project/geodata-3d-conditional/tests/test_stage21v2_dense_virtual_boreholes.py": "283ecc4f09aa82a1ea8806ef0618a3bf42ffbc8f94802f27f80b3b75fe48261a",
+    "project/geodata-3d-conditional/utils.py": "9c86f93f4daf85b61e559f5d10e7877c4b6956ccc638a2d3977add6a029199f0",
+    "src/flowtrain/__init__.py": "a04565ca80195ef3cb56ebdbcf003df94935686ca7b5015fba3cfd86b409dc72",
+    "src/flowtrain/dataloaders/__init__.py": "ec8fd0ca57517fee6ea7caf3cae94d600caacdc5e7852caa1b28464532f69655",
+    "src/flowtrain/dataloaders/practicedata.py": "461b2b1e4386895550c357863ffbac8f395a3cc9eae8e53daa79d2cf00ded0fd",
+    "src/flowtrain/interpolation/__init__.py": "5f8aa7f1485ae50313e01c44e5bd183add74d72116fbe1f5fb9a49e9188afcb5",
+    "src/flowtrain/interpolation/interpolation.py": "42a378b8c84ae7cdbf65b2560e12a6dca255b738730918273d7946064761b116",
+    "src/flowtrain/models/__init__.py": "f08fcd07f362b716ae3d09b4a1612ff068f281ebde153e4d4f7a0f81b6abcae2",
+    "src/flowtrain/models/persistence.py": "979e5bbbff9673c05bdf49826d02e9e7609e8e63e4c9f571146bb9a7bf2f1516",
+    "src/flowtrain/models/unet_2d.py": "de51dc8c5565d77a8f1835f57118b67703e5e824a1486cefbceb4e0d7621833b",
+    "src/flowtrain/models/unet_attn_3d.py": "65c42ebd9b80196148b929f8e42da1917195e5367d4795425759b55ae6a1b625",
+    "src/flowtrain/models/unet_attn_3d_cond.py": "193f345ef7d4f3586720805d8089d32e3cb7853b2359160499d1909313bbe003",
+    "src/flowtrain/models/unet_attn_3d_cond_v2.py": "64cd4d8f46947e2f6add988b4482ef3954d139b6c6b17f7cd9c5070d29ee8894",
+    "src/flowtrain/models/unet_attn_3d_cond_v3.py": "7a5dfe0af0916b88e54d45c37fd461b9a8266d20c91e0126c71dee5e90c40d6c",
+    "src/flowtrain/solvers/__init__.py": "646a8911d607be3f48404463a684767a891987f4723cca7550ad702bf3e4b257",
+    "src/flowtrain/solvers/solvers.py": "c4a008cc03144252ef46642e861d6c42fbe00cc30969f3a30128bab9d0e27025",
+    "src/flowtrain/utils/__init__.py": "a86b00948ed30bd6c73a7dac45ecc9f79008db661deddbfc6efee85458fa1e88",
+    "src/flowtrain/utils/plotting.py": "e00198cd6a98e23fbce10882f108d0e9e85f9ee38ca3034b4bd046508337fa00"
+  },
+  "input_file_sha256": {
+    "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/PROTOCOL.json": "2ec34fb0d40c4dd6a4c77609dc8a35aff2f6406f3deffe74978872823a3ef482",
+    "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/classifier.json": "7dcd47b314ebb1772e543b9ac9cdfcd816017706933974975fdb7266529fb6bd",
+    "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/codebook.json": "21582cf2a8b895b47fcc76b0ed8f9a90ab5742b0cfd7930668d715c3b9004ef2",
+    "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/inference_registry.json": "8bea5fb664f279dcc1149e2d4c2942803abeebdbaf7f982875d140b73fe2d21e",
+    "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/layout.json": "bbd75234860bb437aa2bfe4f14ac4ca4be2f4340e35f0484e1625e5b6820a50b",
+    "project/geodata-3d-conditional/experiments/stage22_blur_aware_bridge/run_20261016_v1/METHOD_FREEZE.json": "c8d1d447bb9b012437b4c2cfa558eb18c7e15b86a83ecd267278b181f92b7855",
+    "project/geodata-3d-conditional/experiments/stage22_blur_aware_bridge/run_20261016_v1/PREPROCESSING_RECEIPT.json": "d581090172289d80801da2899fd0b527723b03fcc870864eb78e1f4dcf572002",
+    "project/geodata-3d-conditional/experiments/stage22_blur_aware_bridge/run_20261016_v1/PROTOCOL.json": "fff0c25ea03c8d4b4c4c80d4a183ea020e320542165467a0922174a8703879d5",
+    "project/geodata-3d-conditional/experiments/stage22_blur_aware_bridge/run_20261016_v1/inference_registry.json": "7f8b1784f2233de5d32438f2678aaf69960673b00cd610a24e757915279954b0",
+    "project/geodata-3d-conditional/experiments/stage22_blur_aware_bridge/run_20261016_v1/preprocessing_assets.json": "8f8af87dbcd426e927ea66f9cc55d43c41600cdea7d8207ad08170da11b5b118"
+  },
+  "original_conditions": {
+    "mask": {
+      "file_sha256": "267b86cab5c0061e034933609241ac00f4c5ad92bc2c6df62e3df2ebc1c66cd9",
+      "path": "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/conditions/fullgeo_case03/A_9/mask.pt",
+      "tensor_sha256": "e0b1d7a94dde538d4d286a72d07229b6f3f425d7f329d4ca13819432dba89555"
+    },
+    "original_mask": {
+      "file_sha256": "0c69a52d6e7a485b0cb0151cc0b6f2adfe84c791fe0aff54981446a6676d75d3",
+      "path": "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/conditions/fullgeo_case03/original_mask.pt",
+      "tensor_sha256": "e0b1d7a94dde538d4d286a72d07229b6f3f425d7f329d4ca13819432dba89555"
+    },
+    "original_values": {
+      "file_sha256": "24b6e4d647fe8dfcb8fa26acb9ead4a3cc1d1d4b7c2a8420f6f912757d81da82",
+      "path": "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/conditions/fullgeo_case03/original_values.pt",
+      "tensor_sha256": "7152222f4a2353b958e38d6740958e09d5d31a9898762eb189f6b94bcadf29c8"
+    },
+    "values": {
+      "file_sha256": "1409597b930ceb7fac7f8c7aae9f901de87f4e2411d5662914eae5a7abdd722e",
+      "path": "project/geodata-3d-conditional/experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/conditions/fullgeo_case03/A_9/values.pt",
+      "tensor_sha256": "7152222f4a2353b958e38d6740958e09d5d31a9898762eb189f6b94bcadf29c8"
+    }
+  },
+  "protocol_sha256": "907f0315180b263a88759da3c064efb86f8fcf04b3b43fe6a6dfde7c25442630",
+  "reused_assets": {
+    "classification": {
+      "file_sha256": "f03b0f964f5ce7b31b76cb074e364c79b483c894cb0b71057289b1a83a3ccf04",
+      "path": "project/geodata-3d-conditional/experiments/stage22_blur_aware_bridge/run_20261016_v1/preprocessing/restored_classification.pt",
+      "tensor_sha256": "e8973c53c35ee577194c407024e19a0e520ecb45cbfb0f8db223abc42f20df36"
+    },
+    "properties": {
+      "file_sha256": "e650dc735dafbb75ad2ac3ae379cd46b0abcdf3dcac22aaf2c542b4de53f75f9",
+      "path": "project/geodata-3d-conditional/experiments/stage22_blur_aware_bridge/run_20261016_v1/preprocessing/restored_properties.pt",
+      "tensor_sha256": "9afb4ea0f8600c454c73ee0e2f465826191d3f051e5b4a11cea3b8b5d7109ccb"
+    }
+  },
+  "source_sha256": {
+    "project/geodata-3d-conditional/guidance/dflow.py": "62f97242c9209417c6bd7dec239bfa15614edd2a4c2194f012bd7b9a62673440",
+    "project/geodata-3d-conditional/guidance/generator_posterior.py": "9faf5d1a27146992e30678e7f83bc0d6e4bbf6181406546f6dc981dca798fc28",
+    "project/geodata-3d-conditional/guidance/property_volume.py": "9fd3ebebf3ca944102216bec2ed6cc1aa179bd82cc70aa8a6cb2b20cac52125d",
+    "project/geodata-3d-conditional/inference_runtime.py": "246ba9cc8b8e80ce86d7e9d059010d7b030b87e793d911cef8e8d3478786e838",
+    "project/geodata-3d-conditional/model_train_sh_inference_cond.py": "36d0dc613d8860677f137a2f1d681ebcc50829a6d90f5547c6eac3fd12a977c2",
+    "project/geodata-3d-conditional/scripts/stage21/common.py": "2c954bd90fcacccae975b2aab1f0053f272c82e40861514d03cfd15c90933aac",
+    "project/geodata-3d-conditional/scripts/stage21/evaluate.py": "6ba94d9065827062ce0a1ca747d6540ca4bd666d4218d755e8c4606d3f0f07e5",
+    "project/geodata-3d-conditional/scripts/stage21/run.py": "7203c2de9963e7d8bf93faa78414fd630fc6a973c7d0b1236ee5cf2133032f12",
+    "project/geodata-3d-conditional/scripts/stage21v2/common.py": "07438ade8b08d6d4d213f60b87e783ba7dec6595215cad0a6a99c09418da7842",
+    "project/geodata-3d-conditional/scripts/stage23/common.py": "cf750425adddf3f389051024b46b0af8021fd60cd40a386fedde02b42b8b2f3d",
+    "project/geodata-3d-conditional/scripts/stage23/evaluate.py": "4f2f013d6738b6e450c111c15e9c249327bb375f16f6966f19535db03993d527",
+    "project/geodata-3d-conditional/scripts/stage23/prepare.py": "3964d34baaeb41674b48a65190878eec65caab1d16e65e11c75b0c7fb6178862",
+    "project/geodata-3d-conditional/scripts/stage23/report.py": "887a61d4d2b9ab9be37221148da05050341c9cda6cf68d79b5121b1aba478943",
+    "project/geodata-3d-conditional/scripts/stage23/run.py": "abedc17aaef63e7ac008799cc7686846523ec5f6b93950ee2ca6052c34e9a05e",
+    "project/geodata-3d-conditional/scripts/stage23/test_stage23.py": "6a0c8d7a8ef582fe621ffb760f65e2cb725e8ee0e46d36dc9589ae3f9bd9d929"
+  }
+}

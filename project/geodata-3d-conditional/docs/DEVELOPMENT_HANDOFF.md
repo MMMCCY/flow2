@@ -1939,3 +1939,63 @@ unbalanced hard conditions or TV/sigma tuning. No new interface is implemented
 here; success of soft conditioning, field validity or a need to retrain Flow
 has not been demonstrated. This is a known-kernel/no-extra-noise/artificial-
 strong-contrast reused-case result, not PGI replication or a novelty claim.
+
+
+## Stage23 complete restored pseudo-wells (2026-10-17)
+
+User authorized STAGE23_FULL_PSEUDO_WELLS_PROMPT_2026-10-17.md on main
+8ac499a2b5fc0cacf205066f92b382625c314da4. New scripts/stage23 reuses saved
+Stage22 classification, fixed Stage21v2 codebook/classifier and total512 layout.
+No target-only acceptance filter: all non-original well depths receive raw0..13
+predicted labels; original hard conditions take priority. CPU single classifier
+consistency recomputation matched saved labels. Added18555 voxels in503 columns;
+mask equals old B512/C512, holdout additions0. Conditions were sealed before
+Flow/truth evaluation, no scientific precision gate. No restoration/training/
+adapter/guidance/scan/trimming or other cases/seeds. Historical sources/results
+and checkpoint were not modified. Development used SSH labrs-codex and .venv.
+
+Delivery experiments/stage23_full_pseudo_wells/run_20261017_v2 contains Chinese
+REPORT and reviewed conclusions, comparison/class/confusion/object CSVs, one
+fixed Z15 fullXY six-panel categorical + binary-target figure, protocol/source/
+condition/input seals, unique prediction and receipts, commands and tests.
+Exactly1 new Flow output /32 actual midpoint-Euler velocity calls from paired
+A_seed42 saved CPU noise; EMA411/raw embedding, FP32/noTF32/deterministic, all
+parameters frozen, hard original/added condition violations0. No baseline reruns.
+
+Conversion on same added_mask improves all-label errors7239->1402 (accuracy
+0.609863->0.924441), non-target truth errors7028->1395; target TP0->204,
+FN211->7 with1FP. Holdout C->new: recall0.029126->0.339806, IoU0.022059->
+0.130112, fixed-class mIoU0.288156->0.503877. Object1 common subset is exactly
+truthID1 & E_original_free & ~Stage23_new_mask, denominator510 for EVERY arm:
+A/C/COPY0TP, B80, Stage22 366, direct507, Stage23 144 (coverage0.282353).
+All preset modeling comparisons are supported for this sole sample, not repeats.
+
+Original-free newFlow TP715/FP2579/FN1018, precision0.217061, recall0.412579,
+IoU0.165816, mIoU0.454242; target3294 versus truth1733 (1.90075x). Stage22
+had30711FP/18.40046x and1 cross-object merge; new has0 such merges but object1
+is split across3 significant components. Object1 any coverage206/572, matched
+112/572 and IoU0.122137; object2 any509/1161, matched455/1161, IoU0.158041.
+Largest new component2173 original-free voxels/1718FP versus Stage22
+27758/26581FP. Range control improves over Stage22 but sacrifices coverage
+(relative to its366/510 shared off-condition TP) and remains inaccurate. Direct
+restoration IoU0.967723/mIoU0.662712 remains far better. B true wells have
+original-free IoU0.160974/mIoU0.492050 and holdout IoU0.140704, so do not
+claim uniform superiority to accurate wells or to direct full-field conversion.
+
+Engineering evidence is explicit: retained v1 guard blocked sympy.geometry
+during dependency import,0 forward. v2 sampled all32 calls and saved tensor/
+trace, then relative output path broke receipt serialization. CPU-only recovery
+verified saved32 traces, exact times/conditions and prediction; no resampling.
+failed_save_receipt and recovery source/log remain. After-model hash was recovered
+from the before hash because equality/entry checks had already passed before
+the save failure; receipt labels that evidence, not a fresh measurement. Timing
+is approximate from trace mtime minus stored start time. Final code resolves CLI
+paths; executed source snapshot and post-run three-file code diff are retained.
+Five focused final CPU tests passed (14.989s); no GPU smoke or further forward.
+
+Three judgments: conversion improved; prescribed single-sample off-condition
+modeling benefit supported; relative range control improved but absolute FP,
+volume bias, missed geometry and splitting remain substantial. Stop here after
+one case/seed/output; user/MCYR decide any new protocol. Known-kernel/no-extra-
+noise/artificial-proxy/reused-case evidence does not establish real geophysical
+inversion, cross-model generalization, or publication novelty. No commit/push.

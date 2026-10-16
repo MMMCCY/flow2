@@ -1,0 +1,44 @@
+{
+  "added": "well_mask(layout512) & ~original_mask; all depths, all predicted raw0..13; no target filter",
+  "case": "fullgeo_case03",
+  "classes": "fixed R21 registered classes",
+  "classification": "reuse Stage22 saved classification; FP32 raw0..13 first argmin; old codebook weights/ranges",
+  "condition_preparation_truth_visible": false,
+  "domains": [
+    "E_holdout",
+    "E_original_free"
+  ],
+  "figure": "one retrospective full XY Z=15, fixed prior display coordinate",
+  "interpretation": {
+    "conversion": "all-label/target/non-target errors versus C on same added_mask",
+    "extent": "precision, volume bias and merging versus Stage22, absolute and all reference gaps",
+    "modeling": "holdout recall and IoU > C; mIoU >= C; object1 common outside-mask TP > A/COPY"
+  },
+  "layout": "unchanged Stage21v2 levels[512]; original condition priority",
+  "mask_equal_old_B_C_512": true,
+  "max_new_Flow_outputs": 1,
+  "max_velocity_evaluations": 32,
+  "no_deconvolution": true,
+  "no_scans": true,
+  "no_training": true,
+  "no_trimming": true,
+  "noise": "load actual saved A_seed42 CPU noise and verify its identity",
+  "object1_common_subset": "truthID1 & E_original_free & ~Stage23_new_mask",
+  "object_rules": {
+    "detection_min_coverage": 0.1,
+    "detection_min_iou": 0.1,
+    "edge_min_intersection": 5,
+    "edge_min_truth_coverage": 0.05
+  },
+  "objects": "full-volume 26-connected IDs before fixed domain; old one-to-one IoU matching",
+  "original_priority": true,
+  "reference_commit": "8ac499a2b5fc0cacf205066f92b382625c314da4",
+  "sampler": "unchanged sample_native, 32 midpoint Euler, FP32 no autocast/TF32, deterministic",
+  "schema": "stage23_full_pseudo_wells_v1",
+  "scientific_gate_before_flow": false,
+  "source_seed": 42,
+  "specification_sha256": "bcc3f04bd2e4535b7b5a3b5b52e18813e18f45d1d7e4024923bdb41ddf7b2ae9",
+  "total_wells": 512,
+  "unknown_value": -1,
+  "weights": "411 EMA parameters; raw checkpoint frozen embedding; all frozen"
+}

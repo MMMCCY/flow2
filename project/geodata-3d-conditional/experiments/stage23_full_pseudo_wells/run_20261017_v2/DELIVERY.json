@@ -1,0 +1,16 @@
+{
+  "comparison": "comparison.csv",
+  "delivery_patch": "POST_RUN_CODE_FIX.diff",
+  "engineering_issues_disclosed": true,
+  "executed_source": "source_snapshot",
+  "figure": "figures/fixed_object_slice.png",
+  "final_checks_sha256": "46b01980558c4d62c97d34d5e7d2eb4978acff9494f154dc79ccfc92577ab257",
+  "handoff_sha256": "71d882d0ac75ad574feaab4a7b32d66d23450102da1dcd8b5f8f84d9047238d8",
+  "initial_failed_run_receipt_sha256": "71fb8a4200d2bb8347837f1a377274af5c15c26413c65d2ed5f646941fe9ee1b",
+  "new_Flow_outputs": 1,
+  "report": "REPORT.md",
+  "run": "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2",
+  "status": "completed",
+  "stop_reason": "single_prediction_budget_complete",
+  "velocity_evaluations": 32
+}

@@ -1,0 +1,22 @@
+Execution host: ssh labrs-codex
+Working directory: /home/xmj/mcy/flowtrain_stochastic_interpolation-main
+Python: repository .venv/bin/python
+
+PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' .venv/bin/python project/geodata-3d-conditional/scripts/stage23/test_stage23.py
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python project/geodata-3d-conditional/scripts/stage23/prepare.py
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python project/geodata-3d-conditional/scripts/stage23/run.py --registry project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/inference_registry.json --seed 42 --out project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/predictions/seed42
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python project/geodata-3d-conditional/scripts/stage23/evaluate.py
+
+Flow stdout/stderr: flow_seed42.log
+Preparation stdout: Sealed 18555 added voxels in 503 columns; no scientific gate
+
+Earlier v1 used the same command paths with v1 instead of v2; preparation completed, Flow dependency import failed before any forward. Original stdout/stderr and receipt retained in ../run_20261017_v1. v2 condition tensor hashes equal v1.
+
+Receipt save recovery (CPU only, executed before truth evaluation):
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /tmp/stage23_recover_saved_output.py
+Exact script retained as RECOVER_SAVED_OUTPUT.py; no additional forward.
+Final CPU test command repeated after resolving CLI paths; output final_cpu_tests.log.
+
+Final CPU delivery verification:
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /tmp/stage23_final_checks.py
+Exact script retained as FINAL_CHECK_SCRIPT.py.

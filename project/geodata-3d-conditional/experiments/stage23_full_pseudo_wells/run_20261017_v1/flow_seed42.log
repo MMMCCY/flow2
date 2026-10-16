@@ -1,0 +1,72 @@
+Traceback (most recent call last):
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage23/run.py", line 122, in <module>
+    run(args.registry,args.seed,args.out)
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage23/run.py", line 66, in run
+    from model_train_sh_inference_cond import Geo3DStochInterp
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/model_train_sh_inference_cond.py", line 20, in <module>
+    from lightning import Trainer
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/lightning/__init__.py", line 18, in <module>
+    from lightning.fabric.fabric import Fabric  # noqa: E402
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/lightning/fabric/__init__.py", line 35, in <module>
+    from lightning.fabric.fabric import Fabric  # noqa: E402
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/lightning/fabric/fabric.py", line 38, in <module>
+    from lightning.fabric.accelerators.accelerator import Accelerator
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/lightning/fabric/accelerators/__init__.py", line 15, in <module>
+    from lightning.fabric.accelerators.accelerator import Accelerator
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/lightning/fabric/accelerators/accelerator.py", line 19, in <module>
+    from lightning.fabric.accelerators.registry import _AcceleratorRegistry
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/lightning/fabric/accelerators/registry.py", line 18, in <module>
+    from lightning.fabric.utilities.exceptions import MisconfigurationException
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/lightning/fabric/utilities/__init__.py", line 16, in <module>
+    from lightning.fabric.utilities.apply_func import move_data_to_device
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/lightning/fabric/utilities/apply_func.py", line 24, in <module>
+    from lightning.fabric.utilities.imports import _NUMPY_AVAILABLE
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/lightning/fabric/utilities/imports.py", line 39, in <module>
+    _TORCHMETRICS_GREATER_EQUAL_1_0_0 = compare_version("torchmetrics", operator.ge, "1.0.0")
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/lightning_utilities/core/imports.py", line 78, in compare_version
+    pkg = importlib.import_module(package)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/torchmetrics/__init__.py", line 37, in <module>
+    from torchmetrics import functional  # noqa: E402
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/torchmetrics/functional/__init__.py", line 56, in <module>
+    from torchmetrics.functional.image._deprecated import (
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/torchmetrics/functional/image/__init__.py", line 14, in <module>
+    from torchmetrics.functional.image.arniqa import arniqa
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/torchmetrics/functional/image/arniqa.py", line 31, in <module>
+    from torchvision import transforms
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/torchvision/__init__.py", line 10, in <module>
+    from torchvision import _meta_registrations, datasets, io, models, ops, transforms, utils  # usort:skip
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/torchvision/models/__init__.py", line 2, in <module>
+    from .convnext import *
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/torchvision/models/convnext.py", line 9, in <module>
+    from ..ops.misc import Conv2dNormActivation, Permute
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/torchvision/ops/__init__.py", line 23, in <module>
+    from .poolers import MultiScaleRoIAlign
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/torchvision/ops/poolers.py", line 10, in <module>
+    from .roi_align import roi_align
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/torchvision/ops/roi_align.py", line 7, in <module>
+    from torch._dynamo.utils import is_compile_supported
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/torch/_dynamo/__init__.py", line 13, in <module>
+    from . import config, convert_frame, eval_frame, resume_execution
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/torch/_dynamo/convert_frame.py", line 53, in <module>
+    from torch._dynamo.symbolic_convert import TensorifyState
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/torch/_dynamo/symbolic_convert.py", line 52, in <module>
+    from torch._dynamo.exc import TensorifyScalarRestartAnalysis
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/torch/_dynamo/exc.py", line 41, in <module>
+    from .utils import counters
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/torch/_dynamo/utils.py", line 69, in <module>
+    import torch.fx.experimental.symbolic_shapes
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/torch/fx/experimental/symbolic_shapes.py", line 3, in <module>
+    import sympy
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/sympy/__init__.py", line 203, in <module>
+    from .geometry import (Point, Point2D, Point3D, Line, Ray, Segment, Line2D,
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1016, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_data
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage23/common.py", line 51, in audit
+    raise PermissionError(f'{mode} cannot read truth/objects/evaluation: {path}')
+PermissionError: flow cannot read truth/objects/evaluation: /home/xmj/mcy/flowtrain_stochastic_interpolation-main/.venv/lib/python3.10/site-packages/sympy/geometry/__init__.py

@@ -1,0 +1,11 @@
+Execution host: ssh labrs-codex
+Working directory: /home/xmj/mcy/flowtrain_stochastic_interpolation-main
+Python: repository .venv/bin/python
+
+PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' .venv/bin/python project/geodata-3d-conditional/scripts/stage23/test_stage23.py
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python project/geodata-3d-conditional/scripts/stage23/prepare.py
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python project/geodata-3d-conditional/scripts/stage23/run.py --registry project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v1/inference_registry.json --seed 42 --out project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v1/predictions/seed42
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python project/geodata-3d-conditional/scripts/stage23/evaluate.py
+
+Flow stdout/stderr: flow_seed42.log
+Preparation stdout: Sealed 18555 added voxels in 503 columns; no scientific gate

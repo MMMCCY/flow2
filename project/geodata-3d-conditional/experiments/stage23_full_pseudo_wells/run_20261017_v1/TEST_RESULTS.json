@@ -1,0 +1,13 @@
+{
+  "focused_CPU_tests": 3,
+  "passed": 3,
+  "elapsed_seconds": 0.008,
+  "command": "PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' .venv/bin/python project/geodata-3d-conditional/scripts/stage23/test_stage23.py",
+  "GPU_smoke_calls": 0,
+  "test_names": [
+    "full_multilithology_columns_and_original_priority",
+    "classifier_fixed_nonair_and_first_tie",
+    "confusion_retains_air_and_target_arithmetic"
+  ],
+  "prepare_checks": "classification identity/recompute; same B/C masks; all depths; original conditions; no holdout additions; placeholders; actual saved noise identity; old source hashes"
+}

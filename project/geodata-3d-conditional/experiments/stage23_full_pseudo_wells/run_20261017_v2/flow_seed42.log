@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage23/run.py", line 122, in <module>
+    run(args.registry,args.seed,args.out)
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage23/run.py", line 101, in run
+    state.update(status="completed",prediction=save_tensor(out/"decoded_geology.pt",pred),
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage21/common.py", line 162, in save_tensor
+    return {"path": str(path.relative_to(REPO)), "file_sha256": file_hash(path),
+  File "/usr/lib/python3.10/pathlib.py", line 818, in relative_to
+    raise ValueError("{!r} is not in the subpath of {!r}"
+ValueError: 'project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/predictions/seed42/decoded_geology.pt' is not in the subpath of '/home/xmj/mcy/flowtrain_stochastic_interpolation-main' OR one path is relative and the other is absolute.

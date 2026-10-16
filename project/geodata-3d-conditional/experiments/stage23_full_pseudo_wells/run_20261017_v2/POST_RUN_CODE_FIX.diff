@@ -1,0 +1,49 @@
+--- executed/project/geodata-3d-conditional/scripts/stage23/report.py
++++ delivery/project/geodata-3d-conditional/scripts/stage23/report.py
+@@ -47,8 +47,9 @@
+         f"与Stage22相比，本轮取消 pred==9、d9≤0.01、margin≥0.05 的目标专用筛选，在原512总井布局的全部非原条件深度写入恢复分类。新增{seal['added_voxels']}体素、{seal['added_columns']}列；512含原9井，不是新增512井。背景及所有其他预测岩性均保留，原井/地表（含硬空气）优先，mask外为−1。新mask逐元素等于旧B512/C512；holdout新增0。",'',
+         '直接复用R22 classification张量，CPU一次重算仅核对原FP32分类一致性，未求解恢复场。码本、双通道权重、非空气max-min范围、raw0…13候选与argmin并列规则不变。候选不含空气，未用真值空气mask修正新增井。','',
+         f"方法冻结 {freeze['frozen_at_utc']}；条件封存 {seal['sealed_at_utc']}；Flow开始 {receipt['started_at_utc']}、完成 {receipt['completed_at_utc']}；首次完整真值评价 {result['evaluation_started_at_utc']}。准备与推理有文件读取防火墙；封存前未读取完整真值/对象/q9，科学精度不用于决定是否运行。",'',
+-        f"推理复用原sample_native与32步中点时间Euler，411个EMA权重及原checkpoint冻结embedding，全部参数冻结、FP32无autocast/TF32。实际A噪声tensor SHA256 `{receipt['initial_noise_tensor_sha256']}`；模型before/after等于旧A `{receipt['base_hash_after']}`。原条件/新增条件违例均0。含加载耗时{receipt['elapsed_seconds']:.2f}s。",'',
++        f"推理复用原sample_native与32步中点时间Euler，411个EMA权重及原checkpoint冻结embedding，全部参数冻结、FP32无autocast/TF32。实际A噪声tensor SHA256 `{receipt['initial_noise_tensor_sha256']}`；模型before/after等于旧A `{receipt['base_hash_after']}`。原条件/新增条件违例均0。含加载耗时约{receipt['elapsed_seconds']:.2f}s（计时来源见receipt）。",'',
+         '工程重试已保留：v1防火墙误拦截Python依赖sympy.geometry，模型初始化前失败、前向0次、无预测。仅把geometry限制收窄为experiments内资产；v1日志/receipt/源码快照不覆盖，v2重新封存相同科学条件。合计仍是1份新Flow、32前向。','',
++        'v2采样成功后，save_tensor收到相对路径导致收据序列化失败；已保存的预测和32步trace由CPU脚本核验后恢复封存，无追加前向。失败收据和日志保留。after模型hash根据失败点之前已通过的运行时before/after与逐项相等断言恢复，未伪称重新测量；耗时由trace文件时间减持久化开始时间近似重建。正式执行源码见source_snapshot；交付源码随后修复入口路径resolve并增加无网络回归测试，差异见POST_RUN_CODE_FIX。','',
+         '## 1. 转换改善（只在相同 added_mask 上）','',
+         '|标签来源|体素数|错误数|准确率|真目标错分/FN|真非目标错分|目标TP|目标FP|目标precision|目标recall|目标IoU|',
+         '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|']
+--- executed/project/geodata-3d-conditional/scripts/stage23/run.py
++++ delivery/project/geodata-3d-conditional/scripts/stage23/run.py
+@@ -20,6 +20,8 @@
+ 
+ 
+ def run(registry_path,seed,out):
++    registry_path=registry_path.resolve()
++    out=out.resolve()
+     guard("flow")
+     if out.resolve()!=(registry_path.parent/"predictions/seed42").resolve():
+         raise ValueError("One canonical output only per sealed experiment")
+--- executed/project/geodata-3d-conditional/scripts/stage23/test_stage23.py
++++ delivery/project/geodata-3d-conditional/scripts/stage23/test_stage23.py
+@@ -12,6 +12,22 @@
+ 
+ 
+ class Stage23Tests(unittest.TestCase):
++    def test_run_resolves_relative_cli_paths_before_io(self):
++        from unittest.mock import patch
++        from scripts.stage23 import run as runner
++        registry=Path('example/inference_registry.json')
++        output=Path('example/predictions/seed42')
++        class StopBeforeIO(Exception):
++            pass
++        seen=[]
++        def capture(path):
++            seen.append(path)
++            raise StopBeforeIO()
++        with patch.object(runner,'guard'), patch.object(runner,'read_json',capture):
++            with self.assertRaises(StopBeforeIO):
++                runner.run(registry,42,output)
++        self.assertEqual(seen,[registry.resolve()])
++
+     def test_firewall_allows_dependencies_and_blocks_experiment_geometry(self):
+         code = '''
+ from scripts.stage23.common import guard, PROJECT
