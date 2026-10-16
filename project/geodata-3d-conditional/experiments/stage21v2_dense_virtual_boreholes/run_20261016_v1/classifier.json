@@ -1,0 +1,38 @@
+{
+  "air": "not a classification candidate; original hard air preserved",
+  "collisions": [],
+  "metadata": {
+    "channel_names": [
+      "density_proxy",
+      "susceptibility_contrast_proxy"
+    ],
+    "channel_units": [
+      "controlled_relative_unit",
+      "controlled_relative_unit"
+    ],
+    "channel_weights": [
+      0.5,
+      0.5
+    ],
+    "description": "Controlled Phase-2a observability ablation. The density channel retains the full-lithology low-contrast proxy; the second channel assigns label 9 a moderate synthetic susceptibility contrast while retaining explicit values for all classes. This is not calibrated petrophysics or measured geophysics.",
+    "is_measured_geophysics": false,
+    "num_categories": 15,
+    "property_table_sha256": "0e2573666f24390b9818e4e1acad86c40750b8c0b8cc46d464df693598117704",
+    "raw_label_range": [
+      -1,
+      13
+    ],
+    "schema": "full_lithology_property_channels_v1",
+    "truth_derived": true
+  },
+  "rule": "raw 0..13; weighted squared distance; codebook nonair max-min channel scales; smallest-label exact ties",
+  "scales": [
+    0.39000001549720764,
+    0.09849999845027924
+  ],
+  "sigma0_nonair_roundtrip_exact": true,
+  "weights": [
+    0.5,
+    0.5
+  ]
+}

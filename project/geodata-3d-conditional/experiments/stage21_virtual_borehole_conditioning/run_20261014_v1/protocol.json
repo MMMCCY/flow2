@@ -1,0 +1,63 @@
+{
+  "budget": {
+    "cuda_smoke_outputs": 3,
+    "formal_outputs": 45,
+    "formal_velocity_evaluations": 1440,
+    "independent_n9_regression_velocity_evaluations": 32,
+    "max_concurrent_gpu_jobs": 1
+  },
+  "cases": [
+    "fullgeo_case01",
+    "fullgeo_case02",
+    "fullgeo_case03",
+    "fullgeo_case04",
+    "fullgeo_case05"
+  ],
+  "checkpoint": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "determinism": "torch_deterministic_algorithms_cublas4096_8_cudnn_benchmark_false",
+  "evaluation": {
+    "case_aggregation": "median_of_three_seeds_then_median_across_cases",
+    "class_set": "truth_present_in_common_domain",
+    "domain": "(truth!=-1)&~M25",
+    "figure_rule": "all_five_cases_seed142_full_domain_fixed_cameras",
+    "paired_aggregation": "median_within_case_of_same_seed_differences_then_cross_case_median",
+    "undefined": "null_with_denominator_and_reason"
+  },
+  "figure_seed": 142,
+  "integrator": "fixed_euler_midpoint_v1",
+  "layout_seed": 21001,
+  "n_steps": 32,
+  "objects": {
+    "connectivity": 26,
+    "detection_min_coverage": 0.1,
+    "detection_min_iou": 0.1,
+    "diagnostic_thresholds_are_not_scientific_success_gates": true,
+    "edge_min_intersection": 5,
+    "edge_min_truth_coverage": 0.05,
+    "major_min_voxels": 20,
+    "matching": "one_to_one_maximum_common_domain_iou_positive_edges_only",
+    "raw_label": 9
+  },
+  "precision": "float32_no_autocast_no_tf32",
+  "schema": "stage21_step1_protocol_v1",
+  "scope": "step1_accurate_extra_wells_only",
+  "shape": [
+    64,
+    64,
+    64
+  ],
+  "smoke_case": "fullgeo_case03",
+  "smoke_seed": 142,
+  "source_seeds": [
+    42,
+    142,
+    242
+  ],
+  "weight_source": "ema",
+  "well_counts": [
+    9,
+    16,
+    25
+  ]
+}

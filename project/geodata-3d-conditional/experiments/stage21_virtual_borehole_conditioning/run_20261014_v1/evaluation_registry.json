@@ -1,0 +1,52 @@
+{
+  "benchmark_manifest_sha256": "16f8e36b94b1e89ae9798615d0d466c1d8631501c73830fc54c117285f610968",
+  "cases": {
+    "fullgeo_case01": {
+      "historical_manifest_sha256": "7e63cc34f21a401a665bf6577f3031db8da6fce6e893c6a5fa16f79117226ee6",
+      "root_seed": 120260003,
+      "truth": {
+        "file_sha256": "bc32a2f4705f18655bddba56b67ad1ffc55e8a23444b6910573a3b8cbd44f3e9",
+        "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case01/truth/true_model.pt",
+        "tensor_sha256": "d1a18ebeedc0c25a4cbc35132b39630e84b1ec362927a318fb487ceaa3f31df7"
+      }
+    },
+    "fullgeo_case02": {
+      "historical_manifest_sha256": "826036d465bfcb289cc56baa4f4fb8e536f863cf63bf08e0613e9e7292ba1fca",
+      "root_seed": 120260004,
+      "truth": {
+        "file_sha256": "5ded009fb49b1eeb575904c725e424985e95183aacd252777227fc5f591abe3f",
+        "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case02/truth/true_model.pt",
+        "tensor_sha256": "3adfe816b346069c8ce2e4019cbcade1514c6258b303ae0cb32ff57f8088baf4"
+      }
+    },
+    "fullgeo_case03": {
+      "historical_manifest_sha256": "f513ed1244c56433c9eab9046550eadf41b6694921ea3b38b4456f798c7de486",
+      "root_seed": 120260008,
+      "truth": {
+        "file_sha256": "e79a5c8276fbaa7ae9b46c217f1df9ad041b53fbd5b4b4fedc4d59aa8b351576",
+        "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case03/truth/true_model.pt",
+        "tensor_sha256": "69c2c9c81e1b7acb6832b8af33d933c60246b69bf0ea70b5022864671b64cc02"
+      }
+    },
+    "fullgeo_case04": {
+      "historical_manifest_sha256": "8e0f9b273a7b3fa6544a167396285cb67cd1bee3210c7ffb8a6bd45abc5acab2",
+      "root_seed": 120260011,
+      "truth": {
+        "file_sha256": "2a281af180ef83c9157a810fc988277aa37f612506d6337662f921ba4e1c9cd9",
+        "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case04/truth/true_model.pt",
+        "tensor_sha256": "dae7584fdd0186b967a6272f963103e47dd0475e7329969b24dff161c457051a"
+      }
+    },
+    "fullgeo_case05": {
+      "historical_manifest_sha256": "2a4fa521b35e0c63e2f21092140f54b24b6940667b891428430890dc0247a76d",
+      "root_seed": 120260012,
+      "truth": {
+        "file_sha256": "093a97475d88763f398b27ee534bf7e73070f5e2d19111c0d63e010a4cf73530",
+        "path": "project/geodata-3d-conditional/experiments/full_structuralgeo_benchmark/cases/fullgeo_case05/truth/true_model.pt",
+        "tensor_sha256": "3c6139f958f8c0797ed6f26de4d6aab25f16a0541f22ffcfa2a2b2fe0280b791"
+      }
+    }
+  },
+  "role": "offline_retrospective_only",
+  "schema": "stage21_evaluation_registry_v1"
+}

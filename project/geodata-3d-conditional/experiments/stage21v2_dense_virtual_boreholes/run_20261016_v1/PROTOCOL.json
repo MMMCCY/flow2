@@ -1,0 +1,61 @@
+{
+  "auxiliary_domain": "~original_condition_mask & truth!=-1",
+  "candidate": "C holdout mIoU>A and original_free mIoU>=A and original_free label9 IoU>A",
+  "check_cases": [
+    "fullgeo_case01",
+    "fullgeo_case02"
+  ],
+  "checkpoint": "project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+  "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+  "class_set": "truth-present nonair classes fixed per case/domain before GPU",
+  "classifier": "raw 0..13; weighted squared distance; codebook nonair max-min channel scales; smallest-label exact ties",
+  "codebook": "project/geodata-3d-conditional/experiments/stage2_property/configs/ideal_density_susceptibility_label9_contrast_v1.json",
+  "codebook_sha256": "21582cf2a8b895b47fcc76b0ed8f9a90ab5742b0cfd7930668d715c3b9004ef2",
+  "confirmation": "only candidate density seeds142/242; all 3 holdout paired mIoU>0 and median paired original_free mIoU/label9 IoU>0",
+  "cross_case": "only if confirmed; case01/02 seed42 same N; no density search",
+  "cublas": ":4096:8",
+  "deterministic": true,
+  "development_case": "fullgeo_case03",
+  "endpoints": "4096 oracle/pseudo are direct-write endpoints; no Flow",
+  "figure_seed": 42,
+  "figure_slices": [
+    32,
+    32,
+    32
+  ],
+  "holdout_caveat": "held-out columns contribute to synthetic smoothed properties; not independent observation holdout",
+  "integrator": "32 fixed Euler steps; t=(step+0.5)/32; one velocity call/step",
+  "layout_seed": 21601,
+  "levels": [
+    512,
+    2048,
+    3840
+  ],
+  "limits": "controlled separable-property surrogate; reused historical cases; seeds not independent geology; no training/adapter/physics inversion",
+  "main_domain": "holdout_columns & ~original_condition_mask & truth!=-1",
+  "max_forward_calls": 608,
+  "max_network_outputs": 19,
+  "objects": {
+    "connectivity": 26,
+    "detection_min_coverage": 0.1,
+    "detection_min_iou": 0.1,
+    "edge_min_intersection": 5,
+    "edge_min_truth_coverage": 0.05,
+    "major_min_voxels": 20
+  },
+  "original_priority": "original condition values/mask always preserved; outside mask=-1",
+  "precision": "FP32 no autocast no TF32",
+  "prompt_sha256": "86880eef542fc3fb6895e1482399e8e358a448f0be6e3881ae64c299be40b237",
+  "schema": "stage21v2_dense_wells_v1",
+  "screen": "case03 seed42 increasing N; run C only if B holdout mIoU>A; stop higher N at first candidate",
+  "sigma": 1.0,
+  "simultaneous_gpu_jobs": 1,
+  "smoothing": "full property volume including codebook air; existing separable Gaussian replicate boundaries",
+  "source": "CPU full Gaussian before projection; same hash per case/seed",
+  "source_seeds": [
+    42,
+    142,
+    242
+  ],
+  "weights": "411 trainable EMA; raw checkpoint frozen embedding"
+}

@@ -1,0 +1,46 @@
+case_id,source_seed,arm,well_count,velocity_evaluations,elapsed_seconds,status,prediction_file_sha256,case,seed,n,reason
+fullgeo_case03,,P,,0,0,executed,ded0a047ef9bc5fbc7bcc79ecb0cb3b87a19d436b40d7446ce97c0c16257b376,,,,
+fullgeo_case03,42,A,9,0,0,reused,9af5bae3b2e60c7c7bd79dc68c4b5f9ec909ade935fc048ca50fab324d066d53,,,,
+fullgeo_case03,42,B,512,32,24.50952802298707,executed,7582424e7a0422da25b6a14fa9336b1a4e18a34638f38118f81975ea066005eb,,,,
+fullgeo_case03,42,D,512,0,0,executed,66b48a6f515c25809a4b9ced29e3cb2c72b05ece443bf7400f211bdcf67bec00,,,,
+fullgeo_case03,42,C,512,32,23.179122114990605,executed,df67a16387e3a9029170815710749a183a54e0acb9d849e101638ff73c5d1b60,,,,
+fullgeo_case03,142,A,9,0,0,reused,7a9903d3b9fe29964f37bef62d87e71acc97ac3ef55a9ce9233d4f4e8243cddf,,,,
+fullgeo_case03,142,B,512,32,23.084409778006375,executed,834a27bbf7e9665e48b4c5dd3bbe87ea9de2a31c3664a307d81951e5d5273259,,,,
+fullgeo_case03,142,C,512,32,23.305101307982113,executed,d2ad2020508fdf7e409d0cd0be485bed2cc14146aeecd53a83e1be810e8d87d0,,,,
+fullgeo_case03,142,D,512,0,0,executed,fb239420de5b9aa0894deb9490f3e14ae5ae1744cea374372f6dc068daa62cc3,,,,
+fullgeo_case03,242,A,9,0,0,reused,ba39ecbf9a30bb2bb18ec911f0a52628daa71248836248acc6a443f1b2b6908f,,,,
+fullgeo_case03,242,B,512,32,23.090947143005906,executed,6e15525431b3c5ec91e6d280a267c4607ac75c0ad27d55221625696c00852564,,,,
+fullgeo_case03,242,C,512,32,22.96985580501496,executed,8b3b1b84b3775ac66c63dd33c0a3e5f1b2a0e62154e0c6788e09acabe724a32a,,,,
+fullgeo_case03,242,D,512,0,0,executed,44086c19cbec191bd85c160406398ff73621d7ce5a26f9fbe984bc6c5478f70e,,,,
+fullgeo_case01,,P,,0,0,executed,c9aa3f5dee48649c2c57c1e51cafdb5f3c474d783416a78058cd6d976b449981,,,,
+fullgeo_case01,42,A,9,0,0,reused,dc63f1a65eb9f41d095544b543405684322ecb4c5af60d0f90f5001cd7cada90,,,,
+fullgeo_case01,42,B,512,32,23.25396346001071,executed,0a09e2851c4f6b26a5afde060234465aad871084dc528b048276657d5fe37fb7,,,,
+fullgeo_case01,42,C,512,32,23.079163717018673,executed,054737b5baf715597661f4bc88d44a7634ec85652a151fb568026e9495f60d54,,,,
+fullgeo_case01,42,D,512,0,0,executed,2639c913d47626077278eeb23c77258fd9da1b5bc9b5f96eacafe2674fff03cb,,,,
+fullgeo_case02,,P,,0,0,executed,9a95ccd2cbf785d538a5d45a751290a0704635b1b9c1d845a43bf492710c40b8,,,,
+fullgeo_case02,42,A,9,0,0,reused,6afb2ccf7d31741e9d126f5ad8b479f9583d3cd0bc2ff9b977d42d0d33be878d,,,,
+fullgeo_case02,42,B,512,32,23.25513635101379,executed,943d6fe46a4a9d44693824c1cb84a79676ecffe6b86949c113589c13a2dc5eef,,,,
+fullgeo_case02,42,C,512,32,24.253104818984866,executed,a9c2bc000e1b94275cc660f9d19eaa30c2bb49691466b641d25852d9bd054541,,,,
+fullgeo_case02,42,D,512,0,0,executed,6a89b37df5bf2f5ddd0503981a044d5c68a0583a94b19486eca54df473c8ca6f,,,,
+,,B/C,,,,skipped,,fullgeo_case03,42,2048,first candidate; higher density untested
+,,B/C,,,,skipped,,fullgeo_case03,42,3840,first candidate; higher density untested
+,,B,,,,skipped,,fullgeo_case03,42,2048,not reached under fixed progression; no result inferred
+,,C,,,,skipped,,fullgeo_case03,42,2048,not reached under fixed progression; no result inferred
+,,B,,,,skipped,,fullgeo_case03,42,3840,not reached under fixed progression; no result inferred
+,,C,,,,skipped,,fullgeo_case03,42,3840,not reached under fixed progression; no result inferred
+,,B,,,,skipped,,fullgeo_case03,142,2048,not reached under fixed progression; no result inferred
+,,C,,,,skipped,,fullgeo_case03,142,2048,not reached under fixed progression; no result inferred
+,,B,,,,skipped,,fullgeo_case03,142,3840,not reached under fixed progression; no result inferred
+,,C,,,,skipped,,fullgeo_case03,142,3840,not reached under fixed progression; no result inferred
+,,B,,,,skipped,,fullgeo_case03,242,2048,not reached under fixed progression; no result inferred
+,,C,,,,skipped,,fullgeo_case03,242,2048,not reached under fixed progression; no result inferred
+,,B,,,,skipped,,fullgeo_case03,242,3840,not reached under fixed progression; no result inferred
+,,C,,,,skipped,,fullgeo_case03,242,3840,not reached under fixed progression; no result inferred
+,,B,,,,skipped,,fullgeo_case01,42,2048,not reached under fixed progression; no result inferred
+,,C,,,,skipped,,fullgeo_case01,42,2048,not reached under fixed progression; no result inferred
+,,B,,,,skipped,,fullgeo_case01,42,3840,not reached under fixed progression; no result inferred
+,,C,,,,skipped,,fullgeo_case01,42,3840,not reached under fixed progression; no result inferred
+,,B,,,,skipped,,fullgeo_case02,42,2048,not reached under fixed progression; no result inferred
+,,C,,,,skipped,,fullgeo_case02,42,2048,not reached under fixed progression; no result inferred
+,,B,,,,skipped,,fullgeo_case02,42,3840,not reached under fixed progression; no result inferred
+,,C,,,,skipped,,fullgeo_case02,42,3840,not reached under fixed progression; no result inferred

@@ -1,0 +1,173 @@
+{
+  "status": "PASS",
+  "planned_count": 200,
+  "actual_count": 200,
+  "models": 600,
+  "source_pairing": true,
+  "conditions_exact": true,
+  "all_counts_exact": true,
+  "strict_thresholds": true,
+  "all_subsets_unique": true,
+  "obs_ranking_exact": true,
+  "oracle_ranking_exact": true,
+  "group_checks": [
+    {
+      "arm": "FLOW_ONLY",
+      "group": "all200",
+      "count": 200,
+      "thresholds": [
+        81,
+        121,
+        161,
+        200
+      ],
+      "full_all_hit_voxels": 220,
+      "free_all_hit_voxels": 195
+    },
+    {
+      "arm": "FLOW_ONLY",
+      "group": "obs_top100",
+      "count": 100,
+      "thresholds": [
+        41,
+        61,
+        81,
+        100
+      ],
+      "full_all_hit_voxels": 413,
+      "free_all_hit_voxels": 388
+    },
+    {
+      "arm": "FLOW_ONLY",
+      "group": "oracle_top100",
+      "count": 100,
+      "thresholds": [
+        41,
+        61,
+        81,
+        100
+      ],
+      "full_all_hit_voxels": 612,
+      "free_all_hit_voxels": 587
+    },
+    {
+      "arm": "FLOW_ONLY",
+      "group": "random100",
+      "count": 100,
+      "thresholds": [
+        41,
+        61,
+        81,
+        100
+      ],
+      "full_all_hit_voxels": 475,
+      "free_all_hit_voxels": 450
+    },
+    {
+      "arm": "STAGE15_TRACE_V4",
+      "group": "all200",
+      "count": 200,
+      "thresholds": [
+        81,
+        121,
+        161,
+        200
+      ],
+      "full_all_hit_voxels": 5396,
+      "free_all_hit_voxels": 5371
+    },
+    {
+      "arm": "STAGE15_TRACE_V4",
+      "group": "obs_top100",
+      "count": 100,
+      "thresholds": [
+        41,
+        61,
+        81,
+        100
+      ],
+      "full_all_hit_voxels": 5740,
+      "free_all_hit_voxels": 5715
+    },
+    {
+      "arm": "STAGE15_TRACE_V4",
+      "group": "oracle_top100",
+      "count": 100,
+      "thresholds": [
+        41,
+        61,
+        81,
+        100
+      ],
+      "full_all_hit_voxels": 5779,
+      "free_all_hit_voxels": 5754
+    },
+    {
+      "arm": "STAGE15_TRACE_V4",
+      "group": "random100",
+      "count": 100,
+      "thresholds": [
+        41,
+        61,
+        81,
+        100
+      ],
+      "full_all_hit_voxels": 5853,
+      "free_all_hit_voxels": 5828
+    },
+    {
+      "arm": "STAGE19R_ADAPTER",
+      "group": "all200",
+      "count": 200,
+      "thresholds": [
+        81,
+        121,
+        161,
+        200
+      ],
+      "full_all_hit_voxels": 2855,
+      "free_all_hit_voxels": 2830
+    },
+    {
+      "arm": "STAGE19R_ADAPTER",
+      "group": "obs_top100",
+      "count": 100,
+      "thresholds": [
+        41,
+        61,
+        81,
+        100
+      ],
+      "full_all_hit_voxels": 3654,
+      "free_all_hit_voxels": 3629
+    },
+    {
+      "arm": "STAGE19R_ADAPTER",
+      "group": "oracle_top100",
+      "count": 100,
+      "thresholds": [
+        41,
+        61,
+        81,
+        100
+      ],
+      "full_all_hit_voxels": 3716,
+      "free_all_hit_voxels": 3691
+    },
+    {
+      "arm": "STAGE19R_ADAPTER",
+      "group": "random100",
+      "count": 100,
+      "thresholds": [
+        41,
+        61,
+        81,
+        100
+      ],
+      "full_all_hit_voxels": 3537,
+      "free_all_hit_voxels": 3512
+    }
+  ],
+  "validated_png_files": 0,
+  "note": "Automated artifact audit; manual PNG inspection reported separately."
+}

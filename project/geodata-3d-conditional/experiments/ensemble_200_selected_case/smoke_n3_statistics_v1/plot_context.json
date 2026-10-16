@@ -1,0 +1,1744 @@
+{
+  "groups": {
+    "FLOW_ONLY": {
+      "all3": [
+        0,
+        1,
+        2
+      ],
+      "obs_top3": [
+        0,
+        2,
+        1
+      ],
+      "oracle_top3": [
+        0,
+        2,
+        1
+      ],
+      "random3": [
+        0,
+        1,
+        2
+      ]
+    },
+    "STAGE15_TRACE_V4": {
+      "all3": [
+        0,
+        1,
+        2
+      ],
+      "obs_top3": [
+        2,
+        1,
+        0
+      ],
+      "oracle_top3": [
+        0,
+        2,
+        1
+      ],
+      "random3": [
+        0,
+        1,
+        2
+      ]
+    },
+    "STAGE19R_ADAPTER": {
+      "all3": [
+        0,
+        1,
+        2
+      ],
+      "obs_top3": [
+        0,
+        1,
+        2
+      ],
+      "oracle_top3": [
+        0,
+        1,
+        2
+      ],
+      "random3": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "ids": [
+    "source_000",
+    "source_001",
+    "source_002"
+  ],
+  "protocol": {
+    "assets": {
+      "adapter": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/checkpoints/formal_v2/adapter_checkpoint.pt",
+        "sha256": "cdb740bfeccc08f7010048c69deb8e44a13917fe53e3b2f4b46910bf536f20bb",
+        "size_bytes": 232757
+      },
+      "binary": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_acoustic_upper_bound_v1.json",
+        "sha256": "5272deb894d211fb67339e06840ac1212e156a200c20423f9f36d88949945248",
+        "size_bytes": 634
+      },
+      "binary_impedance_score": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/evidence_v2/stage19_test_case004/binary_impedance_score.pt",
+        "sha256": "4438e578d3a2d87e04432048d2f07c32044be3222f80c42e16b26736f45de571",
+        "size_bytes": 1050386
+      },
+      "checkpoint": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+        "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+        "size_bytes": 849415038
+      },
+      "condition_mask": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/observations_v2/stage19_test_case004/condition_mask.pt",
+        "sha256": "6b097bd9c6fb3e0614f2a0110c458afcdb57b48b2931ddb4548aa84cca400930",
+        "size_bytes": 263834
+      },
+      "condition_values": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/observations_v2/stage19_test_case004/condition_values.pt",
+        "sha256": "7e9143338a41b6b8275b17718ff45601a70d931be2685ca1af61502400998638",
+        "size_bytes": 2098856
+      },
+      "inference": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/configs/inference_v1.json",
+        "sha256": "42092177caa132bf63741626df115f237978ad77d7096093f500fb0da91c5801",
+        "size_bytes": 929
+      },
+      "observation_manifest": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/observations_v2/stage19_test_case004/manifest.json",
+        "sha256": "9c739cca94e82c66564742d9e515be843d396c1916f27e241234f36bc79c8161",
+        "size_bytes": 6168
+      },
+      "observed_seismic": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/observations_v2/stage19_test_case004/observed_seismic.pt",
+        "sha256": "e7df55c9d9674de9af9723cee43021a5e0418e70136cc90a8bd7425e1d4f6cd8",
+        "size_bytes": 5244584
+      },
+      "property": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/configs/binary_trace_property_indicator_v1.json",
+        "sha256": "362b5f33a1376d00209ee4376754e456614f6549419d90025c2c0851045d7864",
+        "size_bytes": 542
+      },
+      "registry": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/evidence_v2/test_inference_registry.json",
+        "sha256": "72f11e12d6397c635e23841c088f8c6bff707632541017eb86bbd8fb7cd169b6",
+        "size_bytes": 27179
+      },
+      "seismic": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json",
+        "sha256": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02",
+        "size_bytes": 919
+      },
+      "source_acoustic": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json",
+        "sha256": "8980e30c59624af9f1bfa59447b7e22c85a2975f8a556fe6e98f5346f95d10ae",
+        "size_bytes": 1128
+      },
+      "stage15_reference": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage15_binary_seismic_consensus/trace_boundary/flow_property_seed42_v4/guided/config.json",
+        "sha256": "2e46a30139eb3bad496adfb6297eb2beda2a6bd140d5ae473f0d13d6535959b1",
+        "size_bytes": 10922
+      },
+      "stage19_evidence_config": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/configs/evidence_v2.json",
+        "sha256": "dcc3b342222cf94b66d36a57dce5abc9a63a3efb864f4625ac57b1d0de31c44e",
+        "size_bytes": 1980
+      },
+      "subsurface_mask": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/observations_v2/stage19_test_case004/subsurface_mask.pt",
+        "sha256": "29b30d7e15d3ae8a39c983f1acfa9733fc8d7deea4bc9b80701039513dd918c2",
+        "size_bytes": 263841
+      },
+      "training": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/configs/training_v1.json",
+        "sha256": "ac3d5bf73b23a97168e0b200b0484e520b5b7f27c0f442702abf186996a49220",
+        "size_bytes": 1315
+      },
+      "training_manifest": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/checkpoints/formal_v2/training_manifest.json",
+        "sha256": "7bec70dd7b3c1c423a16eea11dd60add0fa07f7e41d92bbc29cb7dcb4cea9672",
+        "size_bytes": 4552
+      }
+    },
+    "case_id": "stage19_test_case004",
+    "case_selection_uses_historical_truth_metrics": true,
+    "checkpoint_hash": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+    "config": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/configs/inference_v1.json",
+      "sha256": "42092177caa132bf63741626df115f237978ad77d7096093f500fb0da91c5801",
+      "size_bytes": 929
+    },
+    "created_at_utc": "2026-10-09T13:50:06.595217+00:00",
+    "full_parameters": {
+      "adapter_scale": 1.0,
+      "arms": [
+        "FLOW_ONLY",
+        "STAGE18_CONTINUOUS_TARGET",
+        "ADAPTER_CORRECT",
+        "ADAPTER_ZERO",
+        "ADAPTER_WRONG_CASE"
+      ],
+      "integrator": "fixed_euler_midpoint",
+      "max_residual_ratio": 0.25,
+      "n_steps": 32,
+      "parameter_sweep": false,
+      "schema": "stage19_inference_v1",
+      "source_seeds": [
+        42,
+        142,
+        242
+      ],
+      "stage18": {
+        "alpha": 0.25,
+        "confidence": "score_times_free_subsurface",
+        "grad_clip_norm": 1.0,
+        "guidance_scaling_mode": "reference_norm_relative_v2",
+        "guidance_schedule": "windowed_sine",
+        "guidance_start": 0.25,
+        "max_guidance_ratio": 0.25,
+        "property_loss_mode": "matched_multiscale_normalized_mse_v1",
+        "property_scale_weights": [
+          0.5,
+          0.3,
+          0.2
+        ],
+        "property_sigmas": [
+          0.0,
+          1.5,
+          3.0
+        ],
+        "target_properties": "score",
+        "tau_end": 0.1,
+        "tau_schedule": "cosine",
+        "tau_start": 0.5
+      },
+      "status": "frozen_before_run",
+      "target_label": 9,
+      "truth_loaded_by_runner": false,
+      "wrong_case_mapping": "next_test_case_cyclic"
+    },
+    "geometry": {
+      "axis_order": [
+        "x",
+        "y",
+        "z"
+      ],
+      "cell_size_m": [
+        100.0,
+        100.0,
+        50.0
+      ],
+      "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+      "exclude_air_rock_interface": true,
+      "grid_shape": [
+        64,
+        64,
+        64
+      ],
+      "id": "full_cube_noiseless_inverse_crime_v1",
+      "inverse_crime": true,
+      "local_surface_datum": true,
+      "measured_geophysics": false,
+      "noise": {
+        "seed": 4205,
+        "std_amplitude": 0.0,
+        "type": "none"
+      },
+      "sample_mask": "all",
+      "schema": "phase4_seismic_observation_v1",
+      "time_sampling": {
+        "num_samples": 320,
+        "sample_interval_ms": 8.0
+      },
+      "trace_grid": "all_xy_columns",
+      "trace_order": "local_surface_to_depth",
+      "truth_derived": true,
+      "uncertainty_amplitude": 0.01,
+      "vertical_axis": "final spatial axis; larger index upward",
+      "wavelet": {
+        "duration_ms": 128.0,
+        "normalization": "peak_one",
+        "peak_frequency_hz": 25.0,
+        "type": "ricker_zero_phase"
+      }
+    },
+    "git_branch": "main",
+    "git_head": "b780b9ae3650b426400d3258b8e33f10a349bf6c",
+    "methods": [
+      "STAGE15_TRACE_V4",
+      "STAGE19R_ADAPTER"
+    ],
+    "observation_score": {
+      "direction": "lower",
+      "inverse_crime": true,
+      "name": "hard_seismic_rmse",
+      "noise": "none",
+      "normalization": "none",
+      "unit": "unscaled_convolutional_amplitude"
+    },
+    "planned_count": 200,
+    "run_status": "running",
+    "runner_source": {
+      "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/ensemble_workflow.py",
+      "sha256": "f17c0342c5408e4a1d8c661f65ad7fa0a2f6230ad985d0b6aeed00298567567d",
+      "size_bytes": 34126
+    },
+    "schema": "ensemble_200_frozen_v1",
+    "selection": "historical_adapter_median_iou_best",
+    "selection_record": {
+      "metrics": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/reports/formal_v2/sample_metrics.csv",
+        "sha256": "2dd4d651759c35f13d7fb4af0d287f4e40f78e93a5ef9368465d022280c6735e",
+        "size_bytes": 115586
+      },
+      "ranking": [
+        {
+          "case_id": "stage19_test_case004",
+          "median_target_iou": 0.6710347943967465
+        },
+        {
+          "case_id": "stage19_test_case006",
+          "median_target_iou": 0.6325836664081609
+        },
+        {
+          "case_id": "stage19_test_case009",
+          "median_target_iou": 0.5966046107842191
+        },
+        {
+          "case_id": "stage19_test_case008",
+          "median_target_iou": 0.5081525942885431
+        },
+        {
+          "case_id": "stage19_test_case007",
+          "median_target_iou": 0.43717310881489985
+        },
+        {
+          "case_id": "stage19_test_case010",
+          "median_target_iou": 0.41928449744463375
+        },
+        {
+          "case_id": "stage19_test_case002",
+          "median_target_iou": 0.40184641809203464
+        },
+        {
+          "case_id": "stage19_test_case012",
+          "median_target_iou": 0.3999273079718924
+        },
+        {
+          "case_id": "stage19_test_case011",
+          "median_target_iou": 0.3898424862980354
+        },
+        {
+          "case_id": "stage19_test_case005",
+          "median_target_iou": 0.23571207908557307
+        },
+        {
+          "case_id": "stage19_test_case003",
+          "median_target_iou": 0.23454412034489083
+        },
+        {
+          "case_id": "stage19_test_case001",
+          "median_target_iou": 0.20344387755102042
+        }
+      ]
+    },
+    "source_files": {
+      "ensemble_occurrence.py": "d5d628fe562a9189da6c0a20232870174cf2113d067f8bc07ed4d2c5de62befe",
+      "project/geodata-3d-conditional/guidance/binary_seismic_inversion.py": "b7ad4657f54aa48920e4afd0f8652a44c98d87aecf575977863d6f8c95f05aac",
+      "project/geodata-3d-conditional/guidance/property_sampling.py": "ba2560c0052774de82cd4fadc3afab6d759e30c5223f57848b518f940bee566d",
+      "project/geodata-3d-conditional/guidance/residual_velocity_adapter.py": "adbc20ac1b4c4bce8d885441dd8488ffdc931133d7358052793fb9b97fc0a0d7",
+      "project/geodata-3d-conditional/guidance/seismic.py": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee",
+      "project/geodata-3d-conditional/scripts/ensemble_workflow.py": "f17c0342c5408e4a1d8c661f65ad7fa0a2f6230ad985d0b6aeed00298567567d"
+    },
+    "source_ids": [
+      {
+        "candidate_order": 0,
+        "sample_id": "source_000",
+        "source_seed": 42
+      },
+      {
+        "candidate_order": 1,
+        "sample_id": "source_001",
+        "source_seed": 142
+      },
+      {
+        "candidate_order": 2,
+        "sample_id": "source_002",
+        "source_seed": 242
+      },
+      {
+        "candidate_order": 3,
+        "sample_id": "source_003",
+        "source_seed": 342
+      },
+      {
+        "candidate_order": 4,
+        "sample_id": "source_004",
+        "source_seed": 442
+      },
+      {
+        "candidate_order": 5,
+        "sample_id": "source_005",
+        "source_seed": 542
+      },
+      {
+        "candidate_order": 6,
+        "sample_id": "source_006",
+        "source_seed": 642
+      },
+      {
+        "candidate_order": 7,
+        "sample_id": "source_007",
+        "source_seed": 742
+      },
+      {
+        "candidate_order": 8,
+        "sample_id": "source_008",
+        "source_seed": 842
+      },
+      {
+        "candidate_order": 9,
+        "sample_id": "source_009",
+        "source_seed": 942
+      },
+      {
+        "candidate_order": 10,
+        "sample_id": "source_010",
+        "source_seed": 1042
+      },
+      {
+        "candidate_order": 11,
+        "sample_id": "source_011",
+        "source_seed": 1142
+      },
+      {
+        "candidate_order": 12,
+        "sample_id": "source_012",
+        "source_seed": 1242
+      },
+      {
+        "candidate_order": 13,
+        "sample_id": "source_013",
+        "source_seed": 1342
+      },
+      {
+        "candidate_order": 14,
+        "sample_id": "source_014",
+        "source_seed": 1442
+      },
+      {
+        "candidate_order": 15,
+        "sample_id": "source_015",
+        "source_seed": 1542
+      },
+      {
+        "candidate_order": 16,
+        "sample_id": "source_016",
+        "source_seed": 1642
+      },
+      {
+        "candidate_order": 17,
+        "sample_id": "source_017",
+        "source_seed": 1742
+      },
+      {
+        "candidate_order": 18,
+        "sample_id": "source_018",
+        "source_seed": 1842
+      },
+      {
+        "candidate_order": 19,
+        "sample_id": "source_019",
+        "source_seed": 1942
+      },
+      {
+        "candidate_order": 20,
+        "sample_id": "source_020",
+        "source_seed": 2042
+      },
+      {
+        "candidate_order": 21,
+        "sample_id": "source_021",
+        "source_seed": 2142
+      },
+      {
+        "candidate_order": 22,
+        "sample_id": "source_022",
+        "source_seed": 2242
+      },
+      {
+        "candidate_order": 23,
+        "sample_id": "source_023",
+        "source_seed": 2342
+      },
+      {
+        "candidate_order": 24,
+        "sample_id": "source_024",
+        "source_seed": 2442
+      },
+      {
+        "candidate_order": 25,
+        "sample_id": "source_025",
+        "source_seed": 2542
+      },
+      {
+        "candidate_order": 26,
+        "sample_id": "source_026",
+        "source_seed": 2642
+      },
+      {
+        "candidate_order": 27,
+        "sample_id": "source_027",
+        "source_seed": 2742
+      },
+      {
+        "candidate_order": 28,
+        "sample_id": "source_028",
+        "source_seed": 2842
+      },
+      {
+        "candidate_order": 29,
+        "sample_id": "source_029",
+        "source_seed": 2942
+      },
+      {
+        "candidate_order": 30,
+        "sample_id": "source_030",
+        "source_seed": 3042
+      },
+      {
+        "candidate_order": 31,
+        "sample_id": "source_031",
+        "source_seed": 3142
+      },
+      {
+        "candidate_order": 32,
+        "sample_id": "source_032",
+        "source_seed": 3242
+      },
+      {
+        "candidate_order": 33,
+        "sample_id": "source_033",
+        "source_seed": 3342
+      },
+      {
+        "candidate_order": 34,
+        "sample_id": "source_034",
+        "source_seed": 3442
+      },
+      {
+        "candidate_order": 35,
+        "sample_id": "source_035",
+        "source_seed": 3542
+      },
+      {
+        "candidate_order": 36,
+        "sample_id": "source_036",
+        "source_seed": 3642
+      },
+      {
+        "candidate_order": 37,
+        "sample_id": "source_037",
+        "source_seed": 3742
+      },
+      {
+        "candidate_order": 38,
+        "sample_id": "source_038",
+        "source_seed": 3842
+      },
+      {
+        "candidate_order": 39,
+        "sample_id": "source_039",
+        "source_seed": 3942
+      },
+      {
+        "candidate_order": 40,
+        "sample_id": "source_040",
+        "source_seed": 4042
+      },
+      {
+        "candidate_order": 41,
+        "sample_id": "source_041",
+        "source_seed": 4142
+      },
+      {
+        "candidate_order": 42,
+        "sample_id": "source_042",
+        "source_seed": 4242
+      },
+      {
+        "candidate_order": 43,
+        "sample_id": "source_043",
+        "source_seed": 4342
+      },
+      {
+        "candidate_order": 44,
+        "sample_id": "source_044",
+        "source_seed": 4442
+      },
+      {
+        "candidate_order": 45,
+        "sample_id": "source_045",
+        "source_seed": 4542
+      },
+      {
+        "candidate_order": 46,
+        "sample_id": "source_046",
+        "source_seed": 4642
+      },
+      {
+        "candidate_order": 47,
+        "sample_id": "source_047",
+        "source_seed": 4742
+      },
+      {
+        "candidate_order": 48,
+        "sample_id": "source_048",
+        "source_seed": 4842
+      },
+      {
+        "candidate_order": 49,
+        "sample_id": "source_049",
+        "source_seed": 4942
+      },
+      {
+        "candidate_order": 50,
+        "sample_id": "source_050",
+        "source_seed": 5042
+      },
+      {
+        "candidate_order": 51,
+        "sample_id": "source_051",
+        "source_seed": 5142
+      },
+      {
+        "candidate_order": 52,
+        "sample_id": "source_052",
+        "source_seed": 5242
+      },
+      {
+        "candidate_order": 53,
+        "sample_id": "source_053",
+        "source_seed": 5342
+      },
+      {
+        "candidate_order": 54,
+        "sample_id": "source_054",
+        "source_seed": 5442
+      },
+      {
+        "candidate_order": 55,
+        "sample_id": "source_055",
+        "source_seed": 5542
+      },
+      {
+        "candidate_order": 56,
+        "sample_id": "source_056",
+        "source_seed": 5642
+      },
+      {
+        "candidate_order": 57,
+        "sample_id": "source_057",
+        "source_seed": 5742
+      },
+      {
+        "candidate_order": 58,
+        "sample_id": "source_058",
+        "source_seed": 5842
+      },
+      {
+        "candidate_order": 59,
+        "sample_id": "source_059",
+        "source_seed": 5942
+      },
+      {
+        "candidate_order": 60,
+        "sample_id": "source_060",
+        "source_seed": 6042
+      },
+      {
+        "candidate_order": 61,
+        "sample_id": "source_061",
+        "source_seed": 6142
+      },
+      {
+        "candidate_order": 62,
+        "sample_id": "source_062",
+        "source_seed": 6242
+      },
+      {
+        "candidate_order": 63,
+        "sample_id": "source_063",
+        "source_seed": 6342
+      },
+      {
+        "candidate_order": 64,
+        "sample_id": "source_064",
+        "source_seed": 6442
+      },
+      {
+        "candidate_order": 65,
+        "sample_id": "source_065",
+        "source_seed": 6542
+      },
+      {
+        "candidate_order": 66,
+        "sample_id": "source_066",
+        "source_seed": 6642
+      },
+      {
+        "candidate_order": 67,
+        "sample_id": "source_067",
+        "source_seed": 6742
+      },
+      {
+        "candidate_order": 68,
+        "sample_id": "source_068",
+        "source_seed": 6842
+      },
+      {
+        "candidate_order": 69,
+        "sample_id": "source_069",
+        "source_seed": 6942
+      },
+      {
+        "candidate_order": 70,
+        "sample_id": "source_070",
+        "source_seed": 7042
+      },
+      {
+        "candidate_order": 71,
+        "sample_id": "source_071",
+        "source_seed": 7142
+      },
+      {
+        "candidate_order": 72,
+        "sample_id": "source_072",
+        "source_seed": 7242
+      },
+      {
+        "candidate_order": 73,
+        "sample_id": "source_073",
+        "source_seed": 7342
+      },
+      {
+        "candidate_order": 74,
+        "sample_id": "source_074",
+        "source_seed": 7442
+      },
+      {
+        "candidate_order": 75,
+        "sample_id": "source_075",
+        "source_seed": 7542
+      },
+      {
+        "candidate_order": 76,
+        "sample_id": "source_076",
+        "source_seed": 7642
+      },
+      {
+        "candidate_order": 77,
+        "sample_id": "source_077",
+        "source_seed": 7742
+      },
+      {
+        "candidate_order": 78,
+        "sample_id": "source_078",
+        "source_seed": 7842
+      },
+      {
+        "candidate_order": 79,
+        "sample_id": "source_079",
+        "source_seed": 7942
+      },
+      {
+        "candidate_order": 80,
+        "sample_id": "source_080",
+        "source_seed": 8042
+      },
+      {
+        "candidate_order": 81,
+        "sample_id": "source_081",
+        "source_seed": 8142
+      },
+      {
+        "candidate_order": 82,
+        "sample_id": "source_082",
+        "source_seed": 8242
+      },
+      {
+        "candidate_order": 83,
+        "sample_id": "source_083",
+        "source_seed": 8342
+      },
+      {
+        "candidate_order": 84,
+        "sample_id": "source_084",
+        "source_seed": 8442
+      },
+      {
+        "candidate_order": 85,
+        "sample_id": "source_085",
+        "source_seed": 8542
+      },
+      {
+        "candidate_order": 86,
+        "sample_id": "source_086",
+        "source_seed": 8642
+      },
+      {
+        "candidate_order": 87,
+        "sample_id": "source_087",
+        "source_seed": 8742
+      },
+      {
+        "candidate_order": 88,
+        "sample_id": "source_088",
+        "source_seed": 8842
+      },
+      {
+        "candidate_order": 89,
+        "sample_id": "source_089",
+        "source_seed": 8942
+      },
+      {
+        "candidate_order": 90,
+        "sample_id": "source_090",
+        "source_seed": 9042
+      },
+      {
+        "candidate_order": 91,
+        "sample_id": "source_091",
+        "source_seed": 9142
+      },
+      {
+        "candidate_order": 92,
+        "sample_id": "source_092",
+        "source_seed": 9242
+      },
+      {
+        "candidate_order": 93,
+        "sample_id": "source_093",
+        "source_seed": 9342
+      },
+      {
+        "candidate_order": 94,
+        "sample_id": "source_094",
+        "source_seed": 9442
+      },
+      {
+        "candidate_order": 95,
+        "sample_id": "source_095",
+        "source_seed": 9542
+      },
+      {
+        "candidate_order": 96,
+        "sample_id": "source_096",
+        "source_seed": 9642
+      },
+      {
+        "candidate_order": 97,
+        "sample_id": "source_097",
+        "source_seed": 9742
+      },
+      {
+        "candidate_order": 98,
+        "sample_id": "source_098",
+        "source_seed": 9842
+      },
+      {
+        "candidate_order": 99,
+        "sample_id": "source_099",
+        "source_seed": 9942
+      },
+      {
+        "candidate_order": 100,
+        "sample_id": "source_100",
+        "source_seed": 10042
+      },
+      {
+        "candidate_order": 101,
+        "sample_id": "source_101",
+        "source_seed": 10142
+      },
+      {
+        "candidate_order": 102,
+        "sample_id": "source_102",
+        "source_seed": 10242
+      },
+      {
+        "candidate_order": 103,
+        "sample_id": "source_103",
+        "source_seed": 10342
+      },
+      {
+        "candidate_order": 104,
+        "sample_id": "source_104",
+        "source_seed": 10442
+      },
+      {
+        "candidate_order": 105,
+        "sample_id": "source_105",
+        "source_seed": 10542
+      },
+      {
+        "candidate_order": 106,
+        "sample_id": "source_106",
+        "source_seed": 10642
+      },
+      {
+        "candidate_order": 107,
+        "sample_id": "source_107",
+        "source_seed": 10742
+      },
+      {
+        "candidate_order": 108,
+        "sample_id": "source_108",
+        "source_seed": 10842
+      },
+      {
+        "candidate_order": 109,
+        "sample_id": "source_109",
+        "source_seed": 10942
+      },
+      {
+        "candidate_order": 110,
+        "sample_id": "source_110",
+        "source_seed": 11042
+      },
+      {
+        "candidate_order": 111,
+        "sample_id": "source_111",
+        "source_seed": 11142
+      },
+      {
+        "candidate_order": 112,
+        "sample_id": "source_112",
+        "source_seed": 11242
+      },
+      {
+        "candidate_order": 113,
+        "sample_id": "source_113",
+        "source_seed": 11342
+      },
+      {
+        "candidate_order": 114,
+        "sample_id": "source_114",
+        "source_seed": 11442
+      },
+      {
+        "candidate_order": 115,
+        "sample_id": "source_115",
+        "source_seed": 11542
+      },
+      {
+        "candidate_order": 116,
+        "sample_id": "source_116",
+        "source_seed": 11642
+      },
+      {
+        "candidate_order": 117,
+        "sample_id": "source_117",
+        "source_seed": 11742
+      },
+      {
+        "candidate_order": 118,
+        "sample_id": "source_118",
+        "source_seed": 11842
+      },
+      {
+        "candidate_order": 119,
+        "sample_id": "source_119",
+        "source_seed": 11942
+      },
+      {
+        "candidate_order": 120,
+        "sample_id": "source_120",
+        "source_seed": 12042
+      },
+      {
+        "candidate_order": 121,
+        "sample_id": "source_121",
+        "source_seed": 12142
+      },
+      {
+        "candidate_order": 122,
+        "sample_id": "source_122",
+        "source_seed": 12242
+      },
+      {
+        "candidate_order": 123,
+        "sample_id": "source_123",
+        "source_seed": 12342
+      },
+      {
+        "candidate_order": 124,
+        "sample_id": "source_124",
+        "source_seed": 12442
+      },
+      {
+        "candidate_order": 125,
+        "sample_id": "source_125",
+        "source_seed": 12542
+      },
+      {
+        "candidate_order": 126,
+        "sample_id": "source_126",
+        "source_seed": 12642
+      },
+      {
+        "candidate_order": 127,
+        "sample_id": "source_127",
+        "source_seed": 12742
+      },
+      {
+        "candidate_order": 128,
+        "sample_id": "source_128",
+        "source_seed": 12842
+      },
+      {
+        "candidate_order": 129,
+        "sample_id": "source_129",
+        "source_seed": 12942
+      },
+      {
+        "candidate_order": 130,
+        "sample_id": "source_130",
+        "source_seed": 13042
+      },
+      {
+        "candidate_order": 131,
+        "sample_id": "source_131",
+        "source_seed": 13142
+      },
+      {
+        "candidate_order": 132,
+        "sample_id": "source_132",
+        "source_seed": 13242
+      },
+      {
+        "candidate_order": 133,
+        "sample_id": "source_133",
+        "source_seed": 13342
+      },
+      {
+        "candidate_order": 134,
+        "sample_id": "source_134",
+        "source_seed": 13442
+      },
+      {
+        "candidate_order": 135,
+        "sample_id": "source_135",
+        "source_seed": 13542
+      },
+      {
+        "candidate_order": 136,
+        "sample_id": "source_136",
+        "source_seed": 13642
+      },
+      {
+        "candidate_order": 137,
+        "sample_id": "source_137",
+        "source_seed": 13742
+      },
+      {
+        "candidate_order": 138,
+        "sample_id": "source_138",
+        "source_seed": 13842
+      },
+      {
+        "candidate_order": 139,
+        "sample_id": "source_139",
+        "source_seed": 13942
+      },
+      {
+        "candidate_order": 140,
+        "sample_id": "source_140",
+        "source_seed": 14042
+      },
+      {
+        "candidate_order": 141,
+        "sample_id": "source_141",
+        "source_seed": 14142
+      },
+      {
+        "candidate_order": 142,
+        "sample_id": "source_142",
+        "source_seed": 14242
+      },
+      {
+        "candidate_order": 143,
+        "sample_id": "source_143",
+        "source_seed": 14342
+      },
+      {
+        "candidate_order": 144,
+        "sample_id": "source_144",
+        "source_seed": 14442
+      },
+      {
+        "candidate_order": 145,
+        "sample_id": "source_145",
+        "source_seed": 14542
+      },
+      {
+        "candidate_order": 146,
+        "sample_id": "source_146",
+        "source_seed": 14642
+      },
+      {
+        "candidate_order": 147,
+        "sample_id": "source_147",
+        "source_seed": 14742
+      },
+      {
+        "candidate_order": 148,
+        "sample_id": "source_148",
+        "source_seed": 14842
+      },
+      {
+        "candidate_order": 149,
+        "sample_id": "source_149",
+        "source_seed": 14942
+      },
+      {
+        "candidate_order": 150,
+        "sample_id": "source_150",
+        "source_seed": 15042
+      },
+      {
+        "candidate_order": 151,
+        "sample_id": "source_151",
+        "source_seed": 15142
+      },
+      {
+        "candidate_order": 152,
+        "sample_id": "source_152",
+        "source_seed": 15242
+      },
+      {
+        "candidate_order": 153,
+        "sample_id": "source_153",
+        "source_seed": 15342
+      },
+      {
+        "candidate_order": 154,
+        "sample_id": "source_154",
+        "source_seed": 15442
+      },
+      {
+        "candidate_order": 155,
+        "sample_id": "source_155",
+        "source_seed": 15542
+      },
+      {
+        "candidate_order": 156,
+        "sample_id": "source_156",
+        "source_seed": 15642
+      },
+      {
+        "candidate_order": 157,
+        "sample_id": "source_157",
+        "source_seed": 15742
+      },
+      {
+        "candidate_order": 158,
+        "sample_id": "source_158",
+        "source_seed": 15842
+      },
+      {
+        "candidate_order": 159,
+        "sample_id": "source_159",
+        "source_seed": 15942
+      },
+      {
+        "candidate_order": 160,
+        "sample_id": "source_160",
+        "source_seed": 16042
+      },
+      {
+        "candidate_order": 161,
+        "sample_id": "source_161",
+        "source_seed": 16142
+      },
+      {
+        "candidate_order": 162,
+        "sample_id": "source_162",
+        "source_seed": 16242
+      },
+      {
+        "candidate_order": 163,
+        "sample_id": "source_163",
+        "source_seed": 16342
+      },
+      {
+        "candidate_order": 164,
+        "sample_id": "source_164",
+        "source_seed": 16442
+      },
+      {
+        "candidate_order": 165,
+        "sample_id": "source_165",
+        "source_seed": 16542
+      },
+      {
+        "candidate_order": 166,
+        "sample_id": "source_166",
+        "source_seed": 16642
+      },
+      {
+        "candidate_order": 167,
+        "sample_id": "source_167",
+        "source_seed": 16742
+      },
+      {
+        "candidate_order": 168,
+        "sample_id": "source_168",
+        "source_seed": 16842
+      },
+      {
+        "candidate_order": 169,
+        "sample_id": "source_169",
+        "source_seed": 16942
+      },
+      {
+        "candidate_order": 170,
+        "sample_id": "source_170",
+        "source_seed": 17042
+      },
+      {
+        "candidate_order": 171,
+        "sample_id": "source_171",
+        "source_seed": 17142
+      },
+      {
+        "candidate_order": 172,
+        "sample_id": "source_172",
+        "source_seed": 17242
+      },
+      {
+        "candidate_order": 173,
+        "sample_id": "source_173",
+        "source_seed": 17342
+      },
+      {
+        "candidate_order": 174,
+        "sample_id": "source_174",
+        "source_seed": 17442
+      },
+      {
+        "candidate_order": 175,
+        "sample_id": "source_175",
+        "source_seed": 17542
+      },
+      {
+        "candidate_order": 176,
+        "sample_id": "source_176",
+        "source_seed": 17642
+      },
+      {
+        "candidate_order": 177,
+        "sample_id": "source_177",
+        "source_seed": 17742
+      },
+      {
+        "candidate_order": 178,
+        "sample_id": "source_178",
+        "source_seed": 17842
+      },
+      {
+        "candidate_order": 179,
+        "sample_id": "source_179",
+        "source_seed": 17942
+      },
+      {
+        "candidate_order": 180,
+        "sample_id": "source_180",
+        "source_seed": 18042
+      },
+      {
+        "candidate_order": 181,
+        "sample_id": "source_181",
+        "source_seed": 18142
+      },
+      {
+        "candidate_order": 182,
+        "sample_id": "source_182",
+        "source_seed": 18242
+      },
+      {
+        "candidate_order": 183,
+        "sample_id": "source_183",
+        "source_seed": 18342
+      },
+      {
+        "candidate_order": 184,
+        "sample_id": "source_184",
+        "source_seed": 18442
+      },
+      {
+        "candidate_order": 185,
+        "sample_id": "source_185",
+        "source_seed": 18542
+      },
+      {
+        "candidate_order": 186,
+        "sample_id": "source_186",
+        "source_seed": 18642
+      },
+      {
+        "candidate_order": 187,
+        "sample_id": "source_187",
+        "source_seed": 18742
+      },
+      {
+        "candidate_order": 188,
+        "sample_id": "source_188",
+        "source_seed": 18842
+      },
+      {
+        "candidate_order": 189,
+        "sample_id": "source_189",
+        "source_seed": 18942
+      },
+      {
+        "candidate_order": 190,
+        "sample_id": "source_190",
+        "source_seed": 19042
+      },
+      {
+        "candidate_order": 191,
+        "sample_id": "source_191",
+        "source_seed": 19142
+      },
+      {
+        "candidate_order": 192,
+        "sample_id": "source_192",
+        "source_seed": 19242
+      },
+      {
+        "candidate_order": 193,
+        "sample_id": "source_193",
+        "source_seed": 19342
+      },
+      {
+        "candidate_order": 194,
+        "sample_id": "source_194",
+        "source_seed": 19442
+      },
+      {
+        "candidate_order": 195,
+        "sample_id": "source_195",
+        "source_seed": 19542
+      },
+      {
+        "candidate_order": 196,
+        "sample_id": "source_196",
+        "source_seed": 19642
+      },
+      {
+        "candidate_order": 197,
+        "sample_id": "source_197",
+        "source_seed": 19742
+      },
+      {
+        "candidate_order": 198,
+        "sample_id": "source_198",
+        "source_seed": 19842
+      },
+      {
+        "candidate_order": 199,
+        "sample_id": "source_199",
+        "source_seed": 19942
+      }
+    ],
+    "source_rule": "independent CPU torch.Generator().manual_seed(42+100*i); float32 standard Gaussian; paired identical tensor",
+    "stage15_parameters": {
+      "alpha": 0.25,
+      "asset_records": {
+        "boreholes": {
+          "path": "samples/jupyter-demo/cond_generation_0/boreholes.pt",
+          "sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41",
+          "size_bytes": 1050167
+        },
+        "checkpoint": {
+          "path": "demo_model/conditional-weights.ckpt",
+          "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+          "size_bytes": 849415038
+        },
+        "controller_source": {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/probability_sampling.py",
+          "sha256": "2aa6119fa8517176eb0d1b8f6892ebdd14cc3051a43dd8e030099150f69bec9f",
+          "size_bytes": 22403
+        },
+        "external_property_manifest": {
+          "path": "experiments/stage15_binary_seismic_consensus/trace_boundary/property_assets_cond_generation_0_v4/manifest.json",
+          "sha256": "5a63616e1a80f4136c3e9c7b630d07bb65c6cb398ff81b8e585cc3dee4c0fb6e",
+          "size_bytes": 2418
+        },
+        "property_config": {
+          "path": "experiments/stage15_binary_seismic_consensus/configs/binary_trace_property_indicator_v1.json",
+          "sha256": "362b5f33a1376d00209ee4376754e456614f6549419d90025c2c0851045d7864",
+          "size_bytes": 542
+        },
+        "property_evaluation_source": {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/property_evaluation.py",
+          "sha256": "feb1c32d13c55fac28cc03d146fc15d73c027a7f101a403526601fbfea5f32cb",
+          "size_bytes": 14613
+        },
+        "property_sampling_source": {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/property_sampling.py",
+          "sha256": "ba2560c0052774de82cd4fadc3afab6d759e30c5223f57848b518f940bee566d",
+          "size_bytes": 12060
+        },
+        "property_volume_source": {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/property_volume.py",
+          "sha256": "9fd3ebebf3ca944102216bec2ed6cc1aa179bd82cc70aa8a6cb2b20cac52125d",
+          "size_bytes": 19260
+        },
+        "runner_source": {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage2/run_property_guidance.py",
+          "sha256": "f97854357547dc50bc29219709e3b99123a951a37ff9092448b8c803218abf08",
+          "size_bytes": 38332
+        },
+        "runtime_source": {
+          "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/inference_runtime.py",
+          "sha256": "246ba9cc8b8e80ce86d7e9d059010d7b030b87e793d911cef8e8d3478786e838",
+          "size_bytes": 12552
+        },
+        "truth_model": {
+          "path": "samples/jupyter-demo/cond_generation_0/true_model.pt",
+          "sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3",
+          "size_bytes": 1050238
+        }
+      },
+      "baseline_dir": "experiments/stage15_binary_seismic_consensus/trace_boundary/flow_property_seed42_v4/baseline",
+      "boreholes": "samples/jupyter-demo/cond_generation_0/boreholes.pt",
+      "boreholes_sha256": "1e2592ce0e820569d0b3fa13eaa011c3bc70c312a19e5eab878c428facdbdb41",
+      "checkpoint_sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+      "ckpt_path": "demo_model/conditional-weights.ckpt",
+      "condition_projection": "clean_embedding_before_first_step_and_after_every_step_v1",
+      "conditioning_report": {
+        "borehole_columns_hitting_target": 2,
+        "borehole_label_counts": {
+          "-1": 257626,
+          "1": 94,
+          "2": 4137,
+          "3": 34,
+          "4": 179,
+          "5": 52,
+          "6": 9,
+          "9": 13
+        },
+        "dtype": "torch.int64",
+        "effective_condition_fraction": 0.2636222839355469,
+        "effective_condition_voxels": 69107,
+        "full_borehole_count": 9,
+        "full_borehole_xy": [
+          [
+            8,
+            46
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            10,
+            24
+          ],
+          [
+            27,
+            17
+          ],
+          [
+            35,
+            26
+          ],
+          [
+            39,
+            59
+          ],
+          [
+            44,
+            60
+          ],
+          [
+            48,
+            6
+          ],
+          [
+            57,
+            32
+          ]
+        ],
+        "nonair_borehole_truth_mismatches": 0,
+        "nonair_observed_fraction": 0.01723480224609375,
+        "nonair_observed_voxels": 4518,
+        "shape": [
+          1,
+          1,
+          64,
+          64,
+          64
+        ],
+        "target_conditioned_fraction": 0.0014495985727029437,
+        "target_conditioned_voxels": 13,
+        "target_fraction": 0.034210205078125,
+        "target_hits_in_full_boreholes": 13,
+        "target_label": 9,
+        "target_voxels": 8968,
+        "truth_air_voxels": 64589,
+        "truth_label_counts": {
+          "-1": 64589,
+          "1": 45273,
+          "13": 15,
+          "2": 24520,
+          "3": 14533,
+          "4": 73801,
+          "5": 18902,
+          "6": 11543,
+          "9": 8968
+        },
+        "unconstrained_subsurface_voxels": 193037,
+        "valid_label_range": [
+          -1,
+          13
+        ]
+      },
+      "confidence_mode": "external_posterior_spread_v1",
+      "controller_source_sha256": "2aa6119fa8517176eb0d1b8f6892ebdd14cc3051a43dd8e030099150f69bec9f",
+      "description": "Truth-blind full-trace binary seismic inversion property bridge; synthetic inverse-crime and not measured geophysics.",
+      "device": "cuda",
+      "ema_applied": true,
+      "external_property_dir": "experiments/stage15_binary_seismic_consensus/trace_boundary/property_assets_cond_generation_0_v4",
+      "external_property_manifest_schema": "stage15_binary_trace_property_assets_v1",
+      "external_property_manifest_sha256": "5a63616e1a80f4136c3e9c7b630d07bb65c6cb398ff81b8e585cc3dee4c0fb6e",
+      "final_expected_properties_sha256": "1b2518b70c787e8d758aa8dc73e3c68dade541e1a6eb4bcde142c3ff4b51df23",
+      "grad_clip_norm": 1.0,
+      "guidance_gradient_reference_policy": "first_nonzero_active_used_gradient_norm_per_sample_v1",
+      "guidance_scaling_mode": "reference_norm_relative_v2",
+      "guidance_schedule": "windowed_sine",
+      "guidance_start": 0.25,
+      "initial_noise_policy": "single_cpu_generator_sequential_samples_v1",
+      "initial_noise_sha256": [
+        "5b3e3cc13e70f1477679559ea82781e02fc58130469ff39d5c71b5db647f9eea"
+      ],
+      "integrator": "fixed_euler_midpoint_v1",
+      "max_guidance_ratio": 0.25,
+      "max_post_projection_condition_violations": 0,
+      "model_load_report": {
+        "checkpoint": {
+          "path": "demo_model/conditional-weights.ckpt",
+          "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+          "size_bytes": 849415038
+        },
+        "checkpoint_epoch": 1651,
+        "checkpoint_global_step": 8376,
+        "ema_applied": true,
+        "ema_entry_count": 411,
+        "ema_excluded_frozen_parameters": [
+          "embedding.weight"
+        ],
+        "ema_missing_trainable": [],
+        "ema_shape_mismatches": [],
+        "ema_unexpected": [],
+        "frozen_parameters": [
+          "embedding.weight"
+        ],
+        "model_parameter_count": 412,
+        "trainable_parameter_count": 411,
+        "weight_source": "ema"
+      },
+      "model_weight_source": "ema",
+      "n_samples": 1,
+      "n_steps": 32,
+      "output_dir": "experiments/stage15_binary_seismic_consensus/trace_boundary/flow_property_seed42_v4/guided",
+      "pairing_validation": {
+        "baseline_config": "experiments/stage15_binary_seismic_consensus/trace_boundary/flow_property_seed42_v4/baseline/config.json",
+        "paired": true,
+        "reason": "strict Phase-2 property assets, noise, and sampler settings match"
+      },
+      "phase2_protocol_version": 1,
+      "property_channel_names": [
+        "normalized_binary_impedance"
+      ],
+      "property_channel_units": [
+        "binary_endpoint_unit"
+      ],
+      "property_channel_weights": [
+        1.0
+      ],
+      "property_codebook_diagnostics": {
+        "distance_definition": "channel_range_normalized_weighted_euclidean_v1",
+        "duplicate_property_groups": [
+          [
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            13
+          ]
+        ],
+        "target_exact_property_group": [
+          9
+        ],
+        "target_nearest_range_normalized_distance": 1.0,
+        "target_nearest_raw_labels": [
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12,
+          13
+        ],
+        "target_property_values": [
+          1.0
+        ],
+        "target_raw_label": 9,
+        "unique_property_vectors": 2
+      },
+      "property_confidence_sha256": "fb9fc11d6a99768ec1e15c3b09d171e00b4a0b7cedbd25792066ca6b9b5003ed",
+      "property_config": "experiments/stage15_binary_seismic_consensus/configs/binary_trace_property_indicator_v1.json",
+      "property_config_schema": "full_lithology_property_channels_v1",
+      "property_config_sha256": "362b5f33a1376d00209ee4376754e456614f6549419d90025c2c0851045d7864",
+      "property_evaluation_source_sha256": "feb1c32d13c55fac28cc03d146fc15d73c027a7f101a403526601fbfea5f32cb",
+      "property_loss_mode": "matched_multiscale_normalized_mse_v1",
+      "property_metadata": {
+        "channel_names": [
+          "normalized_binary_impedance"
+        ],
+        "channel_units": [
+          "binary_endpoint_unit"
+        ],
+        "channel_weights": [
+          1.0
+        ],
+        "description": "Normalized binary acoustic endpoint: label9 is 1, every other category including air is 0.",
+        "is_measured_geophysics": false,
+        "num_categories": 15,
+        "property_table_sha256": "5fe78122fd4cf2e02f294713530fbed73ff753036dfbf46495a473d778d67325",
+        "raw_label_range": [
+          -1,
+          13
+        ],
+        "schema": "full_lithology_property_channels_v1",
+        "truth_derived": true
+      },
+      "property_sampler_version": "projected_fixed_euler_property_v1",
+      "property_sampling_source_sha256": "ba2560c0052774de82cd4fadc3afab6d759e30c5223f57848b518f940bee566d",
+      "property_scale_weights": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "property_sigmas": [
+        0.0,
+        1.5,
+        3.0
+      ],
+      "property_table_sha256": "5fe78122fd4cf2e02f294713530fbed73ff753036dfbf46495a473d778d67325",
+      "property_volume_source_sha256": "9fd3ebebf3ca944102216bec2ed6cc1aa179bd82cc70aa8a6cb2b20cac52125d",
+      "protocol_version": 1,
+      "run_status": "completed",
+      "runner_source_sha256": "f97854357547dc50bc29219709e3b99123a951a37ff9092448b8c803218abf08",
+      "runtime_source_sha256": "246ba9cc8b8e80ce86d7e9d059010d7b030b87e793d911cef8e8d3478786e838",
+      "sample_sha256": [
+        "f628dacac39d1ae7696d4951ae8cb151bc94cb07582b5e89f6ce49d3be83df19"
+      ],
+      "samples_dir": "samples/jupyter-demo/cond_generation_0",
+      "samples_written": 1,
+      "seed": 42,
+      "stage": "stage15_binary_trace_property_bridge_v1",
+      "target_label": 9,
+      "target_mask_sha256": "b26b14b6b8f5e33069f77df32dc74a2fbc77c6a816f571969a7e017bc59f9594",
+      "target_properties_sha256": "f28c078603c5f8bb0c9ea250dd90c83977a7571f14078535a17606d447225022",
+      "target_roi_mask_sha256": "8f8d811d2c090fd4b6fcf80dad800e4684b9f9184749058c6b4b7253d57e4945",
+      "target_roi_radius": 6,
+      "tau_end": 0.1,
+      "tau_schedule": "cosine",
+      "tau_start": 0.5,
+      "truth_model": "samples/jupyter-demo/cond_generation_0/true_model.pt",
+      "truth_model_sha256": "a14f5a740a3ea6af8c2eec8507d79fe3a94f1b704626f0478a9e526f33b71cb3"
+    },
+    "stage15_transfer": "unchanged v4 positive-endpoint/confidence mapping on shared Stage19R TEST assets",
+    "stage19_parameters": {
+      "adapter_scale": 1.0,
+      "arms": [
+        "FLOW_ONLY",
+        "STAGE18_CONTINUOUS_TARGET",
+        "ADAPTER_CORRECT",
+        "ADAPTER_ZERO",
+        "ADAPTER_WRONG_CASE"
+      ],
+      "integrator": "fixed_euler_midpoint",
+      "max_residual_ratio": 0.25,
+      "n_steps": 32,
+      "parameter_sweep": false,
+      "schema": "stage19_inference_v1",
+      "source_seeds": [
+        42,
+        142,
+        242
+      ],
+      "stage18": {
+        "alpha": 0.25,
+        "confidence": "score_times_free_subsurface",
+        "grad_clip_norm": 1.0,
+        "guidance_scaling_mode": "reference_norm_relative_v2",
+        "guidance_schedule": "windowed_sine",
+        "guidance_start": 0.25,
+        "max_guidance_ratio": 0.25,
+        "property_loss_mode": "matched_multiscale_normalized_mse_v1",
+        "property_scale_weights": [
+          0.5,
+          0.3,
+          0.2
+        ],
+        "property_sigmas": [
+          0.0,
+          1.5,
+          3.0
+        ],
+        "target_properties": "score",
+        "tau_end": 0.1,
+        "tau_schedule": "cosine",
+        "tau_start": 0.5
+      },
+      "status": "frozen_before_run",
+      "target_label": 9,
+      "truth_loaded_by_runner": false,
+      "wrong_case_mapping": "next_test_case_cyclic"
+    },
+    "stage19_uses_pretrained_evidence_adapter": true,
+    "training_performed_by_this_run": false,
+    "truth_loaded_by_sampling": false
+  },
+  "spacing": [
+    100.0,
+    100.0,
+    50.0
+  ]
+}

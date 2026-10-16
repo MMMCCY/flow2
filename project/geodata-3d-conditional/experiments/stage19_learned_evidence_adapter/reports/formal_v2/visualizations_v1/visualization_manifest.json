@@ -1,0 +1,349 @@
+{
+  "case_figure_count": 12,
+  "case_figures": [
+    {
+      "adapter_correct": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case001/seed_42/ADAPTER_CORRECT/decoded_geology.pt",
+        "sha256": "e8154e86962c109510d62f7e22b4eff172ceb02ab545f4132d2e3a9d4d29d8f6",
+        "size_bytes": 2098849
+      },
+      "adapter_target_iou": 0.15382736156351792,
+      "case_id": "stage19_test_case001",
+      "figure": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/reports/formal_v2/visualizations_v1/truth_flow_adapter_3d.png",
+        "sha256": "f68e3e9e8fd73fb020f553f13481eb1e7e84205b7945eb5d57befc1625650c2a",
+        "size_bytes": 1620105
+      },
+      "flow_only": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case001/seed_42/FLOW_ONLY/decoded_geology.pt",
+        "sha256": "6100e6658317f2b4da8ee887e5e8185e2448f439b0f0ceaeb41ddfef24bdd6fb",
+        "size_bytes": 2098849
+      },
+      "flow_target_iou": 0.04495003357427815,
+      "seed": 42,
+      "truth": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_test_case001/truth/true_model.pt",
+        "sha256": "4d228ce092541e9307f3db6678d5902960236b0cd2117ef2d93c814efb5331c4",
+        "size_bytes": 1050174
+      }
+    },
+    {
+      "adapter_correct": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case002/seed_42/ADAPTER_CORRECT/decoded_geology.pt",
+        "sha256": "441a079b4ac69369820a63d0402145dd2efb7fd77c7335cbbc9e10205a7bdeca",
+        "size_bytes": 2098849
+      },
+      "adapter_target_iou": 0.38190227755978867,
+      "case_id": "stage19_test_case002",
+      "figure": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/reports/formal_v2/visualizations_v1/truth_flow_adapter_stage19_test_case002_seed42_3d.png",
+        "sha256": "394c25ebd6bbfbe451ac8c4d95e4c9ba257e751f9b5703308b296a08ab05c1a9",
+        "size_bytes": 2120217
+      },
+      "flow_only": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case002/seed_42/FLOW_ONLY/decoded_geology.pt",
+        "sha256": "7f080694285b4996161cc734bd195f86e433bbcc39b62aee9d7b5da16da00d94",
+        "size_bytes": 2098849
+      },
+      "flow_target_iou": 0.22688553682342502,
+      "seed": 42,
+      "truth": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_test_case002/truth/true_model.pt",
+        "sha256": "3262398199adb8320dcf9371cf1279ca7b07aafcfa704d48ae6cc1be293edcc6",
+        "size_bytes": 1050174
+      }
+    },
+    {
+      "adapter_correct": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case003/seed_42/ADAPTER_CORRECT/decoded_geology.pt",
+        "sha256": "d7e283d19d4b88190bbe4a111af9c79b19090e7cc4f99649e785d29d95b2b803",
+        "size_bytes": 2098849
+      },
+      "adapter_target_iou": 0.20636663007683864,
+      "case_id": "stage19_test_case003",
+      "figure": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/reports/formal_v2/visualizations_v1/truth_flow_adapter_stage19_test_case003_seed42_3d.png",
+        "sha256": "0b8234aca41c1ea769e75b862413425dfa1cba0aa72a1112829a0fb07cc44d24",
+        "size_bytes": 1321574
+      },
+      "flow_only": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case003/seed_42/FLOW_ONLY/decoded_geology.pt",
+        "sha256": "9ee5287ee821dd3b50818b9b03af6913d8c3ab55cbe2cefbc5b0f95427e83fb1",
+        "size_bytes": 2098849
+      },
+      "flow_target_iou": 0.05469469804841277,
+      "seed": 42,
+      "truth": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_test_case003/truth/true_model.pt",
+        "sha256": "74e79caabee0b578a48a491d7648690686189d78adbb0531e53b7cabdad56f03",
+        "size_bytes": 1050174
+      }
+    },
+    {
+      "adapter_correct": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case004/seed_42/ADAPTER_CORRECT/decoded_geology.pt",
+        "sha256": "72635aee8a5dad10fa3ab25c19ef5f47ab2bb00e08bfbdd8271be5227971e4bf",
+        "size_bytes": 2098849
+      },
+      "adapter_target_iou": 0.6798255341169512,
+      "case_id": "stage19_test_case004",
+      "figure": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/reports/formal_v2/visualizations_v1/truth_flow_adapter_stage19_test_case004_seed42_3d.png",
+        "sha256": "ca9cdc5649374bc98bb45f856c0de24ad5e7e6ac8592c78053af245f62a24c8e",
+        "size_bytes": 1254203
+      },
+      "flow_only": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case004/seed_42/FLOW_ONLY/decoded_geology.pt",
+        "sha256": "0e5907db22deb0a42979c7da9436f6dc236bd37a1229df735d74313f3b8a63d3",
+        "size_bytes": 2098849
+      },
+      "flow_target_iou": 0.4124837576399249,
+      "seed": 42,
+      "truth": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_test_case004/truth/true_model.pt",
+        "sha256": "675fad4c50e4e79776771eb16e2733a3a7115c40b1114c20c8f02291d7edca3e",
+        "size_bytes": 1050174
+      }
+    },
+    {
+      "adapter_correct": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case005/seed_42/ADAPTER_CORRECT/decoded_geology.pt",
+        "sha256": "17bd22c6ba1297d6c3a71a4a321bf27d25a6e5e9d41df1a3ae3487cae4dd4190",
+        "size_bytes": 2098849
+      },
+      "adapter_target_iou": 0.22226126062820603,
+      "case_id": "stage19_test_case005",
+      "figure": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/reports/formal_v2/visualizations_v1/truth_flow_adapter_stage19_test_case005_seed42_3d.png",
+        "sha256": "46a784acf1ed45363a5303676a2c98ee9bf91eb6b32526f6c8e8e3a97315d96a",
+        "size_bytes": 1779757
+      },
+      "flow_only": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case005/seed_42/FLOW_ONLY/decoded_geology.pt",
+        "sha256": "d9cbfd388fa39a7b2e5cc5c407d9058a2dc7b5f2d26f029142ea8ac7bbbe6678",
+        "size_bytes": 2098849
+      },
+      "flow_target_iou": 0.04553786229808684,
+      "seed": 42,
+      "truth": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_test_case005/truth/true_model.pt",
+        "sha256": "499fa04fa0b2254a83d65bfdac887658bb0a050d05cf2bb11e619744aa701789",
+        "size_bytes": 1050174
+      }
+    },
+    {
+      "adapter_correct": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case006/seed_42/ADAPTER_CORRECT/decoded_geology.pt",
+        "sha256": "6a203330adf1e2eb5d3270aeae6d05fd2b0ddac5dce5d448a7b316064e3cfe48",
+        "size_bytes": 2098849
+      },
+      "adapter_target_iou": 0.6325836664081609,
+      "case_id": "stage19_test_case006",
+      "figure": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/reports/formal_v2/visualizations_v1/truth_flow_adapter_stage19_test_case006_seed42_3d.png",
+        "sha256": "dc31118cc5bcca1240e0c834bd748ceeadaef39350cee2f5efdebb4433a81964",
+        "size_bytes": 1655863
+      },
+      "flow_only": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case006/seed_42/FLOW_ONLY/decoded_geology.pt",
+        "sha256": "7388c1080c03b7e83a2a46181f1de27c48f720432e687b3033bb8ed4f7ad8eef",
+        "size_bytes": 2098849
+      },
+      "flow_target_iou": 0.21724780616603245,
+      "seed": 42,
+      "truth": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_test_case006/truth/true_model.pt",
+        "sha256": "0f044859318a2019a7f5e646a330fa37abe6956c86963e2982864a92a26117de",
+        "size_bytes": 1050174
+      }
+    },
+    {
+      "adapter_correct": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case007/seed_42/ADAPTER_CORRECT/decoded_geology.pt",
+        "sha256": "7354e6f3ec47b0de926d9d74902b2bbdfcacb3739702668517d2b09c82cf28ee",
+        "size_bytes": 2098849
+      },
+      "adapter_target_iou": 0.3783192752264917,
+      "case_id": "stage19_test_case007",
+      "figure": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/reports/formal_v2/visualizations_v1/truth_flow_adapter_stage19_test_case007_seed42_3d.png",
+        "sha256": "fac354b1d3569747d303fb021465a4dfe1a44b2654f570eca2a61e264bcc225a",
+        "size_bytes": 1165655
+      },
+      "flow_only": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case007/seed_42/FLOW_ONLY/decoded_geology.pt",
+        "sha256": "5858614381d4db2d6a9374d86502754ead871fc0aedbefc9f0234543f2f5df58",
+        "size_bytes": 2098849
+      },
+      "flow_target_iou": 0.0862216376192042,
+      "seed": 42,
+      "truth": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_test_case007/truth/true_model.pt",
+        "sha256": "751fc3c1404873b6cabe4a0dc210f64e75db547918c5f0e6fc10353fcd8d5871",
+        "size_bytes": 1050174
+      }
+    },
+    {
+      "adapter_correct": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case008/seed_42/ADAPTER_CORRECT/decoded_geology.pt",
+        "sha256": "23df50867fb9ba3bfa8530cb7e5060ba8349ca2e147daa9ff415099562a9a2ff",
+        "size_bytes": 2098849
+      },
+      "adapter_target_iou": 0.5272044506258693,
+      "case_id": "stage19_test_case008",
+      "figure": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/reports/formal_v2/visualizations_v1/truth_flow_adapter_stage19_test_case008_seed42_3d.png",
+        "sha256": "e91347a31f1d4723e488704e1888b333f784d70f8d1c7a1671a472333e099fd1",
+        "size_bytes": 1402950
+      },
+      "flow_only": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case008/seed_42/FLOW_ONLY/decoded_geology.pt",
+        "sha256": "950553e38d222a29f22e30a98091ea2abe0de4780b801bbf48b71ad5f5188eef",
+        "size_bytes": 2098849
+      },
+      "flow_target_iou": 0.4443881685575365,
+      "seed": 42,
+      "truth": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_test_case008/truth/true_model.pt",
+        "sha256": "a84020acdaac1bf27719b19b4ec5c5a452bd8f94446d45d19f8b561509cc9f56",
+        "size_bytes": 1050174
+      }
+    },
+    {
+      "adapter_correct": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case009/seed_42/ADAPTER_CORRECT/decoded_geology.pt",
+        "sha256": "e443cc82857385cee69770b157cb1cf6f983c712e480e7fb78aadef28fe89551",
+        "size_bytes": 2098849
+      },
+      "adapter_target_iou": 0.5854035854035854,
+      "case_id": "stage19_test_case009",
+      "figure": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/reports/formal_v2/visualizations_v1/truth_flow_adapter_stage19_test_case009_seed42_3d.png",
+        "sha256": "080a743c193218cc7cd702ac2ece578c646d8845938e4ee59aff9483f5abce2c",
+        "size_bytes": 860043
+      },
+      "flow_only": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case009/seed_42/FLOW_ONLY/decoded_geology.pt",
+        "sha256": "49f4db333ae6b1c13b61f4888fcafe09018517db334c4ad53409b90e890cb7da",
+        "size_bytes": 2098849
+      },
+      "flow_target_iou": 0.29186968567880006,
+      "seed": 42,
+      "truth": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_test_case009/truth/true_model.pt",
+        "sha256": "2b4a091b2785ed46d6324a8fdefd86ced134eecda7d64e33338b4cabc56149d5",
+        "size_bytes": 1050174
+      }
+    },
+    {
+      "adapter_correct": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case010/seed_42/ADAPTER_CORRECT/decoded_geology.pt",
+        "sha256": "601cb376a4f05c2e56f4887825614addc0cc79d22c32a7db0c439b29f8245a1c",
+        "size_bytes": 2098849
+      },
+      "adapter_target_iou": 0.380237972064149,
+      "case_id": "stage19_test_case010",
+      "figure": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/reports/formal_v2/visualizations_v1/truth_flow_adapter_stage19_test_case010_seed42_3d.png",
+        "sha256": "f1c3fcee216849f54b40cb1bfd32e3c8721babf8a1467bc248036fe4d10cd5ef",
+        "size_bytes": 1618317
+      },
+      "flow_only": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case010/seed_42/FLOW_ONLY/decoded_geology.pt",
+        "sha256": "0ee997a68f9fd0a4b83ce6f0e48dff48fbd6c450eb52f8d299bb9d2aa947a98b",
+        "size_bytes": 2098849
+      },
+      "flow_target_iou": 0.09230506739464256,
+      "seed": 42,
+      "truth": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_test_case010/truth/true_model.pt",
+        "sha256": "afeffbc98f7f47e8038957cdcb036313b0a8c388671737b0182558ea38036f8e",
+        "size_bytes": 1050174
+      }
+    },
+    {
+      "adapter_correct": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case011/seed_42/ADAPTER_CORRECT/decoded_geology.pt",
+        "sha256": "5f253bbade677c0d125e043d8ac5149450a1806ad3098386284430c400e7fccf",
+        "size_bytes": 2098849
+      },
+      "adapter_target_iou": 0.3644974216944899,
+      "case_id": "stage19_test_case011",
+      "figure": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/reports/formal_v2/visualizations_v1/truth_flow_adapter_stage19_test_case011_seed42_3d.png",
+        "sha256": "448d33ac0041e673ea43d7e0534cd31755cf47370ad4fa7957491063de077d08",
+        "size_bytes": 2383619
+      },
+      "flow_only": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case011/seed_42/FLOW_ONLY/decoded_geology.pt",
+        "sha256": "629c7c447b70ef1210d5f3ba6c81146d4e8986f5acb1fc4529539e385f903594",
+        "size_bytes": 2098849
+      },
+      "flow_target_iou": 0.24596735362095531,
+      "seed": 42,
+      "truth": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_test_case011/truth/true_model.pt",
+        "sha256": "bf066d3c7005767a3feb614a675a013df067650a7f0f410834955b96975cb033",
+        "size_bytes": 1050174
+      }
+    },
+    {
+      "adapter_correct": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case012/seed_42/ADAPTER_CORRECT/decoded_geology.pt",
+        "sha256": "366d333c38a3f04f54b67de71bf00c26535b688eed3864a96aed342499744ee2",
+        "size_bytes": 2098849
+      },
+      "adapter_target_iou": 0.39939843162530886,
+      "case_id": "stage19_test_case012",
+      "figure": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/reports/formal_v2/visualizations_v1/truth_flow_adapter_stage19_test_case012_seed42_3d.png",
+        "sha256": "ceaecc29332780db1228251955feb2584025e00986bae6b9c63e8a1b1f624426",
+        "size_bytes": 1087909
+      },
+      "flow_only": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/stage19_test_case012/seed_42/FLOW_ONLY/decoded_geology.pt",
+        "sha256": "b97c8b21ab4ea950265406cd7ee3f94d76f01d5f4f58ce7c7cfa9e76e1d9a31e",
+        "size_bytes": 2098849
+      },
+      "flow_target_iou": 0.060015961691939346,
+      "seed": 42,
+      "truth": {
+        "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/cohort_v2/cases/stage19_test_case012/truth/true_model.pt",
+        "sha256": "9313bac059185b186b237850c0563792dca56989d700672f6ebdef8ecd2a929f",
+        "size_bytes": 1050174
+      }
+    }
+  ],
+  "evaluation_registry": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/evidence_v2/evidence_registry.json",
+    "sha256": "312d1c2a71e4f9f468f790a709cfd8106ee5ba717d6d643ef5442c943547861a",
+    "size_bytes": 411580
+  },
+  "five_arm_figure": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/reports/formal_v2/visualizations_v1/five_arm_target_comparison_3d.png",
+    "sha256": "5b48301359ebdd74040f20083d64e55e5fa57f893393bee2df5ae59a701baa8d",
+    "size_bytes": 2414195
+  },
+  "formal_inference_truth_loaded_by_runner": false,
+  "formal_run_manifest": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/formal/inference_v2/run_manifest.json",
+    "sha256": "86e00617d674f5aa449e7c83b8d7ef9b10e410197f9882b96de72cb5f9babb45",
+    "size_bytes": 4840
+  },
+  "generator_source": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage19/visualize_formal_results.py",
+    "sha256": "534a9f91270f8b475ba73fb8abd96b94e25dee371661ad38478582e5791d9c92",
+    "size_bytes": 9082
+  },
+  "primary_case_id": "stage19_test_case001",
+  "run_status": "completed",
+  "sample_metrics": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage19_learned_evidence_adapter/reports/formal_v2/sample_metrics.csv",
+    "sha256": "2dd4d651759c35f13d7fb4af0d287f4e40f78e93a5ef9368465d022280c6735e",
+    "size_bytes": 115586
+  },
+  "schema": "stage19r_formal_visualization_v1",
+  "selection_policy": "lexicographically_first_test_case_and_preregistered_first_source_seed_for_primary_figure; no metric-based selection",
+  "source_seed": 42,
+  "truth_loaded_for_retrospective_visualization_only": true
+}

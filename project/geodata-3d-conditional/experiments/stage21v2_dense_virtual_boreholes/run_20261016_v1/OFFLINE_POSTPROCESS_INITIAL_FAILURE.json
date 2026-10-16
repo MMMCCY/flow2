@@ -1,0 +1,8 @@
+{
+  "status": "retained_offline_reporting_failure",
+  "error": "FileNotFoundError: supplemental script wildcard import shadowed ROOT with experiment root",
+  "fix": "Use unique RUN_ROOT variable for immutable run path",
+  "additional_model_calls": 0,
+  "scientific_predictions_changed": false,
+  "original_frozen_sampling_sources_changed": false
+}

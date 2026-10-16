@@ -1,0 +1,38 @@
+{
+  "binding": {
+    "mode": "formal",
+    "protocol_sha256": "f6a3339fe7b1315e9dedd1cd5999fd8b0284018133d261677d750f2cb13cf3c7",
+    "registry_file_sha256": "95c740dd0fa0835846f913860803d5e0fb411a9a82693ba4ee0d0348107c0814",
+    "source_sha256": {
+      "project/geodata-3d-conditional/boreholes.py": "b0656303987fef04241a70a1df1a6ca4c2897d6c1e4de6470f492487fc038630",
+      "project/geodata-3d-conditional/callbacks.py": "2fda1d0e3ea701664b509e1b0347561155364fc31e9c046b980a4287e7227ffa",
+      "project/geodata-3d-conditional/guidance/dflow.py": "62f97242c9209417c6bd7dec239bfa15614edd2a4c2194f012bd7b9a62673440",
+      "project/geodata-3d-conditional/guidance/generator_posterior.py": "9faf5d1a27146992e30678e7f83bc0d6e4bbf6181406546f6dc981dca798fc28",
+      "project/geodata-3d-conditional/guidance/probability_sampling.py": "2aa6119fa8517176eb0d1b8f6892ebdd14cc3051a43dd8e030099150f69bec9f",
+      "project/geodata-3d-conditional/guidance/probability_volume.py": "01b70740d84994877996eb6c0e15ddd7d962731d984c096781371f0bea4269a3",
+      "project/geodata-3d-conditional/inference_runtime.py": "246ba9cc8b8e80ce86d7e9d059010d7b030b87e793d911cef8e8d3478786e838",
+      "project/geodata-3d-conditional/model_train_sh_inference_cond.py": "36d0dc613d8860677f137a2f1d681ebcc50829a6d90f5547c6eac3fd12a977c2",
+      "project/geodata-3d-conditional/scripts/stage21/common.py": "2c954bd90fcacccae975b2aab1f0053f272c82e40861514d03cfd15c90933aac",
+      "project/geodata-3d-conditional/scripts/stage21/run.py": "7203c2de9963e7d8bf93faa78414fd630fc6a973c7d0b1236ee5cf2133032f12",
+      "project/geodata-3d-conditional/utils.py": "9c86f93f4daf85b61e559f5d10e7877c4b6956ccc638a2d3977add6a029199f0",
+      "src/flowtrain/__init__.py": "a04565ca80195ef3cb56ebdbcf003df94935686ca7b5015fba3cfd86b409dc72",
+      "src/flowtrain/dataloaders/__init__.py": "ec8fd0ca57517fee6ea7caf3cae94d600caacdc5e7852caa1b28464532f69655",
+      "src/flowtrain/dataloaders/practicedata.py": "461b2b1e4386895550c357863ffbac8f395a3cc9eae8e53daa79d2cf00ded0fd",
+      "src/flowtrain/interpolation/__init__.py": "5f8aa7f1485ae50313e01c44e5bd183add74d72116fbe1f5fb9a49e9188afcb5",
+      "src/flowtrain/interpolation/interpolation.py": "42a378b8c84ae7cdbf65b2560e12a6dca255b738730918273d7946064761b116",
+      "src/flowtrain/models/__init__.py": "f08fcd07f362b716ae3d09b4a1612ff068f281ebde153e4d4f7a0f81b6abcae2",
+      "src/flowtrain/models/persistence.py": "979e5bbbff9673c05bdf49826d02e9e7609e8e63e4c9f571146bb9a7bf2f1516",
+      "src/flowtrain/models/unet_2d.py": "de51dc8c5565d77a8f1835f57118b67703e5e824a1486cefbceb4e0d7621833b",
+      "src/flowtrain/models/unet_attn_3d.py": "65c42ebd9b80196148b929f8e42da1917195e5367d4795425759b55ae6a1b625",
+      "src/flowtrain/models/unet_attn_3d_cond.py": "193f345ef7d4f3586720805d8089d32e3cb7853b2359160499d1909313bbe003",
+      "src/flowtrain/models/unet_attn_3d_cond_v2.py": "64cd4d8f46947e2f6add988b4482ef3954d139b6c6b17f7cd9c5070d29ee8894",
+      "src/flowtrain/models/unet_attn_3d_cond_v3.py": "7a5dfe0af0916b88e54d45c37fd461b9a8266d20c91e0126c71dee5e90c40d6c",
+      "src/flowtrain/solvers/__init__.py": "646a8911d607be3f48404463a684767a891987f4723cca7550ad702bf3e4b257",
+      "src/flowtrain/solvers/solvers.py": "c4a008cc03144252ef46642e861d6c42fbe00cc30969f3a30128bab9d0e27025",
+      "src/flowtrain/utils/__init__.py": "a86b00948ed30bd6c73a7dac45ecc9f79008db661deddbfc6efee85458fa1e88",
+      "src/flowtrain/utils/plotting.py": "e00198cd6a98e23fbce10882f108d0e9e85f9ee38ca3034b4bd046508337fa00"
+    }
+  },
+  "records_sha256": "c8d8e1be677d529e3a3ea317be34329bb2a21784d162e7680e14e1f227288c82",
+  "state_sha256": "e3b481c36a1d2fd205fdaee34e8fe205050300f99c897543fed2fee2dfb869e9"
+}

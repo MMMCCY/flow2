@@ -1,5 +1,133 @@
 # Development handoff
 
+## Stage21 step 1 — accurate extra full wells (2026-10-14)
+
+The user explicitly authorized only step 1, including all 45 formal outputs,
+after a read-only SSH/source/asset review of the supplied Stage21 prompt.
+The complete route remains: accurate wells -> geophysical full-sequence
+inference/error/uncertainty -> native Flow virtual-well validation. Steps 2/3,
+new physics, erroneous-well experiments, adapters and new training were not run.
+
+Development and execution used SSH `labrs-codex` on the RTX4090D with the
+repository `.venv`. HEAD is `b780b9ae3650b426400d3258b8e33f10a349bf6c`;
+existing user modifications and Stage1–20 outputs are preserved. All five
+historical full StructuralGeo cases, manifest/tensor file and canonical content
+hashes, original nine wells and original surface were verified. The checkpoint
+matches SHA-256 `561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c`.
+
+New implementation: `scripts/stage21/{common,prepare,run,evaluate,report,audit}.py`
+and focused tests. The truth-independent PCG64 seed21001 4x4 layout fixes
+W9 < W16 < W25 across all cases. Offline preparation samples only declared
+oracle wells and preserves the registered surface; outside-mask values are -1.
+Separate inference/evaluation registries and a runtime open-file firewall keep
+truth, geometry and evaluation metadata out of inference. The existing EMA
+loader and pure projected fixed-Euler sampler are reused without modifying
+training, architecture, embedding, sampler or older stages. All 411 trainable
+entries use EMA before freezing; the embedding retains its checkpoint value.
+
+Validation: 29 focused/legacy sampler/frozen-trajectory tests passed. Real
+CUDA smoke is case03/seed142/N9,N16,N25, plus an independent 32-step native N9
+continuous-state equivalence regression. Smoke is separate from formal data.
+Formal inference completed five cases x seeds42/142/242 x three levels =45
+outputs/1440 velocity evaluations. FP32/no TF32, deterministic algorithms,
+32 midpoint-time Euler steps and CPU-generated pre-projection noise are fixed.
+Every step is finite and condition-exact; all model state entries are unchanged
+(aggregate before/after `10d2181fe3eeeb406afc3da5e78ded64e9f92abfb2b3c352ee57e60e06da9b68`).
+Completed-run `--resume` independently verifies all45 assets without additional
+model calls or changing the sealed ledger.
+
+Authoritative root:
+`experiments/stage21_virtual_borehole_conditioning/run_20261014_v2/`.
+Formal predictions are in `formal/`; current tables, reports, all5 fixed-seed142
+two-camera target figures and unoccluded well maps are in `reports_v3/`.
+`reports_v1` retains a report-manifest relative/absolute-path packaging failure;
+`reports_v2` passed the independent audit but retains a well-map legend overlap.
+Both use identical predictions/metrics. `run_20261014_v1` retains the earlier
+pre-sampling guard false positive on the SymPy geometry source (zero model
+calls); a regression corrected experiment-geometry versus library-source
+handling. Nothing was overwritten to conceal these engineering events.
+
+All three levels share `E=(truth!=-1)&~M25`. The case-first cross-case median
+label9 IoU is N9/N16/N25 `0.028397/0.049379/0.042132`; fixed truth-class mIoU
+is `0.187515/0.218250/0.249923`. The distinct median of case-level median
+same-seed paired IoU differences for25-9 is `+0.012432`, positive in5/5 cases.
+The nonmonotonic dose-curve median and positive paired25-16 summary are different
+statistics, both explicitly preserved rather than conflated. Absolute target
+recovery remains weak and volume/recall do not uniformly improve.
+
+Seven original M9-unobserved major26-connected target components occur in
+case02/03/05; only one (case05 component3) is newly intersected, by8 voxels.
+The other six remain unhit at25 wells. Original hidden-major matched IoU remains
+very small; the25-9 cross-case median paired difference is0 (one positive,
+one negative, one zero case). Under the predeclared *diagnostic*, not universal
+success thresholds, none of the7 objects x3 realizations is detected in any
+level. This supports bounded off-well categorical benefit, not reliable hidden
+body recovery or successful geophysical virtual wells. Connected components are
+object proxies; this reused cohort is not untouched TEST or field validation,
+and pretraining overlap cannot be excluded.
+
+Full/source/condition/noise/prediction hashes, all sample/case/object tables,
+one-to-one full-ID/common-domain overlap matrices, denominators, original/new
+exposure groups, paired differences and N/A handling are retained. See the
+experiment README for exact commands, `reports_v3/REPORT.md` for findings and
+`DELIVERY_AUDIT.json` for independent verification. The next research decision
+is whether current layout information and low absolute hidden recovery justify
+a separately preregistered information/layout diagnosis or a sequence bridge.
+Do not automatically launch a new layout, physics method, error sweep or training.
+
+## Selected-case 200 ensemble sampling, screening and figures (2026-10-09)
+
+The user authorized Stage15 trace v4 and Stage19R on the same case, selected
+retrospectively by the existing adapter three-seed median target IoU.
+`stage19_test_case004` ranks first (historical median 0.6710347944). This is a
+selected-case illustration, not an unbiased cross-case or generalization test.
+Stage15's unchanged v4 positive-endpoint/confidence mapping was transferred to
+the Stage19R TEST conditions, observation and continuous evidence. Stage19R
+uses its immutable formal epoch4 trained adapter; no training or sweep occurred.
+
+SSH GPU inference completed 200 independent CPU-generated source draws with
+seeds `42 + 100*i`, i=0..199. Each source has one shared FLOW_ONLY baseline,
+one STAGE15_TRACE_V4 output and one STAGE19R_ADAPTER output: 600 complete hard
+geologies, zero failures and zero condition violations. The first three
+baseline/adapter outputs exactly replay historical formal results; an
+independent property-alpha-zero baseline matches adapter-scale-zero. Base
+parameter hashes remain unchanged. Same-source paired median target-IoU
+increments are +0.020074 (Stage15) and +0.294359 (Stage19R); hard-seismic RMSE
+increments are +0.004201 and -0.019122 respectively. Thus Stage15's modest
+geological gain does not imply improved physics on this case.
+
+Each arm has all200/random100/obs_top100/oracle_top100 with independently
+recomputed counts, strict >40/60/80% and all-hit masks, full/free/condition
+metrics, connectivity, all-candidate distributions and prefix50/100/200
+stability. Observation IDs are persisted before evaluation truth is opened;
+oracle uses full true label9 IoU and is explicitly retrospective. Ranking,
+source pairing, unique IDs, all counts and all 203 PNGs pass artifact audit.
+Publication PNG/SVG, fixed 12-member panels, two views, paper and 1920x1080
+layouts, independent captions, reports and hashes are delivered under
+`experiments/ensemble_200_selected_case/run_v2/publication_v1/`.
+
+The complete report is `DEVELOPMENT_REPORT.md`, the visual index is
+`FIGURE_INDEX.md`, and numerical checks are in `VALIDATION_REPORT.json`.
+`MANUAL_VISUAL_CHECK.md` records opened PNGs and the projection/thickness
+limitation. The raw sampler saves each hard model, hard seismic prediction,
+score, noise/model hash and per-step trace. The supplied reference
+`ensemble_occurrence.py` was absent; it was reconstructed against the README
+and six supplied passing tests. New integration/Stage19 regressions pass 36
+pytest tests, and the publication-renderer test passes once (43 checks total,
+13 existing Matplotlib warnings). Historical experiments and existing user
+report/visualization changes are preserved; no push or publication occurred.
+
+Entry points: `scripts/ensemble_workflow.py` (audit/sample/resume/postprocess/
+plot-only), `scripts/render_ensemble_publication.py` (publication postprocess/
+plot-only), `scripts/verify_ensemble_run.py`, and `scripts/finalize_ensemble_report.py`.
+Commands and asset paths are in `experiments/ensemble_200_selected_case/README.md`.
+`run_v1` retains the initial pre-sampling log-format engineering failure;
+`run_v2` is the completed run. N3 smoke and artificial surface tests are
+separately labelled and are not part of the 200-realization experiment.
+Stop after this requested study; no five-body experiment, new method, training,
+threshold tuning or additional case is implied.
+
+
 ## Stage19R cohort repair — learned evidence adapter validated (2026-09-04)
 
 Stage19R was authorized from `main @
@@ -1572,3 +1700,84 @@ calibration and topology remain unresolved. See
 
 Stop after Stage17. Do not automatically begin PGDM/PnP/SGLD, new topology
 methods, multiclass inversion or training.
+
+
+## Stage21v2 dense accurate/pseudo wells (2026-10-16)
+
+The user explicitly authorized SSH review followed by the finite Stage21v2
+experiment in `STAGE21V2_VSCODE_CODEX_PROMPT_2026-10-16.md`. This is separate
+from the historical45-output Stage21 run. Development and GPU execution used
+SSH labrs-codex and repository `.venv` on RTX4090D. HEAD remains
+`b780b9ae3650b426400d3258b8e33f10a349bf6c`. Connected GitHub read-only comparison
+confirmed main identical (server DNS could not resolve github.com). Existing
+uncommitted handoff/Stage19R/ensemble/Stage21 work was preserved. No commit/push.
+
+New source namespace `scripts/stage21v2/` contains common/prepare/run/workflow/
+report/audit modules, with `tests/test_stage21v2_dense_virtual_boreholes.py`.
+Reuses the unchanged Stage21 initial_noise/sample_native, EMA loader, pure
+projected fixed Euler, property mapping/replicate Gaussian, and object matcher.
+Checkpoint stays SHA256
+`561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c`.
+The old source registry matched exactly for all reused A baselines; per-prediction
+model hashes remain unchanged. Frozen complete source-map digest:
+`2b3443bfb60ab976c385e69e6bc5931e7e190ddb97fcee2c7900ea9b52566ffb`; exact file hashes and snapshots are in the run registry/source_snapshot.
+
+Authoritative delivery:
+`experiments/stage21v2_dense_virtual_boreholes/run_20261016_v1/`.
+See `report/REPORT.md`, PROTOCOL.json, REPO_DIFFERENCES.md in the experiment
+root, execution_checklist.csv, TEST_RESULTS.json and DELIVERY_AUDIT.json.
+PCG64 seed21601 gives256 stratified holdout columns and3831 nested extra columns.
+Sigma1 and the original Phase2a distinct density/susceptibility-label9-contrast
+codebook are fixed; all nonair labels participate in nearest-codebook mapping
+with nonair codebook channel scales and normalized channel weights. Sigma0
+CPU roundtrip is exact, with no codebook collisions. Original hard values/mask
+always win, and outside-mask values remain-1. Inference registries contain
+prepared conditions only; runtime guards reject truth/full pseudo/evaluation.
+
+Actual progression: case03 seed42 N512 accurate B improved holdout mIoU, then
+pseudo C passed the candidate rule. Higher N2048/3840 were therefore not run.
+Only N512 was confirmed on seeds142/242, passing the fixed descriptive rule;
+case01/02 then ran seed42 at that same density without searching. Total10 new
+Flow outputs /320 velocity calls,5 audited original N9 pointers reused; new
+inference including initialization 233.98s. D is offline copy-only,
+P is full-property classification with original hard conditions restored.
+No4096-well Flow, training, fine-tuning, adapter, real forward/inverse physics,
+new noise experiments or parameter scans were performed.
+
+Case03 three-seed holdout mIoU medians A/B512/C512/P:
+0.148135/0.520606/0.284274/0.274543. C-A paired holdout differences are positive
+for all3 seeds; median +0.140021. Original-free paired medians: mIoU +0.122987,
+label9 IoU +0.003241. These are medians of paired differences. Seed242 still
+has original-free target-IoU delta -0.00008167 and zero holdout target IoU.
+Case01/02 seed42 holdout A/B/C/P mIoUs are respectively
+0.190461/0.554534/0.367135/0.375864 and
+0.177296/0.520625/0.333983/0.373385. Thus category gains replicate relative
+to A, but C is not consistently better than P. Case02 holdout target IoU is
+C0.396172 versus P0.668373. D equals A exactly on holdout; C-D original-free
+paired-mIoU medians are +0.106091/+0.160910/+0.142567 for case03/01/02, so gains
+are not explained solely by directly writing the additional conditions.
+
+Object recovery and volume do not establish final-goal success. Sigma1 raw
+classification drops every label9 voxel in the case03 original-free domain
+(truth1733); C predicts388/165/160 voxels. The originally M9-hidden572-voxel
+object has62 truth voxels at N512 well positions, but C matched IoU is0 for
+all3 seeds. B matched IoUs0.0704-0.0817 also fail the prior diagnostic gate.
+For case02's originally hidden926-voxel object, C matched IoU0.1805 is below
+P0.7123. Case02 target absolute relative volume error increases A0.1995 ->
+C0.3288. Connected components are object proxies; no reliable general hidden
+body restoration, field validity, calibrated uncertainty or untouched TEST
+claim follows from the descriptive confirmation rule.
+
+Validation:34 focused/new/legacy tests passed; independent final audit passed.
+Original and added hard-condition violations0, matched source/model hashes,
+independent fixed-domain/class intersection/union arithmetic, COPY_ONLY holdout
+identity, trace budgets and report hashes verified. Three fixed figure types
+are delivered for each executed case. The supplemental offline classifier
+analysis first encountered a ROOT variable-name collision; fixed to RUN_ROOT
+and retained OFFLINE_POSTPROCESS_INITIAL_FAILURE.json, with no new model calls
+or changes to frozen predictions. Supplement source and final hash are retained.
+
+Stop here. Prioritize pseudo-well target loss and erroneous hard-conditioning
+costs before a separately authorized real-physics bridge. Do not automatically
+run higher densities, change sigma/codebook/layout/seeds, train, or extend the
+case set. Reused cases/seeds are diagnostics, not independent geological TEST.

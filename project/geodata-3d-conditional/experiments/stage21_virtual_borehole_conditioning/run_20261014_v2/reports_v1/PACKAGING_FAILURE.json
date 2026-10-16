@@ -1,0 +1,7 @@
+{
+  "status": "metrics_and_figures_complete_but_manifest_packaging_failed",
+  "error": "report manifest mixed relative CLI paths with absolute repository root",
+  "scientific_outputs_changed": false,
+  "gpu_rerun_required": false,
+  "resolution": "Normalize report CLI paths; use fresh reports_v2 and retain this directory"
+}

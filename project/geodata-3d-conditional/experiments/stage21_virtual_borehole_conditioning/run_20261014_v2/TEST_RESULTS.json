@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "execution": "SSH to labrs-codex; repository .venv/bin/python",
+  "command": "PYTHONPATH=src .venv/bin/python -m pytest -q project/geodata-3d-conditional/tests/test_stage21_virtual_boreholes.py project/geodata-3d-conditional/tests/test_phase5c_generator_posterior.py project/geodata-3d-conditional/tests/test_phase6q_frozen_flow.py",
+  "result": "28 passed in 4.94s",
+  "tests": 28,
+  "gpu_tests_included": false,
+  "test_source_sha256": {
+    "project/geodata-3d-conditional/tests/test_stage21_virtual_boreholes.py": "c4c0b629a46fbe2e7d336790e65987400cb23b9170e061c639543c4cb129af1e",
+    "project/geodata-3d-conditional/tests/test_phase5c_generator_posterior.py": "934236568f2c10b8ec13cc5c8a5e4fed7c352ca2bb007e9cfb1e11254d26503a",
+    "project/geodata-3d-conditional/tests/test_phase6q_frozen_flow.py": "a7e604074786ee1a60f77dc45c850798dc4fab6625e0af6dbd21d950e156d589"
+  },
+  "syntax_check": "python -m py_compile project/geodata-3d-conditional/scripts/stage21/*.py passed",
+  "diff_check": "git diff --check passed"
+}

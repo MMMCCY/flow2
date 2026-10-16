@@ -127,6 +127,20 @@ reuse under the frozen Stage19 experiment. It remains a binary,
 high-contrast, noiseless inverse-crime upper bound and does not establish field
 generalization. Stage19R stops here for research discussion.
 
+## Retrospective 3-D visualization
+
+`scripts/stage19/visualize_formal_results.py` reuses the established Stage15
+3-D categorical/label9 renderer without changing or rerunning inference. The
+primary six-panel figure compares truth, paired Flow-only, and the learned
+adapter with correct evidence for `stage19_test_case001`, seed 42. This case
+and seed are fixed as the lexicographically first TEST case and first
+preregistered source seed; they are not selected by metric. Equivalent
+six-panel figures are retained for all 12 TEST cases, and a separate figure
+shows truth plus all five formal arms. Figure provenance and hashes are in
+`reports/formal_v2/visualizations_v1/visualization_manifest.json`. Truth is
+loaded only by this retrospective visualization step; the formal inference
+truth-firewall remains intact.
+
 ## Exact execution and validation
 
 ```bash

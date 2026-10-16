@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "mode": "completed_run_hash_verified_no_op",
+  "outputs_verified": 45,
+  "additional_model_evaluations": 0,
+  "state_sha256_before_and_after": "e3b481c36a1d2fd205fdaee34e8fe205050300f99c897543fed2fee2dfb869e9",
+  "stdout": "Verified complete immutable formal run; no files changed",
+  "execution": "SSH run.py --mode formal --resume with the same registry, smoke and out arguments"
+}

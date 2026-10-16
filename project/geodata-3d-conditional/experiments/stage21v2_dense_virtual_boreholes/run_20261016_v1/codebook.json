@@ -1,0 +1,51 @@
+{
+  "channels": [
+    {
+      "name": "density_proxy",
+      "unit": "controlled_relative_unit",
+      "values": {
+        "-1": 0.0,
+        "0": 0.15,
+        "1": 0.18,
+        "2": 0.21,
+        "3": 0.24,
+        "4": 0.27,
+        "5": 0.3,
+        "6": 0.33,
+        "7": 0.36,
+        "8": 0.39,
+        "9": 0.42,
+        "10": 0.45,
+        "11": 0.48,
+        "12": 0.51,
+        "13": 0.54
+      },
+      "weight": 0.5
+    },
+    {
+      "name": "susceptibility_contrast_proxy",
+      "unit": "controlled_relative_unit",
+      "values": {
+        "-1": 0.0,
+        "0": 0.0015,
+        "1": 0.0018,
+        "2": 0.0021,
+        "3": 0.0024,
+        "4": 0.0027,
+        "5": 0.003,
+        "6": 0.0033,
+        "7": 0.0036,
+        "8": 0.0039,
+        "9": 0.1,
+        "10": 0.0045,
+        "11": 0.0048,
+        "12": 0.0051,
+        "13": 0.0054
+      },
+      "weight": 0.5
+    }
+  ],
+  "description": "Controlled Phase-2a observability ablation. The density channel retains the full-lithology low-contrast proxy; the second channel assigns label 9 a moderate synthetic susceptibility contrast while retaining explicit values for all classes. This is not calibrated petrophysics or measured geophysics.",
+  "name": "ideal_density_susceptibility_label9_contrast_v1",
+  "schema": "full_lithology_property_channels_v1"
+}

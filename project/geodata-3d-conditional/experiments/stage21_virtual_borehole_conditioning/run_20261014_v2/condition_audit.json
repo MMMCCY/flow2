@@ -1,0 +1,160 @@
+{
+  "cases": [
+    {
+      "case_id": "fullgeo_case01",
+      "historical_assets_verified": true,
+      "levels": {
+        "16": {
+          "condition_voxels": 111653,
+          "n9_matches_registered_tensors": null,
+          "original_conditions_preserved": true,
+          "outside_mask_all_placeholder": true,
+          "surface_voxels": 111047,
+          "well_voxels": 1024
+        },
+        "25": {
+          "condition_voxels": 111970,
+          "n9_matches_registered_tensors": null,
+          "original_conditions_preserved": true,
+          "outside_mask_all_placeholder": true,
+          "surface_voxels": 111047,
+          "well_voxels": 1600
+        },
+        "9": {
+          "condition_voxels": 111380,
+          "n9_matches_registered_tensors": true,
+          "original_conditions_preserved": true,
+          "outside_mask_all_placeholder": true,
+          "surface_voxels": 111047,
+          "well_voxels": 576
+        }
+      }
+    },
+    {
+      "case_id": "fullgeo_case02",
+      "historical_assets_verified": true,
+      "levels": {
+        "16": {
+          "condition_voxels": 55311,
+          "n9_matches_registered_tensors": null,
+          "original_conditions_preserved": true,
+          "outside_mask_all_placeholder": true,
+          "surface_voxels": 54503,
+          "well_voxels": 1024
+        },
+        "25": {
+          "condition_voxels": 55762,
+          "n9_matches_registered_tensors": null,
+          "original_conditions_preserved": true,
+          "outside_mask_all_placeholder": true,
+          "surface_voxels": 54503,
+          "well_voxels": 1600
+        },
+        "9": {
+          "condition_voxels": 54951,
+          "n9_matches_registered_tensors": true,
+          "original_conditions_preserved": true,
+          "outside_mask_all_placeholder": true,
+          "surface_voxels": 54503,
+          "well_voxels": 576
+        }
+      }
+    },
+    {
+      "case_id": "fullgeo_case03",
+      "historical_assets_verified": true,
+      "levels": {
+        "16": {
+          "condition_voxels": 111988,
+          "n9_matches_registered_tensors": null,
+          "original_conditions_preserved": true,
+          "outside_mask_all_placeholder": true,
+          "surface_voxels": 111425,
+          "well_voxels": 1024
+        },
+        "25": {
+          "condition_voxels": 112351,
+          "n9_matches_registered_tensors": null,
+          "original_conditions_preserved": true,
+          "outside_mask_all_placeholder": true,
+          "surface_voxels": 111425,
+          "well_voxels": 1600
+        },
+        "9": {
+          "condition_voxels": 111780,
+          "n9_matches_registered_tensors": true,
+          "original_conditions_preserved": true,
+          "outside_mask_all_placeholder": true,
+          "surface_voxels": 111425,
+          "well_voxels": 576
+        }
+      }
+    },
+    {
+      "case_id": "fullgeo_case04",
+      "historical_assets_verified": true,
+      "levels": {
+        "16": {
+          "condition_voxels": 94915,
+          "n9_matches_registered_tensors": null,
+          "original_conditions_preserved": true,
+          "outside_mask_all_placeholder": true,
+          "surface_voxels": 94233,
+          "well_voxels": 1024
+        },
+        "25": {
+          "condition_voxels": 95265,
+          "n9_matches_registered_tensors": null,
+          "original_conditions_preserved": true,
+          "outside_mask_all_placeholder": true,
+          "surface_voxels": 94233,
+          "well_voxels": 1600
+        },
+        "9": {
+          "condition_voxels": 94592,
+          "n9_matches_registered_tensors": true,
+          "original_conditions_preserved": true,
+          "outside_mask_all_placeholder": true,
+          "surface_voxels": 94233,
+          "well_voxels": 576
+        }
+      }
+    },
+    {
+      "case_id": "fullgeo_case05",
+      "historical_assets_verified": true,
+      "levels": {
+        "16": {
+          "condition_voxels": 41824,
+          "n9_matches_registered_tensors": null,
+          "original_conditions_preserved": true,
+          "outside_mask_all_placeholder": true,
+          "surface_voxels": 40960,
+          "well_voxels": 1024
+        },
+        "25": {
+          "condition_voxels": 42310,
+          "n9_matches_registered_tensors": null,
+          "original_conditions_preserved": true,
+          "outside_mask_all_placeholder": true,
+          "surface_voxels": 40960,
+          "well_voxels": 1600
+        },
+        "9": {
+          "condition_voxels": 41446,
+          "n9_matches_registered_tensors": true,
+          "original_conditions_preserved": true,
+          "outside_mask_all_placeholder": true,
+          "surface_voxels": 40960,
+          "well_voxels": 576
+        }
+      }
+    }
+  ],
+  "preparation_source_sha256": {
+    "project/geodata-3d-conditional/guidance/full_structuralgeo_benchmark.py": "3d292e6b48dbc2ed6911315d9e736afd770e7e164785208584dc268cd1d18097",
+    "project/geodata-3d-conditional/scripts/stage21/prepare.py": "eb4332cba2ef9fa858c303107f7dbd4fcfa8a2d094a96761ba27343d491a5378"
+  },
+  "status": "passed",
+  "truth_read_role": "offline_oracle_well_and_original_surface_preparation_only"
+}

@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "summary": "34 passed in 5.73s",
+  "command": "PYTHONPATH=src:project/geodata-3d-conditional .venv/bin/python -m pytest -q project/geodata-3d-conditional/tests/test_stage21v2_dense_virtual_boreholes.py project/geodata-3d-conditional/tests/test_stage21_virtual_boreholes.py project/geodata-3d-conditional/tests/test_phase5c_generator_posterior.py",
+  "environment": "SSH labrs-codex repository .venv",
+  "preparation_note": "prepare.py subsequently added source-snapshot copying only; sampling and tested protocol primitives unchanged"
+}

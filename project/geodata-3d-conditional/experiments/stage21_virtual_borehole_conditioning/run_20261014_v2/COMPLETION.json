@@ -1,0 +1,18 @@
+{
+  "status": "completed_step1_only",
+  "formal_outputs": 45,
+  "focused_tests": 29,
+  "cuda_smoke_passed": true,
+  "independent_n9_continuous_equivalence": true,
+  "condition_violations": 0,
+  "authoritative_report": "reports_v3/REPORT.md",
+  "independent_audit": "reports_v3/DELIVERY_AUDIT.json",
+  "png_figures": 17,
+  "svg_figures": 2,
+  "report_versions_identical_scientific_summary_sha256": "a173764fed98bf1b0af0f3155b6bc10fad75de47cedd8380eb9273323d4872ac",
+  "later_steps": "not_implemented; research choices remain open",
+  "immutable_failures_retained": [
+    "../run_20261014_v1/cuda_smoke/invocation_failure.json",
+    "reports_v1/PACKAGING_FAILURE.json"
+  ]
+}
