@@ -1,0 +1,25 @@
+{
+  "schema": "phase4_acoustic_codebook_v1",
+  "id": "acoustic_distinct_label9_upper_bound_v1",
+  "description": "Synthetic complete absolute density and P-wave velocity codebook for the first Phase-4c inverse-crime upper bound. Label 9 has deliberately distinctive impedance; values are not site-calibrated petrophysics.",
+  "scenario": "synthetic_distinct_label9_acoustic_upper_bound",
+  "density_unit": "kg m^-3",
+  "velocity_unit": "m s^-1",
+  "values": {
+    "-1": {"density": 1.225, "vp": 340.0},
+    "0": {"density": 2200.0, "vp": 2500.0},
+    "1": {"density": 2350.0, "vp": 3000.0},
+    "2": {"density": 2450.0, "vp": 3500.0},
+    "3": {"density": 2500.0, "vp": 3800.0},
+    "4": {"density": 2600.0, "vp": 4300.0},
+    "5": {"density": 2700.0, "vp": 5000.0},
+    "6": {"density": 2800.0, "vp": 5500.0},
+    "7": {"density": 2250.0, "vp": 2800.0},
+    "8": {"density": 2400.0, "vp": 3300.0},
+    "9": {"density": 3000.0, "vp": 6500.0},
+    "10": {"density": 2850.0, "vp": 5800.0},
+    "11": {"density": 2550.0, "vp": 4100.0},
+    "12": {"density": 2650.0, "vp": 4700.0},
+    "13": {"density": 2300.0, "vp": 2700.0}
+  }
+}

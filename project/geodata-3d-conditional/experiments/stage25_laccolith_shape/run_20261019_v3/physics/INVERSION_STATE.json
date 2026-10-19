@@ -1,0 +1,14 @@
+{
+  "inversion_calls": 1,
+  "prior_source": "saved A only",
+  "started_at_utc": "2026-10-19T13:11:26.682079+00:00",
+  "status": "failed_after_single_inversion_before_asset_save",
+  "truth_access": false,
+  "numerical_call_returned": true,
+  "updated_field_saved": false,
+  "D_outputs": 0,
+  "velocity_evaluations": 0,
+  "error": "Own inversion firewall blocked first output file open: physics/preprocessing/prior_acoustic.pt",
+  "stop_rule": "No second inversion, no D, main mandatory unaffected",
+  "failed_at_utc": "2026-10-19T13:13:01.346351+00:00"
+}

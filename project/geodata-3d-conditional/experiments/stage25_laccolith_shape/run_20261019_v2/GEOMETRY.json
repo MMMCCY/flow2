@@ -1,0 +1,106 @@
+{
+  "axes": "XYZ, increasing Z upward",
+  "bounds": [
+    [
+      -1920,
+      1920
+    ],
+    [
+      -1920,
+      1920
+    ],
+    [
+      -1920,
+      1920
+    ]
+  ],
+  "cap_base_z_index": 28,
+  "cap_diameter_m": 1340.952380952381,
+  "cap_diameter_voxels": 22,
+  "cap_evaluation_box_indices": {
+    "x": [
+      24,
+      46
+    ],
+    "y": [
+      15,
+      37
+    ],
+    "z": [
+      28,
+      36
+    ]
+  },
+  "cap_height_voxels": 8,
+  "center_xy_indices": [
+    35,
+    26
+  ],
+  "events": [
+    {
+      "base_m": -1188.5714111328125,
+      "type": "Bedrock",
+      "value": 0
+    },
+    {
+      "base_m": -1188.5714111328125,
+      "thicknesses_m": [
+        487.6190476190476,
+        365.71428571428567,
+        2133.333333333333
+      ],
+      "type": "Sedimentation",
+      "values": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "native_components": [
+        "PushHemisphere",
+        "DikeHemisphere",
+        "DikeColumn"
+      ],
+      "type": "Laccolith"
+    },
+    {
+      "base_m": 1249.5238037109375,
+      "type": "UnconformityBase",
+      "value": "NaN/air"
+    }
+  ],
+  "geological_seed_search": false,
+  "grid": "np.linspace includes both endpoints; cell indices reference sample locations",
+  "height_m": 487.6190476190476,
+  "minor_axis_scale": 1.0,
+  "nominal_top_z_index": 36,
+  "normalization": false,
+  "origin_m": [
+    213.3333282470703,
+    -335.23809814453125,
+    -213.3333282470703
+  ],
+  "raw_target": 9,
+  "rotation": 0.0,
+  "section": {
+    "axis": "Y",
+    "index": 26
+  },
+  "seed": 20261019,
+  "shape": [
+    64,
+    64,
+    64
+  ],
+  "spacing_m": [
+    60.95238095238095,
+    60.95238095238095,
+    60.95238095238095
+  ],
+  "stem_depth": "native np.inf, extends to bottom of grid",
+  "stem_diameter_m": 268.1904761904762,
+  "stem_diameter_voxels": 4.4,
+  "surface_z_index": 52,
+  "technical_geometry_revisions": 0
+}

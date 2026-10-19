@@ -1,0 +1,11 @@
+# 工程记录
+
+首次CPU测试收集时新evaluate.py漏括号；修正后16项测试通过。均零恢复/网络前向。
+
+run_20261019_v1保留预检查失败日志：复制码本经JSON排序/缩进重写导致字节hash改变，内容相同；在求解器调用及任何网络前向之前停止，实际恢复0、前向0。修复为核验原始码本字节hash和本次码本语义hash；run_v2直接复用v1已冻结几何、观测、源噪声及A/B条件张量，未重新生成或选择样本。v1与原冻结源码保留不覆盖。
+
+原生PushHemisphere对中心零向量计算单位方向时发出RuntimeWarning；该位置不进入Z>0变形写入mask，最终坐标、标签及连通性检查均通过。未修改旧核心。
+
+run_v2的A模型加载及冻结hash检查成功，但source误用类默认20通道而checkpoint实际15通道；sample_native形状检查在首次网络调用前拒绝，receipt前向数0。CPU核对checkpoint超参数后修复为15维seed42，并在runner加入模型embedding尺寸检查。run_v3原样复用几何、观测、恢复场及A/B/C条件，只纠正无效源维度。旧无效source及失败receipt保留；没有更换seed或重跑恢复。
+
+可选地震：一次既有反演返回后，自建防火墙误拦自身preprocessing输出写入，updated场未保存。按单次反演限制停止，无重反演/无D。修复仅放行自身输出写操作，5类禁止读检查通过；执行源码原版本在physics/source_snapshot，差异与修复hash保留于physics/ENGINEERING_GUARD_FIX.*。

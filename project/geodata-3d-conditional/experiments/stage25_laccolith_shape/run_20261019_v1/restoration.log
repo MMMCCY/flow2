@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage25/restore.py", line 48, in <module>
+    if __name__=='__main__': main()
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage25/restore.py", line 18, in main
+    assert file_hash(ROOT/'codebook.json')==old['codebook_sha256']
+AssertionError

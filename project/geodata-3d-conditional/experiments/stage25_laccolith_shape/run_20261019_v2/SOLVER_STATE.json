@@ -1,0 +1,37 @@
+{
+  "assets": {
+    "classification": {
+      "file_sha256": "4e1b5b0c5738526d6fe14a61b94ed6b2caae22262edb769e1f4bd6b2245d739b",
+      "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v2/preprocessing/classification.pt",
+      "tensor_sha256": "9be4bc66ee5b9c6cc85c4a611e0568bf9082cfe912ab6d76c318c809b2f6193c"
+    },
+    "properties": {
+      "file_sha256": "03a9842f23553848128539a3c2053febbedd841d4730eefacefaecc8cd21f346",
+      "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v2/preprocessing/properties.pt",
+      "tensor_sha256": "7e2ee0d2bf47e0ee41499c5e931714005f4f05653e6b21305e739de8c70e8c23"
+    },
+    "z": {
+      "file_sha256": "9d88b5334f3d86cf96093e64ce620201206cb9b462e63b353a2c3e60db058b3f",
+      "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v2/preprocessing/z.pt",
+      "tensor_sha256": "9554c5c73c7284a6ebaf057a408c2c40375ce79b3591e547a264befffad07703"
+    }
+  },
+  "completed_at_utc": "2026-10-19T13:03:56.201552+00:00",
+  "converged": true,
+  "elapsed_seconds": 40.1046233480447,
+  "final": {
+    "L": 16.0,
+    "TVmean": 0.013532166122656633,
+    "backtracks": 0,
+    "data_mse": 4.000585096622648e-09,
+    "iteration": 609,
+    "objective": 1.357217197362286e-06,
+    "relative_change": 7.056034881932092e-07,
+    "restarted": false,
+    "stable_count": 50
+  },
+  "iterations": 609,
+  "solve_invocations": 1,
+  "status": "completed",
+  "truth_access": false
+}

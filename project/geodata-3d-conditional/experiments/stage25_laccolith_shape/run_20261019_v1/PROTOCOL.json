@@ -1,0 +1,31 @@
+{
+  "TV": 0.0001,
+  "case": "native_laccolith_20261019",
+  "class_set": "nonair truth classes present in each fixed domain, frozen before inference",
+  "classifier": "raw0..13; original normalized weighted distance; first argmin",
+  "domains": "(truth!=-1)&~original_mask; and intersection with fixed holdout columns",
+  "holdout_columns": 256,
+  "max_iterations": 2000,
+  "max_main_outputs": 3,
+  "max_main_velocity_evaluations": 96,
+  "max_restoration_solves": 1,
+  "model": "411EMA/frozen checkpoint embedding",
+  "optional_physics": "only after MANDATORY_COMPLETE and remaining>=4500s; max one inversion and D/32 calls",
+  "precision": "FP32/noTF32/noautocast",
+  "radius": 3,
+  "sampler": "unchanged Stage21 sample_native; midpoint-time Euler",
+  "seed": 42,
+  "shape": [
+    64,
+    64,
+    64
+  ],
+  "sigma": 1.0,
+  "solver": "unchanged Stage22 solve defaults, CPU FP64",
+  "specification_sha256": "24dd786e87c2a8c11aa08f5ede7cd137c95dbf1f088cd378b347ff9b7fe5ff0e",
+  "steps": 32,
+  "stop": "50 consecutive relative objective changes <1e-6; final iterate",
+  "surface": "existing make_surface_mask from observed flat surface; all air and immediately lower voxel",
+  "surface_distance": "ASSD = mean over concatenated bidirectional nearest-boundary distance samples, 6-neighbor boundary voxels, actual physical spacing, all target components; empty -> NA",
+  "total_dense_columns": 512
+}

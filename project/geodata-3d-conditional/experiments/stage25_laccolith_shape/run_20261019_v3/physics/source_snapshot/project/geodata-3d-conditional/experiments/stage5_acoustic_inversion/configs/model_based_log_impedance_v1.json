@@ -1,0 +1,19 @@
+{
+  "schema": "phase5a_model_based_log_impedance_config_v1",
+  "id": "model_based_log_impedance_fixed12_v1",
+  "description": "Single frozen no-training model-based log-impedance inversion operating point for the Phase-4c noiseless inverse-crime seismic upper bound.",
+  "inversion_mode": "linearized_poststack_log_impedance_tikhonov_v1",
+  "prior_relative_weight": 0.001,
+  "vertical_smoothness_relative_weight": 0.01,
+  "regularization_scale": "mean_diagonal_gtg",
+  "time_difference": "forward_first_difference_last_row_zero",
+  "wavelet_boundary": "zero_padding_same_length_no_wraparound",
+  "time_depth_mapping": "fixed_prior_slowness_cell_center_linear_interpolation_v1",
+  "slowness_update": "none_keep_prior_v1",
+  "subsurface_air_policy": "codebook_rock_closest_to_median_log_impedance_v1",
+  "impedance_bounds": "non_air_codebook_minmax",
+  "condition_policy": "surface_and_boreholes_exact_before_and_after_inversion_v1",
+  "posterior_statistics": "fixed12_population_mean_std_v1",
+  "truth_tuned": false
+}
+

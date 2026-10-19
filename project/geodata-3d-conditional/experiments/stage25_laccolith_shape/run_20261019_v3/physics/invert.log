@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage25_physics/invert.py", line 39, in <module>
+    if __name__=='__main__':main()
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage25_physics/invert.py", line 32, in main
+    assets={k:save_tensor(PHYS/'preprocessing'/f'{k}.pt',v) for k,v in dict(prior_acoustic=prior_exact,updated_acoustic=updated,prior_seismic=fields[0],updated_seismic=fields[1],classification=labels).items()}
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage25_physics/invert.py", line 32, in <dictcomp>
+    assets={k:save_tensor(PHYS/'preprocessing'/f'{k}.pt',v) for k,v in dict(prior_acoustic=prior_exact,updated_acoustic=updated,prior_seismic=fields[0],updated_seismic=fields[1],classification=labels).items()}
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage21/common.py", line 162, in save_tensor
+    return {"path": str(path.relative_to(REPO)), "file_sha256": file_hash(path),
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage21/common.py", line 45, in file_hash
+    with Path(path).open("rb") as stream:
+  File "/usr/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage25_physics/common.py", line 21, in deny
+    if 'preprocessing' in p.parts or any((ROOT/'arms'/a)==p or (ROOT/'arms'/a) in p.parents for a in ('B','C')) or p.name=='gaussian_sigma1.pt':raise PermissionError(f'Inversion only A prior, original conditions, seismic observation: {p}')
+PermissionError: Inversion only A prior, original conditions, seismic observation: /home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/physics/preprocessing/prior_acoustic.pt

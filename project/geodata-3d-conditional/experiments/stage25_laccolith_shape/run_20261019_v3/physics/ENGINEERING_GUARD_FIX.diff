@@ -1,0 +1,12 @@
+--- executed/common.py
++++ corrected/common.py
+@@ -18,5 +18,8 @@
+     def deny(event,args):
+         if event!='open' or not isinstance(args[0],(str,bytes,os.PathLike)):return
+         p=Path(os.fsdecode(args[0])).resolve()
+-        if 'preprocessing' in p.parts or any((ROOT/'arms'/a)==p or (ROOT/'arms'/a) in p.parents for a in ('B','C')) or p.name=='gaussian_sigma1.pt':raise PermissionError(f'Inversion only A prior, original conditions, seismic observation: {p}')
++        writing=(isinstance(args[1],str) and any(c in args[1] for c in 'wax+')) or (isinstance(args[2],int) and args[2]&(os.O_WRONLY|os.O_RDWR|os.O_CREAT|os.O_TRUNC|os.O_APPEND))
++        forbidden_history=any((ROOT/'arms'/a)==p or (ROOT/'arms'/a) in p.parents for a in ('B','C')) or p.name=='gaussian_sigma1.pt'
++        forbidden_field_read='preprocessing' in p.parts and not (writing and PHYS in p.parents)
++        if forbidden_history or forbidden_field_read:raise PermissionError(f'Inversion only A prior, original conditions, seismic observation; own output writes allowed: {p}')
+     sys.addaudithook(deny)

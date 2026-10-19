@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage25/run.py", line 126, in <module>
+    run(args.registry,args.seed,args.out)
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage25/run.py", line 91, in run
+    pred,continuous,trace=sample_native(model,noise.to("cuda"),ts["values"].to("cuda"),ts["mask"].to("cuda"),32)
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/scripts/stage21/run.py", line 68, in sample_native
+    state = projected_fixed_euler_prior_sample(model, initial, conditioning, embedded, mask, n_steps=n_steps)
+  File "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/guidance/generator_posterior.py", line 68, in projected_fixed_euler_prior_sample
+    raise ValueError("conditioning must match initial_state channel/spatial shape")
+ValueError: conditioning must match initial_state channel/spatial shape

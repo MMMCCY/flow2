@@ -1,5 +1,53 @@
 # Development handoff
 
+## Stage25 — native laccolith shape experiment (2026-10-19)
+
+The user requested read-only review before development over SSH LabRS; review
+confirmed Stage21–24 reuse and the native endpoint grid spacing3840/63 m.
+One native Laccolith (raw9 cap+downward stem), seed20261019, was frozen with
+simple raw0/1/3/5 background, flat observed surfaceZ52, center(35,26), cap
+baseZ28/height8/diameter22 cells and stem diameter4.4 cells. Exactly one W9
+well intersects the target; truth has2217 voxels and one connected component.
+
+Authoritative result:
+`experiments/stage25_laccolith_shape/run_20261019_v3/FINAL_REPORT.md`.
+A/B/C used the same fresh valid15-channel CPU seed42 source, same411EMA model,
+32 midpoint-Euler steps and hard projection:3 completed outputs/96 velocity
+calls, zero condition violations. Exactly one Stage22 bounded-TV solve
+converged at609 iterations and was reused without rerunning. Full-target
+IoU A/B/C=0.117973/0.792091/0.786812; ASSD=517.608946/22.754509/23.177768 m;
+volume ratios=1.368065/0.982860/0.992332. C added-well quality is99.9541%,
+12 non-target errors, targetTP/FP/FN247/0/0. Common target subset outside new
+wells has1933 voxels: A/COPY446TP, B1659TP, C1661TP. Full restored direct
+classification targetIoU=1.0, so compression into wells/frozen generation
+still loses shape information. This is one noiseless known-kernel surrogate
+case, not evidence of field validity or generalization.
+
+Approved_v1 full geology/whole-target plates, fixedY26 sections, B/direct
+panels, PNG/PDF, captions, CSV and receipts are saved.16 main focused tests
+and23 existing seismic tests passed, plus a firewall read/write probe.
+Two initial main-engineering failures consumed0 velocity calls: JSON byte
+identity after formatting, and incorrect20-channel source inferred from the
+class default instead of actual checkpoint15. v1/v2 retain those logs and
+frozen inputs; v3 reused inputs/restoration and corrected only invalid noise
+channels, without seed selection or geometry/solver reruns.
+
+Optional seismic started only after MANDATORY_COMPLETE. One existing
+single-member inversion returned, but its new firewall incorrectly blocked
+its own first property-output write; updated fields were lost on process
+exit. Stop rules were respected: no second inversion, noD. Synthetic seismic
+observation/config/failed receipt/log/executed snapshots remain. The firewall
+write exception was fixed and probed without rerunning numerical inversion.
+Actual totals remain3Flow/96 calls,1Gaussian solve,1physical inversion attempt,
+0 saved updated physical fields. No physical scientific conclusion is claimed.
+See `physics/REPORT.md` and `OPTIONAL_PHYSICS.json` for exact limitations.
+
+New code: `scripts/stage25/` and `scripts/stage25_physics/`; no old experiment,
+model, Geo core or approved rendering standard was altered. Do not rerun these
+protected directories or automatically add geometry/seed/parameter scans.
+A same-observation/two-cap-shape experiment or optional-physics retry requires
+separate research authorization/budget. No GitHub push was made.
+
 ## Stage21 step 1 — accurate extra full wells (2026-10-14)
 
 The user explicitly authorized only step 1, including all 45 formal outputs,
