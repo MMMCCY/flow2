@@ -1,0 +1,33 @@
+{
+  "arms": {
+    "D": "updated log impedance classification + same512 wells",
+    "D0": "prior_exact log impedance classification + old512 wells"
+  },
+  "classifier": "all raw0..13 nearest log impedance; first argmin; observed air and original conditions override",
+  "max_new_flow_outputs": 2,
+  "max_successful_inversions": 1,
+  "max_velocity_evaluations": 64,
+  "old_stage25_commit": "e97a92677463f31162f5bec4e9a7bc78a5e0ac47",
+  "one_member": true,
+  "parameter_sweeps": false,
+  "posterior_statistics": false,
+  "precision": "FP32_no_TF32_no_autocast",
+  "seed": 42,
+  "shape": [
+    64,
+    64,
+    64
+  ],
+  "source": "old saved CPU seed42 15-dimensional tensor",
+  "spacing_m": [
+    60.95238095238095,
+    60.95238095238095,
+    60.95238095238095
+  ],
+  "specification_sha256": "4fc2eb55b6a5f264df91c4fbe4cc405b72510d99eab42a9553f39017e1334ed6",
+  "steps": 32,
+  "task": "Stage26 synthetic tracewise poststack/model-based linearized log impedance update",
+  "time_depth": "fixed A prior slowness; no velocity inversion",
+  "truth_gate": false,
+  "weight_policy": "411EMA, checkpoint embedding unchanged"
+}

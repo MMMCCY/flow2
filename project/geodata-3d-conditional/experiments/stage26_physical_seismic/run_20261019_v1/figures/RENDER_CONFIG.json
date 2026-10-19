@@ -1,0 +1,282 @@
+{
+  "all_components_retained": true,
+  "cameras": {
+    "geology": {
+      "direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "focal_point": [
+        32.0,
+        32.0,
+        26.5
+      ],
+      "parallel_projection": true,
+      "parallel_scale": 51.8,
+      "position": [
+        142.07999999999998,
+        -54.400000000000006,
+        114.82
+      ],
+      "right": [
+        0.6174175052143831,
+        0.7866356362731398,
+        -0.0
+      ],
+      "up": [
+        -0.4198481588061972,
+        0.32953198510951526,
+        0.8456572558293513
+      ],
+      "view_up": [
+        0,
+        0,
+        1
+      ],
+      "zoom": 1.0
+    },
+    "target": {
+      "direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "focal_point": [
+        32.0,
+        32.0,
+        29.44
+      ],
+      "parallel_projection": true,
+      "parallel_scale": 54.5,
+      "position": [
+        142.07999999999998,
+        -54.400000000000006,
+        117.75999999999999
+      ],
+      "right": [
+        0.6174175052143831,
+        0.7866356362731398,
+        -0.0
+      ],
+      "up": [
+        -0.4198481588061972,
+        0.32953198510951526,
+        0.8456572558293513
+      ],
+      "view_up": [
+        0,
+        0,
+        1
+      ],
+      "zoom": 1.0
+    }
+  },
+  "checks": [
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "Truth",
+      "full_target_voxels": 2217,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 53079,
+        "1": 32664,
+        "3": 24498,
+        "5": 104630,
+        "9": 2217
+      },
+      "row": 0,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "A",
+      "full_target_voxels": 3033,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 56471,
+        "1": 24928,
+        "10": 72,
+        "11": 12,
+        "2": 1746,
+        "3": 19640,
+        "4": 2314,
+        "5": 108866,
+        "6": 1,
+        "8": 5,
+        "9": 3033
+      },
+      "row": 0,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "D",
+      "full_target_voxels": 1387,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 60291,
+        "1": 21182,
+        "10": 266,
+        "11": 3165,
+        "12": 680,
+        "13": 336,
+        "2": 4306,
+        "3": 15046,
+        "4": 1818,
+        "5": 103938,
+        "6": 335,
+        "7": 469,
+        "8": 1623,
+        "9": 1387
+      },
+      "row": 0,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "Truth",
+      "full_target_voxels": 2217,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 39975,
+        "1": 24600,
+        "3": 18450,
+        "5": 79164,
+        "9": 839
+      },
+      "row": 1,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "A",
+      "full_target_voxels": 3033,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 42413,
+        "1": 18309,
+        "10": 48,
+        "11": 6,
+        "2": 1347,
+        "3": 15354,
+        "4": 2071,
+        "5": 81732,
+        "6": 1,
+        "8": 5,
+        "9": 1742
+      },
+      "row": 1,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "D",
+      "full_target_voxels": 1387,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 45183,
+        "1": 15433,
+        "10": 206,
+        "11": 2808,
+        "12": 476,
+        "13": 232,
+        "2": 3326,
+        "3": 11834,
+        "4": 1527,
+        "5": 77611,
+        "6": 249,
+        "7": 329,
+        "8": 1350,
+        "9": 827
+      },
+      "row": 1,
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "Truth",
+      "full_target_voxels": 2217,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 2217
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "A",
+      "full_target_voxels": 3033,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 3033
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "D",
+      "full_target_voxels": 1387,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 1387
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "D0",
+      "full_target_voxels": 4054,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 4054
+      },
+      "target_only": true
+    }
+  ],
+  "inputs": {
+    "A": {
+      "file_sha256": "bba58a70e45e07a80f65cffeb3d36905e478cd5afdc9cf323fa939b77ddccafd",
+      "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/arms/A/predictions/seed42/decoded_geology.pt",
+      "tensor_sha256": "172460fe12d0a2ab07e760941cdb149b0e253460fcf7e26a554b3bb8cf4f7200"
+    },
+    "D": {
+      "file_sha256": "518639e947f211411802f178a2f37e77d623e3d392c26a1e8fefa45d77256886",
+      "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/run_20261019_v1/arms/D/predictions/seed42/decoded_geology.pt",
+      "tensor_sha256": "20b3b8036e3afc0c4d131f3b8af610d11bb9e82c01c4178d4f288ef33491aaf0"
+    },
+    "D0": {
+      "file_sha256": "4215a6eb0211d37769904c0bd48953bdeecba3c5024ca98a32e87fc7797b2bc9",
+      "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/run_20261019_v1/arms/D0/predictions/seed42/decoded_geology.pt",
+      "tensor_sha256": "61d9cb31b93acadcc5101dc248b7ef8c106f1ce8a2ecae6641dfa3ae2b666727"
+    },
+    "Truth": {
+      "file_sha256": "2aa15cb16d8a104058eaa31fc708f45adf079d3f57aae6608d520363b88b8442",
+      "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v1/truth/labels.pt",
+      "tensor_sha256": "ac8dd63f6f2c973d9e17bc6a0e117bbc49cb5c5bc271d0a58673c4068cb14195"
+    }
+  },
+  "plot_model_calls": 0,
+  "render_source_sha256": "2040c5f8657e01c0b5549343efb09ecef051f85823e5940ccbcc716e4fa0c343",
+  "section": {
+    "axis": "Y",
+    "index": 26,
+    "selection": "pre-fixed Stage25 center"
+  },
+  "seismic": {
+    "independent_scaling": false,
+    "num_samples": 400,
+    "sample_interval_ms": 8.0,
+    "section_Y": 26,
+    "shared_color_limits": [
+      -0.6117121884154126,
+      0.6117121884154126
+    ],
+    "time_axis": "TWT milliseconds; not depth"
+  },
+  "standard": "geology_approved_v1",
+  "standard_sha256": "f35dd0fb7e9c9664b7d723b856229c73771f86c388c17e023c2500599c86231c",
+  "target_cutaway": false,
+  "visual_inspection": "completed",
+  "visual_inspection_notes": "Opened main full geology, whole target, Y26 geology, D0 standalone center section and Y26 seismic PNGs. Approved fixed cameras/colors/layout match Stage25; all target fragments/FP preserved. D subsurface white air cells and mixed geology remain visible. Seismic three columns share amplitude scale and complete fixed time axis; no depth/time confusion."
+}

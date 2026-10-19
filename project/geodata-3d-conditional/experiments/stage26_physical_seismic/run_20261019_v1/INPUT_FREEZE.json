@@ -1,0 +1,107 @@
+{
+  "A_prediction": {
+    "file_sha256": "bba58a70e45e07a80f65cffeb3d36905e478cd5afdc9cf323fa939b77ddccafd",
+    "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/arms/A/predictions/seed42/decoded_geology.pt",
+    "tensor_sha256": "172460fe12d0a2ab07e760941cdb149b0e253460fcf7e26a554b3bb8cf4f7200"
+  },
+  "config_sha256": {
+    "acoustic_codebook.json": "2bbaf841af68b2fc867a848ba00f0ad3913cd4fbb759ad4a9f80a5ad9f09f710",
+    "inversion_config.json": "060cb2eabbf7ff91a0f2525b4e699d095b2e8b9255efa6b0a85c64037650b232",
+    "observation_config.json": "acd6a2b45f4b129a909f5273101b80fc75fd732b76dc582adcac056ce599bfef"
+  },
+  "frozen_at_utc": "2026-10-19T14:01:24.259991+00:00",
+  "git": {
+    "branch": "main",
+    "head": "e97a92677463f31162f5bec4e9a7bc78a5e0ac47",
+    "status_short": "?? STAGE26_PHYSICAL_SEISMIC_TASK_2026-10-19.md\n?? project/geodata-3d-conditional/experiments/stage26_physical_seismic/\n?? project/geodata-3d-conditional/scripts/stage26/"
+  },
+  "historical_failed_inversion_attempts": 1,
+  "layout_sha256": "bbd75234860bb437aa2bfe4f14ac4ca4be2f4340e35f0484e1625e5b6820a50b",
+  "new_budget": true,
+  "noise": {
+    "file_sha256": "cb210b3b23c73670822bdd1e30a51bf78054f75932e5a04bde6c48f18457717a",
+    "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/source/seed42.pt",
+    "tensor_sha256": "6c4f6450e0e2eb2103d190b9747a1af6bc8e806c00a973a54511ea7bdd1ae81d"
+  },
+  "observation": {
+    "file_sha256": "d36eafeefb706076895daace4df80b59f16ff449cc86b282be9b4f6141a39188",
+    "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/physics/observations/seismic.pt",
+    "tensor_sha256": "ff01890cc2929c822eab266305f3568e6b3be336080382e0bf2201ed9eb00ff5"
+  },
+  "observation_reused_without_recompute": true,
+  "old_observation_freeze_sha256": "dc2872f78713b8767cd92f30235e03b67e53cdf76c0905640ac1ad2651e857d4",
+  "old_observation_producer_source": {
+    "project/geodata-3d-conditional/experiments/stage4_seismic/configs/acoustic_distinct_label9_upper_bound_v1.json": "8980e30c59624af9f1bfa59447b7e22c85a2975f8a556fe6e98f5346f95d10ae",
+    "project/geodata-3d-conditional/experiments/stage4_seismic/configs/full_cube_noiseless_inverse_crime_v1.json": "7ee49c3c1c685126cf9b727e05a895463734b4335300ccbad6d6dd6a865bfd02",
+    "project/geodata-3d-conditional/experiments/stage5_acoustic_inversion/configs/model_based_log_impedance_v1.json": "6b690aec3978b48bc6922e7387fc9fca55566e2b54d5f1e2dcb2669143f79088",
+    "project/geodata-3d-conditional/guidance/seismic.py": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee",
+    "project/geodata-3d-conditional/guidance/seismic_inversion.py": "2cc6a984002788e0216de491a9543b59098bf38f905aa1df491b472145f81c83",
+    "project/geodata-3d-conditional/scripts/stage25_physics/common.py": "44567ad82230d591f88c5e3638362c6c77de2ee0f8dcd83c945a03797ebb37b2",
+    "project/geodata-3d-conditional/scripts/stage25_physics/evaluate_plot.py": "f5f66f063fe332dd4b974c47bc22220508141f987ad65f200f8b3a69b14f348c",
+    "project/geodata-3d-conditional/scripts/stage25_physics/invert.py": "2b504bb4104c43f28ed1585ca32f2a292001fef2496c7295f8a7ae23a55519eb",
+    "project/geodata-3d-conditional/scripts/stage25_physics/observe.py": "9b52215a1286145c5c09a6ae8e52f2ca5dc3e6d77b4df351aa6c65d58e81215d"
+  },
+  "original_conditions": {
+    "mask": {
+      "file_sha256": "caaadf2692e2b98a43ec2cd6efbc208e029dd138c8686c06c1b053d8ceb17495",
+      "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/arms/A/conditions/mask.pt",
+      "tensor_sha256": "7061d03a63ebf11c3983d9cfb83335ec0f43ab169e826ee39e32283733caa4c4"
+    },
+    "original_mask": {
+      "file_sha256": "26c93a40c9960afa0e931684cb6e53fa7f59e2c6023dac5c3e4be42bc591e3c6",
+      "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/arms/A/conditions/original_mask.pt",
+      "tensor_sha256": "7061d03a63ebf11c3983d9cfb83335ec0f43ab169e826ee39e32283733caa4c4"
+    },
+    "original_values": {
+      "file_sha256": "2d414ee67da8faa7cdf7712077eda6d54d866ea26c879bc288b84c5dd02daaa4",
+      "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/arms/A/conditions/original_values.pt",
+      "tensor_sha256": "d42f3e39ebe8de9bad1af3a8baef2e4c1f577a7e93119ffca93622a97ca6c0cd"
+    },
+    "values": {
+      "file_sha256": "8cd36756b6d308f97de058b1a6169c321f40915d0c595fa8af15822bcd559927",
+      "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/arms/A/conditions/values.pt",
+      "tensor_sha256": "d42f3e39ebe8de9bad1af3a8baef2e4c1f577a7e93119ffca93622a97ca6c0cd"
+    }
+  },
+  "protocol_sha256": "1c2b708d77fc253260cabc62da897825466de757f7170670b924c969dbcaa65d",
+  "source_sha256": {
+    "project/geodata-3d-conditional/boreholes.py": "b0656303987fef04241a70a1df1a6ca4c2897d6c1e4de6470f492487fc038630",
+    "project/geodata-3d-conditional/callbacks.py": "2fda1d0e3ea701664b509e1b0347561155364fc31e9c046b980a4287e7227ffa",
+    "project/geodata-3d-conditional/guidance/dflow.py": "62f97242c9209417c6bd7dec239bfa15614edd2a4c2194f012bd7b9a62673440",
+    "project/geodata-3d-conditional/guidance/generator_posterior.py": "9faf5d1a27146992e30678e7f83bc0d6e4bbf6181406546f6dc981dca798fc28",
+    "project/geodata-3d-conditional/guidance/probability_sampling.py": "2aa6119fa8517176eb0d1b8f6892ebdd14cc3051a43dd8e030099150f69bec9f",
+    "project/geodata-3d-conditional/guidance/probability_volume.py": "01b70740d84994877996eb6c0e15ddd7d962731d984c096781371f0bea4269a3",
+    "project/geodata-3d-conditional/guidance/seismic.py": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee",
+    "project/geodata-3d-conditional/guidance/seismic_inversion.py": "2cc6a984002788e0216de491a9543b59098bf38f905aa1df491b472145f81c83",
+    "project/geodata-3d-conditional/inference_runtime.py": "246ba9cc8b8e80ce86d7e9d059010d7b030b87e793d911cef8e8d3478786e838",
+    "project/geodata-3d-conditional/model_train_sh_inference_cond.py": "36d0dc613d8860677f137a2f1d681ebcc50829a6d90f5547c6eac3fd12a977c2",
+    "project/geodata-3d-conditional/scripts/stage21/common.py": "2c954bd90fcacccae975b2aab1f0053f272c82e40861514d03cfd15c90933aac",
+    "project/geodata-3d-conditional/scripts/stage21/run.py": "7203c2de9963e7d8bf93faa78414fd630fc6a973c7d0b1236ee5cf2133032f12",
+    "project/geodata-3d-conditional/scripts/stage21v2/common.py": "07438ade8b08d6d4d213f60b87e783ba7dec6595215cad0a6a99c09418da7842",
+    "project/geodata-3d-conditional/scripts/stage26/common.py": "715cb80a4cc46a0d8e6db035644694449128a126ef7500ced8c966591cf2eb83",
+    "project/geodata-3d-conditional/scripts/stage26/prepare.py": "371ded0dfc732f7ca4717ea35fca4c31a0cc7afbad85b78434a733c979055605",
+    "project/geodata-3d-conditional/scripts/stage26/run.py": "2876ce427cc73ecd61f9d9d60eb6dd913cd9877899439c05ae2ead4341a49b56",
+    "project/geodata-3d-conditional/utils.py": "9c86f93f4daf85b61e559f5d10e7877c4b6956ccc638a2d3977add6a029199f0",
+    "src/flowtrain/__init__.py": "a04565ca80195ef3cb56ebdbcf003df94935686ca7b5015fba3cfd86b409dc72",
+    "src/flowtrain/dataloaders/__init__.py": "ec8fd0ca57517fee6ea7caf3cae94d600caacdc5e7852caa1b28464532f69655",
+    "src/flowtrain/dataloaders/practicedata.py": "461b2b1e4386895550c357863ffbac8f395a3cc9eae8e53daa79d2cf00ded0fd",
+    "src/flowtrain/interpolation/__init__.py": "5f8aa7f1485ae50313e01c44e5bd183add74d72116fbe1f5fb9a49e9188afcb5",
+    "src/flowtrain/interpolation/interpolation.py": "42a378b8c84ae7cdbf65b2560e12a6dca255b738730918273d7946064761b116",
+    "src/flowtrain/models/__init__.py": "f08fcd07f362b716ae3d09b4a1612ff068f281ebde153e4d4f7a0f81b6abcae2",
+    "src/flowtrain/models/persistence.py": "979e5bbbff9673c05bdf49826d02e9e7609e8e63e4c9f571146bb9a7bf2f1516",
+    "src/flowtrain/models/unet_2d.py": "de51dc8c5565d77a8f1835f57118b67703e5e824a1486cefbceb4e0d7621833b",
+    "src/flowtrain/models/unet_attn_3d.py": "65c42ebd9b80196148b929f8e42da1917195e5367d4795425759b55ae6a1b625",
+    "src/flowtrain/models/unet_attn_3d_cond.py": "193f345ef7d4f3586720805d8089d32e3cb7853b2359160499d1909313bbe003",
+    "src/flowtrain/models/unet_attn_3d_cond_v2.py": "64cd4d8f46947e2f6add988b4482ef3954d139b6c6b17f7cd9c5070d29ee8894",
+    "src/flowtrain/models/unet_attn_3d_cond_v3.py": "7a5dfe0af0916b88e54d45c37fd461b9a8266d20c91e0126c71dee5e90c40d6c",
+    "src/flowtrain/solvers/__init__.py": "646a8911d607be3f48404463a684767a891987f4723cca7550ad702bf3e4b257",
+    "src/flowtrain/solvers/solvers.py": "c4a008cc03144252ef46642e861d6c42fbe00cc30969f3a30128bab9d0e27025",
+    "src/flowtrain/utils/__init__.py": "a86b00948ed30bd6c73a7dac45ecc9f79008db661deddbfc6efee85458fa1e88",
+    "src/flowtrain/utils/plotting.py": "e00198cd6a98e23fbce10882f108d0e9e85f9ee38ca3034b4bd046508337fa00"
+  },
+  "subsurface": {
+    "file_sha256": "fdd18a627a87e26f030e73a2c00b4b5ac5e647a3974ae85e6d655c7105504d0f",
+    "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/physics/conditions/subsurface.pt",
+    "tensor_sha256": "0fa08d6b3b6b64abcf981f8ef14cdd7830223b5e81714ae74f8d5abff566ef43"
+  }
+}

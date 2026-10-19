@@ -1,5 +1,60 @@
 # Development handoff
 
+## Stage26 — physical seismic bridge with prior-only control (2026-10-19)
+
+The user explicitly authorized a fresh Stage26 budget after the Stage25
+optional inversion-save failure. Remote LabRS and local baseline both match
+main@e97a92677463f31162f5bec4e9a7bc78a5e0ac47. Stage25 geometry/A/B/C,
+15D seed42 source, original conditions/layout/holdout, existing seismic
+observation and exact configs were reused without recomputation or edits.
+
+Authoritative result:
+`experiments/stage26_physical_seismic/run_20261019_v1/REPORT.md`.
+One existing single-member inversion completed and was atomically saved
+before hash/metadata work; own-output write/hash/read/load regression passes.
+A slowness is unchanged, no velocity estimation, no posterior statistics.
+D0 uses prior_exact log-impedance classes; D uses updated log-impedance
+classes, same512 layout, all raw0..13, original priority.4025 added labels
+differ, so two new32-step frozen Flow predictions completed (64 calls),
+zero condition violations. No A/B/C reruns, noise/geometry changes or sweeps.
+
+Scientific verdict is negative for this case. Continuous relative seismic
+L2 improves1.849282 ->1.139643, but pseudo-well all-class accuracy declines
+86.6417% ->79.9778% (D0 ->D):49 wrong-to-right,1792 right-to-wrong,
+2184 wrong-to-other-wrong. Whole target IoU A/D0/D is
+0.117973/0.112077/0.086524; boundary-voxel mean distance
+517.61/616.73/545.56m. Common1933-voxel off-new-well target coverage
+is446/524/191 TP. D has lessFP but also more target loss, not shape recovery.
+Final hard D0/D geological acoustic re-forward relativeL2 is1.902214/4.006694.
+Full updated direct classification hasIoU0.139236 and seismic error1.154766,
+which must remain visible, but is not an equal-information competition.
+
+D contains2246 subsurface air predictions; preserved without repair.218 of
+212992 valid-interface arrivals exceed the fixed3192ms window (max4364.32ms),
+handled by the original prediction crop policy and explicitly reported.
+This is added generated-geology physical inconsistency, not a reason to
+change the frozen record window or remove failures. Inversion/classification
+quality was already limited before Flow; well compression/conditional
+sampling adds further loss. No single causal bottleneck is established.
+
+Approved_v1 Truth/A/D whole-geology/target plates, fixedY26 geology,
+D0 independent panels and same-Y26 time-domain seismic with shared scale
+are delivered asPNG/PDF and visually inspected.10 focused CPU tests pass,
+including actual write->rb hash->load and forbidden-input checks. Numerical
+or Flow engineering retries0; one final inline validation syntax typo was
+corrected without numerical work. Historical Stage25 failed attempt1 remains
+separate from this successful inversion1. Sources/configs/receipts/CSV,
+raw numerical bundle, reports, commands and timing are retained.
+
+Only synthetic tracewise poststack convolution + one model-based linearized
+log-impedance update is tested: known wavelet, artificial strong target
+acoustics, no added noise, same-operator inverse crime, fixed A time-depth
+mapping. No field/full-wave/3D propagation or generalization claim.
+Stop after this complete negative result; further timing-error/noise or
+same-condition/two-shape studies require a separate research decision.
+New code is isolated in `scripts/stage26/`; old science is unchanged.
+No GitHub push was made.
+
 ## Stage25 — native laccolith shape experiment (2026-10-19)
 
 The user requested read-only review before development over SSH LabRS; review

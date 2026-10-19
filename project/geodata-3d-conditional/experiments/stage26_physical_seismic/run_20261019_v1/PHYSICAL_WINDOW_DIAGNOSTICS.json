@@ -1,0 +1,44 @@
+{
+  "new_Flow_calls": 0,
+  "new_geology_edits": 0,
+  "new_inversions": 0,
+  "rows": [
+    {
+      "arm": "D0",
+      "forward_policy": "unchanged operator crops arrivals outside fixed recording window; no label repair/air cleanup of final geology",
+      "interfaces_after_recording_end": 0,
+      "maximum_valid_interface_twt_ms": 1843.5421426381379,
+      "recording_end_ms": 3192.0,
+      "underground_air_voxels": 0,
+      "valid_interfaces": 212992
+    },
+    {
+      "arm": "D",
+      "forward_policy": "unchanged operator crops arrivals outside fixed recording window; no label repair/air cleanup of final geology",
+      "interfaces_after_recording_end": 218,
+      "maximum_valid_interface_twt_ms": 4364.323488303596,
+      "recording_end_ms": 3192.0,
+      "underground_air_voxels": 2246,
+      "valid_interfaces": 212992
+    },
+    {
+      "arm": "DIRECT_PRIOR",
+      "forward_policy": "unchanged operator crops arrivals outside fixed recording window; no label repair/air cleanup of final geology",
+      "interfaces_after_recording_end": 0,
+      "maximum_valid_interface_twt_ms": 1843.5421426381379,
+      "recording_end_ms": 3192.0,
+      "underground_air_voxels": 0,
+      "valid_interfaces": 212992
+    },
+    {
+      "arm": "DIRECT_UPDATED",
+      "forward_policy": "unchanged operator crops arrivals outside fixed recording window; no label repair/air cleanup of final geology",
+      "interfaces_after_recording_end": 0,
+      "maximum_valid_interface_twt_ms": 1841.0011256734524,
+      "recording_end_ms": 3192.0,
+      "underground_air_voxels": 0,
+      "valid_interfaces": 212992
+    }
+  ],
+  "status": "completed"
+}
