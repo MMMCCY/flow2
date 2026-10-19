@@ -1,0 +1,13 @@
+field,region,error_definition,voxels,MAE
+prior_exact,original_free_all,natural-log impedance MAE; identical physical units,212524,0.053832609280340914
+prior_exact,original_free_target,natural-log impedance MAE; identical physical units,2180,0.3137144531027239
+prior_exact,original_free_non_target,natural-log impedance MAE; identical physical units,210344,0.05113920029537914
+prior_exact,added_FULL_right_to_wrong,natural-log impedance MAE; identical physical units,1792,0.0
+updated,original_free_all,natural-log impedance MAE; identical physical units,212524,0.052152843521676415
+updated,original_free_target,natural-log impedance MAE; identical physical units,2180,0.2785336505149696
+updated,original_free_non_target,natural-log impedance MAE; identical physical units,210344,0.04980663845167023
+updated,added_FULL_right_to_wrong,natural-log impedance MAE; identical physical units,1792,0.10411750721000515
+oracle_updated,original_free_all,natural-log impedance MAE; identical physical units,212524,0.05332079521865918
+oracle_updated,original_free_target,natural-log impedance MAE; identical physical units,2180,0.2536277014865171
+oracle_updated,original_free_non_target,natural-log impedance MAE; identical physical units,210344,0.05124481940920452
+oracle_updated,added_FULL_right_to_wrong,natural-log impedance MAE; identical physical units,1792,0.10423037158775386

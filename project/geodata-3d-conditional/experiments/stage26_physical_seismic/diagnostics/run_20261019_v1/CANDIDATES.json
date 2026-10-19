@@ -1,0 +1,54 @@
+{
+  "added_missing_target": false,
+  "candidates": {
+    "FULL": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "OBSERVED": [
+      0,
+      1,
+      3,
+      5,
+      9
+    ]
+  },
+  "not_a_deployable_universal_class_prior": true,
+  "selected_at_utc": "2026-10-19T14:28:18.102092+00:00",
+  "source_condition": {
+    "mask": {
+      "file_sha256": "caaadf2692e2b98a43ec2cd6efbc208e029dd138c8686c06c1b053d8ceb17495",
+      "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/arms/A/conditions/mask.pt",
+      "tensor_sha256": "7061d03a63ebf11c3983d9cfb83335ec0f43ab169e826ee39e32283733caa4c4"
+    },
+    "original_mask": {
+      "file_sha256": "26c93a40c9960afa0e931684cb6e53fa7f59e2c6023dac5c3e4be42bc591e3c6",
+      "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/arms/A/conditions/original_mask.pt",
+      "tensor_sha256": "7061d03a63ebf11c3983d9cfb83335ec0f43ab169e826ee39e32283733caa4c4"
+    },
+    "original_values": {
+      "file_sha256": "2d414ee67da8faa7cdf7712077eda6d54d866ea26c879bc288b84c5dd02daaa4",
+      "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/arms/A/conditions/original_values.pt",
+      "tensor_sha256": "d42f3e39ebe8de9bad1af3a8baef2e4c1f577a7e93119ffca93622a97ca6c0cd"
+    },
+    "values": {
+      "file_sha256": "8cd36756b6d308f97de058b1a6169c321f40915d0c595fa8af15822bcd559927",
+      "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/arms/A/conditions/values.pt",
+      "tensor_sha256": "d42f3e39ebe8de9bad1af3a8baef2e4c1f577a7e93119ffca93622a97ca6c0cd"
+    }
+  },
+  "used_B_C": false,
+  "used_full_truth": false
+}

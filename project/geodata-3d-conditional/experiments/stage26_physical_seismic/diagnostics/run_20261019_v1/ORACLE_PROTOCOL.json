@@ -1,0 +1,19 @@
+{
+  "changed_module": "truth slowness affects BOTH prior seismic TWT and time-to-depth correction",
+  "config_sha256": {
+    "acoustic_codebook.json": "2bbaf841af68b2fc867a848ba00f0ad3913cd4fbb759ad4a9f80a5ad9f09f710",
+    "inversion_config.json": "060cb2eabbf7ff91a0f2525b4e699d095b2e8b9255efa6b0a85c64037650b232",
+    "observation_config.json": "acd6a2b45f4b129a909f5273101b80fc75fd732b76dc582adcac056ce599bfef"
+  },
+  "initial_impedance": "identical voxelwise to saved prior_exact",
+  "no_Flow": true,
+  "no_formal_registry": true,
+  "role": "ORACLE_DIAGNOSTIC_ONLY",
+  "truth_asset": {
+    "file_sha256": "2aa15cb16d8a104058eaa31fc708f45adf079d3f57aae6608d520363b88b8442",
+    "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v1/truth/labels.pt",
+    "tensor_sha256": "ac8dd63f6f2c973d9e17bc6a0e117bbc49cb5c5bc271d0a58673c4068cb14195"
+  },
+  "truth_impedance_used": false,
+  "truth_labels_given_to_classifier": false
+}

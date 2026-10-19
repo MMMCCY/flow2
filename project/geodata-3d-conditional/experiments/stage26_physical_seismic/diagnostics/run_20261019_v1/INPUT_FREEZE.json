@@ -1,0 +1,176 @@
+{
+  "candidate_file_sha256": "f43f6d28408140cafb22894d9db19a2b6bddcf5564d177968299cd7f8429eed2",
+  "candidates": {
+    "FULL": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "OBSERVED": [
+      0,
+      1,
+      3,
+      5,
+      9
+    ]
+  },
+  "config_sha256": {
+    "acoustic_codebook.json": "2bbaf841af68b2fc867a848ba00f0ad3913cd4fbb759ad4a9f80a5ad9f09f710",
+    "inversion_config.json": "060cb2eabbf7ff91a0f2525b4e699d095b2e8b9255efa6b0a85c64037650b232",
+    "observation_config.json": "acd6a2b45f4b129a909f5273101b80fc75fd732b76dc582adcac056ce599bfef"
+  },
+  "dense_conditions": {
+    "D": {
+      "mask": {
+        "file_sha256": "02054778752198bcf1cdc244319e14d8c6fda58e6339103c9932ef958f3f06ef",
+        "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/run_20261019_v1/arms/D/conditions/mask.pt",
+        "tensor_sha256": "4e773f4bf4b473b31c67351de342fbc7f448dcb3f4faccb6ced78713aa9aaea2"
+      },
+      "original_mask": {
+        "file_sha256": "26c93a40c9960afa0e931684cb6e53fa7f59e2c6023dac5c3e4be42bc591e3c6",
+        "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/run_20261019_v1/arms/D/conditions/original_mask.pt",
+        "tensor_sha256": "7061d03a63ebf11c3983d9cfb83335ec0f43ab169e826ee39e32283733caa4c4"
+      },
+      "original_values": {
+        "file_sha256": "2d414ee67da8faa7cdf7712077eda6d54d866ea26c879bc288b84c5dd02daaa4",
+        "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/run_20261019_v1/arms/D/conditions/original_values.pt",
+        "tensor_sha256": "d42f3e39ebe8de9bad1af3a8baef2e4c1f577a7e93119ffca93622a97ca6c0cd"
+      },
+      "values": {
+        "file_sha256": "b15688053e59d3736c9aa56fb610f821b508336a5abc33d120c7ec8112ec329e",
+        "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/run_20261019_v1/arms/D/conditions/values.pt",
+        "tensor_sha256": "72790cc5386226637db7b4ce3003d0040a0c0e57efac697d7b0fd718d2ff6f0b"
+      }
+    },
+    "D0": {
+      "mask": {
+        "file_sha256": "02054778752198bcf1cdc244319e14d8c6fda58e6339103c9932ef958f3f06ef",
+        "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/run_20261019_v1/arms/D0/conditions/mask.pt",
+        "tensor_sha256": "4e773f4bf4b473b31c67351de342fbc7f448dcb3f4faccb6ced78713aa9aaea2"
+      },
+      "original_mask": {
+        "file_sha256": "26c93a40c9960afa0e931684cb6e53fa7f59e2c6023dac5c3e4be42bc591e3c6",
+        "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/run_20261019_v1/arms/D0/conditions/original_mask.pt",
+        "tensor_sha256": "7061d03a63ebf11c3983d9cfb83335ec0f43ab169e826ee39e32283733caa4c4"
+      },
+      "original_values": {
+        "file_sha256": "2d414ee67da8faa7cdf7712077eda6d54d866ea26c879bc288b84c5dd02daaa4",
+        "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/run_20261019_v1/arms/D0/conditions/original_values.pt",
+        "tensor_sha256": "d42f3e39ebe8de9bad1af3a8baef2e4c1f577a7e93119ffca93622a97ca6c0cd"
+      },
+      "values": {
+        "file_sha256": "f41ba5130fca6edd68d5f4ac80c575774428e5cbe9b9cd5423658935efb60f10",
+        "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/run_20261019_v1/arms/D0/conditions/values.pt",
+        "tensor_sha256": "35730fb1ab61bfdd082b6aa437df67715b8954973dab0758e43c6567051b00b3"
+      }
+    }
+  },
+  "git": {
+    "branch": "main",
+    "head": "a251087d4e958bdc0c30fe98d29d24252f53b8fc",
+    "status_short": "?? STAGE26_DIAGNOSTICS_TASK_2026-10-19.md\n?? project/geodata-3d-conditional/experiments/stage26_physical_seismic/diagnostics/\n?? project/geodata-3d-conditional/scripts/stage26_diagnostics/"
+  },
+  "observation": {
+    "file_sha256": "d36eafeefb706076895daace4df80b59f16ff449cc86b282be9b4f6141a39188",
+    "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/physics/observations/seismic.pt",
+    "tensor_sha256": "ff01890cc2929c822eab266305f3568e6b3be336080382e0bf2201ed9eb00ff5"
+  },
+  "old_assets": {
+    "classification_D": {
+      "file_sha256": "4c2185472af1e813422131742097c65f93c27bc20b8b335d3e01ac803593e533",
+      "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/run_20261019_v1/preprocessing/classification_D.pt",
+      "tensor_sha256": "d84a53ed9c47d7e0aa43cab3fb43940f3e753d90af18a15d7366c10748dc582b"
+    },
+    "classification_D0": {
+      "file_sha256": "fbfc906297c9a408b616afae3e55c9385cd01009f9b8235dfe2a205ea89b6d9b",
+      "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/run_20261019_v1/preprocessing/classification_D0.pt",
+      "tensor_sha256": "172460fe12d0a2ab07e760941cdb149b0e253460fcf7e26a554b3bb8cf4f7200"
+    },
+    "prior_exact": {
+      "file_sha256": "654e0cc051d31b999ecba9dcc5b17a5ea702553ac056161936a811318831dd72",
+      "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/run_20261019_v1/preprocessing/prior_exact.pt",
+      "tensor_sha256": "626c509c8ac18317f294c9386a68eeeac27b6e4110b0748f7ce2fed98b8313ba"
+    },
+    "prior_seismic": {
+      "file_sha256": "cb0b6905de4fb3aa362e9a4509178f3b85a3bd12f763aff4e306a082d3edc18c",
+      "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/run_20261019_v1/preprocessing/prior_seismic.pt",
+      "tensor_sha256": "4a50ecf0877b1d39bfe561c6c5195d154b33e6df71af92e8422f5a0cf57e0a51"
+    },
+    "updated": {
+      "file_sha256": "395f8c53f7e9139e84ad5e55f08cc01534970e521da665bdcd97a5d8c90adc5f",
+      "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/run_20261019_v1/preprocessing/updated.pt",
+      "tensor_sha256": "32788d9e28904feb81824a8c89e8f6c234d3fdc5162392f25df374ea8436aa71"
+    },
+    "updated_seismic": {
+      "file_sha256": "08fd86f533b033164d77cf27eec39a9e78db67686c5fb02fcecf6a7d136a360e",
+      "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/run_20261019_v1/preprocessing/updated_seismic.pt",
+      "tensor_sha256": "9847d846679377be7b7926b2fa4929f96af35bb0e737fc562afdc71649a11157"
+    }
+  },
+  "old_formal_metadata_sha256": {
+    "CONDITIONS_FROZEN.json": "dde390b7c37900b7da350aa8bf1f5a8b6ee07770a25878af72dccd0cad065a81",
+    "EVALUATION.json": "df94b8ab12d24e9bacae4496afb627b4c5a2e02fc890463cfbaa5db579980364",
+    "FINAL_CHECKS.json": "bab266ec69450ec4831dc1debe80ee75ea1e08d1125b18f95f5c34ca8a7794b7",
+    "INPUT_FREEZE.json": "12bc7dfd6a622ee4093d1f55bc4a68dbb0be2036f3ab5048ff1b4ca6c13ee91e",
+    "INVERSION_STATE.json": "95e0e442e47c6e31e9cd20dfa25274898094f3fdb9b2da54dbc8ab3b09b0280e",
+    "REPORT.md": "1573ae6a84d06f960cdf72ee20b87639423e70a31ff225890d5ec6adc3dccb94"
+  },
+  "original_conditions": {
+    "mask": {
+      "file_sha256": "caaadf2692e2b98a43ec2cd6efbc208e029dd138c8686c06c1b053d8ceb17495",
+      "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/arms/A/conditions/mask.pt",
+      "tensor_sha256": "7061d03a63ebf11c3983d9cfb83335ec0f43ab169e826ee39e32283733caa4c4"
+    },
+    "original_mask": {
+      "file_sha256": "26c93a40c9960afa0e931684cb6e53fa7f59e2c6023dac5c3e4be42bc591e3c6",
+      "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/arms/A/conditions/original_mask.pt",
+      "tensor_sha256": "7061d03a63ebf11c3983d9cfb83335ec0f43ab169e826ee39e32283733caa4c4"
+    },
+    "original_values": {
+      "file_sha256": "2d414ee67da8faa7cdf7712077eda6d54d866ea26c879bc288b84c5dd02daaa4",
+      "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/arms/A/conditions/original_values.pt",
+      "tensor_sha256": "d42f3e39ebe8de9bad1af3a8baef2e4c1f577a7e93119ffca93622a97ca6c0cd"
+    },
+    "values": {
+      "file_sha256": "8cd36756b6d308f97de058b1a6169c321f40915d0c595fa8af15822bcd559927",
+      "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/arms/A/conditions/values.pt",
+      "tensor_sha256": "d42f3e39ebe8de9bad1af3a8baef2e4c1f577a7e93119ffca93622a97ca6c0cd"
+    }
+  },
+  "prepared_at_utc": "2026-10-19T14:28:18.436583+00:00",
+  "reproduction": {
+    "prior_exact": "exact_tensor_equal_to_original_and_saved_labels",
+    "updated": "exact_tensor_equal_to_original_and_saved_labels"
+  },
+  "roles": {
+    "oracle": "ORACLE_DIAGNOSTIC_ONLY; never sent to Flow",
+    "truth": "evaluation; ORACLE slowness only in separate entry"
+  },
+  "source_sha256": {
+    "project/geodata-3d-conditional/guidance/seismic.py": "d82f41f2d42808e0e8249d23c05922ea135872be1b7b329a4712794b28b10fee",
+    "project/geodata-3d-conditional/guidance/seismic_inversion.py": "2cc6a984002788e0216de491a9543b59098bf38f905aa1df491b472145f81c83",
+    "project/geodata-3d-conditional/scripts/stage21/common.py": "2c954bd90fcacccae975b2aab1f0053f272c82e40861514d03cfd15c90933aac",
+    "project/geodata-3d-conditional/scripts/stage21v2/common.py": "07438ade8b08d6d4d213f60b87e783ba7dec6595215cad0a6a99c09418da7842",
+    "project/geodata-3d-conditional/scripts/stage26/common.py": "715cb80a4cc46a0d8e6db035644694449128a126ef7500ced8c966591cf2eb83",
+    "project/geodata-3d-conditional/scripts/stage26_diagnostics/common.py": "1e4d5d17e840f165c59482f1f64b2285acc33dfa38c0c33adacd395ca4f9425a",
+    "project/geodata-3d-conditional/scripts/stage26_diagnostics/oracle.py": "bab9ac33faac7d6637bbfd75c251fcb188e619ac875f62ac2e3d1386d21f4e25",
+    "project/geodata-3d-conditional/scripts/stage26_diagnostics/prepare.py": "6968da5175aa7d4df71433213f0b5eda64d15365991e4b2f216d8769725b4688"
+  },
+  "specification_sha256": "b1cf8e5f1edb19efc26d0bf976c2d417a765ffa1adb15eaf3b0a41dca0fc49ce",
+  "subsurface": {
+    "file_sha256": "fdd18a627a87e26f030e73a2c00b4b5ac5e647a3974ae85e6d655c7105504d0f",
+    "path": "project/geodata-3d-conditional/experiments/stage25_laccolith_shape/run_20261019_v3/physics/conditions/subsurface.pt",
+    "tensor_sha256": "0fa08d6b3b6b64abcf981f8ef14cdd7830223b5e81714ae74f8d5abff566ef43"
+  }
+}

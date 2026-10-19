@@ -1,0 +1,47 @@
+{
+  "assets": {
+    "prior": {
+      "file_sha256": "ce7632f2440153a748066d0e3ff5a77f727e22dd845232b564917ac30670bd05",
+      "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/diagnostics/run_20261019_v1/oracle/ORACLE_DIAGNOSTIC_ONLY_prior.pt",
+      "tensor_sha256": "04e770950104fd15c9532143af18893d3025599878fafeab81e91a5b39ad9f6e"
+    },
+    "prior_seismic": {
+      "file_sha256": "2560cd11713f15d5b798ec0b21ad72b7917de386f6494dfc91140ebd9151d3e1",
+      "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/diagnostics/run_20261019_v1/oracle/ORACLE_DIAGNOSTIC_ONLY_prior_seismic.pt",
+      "tensor_sha256": "c1b6dda07758e1fb57407889899b78bbc98102177561da34a54025f8ab913c41"
+    },
+    "updated": {
+      "file_sha256": "0da67495034c10a3cd5c843cfbf52f8b8e5ab23ea3f173887ab05b290bc2585a",
+      "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/diagnostics/run_20261019_v1/oracle/ORACLE_DIAGNOSTIC_ONLY_updated.pt",
+      "tensor_sha256": "6783bb45ec5bcbe6dc0fff36ec5542643d463f04f97cf7d4464bbd5802e22bb1"
+    },
+    "updated_seismic": {
+      "file_sha256": "adae452da7c1a5df4a0907bde4b5724e6214d9ad1cb893205c7463e2af23fabc",
+      "path": "project/geodata-3d-conditional/experiments/stage26_physical_seismic/diagnostics/run_20261019_v1/oracle/ORACLE_DIAGNOSTIC_ONLY_updated_seismic.pt",
+      "tensor_sha256": "8148bafb3889a7d79caff6688b8d96458fc51974c6b0cc1a2bac0d32bc9939ef"
+    }
+  },
+  "completed_at_utc": "2026-10-19T14:28:20.532811+00:00",
+  "diagnostics": {
+    "correction_abs_max_depth": 0.86613787844592,
+    "correction_abs_max_time": 0.9223656741902986,
+    "correction_rms_depth_subsurface": 0.06138001617632759,
+    "correction_rms_time": 0.04532588935675918,
+    "normal_diagonal_mean": 0.5870917912634651,
+    "prior_lambda": 0.0005870917912634651,
+    "smoothness_lambda": 0.005870917912634652
+  },
+  "elapsed_seconds": 0.201758942916058,
+  "initial_impedance_exactly_old_prior": true,
+  "inversion_calls": 1,
+  "new_Flow": 0,
+  "new_checkpoint_loads": 0,
+  "new_observation_generations": 0,
+  "numerical_bundle_sha256": "9923189de8f2d816a0567e07b32ad38a1ca87ae96653e8085be0b81ed1b47836",
+  "only_slowness_module_changed": true,
+  "oracle_slowness_unchanged": true,
+  "original_conditions_exact": true,
+  "role": "ORACLE_DIAGNOSTIC_ONLY",
+  "status": "completed",
+  "truth_impedance_used": false
+}

@@ -1,5 +1,59 @@
 # Development handoff
 
+## Stage26 offline diagnostics — speed/time-depth vs class candidates (2026-10-19)
+
+Explicitly authorized CPU-only diagnosis uses baseline
+main@a251087d4e958bdc0c30fe98d29d24252f53b8fc. No new Flow, checkpoint load,
+training or observation generation. Old Stage26151 archived artifacts are
+hash-verified unchanged. Results:
+`experiments/stage26_physical_seismic/diagnostics/run_20261019_v1/REPORT.md`.
+New isolated code is `scripts/stage26_diagnostics/`;4 focused tests pass.
+
+Saved prior/updated FULL classifications exactly reproduce both the old
+pure function and saved tensors. OBSERVED candidates[0,1,3,5,9] were extracted
+from original values[original_mask] in a truth-blind process, not truth/B/C.
+Same saved updated: FULL ->OBSERVED changes3917 added labels, correcting2084
+and redistributing1833 to another wrong known class. Added accuracy improves
+79.9778% ->87.9454%, capIoU0.088983 ->0.147412. But within OBSERVED, prior ->
+saved updated accuracy is87.0202% ->87.9454%, common off-new-well targetTP
+446 ->441/1933. Much of the apparent benefit is class-prior error reduction,
+not new target recovery. Detailed transition tables preserve remaining errors.
+
+Saved updated reduces free-domain target log-impedanceMAE0.313714 ->0.278534
+and background0.051139 ->0.049807. However the1792 added FULL right-to-wrong
+voxels move from exact prior impedance(MAE0) toMAE0.104118. Continuous error
+is not improved everywhere; failure is not only a harmless class boundary.
+
+TWT is compared at identical depth-grid cells after flipping the existing
+function's top-down output back toXYZ. Free-domain absolute difference
+median/P90/max=0/56.461/641.341ms; fixed cap box=0/25.319/73.768ms. Large
+local timing differences exist despite zero medians; these are not identified
+reflection-event lags.
+
+Exactly one new ORACLE_DIAGNOSTIC_ONLY inversion used voxel-identical saved
+A prior impedance, changing only fixed slowness to truth slowness (both prior
+seismic timing and time-to-depth update). No truth impedance enters the solve.
+Own oracle data error improves1.731383 ->0.825122 versus saved-A pair
+1.849282 ->1.139643. But oracle FULL added accuracy79.0526% is slightly worse
+than saved updated79.9778%. Under OBSERVED, oracle accuracy87.9110%, capIoU
+0.175040 and off-new-wellTP489/1933 give only bounded target improvement,
+withFP1724/volume ratio1.051872; saved updated OBSERVED hascap0.147412,
+TP441/1933,FP1447/volume0.903022. Whole targetIoU only0.151474 ->0.154276.
+Oracle truth velocity carries hidden structure and cannot be a usable method.
+Hard-label forward scores always remap their own velocities, never oracle
+slowness (oracle classification errors1.305966/FULL,1.329898/OBSERVED).
+
+Diagnosis: FULL candidate mapping demonstrably amplifies background errors;
+correct fixed speed/time-depth helps data fit but is not sufficient for
+reliable lithology/cap recovery. Single-update impedance evidence and class
+interface jointly remain limited; no unique causal dominance is established.
+Prioritize frontend impedance classifiability/preservation with observed
+candidate constraints as a bounded auxiliary research direction. Do not
+rerun Flow/add wells/seeds or implement a new method without another decision.
+Two fixedY26 explanatory figures, six saved classifications, oracle fields,
+configs, source hashes, CSV, timing and commands are delivered. Numerical
+retries0. No old air cleanup, formal method edits or GitHub push.
+
 ## Stage26 — physical seismic bridge with prior-only control (2026-10-19)
 
 The user explicitly authorized a fresh Stage26 budget after the Stage25

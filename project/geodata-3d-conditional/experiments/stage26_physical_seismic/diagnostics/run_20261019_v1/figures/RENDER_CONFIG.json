@@ -1,0 +1,23 @@
+{
+  "axes": "original XYZ, Z upward; TWT top-down output flipped back before plotting",
+  "fig01_palette": "existing LABEL_COLORS, all raw-1..13",
+  "fig02_limits": {
+    "shared_log_error_change": [
+      -0.6693652006945072,
+      0.6693652006945072
+    ],
+    "twt_ms": [
+      -375.0257584310715,
+      375.0257584310715
+    ]
+  },
+  "geology_edits": false,
+  "new_3D_figures": false,
+  "panels_fig01": "3 fields x 2 fixed candidate sets",
+  "plot_source_sha256": "018c46794f9ef0e7f8f75259a42ce28394b9d37f16c5ee9237f7ff272ccb0261",
+  "section_Y": 26,
+  "total_figures": 2,
+  "truth_target_outline": "evaluation reference only, never input to classifier or initial impedance",
+  "visual_inspection": "completed",
+  "visual_inspection_notes": "Opened both PNGs: fixed Y26 six panels, complete cap/stem reference outline, common discrete palette; TWT original-Z orientation checked; property error changes share limits. Oracle panels explicitly marked. No clipping, label edits, 3D views or selected alternate slices."
+}

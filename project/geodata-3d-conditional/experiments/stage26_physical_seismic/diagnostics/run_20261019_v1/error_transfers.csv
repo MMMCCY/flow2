@@ -1,0 +1,15 @@
+comparison,domain,voxels,changed,wrong_to_right,right_to_wrong,wrong_to_wrong
+prior_exact:FULL_to_OBSERVED,added,26156,509,99,0,410
+prior_exact:FULL_to_OBSERVED,original_free,212524,4150,870,0,3280
+updated:FULL_to_OBSERVED,added,26156,3917,2084,0,1833
+updated:FULL_to_OBSERVED,original_free,212524,32396,17216,0,15180
+oracle_updated:FULL_to_OBSERVED,added,26156,4177,2317,0,1860
+oracle_updated:FULL_to_OBSERVED,original_free,212524,34480,19183,0,15297
+FULL:prior_to_saved_updated,added,26156,4025,49,1792,2184
+FULL:prior_to_saved_updated,original_free,212524,33442,492,14791,18159
+FULL:saved_to_oracle_updated,added,26156,2148,182,424,1542
+FULL:saved_to_oracle_updated,original_free,212524,17857,1555,3546,12756
+OBSERVED:prior_to_saved_updated,added,26156,1220,533,291,396
+OBSERVED:prior_to_saved_updated,original_free,212524,10180,4497,2450,3233
+OBSERVED:saved_to_oracle_updated,added,26156,585,175,184,226
+OBSERVED:saved_to_oracle_updated,original_free,212524,4876,1506,1530,1840

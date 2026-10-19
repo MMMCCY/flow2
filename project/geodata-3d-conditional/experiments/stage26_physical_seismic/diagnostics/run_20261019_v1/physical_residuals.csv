@@ -1,0 +1,11 @@
+field,candidates,representation,relative_l2,slowness,data_samples
+prior_exact,FULL,hard_labels,1.849282374533587,own hard-label codebook; NEVER oracle slowness,1638400
+prior_exact,OBSERVED,hard_labels,1.8437729084577856,own hard-label codebook; NEVER oracle slowness,1638400
+updated,FULL,hard_labels,1.1547657215804201,own hard-label codebook; NEVER oracle slowness,1638400
+updated,OBSERVED,hard_labels,1.2386275198211574,own hard-label codebook; NEVER oracle slowness,1638400
+oracle_updated,FULL,hard_labels,1.3059655503463934,own hard-label codebook; NEVER oracle slowness,1638400
+oracle_updated,OBSERVED,hard_labels,1.3298978310781715,own hard-label codebook; NEVER oracle slowness,1638400
+saved_A_prior,none,continuous_acoustic,1.849282374533587,fixed A slowness,1638400
+saved_A_updated,none,continuous_acoustic,1.139643145078854,fixed A slowness,1638400
+oracle_prior,none,continuous_acoustic,1.7313834902810006,ORACLE truth slowness,1638400
+oracle_updated,none,continuous_acoustic,0.8251220419595133,ORACLE truth slowness,1638400
