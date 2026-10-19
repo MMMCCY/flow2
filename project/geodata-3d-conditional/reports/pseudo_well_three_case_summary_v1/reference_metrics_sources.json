@@ -1,0 +1,45 @@
+{
+  "note": "Unmodified historical tables retain B, C, COPY and direct classification. Direct full-field classification has a different information budget from sampled pseudo-well Flow.",
+  "sources": [
+    {
+      "case": "fullgeo_case01",
+      "retained_arms": [
+        "B_512",
+        "C_512",
+        "RESTORED_CLASSIFICATION",
+        "COPY_ONLY"
+      ],
+      "source": {
+        "file_sha256": "2eb8c4781a8443021f39f523a43d41f9ffbb6c17ade1626162d10e1b79f38e53",
+        "path": "project/geodata-3d-conditional/experiments/stage24_multi_case/run_20261017_v1/cases/fullgeo_case01/sample_metrics.csv"
+      }
+    },
+    {
+      "case": "fullgeo_case02",
+      "retained_arms": [
+        "B_512",
+        "C_512",
+        "RESTORED_CLASSIFICATION",
+        "COPY_ONLY"
+      ],
+      "source": {
+        "file_sha256": "7e333ed087b498d357b732a2c2572e7f2379b069890228cbb6bdb6293e345ff5",
+        "path": "project/geodata-3d-conditional/experiments/stage24_multi_case/run_20261017_v1/cases/fullgeo_case02/sample_metrics.csv"
+      }
+    },
+    {
+      "case": "fullgeo_case03",
+      "retained_arms": [
+        "B_512",
+        "C_512",
+        "FLOW_STAGE22",
+        "RESTORED_CLASSIFICATION",
+        "COPY_ONLY_STAGE23"
+      ],
+      "source": {
+        "file_sha256": "90ce01e343cd8807e1eaa314b37aecfcfba2f93fec57400dfd90c4a443944418",
+        "path": "project/geodata-3d-conditional/experiments/stage23_full_pseudo_wells/run_20261017_v2/sample_metrics.csv"
+      }
+    }
+  ]
+}

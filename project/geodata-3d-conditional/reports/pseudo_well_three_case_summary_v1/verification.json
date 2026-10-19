@@ -1,0 +1,96 @@
+{
+  "Flow_inference": 0,
+  "axis_contract": "XYZ; np.take(volume,32,axis=axis).T; origin=lower; nearest",
+  "device": "CPU",
+  "historical_comparisons": [
+    {
+      "case": "fullgeo_case01",
+      "domain": "E_holdout",
+      "max_abs_difference": 0.0,
+      "method": "Frozen Flow",
+      "metrics_compared": 37
+    },
+    {
+      "case": "fullgeo_case01",
+      "domain": "E_original_free",
+      "max_abs_difference": 0.0,
+      "method": "Frozen Flow",
+      "metrics_compared": 37
+    },
+    {
+      "case": "fullgeo_case01",
+      "domain": "E_holdout",
+      "max_abs_difference": 0.0,
+      "method": "Proposed method",
+      "metrics_compared": 37
+    },
+    {
+      "case": "fullgeo_case01",
+      "domain": "E_original_free",
+      "max_abs_difference": 0.0,
+      "method": "Proposed method",
+      "metrics_compared": 37
+    },
+    {
+      "case": "fullgeo_case02",
+      "domain": "E_holdout",
+      "max_abs_difference": 0.0,
+      "method": "Frozen Flow",
+      "metrics_compared": 33
+    },
+    {
+      "case": "fullgeo_case02",
+      "domain": "E_original_free",
+      "max_abs_difference": 0.0,
+      "method": "Frozen Flow",
+      "metrics_compared": 33
+    },
+    {
+      "case": "fullgeo_case02",
+      "domain": "E_holdout",
+      "max_abs_difference": 0.0,
+      "method": "Proposed method",
+      "metrics_compared": 33
+    },
+    {
+      "case": "fullgeo_case02",
+      "domain": "E_original_free",
+      "max_abs_difference": 0.0,
+      "method": "Proposed method",
+      "metrics_compared": 33
+    },
+    {
+      "case": "fullgeo_case03",
+      "domain": "E_holdout",
+      "max_abs_difference": 0.0,
+      "method": "Frozen Flow",
+      "metrics_compared": 33
+    },
+    {
+      "case": "fullgeo_case03",
+      "domain": "E_original_free",
+      "max_abs_difference": 0.0,
+      "method": "Frozen Flow",
+      "metrics_compared": 35
+    },
+    {
+      "case": "fullgeo_case03",
+      "domain": "E_holdout",
+      "max_abs_difference": 0.0,
+      "method": "Proposed method",
+      "metrics_compared": 33
+    },
+    {
+      "case": "fullgeo_case03",
+      "domain": "E_original_free",
+      "max_abs_difference": 0.0,
+      "method": "Proposed method",
+      "metrics_compared": 35
+    }
+  ],
+  "historical_input_files_unchanged": 39,
+  "metrics_rows": 18,
+  "property_restoration": 0,
+  "tolerance": 1e-12,
+  "training": 0
+}

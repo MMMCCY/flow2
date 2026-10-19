@@ -2152,3 +2152,33 @@ regression still pixel-exact. All necessary input/hash/condition/noise/model/
 32-call/COPY/metric/object/figure checks pass;4 focused CPU tests passed.
 Known-kernel/no-extra-noise/artificial-proxy/reused-case single seeds are
 showcase diagnostics, not independent geological TEST or proven generalization.
+
+
+## 2026-10-17 — Offline three-case presentation summary
+
+User-authorized analysis/plotting only; no new scientific stage. CPU script
+`scripts/reports/build_pseudo_well_three_case_summary.py` executed via SSH in
+repo .venv; immutable outputs `reports/pseudo_well_three_case_summary_v1/`.
+Six sealed seed42 predictions: original A_9 for each case, Stage24 complete
+restored pseudo-well Flow for case01/02 and Stage23 v2 Flow for case03,
+identified through execution/evaluation registries and hash-checked receipts.
+No model/checkpoint load or GPU task; training/Flow/restoration counts all0.
+
+Delivered 6 fixed XYZ32 slice figures,2 domain tables,1 four-panel bar chart,
+each300dpi PNG/PDF;18-row/3-domain metrics,per-class IoU counts,6-row global
+and holdout CSVs,manifest,external captions,README and historical reference
+source index. Reused original tab20/BoundaryNorm and take(axis).T/lower/nearest.
+Error slices use complete plane including air; global stats use truth!=-1.
+Original E_holdout/E_original_free masks/classes unchanged. All12 historical
+comparisons exactly match Stage24 CSV (max abs difference0),39 input files
+hash unchanged;9 PNGs visually inspected,9 PNG/PDF pairs and300dpi checked.
+
+Global mIoU A->proposed: case01 .203683->.529309,case02 .180462->.508096,
+case03 .164935->.499198. Global target IoU .002819->.093537,
+.111785->.482461,.006857->.166396. Proposed global target volume ratios
+4.358333,1.606728,1.899194: extent errors remain. Holdout target IoU
+.003190->.160000,.125519->.464922,.008065->.130112. Global includes
+conditions, original-free includes new wells; holdout has no new direct
+condition writes but its properties enter global proxy, not independent TEST.
+Single seed/reused cases/artificial proxy/known blur/no added noise limits
+remain. Historical experiments/source snapshots/approved3D outputs untouched.
