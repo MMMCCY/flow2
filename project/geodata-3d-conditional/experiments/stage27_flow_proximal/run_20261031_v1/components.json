@@ -1,0 +1,2310 @@
+{
+  "A_G1": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          6.536263736263736,
+          59.956043956043956,
+          13.951648351648352
+        ],
+        "id": 1,
+        "truth_overlaps": [],
+        "volume": 455
+      },
+      {
+        "centroid_indices": [
+          10.40625,
+          60.71875,
+          26.78125
+        ],
+        "id": 2,
+        "truth_overlaps": [],
+        "volume": 32
+      },
+      {
+        "centroid_indices": [
+          14.0,
+          59.0,
+          31.0
+        ],
+        "id": 3,
+        "truth_overlaps": [],
+        "volume": 3
+      },
+      {
+        "centroid_indices": [
+          21.24137931034483,
+          61.51724137931034,
+          27.655172413793103
+        ],
+        "id": 4,
+        "truth_overlaps": [],
+        "volume": 29
+      },
+      {
+        "centroid_indices": [
+          19.923076923076923,
+          49.30769230769231,
+          27.76923076923077
+        ],
+        "id": 5,
+        "truth_overlaps": [],
+        "volume": 13
+      },
+      {
+        "centroid_indices": [
+          20.0,
+          49.0,
+          32.0
+        ],
+        "id": 6,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          22.6,
+          47.0,
+          24.2
+        ],
+        "id": 7,
+        "truth_overlaps": [],
+        "volume": 5
+      },
+      {
+        "centroid_indices": [
+          36.18104184457729,
+          28.698975234842017,
+          21.30871050384287
+        ],
+        "id": 8,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 554
+          }
+        ],
+        "volume": 2342
+      },
+      {
+        "centroid_indices": [
+          27.0,
+          45.0,
+          11.0
+        ],
+        "id": 9,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          28.0,
+          42.0,
+          14.0
+        ],
+        "id": 10,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          29.9,
+          45.4,
+          8.2
+        ],
+        "id": 11,
+        "truth_overlaps": [],
+        "volume": 10
+      },
+      {
+        "centroid_indices": [
+          31.87121212121212,
+          52.43939393939394,
+          16.674242424242426
+        ],
+        "id": 12,
+        "truth_overlaps": [],
+        "volume": 132
+      },
+      {
+        "centroid_indices": [
+          31.5,
+          44.0,
+          12.333333333333334
+        ],
+        "id": 13,
+        "truth_overlaps": [],
+        "volume": 6
+      },
+      {
+        "centroid_indices": [
+          48.5,
+          24.0,
+          15.0
+        ],
+        "id": 14,
+        "truth_overlaps": [],
+        "volume": 2
+      },
+      {
+        "centroid_indices": [
+          49.0,
+          24.0,
+          21.0
+        ],
+        "id": 15,
+        "truth_overlaps": [],
+        "volume": 1
+      }
+    ],
+    "predicted_components": 15,
+    "predicted_volume_sequence": [
+      2342,
+      455,
+      132,
+      32,
+      29,
+      13,
+      10,
+      6,
+      5,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      2217
+    ]
+  },
+  "A_G2": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          6.536263736263736,
+          59.956043956043956,
+          13.951648351648352
+        ],
+        "id": 1,
+        "truth_overlaps": [],
+        "volume": 455
+      },
+      {
+        "centroid_indices": [
+          10.40625,
+          60.71875,
+          26.78125
+        ],
+        "id": 2,
+        "truth_overlaps": [],
+        "volume": 32
+      },
+      {
+        "centroid_indices": [
+          14.0,
+          59.0,
+          31.0
+        ],
+        "id": 3,
+        "truth_overlaps": [],
+        "volume": 3
+      },
+      {
+        "centroid_indices": [
+          21.24137931034483,
+          61.51724137931034,
+          27.655172413793103
+        ],
+        "id": 4,
+        "truth_overlaps": [],
+        "volume": 29
+      },
+      {
+        "centroid_indices": [
+          19.923076923076923,
+          49.30769230769231,
+          27.76923076923077
+        ],
+        "id": 5,
+        "truth_overlaps": [],
+        "volume": 13
+      },
+      {
+        "centroid_indices": [
+          20.0,
+          49.0,
+          32.0
+        ],
+        "id": 6,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          22.6,
+          47.0,
+          24.2
+        ],
+        "id": 7,
+        "truth_overlaps": [],
+        "volume": 5
+      },
+      {
+        "centroid_indices": [
+          36.18104184457729,
+          28.698975234842017,
+          21.30871050384287
+        ],
+        "id": 8,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 534
+          }
+        ],
+        "volume": 2342
+      },
+      {
+        "centroid_indices": [
+          27.0,
+          45.0,
+          11.0
+        ],
+        "id": 9,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          28.0,
+          42.0,
+          14.0
+        ],
+        "id": 10,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          29.9,
+          45.4,
+          8.2
+        ],
+        "id": 11,
+        "truth_overlaps": [],
+        "volume": 10
+      },
+      {
+        "centroid_indices": [
+          31.87121212121212,
+          52.43939393939394,
+          16.674242424242426
+        ],
+        "id": 12,
+        "truth_overlaps": [],
+        "volume": 132
+      },
+      {
+        "centroid_indices": [
+          31.5,
+          44.0,
+          12.333333333333334
+        ],
+        "id": 13,
+        "truth_overlaps": [],
+        "volume": 6
+      },
+      {
+        "centroid_indices": [
+          48.5,
+          24.0,
+          15.0
+        ],
+        "id": 14,
+        "truth_overlaps": [],
+        "volume": 2
+      },
+      {
+        "centroid_indices": [
+          49.0,
+          24.0,
+          21.0
+        ],
+        "id": 15,
+        "truth_overlaps": [],
+        "volume": 1
+      }
+    ],
+    "predicted_components": 15,
+    "predicted_volume_sequence": [
+      2342,
+      455,
+      132,
+      32,
+      29,
+      13,
+      10,
+      6,
+      5,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      1585
+    ]
+  },
+  "D0_G1": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          5.809142857142857,
+          60.016,
+          13.765714285714285
+        ],
+        "id": 1,
+        "truth_overlaps": [],
+        "volume": 875
+      },
+      {
+        "centroid_indices": [
+          5.0,
+          55.0,
+          18.0
+        ],
+        "id": 2,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          6.0,
+          60.0,
+          4.0
+        ],
+        "id": 3,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          14.0,
+          59.0,
+          31.0
+        ],
+        "id": 4,
+        "truth_overlaps": [],
+        "volume": 3
+      },
+      {
+        "centroid_indices": [
+          20.0,
+          49.77777777777778,
+          27.77777777777778
+        ],
+        "id": 5,
+        "truth_overlaps": [],
+        "volume": 9
+      },
+      {
+        "centroid_indices": [
+          21.933333333333334,
+          62.4,
+          27.466666666666665
+        ],
+        "id": 6,
+        "truth_overlaps": [],
+        "volume": 15
+      },
+      {
+        "centroid_indices": [
+          35.73519948519949,
+          29.774131274131275,
+          21.748069498069498
+        ],
+        "id": 7,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 632
+          }
+        ],
+        "volume": 3108
+      },
+      {
+        "centroid_indices": [
+          25.0,
+          46.0,
+          17.0
+        ],
+        "id": 8,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          28.0,
+          42.0,
+          14.0
+        ],
+        "id": 9,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          30.0,
+          41.0,
+          14.0
+        ],
+        "id": 10,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          34.0,
+          47.25,
+          14.0
+        ],
+        "id": 11,
+        "truth_overlaps": [],
+        "volume": 4
+      },
+      {
+        "centroid_indices": [
+          35.22727272727273,
+          37.63636363636363,
+          8.863636363636363
+        ],
+        "id": 12,
+        "truth_overlaps": [],
+        "volume": 22
+      },
+      {
+        "centroid_indices": [
+          39.0,
+          40.0,
+          9.0
+        ],
+        "id": 13,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          41.0,
+          40.0,
+          25.0
+        ],
+        "id": 14,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          46.22222222222222,
+          37.0,
+          24.333333333333332
+        ],
+        "id": 15,
+        "truth_overlaps": [],
+        "volume": 9
+      },
+      {
+        "centroid_indices": [
+          49.0,
+          24.0,
+          15.0
+        ],
+        "id": 16,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          49.0,
+          24.0,
+          21.0
+        ],
+        "id": 17,
+        "truth_overlaps": [],
+        "volume": 1
+      }
+    ],
+    "predicted_components": 17,
+    "predicted_volume_sequence": [
+      3108,
+      875,
+      22,
+      15,
+      9,
+      9,
+      4,
+      3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      2217
+    ]
+  },
+  "D0_G2": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          5.809142857142857,
+          60.016,
+          13.765714285714285
+        ],
+        "id": 1,
+        "truth_overlaps": [],
+        "volume": 875
+      },
+      {
+        "centroid_indices": [
+          5.0,
+          55.0,
+          18.0
+        ],
+        "id": 2,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          6.0,
+          60.0,
+          4.0
+        ],
+        "id": 3,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          14.0,
+          59.0,
+          31.0
+        ],
+        "id": 4,
+        "truth_overlaps": [],
+        "volume": 3
+      },
+      {
+        "centroid_indices": [
+          20.0,
+          49.77777777777778,
+          27.77777777777778
+        ],
+        "id": 5,
+        "truth_overlaps": [],
+        "volume": 9
+      },
+      {
+        "centroid_indices": [
+          21.933333333333334,
+          62.4,
+          27.466666666666665
+        ],
+        "id": 6,
+        "truth_overlaps": [],
+        "volume": 15
+      },
+      {
+        "centroid_indices": [
+          35.73519948519949,
+          29.774131274131275,
+          21.748069498069498
+        ],
+        "id": 7,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 608
+          }
+        ],
+        "volume": 3108
+      },
+      {
+        "centroid_indices": [
+          25.0,
+          46.0,
+          17.0
+        ],
+        "id": 8,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          28.0,
+          42.0,
+          14.0
+        ],
+        "id": 9,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          30.0,
+          41.0,
+          14.0
+        ],
+        "id": 10,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          34.0,
+          47.25,
+          14.0
+        ],
+        "id": 11,
+        "truth_overlaps": [],
+        "volume": 4
+      },
+      {
+        "centroid_indices": [
+          35.22727272727273,
+          37.63636363636363,
+          8.863636363636363
+        ],
+        "id": 12,
+        "truth_overlaps": [],
+        "volume": 22
+      },
+      {
+        "centroid_indices": [
+          39.0,
+          40.0,
+          9.0
+        ],
+        "id": 13,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          41.0,
+          40.0,
+          25.0
+        ],
+        "id": 14,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          46.22222222222222,
+          37.0,
+          24.333333333333332
+        ],
+        "id": 15,
+        "truth_overlaps": [],
+        "volume": 9
+      },
+      {
+        "centroid_indices": [
+          49.0,
+          24.0,
+          15.0
+        ],
+        "id": 16,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          49.0,
+          24.0,
+          21.0
+        ],
+        "id": 17,
+        "truth_overlaps": [],
+        "volume": 1
+      }
+    ],
+    "predicted_components": 17,
+    "predicted_volume_sequence": [
+      3108,
+      875,
+      22,
+      15,
+      9,
+      9,
+      4,
+      3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      1585
+    ]
+  },
+  "DIRECT_PRIOR_G1": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          6.536263736263736,
+          59.956043956043956,
+          13.951648351648352
+        ],
+        "id": 1,
+        "truth_overlaps": [],
+        "volume": 455
+      },
+      {
+        "centroid_indices": [
+          10.40625,
+          60.71875,
+          26.78125
+        ],
+        "id": 2,
+        "truth_overlaps": [],
+        "volume": 32
+      },
+      {
+        "centroid_indices": [
+          14.0,
+          59.0,
+          31.0
+        ],
+        "id": 3,
+        "truth_overlaps": [],
+        "volume": 3
+      },
+      {
+        "centroid_indices": [
+          21.24137931034483,
+          61.51724137931034,
+          27.655172413793103
+        ],
+        "id": 4,
+        "truth_overlaps": [],
+        "volume": 29
+      },
+      {
+        "centroid_indices": [
+          19.923076923076923,
+          49.30769230769231,
+          27.76923076923077
+        ],
+        "id": 5,
+        "truth_overlaps": [],
+        "volume": 13
+      },
+      {
+        "centroid_indices": [
+          20.0,
+          49.0,
+          32.0
+        ],
+        "id": 6,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          22.6,
+          47.0,
+          24.2
+        ],
+        "id": 7,
+        "truth_overlaps": [],
+        "volume": 5
+      },
+      {
+        "centroid_indices": [
+          36.18104184457729,
+          28.698975234842017,
+          21.30871050384287
+        ],
+        "id": 8,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 554
+          }
+        ],
+        "volume": 2342
+      },
+      {
+        "centroid_indices": [
+          27.0,
+          45.0,
+          11.0
+        ],
+        "id": 9,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          28.0,
+          42.0,
+          14.0
+        ],
+        "id": 10,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          29.9,
+          45.4,
+          8.2
+        ],
+        "id": 11,
+        "truth_overlaps": [],
+        "volume": 10
+      },
+      {
+        "centroid_indices": [
+          31.87121212121212,
+          52.43939393939394,
+          16.674242424242426
+        ],
+        "id": 12,
+        "truth_overlaps": [],
+        "volume": 132
+      },
+      {
+        "centroid_indices": [
+          31.5,
+          44.0,
+          12.333333333333334
+        ],
+        "id": 13,
+        "truth_overlaps": [],
+        "volume": 6
+      },
+      {
+        "centroid_indices": [
+          48.5,
+          24.0,
+          15.0
+        ],
+        "id": 14,
+        "truth_overlaps": [],
+        "volume": 2
+      },
+      {
+        "centroid_indices": [
+          49.0,
+          24.0,
+          21.0
+        ],
+        "id": 15,
+        "truth_overlaps": [],
+        "volume": 1
+      }
+    ],
+    "predicted_components": 15,
+    "predicted_volume_sequence": [
+      2342,
+      455,
+      132,
+      32,
+      29,
+      13,
+      10,
+      6,
+      5,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      2217
+    ]
+  },
+  "DIRECT_PRIOR_G2": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          6.536263736263736,
+          59.956043956043956,
+          13.951648351648352
+        ],
+        "id": 1,
+        "truth_overlaps": [],
+        "volume": 455
+      },
+      {
+        "centroid_indices": [
+          10.40625,
+          60.71875,
+          26.78125
+        ],
+        "id": 2,
+        "truth_overlaps": [],
+        "volume": 32
+      },
+      {
+        "centroid_indices": [
+          14.0,
+          59.0,
+          31.0
+        ],
+        "id": 3,
+        "truth_overlaps": [],
+        "volume": 3
+      },
+      {
+        "centroid_indices": [
+          21.24137931034483,
+          61.51724137931034,
+          27.655172413793103
+        ],
+        "id": 4,
+        "truth_overlaps": [],
+        "volume": 29
+      },
+      {
+        "centroid_indices": [
+          19.923076923076923,
+          49.30769230769231,
+          27.76923076923077
+        ],
+        "id": 5,
+        "truth_overlaps": [],
+        "volume": 13
+      },
+      {
+        "centroid_indices": [
+          20.0,
+          49.0,
+          32.0
+        ],
+        "id": 6,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          22.6,
+          47.0,
+          24.2
+        ],
+        "id": 7,
+        "truth_overlaps": [],
+        "volume": 5
+      },
+      {
+        "centroid_indices": [
+          36.18104184457729,
+          28.698975234842017,
+          21.30871050384287
+        ],
+        "id": 8,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 534
+          }
+        ],
+        "volume": 2342
+      },
+      {
+        "centroid_indices": [
+          27.0,
+          45.0,
+          11.0
+        ],
+        "id": 9,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          28.0,
+          42.0,
+          14.0
+        ],
+        "id": 10,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          29.9,
+          45.4,
+          8.2
+        ],
+        "id": 11,
+        "truth_overlaps": [],
+        "volume": 10
+      },
+      {
+        "centroid_indices": [
+          31.87121212121212,
+          52.43939393939394,
+          16.674242424242426
+        ],
+        "id": 12,
+        "truth_overlaps": [],
+        "volume": 132
+      },
+      {
+        "centroid_indices": [
+          31.5,
+          44.0,
+          12.333333333333334
+        ],
+        "id": 13,
+        "truth_overlaps": [],
+        "volume": 6
+      },
+      {
+        "centroid_indices": [
+          48.5,
+          24.0,
+          15.0
+        ],
+        "id": 14,
+        "truth_overlaps": [],
+        "volume": 2
+      },
+      {
+        "centroid_indices": [
+          49.0,
+          24.0,
+          21.0
+        ],
+        "id": 15,
+        "truth_overlaps": [],
+        "volume": 1
+      }
+    ],
+    "predicted_components": 15,
+    "predicted_volume_sequence": [
+      2342,
+      455,
+      132,
+      32,
+      29,
+      13,
+      10,
+      6,
+      5,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      1585
+    ]
+  },
+  "DIRECT_UPDATED_G1": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          6.597633136094674,
+          60.10059171597633,
+          13.550295857988166
+        ],
+        "id": 1,
+        "truth_overlaps": [],
+        "volume": 169
+      },
+      {
+        "centroid_indices": [
+          20.0,
+          49.5,
+          28.0
+        ],
+        "id": 2,
+        "truth_overlaps": [],
+        "volume": 8
+      },
+      {
+        "centroid_indices": [
+          35.66137566137566,
+          27.630511463844798,
+          21.096119929453263
+        ],
+        "id": 3,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 428
+          }
+        ],
+        "volume": 1134
+      },
+      {
+        "centroid_indices": [
+          31.5,
+          45.0,
+          26.5
+        ],
+        "id": 4,
+        "truth_overlaps": [],
+        "volume": 8
+      },
+      {
+        "centroid_indices": [
+          41.0,
+          34.0,
+          24.0
+        ],
+        "id": 5,
+        "truth_overlaps": [],
+        "volume": 3
+      },
+      {
+        "centroid_indices": [
+          41.4,
+          25.4,
+          33.6
+        ],
+        "id": 6,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 5
+          }
+        ],
+        "volume": 5
+      },
+      {
+        "centroid_indices": [
+          45.0,
+          22.0,
+          29.0
+        ],
+        "id": 7,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 1
+          }
+        ],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          51.0,
+          21.833333333333332,
+          27.0
+        ],
+        "id": 8,
+        "truth_overlaps": [],
+        "volume": 6
+      }
+    ],
+    "predicted_components": 8,
+    "predicted_volume_sequence": [
+      1134,
+      169,
+      8,
+      8,
+      6,
+      5,
+      3,
+      1
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      2217
+    ]
+  },
+  "DIRECT_UPDATED_G2": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          6.597633136094674,
+          60.10059171597633,
+          13.550295857988166
+        ],
+        "id": 1,
+        "truth_overlaps": [],
+        "volume": 169
+      },
+      {
+        "centroid_indices": [
+          20.0,
+          49.5,
+          28.0
+        ],
+        "id": 2,
+        "truth_overlaps": [],
+        "volume": 8
+      },
+      {
+        "centroid_indices": [
+          35.66137566137566,
+          27.630511463844798,
+          21.096119929453263
+        ],
+        "id": 3,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 421
+          }
+        ],
+        "volume": 1134
+      },
+      {
+        "centroid_indices": [
+          31.5,
+          45.0,
+          26.5
+        ],
+        "id": 4,
+        "truth_overlaps": [],
+        "volume": 8
+      },
+      {
+        "centroid_indices": [
+          41.0,
+          34.0,
+          24.0
+        ],
+        "id": 5,
+        "truth_overlaps": [],
+        "volume": 3
+      },
+      {
+        "centroid_indices": [
+          41.4,
+          25.4,
+          33.6
+        ],
+        "id": 6,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 1
+          }
+        ],
+        "volume": 5
+      },
+      {
+        "centroid_indices": [
+          45.0,
+          22.0,
+          29.0
+        ],
+        "id": 7,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          51.0,
+          21.833333333333332,
+          27.0
+        ],
+        "id": 8,
+        "truth_overlaps": [],
+        "volume": 6
+      }
+    ],
+    "predicted_components": 8,
+    "predicted_volume_sequence": [
+      1134,
+      169,
+      8,
+      8,
+      6,
+      5,
+      3,
+      1
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      1585
+    ]
+  },
+  "D_G1": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          0.0,
+          0.0,
+          17.5
+        ],
+        "id": 1,
+        "truth_overlaps": [],
+        "volume": 2
+      },
+      {
+        "centroid_indices": [
+          1.8888888888888888,
+          6.333333333333333,
+          19.333333333333332
+        ],
+        "id": 2,
+        "truth_overlaps": [],
+        "volume": 9
+      },
+      {
+        "centroid_indices": [
+          4.152671755725191,
+          60.0559796437659,
+          13.653944020356233
+        ],
+        "id": 3,
+        "truth_overlaps": [],
+        "volume": 393
+      },
+      {
+        "centroid_indices": [
+          1.0,
+          23.0,
+          19.0
+        ],
+        "id": 4,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          6.0,
+          25.0,
+          20.25
+        ],
+        "id": 5,
+        "truth_overlaps": [],
+        "volume": 4
+      },
+      {
+        "centroid_indices": [
+          9.466666666666667,
+          55.06666666666667,
+          20.266666666666666
+        ],
+        "id": 6,
+        "truth_overlaps": [],
+        "volume": 15
+      },
+      {
+        "centroid_indices": [
+          14.0,
+          61.0,
+          14.0
+        ],
+        "id": 7,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          17.0,
+          56.0,
+          21.0
+        ],
+        "id": 8,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          20.0,
+          50.0,
+          27.5
+        ],
+        "id": 9,
+        "truth_overlaps": [],
+        "volume": 4
+      },
+      {
+        "centroid_indices": [
+          21.0,
+          63.0,
+          27.0
+        ],
+        "id": 10,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          35.267175572519086,
+          27.358778625954198,
+          19.432933478735006
+        ],
+        "id": 11,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 286
+          }
+        ],
+        "volume": 917
+      },
+      {
+        "centroid_indices": [
+          33.0,
+          33.0,
+          27.0
+        ],
+        "id": 12,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          36.0,
+          31.0,
+          21.0
+        ],
+        "id": 13,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          41.0,
+          25.0,
+          27.0
+        ],
+        "id": 14,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          41.0,
+          25.0,
+          34.0
+        ],
+        "id": 15,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 1
+          }
+        ],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          43.0,
+          26.0,
+          28.0
+        ],
+        "id": 16,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          43.0,
+          29.0,
+          23.0
+        ],
+        "id": 17,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          51.75,
+          0.75,
+          19.0
+        ],
+        "id": 18,
+        "truth_overlaps": [],
+        "volume": 4
+      },
+      {
+        "centroid_indices": [
+          51.0,
+          17.0,
+          22.0
+        ],
+        "id": 19,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          53.0,
+          20.75,
+          21.0
+        ],
+        "id": 20,
+        "truth_overlaps": [],
+        "volume": 4
+      },
+      {
+        "centroid_indices": [
+          55.86666666666667,
+          14.133333333333333,
+          21.333333333333332
+        ],
+        "id": 21,
+        "truth_overlaps": [],
+        "volume": 15
+      },
+      {
+        "centroid_indices": [
+          54.0,
+          25.333333333333332,
+          21.333333333333332
+        ],
+        "id": 22,
+        "truth_overlaps": [],
+        "volume": 3
+      },
+      {
+        "centroid_indices": [
+          54.333333333333336,
+          52.666666666666664,
+          11.333333333333334
+        ],
+        "id": 23,
+        "truth_overlaps": [],
+        "volume": 3
+      },
+      {
+        "centroid_indices": [
+          55.0,
+          13.0,
+          19.0
+        ],
+        "id": 24,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          55.0,
+          22.0,
+          20.0
+        ],
+        "id": 25,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          61.0,
+          49.0,
+          9.0
+        ],
+        "id": 26,
+        "truth_overlaps": [],
+        "volume": 1
+      }
+    ],
+    "predicted_components": 26,
+    "predicted_volume_sequence": [
+      917,
+      393,
+      15,
+      15,
+      9,
+      4,
+      4,
+      4,
+      4,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      2217
+    ]
+  },
+  "D_G2": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          0.0,
+          0.0,
+          17.5
+        ],
+        "id": 1,
+        "truth_overlaps": [],
+        "volume": 2
+      },
+      {
+        "centroid_indices": [
+          1.8888888888888888,
+          6.333333333333333,
+          19.333333333333332
+        ],
+        "id": 2,
+        "truth_overlaps": [],
+        "volume": 9
+      },
+      {
+        "centroid_indices": [
+          4.152671755725191,
+          60.0559796437659,
+          13.653944020356233
+        ],
+        "id": 3,
+        "truth_overlaps": [],
+        "volume": 393
+      },
+      {
+        "centroid_indices": [
+          1.0,
+          23.0,
+          19.0
+        ],
+        "id": 4,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          6.0,
+          25.0,
+          20.25
+        ],
+        "id": 5,
+        "truth_overlaps": [],
+        "volume": 4
+      },
+      {
+        "centroid_indices": [
+          9.466666666666667,
+          55.06666666666667,
+          20.266666666666666
+        ],
+        "id": 6,
+        "truth_overlaps": [],
+        "volume": 15
+      },
+      {
+        "centroid_indices": [
+          14.0,
+          61.0,
+          14.0
+        ],
+        "id": 7,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          17.0,
+          56.0,
+          21.0
+        ],
+        "id": 8,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          20.0,
+          50.0,
+          27.5
+        ],
+        "id": 9,
+        "truth_overlaps": [],
+        "volume": 4
+      },
+      {
+        "centroid_indices": [
+          21.0,
+          63.0,
+          27.0
+        ],
+        "id": 10,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          35.267175572519086,
+          27.358778625954198,
+          19.432933478735006
+        ],
+        "id": 11,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 282
+          }
+        ],
+        "volume": 917
+      },
+      {
+        "centroid_indices": [
+          33.0,
+          33.0,
+          27.0
+        ],
+        "id": 12,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          36.0,
+          31.0,
+          21.0
+        ],
+        "id": 13,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          41.0,
+          25.0,
+          27.0
+        ],
+        "id": 14,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          41.0,
+          25.0,
+          34.0
+        ],
+        "id": 15,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          43.0,
+          26.0,
+          28.0
+        ],
+        "id": 16,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          43.0,
+          29.0,
+          23.0
+        ],
+        "id": 17,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          51.75,
+          0.75,
+          19.0
+        ],
+        "id": 18,
+        "truth_overlaps": [],
+        "volume": 4
+      },
+      {
+        "centroid_indices": [
+          51.0,
+          17.0,
+          22.0
+        ],
+        "id": 19,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          53.0,
+          20.75,
+          21.0
+        ],
+        "id": 20,
+        "truth_overlaps": [],
+        "volume": 4
+      },
+      {
+        "centroid_indices": [
+          55.86666666666667,
+          14.133333333333333,
+          21.333333333333332
+        ],
+        "id": 21,
+        "truth_overlaps": [],
+        "volume": 15
+      },
+      {
+        "centroid_indices": [
+          54.0,
+          25.333333333333332,
+          21.333333333333332
+        ],
+        "id": 22,
+        "truth_overlaps": [],
+        "volume": 3
+      },
+      {
+        "centroid_indices": [
+          54.333333333333336,
+          52.666666666666664,
+          11.333333333333334
+        ],
+        "id": 23,
+        "truth_overlaps": [],
+        "volume": 3
+      },
+      {
+        "centroid_indices": [
+          55.0,
+          13.0,
+          19.0
+        ],
+        "id": 24,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          55.0,
+          22.0,
+          20.0
+        ],
+        "id": 25,
+        "truth_overlaps": [],
+        "volume": 1
+      },
+      {
+        "centroid_indices": [
+          61.0,
+          49.0,
+          9.0
+        ],
+        "id": 26,
+        "truth_overlaps": [],
+        "volume": 1
+      }
+    ],
+    "predicted_components": 26,
+    "predicted_volume_sequence": [
+      917,
+      393,
+      15,
+      15,
+      9,
+      4,
+      4,
+      4,
+      4,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      1585
+    ]
+  },
+  "F0_G1": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          36.543442169341446,
+          27.163807415605977,
+          18.143331488655228
+        ],
+        "id": 1,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 282
+          }
+        ],
+        "volume": 1807
+      }
+    ],
+    "predicted_components": 1,
+    "predicted_volume_sequence": [
+      1807
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      2217
+    ]
+  },
+  "F0_G2": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          36.543442169341446,
+          27.163807415605977,
+          18.143331488655228
+        ],
+        "id": 1,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 282
+          }
+        ],
+        "volume": 1807
+      }
+    ],
+    "predicted_components": 1,
+    "predicted_volume_sequence": [
+      1807
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      1585
+    ]
+  },
+  "Fr_G1": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          35.40268456375839,
+          25.963087248322147,
+          19.802013422818792
+        ],
+        "id": 1,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 197
+          }
+        ],
+        "volume": 596
+      }
+    ],
+    "predicted_components": 1,
+    "predicted_volume_sequence": [
+      596
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      2217
+    ]
+  },
+  "Fr_G2": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          35.40268456375839,
+          25.963087248322147,
+          19.802013422818792
+        ],
+        "id": 1,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 197
+          }
+        ],
+        "volume": 596
+      }
+    ],
+    "predicted_components": 1,
+    "predicted_volume_sequence": [
+      596
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      1585
+    ]
+  },
+  "Fy_G1_G1": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          36.157303370786515,
+          26.003210272873194,
+          17.726324237560192
+        ],
+        "id": 1,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 294
+          }
+        ],
+        "volume": 1246
+      }
+    ],
+    "predicted_components": 1,
+    "predicted_volume_sequence": [
+      1246
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      2217
+    ]
+  },
+  "Fy_G1_G2": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          36.157303370786515,
+          26.003210272873194,
+          17.726324237560192
+        ],
+        "id": 1,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 294
+          }
+        ],
+        "volume": 1246
+      }
+    ],
+    "predicted_components": 1,
+    "predicted_volume_sequence": [
+      1246
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      1585
+    ]
+  },
+  "Fy_G2_G1": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          35.834221038615176,
+          25.065912117177096,
+          17.6930758988016
+        ],
+        "id": 1,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 311
+          }
+        ],
+        "volume": 1502
+      }
+    ],
+    "predicted_components": 1,
+    "predicted_volume_sequence": [
+      1502
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      2217
+    ]
+  },
+  "Fy_G2_G2": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          35.834221038615176,
+          25.065912117177096,
+          17.6930758988016
+        ],
+        "id": 1,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 311
+          }
+        ],
+        "volume": 1502
+      }
+    ],
+    "predicted_components": 1,
+    "predicted_volume_sequence": [
+      1502
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      1585
+    ]
+  },
+  "Fyr_G1_G1": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          36.125,
+          26.48076923076923,
+          19.161713286713287
+        ],
+        "id": 1,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 287
+          }
+        ],
+        "volume": 1144
+      }
+    ],
+    "predicted_components": 1,
+    "predicted_volume_sequence": [
+      1144
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      2217
+    ]
+  },
+  "Fyr_G1_G2": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          36.125,
+          26.48076923076923,
+          19.161713286713287
+        ],
+        "id": 1,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 287
+          }
+        ],
+        "volume": 1144
+      }
+    ],
+    "predicted_components": 1,
+    "predicted_volume_sequence": [
+      1144
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      1585
+    ]
+  },
+  "Fyr_G2_G1": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          35.4136722173532,
+          25.20245398773006,
+          19.376862401402278
+        ],
+        "id": 1,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 292
+          }
+        ],
+        "volume": 1141
+      }
+    ],
+    "predicted_components": 1,
+    "predicted_volume_sequence": [
+      1141
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      2217
+    ]
+  },
+  "Fyr_G2_G2": {
+    "connectivity": 26,
+    "objects": [
+      {
+        "centroid_indices": [
+          35.4136722173532,
+          25.20245398773006,
+          19.376862401402278
+        ],
+        "id": 1,
+        "truth_overlaps": [
+          {
+            "id": 1,
+            "voxels": 292
+          }
+        ],
+        "volume": 1141
+      }
+    ],
+    "predicted_components": 1,
+    "predicted_volume_sequence": [
+      1141
+    ],
+    "truth_components": 1,
+    "truth_volume_sequence": [
+      1585
+    ]
+  }
+}

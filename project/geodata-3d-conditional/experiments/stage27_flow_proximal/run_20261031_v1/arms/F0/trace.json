@@ -1,0 +1,610 @@
+[
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.3829161280300468,
+    "inner": [],
+    "nfe": 1,
+    "noise_seed": 1042,
+    "noise_tensor_sha256": "1d2a7598a21cecdaf6b4a830a9e5becfbcc0dc5944a67889c53743fd1714a64f",
+    "nu2": 0.9999999899979998,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 0,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.0001,
+    "time_next": 0.03125,
+    "time_nominal": 0.0
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23084180592559278,
+    "inner": [],
+    "nfe": 2,
+    "noise_seed": 1043,
+    "noise_tensor_sha256": "d9b4d7a90044eb33c6f2d3678a9acb7b26e12ddc6483058cb23e4e80be4eccd5",
+    "nu2": 0.998960498960499,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 1,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.03125,
+    "time_next": 0.0625,
+    "time_nominal": 0.03125
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.2315849990118295,
+    "inner": [],
+    "nfe": 3,
+    "noise_seed": 1044,
+    "noise_tensor_sha256": "cadbfc71ffc089b69dfef12e7a783d07e283426cf425500872b91c9c33192483",
+    "nu2": 0.995575221238938,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 2,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.0625,
+    "time_next": 0.09375,
+    "time_nominal": 0.0625
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.2322860580170527,
+    "inner": [],
+    "nfe": 4,
+    "noise_seed": 1045,
+    "noise_tensor_sha256": "773c790c2fbecf9d31f25376d9fc71c915543a917954980b392110d4c69853e0",
+    "nu2": 0.9894117647058823,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 3,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.09375,
+    "time_next": 0.125,
+    "time_nominal": 0.09375
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.2326908860122785,
+    "inner": [],
+    "nfe": 5,
+    "noise_seed": 1046,
+    "noise_tensor_sha256": "78dbb4ae4a71cf1a3e2812890a5ad730ff27ce75cb175508f4db5b51560e3a4b",
+    "nu2": 0.98,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 4,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.125,
+    "time_next": 0.15625,
+    "time_nominal": 0.125
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23195543291512877,
+    "inner": [],
+    "nfe": 6,
+    "noise_seed": 1047,
+    "noise_tensor_sha256": "f9e103ae2f827c3836a8feba7a31c6e1adbd361593246fb166244360c1801734",
+    "nu2": 0.96684350132626,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 5,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.15625,
+    "time_next": 0.1875,
+    "time_nominal": 0.15625
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23131276399362832,
+    "inner": [],
+    "nfe": 7,
+    "noise_seed": 1048,
+    "noise_tensor_sha256": "efd1a39ef4b13c4c25a4090cb6668a3655329de8a446933f975f1db63d36a66e",
+    "nu2": 0.949438202247191,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 6,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.1875,
+    "time_next": 0.21875,
+    "time_nominal": 0.1875
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23120669997297227,
+    "inner": [],
+    "nfe": 8,
+    "noise_seed": 1049,
+    "noise_tensor_sha256": "eeac54694e77d28eda0a777f5e57bf954f893cf8e3e06f036d3264c78a178222",
+    "nu2": 0.9272997032640949,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 7,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.21875,
+    "time_next": 0.25,
+    "time_nominal": 0.21875
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23274602997116745,
+    "inner": [],
+    "nfe": 9,
+    "noise_seed": 1050,
+    "noise_tensor_sha256": "d57e57e6bed76cf1b8d8d01cd065864456abf31a12f6c88dd324af296d2f920d",
+    "nu2": 0.9,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 8,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.25,
+    "time_next": 0.28125,
+    "time_nominal": 0.25
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23301148205064237,
+    "inner": [],
+    "nfe": 10,
+    "noise_seed": 1051,
+    "noise_tensor_sha256": "06708b060f5ea188a55f446845ee1d00ddaa0518bd59efcdcb0764f3c6b80569",
+    "nu2": 0.8672131147540983,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 9,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.28125,
+    "time_next": 0.3125,
+    "time_nominal": 0.28125
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23338766291271895,
+    "inner": [],
+    "nfe": 11,
+    "noise_seed": 1052,
+    "noise_tensor_sha256": "ea945d3edf8c1bdaea8b1db2f4c677e2eb20cc2e9b2aa05d8581d2de949147f4",
+    "nu2": 0.8287671232876712,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 10,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.3125,
+    "time_next": 0.34375,
+    "time_nominal": 0.3125
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23315235902555287,
+    "inner": [],
+    "nfe": 12,
+    "noise_seed": 1053,
+    "noise_tensor_sha256": "bb651e19df4d638c0b280967faa273fe96546580845a279088dcfb985fe4a448",
+    "nu2": 0.7846975088967971,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 11,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.34375,
+    "time_next": 0.375,
+    "time_nominal": 0.34375
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23288119793869555,
+    "inner": [],
+    "nfe": 13,
+    "noise_seed": 1054,
+    "noise_tensor_sha256": "64a13163dd9135eaa93e26c1c312fb88e03c5a99bd2a7dd5ba7c7977bf22704b",
+    "nu2": 0.7352941176470589,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 12,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.375,
+    "time_next": 0.40625,
+    "time_nominal": 0.375
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23318172001745552,
+    "inner": [],
+    "nfe": 14,
+    "noise_seed": 1055,
+    "noise_tensor_sha256": "cc95489b7b9147dc9ee855df66407cd02f16a83e1ffb66beb7fcb762ba4742d1",
+    "nu2": 0.6811320754716981,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 13,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.40625,
+    "time_next": 0.4375,
+    "time_nominal": 0.40625
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23321318998932838,
+    "inner": [],
+    "nfe": 15,
+    "noise_seed": 1056,
+    "noise_tensor_sha256": "b61a227ac37ded8625e58b73b2c1a1cf5115bed8248dbe2055195ef565a857fc",
+    "nu2": 0.6230769230769231,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 14,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.4375,
+    "time_next": 0.46875,
+    "time_nominal": 0.4375
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23628730699419975,
+    "inner": [],
+    "nfe": 16,
+    "noise_seed": 1057,
+    "noise_tensor_sha256": "99c956990b6025a48fc37cf31fcbcd703f476745c258f2adc9c81c1564595a92",
+    "nu2": 0.5622568093385214,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 15,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.46875,
+    "time_next": 0.5,
+    "time_nominal": 0.46875
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23546904604882002,
+    "inner": [],
+    "nfe": 17,
+    "noise_seed": 1058,
+    "noise_tensor_sha256": "12065140e22d582e5827fe013faedfee36cfea3a6d3e898aabefa4ca7127006a",
+    "nu2": 0.5,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 16,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.5,
+    "time_next": 0.53125,
+    "time_nominal": 0.5
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.2362575449515134,
+    "inner": [],
+    "nfe": 18,
+    "noise_seed": 1059,
+    "noise_tensor_sha256": "f9b144ce306258f3c318543978edf5a77fddcfe56ccd67744ff3441701ad9343",
+    "nu2": 0.4377431906614786,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 17,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.53125,
+    "time_next": 0.5625,
+    "time_nominal": 0.53125
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23526003398001194,
+    "inner": [],
+    "nfe": 19,
+    "noise_seed": 1060,
+    "noise_tensor_sha256": "e4151717c035b4bca0c11fab87add8205abcffd20d8f078666b0c47b6d887f67",
+    "nu2": 0.3769230769230769,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 18,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.5625,
+    "time_next": 0.59375,
+    "time_nominal": 0.5625
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23331900604534894,
+    "inner": [],
+    "nfe": 20,
+    "noise_seed": 1061,
+    "noise_tensor_sha256": "0c3915ec24b8e71db4a58230fa8f88e31d98a1c7f4020cdc237b2c7ee05ccd91",
+    "nu2": 0.31886792452830187,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 19,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.59375,
+    "time_next": 0.625,
+    "time_nominal": 0.59375
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.2328230009879917,
+    "inner": [],
+    "nfe": 21,
+    "noise_seed": 1062,
+    "noise_tensor_sha256": "3b5a359a1e21c20e13a4b851377398d0369ebbbfc03f3eb79415c40d1d7a1b1d",
+    "nu2": 0.2647058823529412,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 20,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.625,
+    "time_next": 0.65625,
+    "time_nominal": 0.625
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.2328584409551695,
+    "inner": [],
+    "nfe": 22,
+    "noise_seed": 1063,
+    "noise_tensor_sha256": "052ee398fdf2445b62406929eddf5ab7346c7be199c8e2c58f5137575ee29619",
+    "nu2": 0.21530249110320285,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 21,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.65625,
+    "time_next": 0.6875,
+    "time_nominal": 0.65625
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.233622531988658,
+    "inner": [],
+    "nfe": 23,
+    "noise_seed": 1064,
+    "noise_tensor_sha256": "b25bf4431e74b2ce7e7162aaab2ac25c8db5a3da7ec2fa31a541ceee3527a0d7",
+    "nu2": 0.17123287671232876,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 22,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.6875,
+    "time_next": 0.71875,
+    "time_nominal": 0.6875
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23255076399073005,
+    "inner": [],
+    "nfe": 24,
+    "noise_seed": 1065,
+    "noise_tensor_sha256": "898f9aabe7b928463b182448fc8270d1f8ce1c88981f950b766855b634cf0567",
+    "nu2": 0.13278688524590163,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 23,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.71875,
+    "time_next": 0.75,
+    "time_nominal": 0.71875
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23207936203107238,
+    "inner": [],
+    "nfe": 25,
+    "noise_seed": 1066,
+    "noise_tensor_sha256": "8e4572907bd3150b0f45cf672ddb99b6baeb77bc2026ac522acf02a104f9ac47",
+    "nu2": 0.1,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 24,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.75,
+    "time_next": 0.78125,
+    "time_nominal": 0.75
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.2614400029415265,
+    "inner": [],
+    "nfe": 26,
+    "noise_seed": 1067,
+    "noise_tensor_sha256": "a249000cc44606680c3f565b89ab57557231068cc30ba25ba0d3ad102a7f9b0e",
+    "nu2": 0.07270029673590504,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 25,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.78125,
+    "time_next": 0.8125,
+    "time_nominal": 0.78125
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23549737595021725,
+    "inner": [],
+    "nfe": 27,
+    "noise_seed": 1068,
+    "noise_tensor_sha256": "b4ec615f3d6fc9bafea79aad70d147c3bd7dcd3b8f83faf50db7de04b5a7b113",
+    "nu2": 0.05056179775280899,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 26,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.8125,
+    "time_next": 0.84375,
+    "time_nominal": 0.8125
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23314235301222652,
+    "inner": [],
+    "nfe": 28,
+    "noise_seed": 1069,
+    "noise_tensor_sha256": "da4a34c8a607f471c9c0ab23919d5e562c384521474cae8636005d638b142698",
+    "nu2": 0.033156498673740056,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 27,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.84375,
+    "time_next": 0.875,
+    "time_nominal": 0.84375
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.2310573069844395,
+    "inner": [],
+    "nfe": 29,
+    "noise_seed": 1070,
+    "noise_tensor_sha256": "963cb1b5c52428194f0e6f65a8e8d2336f9a5951d321f41ed0a94b8fbcac74d2",
+    "nu2": 0.02,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 28,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.875,
+    "time_next": 0.90625,
+    "time_nominal": 0.875
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.2302408569958061,
+    "inner": [],
+    "nfe": 30,
+    "noise_seed": 1071,
+    "noise_tensor_sha256": "ffbb3ed44da70dd07c814149e6cbc605543f9e50ab9bcae6d3a4e6994413e249",
+    "nu2": 0.010588235294117647,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 29,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.90625,
+    "time_next": 0.9375,
+    "time_nominal": 0.90625
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.23211502004414797,
+    "inner": [],
+    "nfe": 31,
+    "noise_seed": 1072,
+    "noise_tensor_sha256": "e16e8e5e450111b3e1767781e30b05f23170fe179eb9dcb2267117801105c2ce",
+    "nu2": 0.004424778761061947,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 30,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.9375,
+    "time_next": 0.96875,
+    "time_nominal": 0.9375
+  },
+  {
+    "condition_embedding_max_error": 0.0,
+    "elapsed_seconds": 0.19669495802372694,
+    "inner": [],
+    "nfe": 32,
+    "noise_seed": null,
+    "noise_tensor_sha256": null,
+    "nu2": 0.0010395010395010396,
+    "physics_backwards": 0,
+    "physics_forwards": 0,
+    "step": 31,
+    "terms": {
+      "after": null,
+      "before": null
+    },
+    "time_eval": 0.96875,
+    "time_next": 1.0,
+    "time_nominal": 0.96875
+  }
+]

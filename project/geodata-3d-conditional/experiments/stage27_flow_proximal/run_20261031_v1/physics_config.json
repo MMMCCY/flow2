@@ -1,0 +1,111 @@
+{
+  "acoustic": {
+    "density_unit": "kg m^-3",
+    "description": "Synthetic complete absolute density and P-wave velocity codebook for the first Phase-4c inverse-crime upper bound. Label 9 has deliberately distinctive impedance; values are not site-calibrated petrophysics.",
+    "id": "acoustic_distinct_label9_upper_bound_v1",
+    "scenario": "synthetic_distinct_label9_acoustic_upper_bound",
+    "schema": "phase4_acoustic_codebook_v1",
+    "values": {
+      "-1": {
+        "density": 1.225,
+        "vp": 340.0
+      },
+      "0": {
+        "density": 2200.0,
+        "vp": 2500.0
+      },
+      "1": {
+        "density": 2350.0,
+        "vp": 3000.0
+      },
+      "10": {
+        "density": 2850.0,
+        "vp": 5800.0
+      },
+      "11": {
+        "density": 2550.0,
+        "vp": 4100.0
+      },
+      "12": {
+        "density": 2650.0,
+        "vp": 4700.0
+      },
+      "13": {
+        "density": 2300.0,
+        "vp": 2700.0
+      },
+      "2": {
+        "density": 2450.0,
+        "vp": 3500.0
+      },
+      "3": {
+        "density": 2500.0,
+        "vp": 3800.0
+      },
+      "4": {
+        "density": 2600.0,
+        "vp": 4300.0
+      },
+      "5": {
+        "density": 2700.0,
+        "vp": 5000.0
+      },
+      "6": {
+        "density": 2800.0,
+        "vp": 5500.0
+      },
+      "7": {
+        "density": 2250.0,
+        "vp": 2800.0
+      },
+      "8": {
+        "density": 2400.0,
+        "vp": 3300.0
+      },
+      "9": {
+        "density": 3000.0,
+        "vp": 6500.0
+      }
+    },
+    "velocity_unit": "m s^-1"
+  },
+  "observation": {
+    "cell_size_m": [
+      60.95238095238095,
+      60.95238095238095,
+      60.95238095238095
+    ],
+    "description": "First Phase-4c full-lateral regular-time noiseless synthetic convolutional seismic inverse-crime observation.",
+    "exclude_air_rock_interface": true,
+    "grid_shape": [
+      64,
+      64,
+      64
+    ],
+    "id": "stage25_single_member_noiseless_actual_spacing",
+    "inverse_crime": true,
+    "local_surface_datum": true,
+    "measured_geophysics": false,
+    "noise": {
+      "seed": 4205,
+      "type": "none"
+    },
+    "sample_mask": "all",
+    "schema": "phase4_seismic_observation_v1",
+    "time_sampling": {
+      "num_samples": 400,
+      "sample_interval_ms": 8.0
+    },
+    "trace_grid": "all_xy_columns",
+    "trace_order": "local_surface_to_depth",
+    "truth_derived": true,
+    "uncertainty_amplitude": 0.01,
+    "vertical_axis": "final spatial axis; larger index upward",
+    "wavelet": {
+      "duration_ms": 128.0,
+      "normalization": "peak_one",
+      "peak_frequency_hz": 25.0,
+      "type": "ricker_zero_phase"
+    }
+  }
+}

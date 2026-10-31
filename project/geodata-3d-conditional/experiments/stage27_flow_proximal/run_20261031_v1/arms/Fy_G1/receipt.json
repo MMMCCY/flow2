@@ -1,0 +1,70 @@
+{
+  "a": 1,
+  "accepted_steps": 77,
+  "arm": "Fy_G1",
+  "assets": {
+    "continuous_endpoint": {
+      "file_sha256": "55b1ed60aa1244ab6994d842c11992028dcf2e5bae69f391e6172b1268cad3a1",
+      "path": "project/geodata-3d-conditional/experiments/stage27_flow_proximal/run_20261031_v1/arms/Fy_G1/continuous_endpoint.pt",
+      "tensor_sha256": "c0ac24bc34930e79b1b3ada357c51c65a1e8d026f313449ede2cdc89b9c5c34d"
+    },
+    "hard_prediction": {
+      "file_sha256": "5262e6bddc1e1a56d80d6ee54d4361c41a04fb6fd13e1dcc1b82fa5147c690aa",
+      "path": "project/geodata-3d-conditional/experiments/stage27_flow_proximal/run_20261031_v1/arms/Fy_G1/hard_prediction.pt",
+      "tensor_sha256": "d695f89f72c8c9defe985ea078854684763da455e0ebffb6e363d99a554dc0dc"
+    },
+    "prox_endpoint_fp64": {
+      "file_sha256": "2b7b2de529fbfc64142237d9626bd91e9e8dc8fb0b686ba631780b2c7a0f4fc0",
+      "path": "project/geodata-3d-conditional/experiments/stage27_flow_proximal/run_20261031_v1/arms/Fy_G1/prox_endpoint_fp64.pt",
+      "tensor_sha256": "79eba056ba4c3a0c4d948e371eb9f1f4b3aced531c0da0ee0dfa76290ce1c358"
+    }
+  },
+  "condition_violations": 0,
+  "elapsed_seconds": 13.686913528013974,
+  "first_two_outer_seconds": [
+    0.359831809066236,
+    0.3298022070666775
+  ],
+  "initial_noise_tensor_sha256": "6c4f6450e0e2eb2103d190b9747a1af6bc8e806c00a973a54511ea7bdd1ae81d",
+  "line_search_exhausted": 19,
+  "network_evaluations": 32,
+  "noise_hashes": [
+    "1d2a7598a21cecdaf6b4a830a9e5becfbcc0dc5944a67889c53743fd1714a64f",
+    "d9b4d7a90044eb33c6f2d3678a9acb7b26e12ddc6483058cb23e4e80be4eccd5",
+    "cadbfc71ffc089b69dfef12e7a783d07e283426cf425500872b91c9c33192483",
+    "773c790c2fbecf9d31f25376d9fc71c915543a917954980b392110d4c69853e0",
+    "78dbb4ae4a71cf1a3e2812890a5ad730ff27ce75cb175508f4db5b51560e3a4b",
+    "f9e103ae2f827c3836a8feba7a31c6e1adbd361593246fb166244360c1801734",
+    "efd1a39ef4b13c4c25a4090cb6668a3655329de8a446933f975f1db63d36a66e",
+    "eeac54694e77d28eda0a777f5e57bf954f893cf8e3e06f036d3264c78a178222",
+    "d57e57e6bed76cf1b8d8d01cd065864456abf31a12f6c88dd324af296d2f920d",
+    "06708b060f5ea188a55f446845ee1d00ddaa0518bd59efcdcb0764f3c6b80569",
+    "ea945d3edf8c1bdaea8b1db2f4c677e2eb20cc2e9b2aa05d8581d2de949147f4",
+    "bb651e19df4d638c0b280967faa273fe96546580845a279088dcfb985fe4a448",
+    "64a13163dd9135eaa93e26c1c312fb88e03c5a99bd2a7dd5ba7c7977bf22704b",
+    "cc95489b7b9147dc9ee855df66407cd02f16a83e1ffb66beb7fcb762ba4742d1",
+    "b61a227ac37ded8625e58b73b2c1a1cf5115bed8248dbe2055195ef565a857fc",
+    "99c956990b6025a48fc37cf31fcbcd703f476745c258f2adc9c81c1564595a92",
+    "12065140e22d582e5827fe013faedfee36cfea3a6d3e898aabefa4ca7127006a",
+    "f9b144ce306258f3c318543978edf5a77fddcfe56ccd67744ff3441701ad9343",
+    "e4151717c035b4bca0c11fab87add8205abcffd20d8f078666b0c47b6d887f67",
+    "0c3915ec24b8e71db4a58230fa8f88e31d98a1c7f4020cdc237b2c7ee05ccd91",
+    "3b5a359a1e21c20e13a4b851377398d0369ebbbfc03f3eb79415c40d1d7a1b1d",
+    "052ee398fdf2445b62406929eddf5ab7346c7be199c8e2c58f5137575ee29619",
+    "b25bf4431e74b2ce7e7162aaab2ac25c8db5a3da7ec2fa31a541ceee3527a0d7",
+    "898f9aabe7b928463b182448fc8270d1f8ce1c88981f950b766855b634cf0567",
+    "8e4572907bd3150b0f45cf672ddb99b6baeb77bc2026ac522acf02a104f9ac47",
+    "a249000cc44606680c3f565b89ab57557231068cc30ba25ba0d3ad102a7f9b0e",
+    "b4ec615f3d6fc9bafea79aad70d147c3bd7dcd3b8f83faf50db7de04b5a7b113",
+    "da4a34c8a607f471c9c0ab23919d5e562c384521474cae8636005d638b142698",
+    "963cb1b5c52428194f0e6f65a8e8d2336f9a5951d321f41ed0a94b8fbcac74d2",
+    "ffbb3ed44da70dd07c814149e6cbc605543f9e50ab9bcae6d3a4e6994413e249",
+    "e16e8e5e450111b3e1767781e30b05f23170fe179eb9dcb2267117801105c2ce",
+    null
+  ],
+  "observation": "y1",
+  "physics_backwards": 96,
+  "physics_forwards": 518,
+  "r": 0,
+  "zero_gradient_steps": 0
+}

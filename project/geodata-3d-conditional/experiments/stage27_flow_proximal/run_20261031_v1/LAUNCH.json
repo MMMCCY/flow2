@@ -1,0 +1,12 @@
+{
+  "pid": 465456,
+  "cmd": [
+    ".venv/bin/python",
+    "-m",
+    "scripts.stage27_flow_proximal.run",
+    "--out",
+    "project/geodata-3d-conditional/experiments/stage27_flow_proximal/run_20261031_v1",
+    "--prox-device",
+    "cuda"
+  ]
+}

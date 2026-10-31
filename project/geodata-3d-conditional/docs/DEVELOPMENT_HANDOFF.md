@@ -1,5 +1,58 @@
 # Development handoff
 
+## Stage27 — endpoint proximal correction and path reprojection (2026-10-31)
+
+Executed over the user-authorized SSH connection to LabRS, baseline
+main@de06168fb57f2462499a99885c584fc3e60fbeff. Independent implementation:
+`scripts/stage27_flow_proximal/`; immutable scientific run:
+`experiments/stage27_flow_proximal/run_20261031_v1/REPORT.md`.
+The user's existing deletion of project AGENTS.md was preserved.
+
+Completed F0/Fr/Fy_G1/Fyr_G1/Fy_G2/Fyr_G2, exactly192 velocity calls,
+384 physical gradients and2091 internal physical forwards (within2688).
+One y2 generation and17 final evaluation forwards are separate; necessary
+small CPU/CUDA checks used18 forwards and zero velocity calls. No training,
+traditional inversion, extra source, scientific retry, commit or push.
+One model load,411EMA/raw frozen15D embedding, FP32/noTF32/noautocast
+network, CUDA FP64 endpoint-only proximal updates. Saved old source42 and
+all CPU seed1042+j noise hashes are paired. All six original-condition
+violation counts and underground-air counts are0; model identity unchanged,
+no parameter gradients. Sampling elapsed78.53s; peak CUDA allocated1.82GB.
+
+Prescribed native G2 only changes cap diameter22->18 grid spacings; original
+condition conflicts0, surface/support unchanged,632 target voxels differ.
+Its observation was generated once; y1 reused with verified identity.
+
+Scientific result is negative for reliable paired structure recovery.
+G1 common-free targetIoU A/F0/Fr/Fy/Fyr is
+0.109260/0.070101/0.065853/0.087877/0.088420. Hard y1 relativeL2 is
+1.849282/1.148428/1.042592/0.986150/0.974735. New-path F0 degradation
+must not be attributed to physics. G1 capTP F0/Fr/Fy/Fyr is29/11/32/36
+of1853; all new outputs have one26-connected target component. TV mainly
+shrinks the target; modest combined improvement is not cap restoration.
+Switching to the smaller-cap observation increases predicted cap occupancy
+33->38(Fy),42->55(Fyr), opposite the prescribed geometry change. Both y2
+outputs fit y1 better than their y1 counterparts; structural cross preferences
+are-0.001246(Fy),+0.000219(Fyr). No reliable observation specificity or
+single-pair shape recovery claim; no generalization/calibration claim.
+
+An input metadata isolation deviation is explicitly retained: executed shared
+config included the predeclared G2 nominal diameter field. Numerical run and
+objective never access it or read hidden truth/geometry assets, but the
+executed registry was not completely geometry-stripped. Current common/prepare
+code separates INFERENCE_CONFIG; contract checks accept the stripped registry
+and reject geometry-bearing/extra-truth registries. Original executed registry,
+hashes and source snapshot are unchanged; derived stripped registry is review
+only, not a rerun. See METADATA_ISOLATION_REVIEW.json and
+POSTPROCESS_SOURCES.json. Numerical runner/sampler are unchanged. Do not claim
+perfect metadata isolation or silently replace the executed provenance.
+
+Raw hard labels, FP32 decoded endpoint, FP64 proximal endpoint, per-step trace,
+all-domain/class metrics, components/boundary summaries, physical/structural
+cross matrices, conditions/resources, approved_v1 PNG/PDF and fixedY26 condition
+overlays are delivered. Continue only with a separately authorized research
+decision; do not spend more NFEs or tune the completed negative experiment.
+
 ## Stage26 offline diagnostics — speed/time-depth vs class candidates (2026-10-19)
 
 Explicitly authorized CPU-only diagnosis uses baseline

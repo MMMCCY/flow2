@@ -1,0 +1,31 @@
+{
+  "actual_time_range": [
+    0.0001,
+    0.9999
+  ],
+  "checkpoint": {
+    "path": "/home/xmj/mcy/flowtrain_stochastic_interpolation-main/project/geodata-3d-conditional/demo_model/conditional-weights.ckpt",
+    "sha256": "561e94bfda770ec41fc4cbed43436a7e2130eef5dfb7e5d666fcefc0724ff94c",
+    "size_bytes": 849415038
+  },
+  "checkpoint_epoch": 1651,
+  "checkpoint_global_step": 8376,
+  "ema_applied": true,
+  "ema_entry_count": 411,
+  "ema_excluded_frozen_parameters": [
+    "embedding.weight"
+  ],
+  "ema_missing_trainable": [],
+  "ema_shape_mismatches": [],
+  "ema_unexpected": [],
+  "embedding_dim": 15,
+  "frozen_parameters": [
+    "embedding.weight"
+  ],
+  "initial_nominal_time_endpoint_approximation": "j0 nominal0 evaluated at1e-4",
+  "model_parameter_count": 412,
+  "trainable_parameter_count": 411,
+  "training_endpoint_jitter": "training source adds1e-4 Gaussian to embedded X1; linear path retained",
+  "training_interpolant": "LinearInterpolant(one_sided=True); independent Gaussian X0",
+  "weight_source": "ema"
+}

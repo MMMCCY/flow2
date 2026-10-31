@@ -1,0 +1,87 @@
+{
+  "G2_cap_diameter_voxels": 18,
+  "N": 32,
+  "armijo_c": 0.0001,
+  "arms": [
+    [
+      "F0",
+      0,
+      0,
+      null
+    ],
+    [
+      "Fr",
+      0,
+      1,
+      null
+    ],
+    [
+      "Fy_G1",
+      1,
+      0,
+      "y1"
+    ],
+    [
+      "Fyr_G1",
+      1,
+      1,
+      "y1"
+    ],
+    [
+      "Fy_G2",
+      1,
+      0,
+      "y2"
+    ],
+    [
+      "Fyr_G2",
+      1,
+      1,
+      "y2"
+    ]
+  ],
+  "direction_rms_cap": 0.1,
+  "energy_eps": 1e-12,
+  "geometry_shape": [
+    64,
+    64,
+    64
+  ],
+  "initial_source": "old saved seed42",
+  "lambda_structure": 0.05,
+  "line_search_steps": [
+    1.0,
+    0.5,
+    0.25,
+    0.125,
+    0.0625,
+    0.03125
+  ],
+  "max_internal_physics_forwards": 2688,
+  "max_network_evaluations": 192,
+  "max_physics_gradients": 384,
+  "new_observation_noise": "none",
+  "new_traditional_inversions": 0,
+  "noise_prng": "torch.randn CPU FP32; fresh CPU torch.Generator.manual_seed(1042+j)",
+  "noise_seed_base": 1042,
+  "nu2": "(1-t_eval)^2/(t_eval^2+(1-t_eval)^2)",
+  "parameter_sweep": false,
+  "precision_network": "FP32_noTF32_noautocast",
+  "precision_prox_physics": "FP64",
+  "prox_gradient_scale": "15*U.sum()",
+  "prox_steps": 3,
+  "real_condition_projection": "every stage; all non-U restored to embedding B",
+  "same_model_weights": true,
+  "source_seed": 42,
+  "spacing_m": [
+    60.95238095238095,
+    60.95238095238095,
+    60.95238095238095
+  ],
+  "target_category": 10,
+  "target_raw": 9,
+  "tau": 0.1,
+  "time_eval": "clamp(j/32, checkpoint.time_range)",
+  "time_next": "(j+1)/32",
+  "tv_smoothing_eps": 1e-06
+}

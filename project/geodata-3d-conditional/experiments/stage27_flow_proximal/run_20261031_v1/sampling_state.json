@@ -1,0 +1,30 @@
+{
+  "active_arm": null,
+  "active_step": 31,
+  "completed_arms": [
+    "F0",
+    "Fr",
+    "Fy_G1",
+    "Fyr_G1",
+    "Fy_G2",
+    "Fyr_G2"
+  ],
+  "elapsed_seconds": 77.9278484430397,
+  "finished_at_utc": "2026-10-31T09:02:21.688863+00:00",
+  "git": {
+    "branch": "main",
+    "head": "de06168fb57f2462499a99885c584fc3e60fbeff",
+    "status_short": "D project/geodata-3d-conditional/AGENTS.md\n?? STAGE27_FLOW_PROXIMAL_EXECUTION_PROMPT_2026-10-30.md\n?? project/geodata-3d-conditional/experiments/stage27_flow_proximal/\n?? project/geodata-3d-conditional/scripts/stage27_flow_proximal/"
+  },
+  "model_hash_after": "10d2181fe3eeeb406afc3da5e78ded64e9f92abfb2b3c352ee57e60e06da9b68",
+  "model_hash_before": "10d2181fe3eeeb406afc3da5e78ded64e9f92abfb2b3c352ee57e60e06da9b68",
+  "network_evaluations": 192,
+  "parameter_gradients_absent": true,
+  "physics_backwards": 384,
+  "physics_forwards": 2091,
+  "prox_device": "cuda",
+  "registry_sha256": "3fe931992e9ccf6cda2bb91888aa953f5659f9a2648d8dc3ec576445b19d9e97",
+  "skipped_arms": [],
+  "started_at_utc": "2026-10-31T09:01:03.669257+00:00",
+  "status": "completed"
+}

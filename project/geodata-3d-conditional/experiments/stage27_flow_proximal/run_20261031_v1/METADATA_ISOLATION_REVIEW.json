@@ -1,0 +1,20 @@
+{
+  "correction": "Current common.py/prepare.py use geometry-stripped INFERENCE_CONFIG; derived registry is review-only, not an executed run",
+  "direct_sampler_CONFIG_key_accesses": {
+    "run.py": [],
+    "sampler.py": [
+      "line_search_steps",
+      "prox_steps"
+    ]
+  },
+  "executed_registry_sha256": "3fe931992e9ccf6cda2bb91888aa953f5659f9a2648d8dc3ec576445b19d9e97",
+  "executed_source_snapshot_preserved": true,
+  "hidden_truth_assets_read_by_inference": false,
+  "issue": "Executed shared protocol includes predeclared nominal G2 diameter; inference registry was not fully stripped of geometry metadata",
+  "new_network_evaluations": 0,
+  "new_physics_evaluations": 0,
+  "nominal_diameter_field_used_in_sampling_or_objective": false,
+  "original_inputs_unmodified": true,
+  "registry_contract_checks": "stripped accepted, original geometry-bearing rejected, extra truth key rejected",
+  "scope_limitation": "Existing results correspond to original frozen source; do not claim completely geometry-stripped executed metadata"
+}

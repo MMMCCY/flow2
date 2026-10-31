@@ -1,0 +1,415 @@
+{
+  "all_components_retained": true,
+  "cameras": {
+    "geology": {
+      "direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "focal_point": [
+        32.0,
+        32.0,
+        26.5
+      ],
+      "parallel_projection": true,
+      "parallel_scale": 51.8,
+      "position": [
+        142.07999999999998,
+        -54.400000000000006,
+        114.82
+      ],
+      "right": [
+        0.6174175052143831,
+        0.7866356362731398,
+        -0.0
+      ],
+      "up": [
+        -0.4198481588061972,
+        0.32953198510951526,
+        0.8456572558293513
+      ],
+      "view_up": [
+        0,
+        0,
+        1
+      ],
+      "zoom": 1.0
+    },
+    "target": {
+      "direction": [
+        1.72,
+        -1.35,
+        1.38
+      ],
+      "focal_point": [
+        32.0,
+        32.0,
+        29.44
+      ],
+      "parallel_projection": true,
+      "parallel_scale": 54.5,
+      "position": [
+        142.07999999999998,
+        -54.400000000000006,
+        117.75999999999999
+      ],
+      "right": [
+        0.6174175052143831,
+        0.7866356362731398,
+        -0.0
+      ],
+      "up": [
+        -0.4198481588061972,
+        0.32953198510951526,
+        0.8456572558293513
+      ],
+      "view_up": [
+        0,
+        0,
+        1
+      ],
+      "zoom": 1.0
+    }
+  },
+  "checks": [
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "G1_Truth",
+      "full_target_voxels": 2217,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 53079,
+        "1": 32664,
+        "3": 24498,
+        "5": 104630,
+        "9": 2217
+      },
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "Fy_G1",
+      "full_target_voxels": 1246,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 59149,
+        "1": 25816,
+        "3": 23972,
+        "4": 1,
+        "5": 106904,
+        "9": 1246
+      },
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "Fyr_G1",
+      "full_target_voxels": 1144,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 59249,
+        "1": 26012,
+        "3": 23729,
+        "5": 106954,
+        "9": 1144
+      },
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "G1_Truth",
+      "full_target_voxels": 2217,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 39975,
+        "1": 24600,
+        "3": 18450,
+        "5": 79164,
+        "9": 839
+      },
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "Fy_G1",
+      "full_target_voxels": 1246,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 44130,
+        "1": 20153,
+        "3": 18180,
+        "4": 0,
+        "5": 80435,
+        "9": 130
+      },
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "Fyr_G1",
+      "full_target_voxels": 1144,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 44153,
+        "1": 20222,
+        "3": 18060,
+        "5": 80498,
+        "9": 95
+      },
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "G1_Truth",
+      "full_target_voxels": 2217,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 2217
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "Fy_G1",
+      "full_target_voxels": 1246,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 1246
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "Fyr_G1",
+      "full_target_voxels": 1144,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 1144
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "G1_Truth",
+      "full_target_voxels": 2217,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 2217
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "A",
+      "full_target_voxels": 3033,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 3033
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "F0",
+      "full_target_voxels": 1807,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 1807
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "G1_Truth",
+      "full_target_voxels": 2217,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 2217
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "F0",
+      "full_target_voxels": 1807,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 1807
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "Fr",
+      "full_target_voxels": 596,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 596
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "G2_Truth",
+      "full_target_voxels": 1585,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 53079,
+        "1": 32664,
+        "3": 24498,
+        "5": 105262,
+        "9": 1585
+      },
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "Fy_G2",
+      "full_target_voxels": 1502,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 59003,
+        "1": 25858,
+        "3": 23900,
+        "5": 106825,
+        "9": 1502
+      },
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "Fyr_G2",
+      "full_target_voxels": 1141,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 59273,
+        "1": 25945,
+        "3": 23909,
+        "5": 106820,
+        "9": 1141
+      },
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "G2_Truth",
+      "full_target_voxels": 1585,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 39975,
+        "1": 24600,
+        "3": 18450,
+        "5": 79506,
+        "9": 497
+      },
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "Fy_G2",
+      "full_target_voxels": 1502,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 44065,
+        "1": 20187,
+        "3": 18225,
+        "5": 80358,
+        "9": 193
+      },
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "Fyr_G2",
+      "full_target_voxels": 1141,
+      "kind": "geology",
+      "label_voxels_represented": {
+        "0": 44118,
+        "1": 20195,
+        "3": 18182,
+        "5": 80387,
+        "9": 146
+      },
+      "target_only": false
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "G2_Truth",
+      "full_target_voxels": 1585,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 1585
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "Fy_G2",
+      "full_target_voxels": 1502,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 1502
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "Fyr_G2",
+      "full_target_voxels": 1141,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 1141
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "G2_Truth",
+      "full_target_voxels": 1585,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 1585
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "F0",
+      "full_target_voxels": 1807,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 1807
+      },
+      "target_only": true
+    },
+    {
+      "all_faces_inside_viewport": true,
+      "arm": "Fr",
+      "full_target_voxels": 596,
+      "kind": "target",
+      "label_voxels_represented": {
+        "9": 596
+      },
+      "target_only": true
+    }
+  ],
+  "hard_labels_only": true,
+  "manifest_sha256": "f35dd0fb7e9c9664b7d723b856229c73771f86c388c17e023c2500599c86231c",
+  "network_evaluations": 0,
+  "section_Y": 26,
+  "standard": "geology_approved_v1",
+  "target_cutaway": false,
+  "visual_inspection": "Primary G1/G2 full-geology/target plates, A/F0 and Fr target controls, G2 Y26 and both condition-overlay sections inspected; no visible clipping or missing target fragments",
+  "visually_inspected_files": [
+    "G1_main/fig01_full_geology_comparison.png",
+    "G2_main/fig01_full_geology_comparison.png",
+    "G1_main/fig02_target_body_comparison.png",
+    "G2_main/fig02_target_body_comparison.png",
+    "G1_reference/fig02_target_body_comparison.png",
+    "G1_structure/fig02_target_body_comparison.png",
+    "G2_main/section_Y26.png",
+    "paired_Fy_Y26_conditions.png",
+    "paired_Fyr_Y26_conditions.png"
+  ]
+}

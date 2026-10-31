@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "network_evaluations": 0,
+  "commands": [
+    "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=project/geodata-3d-conditional:src CUBLAS_WORKSPACE_CONFIG=:4096:8 .venv/bin/python -m scripts.stage27_flow_proximal.checks --device cpu",
+    "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=project/geodata-3d-conditional:src CUBLAS_WORKSPACE_CONFIG=:4096:8 .venv/bin/python -m scripts.stage27_flow_proximal.checks --device cuda"
+  ],
+  "cpu_check_physics_forwards": 11,
+  "cuda_check_physics_forwards": 7,
+  "physics_gradient_nonzero": true,
+  "nonfree_gradient_zero": true,
+  "armijo_monotone": true,
+  "direction_rms_cap": true,
+  "F0_Fr_no_seismic": true,
+  "paired_cpu_noise_replay": true,
+  "source_note": "checks.py executed once on CPU and once on CUDA before input freeze; checks.py and sampler.py unchanged since those checks"
+}
